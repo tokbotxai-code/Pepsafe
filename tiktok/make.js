@@ -68,7 +68,7 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
     filter += `${last}[${i}:v]xfade=transition=fade:duration=${fade}:offset=${off.toFixed(2)}[v${i}];`; last = `[v${i}]`;
   }
   filter += `${last}format=yuv420p[out]`;
-  args.push('-filter_complex', filter, '-map', '[out]', '-r', '30', '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-movflags', '+faststart', path.join(dir, 'video.mp4'));
+  args.push('-filter_complex', filter, '-map', '[out]', '-r', '30', '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-movflags', '+faststart', path.join(dir, 'pepsafe-' + path.basename(dir) + '.mp4'));
   execFileSync('ffmpeg', args, { stdio: 'ignore' });
   fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n');
   console.log('done', files.length, 'slides');
