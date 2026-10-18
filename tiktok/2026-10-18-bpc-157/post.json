@@ -1,0 +1,12 @@
+{
+ "topic": "BPC-157",
+ "slides": [
+  {"kicker": "Sprawdzamy fakty", "title": "BPC-157: cudowny peptyd czy marketing?", "hero": true, "text": "Przesuń, zanim kupisz fiolkę „do badań” 👉", "seconds": 3.5},
+  {"kicker": "Co to jest", "title": "Peptyd z 15 aminokwasów", "text": "Opisywany jako fragment białka z soku żołądkowego. W sieci sprzedawany z dopiskiem „tylko do badań”, czyli nie jako lek.", "seconds": 4.5},
+  {"kicker": "Badania na ludziach", "big": "3", "text": "Tyle małych badań na ludziach znalazł przegląd z 2025 r. Łącznie mniej niż 30 osób i bez grup kontrolnych. Reszta to zwierzęta.", "seconds": 5},
+  {"kicker": "Czy FDA go zatwierdziła?", "verdict": "NIE", "tone": "no", "text": "W lipcu 2026 r. komisja doradcza FDA tylko poparła go (8 do 6) jako surowiec do leków recepturowych. To nie jest zatwierdzenie leku.", "seconds": 5},
+  {"kicker": "Ryzyka", "title": "Czego nie wiesz o fiolce", "list": ["Brak kontroli jałowości i składu", "Dawki u ludzi nieustalone", "Wpływa na tworzenie naczyń krwionośnych", "Zakazany przez WADA"], "seconds": 5},
+  {"kicker": "Więcej faktów, zero ściemy", "cta": "pepsafe.info", "text": "Katalog 120 peptydów, mity i fakty, kronika decyzji FDA.", "foot": "Treść edukacyjna. Nie jest poradą medyczną. Przed decyzją porozmawiaj z lekarzem.", "seconds": 4}
+ ],
+ "caption": "BPC-157 – co naprawdę wiadomo? 3 małe badania na ludziach i brak zatwierdzenia FDA. Sprawdź fakty na pepsafe.info 🔬\n\nTreść edukacyjna, nie porada medyczna.\n\n#peptydy #bpc157 #fakty #zdrowie #nauka #biohacking #fitness #mityifakty #pepsafe"
+}
