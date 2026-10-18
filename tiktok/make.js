@@ -70,6 +70,15 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
   filter += `${last}format=yuv420p[out]`;
   args.push('-filter_complex', filter, '-map', '[out]', '-r', '30', '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-movflags', '+faststart', path.join(dir, 'pepsafe-' + path.basename(dir) + '.mp4'));
   execFileSync('ffmpeg', args, { stdio: 'ignore' });
+  // add the original background track (tiktok/music-calm.m4a), looped and faded out at the end
+  const silent = path.join(dir, 'pepsafe-' + path.basename(dir) + '.mp4');
+  const music = path.join(__dirname, 'music-calm.m4a');
+  if (fs.existsSync(music)) {
+    const total = dur.reduce((a, b) => a + b, 0) - fade * (dur.length - 1);
+    const withMusic = silent.replace(/\.mp4$/, '-muzyka.mp4');
+    execFileSync('ffmpeg', ['-y', '-i', silent, '-stream_loop', '-1', '-i', music, '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
+      '-af', `afade=t=out:st=${Math.max(0, total - 1.5).toFixed(2)}:d=1.5`, '-c:a', 'aac', '-b:a', '160k', '-shortest', withMusic], { stdio: 'ignore' });
+  }
   fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n');
   console.log('done', files.length, 'slides');
 })();
