@@ -5,6 +5,8 @@ const fs = require('fs'), path = require('path'), { execFileSync } = require('ch
 
 const dir = path.resolve(process.argv[2]);
 const post = JSON.parse(fs.readFileSync(path.join(dir, 'post.json'), 'utf8'));
+const FEED = post.format === 'feed'; // Instagram feed post: 1080x1350 images, no video
+const H = FEED ? 1350 : 1920;
 const esc = s => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 
 const css = `
@@ -45,20 +47,22 @@ function slide(s, i, n) {
   if (s.text) body += `<p>${esc(s.text)}</p>`;
   if (s.list) body += `<ul>${s.list.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
   if (s.cta) body += `<div class="cta">${esc(s.cta)}</div>`;
-  return `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body>
+  const feedCss = FEED ? `body{height:1350px}.wrap{top:190px;bottom:150px;right:90px}.foot{bottom:70px;right:90px}.big{font-size:260px}.chain{display:none}.page{right:90px}` : '';
+  return `<!doctype html><html><head><meta charset="utf-8"><style>${css}${feedCss}</style></head><body>
 <div class="brand">${logo}<div>PepSafe<small>${esc(post.tagline || 'Fakty o peptydach, bez ściemy')}</small></div></div>
 <div class="page">${i + 1}/${n}</div><div class="wrap">${body}</div>
 ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></html>`;
 }
 
 (async () => {
-  const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: H } });
   const files = [];
   for (let i = 0; i < post.slides.length; i++) {
     await p.setContent(slide(post.slides[i], i, post.slides.length)); await p.waitForTimeout(150);
     const f = path.join(dir, `slide-${String(i + 1).padStart(2, '0')}.png`); await p.screenshot({ path: f }); files.push(f);
   }
   await b.close();
+  if (FEED) { fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n'); console.log('done', files.length, 'feed images'); return; }
   // silent MP4: each slide shown for its own duration with a short crossfade
   const dur = post.slides.map(s => s.seconds || 3.5), fade = 0.4, args = ['-y'];
   files.forEach((f, i) => args.push('-loop', '1', '-t', String(dur[i]), '-i', f));
