@@ -3,5 +3,5 @@ const logo=(s)=>`<svg width="${s}" height="${s}" viewBox="0 0 34 34"><path d="M6
 const base=`*{margin:0}body{width:1080px;height:1080px;background:radial-gradient(circle at 50% 40%,#16303A 0%,#0B1419 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;font-family:"Inter Display",Inter,sans-serif;color:#E6EEF2}`;
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1080}});
 await p.setContent(`<style>${base}</style>${logo(700)}`);await p.screenshot({path:'pepsafe-profile-logo.png'});
-await p.setContent(`<style>${base} h1{font:800 150px "Inter Display";letter-spacing:-.03em} h1 span{color:#3CCFA9}</style>${logo(470)}<h1>Pep<span>Safe</span></h1>`);await p.screenshot({path:'pepsafe-profile-name.png'});
+await p.setContent(`<style>${base} h1{font:800 118px "Inter Display";letter-spacing:-.03em} h1 span{color:#3CCFA9} h1 em{font-style:normal;color:#93A4AF}</style>${logo(470)}<h1>Pep<span>Safe</span><em>.info</em></h1>`);await p.screenshot({path:'pepsafe-profile-name.png'});
 await b.close();})();
