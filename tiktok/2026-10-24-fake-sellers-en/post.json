@@ -1,0 +1,46 @@
+{
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Before you click 'buy'",
+   "title": "5 signs of a shady peptide seller",
+   "hero": true,
+   "text": "Swipe, let's check 👉",
+   "seconds": 5
+  },
+  {
+   "kicker": "Sign 1",
+   "title": "No certificate of analysis (COA)",
+   "text": "A legit seller shows a purity test result for the specific batch. No COA, or a generic one that doesn't match the batch number, is a red flag.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Sign 2",
+   "title": "Promises to treat disease",
+   "text": "A 'research only' product described as treating illness, reversing aging, or replacing a prescription drug breaks its own label disclaimer.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Sign 3",
+   "title": "Priced far below competitors",
+   "text": "A very low price often means less active substance than the label claims, or impurities - that's what independent assays of market vials have found.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Signs 4 and 5",
+   "list": [
+    "No company address or contact details",
+    "Payment only by crypto or a personal bank transfer"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "Facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.",
+   "foot": "Educational content, not medical advice, and not an endorsement to buy.",
+   "seconds": 5
+  }
+ ],
+ "caption": "5 signs a peptide seller isn't who they claim to be 🚩 No COA, disease-treatment claims, suspiciously low price, zero contact info, crypto-only payment.\n\nMore at pepsafe.info\n\n#peptides #safety #facts #mythsvsfacts #health #pepsafe"
+}

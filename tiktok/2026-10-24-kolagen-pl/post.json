@@ -1,0 +1,42 @@
+{
+ "slides": [
+  {
+   "kicker": "Mit czy fakt?",
+   "title": "Kolagen w proszku poprawia skórę?",
+   "hero": true,
+   "text": "Przesuń, sprawdzamy badania 👉",
+   "seconds": 5
+  },
+  {
+   "kicker": "Co przeanalizowano",
+   "big": "26",
+   "text": "badań z randomizacją i 1721 zdrowych dorosłych w metaanalizie z 2023 r.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Wynik",
+   "verdict": "CZĘŚCIOWO",
+   "tone": "part",
+   "text": "Umiarkowana poprawa elastyczności i nawilżenia skóry. Badania były jednak małe, a część wyników subiektywna.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Pamiętaj",
+   "title": "Kolagen to nie cud",
+   "list": [
+    "Efekty po 8+ tygodniach",
+    "Nie zastąpi kremu z filtrem",
+    "Nie leczy chorób skóry"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "Fakty bez ściemy",
+   "cta": "pepsafe.info",
+   "text": "Więcej rzetelnych informacji o suplementach i kosmetykach.",
+   "foot": "Treść edukacyjna, nie porada medyczna.",
+   "seconds": 5
+  }
+ ],
+ "caption": "Kolagen w proszku: mit czy fakt? Sprawdziliśmy metaanalizę 26 badań 🔬 Przesuń slajdy 👉\n\nWięcej na pepsafe.info\n\n#kolagen #suplementy #pielegnacja #skora #nauka #mityifakty #pepsafe"
+}
