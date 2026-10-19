@@ -1,0 +1,8 @@
+{"format":"feed","slides":[
+ {"kicker":"Zanim wstrzykniesz","title":"Jak czytać certyfikat analizy (COA)","hero":true,"text":"Przesuń, sprawdzamy na co patrzeć 👉"},
+ {"kicker":"1. Tożsamość","title":"Spektrometria mas","text":"COA powinien podawać zmierzoną masę cząsteczkową obok wartości teoretycznej. Samo słowo „mass spec” bez liczb niewiele znaczy."},
+ {"kicker":"2. Czystość","title":"HPLC i konkretna liczba","text":"Szukaj wyniku HPLC blisko 98% lub wyżej, z widocznym wykresem (chromatogramem). Brak wykresu to sygnał ostrzegawczy."},
+ {"kicker":"3. Numer partii","title":"Zgodność z fiolką","text":"Numer partii (lot) na COA musi zgadzać się z etykietą na fiolce. Jeden uniwersalny COA używany do wielu partii to czerwona flaga."},
+ {"kicker":"Czerwone flagi","list":["„Wysoka czystość” bez liczby","Brak nazwy laboratorium","COA dostępny dopiero po zakupie"]},
+ {"kicker":"Pamiętaj","text":"COA opisuje jedną testowaną próbkę określoną metodą. Nie potwierdza jałowości, bezpieczeństwa ani legalności produktu.","cta":"pepsafe.info","foot":"Treść edukacyjna, nie porada medyczna."}],
+ "caption":"Jak czytać certyfikat analizy (COA) peptydu 🔬 Tożsamość, czystość, numer partii, laboratorium – i dlaczego COA to nie to samo co bezpieczeństwo.\n\nWięcej na pepsafe.info\n\n#coa #peptydy #bezpieczenstwo #fakty #pepsafe"}

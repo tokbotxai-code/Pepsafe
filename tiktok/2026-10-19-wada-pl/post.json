@@ -1,0 +1,12 @@
+{
+ "topic": "WADA i peptydy",
+ "slides": [
+  {"kicker": "Sprawdzamy fakty", "title": "Twój peptyd jest na liście WADA?", "hero": true, "text": "Lista zakazanych substancji 2026 obowiązuje od 1 stycznia. Sprawdź 👉", "seconds": 3.5},
+  {"kicker": "Klasa S2", "title": "Hormony peptydowe i czynniki wzrostu", "text": "WADA rozbudowała w 2026 r. opisy klas S1, S2, S4 i S6, żeby łatwiej rozpoznać zakazane substancje i ich pochodne.", "seconds": 5},
+  {"kicker": "Ciekawostka", "verdict": "S0, NIE S2", "tone": "part", "title": "BPC-157 jest w innej klasie", "text": "BPC-157 nie jest wymieniony jako „hormon peptydowy” – trafił do klasy S0, czyli niezatwierdzonych substancji, razem z DNP i lekami w fazie badań klinicznych.", "seconds": 6},
+  {"kicker": "Co to oznacza", "text": "Klasa S0 zakazuje każdej substancji farmakologicznej, która nie jest zatwierdzonym lekiem – niezależnie od tego, czy ma już swoją nazwę na liście, czy nie.", "seconds": 5},
+  {"kicker": "Dla kogo to ważne", "list": ["Sportowcy podlegający testom antydopingowym", "Również suplementy „badawcze” kupowane online", "Nieznajomość składu nie chroni przed dyskwalifikacją"], "seconds": 5.5},
+  {"kicker": "Więcej faktów, zero ściemy", "cta": "pepsafe.info", "text": "Katalog peptydów, mity i fakty, kronika decyzji FDA.", "foot": "Treść edukacyjna. Nie jest poradą medyczną ani antydopingową.", "seconds": 4}
+ ],
+ "caption": "Lista zakazanych substancji WADA 2026 obowiązuje od 1 stycznia 🚫 Ciekawostka: BPC-157 jest zakazany, ale formalnie nie jako „hormon peptydowy” (S2), tylko w klasie S0.\n\nWięcej na pepsafe.info\n\n#wada #antydoping #peptydy #bpc157 #fakty #pepsafe"
+}

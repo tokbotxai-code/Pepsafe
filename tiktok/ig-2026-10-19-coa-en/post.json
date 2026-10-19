@@ -1,0 +1,8 @@
+{"format":"feed","tagline":"Peptide facts, zero hype","slides":[
+ {"kicker":"Before you inject","title":"How to read a certificate of analysis (COA)","hero":true,"text":"Swipe, here's what to look for 👉"},
+ {"kicker":"1. Identity","title":"Mass spectrometry","text":"A COA should list a measured molecular mass next to a theoretical one. The words 'mass spec' alone, with no numbers, mean little."},
+ {"kicker":"2. Purity","title":"HPLC and an actual number","text":"Look for an HPLC result near 98% or higher, with a visible chromatogram. No chromatogram is a red flag."},
+ {"kicker":"3. Batch number","title":"Matches the vial", "text":"The lot number on the COA must match the vial's label. One generic COA reused across different batches is a red flag."},
+ {"kicker":"Red flags","list":["'High purity' with no actual number","No named lab","COA only available after you buy"]},
+ {"kicker":"Remember","text":"A COA describes one tested sample under a defined method. It doesn't confirm sterility, safety, or legality.","cta":"pepsafe.info","foot":"Educational content, not medical advice."}],
+ "caption":"How to read a peptide certificate of analysis (COA) 🔬 Identity, purity, batch number, lab name — and why a COA isn't the same thing as safety.\n\nMore at pepsafe.info\n\n#coa #peptides #safety #facts #pepsafe"}
