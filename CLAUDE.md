@@ -59,3 +59,9 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Automatycznie (autoPublish true) wysyłamy na TikToka maks. 12 postów w ciągu 24 h. Harmonogram 8/dzień się mieści;
   dodatkowe posty (poprawki, powtórki) planuj na TikToka z autoPublish false, czyli do ręcznej publikacji z telefonu
   (Metricool wysyła powiadomienie), albo przesuń na kolejny dzień. Instagram może iść automatycznie.
+
+## Repozytorium jest publiczne: bez śladów AI
+- Przed commitem ustaw: `git config user.name "PepSafe"` i `git config user.email "noreply@pepsafe.info"`.
+- W opisach commitów nie wspominaj o AI, modelach ani narzędziach; bez linii „Co-Authored-By” innych niż
+  `Co-Authored-By: PepSafe <noreply@pepsafe.info>`. Bez linków do sesji.
+- Na stronie, w postach i w plikach w repo nie piszemy, że treści tworzy AI.
