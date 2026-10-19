@@ -27,7 +27,8 @@
 ## Treść
 - Każdy opis kończy się „Więcej na pepsafe.info” / „More at pepsafe.info” i hashtagiem `#pepsafe`.
 - Treść edukacyjna, bez dawkowania i zachęt do stosowania; fakty tylko z wiarygodnych źródeł (FDA, WADA, badania).
-- `isAiGenerated` (IG) i `isAigc` (TikTok) = `true`.
+- `isAiGenerated` (IG) i `isAigc` (TikTok) = `false` dla grafik/filmów z tekstem (decyzja właściciela; nie są to treści
+  realistyczne). Gdyby pojawiły się realistyczne obrazy, wideo lub głos wygenerowane przez AI – wtedy `true` (wymóg platform).
 
 ## Słowa i obrazy, których unikamy (moderacja TikTok/IG)
 TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania substancji (tak został wstrzymany BPC-157 PL z 18.10: „zanim kupisz fiolkę”).
