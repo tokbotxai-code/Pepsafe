@@ -6,6 +6,7 @@
 <meta name="description" content="PepSafe is a non-commercial, bilingual (Polish and English) educational site about peptides. A catalog of over 100 substances: legal status, mechanism, strength of evidence and combination warnings. No doses for unapproved substances; for approved drugs it quotes FDA labels. Nothing is sold. Niekomercyjny serwis edukacyjny o peptydach, po polsku i angielsku.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://pepsafe.info/">
+<link rel="alternate" type="application/rss+xml" title="PepSafe" href="https://pepsafe.info/feed.xml">
 <link rel="alternate" hreflang="pl" href="https://pepsafe.info/">
 <link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en">
 <link rel="alternate" hreflang="x-default" href="https://pepsafe.info/">
@@ -535,7 +536,7 @@ footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 </main>
-<footer><p data-k="foot"></p><p class="upd" id="upd"></p><div class="flinks"><a href="#catalog" data-k="n_catalog"></a><a href="#faq" data-k="n_faq"></a><a href="#contact" data-k="n_contact"></a><a href="https://www.tiktok.com/@pepsafe.info" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/pepsafe.info/" target="_blank" rel="noopener">Instagram</a></div></footer>
+<footer><p data-k="foot"></p><p class="upd" id="upd"></p><div class="flinks"><a href="#catalog" data-k="n_catalog"></a><a href="#faq" data-k="n_faq"></a><a href="#contact" data-k="n_contact"></a><a href="https://www.tiktok.com/@pepsafe.info" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/pepsafe.info/" target="_blank" rel="noopener">Instagram</a><a href="/feed.xml">RSS</a></div></footer>
 <div class="toast" id="toast" role="status" hidden></div>
 <dialog id="dlg" aria-labelledby="dName"><div class="dlg" id="dlgBody"></div></dialog>
 </div>
@@ -915,6 +916,20 @@ function printSheet(e){
   win.document.close();win.focus();setTimeout(function(){try{win.print();}catch(x){}},300);
 }
 window.PEP_print=printSheet;
+
+function safetyExtra(e){
+  var appr=(e.s==="A"||e.s==="R");
+  var preg=appr?I("Informacje o ciąży i karmieniu znajdziesz w aktualnej ulotce leku, do której linkujemy w sekcji Źródła. Decyzję podejmuje lekarz prowadzący.",
+                  "Information on pregnancy and breastfeeding is in the current label, linked in the Sources section. The decision belongs to the treating doctor.")
+                :I("Nie badano stosowania w ciąży ani podczas karmienia. Brak danych nie znaczy, że jest bezpiecznie: znaczy, że nikt tego nie sprawdził.",
+                   "Use in pregnancy and breastfeeding has not been studied. No data does not mean safe: it means nobody has checked.");
+  var avoid=appr?I("Przeciwwskazania i ostrzeżenia wymienia ulotka. Zawsze zgłoś lekarzowi inne przyjmowane leki i choroby przewlekłe.",
+                   "Contraindications and warnings are listed in the label. Always tell your doctor about other medicines and chronic conditions.")
+                :I("Osoby przyjmujące leki na stałe, kobiety w ciąży i karmiące, osoby po chorobie nowotworowej oraz nieletni są najbardziej narażeni na nieprzewidziane skutki, bo żadne badania ich nie obejmowały.",
+                   "People on long-term medication, pregnant and breastfeeding women, people with a cancer history and minors face the greatest risk of unforeseen effects, because no study covered them.");
+  return '<div class="w"><h4>'+I("Ciąża i karmienie","Pregnancy and breastfeeding")+'</h4>'+esc(preg)+'</div>'+
+         '<div class="w"><h4>'+I("Kto powinien zachować szczególną ostrożność","Who should be especially careful")+'</h4>'+esc(avoid)+'</div>';
+}
 function openDlg(e){
   cur=e;var url=encodeURIComponent((EN[e.n]?EN[e.n][0]:e.n).split(" ")[0].replace(/[(),]/g,""));
   $("#dlgBody").innerHTML='<div class="portrait"><canvas id="pc" aria-hidden="true"></canvas><button class="close" type="button" id="dClose" aria-label="'+I("Zamknij","Close")+'">×</button><span class="cap">'+I("Ilustracja poglądowa, nie rzeczywista struktura","Schematic illustration, not a real structure")+'</span></div>'+
@@ -923,6 +938,7 @@ function openDlg(e){
    (e.q?ribbons(e.q):'')+
    '<div><h4>'+I("Czym jest","What it is")+'</h4>'+esc(F(e,"d"))+'</div><div><h4>'+I("Jak działa","How it works")+'</h4>'+esc(F(e,"m"))+'</div><div><h4>'+I("Zastosowanie","Use")+'</h4>'+esc(F(e,"u"))+'</div><div><h4>'+I("Co wiadomo z badań","What studies show")+'</h4>'+esc(F(e,"ev"))+'</div>'+
    '<div class="w"><h4>'+I("Łączenie i bezpieczeństwo","Combining and safety")+'</h4>'+esc(F(e,"w"))+'</div>'+(groupBlock(e)||'<div class="w"><h4>'+I("Nie łączyć z","Do not combine with")+'</h4>'+I("Brak sprawdzonych danych o łączeniu z innymi substancjami w tym katalogu. Nie łącz bez lekarza.","No verified data on combining with other substances in this catalog. Do not combine without a doctor.")+'</div>')+
+   safetyExtra(e)+
    (window.PEP_status?window.PEP_status(e):'')+evBar(e)+
    '<p><button type="button" class="btn" id="dPrint">'+I("Wydrukuj pytania do lekarza","Print questions for your doctor")+'</button></p>'+
    '<div class="links"><a href="https://pubchem.ncbi.nlm.nih.gov/#query='+url+'" target="_blank" rel="noopener">PubChem</a><a href="https://go.drugbank.com/unearth/q?searcher=drugs&amp;query='+url+'" target="_blank" rel="noopener">DrugBank</a><a href="https://www.rcsb.org/search?q='+url+'" target="_blank" rel="noopener">Protein Data Bank</a></div></div>';
