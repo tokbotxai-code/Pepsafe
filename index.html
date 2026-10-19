@@ -1300,7 +1300,10 @@ function statics(){
   var L=[["A","Zatwierdzony lek","Approved drug"],["R","Zatwierdzony regionalnie lub historycznie","Approved regionally or historically"],["P","W badaniach klinicznych","In clinical trials"],["U","Niezatwierdzony","Unapproved"],["C","Kosmetyk lub suplement","Cosmetic or supplement"],["N","Nie jest peptydem","Not a peptide"]];
   $("#legend").innerHTML='<b>'+T("Legenda statusów:","Status legend:")+'</b>'+L.map(function(x){return '<span><i class="tag s-'+x[0]+'" style="padding:1px 8px;font-style:normal">'+x[0]+'</i>'+T(x[1],x[2])+'</span>'}).join("");
   $("#about").innerHTML='<h3>'+T("O projekcie","About")+'</h3><p>'+T("PepSafe to niekomercyjny projekt edukacyjny. Nie sprzedaje niczego, nie podaje cen, linków do zakupu ani rankingów, a dla substancji niezatwierdzonych nie podaje dawek. Fakty o lekach pochodzą z oficjalnych charakterystyk i ulotek (FDA, DailyMed); to, czego nie udało się zweryfikować, nie trafia do katalogu. Zgłoszenia skutków ubocznych nie są publikowane.","PepSafe is a non-commercial educational project. It sells nothing and lists no prices, purchase links or rankings, and gives no doses for unapproved substances. Drug facts come from official labels (FDA, DailyMed); anything that could not be verified is left out. Side-effect reports are not published.")+'</p>';
-  $("#upd").textContent=T("Ostatnia aktualizacja: 18.10.2026","Last updated: 18 Oct 2026");
+  var ud=new Date(document.lastModified);
+  if(isNaN(ud)||ud.getFullYear()<2026)ud=new Date();
+  var uds=ud.toLocaleDateString(pl()?"pl-PL":"en-GB",{day:"numeric",month:pl()?"numeric":"short",year:"numeric",timeZone:"Europe/London"});
+  $("#upd").textContent=T("Ostatnia aktualizacja: ","Last updated: ")+uds;
 }
 /* favorites on cards */
 function marks(){
