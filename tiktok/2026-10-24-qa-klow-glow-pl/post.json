@@ -1,0 +1,49 @@
+{
+ "topic": "Q&A KLOW i GLOW",
+ "slides": [
+  {
+   "kicker": "Q&A: odpowiadamy na Wasze pytania",
+   "title": "KLOW i GLOW: co warto wiedzieć?",
+   "hero": true,
+   "text": "Najczęstsze pytania o te mieszanki 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "Co to jest?",
+   "title": "Mieszanki kilku peptydów",
+   "text": "GLOW to GHK-Cu, BPC-157 i TB-500. KLOW to to samo z dodatkiem KPV. Sprzedawane jako „produkty do badań”, nie jako leki.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Czy to zatwierdzony lek?",
+   "verdict": "NIE",
+   "tone": "no",
+   "text": "Żadnej z tych mieszanek nie zatwierdziła FDA ani EMA. Nie ma też badań klinicznych samych mieszanek.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Czy razem działają lepiej?",
+   "verdict": "BRAK DOWODÓW",
+   "tone": "part",
+   "text": "Składniki badano głównie na zwierzętach, a GHK-Cu przede wszystkim w kosmetykach na skórę. Łączenie nie dodaje dowodów.",
+   "seconds": 6
+  },
+  {
+   "kicker": "Sport",
+   "list": [
+    "BPC-157 i TB-500 są na liście zakazanej WADA",
+    "Dotyczy to też produktów „do badań”",
+    "Nieznajomość składu nie chroni przed dyskwalifikacją"
+   ],
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Masz kolejne pytanie?",
+   "cta": "pepsafe.info",
+   "text": "Napisz w komentarzu albo w wiadomości prywatnej. Odpowiemy w następnym Q&A.",
+   "foot": "Treść edukacyjna, nie porada medyczna.",
+   "seconds": 4.5
+  }
+ ],
+ "caption": "Q&A: KLOW i GLOW 🧪✨ Co to za mieszanki, czy są zatwierdzone, czy razem działają lepiej i co z WADA? Odpowiadamy na Wasze pytania.\n\nMasz kolejne? Napisz w komentarzu albo w wiadomości prywatnej.\n\nTreść edukacyjna, nie porada medyczna. Więcej na pepsafe.info\n\n#klow #glow #peptydy #qa #mityifakty #pepsafe"
+}
