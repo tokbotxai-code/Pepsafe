@@ -128,6 +128,9 @@ tr:last-child td{border-bottom:0}
 .ruler.fine{background-image:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px 1%);background-size:100% 14px}
 .ruler{cursor:ew-resize;touch-action:none}
 .ruler:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.markedit{display:inline-flex;align-items:baseline;gap:8px}
+.markedit input{width:74px;padding:6px 10px;text-align:right;font-family:var(--f-mono);font-size:1.05rem}
+.markedit b{color:var(--muted);font-weight:500;font-size:.9rem}
 .rhandle{position:absolute;top:-6px;width:18px;height:40px;margin-left:-9px;border-radius:9px;background:var(--accent);box-shadow:0 1px 4px rgba(0,0,0,.25);pointer-events:none}
 .rfill{position:absolute;left:0;bottom:0;top:0;background:var(--accent-soft);border-right:2px solid var(--accent);border-radius:6px 0 0 0}
 .calcp{padding:22px}
@@ -397,7 +400,7 @@ footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
       </div>
     </div>
     <div class="sline"></div>
-    <p class="slab"><span data-k="ca_mark0"></span> <b id="markOut">10</b></p>
+    <p class="slab"><span data-k="ca_mark0"></span> <span class="markedit"><input type="number" id="markIn" min="1" max="100" step="1" value="10" inputmode="numeric" aria-label="U-100"><b id="markOut"></b></span></p>
     <div class="ruler fine" id="rulerBar" role="slider" tabindex="0" aria-label="U-100" aria-valuemin="1" aria-valuemax="100" aria-valuenow="10"><span class="rfill" id="rfill"></span><span class="rhandle" id="rhandle"></span></div>
     <div class="scends"><span>1</span><span>100 (1 ml)</span></div>
     <div class="tiles" id="calcOut"></div>
@@ -1298,7 +1301,8 @@ var calcVol=1, calcMark=10;
 function renderCalc(){
   var mg=num("#vialMg");
   $("#volOut").textContent=nf(calcVol,1)+" ml";
-  $("#markOut").textContent=calcMark+" ("+nf(calcMark/100,2)+" ml)";
+  $("#markOut").textContent="("+nf(calcMark/100,2)+" ml)";
+  if($("#markIn")!==document.activeElement)$("#markIn").value=calcMark;
   $("#rfill").style.width=calcMark+"%";$("#rhandle").style.left=calcMark+"%";
   $("#rulerBar").setAttribute("aria-valuenow",calcMark);
   var ok=mg>0, c=ok?mg/calcVol:0, ml=calcMark/100, mcg=c*1000*ml;
@@ -1312,6 +1316,8 @@ function renderCalc(){
   lastTxt=ok?nf(mg,2)+" mg + "+nf(calcVol,1)+" ml = "+nf(c,3)+" mg/ml; "+calcMark+" "+T("r_marks_s")+" ("+nf(ml,2)+" ml) = "+nf(mcg,1)+" mcg":"";
   $$("#vialChips .chip").forEach(function(b){b.setAttribute("aria-pressed",String(mg===+b.getAttribute("data-v")));});
 }
+$("#markIn").addEventListener("input",function(){var v=parseInt(this.value,10);if(isNaN(v))return;calcMark=Math.min(100,Math.max(1,v));renderCalc();});
+$("#markIn").addEventListener("blur",function(){this.value=calcMark;});
 $("#volR").addEventListener("input",function(){calcVol=+this.value/10;renderCalc();});
 (function(){
   var bar=$("#rulerBar"),drag=false;
