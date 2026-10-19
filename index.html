@@ -297,6 +297,10 @@ pre.prev{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .9rem var(--f-mono
 .kv2 dt{color:var(--muted)}
 .kv2 dd{margin:0}
 @media(max-width:560px){.kv2{grid-template-columns:1fr;gap:2px 0}.kv2 dd{margin-bottom:8px}}
+.subtabs{display:flex;gap:8px;overflow-x:auto;padding:8px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);background:var(--surface)}
+.subtabs a{white-space:nowrap;font:500 .9rem var(--f-body);color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
+.subtabs a[aria-current]{background:var(--accent-soft);color:var(--ink);border-color:var(--accent)}
+.tabs{position:relative}
 footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
 .skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--accent);color:var(--accent-ink);padding:10px 16px;border-radius:0 0 10px 0}
 .skip:focus{left:0}
@@ -319,22 +323,15 @@ footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
     </div>
   </div>
   <nav class="tabs" aria-label="Menu" id="tabs">
-    <a href="#start" data-v="start" data-k="n_start"></a>
-    <a href="#catalog" data-v="catalog" data-k="n_catalog"></a>
-    <a href="#basics" data-v="basics" data-k="n_basics"></a>
-    <a href="#blog" data-v="blog" data-k="n_blog"></a>
-    <a href="#faq" data-v="faq" data-k="n_faq"></a>
-    <a href="#compare" data-v="compare">Porównanie</a>
-    <a href="#myths" data-v="myths">Mity i fakty</a>
-    <a href="#news" data-v="news">Kronika</a>
-    <a href="#alerts" data-v="alerts" id="navAlerts"></a>
-    <a href="#qa" data-v="qa" id="navQa"></a>
-    <a href="#tricks" data-v="tricks" id="navTricks"></a>
-    <a href="#effects" data-v="effects" data-k="n_effects"></a>
-    <a href="#dose" data-v="dose">Dawkowanie</a>
-    <a href="#method" data-v="method" data-k="n_method"></a>
-    <a href="#contact" data-v="contact" data-k="n_contact"></a>
+    <a href="#start" data-v="start" data-g="start"></a>
+    <a href="#catalog" data-v="catalog" data-g="catalog"></a>
+    <a href="#dose" data-v="dose" data-g="dose"></a>
+    <a href="#alerts" data-v="alerts" data-g="safety"></a>
+    <a href="#faq" data-v="faq" data-g="facts"></a>
+    <a href="#basics" data-v="basics" data-g="know"></a>
+    <a href="#method" data-v="method" data-g="about"></a>
   </nav>
+  <div class="subtabs" id="subtabs" aria-label="Sekcje"></div>
 </header>
 <main id="main" tabindex="-1">
 <section class="view" data-view="start">
@@ -1390,15 +1387,34 @@ function viewMeta(h){
   if(lang==="en")canon="https://pepsafe.info/?lang=en"+(h==="start"?"":"#"+h);
   setMeta(m[0],m[1],canon);
 }
+var GROUPS={start:["start"],catalog:["catalog","compare"],dose:["dose"],
+ safety:["alerts","effects"],facts:["faq","qa","myths","tricks"],
+ know:["basics","blog","news"],about:["method","contact"]};
+var GLAB={pl:{start:"Start",catalog:"Katalog",dose:"Dawkowanie",safety:"Bezpieczeństwo",facts:"Fakty i pytania",know:"Wiedza",about:"O projekcie"},
+ en:{start:"Home",catalog:"Catalog",dose:"Dosing",safety:"Safety",facts:"Facts and questions",know:"Knowledge",about:"About"}};
+var VLAB={pl:{catalog:"Katalog",compare:"Porównanie leków",dose:"Dawkowanie",alerts:"Ostrzeżenia FDA",effects:"Zgłoś objaw",faq:"Najczęstsze pytania",qa:"Pytania od Was",myths:"Mity i fakty",tricks:"Triki marketingu",basics:"Podstawy",blog:"Blog",news:"Kronika",method:"Metodologia",contact:"Kontakt",start:"Start"},
+ en:{catalog:"Catalog",compare:"Drug comparison",dose:"Dosing",alerts:"FDA alerts",effects:"Report a symptom",faq:"FAQ",qa:"Your questions",myths:"Myths and facts",tricks:"Marketing tricks",basics:"Basics",blog:"Blog",news:"Chronicle",method:"Methodology",contact:"Contact",start:"Home"}};
+function groupOf(v){for(var g in GROUPS)if(GROUPS[g].indexOf(v)>-1)return g;return "start";}
 function route(){
   var h=(location.hash||"").replace("#","");if(VIEWS.indexOf(h)<0)h="start";
-  $$("[data-view]").forEach(function(s){s.hidden=s.getAttribute("data-view")!==h;});
-  $$("#tabs a").forEach(function(a){if(a.getAttribute("data-v")===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  var g=groupOf(h),mem=GROUPS[g];
+  $$("[data-view]").forEach(function(s){s.hidden=mem.indexOf(s.getAttribute("data-view"))<0;});
+  $$("#tabs a").forEach(function(a){if(a.getAttribute("data-g")===g)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  var st=$("#subtabs");
+  if(st){
+    st.innerHTML=mem.length>1?mem.map(function(v){
+      return '<a href="#'+v+'"'+(v===h?' aria-current="true"':'')+'>'+(VLAB[lang][v]||v)+'</a>'}).join(""):"";
+    st.hidden=mem.length<2;
+  }
   if(h!=="blog"&&openPost>=0){openPost=-1;renderBlog();}
+  $$("#tabs a").forEach(function(a){var k=a.getAttribute("data-g");a.textContent=GLAB[lang][k]||k;});
   var sec=document.querySelector('[data-view="'+h+'"]');
   if(sec){var hd=sec.querySelector("h1,h2");if(hd&&hd.tagName==="H2"&&!hd.closest("dialog")){var h1=document.createElement("h1");h1.className=hd.className;h1.innerHTML=hd.innerHTML;["id","data-k"].forEach(function(a){if(hd.hasAttribute(a))h1.setAttribute(a,hd.getAttribute(a));});hd.parentNode.replaceChild(h1,hd);}}
   viewMeta(h);
-  window.scrollTo(0,0);
+  if(sec&&GROUPS[g].length>1&&GROUPS[g][0]!==h){
+    var y=sec.getBoundingClientRect().top+window.pageYOffset-(parseInt(getComputedStyle(document.documentElement).getPropertyValue("--hh"))||90)-16;
+    window.scrollTo(0,Math.max(0,y));
+  } else window.scrollTo(0,0);
 }
 function renderAll(){applyStatic();renderBasics();renderBlog();renderFaq();renderContact();renderGloss();renderDaily();efRender();renderMethod();}
 function setLang(l){lang=l;try{localStorage.setItem("pep-lang",l);}catch(e){}
