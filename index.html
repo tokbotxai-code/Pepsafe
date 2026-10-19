@@ -1297,7 +1297,7 @@ var GL=[
  {pl:["Przedawkowanie","Przyjęcie większej ilości niż bezpieczna. Objawy wymagają pilnej pomocy."],en:["Overdose","Taking more than is safe. Symptoms need urgent help."]}
 ];
 /* ---------- Calculator v2: concentration for 1, 2, 3 ml (no dose input) ---------- */
-var calcVol=1, calcMark=10;
+var calcVol=1, calcMark=10, lockMcg=0;
 function renderCalc(){
   var mg=num("#vialMg");
   $("#volOut").textContent=nf(calcVol,1)+" ml";
@@ -1313,22 +1313,29 @@ function renderCalc(){
     tile(nf(mcg,1)+" mcg",T("t_sel"),calcMark+" × 0,01 ml = "+nf(ml,2)+" ml",1)+
     tile(nf(c*10,1)+" mcg",T("t_mark"),"0,01 ml")+
     tile(nf(c*100,1)+" mcg",T("t_tenth"),T("t_tenth_h")):"";
+  if(ok)lockMcg=mcg;
   lastTxt=ok?nf(mg,2)+" mg + "+nf(calcVol,1)+" ml = "+nf(c,3)+" mg/ml; "+calcMark+" "+T("r_marks_s")+" ("+nf(ml,2)+" ml) = "+nf(mcg,1)+" mcg":"";
   $$("#vialChips .chip").forEach(function(b){b.setAttribute("aria-pressed",String(mg===+b.getAttribute("data-v")));});
 }
-$("#markIn").addEventListener("input",function(){var v=parseInt(this.value,10);if(isNaN(v))return;calcMark=Math.min(100,Math.max(1,v));renderCalc();});
+$("#markIn").addEventListener("input",function(){var v=parseInt(this.value,10);if(isNaN(v))return;calcMark=Math.min(100,Math.max(1,v));lockMcg=0;renderCalc();});
 $("#markIn").addEventListener("blur",function(){this.value=calcMark;});
-$("#volR").addEventListener("input",function(){calcVol=+this.value/10;renderCalc();});
+function keepAmount(){
+  var mg=num("#vialMg");if(!(mg>0)||!(lockMcg>0))return;
+  var perMark=mg/calcVol*10;
+  calcMark=Math.min(100,Math.max(1,Math.round(lockMcg/perMark)));
+}
+$("#volR").addEventListener("input",function(){calcVol=+this.value/10;keepAmount();renderCalc();});
+$("#vialMg").addEventListener("input",function(){keepAmount();renderCalc();});
 (function(){
   var bar=$("#rulerBar"),drag=false;
   function setFrom(e){var r=bar.getBoundingClientRect(),x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;
-    var v=Math.round(x/r.width*100);calcMark=Math.min(100,Math.max(1,v));renderCalc();}
+    var v=Math.round(x/r.width*100);calcMark=Math.min(100,Math.max(1,v));lockMcg=0;renderCalc();}
   bar.addEventListener("pointerdown",function(e){drag=true;bar.setPointerCapture(e.pointerId);setFrom(e);});
   bar.addEventListener("pointermove",function(e){if(drag)setFrom(e);});
   bar.addEventListener("pointerup",function(){drag=false;});
   bar.addEventListener("keydown",function(e){
     var d=e.key==="ArrowRight"||e.key==="ArrowUp"?1:(e.key==="ArrowLeft"||e.key==="ArrowDown"?-1:0);
-    if(!d)return;e.preventDefault();calcMark=Math.min(100,Math.max(1,calcMark+d*(e.shiftKey?10:1)));renderCalc();});
+    if(!d)return;e.preventDefault();calcMark=Math.min(100,Math.max(1,calcMark+d*(e.shiftKey?10:1)));lockMcg=0;renderCalc();});
 })();
 var VIEWS=["start","catalog","basics","calc","blog","faq","effects","dose","method","contact","myths","news","compare"];
 function route(){
