@@ -13,7 +13,7 @@
 - Karuzela na IG (`ig-...`, format `feed`): na TikToka idzie **film**, nie slajdy. Skopiuj `post.json` do
   `tiktok/RRRR-MM-DD-<temat>-<lang>/` bez pola `format`, wyrenderuj `node tiktok/make.js tiktok/<folder>`
   i zaplanuj osobny post TikTok **1 minutę po** poście na IG.
-- Stories (`story-...`) są tylko na IG.
+- Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST) i TikToka razem.
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
 ## Media
