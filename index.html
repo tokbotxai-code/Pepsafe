@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="PepSafe is a non-commercial, bilingual (Polish and English) educational site about peptides. A catalog of over 100 substances: legal status, mechanism, strength of evidence and combination warnings. No doses for unapproved substances; for approved drugs it quotes FDA labels. Nothing is sold. Niekomercyjny serwis edukacyjny o peptydach, po polsku i angielsku.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://pepsafe.info/">
+<link rel="alternate" hreflang="pl" href="https://pepsafe.info/">
+<link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://pepsafe.info/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%225%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%225%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%225%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%225%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
 <style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
 <title>PepSafe: peptide facts, no sales, no internet doses | fakty o peptydach</title>
@@ -14,8 +20,11 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pepsafe.info/">
-<meta property="og:image" content="https://pepsafe.info/brand/pepsafe-profile-name-info.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://pepsafe.info/brand/pepsafe-share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PepSafe">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","@id":"https://pepsafe.info/#website","url":"https://pepsafe.info/","name":"PepSafe","inLanguage":["pl","en"],"isAccessibleForFree":true,
@@ -277,11 +286,14 @@ pre.prev{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .9rem var(--f-mono
 .catnotes{display:flex;flex-direction:column;gap:10px;color:var(--muted);font-size:.85rem;padding-top:28px;margin-top:20px;border-top:1px solid var(--line)}
 .catnotes .eyebrow{margin-bottom:0}
 footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--accent);color:var(--accent-ink);padding:10px 16px;border-radius:0 0 10px 0}
+.skip:focus{left:0}
 
 </style>
 </head>
 <body>
 <div class="wrapper">
+<a class="skip" href="#main">Przejdź do treści / Skip to content</a>
 <header class="top" id="siteHeader">
   <div class="bar">
     <a class="brand" href="#start">
@@ -309,7 +321,7 @@ footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
     <a href="#contact" data-v="contact" data-k="n_contact"></a>
   </nav>
 </header>
-<main>
+<main id="main" tabindex="-1">
 <section class="view" data-view="start">
   <div class="hero">
     <canvas id="heroCv" aria-hidden="true"></canvas>
@@ -816,10 +828,13 @@ function openDlg(e){
   $("#dClose").addEventListener("click",function(){closeDlg()});
   startPortrait(e);
 }
-function closeDlg(){cancelAnimationFrame(loop);if(dlg.close)dlg.close();else dlg.removeAttribute("open");}
-dlg.addEventListener("close",function(){cancelAnimationFrame(loop)});
+function entryUrl(n){var u=new URL(location.href);u.searchParams.set("e",n);u.hash="";return u.toString();}
+function pushEntry(n){try{history.pushState({e:n},"",entryUrl(n));}catch(x){}}
+function dropEntry(){try{var u=new URL(location.href);if(u.searchParams.get("e")){u.searchParams.delete("e");history.pushState({},"",u.toString());}}catch(x){}}
+function closeDlg(){cancelAnimationFrame(loop);if(dlg.close)dlg.close();else dlg.removeAttribute("open");dropEntry();}
+dlg.addEventListener("close",function(){cancelAnimationFrame(loop);dropEntry();});
 dlg.addEventListener("click",function(ev){if(ev.target===dlg)closeDlg();});
-$("#grid").addEventListener("click",function(ev){var b=ev.target.closest(".card");if(!b)return;openDlg(findN(b.getAttribute("data-n")));});
+$("#grid").addEventListener("click",function(ev){var b=ev.target.closest(".card");if(!b)return;var e=findN(b.getAttribute("data-n"));if(!e)return;openDlg(e);pushEntry(e.n);});
 
 function startPortrait(e){
   var cv=$("#pc"),ctx=cv.getContext("2d"),dpr=Math.min(2,window.devicePixelRatio||1);
@@ -858,7 +873,14 @@ function renderGroups(){
     return '<details class="grp g-'+f.lvl+'"><summary>'+esc(FL(f,"lab"))+'</summary><div class="gin"><b style="color:var(--ink)">'+esc(FL(f,"t"))+'</b><p>'+esc(FL(f,"x"))+'</p><div class="mem">'+f.m.map(function(m){return '<button type="button" class="mbtn" data-open="'+esc(m)+'">'+esc(NM(m))+'</button>'}).join("")+'</div></div></details>';
   }).join("");
 }
-document.addEventListener("click",function(ev){var b=ev.target.closest("[data-open]");if(!b)return;var e=findN(b.getAttribute("data-open"));if(!e)return;if(dlg.open){cancelAnimationFrame(loop);dlg.close();}openDlg(e);});
+document.addEventListener("click",function(ev){var b=ev.target.closest("[data-open]");if(!b)return;var e=findN(b.getAttribute("data-open"));if(!e)return;if(dlg.open){cancelAnimationFrame(loop);dlg.close();}openDlg(e);pushEntry(e.n);});
+window.PEP_find=findN;
+window.PEP_open=function(e){if(dlg.open){cancelAnimationFrame(loop);dlg.close();}openDlg(e);};
+window.addEventListener("popstate",function(){
+  var n=null;try{n=new URLSearchParams(location.search).get("e");}catch(x){}
+  if(!n){if(dlg.open){cancelAnimationFrame(loop);if(dlg.close)dlg.close();else dlg.removeAttribute("open");}return;}
+  var e=findN(n);if(e){if(dlg.open){cancelAnimationFrame(loop);dlg.close();}openDlg(e);}
+});
 
 /* ---------- hero background ---------- */
 (function(){
@@ -1054,7 +1076,8 @@ var SRC=[
 
 /* ---------- State ---------- */
 var lang="pl";
-var sv=null;try{sv=localStorage.getItem("pep-lang");}catch(e){}
+var sv=null;try{sv=new URLSearchParams(location.search).get("lang");}catch(e){}
+if(sv!=="en"&&sv!=="pl"){sv=null;try{sv=localStorage.getItem("pep-lang");}catch(e){}}
 if(sv==="en"||sv==="pl")lang=sv;
 else{var bl=(navigator.languages&&navigator.languages[0])||navigator.language||"pl";lang=/^pl\b/i.test(bl)?"pl":"en";}
 var openPost=-1;
@@ -1193,15 +1216,58 @@ var GL=[
 ];
 /* ---------- Calculator v2: concentration for 1, 2, 3 ml (no dose input) ---------- */
 var VIEWS=["start","catalog","basics","blog","faq","effects","dose","method","contact","myths","news","compare"];
+var VT={pl:{start:["PepSafe: fakty o peptydach, bez sprzedaży i bez dawek z internetu","Katalog ponad 100 peptydów: status prawny, mechanizm, siła dowodów i ostrzeżenia o łączeniu."],
+ catalog:["Katalog peptydów: status, mechanizm, dowody","Ponad 100 substancji z oceną dowodów, statusem prawnym i ostrzeżeniami o łączeniu."],
+ basics:["Podstawy: czym są peptydy","Jak działają peptydy, co znaczy liofilizat, czystość i oznaczenia na etykiecie."],
+ blog:["Blog PepSafe: analizy i fakty","Dłuższe teksty o peptydach, decyzjach urzędów i trikach marketingu."],
+ faq:["Najczęstsze pytania o peptydy","Odpowiedzi na pytania o status prawny, bezpieczeństwo i dowody naukowe."],
+ compare:["Porównanie peptydów","Zestawienie substancji obok siebie: status, mechanizm i dowody."],
+ myths:["Mity i fakty o peptydach","Najczęstsze mity z internetu skonfrontowane z badaniami."],
+ news:["Kronika decyzji FDA i zmian prawa","Co i kiedy zmieniło się w statusie peptydów."],
+ effects:["Zgłoszenia działań niepożądanych","Opisz niepokojący objaw po leku peptydowym. Zgłoszeń nie publikujemy."],
+ dose:["Dawkowanie zatwierdzonych leków według ulotek","Dawki wyłącznie dla leków zatwierdzonych przez FDA, przepisane z aktualnych ulotek."],
+ method:["Metodologia PepSafe","Skąd bierzemy dane, jak oceniamy dowody i jak poprawiamy błędy."],
+ contact:["Kontakt","Pytanie, poprawka lub propozycja współpracy."]},
+ en:{start:["PepSafe: peptide facts, no sales, no internet doses","A catalog of 100+ peptides: legal status, mechanism, strength of evidence and combination warnings."],
+ catalog:["Peptide catalog: status, mechanism, evidence","Over 100 substances with evidence grading, legal status and combination warnings."],
+ basics:["Basics: what peptides are","How peptides work, what lyophilizate means, purity and label wording."],
+ blog:["PepSafe blog: analysis and facts","Longer pieces on peptides, regulatory decisions and marketing tricks."],
+ faq:["Frequently asked questions about peptides","Answers on legal status, safety and scientific evidence."],
+ compare:["Compare peptides","Substances side by side: status, mechanism and evidence."],
+ myths:["Peptide myths and facts","Common internet myths checked against research."],
+ news:["Chronicle of FDA decisions and legal changes","What changed in the status of peptides, and when."],
+ effects:["Side-effect reports","Describe a worrying symptom after a peptide drug. Reports are not published."],
+ dose:["Dosing of approved drugs from official labels","Doses only for FDA-approved drugs, taken from current labels."],
+ method:["PepSafe methodology","Where the data comes from, how we grade evidence and how we fix mistakes."],
+ contact:["Contact","A question, a correction or a collaboration idea."]}};
+function setMeta(title,desc,canon){
+  document.title=title;
+  var d=document.querySelector('meta[name="description"]');if(d)d.setAttribute("content",desc);
+  var ot=document.querySelector('meta[property="og:title"]');if(ot)ot.setAttribute("content",title);
+  var od=document.querySelector('meta[property="og:description"]');if(od)od.setAttribute("content",desc);
+  var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute("href",canon);
+  var ou=document.querySelector('meta[property="og:url"]');if(ou)ou.setAttribute("content",canon);
+}
+function viewMeta(h){
+  var m=(VT[lang]&&VT[lang][h])||VT[lang].start;
+  var canon="https://pepsafe.info/"+(h==="start"?"":"#"+h)+(lang==="en"?(h==="start"?"?lang=en":""):"");
+  if(lang==="en")canon="https://pepsafe.info/?lang=en"+(h==="start"?"":"#"+h);
+  setMeta(m[0],m[1],canon);
+}
 function route(){
   var h=(location.hash||"").replace("#","");if(VIEWS.indexOf(h)<0)h="start";
   $$("[data-view]").forEach(function(s){s.hidden=s.getAttribute("data-view")!==h;});
   $$("#tabs a").forEach(function(a){if(a.getAttribute("data-v")===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   if(h!=="blog"&&openPost>=0){openPost=-1;renderBlog();}
+  var sec=document.querySelector('[data-view="'+h+'"]');
+  if(sec){var hd=sec.querySelector("h1,h2");if(hd&&hd.tagName==="H2"&&!hd.closest("dialog")){var h1=document.createElement("h1");h1.className=hd.className;h1.innerHTML=hd.innerHTML;["id","data-k"].forEach(function(a){if(hd.hasAttribute(a))h1.setAttribute(a,hd.getAttribute(a));});hd.parentNode.replaceChild(h1,hd);}}
+  viewMeta(h);
   window.scrollTo(0,0);
 }
 function renderAll(){applyStatic();renderBasics();renderBlog();renderFaq();renderContact();renderGloss();renderDaily();efRender();renderMethod();}
-function setLang(l){lang=l;try{localStorage.setItem("pep-lang",l);}catch(e){}renderAll();}
+function setLang(l){lang=l;try{localStorage.setItem("pep-lang",l);}catch(e){}
+  try{var u=new URL(location.href);if(l==="en")u.searchParams.set("lang","en");else u.searchParams.delete("lang");history.replaceState(null,"",u);}catch(e){}
+  document.documentElement.lang=l;renderAll();route();}
 $("#lang-pl").addEventListener("click",function(){setLang("pl");});
 $("#lang-en").addEventListener("click",function(){setLang("en");});
 window.addEventListener("hashchange",route);
@@ -1281,9 +1347,8 @@ var dm=new MutationObserver(function(){
 dm.observe($("#dlgBody"),{childList:true});
 /* deep link */
 function deep(){
-  try{var e=new URLSearchParams(location.search).get("e");if(!e)return;
-    var c=Array.prototype.filter.call(document.querySelectorAll("#grid .card"),function(x){return x.getAttribute("data-n")===e})[0];
-    if(c)c.click();}catch(x){}
+  try{var n=new URLSearchParams(location.search).get("e");if(!n)return;
+    var e=(window.PEP_find||findN)(n);if(e&&window.PEP_open)window.PEP_open(e);}catch(x){}
 }
 statics();mo.disconnect();marks();mo.observe($("#grid"),{childList:true});
 document.addEventListener("click",function(ev){if(ev.target.closest&&ev.target.closest("#lang-pl,#lang-en"))setTimeout(function(){statics();fbT();marks();if(window.PEP_fillGoal)window.PEP_fillGoal()},50)});
