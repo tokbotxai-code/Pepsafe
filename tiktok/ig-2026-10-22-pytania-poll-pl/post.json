@@ -1,0 +1,17 @@
+{
+ "format": "feed",
+ "tagline": "Zadaj pytanie, pomóż innym",
+ "slides": [
+  {
+   "title": "Co jest dla Ciebie najbardziej niejasne?",
+   "opts": [
+    "⚖️ Co jest legalne",
+    "🔬 Co mówią badania",
+    "🤷 Co jest mitem"
+   ],
+   "ask": "Napisz w komentarzu albo w wiadomości prywatnej. Najczęstsze pytania omówimy w Q&A.",
+   "foot": "Treść edukacyjna, nie porada medyczna. pepsafe.info"
+  }
+ ],
+ "caption": "Co w temacie peptydów jest dla Ciebie najbardziej niejasne? ⚖️🔬 Status prawny, wyniki badań, a może to, co jest mitem? Napisz w komentarzu albo w wiadomości prywatnej, najczęstsze pytania omówimy w Q&A.\n\nWięcej na pepsafe.info\n\n#peptydy #pytania #mityifakty #nauka #pepsafe"
+}
