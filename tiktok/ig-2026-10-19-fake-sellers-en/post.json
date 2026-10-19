@@ -1,8 +1,41 @@
-{"format":"feed","tagline":"Peptide facts, zero hype","slides":[
- {"kicker":"Before you click 'buy'","title":"5 signs of a shady peptide seller","hero":true,"text":"Swipe, let's check 👉"},
- {"kicker":"Sign 1","title":"No certificate of analysis (COA)","text":"A legit seller shows a purity test result for the specific batch. No COA, or a generic one that doesn't match the batch number, is a red flag."},
- {"kicker":"Sign 2","title":"Promises to treat disease","text":"A 'research only' product described as treating illness, reversing aging, or replacing a prescription drug breaks its own label disclaimer."},
- {"kicker":"Sign 3","title":"Priced far below competitors","text":"A very low price often means less active substance than the label claims, or impurities - that's what independent assays of market vials have found."},
- {"kicker":"Signs 4 and 5","list":["No company address or contact details","Payment only by crypto or a personal bank transfer"]},
- {"kicker":"Facts, zero hype","cta":"pepsafe.info","text":"A peptide catalog, myths vs. facts, and the FDA decision timeline.","foot":"Educational content, not medical advice, and not an endorsement to buy."}],
- "caption":"5 signs a peptide seller isn't who they claim to be 🚩 No COA, disease-treatment claims, suspiciously low price, zero contact info, crypto-only payment.\n\nMore at pepsafe.info\n\n#peptides #safety #facts #mythsvsfacts #health #pepsafe"}
+{
+ "format": "feed",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Fact check",
+   "title": "5 tricks used to market “research peptides”",
+   "hero": true,
+   "text": "Spot the marketing, not the deal 👉"
+  },
+  {
+   "kicker": "Trick 1",
+   "title": "“Research only” + health promises",
+   "text": "The label says not for human use, while the ads promise healing, fat loss or anti-aging. Both can't be true."
+  },
+  {
+   "kicker": "Trick 2",
+   "title": "A certificate that proves little",
+   "text": "A generic certificate of analysis, not tied to a batch or a named lab, is used as a stamp of quality."
+  },
+  {
+   "kicker": "Trick 3",
+   "title": "“Pharmaceutical grade” with no approval",
+   "text": "Sounds official, but no medicines agency has approved the product. Independent tests of market products have found less substance than labeled, or impurities."
+  },
+  {
+   "kicker": "Tricks 4 and 5",
+   "list": [
+    "Testimonials and before/after photos instead of studies",
+    "“Same as the prescription drug, just cheaper”"
+   ]
+  },
+  {
+   "kicker": "Takeaway",
+   "cta": "pepsafe.info",
+   "text": "No marketing trick makes an unapproved substance safe.",
+   "foot": "Educational content, not medical advice."
+  }
+ ],
+ "caption": "5 tricks used to market “research peptides” 🚩 Health promises on a “not for human use” product, certificates that prove little, “pharmaceutical grade” with no approval.\n\nMore at pepsafe.info\n\n#peptides #safety #facts #mythsvsfacts #health #pepsafe"
+}

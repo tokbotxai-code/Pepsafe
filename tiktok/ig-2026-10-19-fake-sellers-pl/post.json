@@ -1,8 +1,40 @@
-{"format":"feed","slides":[
- {"kicker":"Zanim klikniesz „kup”","title":"5 sygnałów fałszywego sprzedawcy peptydów","hero":true,"text":"Przesuń, sprawdzamy 👉"},
- {"kicker":"Sygnał 1","title":"Brak certyfikatu analizy (COA)","text":"Rzetelny sprzedawca pokazuje wynik testu czystości dla konkretnej partii. Brak COA albo COA „z internetu”, niepasujący do numeru partii, to czerwona flaga."},
- {"kicker":"Sygnał 2","title":"Obietnice leczenia chorób","text":"Produkt „tylko do badań” z opisem, że leczy, odmładza albo zastępuje lek na receptę, łamie własne zastrzeżenie na etykiecie."},
- {"kicker":"Sygnał 3","title":"Cena dużo niższa niż konkurencja","text":"Bardzo niska cena często oznacza mniejszą zawartość substancji niż na etykiecie albo zanieczyszczenia – tak pokazały niezależne badania fiolek z rynku."},
- {"kicker":"Sygnały 4 i 5","list":["Brak adresu firmy i danych kontaktowych","Płatność tylko kryptowalutą lub przelewem na konto prywatne"]},
- {"kicker":"Fakty bez ściemy","cta":"pepsafe.info","text":"Katalog peptydów, mity i fakty, kronika decyzji FDA.","foot":"Treść edukacyjna, nie porada medyczna i nie zachęta do zakupu."}],
- "caption":"5 sygnałów, że sprzedawca peptydów nie jest tym, za kogo się podaje 🚩 Brak COA, obietnice leczenia, podejrzanie niska cena, zero danych kontaktowych, płatność tylko kryptowalutą.\n\nWięcej na pepsafe.info\n\n#peptydy #bezpieczenstwo #fakty #mityifakty #zdrowie #pepsafe"}
+{
+ "format": "feed",
+ "slides": [
+  {
+   "kicker": "Sprawdzamy fakty",
+   "title": "5 trików marketingu „peptydów do badań”",
+   "hero": true,
+   "text": "Rozpoznaj marketing, nie okazję 👉"
+  },
+  {
+   "kicker": "Trik 1",
+   "title": "„Tylko do badań” + obietnice zdrowia",
+   "text": "Etykieta mówi, że produkt nie jest dla ludzi, a reklamy obiecują leczenie, chudnięcie albo odmładzanie. Oba nie mogą być prawdą."
+  },
+  {
+   "kicker": "Trik 2",
+   "title": "Certyfikat, który mało dowodzi",
+   "text": "Ogólny certyfikat analizy, niepowiązany z partią ani z nazwanym laboratorium, służy jako „pieczątka jakości”."
+  },
+  {
+   "kicker": "Trik 3",
+   "title": "„Jakość farmaceutyczna” bez zatwierdzenia",
+   "text": "Brzmi oficjalnie, ale żaden urząd nie zatwierdził produktu. Niezależne analizy produktów z rynku wykazywały mniej substancji niż na etykiecie albo zanieczyszczenia."
+  },
+  {
+   "kicker": "Triki 4 i 5",
+   "list": [
+    "Opinie i zdjęcia „przed i po” zamiast badań",
+    "„To samo co lek na receptę, tylko taniej”"
+   ]
+  },
+  {
+   "kicker": "Wniosek",
+   "cta": "pepsafe.info",
+   "text": "Żaden trik marketingowy nie sprawi, że niezatwierdzona substancja stanie się bezpieczna.",
+   "foot": "Treść edukacyjna, nie porada medyczna."
+  }
+ ],
+ "caption": "5 trików marketingu „peptydów do badań” 🚩 Obietnice zdrowia na produkcie „nie dla ludzi”, certyfikaty, które mało dowodzą, „jakość farmaceutyczna” bez zatwierdzenia.\n\nWięcej na pepsafe.info\n\n#peptydy #bezpieczenstwo #fakty #mityifakty #zdrowie #pepsafe"
+}

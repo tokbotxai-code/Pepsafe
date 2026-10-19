@@ -25,3 +25,13 @@
 - Każdy opis kończy się „Więcej na pepsafe.info” / „More at pepsafe.info” i hashtagiem `#pepsafe`.
 - Treść edukacyjna, bez dawkowania i zachęt do stosowania; fakty tylko z wiarygodnych źródeł (FDA, WADA, badania).
 - `isAiGenerated` (IG) i `isAigc` (TikTok) = `true`.
+
+## Słowa i obrazy, których unikamy (moderacja TikTok/IG)
+TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania substancji (tak został wstrzymany BPC-157 PL z 18.10: „zanim kupisz fiolkę”).
+- Nie używamy: kup / zakup / „zanim kupisz” / buy / „before you buy”, fiolka / vial, sklep / shop / „gdzie dostać”,
+  wstrzyknąć / „zanim wstrzykniesz” / inject, dawka / dose / dawkowanie, cykl / cycle, protokół / stack.
+- Wyjątek: zdanie ostrzegawcze typu „bezpieczeństwo u ludzi nieustalone” zamiast „dawki nieustalone”.
+- Bez zdjęć fiolek, strzykawek, proszków; bez linków do sklepów.
+- Nie robimy poradników „jak kupić bezpiecznie” (np. jak sprawdzić sprzedawcę/COA przed zakupem). Ujęcie: fakty, ryzyka, triki marketingu, status prawny.
+- Hashtagi bez #biohacking #fitness #gym #bodybuilding przy nazwach substancji.
+- Nazwy substancji piszemy normalnie (bez zmieniania pisowni, kropek, spacji).
