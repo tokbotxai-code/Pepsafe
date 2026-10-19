@@ -34,7 +34,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Nie używamy: kup / zakup / „zanim kupisz” / buy / „before you buy”, fiolka / vial, sklep / shop / „gdzie dostać”,
   wstrzyknąć / „zanim wstrzykniesz” / inject, dawka / dose / dawkowanie, cykl / cycle, protokół / stack.
 - Wyjątek: zdanie ostrzegawcze typu „bezpieczeństwo u ludzi nieustalone” zamiast „dawki nieustalone”.
-- Bez zdjęć fiolek, strzykawek, proszków; bez linków do sklepów.
+- Bez zdjęć fiolek, strzykawek, proszków; bez linków do sklepów. Bez emotki 💉 w opisach, tytułach i na slajdach.
 - Nie robimy poradników „jak kupić bezpiecznie” (np. jak sprawdzić sprzedawcę/COA przed zakupem). Ujęcie: fakty, ryzyka, triki marketingu, status prawny.
 - Hashtagi bez #biohacking #fitness #gym #bodybuilding przy nazwach substancji.
 - Nazwy substancji piszemy normalnie (bez zmieniania pisowni, kropek, spacji).
