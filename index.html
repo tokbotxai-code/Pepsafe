@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="PepSafe: niekomercyjny, dwujęzyczny serwis edukacyjny o peptydach. Katalog ponad 100 substancji: status prawny, mechanizm, siła dowodów i ostrzeżenia o łączeniu. Dla substancji niezatwierdzonych nie podajemy dawek, a dla leków zatwierdzonych cytujemy ulotki FDA. Nic nie sprzedajemy.">
+<meta name="description" content="PepSafe is a non-commercial, bilingual (Polish and English) educational site about peptides. A catalog of over 100 substances: legal status, mechanism, strength of evidence and combination warnings. No doses for unapproved substances; for approved drugs it quotes FDA labels. Nothing is sold. Niekomercyjny serwis edukacyjny o peptydach, po polsku i angielsku.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%225%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%225%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%225%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%225%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
 <style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
-<title>PepSafe: fakty o peptydach, bez sprzedaży i bez dawek z internetu</title>
-<meta property="og:title" content="PepSafe: fakty o peptydach bez ściemy">
-<meta property="og:description" content="Katalog ponad 100 substancji: status, mechanizm, dowody i ostrzeżenia o łączeniu. Treść edukacyjna, nie porada medyczna. Nie sprzedajemy niczego i nie podajemy dawek dla substancji niezatwierdzonych.">
+<title>PepSafe: peptide facts, no sales, no internet doses | fakty o peptydach</title>
+<meta property="og:title" content="PepSafe: peptide facts, no hype">
+<meta property="og:description" content="Peptide facts: catalog of 100+ substances with status, mechanism, evidence and combination warnings. Educational only, not medical advice. Nothing sold, no doses for unapproved substances. Po polsku i po angielsku.">
 <meta property="og:locale" content="pl_PL">
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","@id":"https://pepsafe.info/#website","url":"https://pepsafe.info/","name":"PepSafe","inLanguage":["pl","en"],"isAccessibleForFree":true,
- "description":"Niekomercyjny serwis edukacyjny o peptydach i substancjach pokrewnych. Katalog ponad 100 pozycji ze statusem prawnym, mechanizmem, siłą dowodów i ostrzeżeniami o łączeniu. Dla substancji niezatwierdzonych nie podaje dawek; dla leków zatwierdzonych cytuje ulotki FDA. Nie sprzedaje produktów, nie podaje cen ani linków do sprzedawców.",
+ "description":"A non-commercial, bilingual educational site about peptides. Niekomercyjny serwis edukacyjny o peptydach i substancjach pokrewnych. Katalog ponad 100 pozycji ze statusem prawnym, mechanizmem, siłą dowodów i ostrzeżeniami o łączeniu. Dla substancji niezatwierdzonych nie podaje dawek; dla leków zatwierdzonych cytuje ulotki FDA. Nie sprzedaje produktów, nie podaje cen ani linków do sprzedawców.",
  "publisher":{"@id":"https://pepsafe.info/#org"}},
 {"@type":"Organization","@id":"https://pepsafe.info/#org","name":"PepSafe","url":"https://pepsafe.info/","description":"Projekt edukacyjny o faktach, ryzykach i statusie prawnym peptydów.","sameAs":["https://www.tiktok.com/@pepsafe.info","https://www.instagram.com/pepsafe.info/"]},
 {"@type":"FAQPage","@id":"https://pepsafe.info/#faq","mainEntity":[
@@ -108,6 +108,13 @@ tr:last-child td{border-bottom:0}
 #gloss dt{font-weight:600}
 #gloss dd{margin:0 0 10px;color:var(--muted)}
 .cres{display:flex;flex-direction:column;gap:12px}
+.sc{margin:0 0 20px}
+.sct{margin:0 0 6px;font-weight:600}
+.scends{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);margin-top:4px;font-family:var(--f-mono)}
+.scn{margin:6px 0 0;font-size:.85rem;color:var(--muted)}
+.ruler{height:34px;border-bottom:2px solid var(--line);background-repeat:repeat-x;background-position:bottom}
+.ruler.fine{background-image:repeating-linear-gradient(to right,var(--accent) 0 1px,transparent 1px 1%);background-size:100% 16px}
+.ruler.coarse{background-image:repeating-linear-gradient(to right,var(--blue) 0 2px,transparent 2px 10%);background-size:100% 26px}
 .cbig{margin:0;display:flex;flex-direction:column;gap:2px;background:var(--accent-soft);border-radius:12px;padding:10px 14px}
 .cbig b{font-family:var(--f-mono);font-size:1.6rem;line-height:1.1;font-variant-numeric:tabular-nums}
 .cbig span{color:var(--muted);font-size:.85rem}
@@ -347,17 +354,14 @@ footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
       <div class="field" hidden><label for="syr" data-k="ca_cap"></label><select id="syr"></select></div>
       <div class="field" hidden><label for="waterA" data-k="ca_wa"></label><input type="text" inputmode="decimal" id="waterA" value="1"><div class="row" id="chipsA"></div></div>
     </div>
-    <div class="row"><button type="button" class="btn" id="calcCopy" data-k="ca_copy"></button><button type="button" class="btn" id="calcReset" data-k="ca_reset"></button></div>
-    <p class="eyebrow" style="text-transform:none;letter-spacing:0" data-k="ca_example"></p>
+    <div class="row"><button type="button" class="btn" id="calcCopy" data-k="ca_copy"></button></div>
     <pre class="prev" id="calcTxt" hidden></pre>
   </div>
   <div class="grid2" id="calcOut"></div>
 
   <div class="sheet stack">
     <h3 data-k="ca_scaleh"></h3>
-    <svg viewBox="0 0 480 236" role="img" aria-label="Podzialki" style="max-width:720px;width:100%;height:auto">
-      <g id="vialSvg"></g>
-    </svg>
+    <div id="scaleBox"></div>
     <p class="meta" style="color:var(--muted)" data-k="ca_same"></p>
     <div data-k="ca_scales" data-h="1"></div>
   </div>
@@ -975,7 +979,7 @@ ca_sizes_p:"<p>Fiolki opisuje się masą zawartości, najczęściej <b>2 mg, 5 m
 ca_m1:"Mam dawkę, szukam kresek",ca_m2:"Mam kreski, szukam dawki",ca_marks:"Liczba kresek na strzykawce",ca_marks_hint:"Przykład do wypróbowania.",ca_syr:"Rodzaj strzykawki",ca_copy:"Skopiuj wynik",ca_reset:"Wartości przykładowe",w_cap:"Objętość większa niż pojemność wybranej strzykawki",w_prec:"Mała objętość: jedna kreska to duży błąd względny. Rozważ więcej rozpuszczalnika.",r_syr:"Napełnienie strzykawki",r_mark:"Ilość na kreskę strzykawki insulinowej U-100",r_mark_s:"kreskę",r_marks_s:"kresek",r_dose:"Dawka",
 ca_u100:"Insulinowa U-100 (kreski)",ca_std:"Zwykła (podziałka w ml)",ca_cap:"Pojemność strzykawki",ca_vol:"Objętość w strzykawce (ml)",r_res:"Wynik dla",r_grad:"Najmniejsza podziałka",
 n_effects:"Skutki uboczne",ef_h:"Zgłoszenia skutków ubocznych",ef_lead:"Niepokojący objaw po leku peptydowym? Opisz go poniżej, a zgłoszenie trafi prosto do autorów strony. Zgłoszenia nie są publikowane. To nie jest pomoc medyczna: przy poważnych objawach dzwoń pod 112.",ef_warn:"UWAGA: nie podajemy dawek substancji niezatwierdzonych, a liczby z internetu nie są bezpieczne do naśladowania. Dla większości tych substancji nie ustalono dawki u ludzi. Przy przedawkowaniu, silnej reakcji alergicznej, bólu w klatce piersiowej lub trudnościach z oddychaniem dzwoń pod 112 albo do lokalnego centrum zatruć. Nie czekaj na wpis na stronie.",ef_sub:"Substancja",ef_sym:"Opis objawu (bez danych osobowych)",ef_sev:"Nasilenie",ef_s1:"Lekkie",ef_s2:"Umiarkowane",ef_s3:"Silne lub niepokojące",ef_when:"Kiedy wystąpiło (np. po 2 dniach)",ef_consent:"Rozumiem, że zgłoszenie nie zastępuje lekarza, trafia tylko do autorów strony i nie jest publikowane.",ef_send:"Wyślij zgłoszenie",ef_err:"Uzupełnij opis objawu i zaznacz zgodę.",ef_emerg:"Przy silnych objawach zadzwoń pod 112 lub do lekarza, nie czekaj na odpowiedź od nas.",ef_list:"Zanim wyślesz",gl_h:"Słownik",
-r_tenth:"Ilość w 0,1 ml",r_mark1:"na 1 kreskę U-100 (0,01 ml)",sc_u100:"U-100: 100 kresek na 1 ml",sc_std:"Zwykła strzykawka: podziałka 0,1 ml",sc_vial:"Fiolka ",sc_in1:" mg w 1 ml: 1 kreska U-100 = ",sc_01:" mcg, 0,1 ml = ",sc_marks:"kresek",ca_scaleh:"Dwie podziałki obok siebie",warn_h:"UWAGA: nie podajemy dawek substancji niezatwierdzonych.",warn_b:"Dla większości tych substancji nie ustalono dawki u ludzi. Liczby z internetu, od sprzedawców i z forów są niesprawdzone i mogą być niebezpieczne. Nie próbuj ich naśladować. Przy objawach zatrucia lub silnej reakcji dzwoń pod 112. Przed każdą decyzją idź do lekarza.",n_method:"Metodologia",me_h:"Skąd biorą się dane i oceny",me_lead:"Jak zbieramy informacje i co znaczą statusy. Data na tej stronie: 18.10.2026.",me_body:"<p><b>Źródła:</b> dokumentacja regulatorów (FDA, EMA, URPL), ulotki i charakterystyki produktów, publikacje w PubMed oraz bazy związków (PubChem, DrugBank, RCSB PDB).</p><p><b>Statusy:</b> zatwierdzony lek, zatwierdzony regionalnie, w badaniach klinicznych, niezatwierdzony, kosmetyk lub suplement oraz nie peptyd. Status to stan wiedzy, nie rekomendacja.</p><p><b>Dowody:</b> ocena jest uproszczeniem. Badania na zwierzętach i w probówce nie dowodzą działania u ludzi.</p><p><b>Aktualizacja:</b> przy zmianie statusu u regulatora zmienimy wpis. Data „stan na” na górze strony pokazuje, kiedy dane były sprawdzane ostatnio.</p>",
+r_syr2:"W 0,1 ml",r_syr1:"W 0,5 ml",cfoot:"0,1 ml to jedna podziałka strzykawki 2 ml.",r_mark1:"na 1 kreskę U-100 (0,01 ml)",sc_u100:"Strzykawka insulinowa U-100",sc_u100n:"100 kresek na 1 ml. Jedna kreska to 0,01 ml.",sc_std:"Zwykła strzykawka 2 ml",sc_stdn:"Podziałka co 0,1 ml, dziesięć razy grubsza niż kreska U-100.",sc_vial:"Fiolka ",sc_in1:" mg w 1 ml: 1 kreska U-100 = ",sc_01:" mcg, 0,1 ml = ",sc_marks:"kresek",ca_scaleh:"Dwie podziałki obok siebie",warn_h:"UWAGA: nie podajemy dawek substancji niezatwierdzonych.",warn_b:"Dla większości tych substancji nie ustalono dawki u ludzi. Liczby z internetu, od sprzedawców i z forów są niesprawdzone i mogą być niebezpieczne. Nie próbuj ich naśladować. Przy objawach zatrucia lub silnej reakcji dzwoń pod 112. Przed każdą decyzją idź do lekarza.",n_method:"Metodologia",me_h:"Skąd biorą się dane i oceny",me_lead:"Jak zbieramy informacje i co znaczą statusy. Data na tej stronie: 18.10.2026.",me_body:"<p><b>Źródła:</b> dokumentacja regulatorów (FDA, EMA, URPL), ulotki i charakterystyki produktów, publikacje w PubMed oraz bazy związków (PubChem, DrugBank, RCSB PDB).</p><p><b>Statusy:</b> zatwierdzony lek, zatwierdzony regionalnie, w badaniach klinicznych, niezatwierdzony, kosmetyk lub suplement oraz nie peptyd. Status to stan wiedzy, nie rekomendacja.</p><p><b>Dowody:</b> ocena jest uproszczeniem. Badania na zwierzętach i w probówce nie dowodzą działania u ludzi.</p><p><b>Aktualizacja:</b> przy zmianie statusu u regulatora zmienimy wpis. Data „stan na” na górze strony pokazuje, kiedy dane były sprawdzane ostatnio.</p>",
 bl_h:"Blog",bl_read:"min czytania",bl_back:"Wróć do listy",
 fq_h:"Najczęstsze pytania",src_h:"Źródła",
 foot:"PepSafe to projekt edukacyjny. Informacje nie są poradą medyczną, diagnozą ani zaleceniem leczenia."
@@ -1017,7 +1021,7 @@ ca_sizes_p:"<p>Vials are labelled by content mass, most often <b>2 mg, 5 mg, 10 
 ca_m1:"I have a dose, find marks",ca_m2:"I have marks, find the dose",ca_marks:"Marks on the syringe",ca_marks_hint:"Sample value to try.",ca_syr:"Syringe type",ca_copy:"Copy result",ca_reset:"Sample values",w_cap:"Volume exceeds the capacity of the selected syringe",w_prec:"Small volume: one mark is a large relative error. Consider more solvent.",r_syr:"Syringe fill",r_mark:"Amount per mark on a U-100 insulin syringe",r_mark_s:"mark",r_marks_s:"marks",r_dose:"Dose",
 ca_u100:"Insulin U-100 (marks)",ca_std:"Standard (ml scale)",ca_cap:"Syringe capacity",ca_vol:"Volume in the syringe (ml)",r_res:"Result for",r_grad:"Smallest graduation",
 n_effects:"Side effects",ef_h:"Side-effect reports",ef_lead:"Noticed a worrying symptom after a peptide drug? Describe it below and the report goes straight to the site authors. Reports are not published. This is not medical help: for serious symptoms call your emergency number.",ef_warn:"WARNING: we give no doses for unapproved substances, and numbers online are not safe to copy. For most of these substances no human dose has been established. For overdose, a severe allergic reaction, chest pain or breathing difficulty call 112 or your local poison centre. Do not wait for a post on this site.",ef_sub:"Substance",ef_sym:"Description of the symptom (no personal data)",ef_sev:"Severity",ef_s1:"Mild",ef_s2:"Moderate",ef_s3:"Severe or worrying",ef_when:"When it happened (e.g. after 2 days)",ef_consent:"I understand the report does not replace a doctor, goes only to the site authors and is not published.",ef_send:"Send report",ef_err:"Describe the symptom and tick the consent box.",ef_emerg:"For severe symptoms call 112 or your doctor, do not wait for a reply from us.",ef_list:"Before you send",gl_h:"Glossary",
-r_tenth:"Amount in 0.1 ml",r_mark1:"per 1 U-100 mark (0.01 ml)",sc_u100:"U-100: 100 marks per 1 ml",sc_std:"Standard syringe: 0.1 ml steps",sc_vial:"Vial ",sc_in1:" mg in 1 ml: 1 U-100 mark = ",sc_01:" mcg, 0.1 ml = ",sc_marks:"marks",ca_scaleh:"The two scales side by side",warn_h:"WARNING: we give no doses for unapproved substances.",warn_b:"For most of these substances no human dose has been established. Numbers from the internet, sellers and forums are unverified and may be dangerous. Do not try to copy them. For poisoning or a severe reaction call 112. See a doctor before any decision.",n_method:"Methodology",me_h:"Where the data and ratings come from",me_lead:"How we collect information and what the statuses mean. Data on this site: 18 Oct 2026.",me_body:"<p><b>Sources:</b> regulator documentation (FDA, EMA, URPL), package leaflets and product labels, PubMed publications, and compound databases (PubChem, DrugBank, RCSB PDB).</p><p><b>Statuses:</b> approved drug, approved regionally, in clinical trials, unapproved, cosmetic or supplement, and not a peptide. A status is the state of knowledge, not a recommendation.</p><p><b>Evidence:</b> the rating is a simplification. Animal and test-tube studies do not prove effects in humans.</p><p><b>Updates:</b> when a regulator changes a status we change the entry. The date at the top of the page shows when the data was last checked.</p>",
+r_syr2:"In 0.1 ml",r_syr1:"In 0.5 ml",cfoot:"0.1 ml is one graduation on a 2 ml syringe.",r_mark1:"per 1 U-100 mark (0.01 ml)",sc_u100:"U-100 insulin syringe",sc_u100n:"100 marks per 1 ml. One mark is 0.01 ml.",sc_std:"Standard 2 ml syringe",sc_stdn:"Graduations every 0.1 ml, ten times coarser than a U-100 mark.",sc_vial:"Vial ",sc_in1:" mg in 1 ml: 1 U-100 mark = ",sc_01:" mcg, 0.1 ml = ",sc_marks:"marks",ca_scaleh:"The two scales side by side",warn_h:"WARNING: we give no doses for unapproved substances.",warn_b:"For most of these substances no human dose has been established. Numbers from the internet, sellers and forums are unverified and may be dangerous. Do not try to copy them. For poisoning or a severe reaction call 112. See a doctor before any decision.",n_method:"Methodology",me_h:"Where the data and ratings come from",me_lead:"How we collect information and what the statuses mean. Data on this site: 18 Oct 2026.",me_body:"<p><b>Sources:</b> regulator documentation (FDA, EMA, URPL), package leaflets and product labels, PubMed publications, and compound databases (PubChem, DrugBank, RCSB PDB).</p><p><b>Statuses:</b> approved drug, approved regionally, in clinical trials, unapproved, cosmetic or supplement, and not a peptide. A status is the state of knowledge, not a recommendation.</p><p><b>Evidence:</b> the rating is a simplification. Animal and test-tube studies do not prove effects in humans.</p><p><b>Updates:</b> when a regulator changes a status we change the entry. The date at the top of the page shows when the data was last checked.</p>",
 bl_h:"Blog",bl_read:"min read",bl_back:"Back to list",
 fq_h:"Frequently asked questions",src_h:"Sources",
 foot:"PepSafe is an educational project. Information is not medical advice, diagnosis or treatment guidance."
@@ -1114,20 +1118,9 @@ function applyStatic(){
 var calcMode="dose", lastTxt="";
 function num(id){var v=parseFloat(String($(id).value).replace(",","."));return isFinite(v)?v:NaN;}
 function scaleSvg(){
-  var g=$("#vialSvg");if(!g)return;
-  var x0=14,x1=466,y=86,y2=204,o='';
-  function tx(x,yy,t,a,col,sz){return '<text x="'+x+'" y="'+yy+'" font-size="'+(sz||20)+'"'+(a?' text-anchor="'+a+'"':'')+' fill="var(--'+(col||'muted')+')">'+t+'</text>';}
-  o+=tx(x0,26,T("sc_u100"),0,"ink",21);
-  o+='<line x1="'+x0+'" y1="'+y+'" x2="'+x1+'" y2="'+y+'" stroke="var(--line)" stroke-width="2"/>';
-  for(var i=0;i<=100;i++){var px=x0+(x1-x0)*i/100,t=i%10===0?24:11;
-    o+='<line x1="'+px+'" y1="'+(y-t)+'" x2="'+px+'" y2="'+y+'" stroke="var(--accent)" stroke-width="'+(i%10===0?1.8:0.9)+'"/>';}
-  o+=tx(x0,y+24,"0")+tx(x1,y+24,"1 ml","end");
-  o+=tx(x0,y2-66,T("sc_std"),0,"ink",21);
-  o+='<line x1="'+x0+'" y1="'+y2+'" x2="'+x1+'" y2="'+y2+'" stroke="var(--line)" stroke-width="2"/>';
-  for(var j=0;j<=10;j++){var qx=x0+(x1-x0)*j/10;
-    o+='<line x1="'+qx+'" y1="'+(y2-24)+'" x2="'+qx+'" y2="'+y2+'" stroke="var(--blue)" stroke-width="2.2"/>';}
-  o+=tx(x0,y2+24,"0")+tx(x1,y2+24,"1 ml","end");
-  g.innerHTML=o;
+  var g=$("#scaleBox");if(!g)return;
+  function bar(cls,title,note){return '<div class="sc"><p class="sct">'+title+'</p><div class="ruler '+cls+'"></div><div class="scends"><span>0</span><span>1 ml</span></div><p class="scn">'+note+'</p></div>';}
+  g.innerHTML=bar("fine",T("sc_u100"),T("sc_u100n"))+bar("coarse",T("sc_std"),T("sc_stdn"));
 }
 function syrOpts(){
   var t="u100", cur=$("#syr").value;
@@ -1142,7 +1135,6 @@ bindChips("#vialChips","#vialMg");bindChips("#chipsA","#waterA");
 ["#vialMg","#doseVal","#waterA"].forEach(function(s){$(s).addEventListener("input",renderCalc);});
 $("#doseUnit").addEventListener("change",renderCalc);$("#syr").addEventListener("change",renderCalc);
 $("#calcCopy").addEventListener("click",function(){var n=$("#calcTxt");n.hidden=false;n.textContent=lastTxt;copyText(lastTxt,n);});
-$("#calcReset").addEventListener("click",function(){$("#vialMg").value=5;$("#doseVal").value=500;$("#doseUnit").value="mcg";$("#waterA").value=1;syrOpts();$("#syr").value="1";calcMode="dose";$("#calcTxt").hidden=true;renderCalc();});
 syrOpts();
 
 /* ---------- Basics ---------- */
@@ -1276,10 +1268,12 @@ function renderCalc(){
     var big=document.createElement("p");big.className="cbig";
     big.innerHTML='<b>'+nf(c*10,1)+' mcg</b><span>'+T("r_mark1")+'</span>';
     card.appendChild(big);
-    var rows=[[T("r_conc"),nf(c,3)+" mg/ml · "+nf(c*1000,0)+" mcg/ml"],[T("r_tenth"),nf(tenth,1)+" mcg"]];
+    var rows=[[T("r_conc"),nf(c,3)+" mg/ml · "+nf(c*1000,0)+" mcg/ml"],[T("r_syr2"),nf(tenth,1)+" mcg"],[T("r_syr1"),nf(tenth*5,1)+" mcg"]];
     var dl=document.createElement("dl");dl.className="kv";
     rows.forEach(function(r){var dt=document.createElement("dt");dt.textContent=r[0];var dd=document.createElement("dd");dd.textContent=r[1];dl.appendChild(dt);dl.appendChild(dd);});
-    card.appendChild(dl);out.appendChild(card);
+    card.appendChild(dl);
+    var fo=document.createElement("p");fo.className="scn";fo.textContent=T("cfoot");card.appendChild(fo);
+    out.appendChild(card);
     txt+=nf(v,0)+" ml: "+nf(c,3)+" mg/ml; "+nf(tenth,1)+" mcg/0,1 ml"+"; "+nf(c*10,1)+" mcg/"+T("r_mark_s")+"\n";
   });
   lastTxt=txt;
