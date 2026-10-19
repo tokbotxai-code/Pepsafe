@@ -1,5 +1,12 @@
 # PepSafe – zasady publikacji (Metricool, marka 7506075, Europe/London)
 
+## Harmonogram (codziennie, czas UK)
+- 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
+- Każde okno: 1 temat, PL i EN ok. 15 min odstępu (8 postów dziennie).
+- 1 z 4 tematów dziennie to Q&A/ankieta; okno ankiety rotuje z dnia na dzień.
+- Ankieta: wersja `feed` 4:5 zapisana jako JPG, jednym postem na IG (POST) i TikToka.
+- Treści tworzy codziennie o ~05:00 zaplanowane zadanie „PepSafe content autopilot”.
+
 ## Instagram + TikTok zawsze razem
 - Każda treść idzie na **oba** kanały, o tej samej porze (najwyżej 1 min różnicy), w wersji PL i EN.
 - Filmik (Reel/TikTok): jeden post Metricool z oboma providerami (`instagram` typ `REEL` + `tiktok`), ten sam MP4.
