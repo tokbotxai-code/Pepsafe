@@ -1,0 +1,12 @@
+{
+ "topic": "Seller claims vs evidence",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {"kicker": "Myth or fact?", "title": "15 things TB-500 supposedly heals", "hero": true, "text": "Let's check what the research says 👉", "seconds": 4},
+  {"kicker": "The claim: works on the whole body", "verdict": "NO EVIDENCE", "tone": "no", "title": "TB-500", "text": "Data is mostly animals and cell cultures. A 2024 study found TB-500 itself didn't speed healing. No clinical trials in people.", "seconds": 6.5},
+  {"kicker": "The claim: fast healing at the injury site", "verdict": "WEAK EVIDENCE", "tone": "part", "title": "BPC-157", "text": "A 2025 review: 3 small human studies, under 30 people in total, no control groups.", "seconds": 6},
+  {"kicker": "From the claims list", "title": "No human trials", "list": ["Tendons, ligaments, muscles", "Back, knee, shoulder pain", "Post-surgery recovery", "Heart support, inflammation"], "seconds": 6},
+  {"kicker": "More facts, zero hype", "cta": "pepsafe.info", "text": "'Research only' means 'not a drug', not 'it works'.", "foot": "Educational content, not medical advice.", "seconds": 4.5}
+ ],
+ "caption": "15 things TB-500 supposedly heals? 🧬 We checked what holds up in human research. Spoiler: almost nothing.\n\nMore at pepsafe.info\n\n#peptides #facts #mythsvsfacts #pepsafe"
+}
