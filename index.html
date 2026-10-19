@@ -126,6 +126,9 @@ tr:last-child td{border-bottom:0}
 .sline{height:1px;background:var(--line);margin:22px 0}
 .ruler{position:relative;height:30px;border-bottom:2px solid var(--line);background-repeat:repeat-x;background-position:bottom;margin-top:6px}
 .ruler.fine{background-image:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px 1%);background-size:100% 14px}
+.ruler{cursor:ew-resize;touch-action:none}
+.ruler:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.rhandle{position:absolute;top:-6px;width:18px;height:40px;margin-left:-9px;border-radius:9px;background:var(--accent);box-shadow:0 1px 4px rgba(0,0,0,.25);pointer-events:none}
 .rfill{position:absolute;left:0;bottom:0;top:0;background:var(--accent-soft);border-right:2px solid var(--accent);border-radius:6px 0 0 0}
 .calcp{padding:22px}
 .chead{margin:0;color:var(--muted);font-size:.9rem}
@@ -394,9 +397,8 @@ footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
       </div>
     </div>
     <div class="sline"></div>
-    <label class="slab" for="markR"><span data-k="ca_mark0"></span> <b id="markOut">10</b></label>
-    <input type="range" id="markR" min="1" max="100" step="1" value="10" aria-label="marks">
-    <div class="ruler fine" id="rulerBar"><span class="rfill" id="rfill"></span></div>
+    <p class="slab"><span data-k="ca_mark0"></span> <b id="markOut">10</b></p>
+    <div class="ruler fine" id="rulerBar" role="slider" tabindex="0" aria-label="U-100" aria-valuemin="1" aria-valuemax="100" aria-valuenow="10"><span class="rfill" id="rfill"></span><span class="rhandle" id="rhandle"></span></div>
     <div class="scends"><span>1</span><span>100 (1 ml)</span></div>
     <div class="tiles" id="calcOut"></div>
   </div>
@@ -1302,8 +1304,9 @@ var calcVol=1, calcMark=10;
 function renderCalc(){
   var mg=num("#vialMg");
   $("#volOut").textContent=nf(calcVol,1)+" ml";
-  $("#markOut").textContent=calcMark;
-  $("#rfill").style.width=calcMark+"%";
+  $("#markOut").textContent=calcMark+" ("+nf(calcMark/100,2)+" ml)";
+  $("#rfill").style.width=calcMark+"%";$("#rhandle").style.left=calcMark+"%";
+  $("#rulerBar").setAttribute("aria-valuenow",calcMark);
   var ok=mg>0, c=ok?mg/calcVol:0, ml=calcMark/100, mcg=c*1000*ml;
   $("#concV").textContent=ok?nf(c,3):"—";
   $("#concS").textContent=ok?nf(c*1000,0)+" mcg/ml · "+nf(mg,2)+" mg + "+nf(calcVol,1)+" ml "+T("ca_wa0"):T("w_bad");
@@ -1317,7 +1320,17 @@ function renderCalc(){
   $$("#vialChips .chip").forEach(function(b){b.setAttribute("aria-pressed",String(mg===+b.getAttribute("data-v")));});
 }
 $("#volR").addEventListener("input",function(){calcVol=+this.value/10;renderCalc();});
-$("#markR").addEventListener("input",function(){calcMark=+this.value;renderCalc();});
+(function(){
+  var bar=$("#rulerBar"),drag=false;
+  function setFrom(e){var r=bar.getBoundingClientRect(),x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;
+    var v=Math.round(x/r.width*100);calcMark=Math.min(100,Math.max(1,v));renderCalc();}
+  bar.addEventListener("pointerdown",function(e){drag=true;bar.setPointerCapture(e.pointerId);setFrom(e);});
+  bar.addEventListener("pointermove",function(e){if(drag)setFrom(e);});
+  bar.addEventListener("pointerup",function(){drag=false;});
+  bar.addEventListener("keydown",function(e){
+    var d=e.key==="ArrowRight"||e.key==="ArrowUp"?1:(e.key==="ArrowLeft"||e.key==="ArrowDown"?-1:0);
+    if(!d)return;e.preventDefault();calcMark=Math.min(100,Math.max(1,calcMark+d*(e.shiftKey?10:1)));renderCalc();});
+})();
 var VIEWS=["start","catalog","basics","calc","blog","faq","effects","dose","method","contact","myths","news","compare"];
 function route(){
   var h=(location.hash||"").replace("#","");if(VIEWS.indexOf(h)<0)h="start";
