@@ -1,0 +1,13 @@
+{
+ "topic": "Melanotan I vs Melanotan II",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {"kicker": "Fact-checking", "title": "Melanotan I and II aren't the same", "hero": true, "text": "One is a drug, the other isn't. Swipe 👉", "seconds": 3.5},
+  {"kicker": "Melanotan I", "verdict": "A DRUG", "tone": "yes", "title": "FDA-approved", "text": "As afamelanotide (Scenesse), the FDA approved it in October 2019 for adults with erythropoietic protoporphyria, to increase pain-free light exposure. A 16 mg implant every 2 months, given by a clinician.", "seconds": 6},
+  {"kicker": "Melanotan II", "verdict": "NOT A DRUG", "tone": "no", "title": "No approved use", "text": "Sold illegally as a 'tanning injection.' Its safety has not been established.", "seconds": 5},
+  {"kicker": "Why it matters", "title": "Different receptors, different risk", "text": "MT-I selectively targets the MC1R receptor. MT-II also activates MC3R and MC4R, linked to effects like libido and appetite changes, and in case reports to new moles and melanoma.", "seconds": 6},
+  {"kicker": "The marketing trap", "title": "\"It's basically the same drug\"", "text": "MT-II sellers sometimes imply it's equivalent to an approved drug. It isn't: only MT-I (afamelanotide) is approved, in a specific form, dose and indication.", "seconds": 5.5},
+  {"kicker": "More facts, zero hype", "cta": "pepsafe.info", "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.", "foot": "Educational content, not medical advice.", "seconds": 4}
+ ],
+ "caption": "Melanotan I and Melanotan II are NOT the same 🧪 One is an FDA-approved drug (afamelanotide/Scenesse) for a rare disease. The other is an illegal 'tanning injection' with no established safety.\n\nMore at pepsafe.info\n\n#melanotan #peptides #facts #mythsvsfacts #health #pepsafe"
+}

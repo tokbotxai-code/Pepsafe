@@ -1,0 +1,12 @@
+{
+ "topic": "Melanotan I vs Melanotan II",
+ "slides": [
+  {"kicker": "Sprawdzamy fakty", "title": "Melanotan I i II to nie to samo", "hero": true, "text": "Jeden jest lekiem, drugi nie. Przesuń 👉", "seconds": 3.5},
+  {"kicker": "Melanotan I", "verdict": "LEK", "tone": "yes", "title": "Zatwierdzony przez FDA", "text": "Pod nazwą afamelanotyd (Scenesse) FDA zatwierdziła go w październiku 2019 r. dla dorosłych z erytropoetyczną protoporfirią, by wydłużyć czas bezbolesnej ekspozycji na światło. Implant 16 mg co 2 miesiące, podaje go lekarz.", "seconds": 6},
+  {"kicker": "Melanotan II", "verdict": "NIE LEK", "tone": "no", "title": "Brak zatwierdzonego zastosowania", "text": "Sprzedawany nielegalnie jako „zastrzyk na opaleniznę”. Bezpieczeństwo nie zostało ustalone.", "seconds": 5},
+  {"kicker": "Dlaczego to ważne", "title": "Różne receptory, różne ryzyko", "text": "MT-I działa wybiórczo na receptor MC1R. MT-II pobudza dodatkowo MC3R i MC4R, co wiąże się z efektami takimi jak zmiany libido czy apetytu, a w opisach przypadków także z nowymi znamionami i czerniakiem.", "seconds": 6},
+  {"kicker": "Pułapka marketingowa", "title": "„To prawie to samo co lek”", "text": "Sprzedawcy MT-II czasem sugerują, że to odpowiednik zatwierdzonego leku. To nieprawda: zatwierdzony jest tylko MT-I (afamelanotyd), w konkretnej postaci, dawce i wskazaniu.", "seconds": 5.5},
+  {"kicker": "Więcej faktów, zero ściemy", "cta": "pepsafe.info", "text": "Katalog peptydów, mity i fakty, kronika decyzji FDA.", "foot": "Treść edukacyjna. Nie jest poradą medyczną.", "seconds": 4}
+ ],
+ "caption": "Melanotan I i Melanotan II to NIE to samo 🧪 Jeden to zatwierdzony przez FDA lek (afamelanotyd/Scenesse) na rzadką chorobę. Drugi to nielegalny „zastrzyk na opaleniznę” bez ustalonego bezpieczeństwa.\n\nWięcej na pepsafe.info\n\n#melanotan #peptydy #fakty #mityifakty #zdrowie #pepsafe"
+}
