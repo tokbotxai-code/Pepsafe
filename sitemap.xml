@@ -8,948 +8,864 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pepsafe.info/#catalog</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#catalog"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#basics</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#basics"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#alerts</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#alerts"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#blog</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#blog"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#faq</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#faq"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#compare</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#compare"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#myths</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#myths"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#news</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#news"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#effects</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#effects"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#dose</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#dose"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#method</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#method"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pepsafe.info/#contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en#contact"/>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://pepsafe.info/?e=5-amino-1MQ</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=5-amino-1MQ"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=ACE-031</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=ACE-031"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=ACTH%201%E2%80%9339</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=ACTH%201%E2%80%9339"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=AHK-Cu</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=AHK-Cu"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=AICAR</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=AICAR"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=AOD9604</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=AOD9604"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=ARA290</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=ARA290"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Abaloparatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Abaloparatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Adamax</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Adamax"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Adipotide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Adipotide"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Afamelanotyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Afamelanotyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Angiotensyna%20II</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Angiotensyna%20II"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=B7-33</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=B7-33"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=BPC-157</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=BPC-157"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=BPC-157%20%2B%20TB-500</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=BPC-157%20%2B%20TB-500"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Biwalirudyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Biwalirudyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=CJC-1295</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=CJC-1295"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Cagrilintyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Cagrilintyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Cerebrolizyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Cerebrolizyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Cetroreliks%20i%20Ganireliks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Cetroreliks%20i%20Ganireliks"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Cyklosporyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Cyklosporyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=DSIP</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=DSIP"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Dalbawancyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Dalbawancyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Daptomycyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Daptomycyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Dazyglukagon</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Dazyglukagon"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Degareliks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Degareliks"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Desmopresyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Desmopresyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Difelikefalina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Difelikefalina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Dihexa</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Dihexa"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Dulaglutyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Dulaglutyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Eksenatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Eksenatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Enfuwirtyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Enfuwirtyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Epitalon</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Epitalon"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Eptyfibatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Eptyfibatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Erytropoetyna%20%28EPO%29</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Erytropoetyna%20%28EPO%29"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Etelkalcetyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Etelkalcetyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=FOXO4-DRI</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=FOXO4-DRI"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Follistatyna%20i%20FST-344</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Follistatyna%20i%20FST-344"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Foundayo%20%28orforglipron%29</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Foundayo%20%28orforglipron%29"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=GDF-8%20%28miostatyna%29</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=GDF-8%20%28miostatyna%29"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=GHK-Cu</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=GHK-Cu"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=GHRP-2</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=GHRP-2"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=GHRP-6</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=GHRP-6"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Glatyramer</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Glatyramer"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Glukagon</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Glukagon"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Glutation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Glutation"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Gonadorelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Gonadorelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Goserelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Goserelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=HCG%20i%20HMG</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=HCG%20i%20HMG"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=HGH%20Fragment%20176%E2%80%93191</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=HGH%20Fragment%20176%E2%80%93191"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Heksarelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Heksarelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Humanina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Humanina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=IGF-1%20LR3</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=IGF-1%20LR3"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Ikatybant</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Ikatybant"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Insuliny%20i%20analogi</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Insuliny%20i%20analogi"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Ipamorelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Ipamorelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=KPV</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=KPV"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Kalcytonina%20%C5%82ososiowa</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Kalcytonina%20%C5%82ososiowa"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Kisspeptyna-10</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Kisspeptyna-10"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=L-karnityna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=L-karnityna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=LL-37</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=LL-37"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Lanreotyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Lanreotyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Leuprorelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Leuprorelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Liksysenatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Liksysenatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Linaklotyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Linaklotyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Liraglutyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Liraglutyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=MGF%20i%20PEG-MGF</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=MGF%20i%20PEG-MGF"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=MIC%20i%20Lipo-C</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=MIC%20i%20Lipo-C"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=MOTS-c</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=MOTS-c"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Matrixyl</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Matrixyl"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Mazdutyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Mazdutyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Melanotan%20II</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Melanotan%20II"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Melatonina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Melatonina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Mieszanki%3A%20Reta%20%2B%20Tirzepatyd%2C%20Cagri%20%2B%20Sema</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Mieszanki%3A%20Reta%20%2B%20Tirzepatyd%2C%20Cagri%20%2B%20Sema"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Motyksafortyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Motyksafortyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=NAD%2B</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=NAD%2B"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Nesirytyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Nesirytyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Oksytocyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Oksytocyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Oktreotyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Oktreotyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Oreksyna%20A%20i%20B</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Oreksyna%20A%20i%20B"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Orytawancyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Orytawancyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=P21</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=P21"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=PE-22-28</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=PE-22-28"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=PNC-27</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=PNC-27"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=PT-141</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=PT-141"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=PTD-DBM</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=PTD-DBM"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Palopegteriparatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Palopegteriparatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Pasyreotyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Pasyreotyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Pegcetakoplan%20i%20zilukoplan</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Pegcetakoplan%20i%20zilukoplan"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Peptydy%20bioregulatory</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Peptydy%20bioregulatory"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Plekanatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Plekanatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Pramlintyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Pramlintyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Retatrutyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Retatrutyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Romidepsyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Romidepsyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=SLU-PP-332</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=SLU-PP-332"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=SS-31</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=SS-31"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Sekretyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Sekretyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Selank</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Selank"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Semaglutyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Semaglutyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Semax</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Semax"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Sermorelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Sermorelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Setmelanotyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Setmelanotyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Snap-8</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Snap-8"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Somatropina%20%28HGH%29</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Somatropina%20%28HGH%29"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Survodutyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Survodutyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Synkalid</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Synkalid"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=TB-500</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=TB-500"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Teduglutyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Teduglutyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Telawancyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Telawancyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Terlipresyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Terlipresyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Teryparatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Teryparatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Tesamorelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Tesamorelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Tirzepatyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Tirzepatyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Toksyna%20botulinowa</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Toksyna%20botulinowa"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Triptorelina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Triptorelina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Trofinetyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Trofinetyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Tymalina%20i%20tymulina</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Tymalina%20i%20tymulina"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Tymozyna%20alfa-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Tymozyna%20alfa-1"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=VIP</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=VIP"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Wankomycyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Wankomycyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Wazopresyna</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Wazopresyna"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Wosorytyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Wosorytyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pepsafe.info/?e=Zikonotyd</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pepsafe.info/?lang=en&amp;e=Zikonotyd"/>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

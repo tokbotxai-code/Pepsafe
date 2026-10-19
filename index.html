@@ -564,6 +564,8 @@ function I(pl,en){return isEN()?en:pl}
 var FI={n:0,c:1,d:2,m:3,u:4,ev:5,w:6};
 function F(e,k){if(isEN()&&EN[e.n]){return String(EN[e.n][FI[k]]).replace("@ND",ND_EN).replace("@NC",NC_EN);}return e[k];}
 function SL(s){return isEN()?ST_EN[s]:ST[s]}
+function isWada(e){var w=(window.WADA||{})[e.n];if(w)return !!w[0];return !!e.wa;}
+window.PEP_wada=isWada;
 function CL(c){return isEN()?(CAT_EN[c]||c):c}
 function NM(n){return isEN()&&EN[n]?EN[n][0]:n}
 function FL(f,k){var x=FAMS_EN[f.id];return isEN()&&x?x[{lab:0,t:1,x:2}[k]]:f[k]}
@@ -834,7 +836,7 @@ function thumb(e){
 }
 function card(e,i){
   return '<div class="cardw" data-n="'+esc(e.n)+'"><button type="button" class="card" data-n="'+esc(e.n)+'" style="--i:'+Math.min(i,14)+'"><div class="thumb">'+thumb(e)+'</div><div class="cb"><h3>'+esc(NM(e.n))+'</h3>'+(e.a?'<div class="alias">'+esc(e.a)+'</div>':'')+
-   '<div class="tags"><span class="tag s-'+e.s+'">'+SL(e.s)+'</span>'+(e.wa?'<span class="tag t-w">WADA</span>':'')+'</div><p class="snip">'+esc(F(e,"d"))+'</p></div></button></div>';
+   '<div class="tags"><span class="tag s-'+e.s+'">'+SL(e.s)+'</span>'+(isWada(e)?'<span class="tag t-w">WADA</span>':'')+'</div><p class="snip">'+esc(F(e,"d"))+'</p></div></button></div>';
 }
 function render(){
   var t=term.trim().toLowerCase();
@@ -934,7 +936,7 @@ function openDlg(e){
   cur=e;var url=encodeURIComponent((EN[e.n]?EN[e.n][0]:e.n).split(" ")[0].replace(/[(),]/g,""));
   $("#dlgBody").innerHTML='<div class="portrait"><canvas id="pc" aria-hidden="true"></canvas><button class="close" type="button" id="dClose" aria-label="'+I("Zamknij","Close")+'">×</button><span class="cap">'+I("Ilustracja poglądowa, nie rzeczywista struktura","Schematic illustration, not a real structure")+'</span></div>'+
    '<div class="body"><div><h2 id="dName" data-n="'+esc(e.n)+'">'+esc(NM(e.n))+'</h2>'+(e.a?'<div class="alias" style="font:400 .85rem var(--f-mono);color:var(--muted)">'+esc(e.a)+'</div>':'')+'</div>'+
-   '<div class="tags"><span class="tag s-'+e.s+'">'+SL(e.s)+'</span>'+(e.wa?'<span class="tag t-w">WADA</span>':'')+'<span class="tag t-c">'+esc(F(e,"c"))+'</span><span class="tag t-c">'+esc(CL(e.cat))+'</span></div>'+
+   '<div class="tags"><span class="tag s-'+e.s+'">'+SL(e.s)+'</span>'+(isWada(e)?'<span class="tag t-w">WADA</span>':'')+'<span class="tag t-c">'+esc(F(e,"c"))+'</span><span class="tag t-c">'+esc(CL(e.cat))+'</span></div>'+
    (e.q?ribbons(e.q):'')+
    '<div><h4>'+I("Czym jest","What it is")+'</h4>'+esc(F(e,"d"))+'</div><div><h4>'+I("Jak działa","How it works")+'</h4>'+esc(F(e,"m"))+'</div><div><h4>'+I("Zastosowanie","Use")+'</h4>'+esc(F(e,"u"))+'</div><div><h4>'+I("Co wiadomo z badań","What studies show")+'</h4>'+esc(F(e,"ev"))+'</div>'+
    '<div class="w"><h4>'+I("Łączenie i bezpieczeństwo","Combining and safety")+'</h4>'+esc(F(e,"w"))+'</div>'+(groupBlock(e)||'<div class="w"><h4>'+I("Nie łączyć z","Do not combine with")+'</h4>'+I("Brak sprawdzonych danych o łączeniu z innymi substancjami w tym katalogu. Nie łącz bez lekarza.","No verified data on combining with other substances in this catalog. Do not combine without a doctor.")+'</div>')+
@@ -944,14 +946,22 @@ function openDlg(e){
    '<div class="links"><a href="https://pubchem.ncbi.nlm.nih.gov/#query='+url+'" target="_blank" rel="noopener">PubChem</a><a href="https://go.drugbank.com/unearth/q?searcher=drugs&amp;query='+url+'" target="_blank" rel="noopener">DrugBank</a><a href="https://www.rcsb.org/search?q='+url+'" target="_blank" rel="noopener">Protein Data Bank</a></div></div>';
   if(typeof dlg.showModal==="function")dlg.showModal();else dlg.setAttribute("open","");
   var pb=document.getElementById("dPrint");if(pb)pb.addEventListener("click",function(){printSheet(e);});
+  entryMeta(e);
   $("#dClose").addEventListener("click",function(){closeDlg()});
   startPortrait(e);
 }
 function entryUrl(n){var u=new URL(location.href);u.searchParams.set("e",n);u.hash="";return u.toString();}
 function pushEntry(n){try{history.pushState({e:n},"",entryUrl(n));}catch(x){}}
+function entryMeta(e){
+  if(!window.PEP_setMeta)return;
+  var nm=(window.PEP_name?window.PEP_name(e.n):e.n);
+  var d=String(F(e,"d")||"").slice(0,150);
+  window.PEP_setMeta(nm+" – PepSafe: "+I("status, dowody, ostrzeżenia","status, evidence, warnings"),
+    nm+": "+d, "https://pepsafe.info/?e="+encodeURIComponent(e.n));
+}
 function dropEntry(){try{var u=new URL(location.href);if(u.searchParams.get("e")){u.searchParams.delete("e");history.pushState({},"",u.toString());}}catch(x){}}
-function closeDlg(){cancelAnimationFrame(loop);if(dlg.close)dlg.close();else dlg.removeAttribute("open");dropEntry();}
-dlg.addEventListener("close",function(){cancelAnimationFrame(loop);dropEntry();});
+function closeDlg(){cancelAnimationFrame(loop);if(dlg.close)dlg.close();else dlg.removeAttribute("open");dropEntry();if(window.PEP_route)window.PEP_route();}
+dlg.addEventListener("close",function(){cancelAnimationFrame(loop);dropEntry();if(window.PEP_route)window.PEP_route();});
 dlg.addEventListener("click",function(ev){if(ev.target===dlg)closeDlg();});
 $("#grid").addEventListener("click",function(ev){var b=ev.target.closest(".card");if(!b)return;var e=findN(b.getAttribute("data-n"));if(!e)return;openDlg(e);pushEntry(e.n);});
 
@@ -1365,6 +1375,7 @@ var VT={pl:{start:["PepSafe: fakty o peptydach, bez sprzedaży i bez dawek z int
  dose:["Dosing of approved drugs from official labels","Doses only for FDA-approved drugs, taken from current labels."],
  method:["PepSafe methodology","Where the data comes from, how we grade evidence and how we fix mistakes."],
  contact:["Contact","A question, a correction or a collaboration idea."]}};
+window.PEP_setMeta=function(t,d,c){setMeta(t,d,c);};
 function setMeta(title,desc,canon){
   document.title=title;
   var d=document.querySelector('meta[name="description"]');if(d)d.setAttribute("content",desc);
@@ -1395,6 +1406,7 @@ function setLang(l){lang=l;try{localStorage.setItem("pep-lang",l);}catch(e){}
   document.documentElement.lang=l;renderAll();route();}
 $("#lang-pl").addEventListener("click",function(){setLang("pl");});
 $("#lang-en").addEventListener("click",function(){setLang("en");});
+window.PEP_route=route;
 window.addEventListener("hashchange",route);
 function hh(){var h=$("#siteHeader");if(h)document.documentElement.style.setProperty("--hh",h.offsetHeight+"px");}
 hh();window.addEventListener("resize",hh);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(hh);
@@ -1887,7 +1899,6 @@ function navText(){
   Object.keys(m).forEach(function(k){var a=document.querySelector('#tabs a[data-v="'+k+'"]');if(a)a.textContent=T(m[k][0],m[k][1]);});
 }
 function all(){navText();renderMyths();renderNews();renderAlerts();renderQa();renderTricks();renderAnti();renderSy();renderCmp();}
-all();
 (function(){var q=document.getElementById("qaQ");if(q)q.addEventListener("input",renderQa);
   var sq=document.getElementById("syQ");if(sq)sq.addEventListener("input",renderSy);
   var sc=document.getElementById("syChips");if(sc)sc.addEventListener("click",function(e){var b=e.target.closest("[data-sy]");if(!b)return;document.getElementById("syQ").value=b.getAttribute("data-sy");renderSy();});})();
@@ -1897,6 +1908,7 @@ var REV={"ACTH 1–39": "2026-10-19", "Melatonina": "2026-10-19", "Erytropoetyna
 var WADA={"BPC-157": ["S0", "always", "Wymieniony w S0: substancja bez dopuszczenia do leczenia u ludzi.", "Named in S0: a substance with no approval for human therapeutic use."], "TB-500": ["S2.3", "always", "Wymieniony w S2.3: tymozyna beta-4 i jej pochodne.", "Named in S2.3: thymosin beta-4 and its derivatives."], "BPC-157 + TB-500": ["S0 i S2.3", "always", "Dwie substancje zakazane naraz: BPC-157 w S0, TB-500 w S2.3.", "Two prohibited substances at once: BPC-157 in S0, TB-500 in S2.3."], "Insuliny i analogi": ["S4.4", "always", "S4.4.2 wymienia insuliny i mimetyki insuliny.", "S4.4.2 names insulins and insulin mimetics."], "Somatropina (HGH)": ["S2.2", "always", "Hormon wzrostu, analogi i fragmenty: S2.2.3.", "Growth hormone, analogues and fragments: S2.2.3."], "Tesamorelina": ["S2.2", "always", "Wymieniona w S2.2.4 jako analog GHRH.", "Named in S2.2.4 as a GHRH analogue."], "Sermorelina": ["S2.2", "always", "Wymieniona w S2.2.4 jako analog GHRH.", "Named in S2.2.4 as a GHRH analogue."], "CJC-1295": ["S2.2", "always", "Wymieniony w S2.2.4 jako analog GHRH.", "Named in S2.2.4 as a GHRH analogue."], "Ipamorelina": ["S2.2", "always", "Wymieniona w S2.2.4 jako sekretagog hormonu wzrostu.", "Named in S2.2.4 as a growth hormone secretagogue."], "GHRP-2": ["S2.2", "always", "Wymieniony w S2.2.4 (pralmorelina).", "Named in S2.2.4 (pralmorelin)."], "GHRP-6": ["S2.2", "always", "Wymieniony w S2.2.4 jako peptyd uwalniający hormon wzrostu.", "Named in S2.2.4 as a GH-releasing peptide."], "Heksarelina": ["S2.2", "always", "Wymieniona w S2.2.4 (examorelina).", "Named in S2.2.4 (examorelin)."], "IGF-1 LR3": ["S2.3", "always", "S2.3 wymienia IGF-1 i jego analogi.", "S2.3 names IGF-1 and its analogues."], "MGF i PEG-MGF": ["S2.3", "always", "S2.3 wymienia mechaniczne czynniki wzrostu (MGF).", "S2.3 names mechano growth factors (MGF)."], "Follistatyna i FST-344": ["S4.3", "always", "S4.3: białka blokujące receptor aktywiny IIB.", "S4.3: agents preventing activin receptor IIB activation."], "ACE-031": ["S4.3", "always", "Wymieniony w S4.3 jako receptor-wabik aktywiny.", "Named in S4.3 as a decoy activin receptor."], "AOD9604": ["S2.2", "always", "Wymieniony w S2.2.3 jako fragment hormonu wzrostu.", "Named in S2.2.3 as a growth hormone fragment."], "HGH Fragment 176–191": ["S2.2", "always", "Wymieniony w S2.2.3 jako fragment hGH 176-191.", "Named in S2.2.3 as the hGH 176-191 fragment."], "Erytropoetyna (EPO)": ["S2.1", "always", "S2.1.1: agoniści receptora erytropoetyny.", "S2.1.1: erythropoietin receptor agonists."], "Melanotan II": ["S0", "always", "Nienazwany na liście, ale bez dopuszczenia do leczenia u ludzi, więc obejmuje go S0.", "Not named on the list, but with no approval for human use, so S0 covers it."], "Retatrutyd": ["S0", "always", "Nienazwany na liście, ale wciąż w badaniach, więc obejmuje go S0.", "Not named on the list, but still investigational, so S0 covers it."], "SLU-PP-332": ["S0", "always", "Związek przedkliniczny bez dopuszczenia, obejmuje go S0.", "A preclinical compound with no approval; S0 covers it."], "HCG i HMG": ["S2.2", "always", "S2.2.1: gonadotropina kosmówkowa i LH. Zakaz dotyczy mężczyzn.", "S2.2.1: chorionic gonadotrophin and LH. The ban applies to males."], "Gonadorelina": ["S2.2", "always", "S2.2.1: GnRH. Zakaz dotyczy mężczyzn.", "S2.2.1: GnRH. The ban applies to males."], "Triptorelina": ["S2.2", "always", "S2.2.1: analog agonistyczny GnRH. Zakaz dotyczy mężczyzn.", "S2.2.1: GnRH agonist analogue. The ban applies to males."], "Leuprorelina": ["S2.2", "always", "S2.2.1: analog agonistyczny GnRH. Zakaz dotyczy mężczyzn.", "S2.2.1: GnRH agonist analogue. The ban applies to males."], "Goserelina": ["S2.2", "always", "S2.2.1: analog agonistyczny GnRH. Zakaz dotyczy mężczyzn.", "S2.2.1: GnRH agonist analogue. The ban applies to males."], "Kisspeptyna-10": ["S2.2", "always", "S2.2.1 wymienia kisspeptynę i jej analogi. Zakaz dotyczy mężczyzn.", "S2.2.1 names kisspeptin and its analogues. The ban applies to males."], "AICAR": ["S4.4", "always", "S4.4.1: aktywator kinazy AMPK.", "S4.4.1: an AMPK activator."], "MOTS-c": ["S4.4", "always", "Wymieniony w S4.4.1 wśród modulatorów metabolicznych.", "Named in S4.4.1 among metabolic modulators."], "Desmopresyna": ["S5", "always", "Wymieniona w S5 wśród substancji maskujących.", "Named in S5 among masking agents."], "Wazopresyna": ["S5", "always", "Nienazwana, ale S5 obejmuje substancje o podobnym działaniu do desmopresyny.", "Not named, but S5 covers substances with an effect similar to desmopressin."], "ACTH 1–39": ["S2.2", "always", "S2.2.2: kortykotropiny i czynniki je uwalniające.", "S2.2.2: corticotrophins and their releasing factors."], "GHK-Cu": ["", "none", "Nie jest wymieniony na liście.", "Not named on the list."], "Semaglutyd": ["", "none", "Nie jest wymieniony na liście; to lek dopuszczony do leczenia.", "Not named on the list; it is an approved medicine."], "Tirzepatyd": ["", "none", "Nie jest wymieniony na liście; to lek dopuszczony do leczenia.", "Not named on the list; it is an approved medicine."], "GDF-8 (miostatyna)": ["", "none", "Lista zakazuje inhibitorów miostatyny, a nie samej miostatyny.", "The list prohibits myostatin inhibitors, not myostatin itself."], "Afamelanotyd": ["", "none", "Nie jest wymieniony na liście; to lek dopuszczony (Scenesse).", "Not named on the list; it is an approved medicine (Scenesse)."], "PT-141": ["", "none", "Nie jest wymieniony na liście; to lek dopuszczony (Vyleesi).", "Not named on the list; it is an approved medicine (Vyleesi)."], "Oksytocyna": ["", "none", "Nie jest wymieniona na liście.", "Not named on the list."], "Epitalon": ["", "none", "Nie jest wymieniony na liście; status rejestracji niejasny.", "Not named on the list; its registration status is unclear."], "Tymozyna alfa-1": ["", "none", "Lista wymienia tylko tymozynę beta-4.", "The list names only thymosin beta-4."], "Semax": ["", "none", "Nie jest wymieniony na liście.", "Not named on the list."], "Selank": ["", "none", "Nie jest wymieniony na liście.", "Not named on the list."], "Cerebrolizyna": ["", "none", "Nie jest wymieniona na liście.", "Not named on the list."], "Melatonina": ["", "none", "Nie jest wymieniona na liście.", "Not named on the list."], "L-karnityna": ["", "none", "Sama substancja nie jest zakazana; wlewy powyżej 100 ml podlegają metodzie M2.2.", "The substance is not prohibited; infusions over 100 mL fall under method M2.2."], "Glukagon": ["", "none", "Nie jest wymieniony na liście.", "Not named on the list."]};
 var WADA_URL="https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf";
 window.WADA=WADA;window.WADA_URL=WADA_URL;
+all();
 /* live trial counts from ClinicalTrials.gov (public API, no key) */
 var CT_CACHE={};
 function ctGov(term,box){
