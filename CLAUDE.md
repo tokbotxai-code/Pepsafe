@@ -20,6 +20,7 @@
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
 ## Media
+- Na początku każdej pracy z repo: `git fetch origin main && git reset --hard origin/main` (historia bywa przepisywana; nie używaj `git pull`).
 - TikTok **nie przyjmuje PNG** – używaj MP4 (`pepsafe-<folder>-muzyka.mp4`) albo JPG.
 - Pliki publikuj przez commit + push do `main`; GitHub Pages wystawia je pod
   `https://pepsafe.info/tiktok/<folder>/<plik>` (zwykle po ok. 30–60 s). Ten URL podawaj w `media`.
@@ -27,8 +28,8 @@
 ## Treść
 - Każdy opis kończy się „Więcej na pepsafe.info” / „More at pepsafe.info” i hashtagiem `#pepsafe`.
 - Treść edukacyjna, bez dawkowania i zachęt do stosowania; fakty tylko z wiarygodnych źródeł (FDA, WADA, badania).
-- `isAiGenerated` (IG) i `isAigc` (TikTok) = `false` dla grafik/filmów z tekstem (decyzja właściciela; nie są to treści
-  realistyczne). Gdyby pojawiły się realistyczne obrazy, wideo lub głos wygenerowane przez AI – wtedy `true` (wymóg platform).
+- Pola etykiety treści syntetycznych `isAiGenerated` (IG) i `isAigc` (TikTok) = `false` dla grafik/filmów z tekstem
+  (decyzja właściciela). Realistyczne syntetyczne obrazy, wideo lub głos wymagałyby `true` (wymóg platform) – nie publikujemy takich.
 
 ## Słowa i obrazy, których unikamy (moderacja TikTok/IG)
 TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania substancji (tak został wstrzymany BPC-157 PL z 18.10: „zanim kupisz fiolkę”).
@@ -60,8 +61,8 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   dodatkowe posty (poprawki, powtórki) planuj na TikToka z autoPublish false, czyli do ręcznej publikacji z telefonu
   (Metricool wysyła powiadomienie), albo przesuń na kolejny dzień. Instagram może iść automatycznie.
 
-## Repozytorium jest publiczne: bez śladów AI
+## Repozytorium jest publiczne: neutralne ślady
 - Przed commitem ustaw: `git config user.name "PepSafe"` i `git config user.email "noreply@pepsafe.info"`.
-- W opisach commitów nie wspominaj o AI, modelach ani narzędziach; bez linii „Co-Authored-By” innych niż
+- W opisach commitów nie wspominaj o narzędziach ani modelach; bez linii „Co-Authored-By” innych niż
   `Co-Authored-By: PepSafe <noreply@pepsafe.info>`. Bez linków do sesji.
-- Na stronie, w postach i w plikach w repo nie piszemy, że treści tworzy AI.
+- Na stronie, w postach i w plikach w repo nie opisujemy, jakimi narzędziami powstają treści.
