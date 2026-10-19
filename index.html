@@ -286,6 +286,11 @@ input[type=text],input[type=email]{font:500 1rem var(--f-body);padding:10px 12px
 pre.prev{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .9rem var(--f-mono);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;margin:0}
 .catnotes{display:flex;flex-direction:column;gap:10px;color:var(--muted);font-size:.85rem;padding-top:28px;margin-top:20px;border-top:1px solid var(--line)}
 .catnotes .eyebrow{margin-bottom:0}
+.evbox{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--bg);margin-top:12px}
+.evrow{display:flex;align-items:center;gap:6px;margin-top:8px}
+.evd{width:34px;height:10px;border-radius:5px;background:var(--line)}
+.evd.on{background:var(--accent)}
+.evrow b{margin-left:8px;font-family:var(--f-mono)}
 .stbox{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--bg)}
 .kv2{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:8px 0 0;font-size:.95rem}
 .kv2 dt{color:var(--muted)}
@@ -846,6 +851,60 @@ function ribbons(q){
     return (arr.length>1?'<div class="chainlab">'+I("Łańcuch ","Chain ")+(k?"B":"A")+' ('+c.length+' aa)</div>':'<div class="chainlab">'+c.length+' aa</div>')+
     '<div class="ribbon" role="img" aria-label="'+I("Sekwencja ","Sequence ")+esc(c)+'">'+c.split("").map(function(ch){return '<span class="res" style="--c:var('+COLV[CAT[ch]||5]+')">'+ch+'</span>'}).join("")+'</div>';}).join("");
 }
+
+/* evidence grade, symptom index and a printable question sheet */
+function evGrade(e){
+  var w=(window.WADA||{})[e.n];
+  if(e.s==="A")return 4;
+  if(e.s==="R")return 3;
+  if(e.s==="P")return 3;
+  if(e.s==="C")return 2;
+  if(e.s==="N")return 2;
+  return 1;
+}
+var EVL={1:["Dane przedkliniczne lub bardzo skąpe","Preclinical or very scarce data"],
+ 2:["Dane ograniczone, poza lekami","Limited data, outside medicines"],
+ 3:["Badania u ludzi, bez pełnego zatwierdzenia","Human trials, without full approval"],
+ 4:["Lek zatwierdzony, badania rejestracyjne","Approved drug, registration trials"]};
+function evBar(e){
+  var g=evGrade(e),dots="";
+  for(var i=1;i<=4;i++)dots+='<span class="evd'+(i<=g?" on":"")+'"></span>';
+  return '<div class="evbox"><h4>'+I("Siła dowodów","Strength of evidence")+'</h4><div class="evrow">'+dots+
+   '<b>'+g+'/4</b></div><p class="meta" style="margin:4px 0 0">'+esc(I(EVL[g][0],EVL[g][1]))+' · '+
+   I("Skala opisana w zakładce Metodologia.","The scale is explained in the Methodology tab.")+'</p></div>';
+}
+window.PEP_ev=evBar;
+function printSheet(e){
+  var w=(window.WADA||{})[e.n],g=evGrade(e);
+  var qs=I(["Czy w moim przypadku jest wskazanie do jakiegokolwiek leczenia?",
+   "Czy ta substancja ma dopuszczenie do stosowania u ludzi w moim kraju?",
+   "Czy mogą wystąpić interakcje z lekami, które już biorę?",
+   "Jakie objawy powinny mnie zaniepokoić i kiedy zgłosić się pilnie?",
+   "Jakie badania warto zrobić przed i w trakcie?",
+   "Czy istnieje zarejestrowany lek o podobnym działaniu?"],
+   ["Is there an indication for any treatment in my case?",
+   "Is this substance approved for human use in my country?",
+   "Could it interact with the medicines I already take?",
+   "Which symptoms should worry me, and when should I seek urgent help?",
+   "Which tests are worth doing before and during?",
+   "Is there an approved medicine with a similar effect?"]);
+  var win=window.open("","_blank");if(!win)return;
+  var esc2=function(x){return String(x).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})};
+  win.document.write('<!doctype html><meta charset="utf-8"><title>'+esc2(e.n)+' – PepSafe</title>'+
+   '<style>body{font:15px/1.5 system-ui,sans-serif;max-width:720px;margin:32px auto;padding:0 20px;color:#111}'+
+   'h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:22px 0 6px}ul{margin:0;padding-left:20px}li{margin:6px 0}'+
+   '.m{color:#555;font-size:13px}.box{border:1px solid #ccc;border-radius:8px;padding:12px 14px;margin:14px 0}'+
+   '.line{border-bottom:1px solid #bbb;height:22px;margin:10px 0}</style>'+
+   '<h1>'+esc2(window.PEP_name?window.PEP_name(e.n):e.n)+'</h1>'+
+   '<p class="m">'+I("Kartka do rozmowy z lekarzem · pepsafe.info","A sheet for a conversation with your doctor · pepsafe.info")+'</p>'+
+   '<div class="box"><b>'+I("Status","Status")+':</b> '+esc2(SL(e.s))+'<br><b>'+I("Siła dowodów","Strength of evidence")+':</b> '+g+'/4 – '+esc2(I(EVL[g][0],EVL[g][1]))+
+   (w&&w[0]?'<br><b>'+I("Sport","Sport")+':</b> '+I("na liście zakazanej WADA","on the WADA prohibited list")+' ('+esc2(w[0])+')':'')+'</div>'+
+   '<h2>'+I("Pytania do lekarza","Questions for the doctor")+'</h2><ul>'+qs.map(function(q){return '<li>'+esc2(q)+'</li>'}).join("")+'</ul>'+
+   '<h2>'+I("Moje notatki","My notes")+'</h2><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>'+
+   '<p class="m">'+I("Treść edukacyjna, nie porada medyczna. Nie podajemy dawek substancji niezatwierdzonych.","Educational content, not medical advice. We give no doses for unapproved substances.")+'</p>');
+  win.document.close();win.focus();setTimeout(function(){try{win.print();}catch(x){}},300);
+}
+window.PEP_print=printSheet;
 function openDlg(e){
   cur=e;var url=encodeURIComponent((EN[e.n]?EN[e.n][0]:e.n).split(" ")[0].replace(/[(),]/g,""));
   $("#dlgBody").innerHTML='<div class="portrait"><canvas id="pc" aria-hidden="true"></canvas><button class="close" type="button" id="dClose" aria-label="'+I("Zamknij","Close")+'">×</button><span class="cap">'+I("Ilustracja poglądowa, nie rzeczywista struktura","Schematic illustration, not a real structure")+'</span></div>'+
@@ -854,9 +913,11 @@ function openDlg(e){
    (e.q?ribbons(e.q):'')+
    '<div><h4>'+I("Czym jest","What it is")+'</h4>'+esc(F(e,"d"))+'</div><div><h4>'+I("Jak działa","How it works")+'</h4>'+esc(F(e,"m"))+'</div><div><h4>'+I("Zastosowanie","Use")+'</h4>'+esc(F(e,"u"))+'</div><div><h4>'+I("Co wiadomo z badań","What studies show")+'</h4>'+esc(F(e,"ev"))+'</div>'+
    '<div class="w"><h4>'+I("Łączenie i bezpieczeństwo","Combining and safety")+'</h4>'+esc(F(e,"w"))+'</div>'+(groupBlock(e)||'<div class="w"><h4>'+I("Nie łączyć z","Do not combine with")+'</h4>'+I("Brak sprawdzonych danych o łączeniu z innymi substancjami w tym katalogu. Nie łącz bez lekarza.","No verified data on combining with other substances in this catalog. Do not combine without a doctor.")+'</div>')+
-   (window.PEP_status?window.PEP_status(e):'')+
+   (window.PEP_status?window.PEP_status(e):'')+evBar(e)+
+   '<p><button type="button" class="btn" id="dPrint">'+I("Wydrukuj pytania do lekarza","Print questions for your doctor")+'</button></p>'+
    '<div class="links"><a href="https://pubchem.ncbi.nlm.nih.gov/#query='+url+'" target="_blank" rel="noopener">PubChem</a><a href="https://go.drugbank.com/unearth/q?searcher=drugs&amp;query='+url+'" target="_blank" rel="noopener">DrugBank</a><a href="https://www.rcsb.org/search?q='+url+'" target="_blank" rel="noopener">Protein Data Bank</a></div></div>';
   if(typeof dlg.showModal==="function")dlg.showModal();else dlg.setAttribute("open","");
+  var pb=document.getElementById("dPrint");if(pb)pb.addEventListener("click",function(){printSheet(e);});
   $("#dClose").addEventListener("click",function(){closeDlg()});
   startPortrait(e);
 }
