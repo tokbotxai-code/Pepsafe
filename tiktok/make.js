@@ -6,6 +6,8 @@ const fs = require('fs'), path = require('path'), { execFileSync } = require('ch
 const dir = path.resolve(process.argv[2]);
 const post = JSON.parse(fs.readFileSync(path.join(dir, 'post.json'), 'utf8'));
 const FEED = post.format === 'feed'; // Instagram feed post: 1080x1350 images, no video
+const STORY = post.format === 'story'; // question/poll for Stories: 1080x1920, single image, no video
+const STATIC = FEED || STORY;
 const H = FEED ? 1350 : 1920;
 const esc = s => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 
@@ -31,6 +33,9 @@ li:before{content:"";position:absolute;left:0;top:18px;width:30px;height:30px;bo
 .foot{position:absolute;left:90px;right:170px;bottom:330px;font:500 30px Inter;color:#93A4AF}
 .page{position:absolute;right:170px;top:136px;font:600 32px Inter;color:#93A4AF}
 .cta{font:900 110px/1 "Inter Display",Inter;color:#3CCFA9}
+.opts{display:flex;flex-direction:column;gap:28px}
+.opt{font:800 58px Inter;padding:30px 40px;border-radius:26px;background:#122027;border:4px solid #2A3E47;color:#E6EEF2}
+.ask{font:700 44px/1.4 Inter;color:#9AD8C8;background:#0F2420;border:3px dashed #3CCFA9;border-radius:22px;padding:28px 36px}
 `;
 const logo = `<svg width="64" height="64" viewBox="0 0 34 34"><path d="M6 24 L14 10 L22 22 L29 8" stroke="#93A4AF" stroke-width="2" fill="none"/><circle cx="6" cy="24" r="4.5" fill="#6FA3E8"/><circle cx="14" cy="10" r="4.5" fill="#3CCFA9"/><circle cx="22" cy="22" r="4.5" fill="#FF9A66"/><circle cx="29" cy="8" r="4.5" fill="#C58BE0"/></svg>`;
 function chain(seed) {
@@ -46,11 +51,13 @@ function slide(s, i, n) {
   if (s.title) body += s.hero ? `<h1>${esc(s.title)}</h1>` : `<h2>${esc(s.title)}</h2>`;
   if (s.text) body += `<p>${esc(s.text)}</p>`;
   if (s.list) body += `<ul>${s.list.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
+  if (s.opts) body += `<div class="opts">${s.opts.map(x => `<div class="opt">${esc(x)}</div>`).join('')}</div>`;
+  if (s.ask) body += `<div class="ask">${esc(s.ask)}</div>`;
   if (s.cta) body += `<div class="cta">${esc(s.cta)}</div>`;
   const feedCss = FEED ? `body{height:1350px}.wrap{top:190px;bottom:150px;right:90px}.foot{bottom:70px;right:90px}.big{font-size:260px}.chain{display:none}.page{right:90px}` : '';
   return `<!doctype html><html><head><meta charset="utf-8"><style>${css}${feedCss}</style></head><body>
 <div class="brand">${logo}<div>PepSafe<small>${esc(post.tagline || 'Fakty o peptydach, bez ściemy')}</small></div></div>
-<div class="page">${i + 1}/${n}</div><div class="wrap">${body}</div>
+${n > 1 ? `<div class="page">${i + 1}/${n}</div>` : ''}<div class="wrap">${body}</div>
 ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></html>`;
 }
 
@@ -62,7 +69,7 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
     const f = path.join(dir, `slide-${String(i + 1).padStart(2, '0')}.png`); await p.screenshot({ path: f }); files.push(f);
   }
   await b.close();
-  if (FEED) { fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n'); console.log('done', files.length, 'feed images'); return; }
+  if (STATIC) { fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n'); console.log('done', files.length, STORY ? 'story image' : 'feed images'); return; }
   // silent MP4: each slide shown for its own duration with a short crossfade
   const dur = post.slides.map(s => s.seconds || 3.5), fade = 0.4, args = ['-y'];
   files.forEach((f, i) => args.push('-loop', '1', '-t', String(dur[i]), '-i', f));
