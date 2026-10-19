@@ -115,9 +115,18 @@ tr:last-child td{border-bottom:0}
 .ruler{height:34px;border-bottom:2px solid var(--line);background-repeat:repeat-x;background-position:bottom}
 .ruler.fine{background-image:repeating-linear-gradient(to right,var(--accent) 0 1px,transparent 1px 1%);background-size:100% 16px}
 .ruler.coarse{background-image:repeating-linear-gradient(to right,var(--blue) 0 2px,transparent 2px 10%);background-size:100% 26px}
-.voltabs{display:flex;gap:8px;margin:0 0 14px}
-.vtab{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--muted);font:600 .95rem/1 var(--f-body);padding:11px 20px;border-radius:999px;cursor:pointer}
-.vtab[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.calcp{padding:24px}
+.cgrid{display:grid;grid-template-columns:1fr minmax(180px,auto);gap:22px;align-items:center}
+@media(max-width:620px){.cgrid{grid-template-columns:1fr;gap:14px}}
+.slab{display:flex;justify-content:space-between;align-items:baseline;font-size:.9rem;color:var(--muted);margin-bottom:8px}
+.slab b{font-family:var(--f-mono);font-size:1.05rem;color:var(--ink)}
+.calcp input[type=range]{width:100%;accent-color:var(--accent);height:26px}
+.concbox{text-align:right}
+@media(max-width:620px){.concbox{text-align:left}}
+.sline{height:1px;background:var(--line);margin:22px 0}
+.ruler{position:relative;height:30px;border-bottom:2px solid var(--line);background-repeat:repeat-x;background-position:bottom;margin-top:6px}
+.ruler.fine{background-image:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px 1%);background-size:100% 14px}
+.rfill{position:absolute;left:0;bottom:0;top:0;background:var(--accent-soft);border-right:2px solid var(--accent);border-radius:6px 0 0 0}
 .calcp{padding:22px}
 .chead{margin:0;color:var(--muted);font-size:.9rem}
 .chead b{color:var(--ink);font-family:var(--f-mono)}
@@ -372,8 +381,25 @@ footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
     <div class="row"><button type="button" class="btn" id="calcCopy" data-k="ca_copy"></button></div>
     <pre class="prev" id="calcTxt" hidden></pre>
   </div>
-  <div class="voltabs" id="volTabs" role="tablist" aria-label="ml"></div>
-  <div id="calcOut"></div>
+  <div class="sheet calcp">
+    <div class="cgrid">
+      <div>
+        <label class="slab" for="volR"><span data-k="ca_vol0"></span> <b id="volOut">1,0 ml</b></label>
+        <input type="range" id="volR" min="5" max="50" step="5" value="10" aria-label="ml">
+        <div class="scends"><span>0,5 ml</span><span>5 ml</span></div>
+      </div>
+      <div class="concbox">
+        <p class="conc"><b id="concV">—</b> mg/ml</p>
+        <p class="concsub" id="concS"></p>
+      </div>
+    </div>
+    <div class="sline"></div>
+    <label class="slab" for="markR"><span data-k="ca_mark0"></span> <b id="markOut">10</b></label>
+    <input type="range" id="markR" min="1" max="100" step="1" value="10" aria-label="marks">
+    <div class="ruler fine" id="rulerBar"><span class="rfill" id="rfill"></span></div>
+    <div class="scends"><span>1</span><span>100 (1 ml)</span></div>
+    <div class="tiles" id="calcOut"></div>
+  </div>
 
   <div class="sheet stack">
     <h3 data-k="ca_scaleh"></h3>
@@ -995,7 +1021,7 @@ ca_sizes_p:"<p>Fiolki opisuje się masą zawartości, najczęściej <b>2 mg, 5 m
 ca_m1:"Mam dawkę, szukam kresek",ca_m2:"Mam kreski, szukam dawki",ca_marks:"Liczba kresek na strzykawce",ca_marks_hint:"Przykład do wypróbowania.",ca_syr:"Rodzaj strzykawki",ca_copy:"Skopiuj wynik",ca_reset:"Wartości przykładowe",w_cap:"Objętość większa niż pojemność wybranej strzykawki",w_prec:"Mała objętość: jedna kreska to duży błąd względny. Rozważ więcej rozpuszczalnika.",r_syr:"Napełnienie strzykawki",r_mark:"Ilość na kreskę strzykawki insulinowej U-100",r_mark_s:"kreskę",r_marks_s:"kresek",r_dose:"Dawka",
 ca_u100:"Insulinowa U-100 (kreski)",ca_std:"Zwykła (podziałka w ml)",ca_cap:"Pojemność strzykawki",ca_vol:"Objętość w strzykawce (ml)",r_res:"Wynik dla",r_grad:"Najmniejsza podziałka",
 n_effects:"Skutki uboczne",ef_h:"Zgłoszenia skutków ubocznych",ef_lead:"Niepokojący objaw po leku peptydowym? Opisz go poniżej, a zgłoszenie trafi prosto do autorów strony. Zgłoszenia nie są publikowane. To nie jest pomoc medyczna: przy poważnych objawach dzwoń pod 112.",ef_warn:"UWAGA: nie podajemy dawek substancji niezatwierdzonych, a liczby z internetu nie są bezpieczne do naśladowania. Dla większości tych substancji nie ustalono dawki u ludzi. Przy przedawkowaniu, silnej reakcji alergicznej, bólu w klatce piersiowej lub trudnościach z oddychaniem dzwoń pod 112 albo do lokalnego centrum zatruć. Nie czekaj na wpis na stronie.",ef_sub:"Substancja",ef_sym:"Opis objawu (bez danych osobowych)",ef_sev:"Nasilenie",ef_s1:"Lekkie",ef_s2:"Umiarkowane",ef_s3:"Silne lub niepokojące",ef_when:"Kiedy wystąpiło (np. po 2 dniach)",ef_consent:"Rozumiem, że zgłoszenie nie zastępuje lekarza, trafia tylko do autorów strony i nie jest publikowane.",ef_send:"Wyślij zgłoszenie",ef_err:"Uzupełnij opis objawu i zaznacz zgodę.",ef_emerg:"Przy silnych objawach zadzwoń pod 112 lub do lekarza, nie czekaj na odpowiedź od nas.",ef_list:"Zanim wyślesz",gl_h:"Słownik",
-r_syr2:"W 0,1 ml",ca_wa0:"rozpuszczalnika",c_vial0:"Fiolka",t_mark:"na 1 kreskę U-100",t_tenth:"na 0,1 ml",t_tenth_h:"1 podziałka strzykawki 2 ml",t_half:"na 0,5 ml",r_syr1:"W 0,5 ml",cfoot:"0,1 ml to jedna podziałka strzykawki 2 ml.",r_mark1:"na 1 kreskę U-100 (0,01 ml)",sc_u100:"Strzykawka insulinowa U-100",sc_u100n:"100 kresek na 1 ml. Jedna kreska to 0,01 ml.",sc_std:"Zwykła strzykawka 2 ml",sc_stdn:"Podziałka co 0,1 ml, dziesięć razy grubsza niż kreska U-100.",sc_vial:"Fiolka ",sc_in1:" mg w 1 ml: 1 kreska U-100 = ",sc_01:" mcg, 0,1 ml = ",sc_marks:"kresek",ca_scaleh:"Dwie podziałki obok siebie",warn_h:"UWAGA: nie podajemy dawek substancji niezatwierdzonych.",warn_b:"Dla większości tych substancji nie ustalono dawki u ludzi. Liczby z internetu, od sprzedawców i z forów są niesprawdzone i mogą być niebezpieczne. Nie próbuj ich naśladować. Przy objawach zatrucia lub silnej reakcji dzwoń pod 112. Przed każdą decyzją idź do lekarza.",n_method:"Metodologia",me_h:"Skąd biorą się dane i oceny",me_lead:"Jak zbieramy informacje i co znaczą statusy. Data na tej stronie: 18.10.2026.",me_body:"<p><b>Źródła:</b> dokumentacja regulatorów (FDA, EMA, URPL), ulotki i charakterystyki produktów, publikacje w PubMed oraz bazy związków (PubChem, DrugBank, RCSB PDB).</p><p><b>Statusy:</b> zatwierdzony lek, zatwierdzony regionalnie, w badaniach klinicznych, niezatwierdzony, kosmetyk lub suplement oraz nie peptyd. Status to stan wiedzy, nie rekomendacja.</p><p><b>Dowody:</b> ocena jest uproszczeniem. Badania na zwierzętach i w probówce nie dowodzą działania u ludzi.</p><p><b>Aktualizacja:</b> przy zmianie statusu u regulatora zmienimy wpis. Data „stan na” na górze strony pokazuje, kiedy dane były sprawdzane ostatnio.</p>",
+r_syr2:"W 0,1 ml",ca_wa0:"rozpuszczalnika",ca_vol0:"Rozpuszczalnik",ca_mark0:"Kreski U-100",t_sel:"na zaznaczonych kreskach",c_vial0:"Fiolka",t_mark:"na 1 kreskę U-100",t_tenth:"na 0,1 ml",t_tenth_h:"1 podziałka strzykawki 2 ml",t_half:"na 0,5 ml",r_syr1:"W 0,5 ml",cfoot:"0,1 ml to jedna podziałka strzykawki 2 ml.",r_mark1:"na 1 kreskę U-100 (0,01 ml)",sc_u100:"Strzykawka insulinowa U-100",sc_u100n:"100 kresek na 1 ml. Jedna kreska to 0,01 ml.",sc_std:"Zwykła strzykawka 2 ml",sc_stdn:"Podziałka co 0,1 ml, dziesięć razy grubsza niż kreska U-100.",sc_vial:"Fiolka ",sc_in1:" mg w 1 ml: 1 kreska U-100 = ",sc_01:" mcg, 0,1 ml = ",sc_marks:"kresek",ca_scaleh:"Dwie podziałki obok siebie",warn_h:"UWAGA: nie podajemy dawek substancji niezatwierdzonych.",warn_b:"Dla większości tych substancji nie ustalono dawki u ludzi. Liczby z internetu, od sprzedawców i z forów są niesprawdzone i mogą być niebezpieczne. Nie próbuj ich naśladować. Przy objawach zatrucia lub silnej reakcji dzwoń pod 112. Przed każdą decyzją idź do lekarza.",n_method:"Metodologia",me_h:"Skąd biorą się dane i oceny",me_lead:"Jak zbieramy informacje i co znaczą statusy. Data na tej stronie: 18.10.2026.",me_body:"<p><b>Źródła:</b> dokumentacja regulatorów (FDA, EMA, URPL), ulotki i charakterystyki produktów, publikacje w PubMed oraz bazy związków (PubChem, DrugBank, RCSB PDB).</p><p><b>Statusy:</b> zatwierdzony lek, zatwierdzony regionalnie, w badaniach klinicznych, niezatwierdzony, kosmetyk lub suplement oraz nie peptyd. Status to stan wiedzy, nie rekomendacja.</p><p><b>Dowody:</b> ocena jest uproszczeniem. Badania na zwierzętach i w probówce nie dowodzą działania u ludzi.</p><p><b>Aktualizacja:</b> przy zmianie statusu u regulatora zmienimy wpis. Data „stan na” na górze strony pokazuje, kiedy dane były sprawdzane ostatnio.</p>",
 bl_h:"Blog",bl_read:"min czytania",bl_back:"Wróć do listy",
 fq_h:"Najczęstsze pytania",src_h:"Źródła",
 foot:"PepSafe to projekt edukacyjny. Informacje nie są poradą medyczną, diagnozą ani zaleceniem leczenia."
@@ -1037,7 +1063,7 @@ ca_sizes_p:"<p>Vials are labelled by content mass, most often <b>2 mg, 5 mg, 10 
 ca_m1:"I have a dose, find marks",ca_m2:"I have marks, find the dose",ca_marks:"Marks on the syringe",ca_marks_hint:"Sample value to try.",ca_syr:"Syringe type",ca_copy:"Copy result",ca_reset:"Sample values",w_cap:"Volume exceeds the capacity of the selected syringe",w_prec:"Small volume: one mark is a large relative error. Consider more solvent.",r_syr:"Syringe fill",r_mark:"Amount per mark on a U-100 insulin syringe",r_mark_s:"mark",r_marks_s:"marks",r_dose:"Dose",
 ca_u100:"Insulin U-100 (marks)",ca_std:"Standard (ml scale)",ca_cap:"Syringe capacity",ca_vol:"Volume in the syringe (ml)",r_res:"Result for",r_grad:"Smallest graduation",
 n_effects:"Side effects",ef_h:"Side-effect reports",ef_lead:"Noticed a worrying symptom after a peptide drug? Describe it below and the report goes straight to the site authors. Reports are not published. This is not medical help: for serious symptoms call your emergency number.",ef_warn:"WARNING: we give no doses for unapproved substances, and numbers online are not safe to copy. For most of these substances no human dose has been established. For overdose, a severe allergic reaction, chest pain or breathing difficulty call 112 or your local poison centre. Do not wait for a post on this site.",ef_sub:"Substance",ef_sym:"Description of the symptom (no personal data)",ef_sev:"Severity",ef_s1:"Mild",ef_s2:"Moderate",ef_s3:"Severe or worrying",ef_when:"When it happened (e.g. after 2 days)",ef_consent:"I understand the report does not replace a doctor, goes only to the site authors and is not published.",ef_send:"Send report",ef_err:"Describe the symptom and tick the consent box.",ef_emerg:"For severe symptoms call 112 or your doctor, do not wait for a reply from us.",ef_list:"Before you send",gl_h:"Glossary",
-r_syr2:"In 0.1 ml",ca_wa0:"solvent",c_vial0:"Vial",t_mark:"per 1 U-100 mark",t_tenth:"per 0.1 ml",t_tenth_h:"1 graduation on a 2 ml syringe",t_half:"per 0.5 ml",r_syr1:"In 0.5 ml",cfoot:"0.1 ml is one graduation on a 2 ml syringe.",r_mark1:"per 1 U-100 mark (0.01 ml)",sc_u100:"U-100 insulin syringe",sc_u100n:"100 marks per 1 ml. One mark is 0.01 ml.",sc_std:"Standard 2 ml syringe",sc_stdn:"Graduations every 0.1 ml, ten times coarser than a U-100 mark.",sc_vial:"Vial ",sc_in1:" mg in 1 ml: 1 U-100 mark = ",sc_01:" mcg, 0.1 ml = ",sc_marks:"marks",ca_scaleh:"The two scales side by side",warn_h:"WARNING: we give no doses for unapproved substances.",warn_b:"For most of these substances no human dose has been established. Numbers from the internet, sellers and forums are unverified and may be dangerous. Do not try to copy them. For poisoning or a severe reaction call 112. See a doctor before any decision.",n_method:"Methodology",me_h:"Where the data and ratings come from",me_lead:"How we collect information and what the statuses mean. Data on this site: 18 Oct 2026.",me_body:"<p><b>Sources:</b> regulator documentation (FDA, EMA, URPL), package leaflets and product labels, PubMed publications, and compound databases (PubChem, DrugBank, RCSB PDB).</p><p><b>Statuses:</b> approved drug, approved regionally, in clinical trials, unapproved, cosmetic or supplement, and not a peptide. A status is the state of knowledge, not a recommendation.</p><p><b>Evidence:</b> the rating is a simplification. Animal and test-tube studies do not prove effects in humans.</p><p><b>Updates:</b> when a regulator changes a status we change the entry. The date at the top of the page shows when the data was last checked.</p>",
+r_syr2:"In 0.1 ml",ca_wa0:"solvent",ca_vol0:"Solvent",ca_mark0:"U-100 marks",t_sel:"at the selected marks",c_vial0:"Vial",t_mark:"per 1 U-100 mark",t_tenth:"per 0.1 ml",t_tenth_h:"1 graduation on a 2 ml syringe",t_half:"per 0.5 ml",r_syr1:"In 0.5 ml",cfoot:"0.1 ml is one graduation on a 2 ml syringe.",r_mark1:"per 1 U-100 mark (0.01 ml)",sc_u100:"U-100 insulin syringe",sc_u100n:"100 marks per 1 ml. One mark is 0.01 ml.",sc_std:"Standard 2 ml syringe",sc_stdn:"Graduations every 0.1 ml, ten times coarser than a U-100 mark.",sc_vial:"Vial ",sc_in1:" mg in 1 ml: 1 U-100 mark = ",sc_01:" mcg, 0.1 ml = ",sc_marks:"marks",ca_scaleh:"The two scales side by side",warn_h:"WARNING: we give no doses for unapproved substances.",warn_b:"For most of these substances no human dose has been established. Numbers from the internet, sellers and forums are unverified and may be dangerous. Do not try to copy them. For poisoning or a severe reaction call 112. See a doctor before any decision.",n_method:"Methodology",me_h:"Where the data and ratings come from",me_lead:"How we collect information and what the statuses mean. Data on this site: 18 Oct 2026.",me_body:"<p><b>Sources:</b> regulator documentation (FDA, EMA, URPL), package leaflets and product labels, PubMed publications, and compound databases (PubChem, DrugBank, RCSB PDB).</p><p><b>Statuses:</b> approved drug, approved regionally, in clinical trials, unapproved, cosmetic or supplement, and not a peptide. A status is the state of knowledge, not a recommendation.</p><p><b>Evidence:</b> the rating is a simplification. Animal and test-tube studies do not prove effects in humans.</p><p><b>Updates:</b> when a regulator changes a status we change the entry. The date at the top of the page shows when the data was last checked.</p>",
 bl_h:"Blog",bl_read:"min read",bl_back:"Back to list",
 fq_h:"Frequently asked questions",src_h:"Sources",
 foot:"PepSafe is an educational project. Information is not medical advice, diagnosis or treatment guidance."
@@ -1272,26 +1298,26 @@ var GL=[
  {pl:["Przedawkowanie","Przyjęcie większej ilości niż bezpieczna. Objawy wymagają pilnej pomocy."],en:["Overdose","Taking more than is safe. Symptoms need urgent help."]}
 ];
 /* ---------- Calculator v2: concentration for 1, 2, 3 ml (no dose input) ---------- */
-var calcVol=1;
+var calcVol=1, calcMark=10;
 function renderCalc(){
-  var mg=num("#vialMg"),out=$("#calcOut"),tabs=$("#volTabs");
-  tabs.innerHTML=[1,2,3].map(function(v){return '<button type="button" class="vtab" data-v="'+v+'" aria-pressed="'+(v===calcVol)+'">'+v+' ml</button>'}).join("");
-  if(!(mg>0)){out.innerHTML='<div class="sheet"><p class="meta" style="color:var(--warn);margin:0">'+T("w_bad")+'</p></div>';lastTxt="";return;}
-  var c=mg/calcVol,mark=c*10,tenth=c*100;
-  function tile(val,lab,hint,hi){return '<div class="tile'+(hi?" hi":"")+'"><b>'+val+'</b><span>'+lab+'</span>'+(hint?'<i>'+hint+'</i>':'')+'</div>';}
-  out.innerHTML='<div class="sheet calcp">'+
-    '<p class="chead">'+T("c_vial0")+' <b>'+nf(mg,2)+' mg</b> + <b>'+nf(calcVol,0)+' ml</b> '+T("ca_wa0")+'</p>'+
-    '<p class="conc"><b>'+nf(c,3)+'</b> mg/ml <span>· '+nf(c*1000,0)+' mcg/ml</span></p>'+
-    '<div class="tiles">'+
-      tile(nf(mark,1)+" mcg",T("t_mark"),"0,01 ml",1)+
-      tile(nf(tenth,1)+" mcg",T("t_tenth"),T("t_tenth_h"))+
-      tile(nf(tenth*5,1)+" mcg",T("t_half"),"0,5 ml")+
-    '</div></div>';
-  lastTxt=nf(mg,2)+" mg + "+nf(calcVol,0)+" ml = "+nf(c,3)+" mg/ml; "+nf(mark,1)+" mcg/0,01 ml; "+nf(tenth,1)+" mcg/0,1 ml";
+  var mg=num("#vialMg");
+  $("#volOut").textContent=nf(calcVol,1)+" ml";
+  $("#markOut").textContent=calcMark;
+  $("#rfill").style.width=calcMark+"%";
+  var ok=mg>0, c=ok?mg/calcVol:0, ml=calcMark/100, mcg=c*1000*ml;
+  $("#concV").textContent=ok?nf(c,3):"—";
+  $("#concS").textContent=ok?nf(c*1000,0)+" mcg/ml · "+nf(mg,2)+" mg + "+nf(calcVol,1)+" ml "+T("ca_wa0"):T("w_bad");
+  function tile(v,l,h,hi){return '<div class="tile'+(hi?" hi":"")+'"><b>'+v+'</b><span>'+l+'</span>'+(h?'<i>'+h+'</i>':'')+'</div>';}
+  $("#calcOut").innerHTML=ok?
+    tile(nf(mcg,1)+" mcg",T("t_sel"),calcMark+" × 0,01 ml = "+nf(ml,2)+" ml",1)+
+    tile(nf(c*10,1)+" mcg",T("t_mark"),"0,01 ml")+
+    tile(nf(c*100,1)+" mcg",T("t_tenth"),T("t_tenth_h")):"";
+  lastTxt=ok?nf(mg,2)+" mg + "+nf(calcVol,1)+" ml = "+nf(c,3)+" mg/ml; "+calcMark+" "+T("r_marks_s")+" ("+nf(ml,2)+" ml) = "+nf(mcg,1)+" mcg":"";
   scaleSvg();
   $$("#vialChips .chip").forEach(function(b){b.setAttribute("aria-pressed",String(mg===+b.getAttribute("data-v")));});
 }
-document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".vtab");if(!b)return;calcVol=+b.getAttribute("data-v");renderCalc();});
+$("#volR").addEventListener("input",function(){calcVol=+this.value/10;renderCalc();});
+$("#markR").addEventListener("input",function(){calcMark=+this.value;renderCalc();});
 var VIEWS=["start","catalog","basics","calc","blog","faq","effects","dose","method","contact","myths","news","compare"];
 function route(){
   var h=(location.hash||"").replace("#","");if(VIEWS.indexOf(h)<0)h="start";
