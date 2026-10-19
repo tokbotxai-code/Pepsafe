@@ -1,0 +1,17 @@
+{
+ "format": "feed",
+ "tagline": "Zadaj pytanie, pomóż innym",
+ "slides": [
+  {
+   "title": "KLOW czy GLOW?",
+   "opts": [
+    "🧪 KLOW",
+    "✨ GLOW",
+    "🤷 Nie znam / nie biorę"
+   ],
+   "ask": "Napisz w komentarzu, co wybierasz i czemu. Masz pytanie? Odpowiemy w kolejnym poście.",
+   "foot": "Ankieta, nie zachęta do stosowania. Nie porada medyczna. pepsafe.info"
+  }
+ ],
+ "caption": "KLOW czy GLOW? 🧪✨ Które wybieracie i dlaczego? A może macie z jednym z nich problem albo pytanie — piszcie, zbieramy pytania na kolejny materiał.\n\nTo nie jest zachęta do kupowania czy stosowania — pytamy, żeby odpowiedzieć na realne pytania i wątpliwości.\n\n#klow #glow #peptydy #pytania #pepsafe"
+}
