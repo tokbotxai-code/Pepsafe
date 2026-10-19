@@ -6,6 +6,9 @@
 - 1 z 4 tematów dziennie to Q&A/ankieta; okno ankiety rotuje z dnia na dzień.
 - Ankieta: wersja `feed` 4:5 zapisana jako JPG, jednym postem na IG (POST) i TikToka.
 - Treści tworzy codziennie o ~05:00 zaplanowane zadanie „PepSafe content autopilot”.
+- Żaden dzień nie może mieć pustego okna: przy każdym uruchomieniu sprawdź dziś i 2 kolejne dni
+  (`getScheduledPosts`) i uzupełnij każde wolne okno nowym tematem (PL + EN, oba kanały). Bez powtórek
+  tematów z ostatnich 14 dni (sprawdź foldery w `tiktok/`).
 
 ## Instagram + TikTok zawsze razem
 - Każda treść idzie na **oba** kanały, o tej samej porze (najwyżej 1 min różnicy), w wersji PL i EN.
