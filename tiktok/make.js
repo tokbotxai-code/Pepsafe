@@ -70,8 +70,23 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
   }
   await b.close();
   if (STATIC) { fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n'); console.log('done', files.length, STORY ? 'story image' : 'feed images'); return; }
+  // voiceover: one WAV per slide, read by piper; each slide then lasts as long as its narration
+  const voice = path.join(__dirname, '..', '.voices', (post.lang === 'en' || /-en$/.test(path.basename(dir)) ? 'en_US-amy' : 'pl_PL-gosia') + '-medium.onnx');
+  const narrate = s => s.vo !== undefined ? s.vo
+    : [s.big, s.title, s.text, s.ask, ...(s.list || []), ...(s.opts || [])].filter(Boolean).join('. ').replace(/\.\.+/g, '.');
+  const vo = [];
+  if (fs.existsSync(voice)) {
+    for (let i = 0; i < post.slides.length; i++) {
+      const txt = narrate(post.slides[i]);
+      if (!txt) { vo.push(null); continue; }
+      const w = path.join(dir, `vo-${String(i + 1).padStart(2, '0')}.wav`);
+      execFileSync('python3', ['-m', 'piper', '--model', voice, '--output-file', w], { input: txt, stdio: ['pipe', 'ignore', 'ignore'] });
+      vo.push({ file: w, seconds: Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', w]).toString().trim()) });
+    }
+  }
+  const LEAD = 0.35, TAIL = 0.55; // breathing room before and after each line
   // silent MP4: each slide shown for its own duration with a short crossfade
-  const dur = post.slides.map(s => s.seconds || 3.5), fade = 0.4, args = ['-y'];
+  const dur = post.slides.map((s, i) => Math.max(s.seconds || 3.5, vo[i] ? vo[i].seconds + LEAD + TAIL : 0)), fade = 0.4, args = ['-y'];
   files.forEach((f, i) => args.push('-loop', '1', '-t', String(dur[i]), '-i', f));
   let filter = '', last = '[0:v]', off = 0;
   for (let i = 1; i < files.length; i++) {
@@ -81,14 +96,25 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
   filter += `${last}format=yuv420p[out]`;
   args.push('-filter_complex', filter, '-map', '[out]', '-r', '30', '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-movflags', '+faststart', path.join(dir, 'pepsafe-' + path.basename(dir) + '.mp4'));
   execFileSync('ffmpeg', args, { stdio: 'ignore' });
-  // add the original background track (tiktok/music-calm.m4a), looped and faded out at the end
+  // narrated MP4: each line placed under its own slide, with the background track kept quiet underneath
   const silent = path.join(dir, 'pepsafe-' + path.basename(dir) + '.mp4');
   const music = path.join(__dirname, 'music-calm.m4a');
-  if (fs.existsSync(music)) {
-    const total = dur.reduce((a, b) => a + b, 0) - fade * (dur.length - 1);
-    const withMusic = silent.replace(/\.mp4$/, '-muzyka.mp4');
-    execFileSync('ffmpeg', ['-y', '-i', silent, '-stream_loop', '-1', '-i', music, '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
-      '-af', `afade=t=out:st=${Math.max(0, total - 1.5).toFixed(2)}:d=1.5`, '-c:a', 'aac', '-b:a', '160k', '-shortest', withMusic], { stdio: 'ignore' });
+  const total = dur.reduce((a, b) => a + b, 0) - fade * (dur.length - 1);
+  if (vo.some(Boolean)) {
+    const out = silent.replace(/\.mp4$/, '-lektor.mp4');
+    const a = ['-y', '-i', silent]; let f = '', mix = '', n = 0, off = 0;
+    vo.forEach((v, i) => {
+      if (v) {
+        a.push('-i', v.file);
+        const at = Math.round((off + LEAD) * 1000);
+        f += `[${++n}:a]adelay=${at}|${at},volume=1.6[s${n}];`; mix += `[s${n}]`;
+      }
+      off += dur[i] - fade;
+    });
+    if (fs.existsSync(music)) { a.push('-stream_loop', '-1', '-i', music); f += `[${++n}:a]volume=0.14[s${n}];`; mix += `[s${n}]`; }
+    f += `${mix}amix=inputs=${n}:duration=first:dropout_transition=0:normalize=0[m];[m]atrim=0:${total.toFixed(2)},afade=t=out:st=${Math.max(0, total - 1).toFixed(2)}:d=1[out]`;
+    a.push('-filter_complex', f, '-map', '0:v', '-map', '[out]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-shortest', out);
+    execFileSync('ffmpeg', a, { stdio: 'ignore' });
   }
   fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n');
   console.log('done', files.length, 'slides');
