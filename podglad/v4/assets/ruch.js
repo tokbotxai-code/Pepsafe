@@ -119,6 +119,95 @@
     });
   }
 
+
+  /* ── saved entries, kept in this browser only ──────── */
+  var SK = 'pep-saved';
+  function readSaved() { try { return JSON.parse(localStorage.getItem(SK) || '[]'); } catch (e) { return []; } }
+  function writeSaved(v) { try { localStorage.setItem(SK, JSON.stringify(v)); } catch (e) {} }
+  function markStars() {
+    var on = readSaved();
+    document.querySelectorAll('.star').forEach(function (b) { b.classList.toggle('on', on.indexOf(b.dataset.key) > -1); });
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.star');
+    if (!b) return;
+    e.preventDefault();
+    var list = readSaved(), i = list.indexOf(b.dataset.key);
+    if (i > -1) list.splice(i, 1); else list.push(b.dataset.key);
+    writeSaved(list); markStars();
+    if (document.getElementById('savedOut')) renderSaved();
+  });
+  markStars();
+
+  function rowCard(r) {
+    return '<div class="entry tile"><a class="entry-link" href="p/' + r.s + '.html">' +
+      '<span class="pill ' + r.tone + '">' + r.st + '</span><b>' + r.n + '</b><em>' + r.c + '</em></a>' +
+      '<button class="star on" data-key="' + r.s + '" aria-label="x"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 2.6l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14l-4.5 2.2.9-4.9L2.8 7.8l5-.7z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button></div>';
+  }
+  function renderSaved() {
+    var box = document.getElementById('savedOut'); if (!box || !window.PEP) return;
+    var on = readSaved();
+    var rows = window.PEP.rows.filter(function (r) { return on.indexOf(r.s) > -1; });
+    box.innerHTML = rows.map(rowCard).join('');
+    var empty = document.getElementById('savedEmpty'); if (empty) empty.hidden = rows.length > 0;
+  }
+
+  /* ── compare ───────────────────────────────────────── */
+  var cq = document.getElementById('cmpQ');
+  if (cq && window.PEP) {
+    var picked = [], dl = document.getElementById('cmpList'),
+        cout = document.getElementById('cmpOut'), cempty = document.getElementById('cmpEmpty'),
+        cwarn = document.getElementById('cmpWarn');
+    dl.innerHTML = window.PEP.rows.map(function (r) { return '<option value="' + r.n + '">'; }).join('');
+    var drawCmp = function () {
+      cout.innerHTML = picked.map(function (r) {
+        return '<article class="tile glass cmp"><p class="kick">' + r.st + '</p><h2 class="gtitle sm">' + r.n + '</h2>' +
+          '<p class="small ink2">' + r.c + (r.gl ? ' · ' + r.gl : '') + '</p>' +
+          (r.ev ? '<p class="kick mt">' + (window.PEP.lang === 'en' ? 'Evidence' : 'Dowody') + '</p><p class="small">' + r.ev + '</p>' : '') +
+          (r.w ? '<p class="kick mt">' + (window.PEP.lang === 'en' ? 'Watch for' : 'Uwaga') + '</p><p class="small">' + r.w + '</p>' : '') +
+          '<p><a class="more" href="p/' + r.s + '.html">' + r.n + '</a></p></article>';
+      }).join('');
+      cempty.hidden = picked.length > 0;
+      var groups = picked.filter(function (r) { return r.g; }).map(function (r) { return r.g; });
+      var clash = groups.some(function (g, i) { return groups.indexOf(g) !== i; });
+      cwarn.innerHTML = clash
+        ? '<div class="verdict same reveal in"><b>' + (window.PEP.lang === 'en' ? 'Two of these share a group — do not combine' : 'Dwie z nich są w tej samej grupie — nie łączyć') + '</b><span>' +
+          (window.PEP.lang === 'en' ? 'They act on the same target, so stacking repeats a mechanism instead of adding one.' : 'Działają na ten sam cel, więc łączenie powtarza mechanizm, zamiast dodawać drugi.') + '</span></div>'
+        : '';
+    };
+    cq.addEventListener('change', function () {
+      var r = window.PEP.rows.filter(function (x) { return x.n.toLowerCase() === cq.value.trim().toLowerCase(); })[0];
+      if (r && picked.indexOf(r) < 0) { picked.push(r); if (picked.length > 3) picked.shift(); }
+      cq.value = ''; drawCmp();
+    });
+    var cc = document.getElementById('cmpClear');
+    if (cc) cc.addEventListener('click', function () { picked = []; drawCmp(); });
+    drawCmp();
+  }
+
+  /* ── symptom search ────────────────────────────────── */
+  var sq = document.getElementById('syQ');
+  if (sq && window.PEP) {
+    var sout = document.getElementById('syOut'), shint = document.getElementById('syHint');
+    var runSy = function () {
+      var v = sq.value.trim().toLowerCase();
+      if (v.length < 3) { sout.innerHTML = ''; shint.hidden = false; return; }
+      var hits = window.PEP.rows.filter(function (r) { return r.t.indexOf(v) > -1; });
+      shint.hidden = hits.length > 0;
+      if (!hits.length) { shint.hidden = false; shint.textContent = window.PEP.lang === 'en' ? 'Nothing matches that.' : 'Nic nie pasuje.'; }
+      sout.innerHTML = hits.slice(0, 60).map(rowCard).join('');
+      markStars();
+    };
+    sq.addEventListener('input', runSy);
+    var sc = document.getElementById('syChips');
+    if (sc) sc.addEventListener('click', function (e) {
+      var c = e.target.closest('.chip'); if (!c) return;
+      sq.value = c.dataset.sy; runSy();
+    });
+  }
+
+  renderSaved();
+
   /* ── pointer-tracked border glow ───────────────────── */
   document.addEventListener('pointermove', function (e) {
     var t = e.target.closest && e.target.closest('.tile');

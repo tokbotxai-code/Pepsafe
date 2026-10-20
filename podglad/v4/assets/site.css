@@ -321,3 +321,32 @@ footer { padding: 44px 0; }
   .tile, .bento .tile, .field::before, .dot, body { transition: none; animation: none; }
 }
 html.still .bento .tile, html.still .field::before, html.still .dot { animation: none; }
+
+/* ── dosing table ─────────────────────────────────────── */
+.dose { margin: 18px 0 14px; display: grid; gap: 14px; }
+.dose > div { display: grid; gap: 4px; }
+@media (min-width: 720px) { .dose > div { grid-template-columns: 160px 1fr; gap: 20px; } }
+.dose dt { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink3); padding-top: 3px; }
+.dose dd { margin: 0; color: var(--ink2); line-height: 1.7; }
+
+/* ── save / saved ─────────────────────────────────────── */
+.entry { position: relative; padding-right: 54px; }
+.entry-link { display: block; text-decoration: none; color: inherit; }
+.star {
+  position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center;
+  border-radius: 50%; border: 1px solid var(--line); background: var(--paper2); color: var(--ink3); cursor: pointer;
+  transition: color .2s, border-color .2s, transform .2s;
+}
+.star:hover { color: var(--k3); border-color: var(--k3); transform: scale(1.06); }
+.star.on { color: var(--k3); border-color: var(--k3); }
+.star.on svg path { fill: currentColor; }
+.star.solo {
+  position: static; width: auto; height: auto; border-radius: 999px; gap: 8px;
+  grid-auto-flow: column; padding: 5px 14px; font: inherit; font-size: 12px; font-weight: 500;
+}
+
+/* ── compare ──────────────────────────────────────────── */
+.cmp .mt { margin-top: 16px; }
+.cmp .small { margin: 6px 0 0; color: var(--ink2); }
+.cmp .more { margin-top: 18px; }
+#cmpWarn:not(:empty) { margin-bottom: 22px; }

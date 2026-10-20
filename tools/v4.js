@@ -16,11 +16,11 @@ const box = { console, window: {}, document: {} }; vm.createContext(box);
 vm.runInContext('var D=[];function E(n,a,s,c,cat,f,d,m,u,ev,w,q,wa){D.push({n,a,s,c,cat,f,d,m,u,ev,w,q:q||"",wa:!!wa});}', box);
 const ds = at(/^var ST=\{A:/), de = lines.length - [...lines].reverse().findIndex(l => /^E\(/.test(l));
 vm.runInContext(slice(ds, de).replace(/^var D=\[\].*$/m, '').replace(/^function E\(.*$/m, ''), box);
-for (const re of [/^var FAMS=/, /^var DAILY=\[/, /^var FAQ=\[/, /^var QA=\[/, /^var ALERTS=/, /^var TRICKS=/, /^var MYTHS=/]) {
+for (const re of [/^var FAMS=/, /^var DAILY=\[/, /^var FAQ=\[/, /^var QA=\[/, /^var ALERTS=/, /^var TRICKS=/, /^var MYTHS=/, /^var DOSE=/]) {
   const i = at(re); if (i >= 0) vm.runInContext(slice(i, until(i)), box);
 }
-for (const re of [/^var SRC=\{/, /^var WADA=\{/, /^var WADA_URL=/]) { const i = at(re); if (i >= 0) vm.runInContext(lines[i], box); }
-const { D, EN, ST, ST_EN, FAMS, FAMS_EN, DAILY, FAQ, QA, ALERTS, TRICKS, MYTHS, SRC, WADA, WADA_URL } = box;
+for (const re of [/^var SRC=\{/, /^var WADA=\{/, /^var WADA_URL=/, /^var SY_PL=/, /^var SY_EN=/]) { const i = at(re); if (i >= 0) vm.runInContext(lines[i], box); }
+const { D, EN, ST, ST_EN, FAMS, FAMS_EN, DAILY, FAQ, QA, ALERTS, TRICKS, MYTHS, SRC, WADA, WADA_URL, DOSE, SY_PL, SY_EN } = box;
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -43,6 +43,19 @@ const GROUPS = FAMS.filter(f => (f.m || []).length > 1).map(f => ({
   en: { label: (FAMS_EN[f.id] || [])[0] || f.lab, rule: (FAMS_EN[f.id] || [])[1] || f.t, why: (FAMS_EN[f.id] || [])[2] || f.x }
 }));
 
+
+// text the search tools look through: the entry, its dosing rows and its group blurb
+function searchText(e, en) {
+  const tr = EN[e.n] || [], f = famOf(e);
+  return [nm(e.n, en), e.n, e.a, en && tr[1] ? tr[1] : e.c, en ? (tr[2] || e.d) : e.d, en ? (tr[3] || e.m) : e.m,
+  en ? (tr[4] || e.u) : e.u, en ? (tr[5] || e.ev) : e.ev, en ? (tr[6] || e.w) : e.w,
+  (DOSE || []).filter(x => x.k === e.n).map(x => [x.d, (x.i || [])[en ? 1 : 0], (x.p || [])[en ? 1 : 0],
+    (x.m || [])[en ? 1 : 0], (x.x || [])[en ? 1 : 0]].join(' ')).join(' '),
+  f ? [en ? ((FAMS_EN[f.id] || [])[0] || f.lab) : f.lab, en ? ((FAMS_EN[f.id] || [])[1] || f.t) : f.t,
+    en ? ((FAMS_EN[f.id] || [])[2] || f.x) : f.x].join(' ') : ''
+  ].join(' ').toLowerCase();
+}
+
 const LANGS = ['en', 'pl'];
 
 const W = {
@@ -55,7 +68,9 @@ const W = {
     what: 'What it is', how: 'How it works', use: 'Use', ev: 'What the research shows', care: 'What to watch for',
     related: 'Related', inGroup: 'entries in this group',
     search: 'Search by name or brand', filterAll: 'All', noHit: 'Nothing matches that.',
-    entries: 'entries', listedWada: 'Listed by WADA in class', always: ', prohibited at all times'
+    entries: 'entries', listedWada: 'Listed by WADA in class', always: ', prohibited at all times',
+    save: 'Save', saved: 'Saved', pick: 'Pick a substance', clear: 'Clear',
+    dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved'
   },
   pl: {
     nav: { home: 'Start', catalog: 'Katalog', groups: 'Grupy', faq: 'Pytania', alerts: 'Ostrzeżenia', about: 'O projekcie' },
@@ -66,7 +81,9 @@ const W = {
     what: 'Co to jest', how: 'Jak działa', use: 'Zastosowanie', ev: 'Co mówią badania', care: 'Na co uważać',
     related: 'Podobne', inGroup: 'wpisów w tej grupie',
     search: 'Szukaj po nazwie lub marce', filterAll: 'Wszystkie', noHit: 'Nic nie pasuje.',
-    entries: 'wpisów', listedWada: 'Wymieniony przez WADA w klasie', always: ', zakazany zawsze'
+    entries: 'wpisów', listedWada: 'Wymieniony przez WADA w klasie', always: ', zakazany zawsze',
+    save: 'Zapisz', saved: 'Zapisane', pick: 'Wybierz substancję', clear: 'Wyczyść',
+    dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane'
   }
 };
 
@@ -88,7 +105,8 @@ function layout(o) {
   const L = o.lang, t = W[L];
   const up = o.depth === 1 ? '../' : '';
   const other = L === 'en' ? 'pl' : 'en';
-  const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['groups.html', t.nav.groups],
+  const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['dosing.html', t.dosingNav],
+  ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['about.html', t.nav.about]];
   return `<!doctype html>
 <html lang="${L}" data-theme="light">
@@ -136,6 +154,7 @@ ${o.body}
   </div>
 </footer>
 
+<script src="${up}../assets/dane-${L}.js" defer></script>
 <script src="${up}../assets/ruch.js" defer></script>
 </body>
 </html>
@@ -333,11 +352,16 @@ function catalog(L) {
     </div>
     <p id="nohit" class="muted" hidden>${esc(t.noHit)}</p>
     <div class="grid-cards" id="list">
-      ${sorted.map(e => `<a class="entry tile" href="p/${key(e)}.html" data-s="${e.s}" data-n="${esc((nm(e.n, en) + ' ' + (e.a || '') + ' ' + e.n).toLowerCase())}">
-        <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span>
-        <b>${esc(nm(e.n, en))}</b>
-        <em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em>
-      </a>`).join('')}
+      ${sorted.map(e => `<div class="entry tile" data-s="${e.s}" data-n="${esc((nm(e.n, en) + ' ' + (e.a || '') + ' ' + e.n).toLowerCase())}">
+        <a class="entry-link" href="p/${key(e)}.html">
+          <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span>
+          <b>${esc(nm(e.n, en))}</b>
+          <em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em>
+        </a>
+        <button class="star" data-key="${key(e)}" aria-label="${esc(t.save)}" title="${esc(t.save)}">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 2.6l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14l-4.5 2.2.9-4.9L2.8 7.8l5-.7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </button>
+      </div>`).join('')}
     </div>
   </div>
 </section>`;
@@ -367,6 +391,10 @@ function card(e, L) {
         <h1 class="display reveal">${esc(name)}</h1>
         ${e.a ? `<p class="sub reveal">${esc(e.a)}</p>` : ''}
         <p class="pills reveal">
+          <button class="star solo" data-key="${key(e)}" aria-label="${esc(t.save)}" title="${esc(t.save)}">
+            <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M10 2.6l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14l-4.5 2.2.9-4.9L2.8 7.8l5-.7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <span>${esc(t.save)}</span>
+          </button>
           <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span>
           <span class="pill neutral">${esc(en && tr[1] ? tr[1] : e.c)}</span>
           ${wa ? `<span class="pill warn">${esc(t.wada)}: ${esc(wa[0])}</span>` : ''}
@@ -514,14 +542,162 @@ function about(L) {
   });
 }
 
+
+// ── dosing: copied from the catalog exactly as it stands, with its own caveats ─
+function dosing(L) {
+  const en = L === 'en', t = W[L], i = en ? 1 : 0;
+  const rows = (DOSE || []);
+  const byK = {};
+  rows.forEach(r => { (byK[r.k] = byK[r.k] || []).push(r); });
+  const note = en
+    ? 'Doses below are copied from approved labels, for approved medicines only. They are information, not a recommendation, and they have not been reviewed by a pharmacist. Check every number against the current label, and never apply a label dose to a product bought outside a pharmacy.'
+    : 'Poniższe dawki są przepisane z zatwierdzonych etykiet i dotyczą wyłącznie zarejestrowanych leków. To informacja, nie zalecenie, i nie była sprawdzana przez farmaceutę. Każdą liczbę zweryfikuj w aktualnej etykiecie i nigdy nie przenoś dawki z etykiety na produkt kupiony poza apteką.';
+
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">${esc(t.dosingNav)}</p>
+    <h1 class="display reveal">${en ? 'Label doses, approved medicines only.' : 'Dawki z etykiet, tylko leki zatwierdzone.'}</h1>
+    <p class="lede reveal">${rows.length} ${en ? 'entries from official labels, across' : 'pozycji z oficjalnych etykiet, dla'} ${Object.keys(byK).length} ${en ? 'substances.' : 'substancji.'}</p>
+  </div>
+</section>
+<section><div class="wrap">
+  <div class="blk note reveal"><h2 class="kick">${en ? 'Read this first' : 'Przeczytaj najpierw'}</h2><p>${esc(note)}</p></div>
+  <div class="stack">
+    ${rows.map(r => `<article class="tile glass reveal">
+      <p class="kick">${esc(nm(r.k, en))}</p>
+      <h2 class="gtitle">${esc(r.d)}</h2>
+      ${r.i ? `<p class="lead"><b>${en ? 'Indication' : 'Wskazanie'}:</b> ${esc(r.i[i])}</p>` : ''}
+      <dl class="dose">
+        ${r.p ? `<div><dt>${en ? 'Start' : 'Początek'}</dt><dd>${esc(r.p[i])}</dd></div>` : ''}
+        ${r.m ? `<div><dt>${en ? 'Maintenance' : 'Podtrzymanie'}</dt><dd>${esc(r.m[i])}</dd></div>` : ''}
+        ${r.x ? `<div><dt>${en ? 'Notes' : 'Uwagi'}</dt><dd>${esc(r.x[i])}</dd></div>` : ''}
+      </dl>
+      <p class="small muted">${r.r ? (en ? 'Label revision: ' : 'Wersja etykiety: ') + esc(r.r) : ''}${r.s ? ` · <a href="${esc(r.s)}" rel="nofollow noopener" target="_blank">${esc(t.srcs)}</a>` : ''}</p>
+    </article>`).join('')}
+  </div>
+</div></section>`;
+  return layout({
+    lang: L, here: 'dosing.html', twin: 'dosing.html', body,
+    title: (en ? 'Dosing from approved labels' : 'Dawkowanie z zatwierdzonych etykiet') + ' | PepSafe',
+    desc: en ? `Label doses for ${Object.keys(byK).length} approved medicines, copied from official labels. Information, not advice.` : `Dawki z etykiet dla ${Object.keys(byK).length} zatwierdzonych leków, przepisane z oficjalnych źródeł. Informacja, nie porada.`
+  });
+}
+
+// ── compare, symptoms, saved: three tools over one shared dataset ─────────────
+function compare(L) {
+  const en = L === 'en', t = W[L];
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">${esc(t.compareNav)}</p>
+    <h1 class="display reveal">${en ? 'Side by side, same questions.' : 'Obok siebie, te same pytania.'}</h1>
+    <p class="lede reveal">${en ? 'Pick up to three substances and read their status, group, evidence and warnings in one view. If two share a group, the page says so.' : 'Wybierz do trzech substancji i przeczytaj ich status, grupę, dowody i ostrzeżenia w jednym widoku. Jeśli dwie należą do tej samej grupy, strona to powie.'}</p>
+  </div>
+</section>
+<section><div class="wrap">
+  <div class="filters reveal">
+    <label class="search"><span class="sr">${esc(t.pick)}</span>
+      <input id="cmpQ" type="search" placeholder="${esc(t.pick)}" autocomplete="off" list="cmpList"></label>
+    <datalist id="cmpList"></datalist>
+    <div class="chips"><button class="chip" id="cmpClear">${esc(t.clear)}</button></div>
+  </div>
+  <div id="cmpWarn"></div>
+  <div class="grid-cards" id="cmpOut"></div>
+  <p class="muted" id="cmpEmpty">${en ? 'Nothing picked yet. Start typing a name above.' : 'Nic nie wybrano. Zacznij wpisywać nazwę powyżej.'}</p>
+</div></section>`;
+  return layout({
+    lang: L, here: 'compare.html', twin: 'compare.html', body,
+    title: (en ? 'Compare substances' : 'Porównaj substancje') + ' | PepSafe',
+    desc: en ? 'Put up to three peptides side by side: status, group, evidence and warnings.' : 'Zestaw do trzech peptydów obok siebie: status, grupa, dowody i ostrzeżenia.'
+  });
+}
+
+function symptoms(L) {
+  const en = L === 'en', t = W[L];
+  const texts = D.map(e => searchText(e, en));
+  const words = ((en ? SY_EN : SY_PL) || [])
+    .map(w => ({ w, n: texts.filter(x => x.indexOf(w.toLowerCase()) > -1).length }))
+    .filter(x => x.n > 0).sort((a, b) => b.n - a.n);
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">${esc(t.symptomsNav)}</p>
+    <h1 class="display reveal">${en ? 'Start from the symptom.' : 'Zacznij od objawu.'}</h1>
+    <p class="lede reveal">${en ? 'Type a symptom and see which entries mention it in their safety or effect sections. This is not a diagnosis and not proof that a substance caused anything — it is a way into the catalog.' : 'Wpisz objaw, a pokażemy wpisy, przy których jest on opisany w sekcji o bezpieczeństwie lub działaniu. To nie jest diagnoza ani dowód, że substancja coś wywołała — to sposób wejścia do katalogu.'}</p>
+  </div>
+</section>
+<section><div class="wrap">
+  <div class="filters reveal">
+    <label class="search"><span class="sr">${en ? 'Symptom' : 'Objaw'}</span>
+      <input id="syQ" type="search" placeholder="${en ? 'Symptom' : 'Objaw'}" autocomplete="off"></label>
+    <div class="chips" id="syChips">${words.slice(0, 12).map(x => `<button class="chip" data-sy="${esc(x.w)}">${esc(x.w)} <span class="num">${x.n}</span></button>`).join('')}</div>
+  </div>
+  <p class="muted" id="syHint">${en ? 'Type at least 3 characters or click a suggestion.' : 'Wpisz co najmniej 3 znaki albo kliknij podpowiedź.'}</p>
+  <div class="grid-cards" id="syOut"></div>
+</div></section>`;
+  return layout({
+    lang: L, here: 'symptoms.html', twin: 'symptoms.html', body,
+    title: (en ? 'Search by symptom' : 'Szukaj od objawu') + ' | PepSafe',
+    desc: en ? 'Find catalog entries that mention a given symptom in their safety or effect sections.' : 'Znajdź wpisy katalogu, przy których dany objaw jest opisany w sekcji o bezpieczeństwie lub działaniu.'
+  });
+}
+
+function savedPage(L) {
+  const en = L === 'en', t = W[L];
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">${esc(t.savedNav)}</p>
+    <h1 class="display reveal">${en ? 'Your shortlist.' : 'Twoja lista.'}</h1>
+    <p class="lede reveal">${en ? 'Entries you saved with the star. Kept in this browser only — nothing is sent anywhere, and clearing site data clears the list.' : 'Wpisy zapisane gwiazdką. Trzymane tylko w tej przeglądarce — nic nigdzie nie jest wysyłane, a wyczyszczenie danych strony kasuje listę.'}</p>
+  </div>
+</section>
+<section><div class="wrap">
+  <div class="grid-cards" id="savedOut"></div>
+  <p class="muted" id="savedEmpty">${en ? 'Nothing saved yet. Open any entry and press the star.' : 'Nic jeszcze nie zapisano. Otwórz dowolny wpis i naciśnij gwiazdkę.'}</p>
+</div></section>`;
+  return layout({
+    lang: L, here: 'saved.html', twin: 'saved.html', body,
+    title: (en ? 'Saved entries' : 'Zapisane wpisy') + ' | PepSafe',
+    desc: en ? 'Entries you saved, kept in this browser only.' : 'Zapisane wpisy, trzymane tylko w tej przeglądarce.'
+  });
+}
+
+// one compact dataset per language, shared by compare, symptoms and the saved list
+function dataFile(L) {
+  const en = L === 'en';
+  const rows = D.map(e => {
+    const tr = EN[e.n] || [], f = famOf(e);
+    return {
+      s: key(e), n: nm(e.n, en), c: en && tr[1] ? tr[1] : e.c, st: statusOf(e, en), tone: toneOf(e),
+      g: f ? f.id : '', gl: f ? (en ? ((FAMS_EN[f.id] || [])[0] || f.lab) : f.lab) : '',
+      ev: clip(en ? (tr[5] || e.ev) : e.ev, 220), w: clip(en ? (tr[6] || e.w) : e.w, 240),
+      t: searchText(e, en)
+    };
+  });
+  return 'window.PEP = ' + JSON.stringify({ lang: L, rows }) + ';\n';
+}
+
 // ── write ─────────────────────────────────────────────────────────────────────
 let n = 0;
 for (const L of LANGS) {
   const dir = path.join(out, L);
   fs.mkdirSync(path.join(dir, 'p'), { recursive: true });
-  const pages = { 'index.html': home(L), 'catalog.html': catalog(L), 'groups.html': groups(L), 'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L) };
+  const pages = {
+    'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
+    'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
+    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L)
+  };
+  fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
+  fs.writeFileSync(path.join(out, 'assets', 'dane-' + L + '.js'), dataFile(L));
   for (const [f, html] of Object.entries(pages)) { fs.writeFileSync(path.join(dir, f), html); n++; }
   for (const e of D) { fs.writeFileSync(path.join(dir, 'p', key(e) + '.html'), card(e, L)); n++; }
 }
-console.log(`zbudowano ${n} stron: ${LANGS.length} języki × (6 + ${D.length} kart)`);
+console.log(`zbudowano ${n} stron: ${LANGS.length} języki × (10 + ${D.length} kart)`);
+console.log(`dawkowanie: ${(DOSE || []).length} pozycji, objawy: ${((SY_PL||[]).length)} hasel`);
 console.log(`grupy: ${GROUPS.length}, peptyd dnia: ${DAILY[0].n} (${DAILY[0].date}), ostrzezenia: ${(ALERTS || []).length}, triki: ${(TRICKS || []).length}, mity: ${(MYTHS || []).length}`);
