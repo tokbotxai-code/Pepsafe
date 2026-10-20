@@ -112,9 +112,6 @@ tr:last-child td{border-bottom:0}
 .tag.warn{background:var(--warn-soft);color:var(--warn)}
 
 /* hero + builder */
-.syr{position:relative;height:22px;border:1px solid var(--line);border-radius:6px;background:var(--bg);overflow:hidden;background-image:repeating-linear-gradient(90deg,transparent 0 calc(10% - 1px),var(--line) calc(10% - 1px) 10%)}
-.syr i{position:absolute;left:0;top:0;bottom:0;background:var(--accent-soft);border-right:2px solid var(--accent)}
-.syr.over i{background:var(--warn-soft);border-right-color:var(--warn)}
 #gloss dt{font-weight:600}
 #gloss dd{margin:0 0 10px;color:var(--muted)}
 .chead{margin:0;color:var(--muted);font-size:.9rem}
@@ -127,18 +124,10 @@ tr:last-child td{border-bottom:0}
 .pros h3{color:var(--accent)} .cons h3{color:var(--warn)}
 input[type=text],select{font:500 1rem var(--f-mono);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
 .builder{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
-.aa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px}
 .aa{font:500 .85rem var(--f-mono);padding:8px 0;border-radius:6px;background:var(--bg);border:1px solid var(--line);border-bottom:3px solid var(--c,var(--k5));color:var(--ink);cursor:pointer}
 .aa:hover{background:var(--accent-soft)}
-.chain{min-height:64px;display:flex;flex-wrap:wrap;align-items:center;gap:0;padding:10px;border:1px dashed var(--line);border-radius:8px}
 .node{font:500 .8rem var(--f-mono);padding:6px 8px;border-radius:999px;background:var(--c);color:#fff}
 .bond{width:10px;height:2px;background:var(--muted)}
-.chain-empty{color:var(--muted);font-size:.9rem}
-.bstats{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
-.bstats div{min-width:0}
-.bstats dt{font:500 .68rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.bstats dd{margin:0;font:500 1rem var(--f-mono);overflow-wrap:anywhere}
-.bstats .wide{grid-column:1/-1}
 .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--muted)}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
 
@@ -266,7 +255,6 @@ dialog[open]{animation:dlg .25s ease-out}
 .body .w{border-left:3px solid var(--warn);padding-left:12px}
 .ribbon{display:flex;flex-wrap:wrap;gap:2px;padding:8px;border:1px dashed var(--line);border-radius:8px;background:var(--bg)}
 .res{font:500 .68rem var(--f-mono);width:20px;height:20px;border-radius:50%;display:grid;place-items:center;color:#fff;background:var(--c)}
-.chainlab{font:400 .7rem var(--f-mono);color:var(--muted);margin:6px 0 3px}
 .links{display:flex;flex-wrap:wrap;gap:14px;font-size:.9rem}
 footer{max-width:1040px;margin:44px auto 0;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;display:flex;flex-direction:column;gap:10px}
 @media (prefers-reduced-motion:reduce){.card,dialog[open],.verdict.pop{animation:none}.card:hover .bb{animation:none}.card{transition:none}}
@@ -872,17 +860,18 @@ function ribbons(q){
 }
 
 /* evidence grade, symptom index and a printable question sheet */
+var CT_N={};
 function evGrade(e){
-  var w=(window.WADA||{})[e.n];
-  if(e.s==="A")return 4;
-  if(e.s==="R")return 3;
-  if(e.s==="P")return 3;
-  if(e.s==="C")return 2;
-  if(e.s==="N")return 2;
-  return 1;
+  var base=({A:4,R:3,P:3,C:1,N:1})[e.s]||1;
+  var t=CT_N[e.n];
+  if(typeof t==="number"){
+    if(base<3&&t>=5)base=base+1;        // kilka zarejestrowanych badan u ludzi
+    if(base<2&&t===0)base=1;            // brak badan u ludzi
+  }
+  return Math.max(1,Math.min(4,base));
 }
 var EVL={1:["Dane przedkliniczne lub bardzo skąpe","Preclinical or very scarce data"],
- 2:["Dane ograniczone, poza lekami","Limited data, outside medicines"],
+ 2:["Pojedyncze badania u ludzi","A handful of human trials"],
  3:["Badania u ludzi, bez pełnego zatwierdzenia","Human trials, without full approval"],
  4:["Lek zatwierdzony, badania rejestracyjne","Approved drug, registration trials"]};
 function evBar(e){
@@ -893,6 +882,13 @@ function evBar(e){
    I("Skala opisana w zakładce Metodologia.","The scale is explained in the Methodology tab.")+'</p></div>';
 }
 window.PEP_ev=evBar;
+window.PEP_evUpdate=function(name,total){
+  CT_N[name]=total;
+  var e=(window.PEP_find?window.PEP_find(name):null);if(!e)return;
+  var box=document.querySelector(".evbox");if(!box)return;
+  var tmp=document.createElement("div");tmp.innerHTML=evBar(e);
+  box.replaceWith(tmp.firstChild);
+};
 function printSheet(e){
   var w=(window.WADA||{})[e.n],g=evGrade(e);
   var qs=I(["Czy w moim przypadku jest wskazanie do jakiegokolwiek leczenia?",
@@ -1095,17 +1091,17 @@ var $=function(s,r){return (r||document).querySelector(s)};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 
 /* ---------- UI strings ---------- */
-var S={pl:{n_catalog:"Katalog",n_contact:"Kontakt",t1_tag:"Katalog",t1_t:"Ponad 100 substancji w jednym miejscu",t1_p:"Status, mechanizm, dowody i ostrzeżenia dla każdej pozycji.",t2_tag:"Narzędzie",t2_t:"Sprawdzarka dublowania",t2_p:"Zobacz, które substancje działają na to samo i nie powinny być łączone.",t3_tag:"Kontakt",t3_t:"Masz pytanie lub poprawkę?",t3_p:"Napisz do nas przez formularz.",cat_h:"Katalog peptydów",cat_lead:"Przeszukaj ponad 100 pozycji: status, mechanizm działania, siła dowodów i ostrzeżenia o łączeniu. Dawki podajemy tylko dla leków zatwierdzonych, według ulotek.",cat_note:"Statusy dotyczą głównie USA (FDA).",co_h:"Kontakt",co_lead:"Pytanie, poprawka błędu lub propozycja współpracy? Wypełnij formularz, a wiadomość trafi prosto do autorów strony.",co_name:"Imię",co_email:"Twój e-mail",co_topic:"Temat",co_t1:"Pytanie o katalog",co_t2:"Poprawka lub błąd w treści",co_t3:"Współpraca",co_t4:"Inne",co_msg:"Wiadomość",co_consent:"Zgadzam się na przetwarzanie podanych danych w celu odpowiedzi na wiadomość.",co_send:"Wyślij wiadomość",co_note:"Wiadomość wysyłamy przez formularz. Nie publikujemy jej, a adres e-mail autorów nie jest pokazywany na stronie. Twój e-mail służy tylko do odpowiedzi.",co_addr:"Jak to działa",co_noaddr:"Adres kontaktowy zostanie dodany wkrótce.",co_copy:"Kopiuj wiadomość",co_copied:"Skopiowano",co_open:"Otwórz w programie pocztowym",co_prev:"Podgląd wiadomości",co_err:"Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.",co_dm:"Pytania możesz też zadać w komentarzu albo w wiadomości prywatnej na naszych profilach. Najciekawsze omawiamy w Q&A.",co_medical:"Nie udzielamy porad medycznych ani indywidualnych zaleceń dawkowania. W sprawach zdrowia skontaktuj się z lekarzem.",
-tagline:"Fakty o peptydach, bez ściemy",n_start:"Start",n_basics:"Podstawy",n_types:"Rodzaje",n_blog:"Blog",n_faq:"FAQ",
+var S={pl:{n_catalog:"Katalog",n_contact:"Kontakt",t1_tag:"Katalog",t1_t:"Ponad 100 substancji w jednym miejscu",t1_p:"Status, mechanizm, dowody i ostrzeżenia dla każdej pozycji.",t2_tag:"Narzędzie",t2_t:"Sprawdzarka dublowania",t2_p:"Zobacz, które substancje działają na to samo i nie powinny być łączone.",t3_tag:"Kontakt",t3_t:"Masz pytanie lub poprawkę?",t3_p:"Napisz do nas przez formularz.",cat_h:"Katalog peptydów",cat_lead:"Przeszukaj ponad 100 pozycji: status, mechanizm działania, siła dowodów i ostrzeżenia o łączeniu. Dawki podajemy tylko dla leków zatwierdzonych, według ulotek.",cat_note:"Statusy dotyczą głównie USA (FDA).",co_h:"Kontakt",co_lead:"Pytanie, poprawka błędu lub propozycja współpracy? Wypełnij formularz, a wiadomość trafi prosto do autorów strony.",co_name:"Imię",co_email:"Twój e-mail",co_topic:"Temat",co_t1:"Pytanie o katalog",co_t2:"Poprawka lub błąd w treści",co_t3:"Współpraca",co_t4:"Inne",co_msg:"Wiadomość",co_consent:"Zgadzam się na przetwarzanie podanych danych w celu odpowiedzi na wiadomość.",co_send:"Wyślij wiadomość",co_note:"Wiadomość wysyłamy przez formularz. Nie publikujemy jej, a adres e-mail autorów nie jest pokazywany na stronie. Twój e-mail służy tylko do odpowiedzi.",co_addr:"Jak to działa",co_err:"Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.",co_dm:"Pytania możesz też zadać w komentarzu albo w wiadomości prywatnej na naszych profilach. Najciekawsze omawiamy w Q&A.",co_medical:"Nie udzielamy porad medycznych ani indywidualnych zaleceń dawkowania. W sprawach zdrowia skontaktuj się z lekarzem.",
+tagline:"Fakty o peptydach, bez ściemy",n_start:"Start",n_basics:"Podstawy",n_blog:"Blog",n_faq:"FAQ",
 h_eyebrow:"Biochemia w skrócie",h_title:"Krótkie łańcuchy aminokwasów. Duża różnica w organizmie.",
 h_lead:"Katalog ponad 100 peptydów i substancji pokrewnych: status, mechanizm, dowody i grupy, których nie warto łączyć. Do tego przewodnik, blog, kalkulator informacyjny i formularz kontaktowy.",
 h_cta1:"Zacznij od podstaw",h_cta2:"Katalog peptydów",
-b_title:"Konstruktor peptydu",b_hint:"maks. 30",b_undo:"Cofnij",b_clear:"Wyczyść",b_note:"Masa średnia wolnego, liniowego peptydu w daltonach (Da).",
-b_empty:"Kliknij aminokwasy poniżej, żeby zbudować łańcuch.",s_seq3:"Sekwencja (3 litery)",s_seq1:"Sekwencja (1 litera)",s_len:"Długość",s_bonds:"Wiązania peptydowe",s_mass:"Masa",s_class:"Klasa",
+b_title:"Konstruktor peptydu",
+b_empty:"Kliknij aminokwasy poniżej, żeby zbudować łańcuch.",
 k1:"hydrofobowe",k2:"polarne",k3:"zasadowe",k4:"kwaśne",k5:"specjalne",
-c1_tag:"Przewodnik",c1_t:"Rodzaje peptydów i siła dowodów",c1_p:"Od insuliny po kosmetyki. Każda grupa z oceną, co o niej wiadomo.",
-c2_tag:"Narzędzie",c2_t:"Kalkulator rozpuszczania",c2_p:"Porównaj 1 ml i 2 ml wody w tej samej fiolce, z zaletami i wadami.",
-c3_tag:"Blog",c3_t:"Co mówią badania",c3_p:"Kolagen, kosmetyki i peptydy „badawcze” bez marketingu.",
+c1_tag:"Przewodnik",
+c2_tag:"Narzędzie",
+c3_tag:"Blog",
 disc:"Treści mają charakter edukacyjny i nie zastępują porady lekarza ani farmaceuty. Liczby dawek, które krążą w internecie i u sprzedawców, nie są sprawdzone i nie są bezpieczne do naśladowania. Dla wielu substancji nie ustalono dawki u ludzi. Nie „dopasowuj się” do żadnej liczby z sieci, a przed jakąkolwiek decyzją porozmawiaj z lekarzem.",
 ba_h:"Czym jest peptyd",ba_lead:"Peptyd to krótki łańcuch aminokwasów połączonych wiązaniami peptydowymi. Białko to w uproszczeniu bardzo długi peptyd, który układa się w stabilną strukturę.",
 ba_bond:"Wiązanie peptydowe",svg_bond:"wiązanie peptydowe (CO–NH)",ba_bond_p:"Grupa karboksylowa jednego aminokwasu łączy się z grupą aminową następnego. Przy każdym wiązaniu odłącza się cząsteczka wody, dlatego peptyd o n aminokwasach ma n − 1 wiązań.",
@@ -1115,7 +1111,7 @@ ba_ex:"Przykłady z organizmu i codzienności",
 ba_dig:"Co się dzieje po zjedzeniu białka",ba_dig_p:"Enzymy trawienne tną białka na krótkie fragmenty. Wchłaniają się głównie aminokwasy oraz di- i tripeptydy, które są przenoszone przez komórki jelita. Dlatego peptydy podane doustnie najczęściej tracą swoją budowę, zanim zadziałają.",
 ty_h:"Rodzaje peptydów",ty_lead:"Wybierz grupę dowodów, aby zawęzić listę. Ocena dotyczy jakości badań, a nie obietnic producentów.",
 ty_note:"Ocena dowodów jest uproszczeniem. Przy decyzji o leczeniu zawsze pytaj lekarza.",
-f_all:"Wszystkie",f_natural:"W organizmie",f_approved:"Zatwierdzone leki",f_limited:"Dowody ograniczone",f_none:"Brak dowodów u ludzi",
+f_all:"Wszystkie",
 
 
 
@@ -1130,24 +1126,24 @@ f_all:"Wszystkie",f_natural:"W organizmie",f_approved:"Zatwierdzone leki",f_limi
 
 
 
-w_prec:"Mała objętość: jedna kreska to duży błąd względny. Rozważ więcej rozpuszczalnika.",r_syr:"Napełnienie strzykawki",r_dose:"Dawka",
+w_prec:"Mała objętość: jedna kreska to duży błąd względny. Rozważ więcej rozpuszczalnika.",
 
 n_effects:"Skutki uboczne",ef_h:"Zgłoszenia skutków ubocznych",ef_lead:"Niepokojący objaw po leku peptydowym? Opisz go poniżej, a zgłoszenie trafi prosto do autorów strony. Zgłoszenia nie są publikowane. To nie jest pomoc medyczna: przy poważnych objawach dzwoń pod 112.",ef_warn:"UWAGA: nie podajemy dawek substancji niezatwierdzonych, a liczby z internetu nie są bezpieczne do naśladowania. Dla większości tych substancji nie ustalono dawki u ludzi. Przy przedawkowaniu, silnej reakcji alergicznej, bólu w klatce piersiowej lub trudnościach z oddychaniem dzwoń pod 112 albo do lokalnego centrum zatruć. Nie czekaj na wpis na stronie.",ef_sub:"Substancja",ef_sym:"Opis objawu (bez danych osobowych)",ef_sev:"Nasilenie",ef_s1:"Lekkie",ef_s2:"Umiarkowane",ef_s3:"Silne lub niepokojące",ef_when:"Kiedy wystąpiło (np. po 2 dniach)",ef_consent:"Rozumiem, że zgłoszenie nie zastępuje lekarza, trafia tylko do autorów strony i nie jest publikowane.",ef_send:"Wyślij zgłoszenie",ef_err:"Uzupełnij opis objawu i zaznacz zgodę.",ef_emerg:"Przy silnych objawach zadzwoń pod 112 lub do lekarza, nie czekaj na odpowiedź od nas.",ef_list:"Zanim wyślesz",gl_h:"Słownik",
-sc_u100:"Strzykawka insulinowa U-100",sc_u100n:"100 kresek na 1 ml. Jedna kreska to 0,01 ml.",sc_std:"Zwykła strzykawka 2 ml",sc_stdn:"Podziałka co 0,1 ml, dziesięć razy grubsza niż kreska U-100.",sc_vial:"Fiolka ",sc_in1:" mg w 1 ml: 1 kreska U-100 = ",sc_01:" mcg, 0,1 ml = ",sc_marks:"kresek",warn_h:"UWAGA: nie podajemy dawek substancji niezatwierdzonych.",warn_b:"Dla większości tych substancji nie ustalono dawki u ludzi. Liczby z internetu, od sprzedawców i z forów są niesprawdzone i mogą być niebezpieczne. Nie próbuj ich naśladować. Przy objawach zatrucia lub silnej reakcji dzwoń pod 112. Przed każdą decyzją idź do lekarza.",n_method:"Metodologia",me_h:"Skąd biorą się dane i oceny",me_lead:"Jak zbieramy informacje i co znaczą statusy. Data na tej stronie: 18.10.2026.",me_body:"<p><b>Skala siły dowodów.</b> Przy każdej substancji pokazujemy ocenę od 1 do 4, liczoną według stałej reguły: <b>4</b> to lek zatwierdzony z badaniami rejestracyjnymi, <b>3</b> to badania u ludzi bez pełnego zatwierdzenia albo rejestracja tylko regionalna, <b>2</b> to kosmetyki, suplementy i związki niebędące peptydami, <b>1</b> to dane przedkliniczne lub bardzo skąpe. Skala mówi o tym, <i>jak mocne są dowody</i>, a nie o tym, czy coś działa albo jest bezpieczne. Liczbę zarejestrowanych badań u ludzi pobieramy na żywo z ClinicalTrials.gov.</p><p><b>Źródła:</b> dokumentacja regulatorów (FDA, EMA, URPL), ulotki i charakterystyki produktów, publikacje w PubMed oraz bazy związków (PubChem, DrugBank, RCSB PDB).</p><p><b>Statusy:</b> zatwierdzony lek, zatwierdzony regionalnie, w badaniach klinicznych, niezatwierdzony, kosmetyk lub suplement oraz nie peptyd. Status to stan wiedzy, nie rekomendacja.</p><p><b>Dowody:</b> ocena jest uproszczeniem. Badania na zwierzętach i w probówce nie dowodzą działania u ludzi.</p><p><b>Aktualizacja:</b> przy zmianie statusu u regulatora zmienimy wpis. Data „stan na” na górze strony pokazuje, kiedy dane były sprawdzane ostatnio.</p>",
+warn_h:"UWAGA: nie podajemy dawek substancji niezatwierdzonych.",warn_b:"Dla większości tych substancji nie ustalono dawki u ludzi. Liczby z internetu, od sprzedawców i z forów są niesprawdzone i mogą być niebezpieczne. Nie próbuj ich naśladować. Przy objawach zatrucia lub silnej reakcji dzwoń pod 112. Przed każdą decyzją idź do lekarza.",n_method:"Metodologia",me_h:"Skąd biorą się dane i oceny",me_lead:"Jak zbieramy informacje i co znaczą statusy. Data na tej stronie: 18.10.2026.",me_body:"<p><b>Skala siły dowodów.</b> Przy każdej substancji pokazujemy ocenę od 1 do 4. Punktem wyjścia jest status prawny: <b>4</b> dla leku zatwierdzonego z badaniami rejestracyjnymi, <b>3</b> dla substancji w badaniach klinicznych lub zarejestrowanej tylko regionalnie, <b>1</b> dla reszty. Do tego doliczamy to, co widać w rejestrze ClinicalTrials.gov: jeśli dla substancji niezatwierdzonej zarejestrowano co najmniej pięć badań u ludzi, ocena rośnie o jeden stopień. Skala mówi o tym, <i>jak mocne są dowody</i>, a nie o tym, czy coś działa albo jest bezpieczne.</p><p><b>Źródła:</b> dokumentacja regulatorów (FDA, EMA, URPL), ulotki i charakterystyki produktów, publikacje w PubMed oraz bazy związków (PubChem, DrugBank, RCSB PDB).</p><p><b>Statusy:</b> zatwierdzony lek, zatwierdzony regionalnie, w badaniach klinicznych, niezatwierdzony, kosmetyk lub suplement oraz nie peptyd. Status to stan wiedzy, nie rekomendacja.</p><p><b>Dowody:</b> ocena jest uproszczeniem. Badania na zwierzętach i w probówce nie dowodzą działania u ludzi.</p><p><b>Aktualizacja:</b> przy zmianie statusu u regulatora zmienimy wpis. Data „stan na” na górze strony pokazuje, kiedy dane były sprawdzane ostatnio.</p>",
 bl_h:"Blog",bl_read:"min czytania",bl_back:"Wróć do listy",
 fq_h:"Najczęstsze pytania",src_h:"Źródła",
 foot:"PepSafe to projekt edukacyjny. Informacje nie są poradą medyczną, diagnozą ani zaleceniem leczenia."
-},en:{n_catalog:"Catalog",n_contact:"Contact",t1_tag:"Catalog",t1_t:"Over 100 substances in one place",t1_p:"Status, mechanism, evidence and warnings for each entry.",t2_tag:"Tool",t2_t:"Overlap checker",t2_p:"See which substances act on the same target and should not be combined.",t3_tag:"Contact",t3_t:"Have a question or a correction?",t3_p:"Write to us using the form.",cat_h:"Peptide catalog",cat_lead:"Browse over 100 entries: status, mechanism, strength of evidence and combination warnings. Doses are given only for approved drugs, from their labels.",cat_note:"Statuses refer mainly to the US (FDA).",co_h:"Contact",co_lead:"A question, a correction or a collaboration idea? Fill in the form and the message goes straight to the site authors.",co_name:"Name",co_email:"Your email",co_topic:"Topic",co_t1:"Question about the catalog",co_t2:"Correction or error",co_t3:"Collaboration",co_t4:"Other",co_msg:"Message",co_consent:"I agree to my data being processed to reply to this message.",co_send:"Send message",co_note:"Messages are sent through the form. We do not publish them, and the authors' e-mail address is not shown on the site. Your e-mail is used only to reply.",co_addr:"How it works",co_noaddr:"The contact address will be added soon.",co_copy:"Copy message",co_copied:"Copied",co_open:"Open in mail app",co_prev:"Message preview",co_err:"Enter your name, a valid email and a message (min. 10 characters) and tick the consent.",co_dm:"You can also ask in a comment or a DM on our profiles. We answer the best questions in a Q&A.",co_medical:"We do not give medical advice or personal dosing recommendations. For health matters, contact your doctor.",
-tagline:"Peptide facts, no hype",n_start:"Home",n_basics:"Basics",n_types:"Types",n_blog:"Blog",n_faq:"FAQ",
+},en:{n_catalog:"Catalog",n_contact:"Contact",t1_tag:"Catalog",t1_t:"Over 100 substances in one place",t1_p:"Status, mechanism, evidence and warnings for each entry.",t2_tag:"Tool",t2_t:"Overlap checker",t2_p:"See which substances act on the same target and should not be combined.",t3_tag:"Contact",t3_t:"Have a question or a correction?",t3_p:"Write to us using the form.",cat_h:"Peptide catalog",cat_lead:"Browse over 100 entries: status, mechanism, strength of evidence and combination warnings. Doses are given only for approved drugs, from their labels.",cat_note:"Statuses refer mainly to the US (FDA).",co_h:"Contact",co_lead:"A question, a correction or a collaboration idea? Fill in the form and the message goes straight to the site authors.",co_name:"Name",co_email:"Your email",co_topic:"Topic",co_t1:"Question about the catalog",co_t2:"Correction or error",co_t3:"Collaboration",co_t4:"Other",co_msg:"Message",co_consent:"I agree to my data being processed to reply to this message.",co_send:"Send message",co_note:"Messages are sent through the form. We do not publish them, and the authors' e-mail address is not shown on the site. Your e-mail is used only to reply.",co_addr:"How it works",co_err:"Enter your name, a valid email and a message (min. 10 characters) and tick the consent.",co_dm:"You can also ask in a comment or a DM on our profiles. We answer the best questions in a Q&A.",co_medical:"We do not give medical advice or personal dosing recommendations. For health matters, contact your doctor.",
+tagline:"Peptide facts, no hype",n_start:"Home",n_basics:"Basics",n_blog:"Blog",n_faq:"FAQ",
 h_eyebrow:"Biochemistry, briefly",h_title:"Short chains of amino acids. A big difference in the body.",
 h_lead:"A catalog of over 100 peptides and related substances: status, mechanism, evidence and groups that should not be combined. Plus a guide, a blog, an informational calculator and a contact form.",
 h_cta1:"Start with the basics",h_cta2:"Peptide catalog",
-b_title:"Peptide builder",b_hint:"max 30",b_undo:"Undo",b_clear:"Clear",b_note:"Average mass of a free, linear peptide in daltons (Da).",
-b_empty:"Tap amino acids below to build a chain.",s_seq3:"Sequence (3-letter)",s_seq1:"Sequence (1-letter)",s_len:"Length",s_bonds:"Peptide bonds",s_mass:"Mass",s_class:"Class",
+b_title:"Peptide builder",
+b_empty:"Tap amino acids below to build a chain.",
 k1:"hydrophobic",k2:"polar",k3:"basic",k4:"acidic",k5:"special",
-c1_tag:"Guide",c1_t:"Peptide types and strength of evidence",c1_p:"From insulin to cosmetics. Each group with a rating of what is known.",
-c2_tag:"Tool",c2_t:"Reconstitution calculator",c2_p:"Compare 1 ml and 2 ml of water in the same vial, with pros and cons.",
-c3_tag:"Blog",c3_t:"What the studies say",c3_p:"Collagen, cosmetics and “research” peptides without the marketing.",
+c1_tag:"Guide",
+c2_tag:"Tool",
+c3_tag:"Blog",
 disc:"Content is educational and does not replace advice from a doctor or pharmacist. Dose numbers circulating online and from sellers are unverified and not safe to copy. For many substances no human dose has been established. Do not match any number from the internet, and talk to a doctor before any decision.",
 ba_h:"What is a peptide",ba_lead:"A peptide is a short chain of amino acids joined by peptide bonds. A protein is, simply put, a very long peptide that folds into a stable structure.",
 ba_bond:"The peptide bond",svg_bond:"peptide bond (CO–NH)",ba_bond_p:"The carboxyl group of one amino acid joins the amino group of the next. Each bond releases a molecule of water, so a peptide of n amino acids has n − 1 bonds.",
@@ -1157,7 +1153,7 @@ ba_ex:"Examples from the body and daily life",
 ba_dig:"What happens when you eat protein",ba_dig_p:"Digestive enzymes cut proteins into short fragments. Mostly amino acids and di- and tripeptides are absorbed, carried across gut cells. This is why peptides taken by mouth usually lose their structure before they can act.",
 ty_h:"Types of peptides",ty_lead:"Pick an evidence group to narrow the list. The rating reflects the quality of studies, not manufacturer promises.",
 ty_note:"The evidence rating is a simplification. For treatment decisions, always ask your doctor.",
-f_all:"All",f_natural:"In the body",f_approved:"Approved drugs",f_limited:"Limited evidence",f_none:"No human evidence",
+f_all:"All",
 
 
 
@@ -1172,10 +1168,10 @@ f_all:"All",f_natural:"In the body",f_approved:"Approved drugs",f_limited:"Limit
 
 
 
-w_prec:"Small volume: one mark is a large relative error. Consider more solvent.",r_syr:"Syringe fill",r_dose:"Dose",
+w_prec:"Small volume: one mark is a large relative error. Consider more solvent.",
 
 n_effects:"Side effects",ef_h:"Side-effect reports",ef_lead:"Noticed a worrying symptom after a peptide drug? Describe it below and the report goes straight to the site authors. Reports are not published. This is not medical help: for serious symptoms call your emergency number.",ef_warn:"WARNING: we give no doses for unapproved substances, and numbers online are not safe to copy. For most of these substances no human dose has been established. For overdose, a severe allergic reaction, chest pain or breathing difficulty call 112 or your local poison centre. Do not wait for a post on this site.",ef_sub:"Substance",ef_sym:"Description of the symptom (no personal data)",ef_sev:"Severity",ef_s1:"Mild",ef_s2:"Moderate",ef_s3:"Severe or worrying",ef_when:"When it happened (e.g. after 2 days)",ef_consent:"I understand the report does not replace a doctor, goes only to the site authors and is not published.",ef_send:"Send report",ef_err:"Describe the symptom and tick the consent box.",ef_emerg:"For severe symptoms call 112 or your doctor, do not wait for a reply from us.",ef_list:"Before you send",gl_h:"Glossary",
-sc_u100:"U-100 insulin syringe",sc_u100n:"100 marks per 1 ml. One mark is 0.01 ml.",sc_std:"Standard 2 ml syringe",sc_stdn:"Graduations every 0.1 ml, ten times coarser than a U-100 mark.",sc_vial:"Vial ",sc_in1:" mg in 1 ml: 1 U-100 mark = ",sc_01:" mcg, 0.1 ml = ",sc_marks:"marks",warn_h:"WARNING: we give no doses for unapproved substances.",warn_b:"For most of these substances no human dose has been established. Numbers from the internet, sellers and forums are unverified and may be dangerous. Do not try to copy them. For poisoning or a severe reaction call 112. See a doctor before any decision.",n_method:"Methodology",me_h:"Where the data and ratings come from",me_lead:"How we collect information and what the statuses mean. Data on this site: 18 Oct 2026.",me_body:"<p><b>Strength-of-evidence scale.</b> Each substance carries a score from 1 to 4, computed by a fixed rule: <b>4</b> is an approved drug with registration trials, <b>3</b> is human trials without full approval or regional-only registration, <b>2</b> is cosmetics, supplements and non-peptide compounds, <b>1</b> is preclinical or very scarce data. The scale describes <i>how strong the evidence is</i>, not whether something works or is safe. The number of registered human trials is pulled live from ClinicalTrials.gov.</p><p><b>Sources:</b> regulator documentation (FDA, EMA, URPL), package leaflets and product labels, PubMed publications, and compound databases (PubChem, DrugBank, RCSB PDB).</p><p><b>Statuses:</b> approved drug, approved regionally, in clinical trials, unapproved, cosmetic or supplement, and not a peptide. A status is the state of knowledge, not a recommendation.</p><p><b>Evidence:</b> the rating is a simplification. Animal and test-tube studies do not prove effects in humans.</p><p><b>Updates:</b> when a regulator changes a status we change the entry. The date at the top of the page shows when the data was last checked.</p>",
+warn_h:"WARNING: we give no doses for unapproved substances.",warn_b:"For most of these substances no human dose has been established. Numbers from the internet, sellers and forums are unverified and may be dangerous. Do not try to copy them. For poisoning or a severe reaction call 112. See a doctor before any decision.",n_method:"Methodology",me_h:"Where the data and ratings come from",me_lead:"How we collect information and what the statuses mean. Data on this site: 18 Oct 2026.",me_body:"<p><b>Strength-of-evidence scale.</b> Each substance carries a score from 1 to 4. The starting point is legal status: <b>4</b> for an approved drug with registration trials, <b>3</b> for a substance in clinical trials or registered regionally only, <b>1</b> for the rest. On top of that we count what the ClinicalTrials.gov registry shows: if an unapproved substance has at least five registered human trials, the score rises by one step. The scale describes <i>how strong the evidence is</i>, not whether something works or is safe.</p><p><b>Sources:</b> regulator documentation (FDA, EMA, URPL), package leaflets and product labels, PubMed publications, and compound databases (PubChem, DrugBank, RCSB PDB).</p><p><b>Statuses:</b> approved drug, approved regionally, in clinical trials, unapproved, cosmetic or supplement, and not a peptide. A status is the state of knowledge, not a recommendation.</p><p><b>Evidence:</b> the rating is a simplification. Animal and test-tube studies do not prove effects in humans.</p><p><b>Updates:</b> when a regulator changes a status we change the entry. The date at the top of the page shows when the data was last checked.</p>",
 bl_h:"Blog",bl_read:"min read",bl_back:"Back to list",
 fq_h:"Frequently asked questions",src_h:"Sources",
 foot:"PepSafe is an educational project. Information is not medical advice, diagnosis or treatment guidance."
@@ -2000,6 +1996,8 @@ function ctGov(term,box){
      if(!js[0]){CT_CACHE[term]=null;show(null);return;}
      var d={total:js[0].totalCount||0,active:js[1]?(js[1].totalCount||0):0};
      CT_CACHE[term]=d;show(d);
+     try{var nm=(document.getElementById("dName")||{}).getAttribute?document.getElementById("dName").getAttribute("data-n"):null;
+       if(nm&&window.PEP_evUpdate)window.PEP_evUpdate(nm,d.total);}catch(x){}
    }).catch(function(){CT_CACHE[term]=null;show(null);});
 }
 /* key studies + search links in the catalog dialog */
@@ -2011,7 +2009,7 @@ var mo=new MutationObserver(function(){
   var d=document.createElement("div");d.className="studyb";
   var sc=SRC[nm]||[], rv=REV[nm]||"";
   d.innerHTML=(sc.length?'<h4>'+T("Źródła","Sources")+'</h4><ul style="margin:4px 0 8px;padding-left:18px">'+sc.map(function(x){return '<li><a href="'+x[1]+'" target="_blank" rel="noopener">'+esc(x[0])+'</a></li>'}).join("")+'</ul>':'')+
-   (rv?'<p class="meta" style="margin:0 0 10px">'+T("Sprawdzono: ","Checked: ")+rv+'</p>':'')+
+   (rv?'<p class="meta" style="margin:0 0 10px">'+T("Źródła dodane: ","Sources added: ")+rv+'</p>':'')+
    '<h4>'+T("Najważniejsze badania","Key studies")+'</h4>'+
    (list.length?'<ul style="margin:4px 0 8px;padding-left:18px">'+list.map(function(s){return '<li><a href="'+PUB+encodeURIComponent(s[1])+'" target="_blank" rel="noopener">'+esc(s[0])+'</a></li>'}).join("")+'</ul>':'<p>'+T("Nie wybraliśmy jeszcze kluczowych badań dla tej pozycji. Skorzystaj z wyszukiwarek poniżej.","No key studies selected for this entry yet. Use the searches below.")+'</p>')+
    '<p class="links"><a href="'+PUB+encodeURIComponent(term)+'" target="_blank" rel="noopener">PubMed: '+esc(term)+'</a><a href="https://clinicaltrials.gov/search?term='+encodeURIComponent(term)+'" target="_blank" rel="noopener">ClinicalTrials.gov</a></p>';
