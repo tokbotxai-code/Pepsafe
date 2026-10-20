@@ -89,6 +89,9 @@ const W = {
     save: 'Save', saved: 'Saved', pick: 'Pick a substance', clear: 'Clear',
     dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved',
     menuLab: 'Menu', menuClose: 'Close menu', findLab: 'Search',
+    e404kick: 'Page not found', e404H: 'That page is not here.',
+    e404P: 'The address may be old, mistyped, or the page may have moved. The catalog and the search below will get you where you were going.',
+    e404Search: 'Search the catalog', e404Home: 'Home',
     glossNav: 'Glossary', glossH: 'The words, in plain language.',
     glossLead: 'Terms that come up on every page, explained once so the rest of the site reads easily.',
     blogNav: 'Reading', blogH: 'Longer pieces.',
@@ -136,6 +139,9 @@ const W = {
     save: 'Zapisz', saved: 'Zapisane', pick: 'Wybierz substancję', clear: 'Wyczyść',
     dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane',
     menuLab: 'Menu', menuClose: 'Zamknij menu', findLab: 'Szukaj',
+    e404kick: 'Nie znaleziono strony', e404H: 'Tej strony tu nie ma.',
+    e404P: 'Adres może być stary, z literówką, albo strona się przeniosła. Katalog i wyszukiwarka poniżej doprowadzą Cię tam, gdzie chciałeś.',
+    e404Search: 'Przeszukaj katalog', e404Home: 'Strona główna',
     glossNav: 'Słownik', glossH: 'Słowa, po ludzku.',
     glossLead: 'Pojęcia, które wracają na każdej stronie, wyjaśnione raz, żeby resztę czytało się łatwo.',
     blogNav: 'Do czytania', blogH: 'Dłuższe teksty.',
@@ -292,7 +298,7 @@ ${o.body}
     <p class="social">
       <a class="soc" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}<span>TikTok</span></a>
       <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>Instagram</span></a>
-      <a class="soc" href="${up}about.html#contact">${esc(t.writeUs)}</a>
+      <a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a>
     </p>
     <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span></p>
   </div>
@@ -582,6 +588,28 @@ function card(e, L) {
 
 const postSlug = x => slug(x.title.en || x.title.pl);
 
+function notFound(L) {
+  const en = L === 'en', t = W[L];
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <p class="kick reveal">404 — ${esc(t.e404kick)}</p>
+    <h1 class="display reveal">${esc(t.e404H)}</h1>
+    <p class="lede reveal">${esc(t.e404P)}</p>
+    <p class="actions reveal">
+      <a class="btn big" href="${BASE}${L}/catalog.html">${esc(t.e404Search)}${ARROW}</a>
+      <a class="btn ghost big" href="${BASE}${L}/index.html">${esc(t.e404Home)}</a>
+    </p>
+    <p class="small ink2 reveal" style="margin-top:28px">${en ? 'Looking for a substance? Open the search with the magnifier in the bar above.' : 'Szukasz substancji? Otwórz wyszukiwarkę lupką w belce powyżej.'}</p>
+  </div>
+</section>`;
+  return layout({
+    lang: L, here: '404.html', twin: '404.html', body, noindex: true,
+    title: (en ? 'Page not found' : 'Nie znaleziono strony') + ' | PepSafe', desc: t.e404P
+  });
+}
+
 function glossary(L) {
   const en = L === 'en', t = W[L];
   const rows = (GL || []).map(g => (en ? g.en : g.pl)).filter(Boolean)
@@ -822,6 +850,9 @@ function about(L) {
       <p class="small ink2">${en ? 'Prefer your phone? Send a direct message instead. We read every one and answer the best ones in a Q&A.' : 'Wolisz z telefonu? Napisz wiadomość prywatną. Czytamy każdą, a najciekawsze omawiamy w Q&A.'}</p>
       <p class="social"><a class="soc" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}<span>${esc(t.dmTT)}</span></a>
       <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>${esc(t.dmIG)}</span></a></p></article>
+    <article class="tile glass reveal"><h3 class="gtitle sm">${en ? 'By email' : 'Mailem'}</h3>
+      <p class="small ink2">${en ? 'If you would rather not use the form, write to us directly. Same inbox, same people.' : 'Jeśli wolisz nie korzystać z formularza, napisz wprost. Ta sama skrzynka, te same osoby.'}</p>
+      <p class="social"><a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a></p></article>
   </div>
   <p class="notice reveal">${esc(t.coMed)}</p>
 </div></section>`;
@@ -1013,7 +1044,7 @@ for (const L of LANGS) {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
     'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
     'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L),
-    'blog.html': blogIndex(L), 'glossary.html': glossary(L)
+    'blog.html': blogIndex(L), 'glossary.html': glossary(L), '404.html': notFound(L)
   };
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
   // style, skrypt i obrazki udostepniania trzymamy w src/ i kopiujemy do kazdej kompilacji
@@ -1033,10 +1064,11 @@ function retarget(html, canon) {
     .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${SITE}${BASE}${canon}">`);
 }
 fs.writeFileSync(path.join(out, 'index.html'), retarget(home('en'), ''));
+fs.writeFileSync(path.join(out, '404.html'), notFound('en'));   // GitHub Pages serwuje to przy kazdym 404
 fs.writeFileSync(path.join(out, 'p', 'index.html'), retarget(catalog('en'), 'en/catalog.html'));
 fs.writeFileSync(path.join(out, 'p', 'faq.html'), retarget(faqPage('en'), 'en/faq.html'));
 fs.writeFileSync(path.join(out, 'p', 'faq.pl.html'), retarget(faqPage('pl'), 'pl/faq.html'));
-n += 4;
+n += 5;
 
 // sitemapa: tylko adresy kanoniczne
 const when = new Date().toISOString().slice(0, 10);

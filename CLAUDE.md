@@ -153,10 +153,15 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - **Żaden z 252 adresów zaindeksowanych przed przebudową nie może zgasnąć.** Po każdej zmianie struktury
   sprawdź wszystkie `<loc>` ze starej sitemapy (`git show <commit>:sitemap.xml`) i upewnij się, że zwracają 200.
 - Po publikacji zgłoś zmiany: POST na `api.indexnow.org/indexnow` z kluczem z pliku `*.txt` w korzeniu.
-- **Po każdej zmianie szablonu sprawdź, czy nic nie wypadło:** `grep -c cf-beacon index.html` (licznik),
-  `ls en/t | wc -l` (teksty), `grep -c gloss-row en/glossary.html` (słownik), `head -3 feed.xml` (RSS).
-  Przy przenosinach na v4 zniknęły licznik odwiedzin, słownik, 6 tekstów, powiązania „bywa mylone z”
-  i kanał RSS — wszystkie dlatego, że generator ich po prostu nie czytał.
+- **Po każdej przebudowie uruchom `node tools/kontrola.js`** — jedna komenda sprawdza wszystko naraz:
+  licznik odwiedzin, słownik, teksty, RSS, ikonę, dane organizacji, stronę 404, liczbę kart i adresów,
+  audyt wpisów, zgodność grup, źródła, martwe linki wewnętrzne i to, czy wszystkie wcześniej zaindeksowane
+  adresy nadal istnieją. Kod wyjścia 1 = nie publikuj.
+  Powstała, bo przy przenosinach na v4 zniknęły licznik, słownik, 6 tekstów, powiązania „bywa mylone z”
+  i kanał RSS — każde z innego powodu i żadne nie dało znaku.
+- Źródła: `node tools/zrodla.js` dopisuje brakujące odnośniki do DailyMed, ClinicalTrials.gov i PubMed
+  (wyszukiwania po nazwie, nie konkretne dokumenty — dzięki temu nie gasną przy aktualizacji etykiety).
+  EMA i accessdata.fda.gov blokują zapytania automatyczne, więc ich nie używamy.
 
 ## Formularze
 - Kontakt (`/<lang>/about.html#contact`) i zgłoszenie skutku ubocznego (`/<lang>/symptoms.html#report`)
