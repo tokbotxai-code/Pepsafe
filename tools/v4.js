@@ -61,6 +61,7 @@ function searchText(e, en) {
 const LANGS = ['en', 'pl'];
 
 const SITE = 'https://pepsafe.info';
+const CF_BEACON = '68889a9fe6604022bd3fa7d786e5d79f';  // licznik odwiedzin (Cloudflare Web Analytics)
 // FormSubmit: nie wymaga konta ani klucza, wiadomosci ida na ten adres.
 // Pierwsza wysylka uruchamia maila aktywacyjnego, ktory wlasciciel klika raz.
 // Po aktywacji mozna podmienic adres na alias z panelu, zeby nie stal w kodzie strony.
@@ -288,6 +289,7 @@ ${o.body}
 
 <script src="${BASE}assets/dane-${L}.js" defer></script>
 <script src="${BASE}assets/ruch.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CF_BEACON}"}'></script>
 </body>
 </html>
 `;

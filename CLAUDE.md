@@ -117,7 +117,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Do rutynowej dniówki wystarczy tańszy model; Opus tylko do zmian w kodzie strony i analiz.
 
 ## Odwiedziny na stronie (Cloudflare Web Analytics)
-- Beacon jest w `index.html` (`data-cf-beacon`, token `68889a9fe6604022bd3fa7d786e5d79f`).
+- Beacon wstawia **generator**: stała `CF_BEACON` w `tools/v4.js` trafia do każdej z 428 stron
+  (token `68889a9fe6604022bd3fa7d786e5d79f`). Po każdej przebudowie sprawdź `grep -c cf-beacon index.html`.
+- **Uwaga:** przy przenoszeniu strony na v4 beacon został w starym `index.html` i przez kilka godzin
+  20.10 nie zbierał nic. Przy każdej zmianie szablonu upewnij się, że skrypt licznika nadal tam jest.
 - Uwaga: `siteTag` w API to INNA wartość niż token beacona — dla pepsafe.info jest to `1ba9f12bd6e545c79b6786f5785794cf`.
   Jeśli statystyki wyjdą zerowe, sprawdź aktualny siteTag zapytaniem bez filtra `siteTag` i z wymiarem `siteTag`.
 - Podgląd dla właściciela: dash.cloudflare.com → Analytics & Logs → Web Analytics → pepsafe.info.
