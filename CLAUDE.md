@@ -142,6 +142,9 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   okres półtrwania, enzymy, historia odkryć. Zero nazw substancji w opisie, na slajdach i w lektorze.
   Nazwy zostają na stronie i na Instagramie.
 - Hashtagi na TikToka: `#biology #science #chemistry #learnontiktok #education #pepsafe`.
+- **Przed zaplanowaniem czegokolwiek na TikToka uruchom `node tools/sprawdz.js tiktok/<folder>`.**
+  Skrypt porównuje `post.json` z całym katalogiem 123 substancji i z listą zakazanych słów i emotek.
+  Kod wyjścia 1 = nie planuj, popraw. Sprawdza opis, slajdy, lektora i hashtagi naraz.
 - Instagram prowadzi dalej pełną treść z nazwami — tam ograniczeń nie ma.
 - Wracamy do tematów z nazwami na TikToku dopiero, gdy ograniczenia znikną i kilka filmów przyrodniczych
   z rzędu wyjdzie bez kary.
