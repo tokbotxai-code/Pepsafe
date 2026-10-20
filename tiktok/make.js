@@ -70,19 +70,27 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
   }
   await b.close();
   if (STATIC) { fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n'); console.log('done', files.length, STORY ? 'story image' : 'feed images'); return; }
-  // voiceover: one WAV per slide, read by piper; each slide then lasts as long as its narration
-  const voice = path.join(__dirname, '..', '.voices', (post.lang === 'en' || /-en$/.test(path.basename(dir)) ? 'en_US-amy' : 'pl_PL-gosia') + '-medium.onnx');
+  // voiceover: one audio file per slide, read by ElevenLabs ("Jessica"); each slide then lasts as long as its line.
+  // Needs ELEVENLABS_API_KEY in the environment. Without it, or with "vo": false in post.json, the film stays music-only.
+  const JESSICA = 'cgSgspJ2msm6clMCkdW9';
+  const key = process.env.ELEVENLABS_API_KEY;
   const narrate = s => s.vo !== undefined ? s.vo
     : [s.big, s.title, s.text, s.ask, ...(s.list || []), ...(s.opts || [])].filter(Boolean).join('. ').replace(/\.\.+/g, '.');
-  const vo = [];
-  if (fs.existsSync(voice)) {
+  const vo = post.slides.map(() => null);
+  if (key && post.vo !== false) {
     for (let i = 0; i < post.slides.length; i++) {
       const txt = narrate(post.slides[i]);
-      if (!txt) { vo.push(null); continue; }
-      const w = path.join(dir, `vo-${String(i + 1).padStart(2, '0')}.wav`);
-      execFileSync('python3', ['-m', 'piper', '--model', voice, '--output-file', w], { input: txt, stdio: ['pipe', 'ignore', 'ignore'] });
-      vo.push({ file: w, seconds: Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', w]).toString().trim()) });
+      if (!txt) continue;
+      const mp3 = path.join(dir, `vo-${String(i + 1).padStart(2, '0')}.mp3`);
+      const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${JESSICA}`, {
+        method: 'POST', headers: { 'xi-api-key': key, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: txt, model_id: 'eleven_multilingual_v2' })
+      });
+      if (!r.ok) { console.error('voiceover failed:', r.status, (await r.text()).slice(0, 200)); vo.length = 0; break; }
+      fs.writeFileSync(mp3, Buffer.from(await r.arrayBuffer()));
+      vo[i] = { file: mp3, seconds: Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3]).toString().trim()) };
     }
+    if (!vo.length) post.slides.forEach(() => vo.push(null)); // a failed call leaves the film music-only
   }
   const LEAD = 0.35, TAIL = 0.55; // breathing room before and after each line
   // silent MP4: each slide shown for its own duration with a short crossfade
@@ -107,7 +115,7 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
       if (v) {
         a.push('-i', v.file);
         const at = Math.round((off + LEAD) * 1000);
-        f += `[${++n}:a]adelay=${at}|${at},volume=1.6[s${n}];`; mix += `[s${n}]`;
+        f += `[${++n}:a]adelay=${at}|${at},volume=1.1[s${n}];`; mix += `[s${n}]`;
       }
       off += dur[i] - fade;
     });
@@ -115,7 +123,12 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
     f += `${mix}amix=inputs=${n}:duration=longest:dropout_transition=0:normalize=0[m];[m]atrim=0:${total.toFixed(2)},afade=t=out:st=${Math.max(0, total - 1).toFixed(2)}:d=1[out]`;
     a.push('-filter_complex', f, '-map', '0:v', '-map', '[out]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-shortest', out);
     execFileSync('ffmpeg', a, { stdio: 'ignore' });
+  } else if (fs.existsSync(music)) {
+    // no narration: the background track alone, looped and faded out at the end
+    execFileSync('ffmpeg', ['-y', '-i', silent, '-stream_loop', '-1', '-i', music, '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
+      '-af', `afade=t=out:st=${Math.max(0, total - 1.5).toFixed(2)}:d=1.5`, '-c:a', 'aac', '-b:a', '160k', '-shortest',
+      silent.replace(/\.mp4$/, '-muzyka.mp4')], { stdio: 'ignore' });
   }
   fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n');
-  console.log('done', files.length, 'slides');
+  console.log('done', files.length, 'slides', vo.some(Boolean) ? '+ lektor' : '(bez lektora)');
 })();
