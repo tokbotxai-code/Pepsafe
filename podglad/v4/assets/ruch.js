@@ -307,4 +307,105 @@
       else if (ctx) requestAnimationFrame(draw);  // one last frame, then still
     });
   }
+
+  /* ── szukanie w calej witrynie: lupka w belce, / na klawiaturze ─── */
+  (function () {
+    var wrap = document.getElementById('findwrap'), inp = document.getElementById('fq');
+    if (!wrap || !inp) return;
+    var listEl = document.getElementById('fr'), hint = document.getElementById('fh');
+    var btn = document.getElementById('find'), close = document.getElementById('fx');
+    var up = /\/p\/[^\/]*$/.test(location.pathname) ? '../' : '';
+    var sel = -1, hits = [], last = '';
+
+    var norm = function (s) {
+      return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ł/g, 'l');
+    };
+    var mark = function (name, needle) {
+      var i = norm(name).indexOf(needle);
+      if (i < 0) return esc(name);
+      return esc(name.slice(0, i)) + '<mark>' + esc(name.slice(i, i + needle.length)) + '</mark>' + esc(name.slice(i + needle.length));
+    };
+    function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
+
+    function find(v) {
+      var n = norm(v.trim());
+      if (n.length < 2 || !window.PEP) return [];
+      var pre = [], mid = [], deep = [];
+      window.PEP.rows.forEach(function (r) {
+        var nn = norm(r.n);
+        if (nn.indexOf(n) === 0) pre.push(r);
+        else if (nn.indexOf(n) > -1) mid.push(r);
+        else if (norm(r.t).indexOf(n) > -1) deep.push(r);
+      });
+      var by = function (a, b) { return a.n.localeCompare(b.n); };
+      return pre.sort(by).concat(mid.sort(by), deep.sort(by));
+    }
+
+    function render() {
+      var v = inp.value, n = norm(v.trim());
+      if (v === last) return; last = v;
+      hits = find(v); sel = -1;
+      listEl.innerHTML = '';
+      if (n.length < 2) { hint.textContent = hint.dataset.base || hint.textContent; hint.hidden = false; return; }
+      if (!hits.length) { hint.textContent = hint.dataset.none; hint.hidden = false; return; }
+      hint.hidden = true;
+      hits.slice(0, 40).forEach(function (r) {
+        var li = document.createElement('li');
+        li.innerHTML = '<a href="' + up + 'p/' + r.s + '.html"><b>' + mark(r.n, n) + '</b>' +
+          '<span class="fcat">' + esc(r.c || '') + '</span><small>' + esc(r.st || '') + '</small></a>';
+        listEl.appendChild(li);
+      });
+      if (hits.length > 40) {
+        var li = document.createElement('li');
+        li.innerHTML = '<a href="' + up + 'catalog.html"><b>' + esc(hint.dataset.more || '') +
+          '</b><small>' + hits.length + '</small></a>';
+        listEl.appendChild(li);
+      }
+    }
+
+    function move(d) {
+      var li = listEl.children; if (!li.length) return;
+      if (sel > -1 && li[sel]) li[sel].classList.remove('sel');
+      sel = (sel + d + li.length) % li.length;
+      li[sel].classList.add('sel');
+      li[sel].scrollIntoView({ block: 'nearest' });
+    }
+
+    function open() {
+      wrap.hidden = false;
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+      document.documentElement.style.overflow = 'hidden';
+      setTimeout(function () { inp.focus(); inp.select(); }, 30);
+    }
+    function shut() {
+      wrap.hidden = true;
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      document.documentElement.style.overflow = '';
+      if (btn) btn.focus();
+    }
+
+    hint.dataset.base = hint.textContent;
+    hint.dataset.none = hint.dataset.none || (document.documentElement.lang === 'pl' ? 'Nic nie pasuje.' : 'Nothing matches that.');
+    hint.dataset.more = document.documentElement.lang === 'pl' ? 'Zobacz wszystkie wyniki' : 'See all results';
+
+    if (btn) btn.addEventListener('click', open);
+    [].slice.call(document.querySelectorAll('[data-find]')).forEach(function (b) { b.addEventListener('click', open); });
+    if (close) close.addEventListener('click', shut);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) shut(); });
+    inp.addEventListener('input', render);
+    inp.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+      else if (e.key === 'Enter') {
+        var a = (listEl.children[sel > -1 ? sel : 0] || {}).firstChild;
+        if (a && a.href) { e.preventDefault(); location.href = a.href; }
+      } else if (e.key === 'Escape') shut();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (wrap.hidden && (e.key === '/' || (e.key === 'k' && (e.metaKey || e.ctrlKey))) &&
+        !/^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement || {}).tagName || '')) { e.preventDefault(); open(); }
+      else if (!wrap.hidden && e.key === 'Escape') shut();
+    });
+  })();
+
 })();

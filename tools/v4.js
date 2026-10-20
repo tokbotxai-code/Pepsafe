@@ -70,7 +70,9 @@ const W = {
     search: 'Search by name or brand', filterAll: 'All', noHit: 'Nothing matches that.',
     entries: 'entries', listedWada: 'Listed by WADA in class', always: ', prohibited at all times',
     save: 'Save', saved: 'Saved', pick: 'Pick a substance', clear: 'Clear',
-    dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved'
+    dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved',
+    findLab: 'Search', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
+    findNone: 'Nothing matches that.', findClose: 'Close', findMore: 'See all results'
   },
   pl: {
     nav: { home: 'Start', catalog: 'Katalog', groups: 'Grupy', faq: 'Pytania', alerts: 'Ostrzeżenia', about: 'O projekcie' },
@@ -83,7 +85,9 @@ const W = {
     search: 'Szukaj po nazwie lub marce', filterAll: 'Wszystkie', noHit: 'Nic nie pasuje.',
     entries: 'wpisów', listedWada: 'Wymieniony przez WADA w klasie', always: ', zakazany zawsze',
     save: 'Zapisz', saved: 'Zapisane', pick: 'Wybierz substancję', clear: 'Wyczyść',
-    dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane'
+    dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane',
+    findLab: 'Szukaj', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
+    findNone: 'Nic nie pasuje.', findClose: 'Zamknij', findMore: 'Zobacz wszystkie wyniki'
   }
 };
 
@@ -134,6 +138,9 @@ ${THEME_BOOT}
       ${nav.map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('\n      ')}
     </ul>
     <div class="tools">
+      <button class="icon" id="find" type="button" aria-label="${esc(t.findLab)}" aria-expanded="false">
+        <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.3" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M12.9 12.9 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
       <button class="icon" id="theme" type="button" aria-label="${esc(t.theme)}">
         <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><g class="sun"><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.2 5.2l1.4 1.4M13.4 13.4l1.4 1.4M14.8 5.2l-1.4 1.4M6.6 13.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/></g><path class="moon" d="M15 11.5A6 6 0 0 1 8.5 5a6 6 0 1 0 6.5 6.5Z" fill="currentColor"/></svg>
       </button>
@@ -142,6 +149,20 @@ ${THEME_BOOT}
     </div>
   </nav>
 </header>
+
+<div class="findwrap" id="findwrap" hidden>
+  <div class="findcard" role="dialog" aria-modal="true" aria-label="${esc(t.findLab)}">
+    <div class="findtop">
+      <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.3" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M12.9 12.9 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input id="fq" type="search" placeholder="${esc(t.findPh)}" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+      <button class="icon" id="fx" type="button" aria-label="${esc(t.findClose)}">
+        <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <p class="findhint" id="fh">${esc(t.findHint)}</p>
+    <ul class="findlist" id="fr"></ul>
+  </div>
+</div>
 
 <main id="main">
 ${o.body}
@@ -230,6 +251,12 @@ function home(L) {
       <p class="badge reveal">${esc(h.badge)}<i class="dot" aria-hidden="true"></i></p>
       <h1 class="display">${h.h1.map((x, i) => `<span class="reveal${i === 1 ? ' dim' : ''}">${esc(x)}</span>`).join('')}</h1>
       <p class="lede reveal">${esc(h.lede)}</p>
+      <p class="herofind reveal">
+        <button type="button" class="findfake" data-find>
+          <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.3" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M12.9 12.9 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <span>${esc(W[L].findPh)}</span>
+        </button>
+      </p>
       <p class="actions reveal">
         <a class="btn big" href="#overlap">${esc(h.b1)}${ARROW}</a>
         <a class="btn ghost big" href="catalog.html">${esc(h.b2)}</a>
