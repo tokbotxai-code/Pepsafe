@@ -34,9 +34,14 @@ for (const e of D) {
     if (!/not established|not available|is unknown|do not exist|was not assessed|doctor's decision/i.test(ang[4]))
       flag(e, 'brak zdania o nieustalonym bezpieczeństwie (EN)');
   }
-  // dawki tylko przy lekach zatwierdzonych
-  if (e.st !== 'A' && e.st !== 'R' && /\b\d+([.,]\d+)?\s?(mg|mcg|µg|j\.m\.|IU)\b/i.test([e.d, e.m, e.u, e.ev, e.w].join(' ')))
-    flag(e, 'liczbowa dawka przy substancji niezatwierdzonej');
+  // dawki tylko przy lekach zatwierdzonych; skład sprzedawanego produktu to nie dawka
+  if (e.st !== 'A' && e.st !== 'R') {
+    const zdania = [e.d, e.m, e.u, e.ev, e.w].join(' ').split(/(?<=[.!?])\s+/);
+    const sklad = /skład|zawiera|suma|mieszank|composition|contains|add up|blend/i;
+    const liczba = /\b\d+([.,]\d+)?\s?(mg|mcg|µg|j\.m\.|IU)\b/i;
+    if (zdania.some(z => liczba.test(z) && !sklad.test(z)))
+      flag(e, 'liczbowa dawka przy substancji niezatwierdzonej');
+  }
   // powtorzone zdanie w obrebie wpisu
   const zd = (e.d + ' ' + e.m + ' ' + e.u + ' ' + e.ev + ' ' + e.w).split(/(?<=\.)\s+/).map(x => x.trim()).filter(x => x.length > 40);
   const dup = zd.filter((x, j) => zd.indexOf(x) !== j);
