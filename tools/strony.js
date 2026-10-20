@@ -182,6 +182,8 @@ const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(root, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   `<url><loc>https://pepsafe.info/</loc><lastmod>${today}</lastmod><priority>1.0</priority></url>\n` +
+  `<url><loc>https://pepsafe.info/en/</loc><lastmod>${today}</lastmod><priority>1.0</priority></url>\n` +
+  `<url><loc>https://pepsafe.info/pl/</loc><lastmod>${today}</lastmod><priority>1.0</priority></url>\n` +
   urls.map(u => `<url><loc>${u}</loc><lastmod>${today}</lastmod><priority>0.7</priority></url>`).join('\n') +
   `\n</urlset>\n`);
 

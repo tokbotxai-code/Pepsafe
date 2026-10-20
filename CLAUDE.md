@@ -148,3 +148,12 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Instagram prowadzi dalej pełną treść z nazwami — tam ograniczeń nie ma.
 - Wracamy do tematów z nazwami na TikToku dopiero, gdy ograniczenia znikną i kilka filmów przyrodniczych
   z rzędu wyjdzie bez kary.
+
+## Osobne adresy językowe (od 20.10.2026)
+- `node tools/jezyki.js` buduje `/pl/index.html` i `/en/index.html` — kopie strony głównej z zablokowanym
+  językiem, własnym `canonical`, tytułem, opisem i wzajemnym `hreflang`. Korzeń `/` zostaje jako `x-default`
+  z automatycznym wykrywaniem języka.
+- Powód: `/` i `/?lang=en` zwracały ten sam dokument, więc wersja angielska nie istniała dla wyszukiwarek.
+- Kolejność przy zmianach w `index.html`: najpierw `node tools/jezyki.js`, potem `node tools/strony.js`
+  (ten drugi przebudowuje sitemapę, która zawiera `/`, `/en/`, `/pl/`, `/p/` i 246 stron substancji + FAQ).
+- Nie edytuj `pl/` ani `en/` ręcznie — są generowane i zostaną nadpisane.
