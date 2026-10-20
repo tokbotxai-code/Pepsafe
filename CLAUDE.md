@@ -64,6 +64,12 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Nie robimy poradników „jak kupić bezpiecznie” (np. jak sprawdzić sprzedawcę/COA przed zakupem). Ujęcie: fakty, ryzyka, triki marketingu, status prawny.
 - Hashtagi bez #biohacking #fitness #gym #bodybuilding przy nazwach substancji.
 - Nazwy substancji piszemy normalnie (bez zmieniania pisowni, kropek, spacji).
+- **Nazwy substancji nie trafiają do hashtagów** (zostają w treści jako zwykłe słowa). Hashtag typu `#bpc157`
+  stawia nazwę wprost w indeksie wyszukiwania TikToka i tak zdjęto film o WADA z 20.10.
+- **Bez emotki 🚫** i bez otwierania opisu od „zakazane / banned / prohibited list”. Dla klasyfikatora TikToka
+  „substancje zakazane” + nazwa substancji to sygnał treści narkotykowej, nawet gdy piszemy o antydopingu w sporcie.
+  Zamiast tego neutralnie: „WADA's 2026 list — what changed”.
+- Pierwsze zdanie opisu to ciekawostka albo fakt, nigdy zakaz ani ostrzeżenie.
 
 ## Zaproszenie do pytań i wiadomości prywatnych
 - Każdy post ma pierwszy komentarz (`firstCommentText`) w języku posta:
