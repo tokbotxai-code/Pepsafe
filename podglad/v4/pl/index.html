@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pl" style="color-scheme:light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PepSafe — fakty o peptydach, bez sprzedaży</title>
+<meta name="description" content="Katalog 123 peptydów i substancji pokrewnych: status prawny, co pokazują badania i które grupy działają na ten sam receptor. Treść edukacyjna, nic nie jest na sprzedaż.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Przejdź do treści</a>
+
+<header class="bar">
+  <nav class="wrap">
+    <a class="brand" href="#top"><span class="logo"><i></i></span>PepSafe</a>
+    <ul class="links">
+      <li><a href="#overlap">Sprawdzarka</a></li>
+      <li><a href="#catalog">Katalog</a></li>
+      <li><a href="#daily">Peptyd dnia</a></li>
+      <li><a href="#faq">Pytania</a></li>
+    </ul>
+    <div class="tools">
+      <a class="lang" href="../en/">EN</a>
+      <a class="btn" href="#catalog">Otwórz katalog</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section id="top" class="hero paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="badge reveal">Niezależnie · niekomercyjnie<i class="dot" aria-hidden="true"></i></p>
+      <h1 class="display">
+        <span class="reveal">Krótkie łańcuchy.</span>
+        <span class="reveal dim">Długie konsekwencje.</span>
+        <span class="reveal">Najpierw dowody.</span>
+      </h1>
+      <p class="lede reveal">Przewodnik po 123 peptydach i substancjach pokrewnych: czym każda z nich jest, co naprawdę pokazują badania, czy jakikolwiek regulator ją zatwierdził i które grupy działają na ten sam receptor. Nic tu nie jest na sprzedaż, a dawek dla substancji niezatwierdzonych nie podajemy nigdy.</p>
+      <p class="actions reveal">
+        <a class="btn big" href="#overlap">Sprawdź dublowanie<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="var(--neon)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn ghost big" href="#catalog">Zobacz wszystkie 123</a>
+      </p>
+    </div>
+    <aside class="rail">
+      <p class="kick reveal">Katalog według statusu</p>
+      <dl><div class="rail-row reveal">
+      <dt>Zatwierdzone leki</dt>
+      <dd class="num"><span data-count="62">62</span></dd>
+    </div>
+<div class="rail-row reveal">
+      <dt>Niezatwierdzone</dt>
+      <dd class="num"><span data-count="41">41</span></dd>
+    </div>
+<div class="rail-row reveal">
+      <dt>W badaniach klinicznych</dt>
+      <dd class="num"><span data-count="3">3</span></dd>
+    </div>
+<div class="rail-row reveal">
+      <dt>Sprzedanych produktów</dt>
+      <dd class="num"><span data-count="0">0</span><i class="dot" aria-hidden="true"></i></dd>
+    </div></dl>
+    </aside>
+  </div>
+</section>
+
+<section id="overlap" class="field">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="kick reveal">01 — Sprawdzarka dublowania</p><h2 class="display reveal">Dwie nazwy, jeden receptor.</h2></div>
+      <p class="reveal lead">Najczęstszy błąd w internecie to łączenie substancji działających na ten sam cel. Wybierz dwie grupy i zobacz, czy się pokrywają — razem z powodem, nie samym czerwonym światłem.</p>
+    </div>
+    <div class="bento">
+      <div class="tile glass span4 reveal">
+        <form id="checker" onsubmit="return false">
+          <div class="picks">
+            <label><span class="kick">Grupa A</span>
+              <select id="selA"><option value="glp1" selected>Agoniści GLP-1 i pokrewni (GIP, glukagon)</option><option value="amylin">Analogi amyliny</option><option value="gh">Oś hormonu wzrostu i IGF-1</option><option value="gnrh">Oś GnRH (agoniści, antagoniści i pobudzacze)</option><option value="sst">Analogi somatostatyny</option><option value="pth">Analogi parathormonu</option><option value="mc">Agoniści receptorów melanokortynowych</option><option value="vp">Wazopresyna i jej analogi</option><option value="gcc">Agoniści cyklazy guanylowej C</option><option value="anticoag">Leki przeciwkrzepliwe stosowane przy zabiegach na tętnicach</option><option value="repair">Peptydy „na regenerację” (niezatwierdzone)</option><option value="muscle">Substancje wokół miostatyny i wzrostu mięśni</option><option value="cns">Peptydy „na mózg i nastrój” (niezatwierdzone lub regionalne)</option><option value="long">Substancje „przeciwstarzeniowe” (niezatwierdzone)</option><option value="fat">Niezatwierdzone substancje „na odchudzanie”</option></select></label>
+            <label><span class="kick">Grupa B</span>
+              <select id="selB"><option value="glp1">Agoniści GLP-1 i pokrewni (GIP, glukagon)</option><option value="amylin">Analogi amyliny</option><option value="gh">Oś hormonu wzrostu i IGF-1</option><option value="gnrh">Oś GnRH (agoniści, antagoniści i pobudzacze)</option><option value="sst">Analogi somatostatyny</option><option value="pth">Analogi parathormonu</option><option value="mc">Agoniści receptorów melanokortynowych</option><option value="vp">Wazopresyna i jej analogi</option><option value="gcc">Agoniści cyklazy guanylowej C</option><option value="anticoag" selected>Leki przeciwkrzepliwe stosowane przy zabiegach na tętnicach</option><option value="repair">Peptydy „na regenerację” (niezatwierdzone)</option><option value="muscle">Substancje wokół miostatyny i wzrostu mięśni</option><option value="cns">Peptydy „na mózg i nastrój” (niezatwierdzone lub regionalne)</option><option value="long">Substancje „przeciwstarzeniowe” (niezatwierdzone)</option><option value="fat">Niezatwierdzone substancje „na odchudzanie”</option></select></label>
+          </div>
+          <output id="verdict" class="verdict">
+            <b>Różne grupy — różne cele</b>
+            <span>Działają na inne cele, więc nie ma tu dublowania. To nie znaczy, że są bezpieczne razem: o interakcjach poza wspólnym receptorem decyduje lekarz, nie tabelka.</span>
+          </output>
+          <div hidden id="answers"><p class="answer" id="a-glp1" hidden>
+      <b>Nie łączyć: dublowanie mechanizmu</b> Wszystkie działają na receptory GLP-1, część także na GIP lub glukagon. Producent tirzepatydu podaje, że nie ma danych klinicznych o łączeniu z innym agonistą GLP-1. Skutkiem mogą być silniejsze działania niepożądane bez dodatkowej korzyści: nudności, wymioty, odwodnienie i hipoglikemia przy innych lekach. <span class="muted">11 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-amylin" hidden>
+      <b>Nie łączyć: dublowanie mechanizmu</b> Oba są analogami amyliny i działają na te same receptory. Brak danych o łączeniu, a nasilone działanie obejmuje nudności i hipoglikemię przy insulinie. <span class="muted">2 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-gh" hidden>
+      <b>Nie łączyć: ta sama oś hormonalna</b> Wszystkie pobudzają oś hormonu wzrostu lub IGF-1 albo ją zastępują. Efekty i działania niepożądane mogą się sumować (glikemia, zatrzymywanie płynów, obrzęki). Nie ma badań bezpieczeństwa takich zestawów, a dla części substancji nie ma zatwierdzenia. <span class="muted">8 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-gnrh" hidden>
+      <b>Nie łączyć na własną rękę</b> Agoniści i antagoniści GnRH to różne strategie leczenia tej samej osi hormonalnej, wybierane przez specjalistę. Mieszanie ich bez protokołu zaburza gospodarkę hormonalną. <span class="muted">7 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-sst" hidden>
+      <b>Nie łączyć: dublowanie mechanizmu</b> Wszystkie wiążą receptory somatostatyny. Dublowanie nasila wpływ na glikemię, trawienie i serce. Dobór leku robi endokrynolog. <span class="muted">3 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-pth" hidden>
+      <b>Nie łączyć: ten sam receptor</b> Oba pobudzają receptor PTH1. Nie ma danych o korzyści z jednoczesnego stosowania, a ulotki nie przewidują takiego łączenia. <span class="muted">2 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-mc" hidden>
+      <b>Nie łączyć: dublowanie receptorów</b> Wszystkie aktywują receptory melanokortynowe. PT-141 (bremelanotyd) to pochodna Melanotanu II bez końcowej grupy amidowej, opisywana też jako jego prawdopodobny metabolit, więc działają podobnie. Różni je status: PT-141 jest zatwierdzony, Melanotan II nie. Ryzyko: wzrost ciśnienia, nudności, zmiany znamion. <span class="muted">4 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-vp" hidden>
+      <b>Nie łączyć: dublowanie receptorów wazopresyny</b> Wszystkie działają na receptory wazopresyny. Desmopresyna niesie ryzyko niskiego sodu (hiponatremii), a dublowanie je zwiększa. To leki szpitalne lub zlecane przez specjalistę. <span class="muted">3 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-gcc" hidden>
+      <b>Nie łączyć: ten sam mechanizm</b> Oba pobudzają ten sam receptor w jelicie. Dublowanie nasila biegunkę i ryzyko odwodnienia. <span class="muted">2 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-anticoag" hidden>
+      <b>Ryzyko krwawień</b> Oba działają przeciwzakrzepowo. Łączenie z innymi lekami przeciwkrzepliwymi zwiększa ryzyko krwawień. Decyzje podejmuje zespół kardiologiczny. <span class="muted">2 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-repair" hidden>
+      <b>Nie łączyć: ten sam deklarowany cel, brak danych</b> Wszystkie są reklamowane do gojenia lub regeneracji, a mechanizmy u ludzi są niepotwierdzone. Nakładanie kilku niezbadanych substancji mnoży niewiadome i utrudnia ocenę, co zadziałało lub zaszkodziło. <span class="muted">5 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-muscle" hidden>
+      <b>Nie łączyć: ten sam deklarowany cel, brak danych</b> Dotyczą tej samej osi wzrostu mięśni. Dla żadnej nie ma potwierdzonego bezpieczeństwa u zdrowych ludzi, a ACE-031 przerwano z powodu działań naczyniowych. <span class="muted">4 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-cns" hidden>
+      <b>Nie łączyć: ten sam deklarowany cel, brak danych</b> Wszystkie są opisywane jako wpływające na ośrodkowy układ nerwowy. Łączenie ich ze sobą lub z lekami psychiatrycznymi nie jest przebadane. <span class="muted">8 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-long" hidden>
+      <b>Nie łączyć: ten sam deklarowany cel, brak danych</b> Reklamowane jako wspierające mitochondria lub opóźniające starzenie, głównie na podstawie badań przedklinicznych. Zestawy nie są badane. <span class="muted">6 wpisów w tej grupie w katalogu.</span></p>
+<p class="answer" id="a-fat" hidden>
+      <b>Nie łączyć: ten sam deklarowany cel, brak danych</b> Reklamowane do redukcji tkanki tłuszczowej, ale bez przekonujących wyników klinicznych. Łączenie ich ze sobą albo z zatwierdzonymi lekami na otyłość nie jest przebadane. <span class="muted">7 wpisów w tej grupie w katalogu.</span></p><p class="answer" id="a-diff">Działają na inne cele, więc nie ma tu dublowania. To nie znaczy, że są bezpieczne razem: o interakcjach poza wspólnym receptorem decyduje lekarz, nie tabelka.</p></div>
+          <p class="sr" data-same="Ta sama grupa — nie łączyć" data-diff="Różne grupy — różne cele"></p>
+        </form>
+      </div>
+      <div class="tile dark span2 reveal">
+        <p class="kick neon">Zasada</p>
+        <p class="display rule">Ten sam receptor,<br>brak dodatkowej korzyści,<br><span class="neon">większe ryzyko.</span></p>
+        <p class="small">Podwojenie mechanizmu rzadko podwaja działanie. Niezawodnie podwaja działania niepożądane.</p>
+      </div>
+      <div class="tile glass span2 reveal">
+        <p class="kick">Badania u ludzi</p>
+        <p class="display big-num">&lt;30</p>
+        <p class="small ink2">uczestników łącznie w trzech badaniach u ludzi najgłośniejszego peptydu „badawczego” — żadne bez grupy kontrolnej.</p>
+      </div>
+      <div class="tile glass span4 reveal">
+        <p class="kick">Co może znaczyć „przebadany”</p>
+        <ol class="ladder">
+          <li><span class="kick">01</span><b>Komórki</b><em>Szalka to nie organizm.</em></li><li><span class="kick">02</span><b>Zwierzęta</b><em>Przechodzi mniej więcej jedno na dziesięć.</em></li><li><span class="kick">03</span><b>Kilka osób</b><em>Często bez grupy kontrolnej.</em></li><li class="last"><span class="kick">04</span><b>Prawdziwe badania</b><em>Tu zaczyna się rejestracja.</em></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="daily" class="band">
+  <div class="wrap daily-grid">
+    <div>
+      <p class="kick reveal">02 — Peptyd dnia</p>
+      <h2 class="display reveal">Tesamorelina</h2>
+      <p class="muted reveal date">2026-10-21</p>
+    </div>
+    <div class="reveal">
+      <p class="lead">Tesamorelina to syntetyczny analog GHRH, czyli hormonu uwalniającego hormon wzrostu, i jest jednym z niewielu peptydów tego typu, które przeszły pełną ocenę rejestracyjną. FDA zatwierdziła ją w 2010 r. pod nazwą handlową Egrifta, w jednym wąskim wskazaniu: zmniejszanie nadmiaru tłuszczu brzusznego u osób z lipodystrofią związaną z HIV. Podstawą rejestracji były dwa randomizowane badania fazy 3 z grupą placebo, w których obserwowano spadek tkanki tłuszczowej trzewnej, a jednocześnie wzrost IGF-1 i przypadki pogorszenia tolerancji glukozy. Producent ma obowiązek monitorowania bezpieczeństwa po rejestracji, a lek jest wydawany na receptę. Dla porównania: najgłośniejsze w internecie peptydy, takie jak BPC-157 czy TB-500, nigdy nie przeszły takiej procedury i nie mają statusu leku.</p>
+      <p class="kick srcs">Źródła</p><ul class="srcs-list"><li><a href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=022505" rel="nofollow noopener" target="_blank">FDA: Egrifta (tesamorelin) approval history</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/20554713/" rel="nofollow noopener" target="_blank">Falutz et al., Effects of tesamorelin on visceral fat in HIV-associated lipodystrophy, JCEM 2010</a></li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="catalog">
+  <div class="wrap cat-grid">
+    <div>
+      <p class="kick reveal">03 — Katalog</p>
+      <h2 class="display reveal">Najpierw status, potem historia.</h2>
+      <p class="lead reveal">Każdy wpis zaczyna się od statusu prawnego, potem mówi, co pokazują badania, a na końcu na co uważać. Źródła są podlinkowane. Gdzie dowodów jest mało, piszemy to wprost, zamiast zasypywać lukę przymiotnikami.</p>
+      <p class="reveal"><a class="more" href="/p/">Wszystkie 123 wpisów<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+    <div class="cards"><a class="card tile reveal" href="/p/semaglutide.pl.html">
+      <span><b>Semaglutyd</b><em>Agonista GLP-1</em></span>
+      <span class="pill ok">Zatwierdzony lek</span></a>
+<a class="card tile reveal" href="/p/tesamorelin.pl.html">
+      <span><b>Tesamorelina</b><em>Analog GHRH</em></span>
+      <span class="pill ok">Zatwierdzony lek</span></a>
+<a class="card tile reveal" href="/p/retatrutide.pl.html">
+      <span><b>Retatrutyd</b><em>Potrójny agonista GIP, GLP-1 i glukagonu</em></span>
+      <span class="pill mid">W badaniach klinicznych</span></a>
+<a class="card tile reveal" href="/p/bpc-157.pl.html">
+      <span><b>BPC-157</b><em>Peptyd „badawczy”</em></span>
+      <span class="pill warn">Niezatwierdzony</span></a>
+<a class="card tile reveal" href="/p/melanotan-ii.pl.html">
+      <span><b>Melanotan II</b><em>Analog alfa-MSH</em></span>
+      <span class="pill warn">Niezatwierdzony</span></a>
+<a class="card tile reveal" href="/p/ghk-cu.pl.html">
+      <span><b>GHK-Cu</b><em>Peptyd kosmetyczny</em></span>
+      <span class="pill warn">Kosmetyk lub suplement</span></a></div>
+  </div>
+</section>
+
+<section id="faq" class="band">
+  <div class="wrap">
+    <p class="kick reveal">04 — Pytania</p>
+    <div class="faq">
+      <details class="reveal"><summary>Czy peptydy to białka?</summary><p>Peptydy i białka są zbudowane z tych samych aminokwasów. Peptydy są krótsze, a białka dłuższe i ułożone w stabilną strukturę. Granica jest umowna, często około 50 aminokwasów.</p></details>
+<details class="reveal"><summary>Czy peptydy z kremu docierają do skóry właściwej?</summary><p>To zależy od cząsteczki i nośnika. Duże cząsteczki słabo przenikają przez naskórek, dlatego producenci modyfikują peptydy, np. dołączając kwas tłuszczowy. Wiele danych pochodzi z badań laboratoryjnych.</p></details>
+<details class="reveal"><summary>Dlaczego leki peptydowe zwykle się wstrzykuje?</summary><p>Peptydy są trawione przez kwas i enzymy w przewodzie pokarmowym, zatrzymywane przez śluz i słabo przechodzą przez nabłonek jelita. Wyjątkiem jest semaglutyd w tabletce zatwierdzony w 2019 r., który działa z dodatkiem ułatwiającym wchłanianie.</p></details>
+<details class="reveal"><summary>Czy peptydy z internetu są bezpieczne?</summary><p>Produkty „tylko do badań” nie przechodzą kontroli jak leki, a dane o ich działaniu u ludzi są skąpe. Szczegóły są w artykule na blogu.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="dark-sec">
+  <div class="wrap">
+    <p class="kick neon reveal">05 — Czym to nie jest</p>
+    <h2 class="display reveal huge">Bez sklepu. Bez dawek od obcych. Bez obietnic.</h2>
+    <div class="cols"><p class="reveal">Dawki podajemy wyłącznie dla zatwierdzonych leków, prosto z etykiety, i tylko jako informację — nigdy jako zalecenie.</p><p class="reveal">Dla substancji niezatwierdzonych nie ma dawki do podania. Jeśli bezpieczeństwo u ludzi jest nieustalone, to jest wynik, a nie luka do wypełnienia.</p><p class="reveal">Treść edukacyjna, nie porada medyczna. Decyzje o leczeniu należą do lekarza, który zna Twój przypadek.</p></div>
+  </div>
+  <i class="glow" aria-hidden="true"></i>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>PepSafe — fakty o peptydach, bez sprzedaży. Treść edukacyjna, nie porada medyczna.</p>
+    <p><button id="motion" class="linkish" data-off="Zatrzymaj ruch" data-on="Włącz ruch">Zatrzymaj ruch</button> · <span class="mono">pepsafe.info</span></p>
+  </div>
+</footer>
+
+<script src="../assets/ruch.js" defer></script>
+</body>
+</html>
