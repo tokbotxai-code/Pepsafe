@@ -18,11 +18,11 @@ const box = { console, window: {}, document: {} }; vm.createContext(box);
 vm.runInContext('var D=[];function E(n,a,s,c,cat,f,d,m,u,ev,w,q,wa){D.push({n,a,s,c,cat,f,d,m,u,ev,w,q:q||"",wa:!!wa});}', box);
 const ds = at(/^var ST=\{A:/), de = lines.length - [...lines].reverse().findIndex(l => /^E\(/.test(l));
 vm.runInContext(slice(ds, de).replace(/^var D=\[\].*$/m, '').replace(/^function E\(.*$/m, ''), box);
-for (const re of [/^var FAMS=/, /^var DAILY=\[/, /^var FAQ=\[/, /^var QA=\[/, /^var ALERTS=/, /^var TRICKS=/, /^var MYTHS=/, /^var DOSE=/]) {
+for (const re of [/^var GL=/, /^var CONFUSE=/, /^var POSTS=/, /^var FAMS=/, /^var DAILY=\[/, /^var FAQ=\[/, /^var QA=\[/, /^var ALERTS=/, /^var TRICKS=/, /^var MYTHS=/, /^var DOSE=/]) {
   const i = at(re); if (i >= 0) vm.runInContext(slice(i, until(i)), box);
 }
 for (const re of [/^var SRC=\{/, /^var WADA=\{/, /^var WADA_URL=/, /^var SY_PL=/, /^var SY_EN=/]) { const i = at(re); if (i >= 0) vm.runInContext(lines[i], box); }
-const { D, EN, ST, ST_EN, FAMS, FAMS_EN, DAILY, FAQ, QA, ALERTS, TRICKS, MYTHS, SRC, WADA, WADA_URL, DOSE, SY_PL, SY_EN } = box;
+const { D, EN, ST, ST_EN, FAMS, FAMS_EN, DAILY, FAQ, QA, ALERTS, TRICKS, MYTHS, SRC, WADA, WADA_URL, DOSE, SY_PL, SY_EN, GL, CONFUSE, POSTS } = box;
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -88,7 +88,12 @@ const W = {
     entries: 'entries', listedWada: 'Listed by WADA in class', always: ', prohibited at all times',
     save: 'Save', saved: 'Saved', pick: 'Pick a substance', clear: 'Clear',
     dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved',
-    menuLab: 'Menu', menuClose: 'Close menu', findLab: 'Search', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
+    menuLab: 'Menu', menuClose: 'Close menu', findLab: 'Search',
+    glossNav: 'Glossary', glossH: 'The words, in plain language.',
+    glossLead: 'Terms that come up on every page, explained once so the rest of the site reads easily.',
+    blogNav: 'Reading', blogH: 'Longer pieces.',
+    blogLead: 'Where a single entry is not enough: what a document proves, what a vote changed, what a study actually measured.',
+    readMin: 'min read', allPieces: 'All pieces', confused: 'Often confused with', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
     findNone: 'Nothing matches that.', findClose: 'Close', findMore: 'See all results',
     follow: 'Follow', contact: 'Contact', writeUs: 'Write to us',
     contactP: 'Questions, a correction, a source we missed? Send us a direct message on TikTok or Instagram. We read every one and answer the best ones in a Q&A. We never advise on doses, where to buy, or how to use anything.',
@@ -130,7 +135,12 @@ const W = {
     entries: 'wpisów', listedWada: 'Wymieniony przez WADA w klasie', always: ', zakazany zawsze',
     save: 'Zapisz', saved: 'Zapisane', pick: 'Wybierz substancję', clear: 'Wyczyść',
     dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane',
-    menuLab: 'Menu', menuClose: 'Zamknij menu', findLab: 'Szukaj', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
+    menuLab: 'Menu', menuClose: 'Zamknij menu', findLab: 'Szukaj',
+    glossNav: 'Słownik', glossH: 'Słowa, po ludzku.',
+    glossLead: 'Pojęcia, które wracają na każdej stronie, wyjaśnione raz, żeby resztę czytało się łatwo.',
+    blogNav: 'Do czytania', blogH: 'Dłuższe teksty.',
+    blogLead: 'Tam, gdzie jeden wpis nie wystarcza: co dokument naprawdę potwierdza, co zmieniło głosowanie, co zmierzyło badanie.',
+    readMin: 'min czytania', allPieces: 'Wszystkie teksty', confused: 'Bywa mylone z', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
     findNone: 'Nic nie pasuje.', findClose: 'Zamknij', findMore: 'Zobacz wszystkie wyniki',
     follow: 'Obserwuj', contact: 'Kontakt', writeUs: 'Napisz do nas',
     contactP: 'Pytanie, sprostowanie, przeoczone źródło? Napisz do nas wiadomość prywatną na TikToku albo Instagramie. Czytamy każdą, a najciekawsze omawiamy w Q&A. Nigdy nie doradzamy dawek, miejsc zakupu ani sposobu stosowania.',
@@ -185,7 +195,8 @@ function layout(o) {
     : other + '/' + (o.twin || ''));
   const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['dosing.html', t.dosingNav],
   ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
-  ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['about.html', t.nav.about]];
+  ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['blog.html', t.blogNav],
+  ['glossary.html', t.glossNav], ['about.html', t.nav.about]];
   return `<!doctype html>
 <html lang="${L}" data-theme="light">
 <head>
@@ -556,11 +567,96 @@ function card(e, L) {
     ${e.q ? `<section class="blk reveal"><h2 class="kick">${esc(t.seq)}</h2><p class="seq">${esc(e.q)}</p></section>` : ''}
     ${src.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul></section>` : ''}
     ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.related)}</h2><div class="cards">${sibs.map(s => cardRow(s, en, L)).join('')}</div></section>` : ''}
+    ${(() => {
+      const mix = ((CONFUSE || {})[e.n] || []).map(x => D.find(y => y.n === x)).filter(Boolean)
+        .filter(x => !sibs.some(sb => sb.n === x.n));
+      return mix.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.confused)}</h2><div class="cards">${mix.map(x => cardRow(x, en, L)).join('')}</div></section>` : '';
+    })()}
   </div>
 </article>`;
   return layout({
     lang: L, here: 'catalog.html', depth: 1, twin: cardPath(e, L), body,
     title: `${name} — ${statusOf(e, en)} | PepSafe`, desc: clip(`${name} — ${statusOf(e, en)}. ${d}`, 155)
+  });
+}
+
+const postSlug = x => slug(x.title.en || x.title.pl);
+
+function glossary(L) {
+  const en = L === 'en', t = W[L];
+  const rows = (GL || []).map(g => (en ? g.en : g.pl)).filter(Boolean)
+    .sort((a, b) => a[0].localeCompare(b[0], en ? 'en' : 'pl'));
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">${esc(t.glossNav)}</p>
+    <h1 class="display reveal">${esc(t.glossH)}</h1>
+    <p class="lede reveal">${esc(t.glossLead)}</p>
+  </div>
+</section>
+<section><div class="wrap narrow">
+  <dl class="gloss">${rows.map(r => `<div class="gloss-row reveal"><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join('')}</dl>
+</div></section>`;
+  return layout({
+    lang: L, here: 'glossary.html', twin: 'glossary.html', body,
+    title: (en ? 'Glossary' : 'Słownik') + ' | PepSafe', desc: t.glossLead
+  });
+}
+
+function blogIndex(L) {
+  const en = L === 'en', t = W[L];
+  const items = (POSTS || []).filter(x => x && x.title);
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">${esc(t.blogNav)}</p>
+    <h1 class="display reveal">${esc(t.blogH)}</h1>
+    <p class="lede reveal">${esc(t.blogLead)}</p>
+  </div>
+</section>
+<section><div class="wrap">
+  <div class="grid-cards">${items.map(x => `
+    <a class="card tile reveal piece" href="${BASE}${L}/t/${postSlug(x)}.html">
+      <span><em class="kick">${esc((x.tag || {})[L] || '')}</em>
+      <b>${esc(x.title[L] || x.title.pl)}</b>
+      <em>${x.min} ${esc(t.readMin)}</em></span>${ARROW}
+    </a>`).join('')}</div>
+</div></section>`;
+  return layout({
+    lang: L, here: 'blog.html', twin: 'blog.html', body,
+    title: (en ? 'Reading' : 'Do czytania') + ' | PepSafe', desc: t.blogLead
+  });
+}
+
+function piece(x, L) {
+  const en = L === 'en', t = W[L];
+  const paras = (x.p[L] || x.p.pl || []);
+  const others = (POSTS || []).filter(y => y !== x).slice(0, 3);
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <p class="kick reveal">${esc((x.tag || {})[L] || '')} · ${x.min} ${esc(t.readMin)}</p>
+    <h1 class="display reveal">${esc(x.title[L] || x.title.pl)}</h1>
+  </div>
+</section>
+<section><div class="wrap narrow">
+  ${paras.map(para => `<p class="lead reveal">${esc(para)}</p>`).join('\n  ')}
+  <p class="actions reveal"><a class="btn big" href="${BASE}${L}/blog.html">${esc(t.allPieces)}${ARROW}</a></p>
+</div></section>
+${others.length ? `<section class="band"><div class="wrap">
+  <p class="kick reveal">${esc(t.allPieces)}</p>
+  <div class="grid-cards">${others.map(y => `
+    <a class="card tile reveal piece" href="${BASE}${L}/t/${postSlug(y)}.html">
+      <span><em class="kick">${esc((y.tag || {})[L] || '')}</em><b>${esc(y.title[L] || y.title.pl)}</b>
+      <em>${y.min} ${esc(t.readMin)}</em></span>${ARROW}</a>`).join('')}</div>
+</div></section>` : ''}`;
+  return layout({
+    lang: L, here: 't/' + postSlug(x) + '.html', twin: 't/' + postSlug(x) + '.html', body,
+    title: (x.title[L] || x.title.pl) + ' | PepSafe',
+    desc: clip(paras[0] || '', 155)
   });
 }
 
@@ -916,7 +1012,8 @@ for (const L of LANGS) {
   const pages = {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
     'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
-    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L)
+    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L),
+    'blog.html': blogIndex(L), 'glossary.html': glossary(L)
   };
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
   // style, skrypt i obrazki udostepniania trzymamy w src/ i kopiujemy do kazdej kompilacji
@@ -924,6 +1021,8 @@ for (const L of LANGS) {
   fs.writeFileSync(path.join(out, 'assets', 'dane-' + L + '.js'), dataFile(L));
   for (const [f, html] of Object.entries(pages)) { fs.writeFileSync(path.join(dir, f), html); n++; }
   for (const e of D) { fs.writeFileSync(path.join(out, cardPath(e, L)), card(e, L)); n++; }
+  fs.mkdirSync(path.join(dir, 't'), { recursive: true });
+  for (const x of (POSTS || [])) { fs.writeFileSync(path.join(dir, 't', postSlug(x) + '.html'), piece(x, L)); n++; }
 }
 
 // strony pod starymi adresami, zeby zaden zaindeksowany odnosnik nie zgasl:
@@ -943,13 +1042,36 @@ n += 4;
 const when = new Date().toISOString().slice(0, 10);
 const urls = [''].concat(
   LANGS.flatMap(L => ['index.html', 'catalog.html', 'dosing.html', 'groups.html', 'compare.html',
-    'symptoms.html', 'faq.html', 'alerts.html', 'about.html'].map(f => L + '/' + f)),
+    'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html'].map(f => L + '/' + f)),
+  LANGS.flatMap(L => (POSTS || []).map(x => L + '/t/' + postSlug(x) + '.html')),
   LANGS.flatMap(L => D.map(e => cardPath(e, L))));
 fs.writeFileSync(path.join(out, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   urls.map(u => `  <url><loc>${SITE}${BASE}${u}</loc><lastmod>${when}</lastmod></url>`).join('\n') +
   '\n</urlset>\n');
 console.log(`sitemapa: ${urls.length} adresow`);
+
+// kanal RSS: istniał na starej stronie i był linkowany w stopce, więc nie może zniknąć
+const rssItems = (POSTS || []).map(x => `  <item>
+    <title>${esc(x.title.en || x.title.pl)}</title>
+    <link>${SITE}${BASE}en/t/${postSlug(x)}.html</link>
+    <guid isPermaLink="true">${SITE}${BASE}en/t/${postSlug(x)}.html</guid>
+    <description>${esc(clip((x.p.en || x.p.pl || [])[0] || '', 300))}</description>
+  </item>`).join('\n');
+fs.writeFileSync(path.join(out, 'feed.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>PepSafe</title>
+  <link>${SITE}${BASE}en/</link>
+  <description>Peptide facts, no sales. Status, evidence and warnings for ${D.length} substances.</description>
+  <language>en</language>
+  <atom:link href="${SITE}${BASE}feed.xml" rel="self" type="application/rss+xml"/>
+${rssItems}
+</channel>
+</rss>
+`);
+console.log(`kanal RSS: ${(POSTS || []).length} tekstow`);
 
 console.log(`zbudowano ${n} stron: ${LANGS.length} języki × (10 + ${D.length} kart)`);
 console.log(`dawkowanie: ${(DOSE || []).length} pozycji, objawy: ${((SY_PL||[]).length)} hasel`);

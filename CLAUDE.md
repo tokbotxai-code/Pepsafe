@@ -129,7 +129,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   i `CLOUDFLARE_ACCOUNT_ID` w zmiennych środowiska.
 
 ## Budowanie strony (od 20.10.2026)
-- Jedyne źródło treści to `dane.html` (katalog `E(...)`, `DAILY`, `FAQ`, `DOSE`, `FAMS`, `ALERTS`, `WADA` itd.).
+- Jedyne źródło treści to `dane.html`. Generator czyta z niego: `D` (katalog), `EN`, `ST`, `FAMS`, `DAILY`,
+  `FAQ`, `QA`, `ALERTS`, `TRICKS`, `MYTHS`, `SRC`, `WADA`, `DOSE`, `SY_PL/SY_EN`, **`GL` (słownik),
+  `CONFUSE` (bywa mylone z) i `POSTS` (dłuższe teksty)**. Dodając nowy blok danych, dopisz go do listy
+  wczytywanych bloków w `tools/v4.js`, inaczej po cichu zniknie ze strony.
   Zmiany wprowadzaj tylko tam.
 - Nowe substancje dodawaj skryptem: zapisz wpisy do pliku JSON i uruchom **`node tools/dodaj.js <plik.json>`**
   (pola: n, a, s, c, cat, fam, d, m, u, ev, w, opcjonalnie q i wa, oraz `en` — 7 pól wersji angielskiej).
@@ -150,6 +153,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - **Żaden z 252 adresów zaindeksowanych przed przebudową nie może zgasnąć.** Po każdej zmianie struktury
   sprawdź wszystkie `<loc>` ze starej sitemapy (`git show <commit>:sitemap.xml`) i upewnij się, że zwracają 200.
 - Po publikacji zgłoś zmiany: POST na `api.indexnow.org/indexnow` z kluczem z pliku `*.txt` w korzeniu.
+- **Po każdej zmianie szablonu sprawdź, czy nic nie wypadło:** `grep -c cf-beacon index.html` (licznik),
+  `ls en/t | wc -l` (teksty), `grep -c gloss-row en/glossary.html` (słownik), `head -3 feed.xml` (RSS).
+  Przy przenosinach na v4 zniknęły licznik odwiedzin, słownik, 6 tekstów, powiązania „bywa mylone z”
+  i kanał RSS — wszystkie dlatego, że generator ich po prostu nie czytał.
 
 ## Formularze
 - Kontakt (`/<lang>/about.html#contact`) i zgłoszenie skutku ubocznego (`/<lang>/symptoms.html#report`)

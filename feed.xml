@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>PepSafe</title>
+  <link>https://pepsafe.info/en/</link>
+  <description>Peptide facts, no sales. Status, evidence and warnings for 201 substances.</description>
+  <language>en</language>
+  <atom:link href="https://pepsafe.info/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>KLOW 80: what is in the vial and what we don't know</title>
+    <link>https://pepsafe.info/en/t/klow-80-what-is-in-the-vial-and-what-we-don-t-know.html</link>
+    <guid isPermaLink="true">https://pepsafe.info/en/t/klow-80-what-is-in-the-vial-and-what-we-don-t-know.html</guid>
+    <description>KLOW is a blend of four peptides in one vial: GHK-Cu, BPC-157, TB-500 and KPV. The 80 is the total mass in milligrams. Sellers usually list 50 mg GHK-Cu and 10 mg each of BPC-157, TB-500 and KPV, but ratios vary between makers and nobody checks them independently. KLOW is essentially the GLOW…</description>
+  </item>
+  <item>
+    <title>The July 2026 FDA committee vote: what it really means for BPC-157 and others</title>
+    <link>https://pepsafe.info/en/t/the-july-2026-fda-committee-vote-what-it-really-means-for-bpc-157-and-others.html</link>
+    <guid isPermaLink="true">https://pepsafe.info/en/t/the-july-2026-fda-committee-vote-what-it-really-means-for-bpc-157-and-others.html</guid>
+    <description>On 22–23 July 2026 the FDA Pharmacy Compounding Advisory Committee (PCAC) reviewed seven peptides. It backed six: BPC-157, TB-500 and KPV (each 8 to 6 with one abstention), plus MOTS-c, Semax and Epitalon. It rejected DSIP (emideltide) 6 to 7.</description>
+  </item>
+  <item>
+    <title>Amino acid, peptide, protein: what is the difference</title>
+    <link>https://pepsafe.info/en/t/amino-acid-peptide-protein-what-is-the-difference.html</link>
+    <guid isPermaLink="true">https://pepsafe.info/en/t/amino-acid-peptide-protein-what-is-the-difference.html</guid>
+    <description>Amino acids are the building blocks. Humans use 20 standard amino acids, each with an amino and a carboxyl group. When the carboxyl group of one joins the amino group of the next, a peptide bond forms and a molecule of water is released.</description>
+  </item>
+  <item>
+    <title>Peptides in cosmetics: studies versus marketing</title>
+    <link>https://pepsafe.info/en/t/peptides-in-cosmetics-studies-versus-marketing.html</link>
+    <guid isPermaLink="true">https://pepsafe.info/en/t/peptides-in-cosmetics-studies-versus-marketing.html</guid>
+    <description>Manufacturers usually split cosmetic peptides into signal peptides (meant to prompt skin cells to make collagen), carrier peptides such as copper-binding GHK-Cu, and neuromodulating ones such as acetyl hexapeptide-8, marketed as “Botox in a cream”.</description>
+  </item>
+  <item>
+    <title>Collagen powder: what the studies show</title>
+    <link>https://pepsafe.info/en/t/collagen-powder-what-the-studies-show.html</link>
+    <guid isPermaLink="true">https://pepsafe.info/en/t/collagen-powder-what-the-studies-show.html</guid>
+    <description>Hydrolyzed collagen is collagen broken by enzymes into short peptides. In the gut it is digested further into amino acids and di- and tripeptides, and some short fragments have been detected in blood after eating.</description>
+  </item>
+  <item>
+    <title>“Research use only” peptides: why they are a bad idea</title>
+    <link>https://pepsafe.info/en/t/research-use-only-peptides-why-they-are-a-bad-idea.html</link>
+    <guid isPermaLink="true">https://pepsafe.info/en/t/research-use-only-peptides-why-they-are-a-bad-idea.html</guid>
+    <description>Peptides labelled “for laboratory research only”, such as BPC-157, are sold online. Many are not approved as drugs. Such products need not meet drug manufacturing standards, so contents, purity, strength and sterility are hard to verify.</description>
+  </item>
+</channel>
+</rss>
