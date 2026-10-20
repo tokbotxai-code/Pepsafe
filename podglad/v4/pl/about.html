@@ -86,10 +86,26 @@
   <p class="kick reveal">Kontakt</p>
   <h2 class="display sm reveal">Napisz do nas</h2>
   <p class="lede reveal">Pytanie, sprostowanie, przeoczone źródło? Napisz do nas wiadomość prywatną na TikToku albo Instagramie. Czytamy każdą, a najciekawsze omawiamy w Q&amp;A. Nigdy nie doradzamy dawek, miejsc zakupu ani sposobu stosowania.</p>
-  <p class="actions reveal">
-    <a class="btn big" href="https://www.tiktok.com/@pepsafe.info" rel="me noopener" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg>&nbsp;TikTok — @pepsafe.info</a>
-    <a class="btn ghost big" href="https://www.instagram.com/pepsafe.info/" rel="me noopener" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>&nbsp;Instagram — @pepsafe.info</a>
-  </p>
+  <form class="sheet reveal" id="coForm" novalidate>
+    <div class="f2">
+      <p class="frow"><label for="coName">Imię</label><input type="text" id="coName" name="name" autocomplete="name" maxlength="80" required></p>
+      <p class="frow"><label for="coEmail">Twój e-mail</label><input type="email" id="coEmail" name="email" autocomplete="email" maxlength="120" required></p>
+    </div>
+    <p class="frow"><label for="coTopic">Temat</label><select id="coTopic" name="topic"><option>Pytanie o katalog</option><option>Poprawka lub błąd w treści</option><option>Propozycja tematu lub brakującego wpisu</option><option>Mylący marketing</option><option>Inne</option></select></p>
+    <p class="frow"><label for="coMsg">Wiadomość</label><textarea id="coMsg" name="message" rows="5" maxlength="2000" required></textarea></p>
+    <p class="check"><label><input type="checkbox" id="coCons"> <span>Zgadzam się na przetwarzanie podanych danych w celu odpowiedzi na wiadomość.</span></label></p>
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
+    <p class="formfoot"><button class="btn big" type="submit" data-busy="Wysyłanie…">Wyślij wiadomość</button></p>
+    <p class="formmsg" id="coMsgOut" role="status" hidden></p>
+  </form>
+  <div class="stack">
+    <article class="tile glass reveal"><h3 class="gtitle sm">Jak to działa</h3><p class="small ink2">Wiadomość wysyłamy przez formularz. Nie publikujemy jej, a adres e-mail autorów nie jest pokazywany na stronie. Twój e-mail służy tylko do odpowiedzi.</p></article>
+    <article class="tile glass reveal"><h3 class="gtitle sm">TikTok · Instagram</h3>
+      <p class="small ink2">Wolisz z telefonu? Napisz wiadomość prywatną. Czytamy każdą, a najciekawsze omawiamy w Q&A.</p>
+      <p class="social"><a class="soc" href="https://www.tiktok.com/@pepsafe.info" rel="me noopener" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg><span>TikTok — @pepsafe.info</span></a>
+      <a class="soc" href="https://www.instagram.com/pepsafe.info/" rel="me noopener" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span>Instagram — @pepsafe.info</span></a></p></article>
+  </div>
+  <p class="notice reveal">Nie udzielamy porad medycznych ani indywidualnych zaleceń dawkowania. W sprawach zdrowia skontaktuj się z lekarzem.</p>
 </div></section>
 </main>
 
@@ -105,6 +121,7 @@
   </div>
 </footer>
 
+<script>window.PEP_FORM='e081d316-781d-4bb4-971f-759d8d431ce7';</script>
 <script src="../assets/dane-pl.js" defer></script>
 <script src="../assets/ruch.js" defer></script>
 </body>

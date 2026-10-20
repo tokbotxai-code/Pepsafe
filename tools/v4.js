@@ -58,6 +58,7 @@ function searchText(e, en) {
 
 const LANGS = ['en', 'pl'];
 
+const FORM_KEY = 'e081d316-781d-4bb4-971f-759d8d431ce7';  // Web3Forms, ten sam klucz co na starej stronie
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
 const ICO_TT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg>';
@@ -84,7 +85,28 @@ const W = {
     findNone: 'Nothing matches that.', findClose: 'Close', findMore: 'See all results',
     follow: 'Follow', contact: 'Contact', writeUs: 'Write to us',
     contactP: 'Questions, a correction, a source we missed? Send us a direct message on TikTok or Instagram. We read every one and answer the best ones in a Q&A. We never advise on doses, where to buy, or how to use anything.',
-    dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info'
+    dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info',
+    coName: 'Name', coMail: 'Your email', coTopic: 'Topic', coMsg: 'Message',
+    coT: ['Question about the catalog', 'Correction or error', 'Suggest a topic or a missing entry', 'Misleading marketing', 'Other'],
+    coCons: 'I agree to my data being processed to reply to this message.',
+    coSend: 'Send message', coSending: 'Sending\u2026',
+    coErr: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
+    coOk: 'Sent. Thank you, we will reply to the address you gave.',
+    coFail: 'Could not send. Check your connection and try again.',
+    coHowH: 'How it works', coHow: 'The message is sent through the form. We do not publish it, and the authors\u2019 e-mail address is not shown on the site. Your e-mail is used only to reply.',
+    coMed: 'We do not give medical advice or personal dosing recommendations. For health matters, contact your doctor.',
+    efH: 'Report a side effect', efLab: 'Report',
+    efLead: 'Noticed a worrying symptom after a peptide drug? Describe it below and the report goes straight to the site authors. Reports are not published. This is not medical help.',
+    efWarn: 'For an overdose, a severe allergic reaction, chest pain or breathing difficulty call 112 (or your local emergency number) or a poison centre. Do not wait for a reply from us.',
+    efSub: 'Substance', efSym: 'Description of the symptom (no personal data)',
+    efSev: 'Severity', efSev1: 'Mild', efSev2: 'Moderate', efSev3: 'Severe or worrying',
+    efWhen: 'When it happened (e.g. after 2 days)',
+    efCons: 'I understand the report does not replace a doctor, goes only to the site authors and is not published.',
+    efSend: 'Send report', efErr: 'Describe the symptom and tick the consent box.',
+    efOk: 'Sent. Thank you for the report.',
+    efEmerg: 'Sent. With severe symptoms call 112 or your doctor, do not wait for a reply from us.',
+    efNote: 'Reports go only to the site authors and are not published. For severe symptoms (breathlessness, severe abdominal pain, facial swelling, fainting) do not write to us: call emergency services.',
+    official: 'An adverse reaction to an approved medicine is also worth reporting to the regulator:'
   },
   pl: {
     nav: { home: 'Start', catalog: 'Katalog', groups: 'Grupy', faq: 'Pytania', alerts: 'Ostrzeżenia', about: 'O projekcie' },
@@ -102,7 +124,28 @@ const W = {
     findNone: 'Nic nie pasuje.', findClose: 'Zamknij', findMore: 'Zobacz wszystkie wyniki',
     follow: 'Obserwuj', contact: 'Kontakt', writeUs: 'Napisz do nas',
     contactP: 'Pytanie, sprostowanie, przeoczone źródło? Napisz do nas wiadomość prywatną na TikToku albo Instagramie. Czytamy każdą, a najciekawsze omawiamy w Q&A. Nigdy nie doradzamy dawek, miejsc zakupu ani sposobu stosowania.',
-    dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info'
+    dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info',
+    coName: 'Imię', coMail: 'Twój e-mail', coTopic: 'Temat', coMsg: 'Wiadomość',
+    coT: ['Pytanie o katalog', 'Poprawka lub błąd w treści', 'Propozycja tematu lub brakującego wpisu', 'Mylący marketing', 'Inne'],
+    coCons: 'Zgadzam się na przetwarzanie podanych danych w celu odpowiedzi na wiadomość.',
+    coSend: 'Wyślij wiadomość', coSending: 'Wysyłanie\u2026',
+    coErr: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
+    coOk: 'Wysłano. Dziękujemy, odpowiemy na podany adres.',
+    coFail: 'Nie udało się wysłać. Sprawdź połączenie i spróbuj ponownie.',
+    coHowH: 'Jak to działa', coHow: 'Wiadomość wysyłamy przez formularz. Nie publikujemy jej, a adres e-mail autorów nie jest pokazywany na stronie. Twój e-mail służy tylko do odpowiedzi.',
+    coMed: 'Nie udzielamy porad medycznych ani indywidualnych zaleceń dawkowania. W sprawach zdrowia skontaktuj się z lekarzem.',
+    efH: 'Zgłoś skutek uboczny', efLab: 'Zgłoszenie',
+    efLead: 'Niepokojący objaw po leku peptydowym? Opisz go poniżej, a zgłoszenie trafi prosto do autorów strony. Zgłoszenia nie są publikowane. To nie jest pomoc medyczna.',
+    efWarn: 'Przy przedawkowaniu, silnej reakcji alergicznej, bólu w klatce piersiowej lub trudnościach z oddychaniem dzwoń pod 112 albo do centrum zatruć. Nie czekaj na odpowiedź od nas.',
+    efSub: 'Substancja', efSym: 'Opis objawu (bez danych osobowych)',
+    efSev: 'Nasilenie', efSev1: 'Lekkie', efSev2: 'Umiarkowane', efSev3: 'Silne lub niepokojące',
+    efWhen: 'Kiedy wystąpiło (np. po 2 dniach)',
+    efCons: 'Rozumiem, że zgłoszenie nie zastępuje lekarza, trafia tylko do autorów strony i nie jest publikowane.',
+    efSend: 'Wyślij zgłoszenie', efErr: 'Uzupełnij opis objawu i zaznacz zgodę.',
+    efOk: 'Wysłano. Dziękujemy za zgłoszenie.',
+    efEmerg: 'Wysłano. Przy silnych objawach zadzwoń pod 112 lub do lekarza, nie czekaj na odpowiedź od nas.',
+    efNote: 'Zgłoszenia trafiają tylko do autorów strony i nie są publikowane. Przy nasilonych objawach (duszność, silny ból brzucha, obrzęk twarzy, omdlenie) nie pisz do nas, tylko dzwoń pod 112 lub jedź na pogotowie.',
+    official: 'Działanie niepożądane leku zatwierdzonego warto zgłosić też do urzędu:'
   }
 };
 
@@ -196,6 +239,7 @@ ${o.body}
   </div>
 </footer>
 
+<script>window.PEP_FORM='${FORM_KEY}';</${'script'}>
 <script src="${up}../assets/dane-${L}.js" defer></script>
 <script src="${up}../assets/ruch.js" defer></script>
 </body>
@@ -589,10 +633,26 @@ function about(L) {
   <p class="kick reveal">${esc(t.contact)}</p>
   <h2 class="display sm reveal">${esc(t.writeUs)}</h2>
   <p class="lede reveal">${esc(t.contactP)}</p>
-  <p class="actions reveal">
-    <a class="btn big" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}&nbsp;${esc(t.dmTT)}</a>
-    <a class="btn ghost big" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}&nbsp;${esc(t.dmIG)}</a>
-  </p>
+  <form class="sheet reveal" id="coForm" novalidate>
+    <div class="f2">
+      <p class="frow"><label for="coName">${esc(t.coName)}</label><input type="text" id="coName" name="name" autocomplete="name" maxlength="80" required></p>
+      <p class="frow"><label for="coEmail">${esc(t.coMail)}</label><input type="email" id="coEmail" name="email" autocomplete="email" maxlength="120" required></p>
+    </div>
+    <p class="frow"><label for="coTopic">${esc(t.coTopic)}</label><select id="coTopic" name="topic">${t.coT.map(x => `<option>${esc(x)}</option>`).join('')}</select></p>
+    <p class="frow"><label for="coMsg">${esc(t.coMsg)}</label><textarea id="coMsg" name="message" rows="5" maxlength="2000" required></textarea></p>
+    <p class="check"><label><input type="checkbox" id="coCons"> <span>${esc(t.coCons)}</span></label></p>
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
+    <p class="formfoot"><button class="btn big" type="submit" data-busy="${esc(t.coSending)}">${esc(t.coSend)}</button></p>
+    <p class="formmsg" id="coMsgOut" role="status" hidden></p>
+  </form>
+  <div class="stack">
+    <article class="tile glass reveal"><h3 class="gtitle sm">${esc(t.coHowH)}</h3><p class="small ink2">${esc(t.coHow)}</p></article>
+    <article class="tile glass reveal"><h3 class="gtitle sm">TikTok · Instagram</h3>
+      <p class="small ink2">${en ? 'Prefer your phone? Send a direct message instead. We read every one and answer the best ones in a Q&A.' : 'Wolisz z telefonu? Napisz wiadomość prywatną. Czytamy każdą, a najciekawsze omawiamy w Q&A.'}</p>
+      <p class="social"><a class="soc" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}<span>${esc(t.dmTT)}</span></a>
+      <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>${esc(t.dmIG)}</span></a></p></article>
+  </div>
+  <p class="notice reveal">${esc(t.coMed)}</p>
 </div></section>`;
   return layout({
     lang: L, here: 'about.html', twin: 'about.html', body,
@@ -696,6 +756,31 @@ function symptoms(L) {
   </div>
   <p class="muted" id="syHint">${en ? 'Type at least 3 characters or click a suggestion.' : 'Wpisz co najmniej 3 znaki albo kliknij podpowiedź.'}</p>
   <div class="grid-cards" id="syOut"></div>
+</div></section>
+
+<section id="report" class="band"><div class="wrap narrow">
+  <p class="kick reveal">${esc(t.efLab)}</p>
+  <h2 class="display sm reveal">${esc(t.efH)}</h2>
+  <p class="lede reveal">${esc(t.efLead)}</p>
+  <p class="notice warn reveal"><strong>${en ? 'Emergency' : 'Nagły przypadek'}:</strong> ${esc(t.efWarn)}</p>
+  <form class="sheet reveal" id="efForm" novalidate>
+    <div class="f2">
+      <p class="frow"><label for="efSub">${esc(t.efSub)}</label><select id="efSub" name="substance"></select></p>
+      <p class="frow"><label for="efSev">${esc(t.efSev)}</label><select id="efSev" name="severity">
+        <option value="1">${esc(t.efSev1)}</option><option value="2">${esc(t.efSev2)}</option><option value="3">${esc(t.efSev3)}</option>
+      </select></p>
+    </div>
+    <p class="frow"><label for="efSym">${esc(t.efSym)}</label><textarea id="efSym" name="symptom" rows="3" maxlength="600" required></textarea></p>
+    <p class="frow"><label for="efWhen">${esc(t.efWhen)}</label><input type="text" id="efWhen" name="when" maxlength="100"></p>
+    <p class="check"><label><input type="checkbox" id="efCons"> <span>${esc(t.efCons)}</span></label></p>
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
+    <p class="formfoot"><button class="btn big" type="submit" data-busy="${esc(t.coSending)}">${esc(t.efSend)}</button></p>
+    <p class="formmsg" id="efMsg" role="status" hidden></p>
+  </form>
+  <p class="small ink2 reveal">${esc(t.efNote)}</p>
+  <p class="small ink2 reveal">${esc(t.official)}
+    <a href="https://smz.ezdrowie.gov.pl/" rel="noopener" target="_blank">URPL (PL)</a> ·
+    <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program" rel="noopener" target="_blank">FDA MedWatch (US)</a></p>
 </div></section>`;
   return layout({
     lang: L, here: 'symptoms.html', twin: 'symptoms.html', body,

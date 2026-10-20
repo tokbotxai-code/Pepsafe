@@ -408,4 +408,90 @@
     });
   })();
 
+
+  /* ── formularze: kontakt i zgloszenie objawu (Web3Forms) ────────── */
+  (function () {
+    var co = document.getElementById('coForm'), ef = document.getElementById('efForm');
+    if (!co && !ef) return;
+    var pl = document.documentElement.lang === 'pl';
+    var W = pl ? {
+      err: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
+      ok: 'Wysłano. Dziękujemy, odpowiemy na podany adres.',
+      fail: 'Nie udało się wysłać. Sprawdź połączenie i spróbuj ponownie.',
+      efErr: 'Uzupełnij opis objawu i zaznacz zgodę.',
+      efOk: 'Wysłano. Dziękujemy za zgłoszenie.',
+      efEmerg: 'Wysłano. Przy silnych objawach zadzwoń pod 112 lub do lekarza, nie czekaj na odpowiedź od nas.',
+      off: 'Formularz jest chwilowo niedostępny. Napisz do nas wiadomość prywatną na TikToku albo Instagramie.'
+    } : {
+      err: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
+      ok: 'Sent. Thank you, we will reply to the address you gave.',
+      fail: 'Could not send. Check your connection and try again.',
+      efErr: 'Describe the symptom and tick the consent box.',
+      efOk: 'Sent. Thank you for the report.',
+      efEmerg: 'Sent. With severe symptoms call 112 or your doctor, do not wait for a reply from us.',
+      off: 'The form is unavailable right now. Send us a direct message on TikTok or Instagram instead.'
+    };
+
+    function say(el, text, bad) {
+      el.hidden = false; el.textContent = text;
+      el.classList.toggle('bad', !!bad);
+    }
+    function send(subject, fields, form, out, onOk) {
+      var btn = form.querySelector('[type="submit"]'), label = btn.textContent;
+      if (!window.PEP_FORM) { say(out, W.off, true); return; }
+      btn.disabled = true; btn.textContent = btn.dataset.busy || label;
+      var body = { access_key: window.PEP_FORM, subject: 'PepSafe: ' + subject, from_name: 'PepSafe', botcheck: '' };
+      Object.keys(fields).forEach(function (k) { body[k] = fields[k]; });
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(body)
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        btn.disabled = false; btn.textContent = label;
+        if (j && j.success) { form.reset(); onOk(); } else say(out, W.fail, true);
+      }).catch(function () {
+        btn.disabled = false; btn.textContent = label; say(out, W.fail, true);
+      });
+    }
+    function flag(el, bad) { if (el) el.setAttribute('aria-invalid', bad ? 'true' : 'false'); }
+
+    if (co) {
+      var out = document.getElementById('coMsgOut');
+      co.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var n = co.coName.value.trim(), m = co.coEmail.value.trim(), msg = co.coMsg.value.trim();
+        var cons = document.getElementById('coCons').checked;
+        flag(co.coName, !n); flag(co.coEmail, !/^\S+@\S+\.\S+$/.test(m)); flag(co.coMsg, msg.length < 10);
+        if (!n || !/^\S+@\S+\.\S+$/.test(m) || msg.length < 10 || !cons) { say(out, W.err, true); return; }
+        var topic = co.coTopic.value;
+        send(topic, { name: n, email: m, topic: topic, message: msg }, co, out, function () {
+          say(out, W.ok, false);
+        });
+      });
+    }
+
+    if (ef) {
+      var eout = document.getElementById('efMsg'), sub = document.getElementById('efSub');
+      if (sub && window.PEP) {
+        window.PEP.rows.slice().sort(function (a, b) { return a.n.localeCompare(b.n); }).forEach(function (r) {
+          var o = document.createElement('option'); o.textContent = r.n; sub.appendChild(o);
+        });
+      }
+      ef.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var sym = ef.efSym.value.trim(), cons = document.getElementById('efCons').checked;
+        var sev = document.getElementById('efSev'), sevT = sev.options[sev.selectedIndex].textContent;
+        flag(ef.efSym, !sym);
+        if (!sym || !cons) { say(eout, W.efErr, true); return; }
+        var severe = sev.value === '3', when = ef.efWhen.value.trim() || '-';
+        var txt = (pl ? 'Substancja: ' : 'Substance: ') + (sub ? sub.value : '-') +
+          '\n' + (pl ? 'Objaw: ' : 'Symptom: ') + sym +
+          '\n' + (pl ? 'Nasilenie: ' : 'Severity: ') + sevT +
+          '\n' + (pl ? 'Kiedy wystapil: ' : 'When: ') + when;
+        send(pl ? 'zgloszenie skutku ubocznego' : 'side-effect report',
+          { substance: sub ? sub.value : '-', symptom: sym, severity: sevT, when: when, message: txt },
+          ef, eout, function () { say(eout, severe ? W.efEmerg : W.efOk, severe); });
+      });
+    }
+  })();
+
 })();
