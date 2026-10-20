@@ -33,11 +33,13 @@
 - Wymaga zmiennej `ELEVENLABS_API_KEY` w środowisku. Bez niej (albo przy `"vo": false` w `post.json`) film powstaje
   z samą muzyką jako `pepsafe-<folder>-muzyka.mp4` — skrypt się nie wywala.
 - Pole `"vo"` w slajdzie nadpisuje zdanie czytane przez lektora (na slajdzie może być krótszy tekst).
-- Darmowy plan ElevenLabs: 10 000 znaków/mies. ≈ 40 filmów. Dopóki nie ma planu Starter, lektora dajemy
-  jednemu filmowi dziennie, pozostałe z `"vo": false`.
+- Zostajemy na darmowym planie ElevenLabs (decyzja właściciela): 10 000 znaków/mies. ≈ 40 filmów.
+  Dlatego lektora dostaje **tylko jeden film dziennie** — ten z najmocniejszym tematem. Pozostałe renderujemy
+  z `"vo": false`, czyli z samym podkładem. Przekroczenie limitu kończy się błędem i filmem bez dźwięku.
 - Publikacja zostaje automatyczna (`autoPublish: true`) na obu kanałach.
 - Muzyka z katalogu TikToka jest niemożliwa przez API (da się tylko montując w aplikacji). Katalog audio
-  Instagrama zwraca 403 dla tego konta — wymagałoby konta Business połączonego z Facebook Page.
+  Instagrama zwraca 403 dla tego konta i **temat jest zamknięty**: wymagałby konta Business połączonego
+  z Facebook Page, a właściciel nie buduje obecności na Facebooku. Nie wracamy do tego.
 - Slajdy piszemy krótko: 1 zdanie na slajd, 4–5 slajdów, cały film 12–15 s. Lektor wydłuża slajd do długości
   zdania, więc długie akapity dają filmy 45 s+ i zabijają retencję (średni czas obejrzenia to teraz 1–3 s).
 - Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram zostaje w pełnym harmonogramie;
