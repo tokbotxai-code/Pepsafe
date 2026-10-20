@@ -252,7 +252,7 @@ select,input[type=search]{font:500 1rem var(--f-body);padding:10px 12px;border:1
 .empty{padding:40px 0;color:var(--muted);text-align:center}
 
 /* dialog */
-dialog{border:1px solid var(--line);border-radius:16px;padding:0;width:min(720px,calc(100% - 24px));max-height:calc(100% - 24px);background:var(--surface);color:var(--ink);overflow:hidden}
+dialog{border:1px solid var(--line);border-radius:16px;padding:0;width:min(720px,calc(100% - 24px));max-height:calc(100dvh - 24px);background:var(--surface);color:var(--ink);overflow:hidden}
 dialog::backdrop{background:rgba(6,14,19,.62)}
 dialog[open]{animation:dlg .25s ease-out}
 @keyframes dlg{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
@@ -287,6 +287,9 @@ input[type=text],input[type=email]{font:500 1rem var(--f-body);padding:10px 12px
 pre.prev{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .9rem var(--f-mono);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;margin:0}
 .catnotes{display:flex;flex-direction:column;gap:10px;color:var(--muted);font-size:.85rem;padding-top:28px;margin-top:20px;border-top:1px solid var(--line)}
 .catnotes .eyebrow{margin-bottom:0}
+.vbox{background:var(--accent-soft);border-radius:14px;padding:14px 16px;margin:4px 0 10px}
+.vbox b{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vbox p{margin:6px 0 0;font-size:1.05rem;line-height:1.45}
 .evbox{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--bg);margin-top:12px}
 .evrow{display:flex;align-items:center;gap:6px;margin-top:8px}
 .evd{width:34px;height:10px;border-radius:5px;background:var(--line)}
@@ -297,6 +300,12 @@ pre.prev{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .9rem var(--f-mono
 .kv2 dt{color:var(--muted)}
 .kv2 dd{margin:0}
 @media(max-width:560px){.kv2{grid-template-columns:1fr;gap:2px 0}.kv2 dd{margin-bottom:8px}}
+@media (max-height:700px){.portrait{height:170px}}
+.favb{min-width:44px;min-height:44px}
+.langs button{min-width:44px;min-height:40px}
+.chip,.mbtn{min-height:40px}
+.tabs{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent)}
+@media (min-width:1100px){.tabs{-webkit-mask-image:none;mask-image:none}}
 .subtabs{display:flex;gap:8px;overflow-x:auto;padding:8px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);background:var(--surface)}
 .subtabs a{white-space:nowrap;font:500 .9rem var(--f-body);color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
 .subtabs a[aria-current]{background:var(--accent-soft);color:var(--ink);border-color:var(--accent)}
@@ -929,14 +938,56 @@ function safetyExtra(e){
   return '<div class="w"><h4>'+I("Ciąża i karmienie","Pregnancy and breastfeeding")+'</h4>'+esc(preg)+'</div>'+
          '<div class="w"><h4>'+I("Kto powinien zachować szczególną ostrożność","Who should be especially careful")+'</h4>'+esc(avoid)+'</div>';
 }
+
+/* two-sentence verdict + related entries */
+var CONFUSE={
+ "Melanotan II":["Afamelanotyd","PT-141"],"Afamelanotyd":["Melanotan II","PT-141"],"PT-141":["Melanotan II","Afamelanotyd"],
+ "BPC-157":["TB-500","BPC-157 + TB-500"],"TB-500":["BPC-157","BPC-157 + TB-500"],"BPC-157 + TB-500":["BPC-157","TB-500","KPV"],
+ "Semaglutyd":["Tirzepatyd","Retatrutyd","Liraglutyd"],"Tirzepatyd":["Semaglutyd","Retatrutyd"],"Retatrutyd":["Tirzepatyd","Semaglutyd","Survodutyd"],
+ "CJC-1295":["Ipamorelina","Sermorelina","Tesamorelina"],"Ipamorelina":["CJC-1295","GHRP-2","GHRP-6"],
+ "GHRP-2":["GHRP-6","Ipamorelina","Heksarelina"],"GHRP-6":["GHRP-2","Ipamorelina"],
+ "Somatropina (HGH)":["AOD9604","HGH Fragment 176–191","IGF-1 LR3"],"AOD9604":["HGH Fragment 176–191","Somatropina (HGH)"],
+ "HGH Fragment 176–191":["AOD9604","Somatropina (HGH)"],"Tymozyna alfa-1":["TB-500","Tymalina i tymulina"],
+ "Epitalon":["Peptydy bioregulatory"],"Peptydy bioregulatory":["Epitalon"],
+ "GHK-Cu":["AHK-Cu","Matrixyl","BPC-157 + TB-500"],"AHK-Cu":["GHK-Cu"],
+ "Semax":["Selank","Adamax","Cerebrolizyna"],"Selank":["Semax","Adamax"],"Adamax":["Semax","Selank"],
+ "Oktreotyd":["Lanreotyd","Pasyreotyd"],"Lanreotyd":["Oktreotyd","Pasyreotyd"],"Pasyreotyd":["Oktreotyd","Lanreotyd"],
+ "Teryparatyd":["Abaloparatyd","Palopegteriparatyd"],"Abaloparatyd":["Teryparatyd","Palopegteriparatyd"],
+ "Desmopresyna":["Wazopresyna","Terlipresyna"],"Wazopresyna":["Desmopresyna","Terlipresyna"],
+ "Triptorelina":["Leuprorelina","Goserelina","Degareliks"],"Leuprorelina":["Triptorelina","Goserelina"],"Goserelina":["Triptorelina","Leuprorelina"]
+};
+function verdictBox(e){
+  var g=evGrade(e),w=(window.WADA||{})[e.n];
+  var st={A:["lek zatwierdzony przez FDA","an FDA-approved drug"],R:["lek zatwierdzony regionalnie lub historycznie","a regionally or historically approved drug"],
+   P:["substancja w badaniach klinicznych, bez zatwierdzenia","a substance in clinical trials, not approved"],
+   U:["substancja niezatwierdzona do leczenia u ludzi","a substance not approved for human treatment"],
+   C:["kosmetyk lub suplement, nie lek","a cosmetic or supplement, not a medicine"],
+   N:["nie jest peptydem","not a peptide"]}[e.s]||["",""];
+  var ev={1:["Dowody są głównie przedkliniczne albo bardzo skąpe.","The evidence is mostly preclinical or very scarce."],
+   2:["Dowody są ograniczone.","The evidence is limited."],
+   3:["Są badania u ludzi, ale bez pełnego zatwierdzenia.","There are human trials, but no full approval."],
+   4:["Są badania rejestracyjne u ludzi.","There are registration trials in humans."]}[g];
+  var sport=w&&w[0]?I(" Na liście zakazanej WADA ("+w[0]+")."," On the WADA prohibited list ("+w[0]+").")
+                   :(w?I(" Nie figuruje na liście zakazanej WADA."," Not on the WADA prohibited list."):"");
+  var txt=I("To "+st[0]+". "+ev[0]+sport,"This is "+st[1]+". "+ev[1]+sport);
+  return '<div class="vbox"><b>'+I("W skrócie","In short")+'</b><p>'+esc(txt)+'</p></div>';
+}
+function relatedBox(e){
+  var list=(CONFUSE[e.n]||[]).filter(function(n){return !!(window.PEP_find?window.PEP_find(n):null)});
+  if(!list.length)return "";
+  return '<div><h4>'+I("Często mylone z","Often confused with")+'</h4><p class="links">'+
+   list.map(function(n){return '<button type="button" class="mbtn" data-open="'+esc(n)+'">'+esc(window.PEP_name?window.PEP_name(n):n)+'</button>'}).join("")+'</p></div>';
+}
 function openDlg(e){
   cur=e;var url=encodeURIComponent((EN[e.n]?EN[e.n][0]:e.n).split(" ")[0].replace(/[(),]/g,""));
   $("#dlgBody").innerHTML='<div class="portrait"><canvas id="pc" aria-hidden="true"></canvas><button class="close" type="button" id="dClose" aria-label="'+I("Zamknij","Close")+'">×</button><span class="cap">'+I("Ilustracja poglądowa, nie rzeczywista struktura","Schematic illustration, not a real structure")+'</span></div>'+
    '<div class="body"><div><h2 id="dName" data-n="'+esc(e.n)+'">'+esc(NM(e.n))+'</h2>'+(e.a?'<div class="alias" style="font:400 .85rem var(--f-mono);color:var(--muted)">'+esc(e.a)+'</div>':'')+'</div>'+
    '<div class="tags"><span class="tag s-'+e.s+'">'+SL(e.s)+'</span>'+(isWada(e)?'<span class="tag t-w">WADA</span>':'')+'<span class="tag t-c">'+esc(F(e,"c"))+'</span><span class="tag t-c">'+esc(CL(e.cat))+'</span></div>'+
    (e.q?ribbons(e.q):'')+
+   verdictBox(e)+
    '<div><h4>'+I("Czym jest","What it is")+'</h4>'+esc(F(e,"d"))+'</div><div><h4>'+I("Jak działa","How it works")+'</h4>'+esc(F(e,"m"))+'</div><div><h4>'+I("Zastosowanie","Use")+'</h4>'+esc(F(e,"u"))+'</div><div><h4>'+I("Co wiadomo z badań","What studies show")+'</h4>'+esc(F(e,"ev"))+'</div>'+
    '<div class="w"><h4>'+I("Łączenie i bezpieczeństwo","Combining and safety")+'</h4>'+esc(F(e,"w"))+'</div>'+(groupBlock(e)||'<div class="w"><h4>'+I("Nie łączyć z","Do not combine with")+'</h4>'+I("Brak sprawdzonych danych o łączeniu z innymi substancjami w tym katalogu. Nie łącz bez lekarza.","No verified data on combining with other substances in this catalog. Do not combine without a doctor.")+'</div>')+
+   relatedBox(e)+
    safetyExtra(e)+
    (window.PEP_status?window.PEP_status(e):'')+evBar(e)+
    '<p><button type="button" class="btn" id="dPrint">'+I("Wydrukuj pytania do lekarza","Print questions for your doctor")+'</button></p>'+
@@ -1408,6 +1459,7 @@ function route(){
   }
   if(h!=="blog"&&openPost>=0){openPost=-1;renderBlog();}
   $$("#tabs a").forEach(function(a){var k=a.getAttribute("data-g");a.textContent=GLAB[lang][k]||k;});
+  var act=document.querySelector('#tabs a[aria-current]');if(act&&act.scrollIntoView)try{act.scrollIntoView({inline:"center",block:"nearest"});}catch(e){}
   var sec=document.querySelector('[data-view="'+h+'"]');
   if(sec){var hd=sec.querySelector("h1,h2");if(hd&&hd.tagName==="H2"&&!hd.closest("dialog")){var h1=document.createElement("h1");h1.className=hd.className;h1.innerHTML=hd.innerHTML;["id","data-k"].forEach(function(a){if(hd.hasAttribute(a))h1.setAttribute(a,hd.getAttribute(a));});hd.parentNode.replaceChild(h1,hd);}}
   viewMeta(h);
