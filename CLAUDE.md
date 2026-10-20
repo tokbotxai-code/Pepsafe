@@ -90,3 +90,13 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - W opisach commitów nie wspominaj o narzędziach ani modelach; bez linii „Co-Authored-By” innych niż
   `Co-Authored-By: PepSafe <noreply@pepsafe.info>`. Bez linków do sesji.
 - Na stronie, w postach i w plikach w repo nie opisujemy, jakimi narzędziami powstają treści.
+
+## Oszczędzanie limitu (ważne przy autopilocie)
+- `index.html` ma ok. 404 kB (~100 tys. tokenów). **Nie czytaj go całego.** Wpis „Peptyd dnia” dodawaj skryptem:
+  zapisz jeden wpis do pliku JSON i uruchom `node tools/daily.js <plik.json>`. Skrypt sam sprawdza, czy nazwa jest
+  w katalogu i czy wpis z tą datą już istnieje.
+- Czegokolwiek szukasz w `index.html`, używaj `grep`/`Grep` z numerami linii i czytaj tylko potrzebny fragment
+  (`Read` z `offset`/`limit`), nigdy całości.
+- Jedno uruchomienie dziennie robi całą dniówkę (4 tematy) zamiast wielu krótkich sesji — każda nowa sesja
+  czyta od zera CLAUDE.md i plan.
+- Do rutynowej dniówki wystarczy tańszy model; Opus tylko do zmian w kodzie strony i analiz.
