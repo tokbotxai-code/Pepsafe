@@ -19,6 +19,14 @@
 - Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST) i TikToka razem.
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
+## Muzyka i publikacja na TikToku (od 20.10.2026)
+- Nie dokładamy własnej muzyki do filmów na TikToka: w `media` postów TikTok podajemy wersję **bez dźwięku**
+  (`pepsafe-<folder>.mp4`, nie `-muzyka.mp4`). Muzykę właściciel dokłada sam w aplikacji TikTok przy publikacji.
+- Dlatego posty na TikToka planujemy z `autoPublish: false` (Metricool wysyła powiadomienie na telefon).
+- Instagram bez zmian: wersja `-muzyka.mp4` i `autoPublish: true`.
+- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie** (ta sama treść PL + EN). Instagram zostaje
+  w pełnym harmonogramie; nadwyżkowe tematy planujemy tylko na Instagram.
+
 ## Media
 - Na początku każdej pracy z repo: `git fetch origin main && git reset --hard origin/main` (historia bywa przepisywana; nie używaj `git pull`).
 - TikTok **nie przyjmuje PNG** – używaj MP4 (`pepsafe-<folder>-muzyka.mp4`) albo JPG.
