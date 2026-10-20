@@ -126,7 +126,16 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Nie edytuj plików w `p/` ręcznie — są generowane i zostaną nadpisane. Zmiany wprowadzaj w katalogu w `index.html`.
 
 ## TikTok po ograniczeniu konta (od 20.10.2026)
-- 20.10 TikTok zdjął film o WADA i **ograniczył 13 postów**. To ograniczenie na poziomie konta, nie pojedynczej treści.
+- 19–20.10 TikTok **usunął 13 filmów** (wszystkie oznaczone „Video removed”, nie samo ograniczenie zasięgu).
+  Decyzje podjęły automaty: „We have used automated measures in making this decision”.
+- Usunięte: para WADA (20.10), para „15 rzeczy, które TB-500 rzekomo leczy”, para CJC-1295 + Ipamorelin,
+  para TB-500 „peptyd na regenerację”, para MT1 vs MT2, para Melanotan I i II, BPC-157 „co naprawdę wiadomo”.
+  Zawsze obie wersje językowe naraz — czyli wzorzec, nie konkretne sformułowanie.
+- **Wspólny mianownik wszystkich 13: nazwa substancji w pierwszych słowach opisu I na okładce filmu.**
+  TikTok czyta tekst ze slajdu, nie tylko opis. Dlatego nazwa nie może pojawić się nigdzie: ani w opisie,
+  ani w hashtagu, ani na slajdzie, ani w lektorze.
+- Dodatkowe sygnały w usuniętych: emotka 💉 (para CJC-1295), 🚫 (para WADA), rama „fact-checking / mit czy fakt”,
+  słowa FDA, „zakazany”, „rzekomo leczy”.
 - Dane z 14 dni są jednoznaczne: filmy **bez ani jednej nazwy substancji** („What actually is a peptide?”)
   miały 251–252 wyświetlenia, a wszystko z nazwami 4–11. Różnica 20–60×.
 - Dlatego na TikToka idą **wyłącznie treści czysto przyrodnicze**: aminokwasy, łańcuchy, zwijanie białek,
