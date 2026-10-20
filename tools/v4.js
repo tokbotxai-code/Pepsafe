@@ -58,6 +58,15 @@ function searchText(e, en) {
 
 const LANGS = ['en', 'pl'];
 
+const TT = 'https://www.tiktok.com/@pepsafe.info';
+const IG = 'https://www.instagram.com/pepsafe.info/';
+const ICO_TT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg>';
+const ICO_IG = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>';
+const ORG = JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://pepsafe.info/#org',
+  name: 'PepSafe', url: 'https://pepsafe.info/', sameAs: [TT, IG]
+});
+
 const W = {
   en: {
     nav: { home: 'Home', catalog: 'Catalog', groups: 'Groups', faq: 'Questions', alerts: 'Warnings', about: 'About' },
@@ -72,7 +81,10 @@ const W = {
     save: 'Save', saved: 'Saved', pick: 'Pick a substance', clear: 'Clear',
     dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved',
     findLab: 'Search', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
-    findNone: 'Nothing matches that.', findClose: 'Close', findMore: 'See all results'
+    findNone: 'Nothing matches that.', findClose: 'Close', findMore: 'See all results',
+    follow: 'Follow', contact: 'Contact', writeUs: 'Write to us',
+    contactP: 'Questions, a correction, a source we missed? Send us a direct message on TikTok or Instagram. We read every one and answer the best ones in a Q&A. We never advise on doses, where to buy, or how to use anything.',
+    dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info'
   },
   pl: {
     nav: { home: 'Start', catalog: 'Katalog', groups: 'Grupy', faq: 'Pytania', alerts: 'Ostrzeżenia', about: 'O projekcie' },
@@ -87,7 +99,10 @@ const W = {
     save: 'Zapisz', saved: 'Zapisane', pick: 'Wybierz substancję', clear: 'Wyczyść',
     dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane',
     findLab: 'Szukaj', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
-    findNone: 'Nic nie pasuje.', findClose: 'Zamknij', findMore: 'Zobacz wszystkie wyniki'
+    findNone: 'Nic nie pasuje.', findClose: 'Zamknij', findMore: 'Zobacz wszystkie wyniki',
+    follow: 'Obserwuj', contact: 'Kontakt', writeUs: 'Napisz do nas',
+    contactP: 'Pytanie, sprostowanie, przeoczone źródło? Napisz do nas wiadomość prywatną na TikToku albo Instagramie. Czytamy każdą, a najciekawsze omawiamy w Q&A. Nigdy nie doradzamy dawek, miejsc zakupu ani sposobu stosowania.',
+    dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info'
   }
 };
 
@@ -126,6 +141,7 @@ ${THEME_BOOT}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${up}../assets/site.css">
+<script type="application/ld+json">${ORG}</${'script'}>
 </head>
 <body>
 <a class="skip" href="#main">${esc(t.skip)}</a>
@@ -171,6 +187,11 @@ ${o.body}
 <footer>
   <div class="wrap foot">
     <p>${esc(t.foot)}</p>
+    <p class="social">
+      <a class="soc" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}<span>TikTok</span></a>
+      <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>Instagram</span></a>
+      <a class="soc" href="${up}about.html#contact">${esc(t.writeUs)}</a>
+    </p>
     <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span></p>
   </div>
 </footer>
@@ -562,6 +583,16 @@ function about(L) {
     <article class="tile glass reveal"><h2 class="gtitle sm">${en ? 'No doses from strangers' : 'Bez dawek od obcych'}</h2>
       <p class="small ink2">${en ? 'Doses appear only for approved medicines, copied from the label, as information rather than advice.' : 'Dawki pojawiają się tylko przy zatwierdzonych lekach, przepisane z etykiety, jako informacja, nie porada.'}</p></article>
   </div>
+</div></section>
+
+<section id="contact"><div class="wrap narrow">
+  <p class="kick reveal">${esc(t.contact)}</p>
+  <h2 class="display sm reveal">${esc(t.writeUs)}</h2>
+  <p class="lede reveal">${esc(t.contactP)}</p>
+  <p class="actions reveal">
+    <a class="btn big" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}&nbsp;${esc(t.dmTT)}</a>
+    <a class="btn ghost big" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}&nbsp;${esc(t.dmIG)}</a>
+  </p>
 </div></section>`;
   return layout({
     lang: L, here: 'about.html', twin: 'about.html', body,

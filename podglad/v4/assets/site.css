@@ -378,3 +378,15 @@ html.still .bento .tile, html.still .field::before, html.still .dot { animation:
 .findfake:hover{border-color:var(--k1);box-shadow:0 0 0 4px color-mix(in srgb,var(--k1) 12%,transparent);transform:translateY(-1px)}
 @media (max-width:640px){.findwrap{padding:0}.findcard{border-radius:0;border:0;height:100%;width:100%}
   .findlist{max-height:calc(100vh - 150px)}}
+
+/* ── kontakt i profile ───────────────────────────────────────────── */
+.wrap.narrow{max-width:720px}
+.display.sm{font-size:clamp(28px,4.4vw,42px);line-height:1.08;letter-spacing:-.02em;margin:.2em 0 .5em}
+.social{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.soc{display:inline-flex;align-items:center;gap:7px;color:var(--ink3);text-decoration:none;
+  border-bottom:1px solid transparent;transition:color .18s ease,border-color .18s ease}
+.soc:hover,.soc:focus-visible{color:var(--ink);border-color:var(--k1);outline:none}
+.soc svg{flex:none}
+#contact{padding:clamp(48px,7vw,88px) 0}
+#contact .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+#contact .btn{display:inline-flex;align-items:center}
