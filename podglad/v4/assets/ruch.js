@@ -77,24 +77,27 @@
 
   /* ── drifting chains ───────────────────────────────── */
   var cv = document.getElementById('chains');
-  var chains = [], w = 0, h = 0, dpr = Math.min(2, devicePixelRatio || 1), raf = 0, visible = true, scrolling = 0;
+  // brand palette, saturated variants that hold up on paper white — no grey
+  var INK = ['#2F6DB5', '#0A7C66', '#C2410C', '#8B3FA8', '#00FF66'];
+  var chains = [], w = 0, h = 0, dpr = Math.min(2, devicePixelRatio || 1), raf = 0, visible = true;
   var ctx = cv && cv.getContext ? cv.getContext('2d') : null;
   var seed = 7;
   function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
 
   function size() { w = cv.clientWidth; h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
   function init() {
-    chains = []; var n = w < 600 ? 4 : 7;
+    chains = []; var n = w < 600 ? 7 : 12;
     for (var i = 0; i < n; i++) chains.push({
-      x: rnd() * w, y: rnd() * h, a: rnd() * 6.28, sp: .05 + rnd() * .09,
-      len: 5 + Math.floor(rnd() * 5), ph: rnd() * 6.28, sz: 2.4 + rnd() * 1.8, neon: i % 4 === 0
+      x: rnd() * w, y: rnd() * h, a: rnd() * 6.28, sp: .11 + rnd() * .17,
+      len: 5 + Math.floor(rnd() * 6), ph: rnd() * 6.28, sz: 2.8 + rnd() * 2.4,
+      col: INK[i % INK.length], glow: i % 5 === 4
     });
   }
   function draw(t) {
     ctx.clearRect(0, 0, w, h);
     chains.forEach(function (c) {
-      if (motionOn && !scrolling) {
-        c.x += Math.cos(c.a) * c.sp; c.y += Math.sin(c.a) * c.sp; c.a += .0012;
+      if (motionOn) {
+        c.x += Math.cos(c.a) * c.sp; c.y += Math.sin(c.a) * c.sp; c.a += .0018;
         if (c.x < -140) c.x = w + 70; if (c.x > w + 140) c.x = -70;
         if (c.y < -140) c.y = h + 70; if (c.y > h + 140) c.y = -70;
       }
@@ -105,13 +108,13 @@
         pts.push([c.x + Math.cos(c.a) * u + Math.cos(ang + 1.57) * wob,
                   c.y + Math.sin(c.a) * u + Math.sin(ang + 1.57) * wob]);
       }
-      ctx.globalAlpha = c.neon ? .16 : .09;
-      ctx.strokeStyle = c.neon ? '#00FF66' : '#111413';
-      ctx.lineWidth = 1.3; ctx.beginPath();
+      ctx.globalAlpha = c.glow ? .34 : .26;
+      ctx.strokeStyle = c.col;
+      ctx.lineWidth = 1.5; ctx.beginPath();
       pts.forEach(function (p, i) { i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); });
       ctx.stroke();
-      ctx.globalAlpha = c.neon ? .22 : .12;
-      ctx.fillStyle = c.neon ? '#00FF66' : '#111413';
+      ctx.globalAlpha = c.glow ? .46 : .36;
+      ctx.fillStyle = c.col;
       pts.forEach(function (p) { ctx.beginPath(); ctx.arc(p[0], p[1], c.sz, 0, 6.2832); ctx.fill(); });
     });
     ctx.globalAlpha = 1;
@@ -125,16 +128,31 @@
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible && motionOn) start(); }).observe(cv);
     }
-    // pause the drift while the page is scrolling, so it never competes with the reveals
-    var tm; addEventListener('scroll', function () {
-      scrolling = 1; clearTimeout(tm); tm = setTimeout(function () { scrolling = 0; }, 180);
-    }, { passive: true });
+  }
+
+  /* ── parallax: columns move at different speeds, no library ── */
+  var par = [].slice.call(document.querySelectorAll('[data-par]'));
+  if (par.length && !reduced && innerWidth >= 1024) {
+    var ticking = 0;
+    var place = function () {
+      ticking = 0;
+      par.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        var mid = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+        el.style.transform = 'translate3d(0,' + (mid * +el.dataset.par * -40).toFixed(1) + 'px,0)';
+      });
+    };
+    addEventListener('scroll', function () { if (!ticking && motionOn) { ticking = 1; requestAnimationFrame(place); } }, { passive: true });
+    place();
   }
 
   /* ── motion switch ─────────────────────────────────── */
   var btn = document.getElementById('motion');
   if (btn) {
-    var label = function () { btn.textContent = motionOn ? btn.dataset.off : btn.dataset.on; };
+    var label = function () {
+      btn.textContent = motionOn ? btn.dataset.off : btn.dataset.on;
+      html.classList.toggle('still', !motionOn);
+    };
     label();
     btn.addEventListener('click', function () {
       motionOn = !motionOn;
