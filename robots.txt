@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://pepsafe.info/sitemap.xml
+
+Disallow: /dane.html
