@@ -109,3 +109,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Z sesji: `node tools/odwiedziny.js [dni]` — odsłony, wizyty dzień po dniu, najczęściej otwierane adresy,
   skąd przychodzą i kraje. Wymaga `CLOUDFLARE_API_TOKEN` (uprawnienie Account Analytics: Read)
   i `CLOUDFLARE_ACCOUNT_ID` w zmiennych środowiska.
+
+## Statyczne strony substancji (SEO)
+- `node tools/strony.js` generuje `p/<slug>.html` (EN) i `p/<slug>.pl.html` (PL) dla każdego wpisu z katalogu
+  oraz `p/index.html` (lista A–Z), a na koniec przebudowuje `sitemap.xml`. Uruchom po każdej zmianie katalogu.
+- Powód: cała strona to jeden `index.html` z przełączaniem w JavaScript, więc adresy `?e=` serwują ten sam
+  dokument i wyszukiwarka widzi jedną stronę zamiast 123.
+- Nie edytuj plików w `p/` ręcznie — są generowane i zostaną nadpisane. Zmiany wprowadzaj w katalogu w `index.html`.
