@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Groups that overlap | PepSafe</title>
+<meta name="description" content="Groups of substances acting on the same target, and why combining inside a group adds risk without benefit.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Cpath d=%22M6 24 L14 10 L22 22 L29 8%22 stroke=%22%238A918D%22 stroke-width=%222%22 fill=%22none%22/%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%224.5%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%224.5%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%224.5%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%224.5%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('pep-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<i class="progress" aria-hidden="true"></i>
+
+<header class="bar">
+  <nav class="wrap">
+    <a class="brand" href="index.html"><svg class="logo" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M6 24 L14 10 L22 22 L29 8" stroke="var(--ink3)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="24" r="4.5" fill="var(--k1)"/><circle cx="14" cy="10" r="4.5" fill="var(--k2)"/><circle cx="22" cy="22" r="4.5" fill="var(--k3)"/><circle cx="29" cy="8" r="4.5" fill="var(--k4)"/></svg>PepSafe</a>
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="groups.html" aria-current="page">Groups</a></li>
+      <li><a href="faq.html">Questions</a></li>
+      <li><a href="alerts.html">Warnings</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="tools">
+      <button class="icon" id="theme" type="button" aria-label="Theme">
+        <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><g class="sun"><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.2 5.2l1.4 1.4M13.4 13.4l1.4 1.4M14.8 5.2l-1.4 1.4M6.6 13.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/></g><path class="moon" d="M15 11.5A6 6 0 0 1 8.5 5a6 6 0 1 0 6.5 6.5Z" fill="currentColor"/></svg>
+      </button>
+      <a class="lang" href="../pl/groups.html">PL</a>
+      <a class="btn" href="catalog.html">Open catalog</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">Groups</p>
+    <h1 class="display reveal">Substances that share a target.</h1>
+    <p class="lede reveal">Stacking inside one group repeats a mechanism instead of adding a second one. Each group says what it shares and why that matters.</p>
+  </div>
+</section>
+<section><div class="wrap groups-list">
+  <article class="tile glass reveal" id="glp1">
+    <p class="kick">Do not combine: duplicated mechanism</p>
+    <h2 class="gtitle">GLP-1 agonists and related (GIP, glucagon)</h2>
+    <p class="lead">All act on GLP-1 receptors, some also on GIP or glucagon. The maker of tirzepatide states there are no clinical data on combining it with another GLP-1 agonist. The result may be stronger side effects with no added benefit: nausea, vomiting, dehydration and hypoglycemia with other drugs.</p>
+    <div class="cards"><a class="card tile reveal" href="p/semaglutide.html">
+      <span><b>Semaglutide</b><em>GLP-1 agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/tirzepatide.html">
+      <span><b>Tirzepatide</b><em>GIP and GLP-1 agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/liraglutide.html">
+      <span><b>Liraglutide</b><em>GLP-1 agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/dulaglutide.html">
+      <span><b>Dulaglutide</b><em>GLP-1 agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/exenatide.html">
+      <span><b>Exenatide</b><em>GLP-1 agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/lixisenatide.html">
+      <span><b>Lixisenatide</b><em>GLP-1 agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/retatrutide.html">
+      <span><b>Retatrutide</b><em>Triple GIP, GLP-1 and glucagon agonist</em></span>
+      <span class="pill mid">In clinical trials</span></a><a class="card tile reveal" href="p/mazdutide.html">
+      <span><b>Mazdutide</b><em>Dual GLP-1 and glucagon agonist</em></span>
+      <span class="pill mid">Approved regionally or historically</span></a><a class="card tile reveal" href="p/survodutide.html">
+      <span><b>Survodutide</b><em>Dual GLP-1 and glucagon agonist</em></span>
+      <span class="pill mid">In clinical trials</span></a><a class="card tile reveal" href="p/foundayo-orforglipron.html">
+      <span><b>Foundayo (orforglipron)</b><em>Oral GLP-1 agonist (small molecule, not a peptide)</em></span>
+      <span class="pill neutral">Not a peptide</span></a><a class="card tile reveal" href="p/blends-reta-tirzepatide-cagri-sema.html">
+      <span><b>Blends: Reta + Tirzepatide, Cagri + Sema</b><em>Two substances in one vial</em></span>
+      <span class="pill warn">Unapproved</span></a></div>
+  </article><article class="tile glass reveal" id="amylin">
+    <p class="kick">Do not combine: duplicated mechanism</p>
+    <h2 class="gtitle">Amylin analogues</h2>
+    <p class="lead">Both are amylin analogues acting on the same receptors. No data on combining; stronger effects include nausea and hypoglycemia with insulin.</p>
+    <div class="cards"><a class="card tile reveal" href="p/pramlintide.html">
+      <span><b>Pramlintide</b><em>Amylin analogue</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/cagrilintide.html">
+      <span><b>Cagrilintide</b><em>Long-acting amylin analogue</em></span>
+      <span class="pill mid">In clinical trials</span></a></div>
+  </article><article class="tile glass reveal" id="gh">
+    <p class="kick">Do not combine: same hormonal axis</p>
+    <h2 class="gtitle">Growth hormone and IGF-1 axis</h2>
+    <p class="lead">All stimulate or replace the growth hormone or IGF-1 axis. Effects and side effects can add up (blood glucose, fluid retention, swelling). There are no safety studies of such combinations, and some substances are not approved.</p>
+    <div class="cards"><a class="card tile reveal" href="p/somatropin-hgh.html">
+      <span><b>Somatropin (HGH)</b><em>Protein (191 amino acids)</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/tesamorelin.html">
+      <span><b>Tesamorelin</b><em>GHRH analogue</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/sermorelin.html">
+      <span><b>Sermorelin</b><em>GHRH analogue</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/cjc-1295.html">
+      <span><b>CJC-1295</b><em>GHRH analogue</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/ipamorelin.html">
+      <span><b>Ipamorelin</b><em>Growth hormone secretagogue</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/ghrp-2.html">
+      <span><b>GHRP-2</b><em>Growth hormone secretagogue</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/hexarelin.html">
+      <span><b>Hexarelin</b><em>Growth hormone secretagogue</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/igf-1-lr3.html">
+      <span><b>IGF-1 LR3</b><em>Insulin-like growth factor analogue</em></span>
+      <span class="pill warn">Unapproved</span></a></div>
+  </article><article class="tile glass reveal" id="gnrh">
+    <p class="kick">Do not combine on your own</p>
+    <h2 class="gtitle">GnRH axis (agonists, antagonists and stimulators)</h2>
+    <p class="lead">GnRH agonists and antagonists are different strategies for the same hormonal axis, chosen by a specialist. Mixing them without a protocol disrupts hormones.</p>
+    <div class="cards"><a class="card tile reveal" href="p/triptorelin.html">
+      <span><b>Triptorelin</b><em>GnRH agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/leuprolide.html">
+      <span><b>Leuprolide</b><em>GnRH agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/goserelin.html">
+      <span><b>Goserelin</b><em>GnRH agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/degarelix.html">
+      <span><b>Degarelix</b><em>GnRH antagonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/cetrorelix-and-ganirelix.html">
+      <span><b>Cetrorelix and ganirelix</b><em>GnRH antagonists</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/gonadorelin.html">
+      <span><b>Gonadorelin</b><em>Hypothalamic hormone</em></span>
+      <span class="pill mid">Approved regionally or historically</span></a><a class="card tile reveal" href="p/kisspeptin-10.html">
+      <span><b>Kisspeptin-10</b><em>Neuropeptide</em></span>
+      <span class="pill warn">Unapproved</span></a></div>
+  </article><article class="tile glass reveal" id="sst">
+    <p class="kick">Do not combine: duplicated mechanism</p>
+    <h2 class="gtitle">Somatostatin analogues</h2>
+    <p class="lead">All bind somatostatin receptors. Doubling up increases effects on blood glucose, digestion and the heart. The drug is chosen by an endocrinologist.</p>
+    <div class="cards"><a class="card tile reveal" href="p/octreotide.html">
+      <span><b>Octreotide</b><em>Somatostatin analogue</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/lanreotide.html">
+      <span><b>Lanreotide</b><em>Somatostatin analogue</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/pasireotide.html">
+      <span><b>Pasireotide</b><em>Somatostatin analogue</em></span>
+      <span class="pill ok">Approved drug</span></a></div>
+  </article><article class="tile glass reveal" id="pth">
+    <p class="kick">Do not combine: same receptor</p>
+    <h2 class="gtitle">Parathyroid hormone analogues</h2>
+    <p class="lead">Both stimulate the PTH1 receptor. There is no evidence of benefit from using them together, and the labels do not provide for it.</p>
+    <div class="cards"><a class="card tile reveal" href="p/teriparatide.html">
+      <span><b>Teriparatide</b><em>Parathyroid hormone fragment (1–34)</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/abaloparatide.html">
+      <span><b>Abaloparatide</b><em>PTHrP analogue</em></span>
+      <span class="pill ok">Approved drug</span></a></div>
+  </article><article class="tile glass reveal" id="mc">
+    <p class="kick">Do not combine: duplicated receptors</p>
+    <h2 class="gtitle">Melanocortin receptor agonists</h2>
+    <p class="lead">All activate melanocortin receptors. PT-141 (bremelanotide) is a derivative of Melanotan II without the C-terminal amide, also described as its likely metabolite, so they act similarly. Their status differs: PT-141 is approved, Melanotan II is not. Risks: raised blood pressure, nausea, mole changes.</p>
+    <div class="cards"><a class="card tile reveal" href="p/melanotan-ii.html">
+      <span><b>Melanotan II</b><em>Alpha-MSH analogue</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/pt-141.html">
+      <span><b>PT-141</b><em>Melanocortin receptor agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/afamelanotide.html">
+      <span><b>Afamelanotide</b><em>Alpha-MSH analogue</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/setmelanotide.html">
+      <span><b>Setmelanotide</b><em>MC4R agonist</em></span>
+      <span class="pill ok">Approved drug</span></a></div>
+  </article><article class="tile glass reveal" id="vp">
+    <p class="kick">Do not combine: duplicated vasopressin receptors</p>
+    <h2 class="gtitle">Vasopressin and its analogues</h2>
+    <p class="lead">All act on vasopressin receptors. Desmopressin carries a risk of low sodium (hyponatremia), and doubling up increases it. These are hospital or specialist drugs.</p>
+    <div class="cards"><a class="card tile reveal" href="p/vasopressin.html">
+      <span><b>Vasopressin</b><em>Peptide hormone</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/desmopressin.html">
+      <span><b>Desmopressin</b><em>Vasopressin analogue</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/terlipressin.html">
+      <span><b>Terlipressin</b><em>Vasopressin analogue</em></span>
+      <span class="pill ok">Approved drug</span></a></div>
+  </article><article class="tile glass reveal" id="gcc">
+    <p class="kick">Do not combine: same mechanism</p>
+    <h2 class="gtitle">Guanylate cyclase-C agonists</h2>
+    <p class="lead">Both stimulate the same receptor in the gut. Doubling up worsens diarrhea and dehydration risk.</p>
+    <div class="cards"><a class="card tile reveal" href="p/linaclotide.html">
+      <span><b>Linaclotide</b><em>Guanylate cyclase-C agonist</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/plecanatide.html">
+      <span><b>Plecanatide</b><em>Guanylate cyclase-C agonist</em></span>
+      <span class="pill ok">Approved drug</span></a></div>
+  </article><article class="tile glass reveal" id="anticoag">
+    <p class="kick">Bleeding risk</p>
+    <h2 class="gtitle">Anticoagulants used in coronary procedures</h2>
+    <p class="lead">Both prevent clotting. Combining with other anticoagulants increases bleeding risk. Decisions are made by the cardiology team.</p>
+    <div class="cards"><a class="card tile reveal" href="p/bivalirudin.html">
+      <span><b>Bivalirudin</b><em>Direct thrombin inhibitor</em></span>
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/eptifibatide.html">
+      <span><b>Eptifibatide</b><em>GP IIb/IIIa inhibitor</em></span>
+      <span class="pill ok">Approved drug</span></a></div>
+  </article><article class="tile glass reveal" id="repair">
+    <p class="kick">Do not combine: same claimed goal, no data</p>
+    <h2 class="gtitle">“Recovery” peptides (unapproved)</h2>
+    <p class="lead">All are marketed for healing or recovery, and their mechanisms in humans are unconfirmed. Stacking several unstudied substances multiplies unknowns and makes it hard to tell what helped or harmed.</p>
+    <div class="cards"><a class="card tile reveal" href="p/bpc-157.html">
+      <span><b>BPC-157</b><em>“Research” peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/tb-500.html">
+      <span><b>TB-500</b><em>“Research” peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/bpc-157-tb-500.html">
+      <span><b>BPC-157 + TB-500</b><em>Blends of “research” peptides</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/kpv.html">
+      <span><b>KPV</b><em>Alpha-MSH fragment</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/ghk-cu.html">
+      <span><b>GHK-Cu</b><em>Cosmetic peptide</em></span>
+      <span class="pill neutral">Cosmetic or supplement</span></a></div>
+  </article><article class="tile glass reveal" id="muscle">
+    <p class="kick">Do not combine: same claimed goal, no data</p>
+    <h2 class="gtitle">Substances around myostatin and muscle growth</h2>
+    <p class="lead">They target the same muscle growth axis. None has confirmed safety in healthy people, and ACE-031 was stopped because of vascular effects.</p>
+    <div class="cards"><a class="card tile reveal" href="p/mgf-and-peg-mgf.html">
+      <span><b>MGF and PEG-MGF</b><em>IGF-1 splice variant</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/follistatin-and-fst-344.html">
+      <span><b>Follistatin and FST-344</b><em>Myostatin-blocking protein</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/gdf-8-myostatin.html">
+      <span><b>GDF-8 (myostatin)</b><em>Growth factor</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/ace-031.html">
+      <span><b>ACE-031</b><em>Soluble activin receptor IIB</em></span>
+      <span class="pill warn">Unapproved</span></a></div>
+  </article><article class="tile glass reveal" id="cns">
+    <p class="kick">Do not combine: same claimed goal, no data</p>
+    <h2 class="gtitle">“Brain and mood” peptides (unapproved or regional)</h2>
+    <p class="lead">All are described as acting on the central nervous system. Combining them with each other or with psychiatric drugs has not been studied.</p>
+    <div class="cards"><a class="card tile reveal" href="p/semax.html">
+      <span><b>Semax</b><em>Nootropic peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/selank.html">
+      <span><b>Selank</b><em>Nootropic peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/dsip.html">
+      <span><b>DSIP</b><em>“Research” peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/p21.html">
+      <span><b>P21</b><em>Neurotrophic peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/pe-22-28.html">
+      <span><b>PE-22-28</b><em>TREK-1 channel modulating peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/ara290.html">
+      <span><b>ARA290</b><em>Erythropoietin-derived peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/cerebrolysin.html">
+      <span><b>Cerebrolysin</b><em>Mixture of peptides from pig brain</em></span>
+      <span class="pill mid">Approved regionally or historically</span></a><a class="card tile reveal" href="p/orexin-a-and-b.html">
+      <span><b>Orexin A and B</b><em>Neuropeptides</em></span>
+      <span class="pill warn">Unapproved</span></a></div>
+  </article><article class="tile glass reveal" id="long">
+    <p class="kick">Do not combine: same claimed goal, no data</p>
+    <h2 class="gtitle">“Anti-ageing” substances (unapproved)</h2>
+    <p class="lead">Marketed as supporting mitochondria or slowing ageing, mainly on the basis of preclinical studies. Combinations are not studied.</p>
+    <div class="cards"><a class="card tile reveal" href="p/epitalon.html">
+      <span><b>Epitalon</b><em>Short “bioregulator” peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/bioregulator-peptides.html">
+      <span><b>Bioregulator peptides</b><em>Short peptides (2–4 amino acids)</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/humanin.html">
+      <span><b>Humanin</b><em>Mitochondrial peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/mots-c.html">
+      <span><b>MOTS-c</b><em>Mitochondrial peptide</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/foxo4-dri.html">
+      <span><b>FOXO4-DRI</b><em>Senolytic peptide (experimental)</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/nad.html">
+      <span><b>NAD+</b><em>Coenzyme, not a peptide</em></span>
+      <span class="pill neutral">Not a peptide</span></a></div>
+  </article><article class="tile glass reveal" id="fat">
+    <p class="kick">Do not combine: same claimed goal, no data</p>
+    <h2 class="gtitle">Unapproved “weight loss” substances</h2>
+    <p class="lead">Marketed for fat loss but without convincing clinical results. Combining them with each other or with approved obesity drugs has not been studied.</p>
+    <div class="cards"><a class="card tile reveal" href="p/aod9604.html">
+      <span><b>AOD9604</b><em>Growth hormone fragment</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/hgh-fragment-176-191.html">
+      <span><b>HGH Fragment 176–191</b><em>Growth hormone fragment</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/adipotide.html">
+      <span><b>Adipotide</b><em>Peptidomimetic targeting fat tissue blood vessels</em></span>
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/5-amino-1mq.html">
+      <span><b>5-amino-1MQ</b><em>Small molecule, not a peptide</em></span>
+      <span class="pill neutral">Not a peptide</span></a><a class="card tile reveal" href="p/aicar.html">
+      <span><b>AICAR</b><em>Nucleoside, not a peptide</em></span>
+      <span class="pill neutral">Not a peptide</span></a><a class="card tile reveal" href="p/slu-pp-332.html">
+      <span><b>SLU-PP-332</b><em>Small molecule, not a peptide</em></span>
+      <span class="pill neutral">Not a peptide</span></a><a class="card tile reveal" href="p/mic-and-lipo-c.html">
+      <span><b>MIC and Lipo-C</b><em>Injectable blends</em></span>
+      <span class="pill neutral">Not a peptide</span></a></div>
+  </article>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>PepSafe — peptide facts, no sales. Educational content, not medical advice.</p>
+    <p><button id="motion" class="linkish" data-off="Stop motion" data-on="Start motion">Stop motion</button> · <span class="mono">pepsafe.info</span></p>
+  </div>
+</footer>
+
+<script src="../assets/ruch.js" defer></script>
+</body>
+</html>

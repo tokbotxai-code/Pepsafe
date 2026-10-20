@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About the project | PepSafe</title>
+<meta name="description" content="A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Cpath d=%22M6 24 L14 10 L22 22 L29 8%22 stroke=%22%238A918D%22 stroke-width=%222%22 fill=%22none%22/%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%224.5%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%224.5%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%224.5%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%224.5%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('pep-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<i class="progress" aria-hidden="true"></i>
+
+<header class="bar">
+  <nav class="wrap">
+    <a class="brand" href="index.html"><svg class="logo" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M6 24 L14 10 L22 22 L29 8" stroke="var(--ink3)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="24" r="4.5" fill="var(--k1)"/><circle cx="14" cy="10" r="4.5" fill="var(--k2)"/><circle cx="22" cy="22" r="4.5" fill="var(--k3)"/><circle cx="29" cy="8" r="4.5" fill="var(--k4)"/></svg>PepSafe</a>
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="groups.html">Groups</a></li>
+      <li><a href="faq.html">Questions</a></li>
+      <li><a href="alerts.html">Warnings</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+    </ul>
+    <div class="tools">
+      <button class="icon" id="theme" type="button" aria-label="Theme">
+        <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><g class="sun"><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.2 5.2l1.4 1.4M13.4 13.4l1.4 1.4M14.8 5.2l-1.4 1.4M6.6 13.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/></g><path class="moon" d="M15 11.5A6 6 0 0 1 8.5 5a6 6 0 1 0 6.5 6.5Z" fill="currentColor"/></svg>
+      </button>
+      <a class="lang" href="../pl/about.html">PL</a>
+      <a class="btn" href="catalog.html">Open catalog</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">About</p>
+    <h1 class="display reveal">No shop. No doses from strangers. No promises.</h1>
+    <p class="lede reveal">A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.</p>
+  </div>
+</section>
+<section><div class="wrap cols3"><p class="reveal lead">We publish doses only for approved medicines, straight from the label, and only as information — never as a recommendation.</p><p class="reveal lead">For unapproved substances there is no dose to give. Where human safety is unestablished, that is the finding, not a gap to fill.</p><p class="reveal lead">Educational content, not medical advice. Decisions about treatment belong with a doctor who knows your case.</p></div></section>
+<section class="band"><div class="wrap">
+  <p class="kick reveal">How the catalog is built</p>
+  <div class="stack">
+    <article class="tile glass reveal"><h2 class="gtitle sm">Status first</h2>
+      <p class="small ink2">Every entry starts with whether a regulator approved it, and for what. Everything else follows from that.</p></article>
+    <article class="tile glass reveal"><h2 class="gtitle sm">Sources, not adjectives</h2>
+      <p class="small ink2">Claims link to labels, reviews and trial registries. Where evidence is thin, the entry says so.</p></article>
+    <article class="tile glass reveal"><h2 class="gtitle sm">No doses from strangers</h2>
+      <p class="small ink2">Doses appear only for approved medicines, copied from the label, as information rather than advice.</p></article>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>PepSafe — peptide facts, no sales. Educational content, not medical advice.</p>
+    <p><button id="motion" class="linkish" data-off="Stop motion" data-on="Start motion">Stop motion</button> · <span class="mono">pepsafe.info</span></p>
+  </div>
+</footer>
+
+<script src="../assets/ruch.js" defer></script>
+</body>
+</html>

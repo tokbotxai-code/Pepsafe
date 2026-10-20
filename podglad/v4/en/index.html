@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="en" style="color-scheme:light">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>PepSafe — peptide facts, no sales</title>
-<meta name="description" content="A catalog of 123 peptides and related substances: legal status, what the research shows, and which groups act on the same receptor. Educational, nothing is for sale.">
+<meta name="description" content="A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Cpath d=%22M6 24 L14 10 L22 22 L29 8%22 stroke=%22%238A918D%22 stroke-width=%222%22 fill=%22none%22/%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%224.5%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%224.5%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%224.5%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%224.5%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('pep-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,58 +15,46 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<i class="progress" aria-hidden="true"></i>
 
 <header class="bar">
   <nav class="wrap">
-    <a class="brand" href="#top"><svg class="logo" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M6 24 L14 10 L22 22 L29 8" stroke="#8A918D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="24" r="4.5" fill="#2F6DB5"/><circle cx="14" cy="10" r="4.5" fill="#0A7C66"/><circle cx="22" cy="22" r="4.5" fill="#C2410C"/><circle cx="29" cy="8" r="4.5" fill="#8B3FA8"/></svg>PepSafe</a>
+    <a class="brand" href="index.html"><svg class="logo" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M6 24 L14 10 L22 22 L29 8" stroke="var(--ink3)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="24" r="4.5" fill="var(--k1)"/><circle cx="14" cy="10" r="4.5" fill="var(--k2)"/><circle cx="22" cy="22" r="4.5" fill="var(--k3)"/><circle cx="29" cy="8" r="4.5" fill="var(--k4)"/></svg>PepSafe</a>
     <ul class="links">
-      <li><a href="#overlap">Overlap</a></li>
-      <li><a href="#catalog">Catalog</a></li>
-      <li><a href="#daily">Peptide of the day</a></li>
-      <li><a href="#faq">Questions</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="groups.html">Groups</a></li>
+      <li><a href="faq.html">Questions</a></li>
+      <li><a href="alerts.html">Warnings</a></li>
+      <li><a href="about.html">About</a></li>
     </ul>
     <div class="tools">
+      <button class="icon" id="theme" type="button" aria-label="Theme">
+        <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><g class="sun"><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.2 5.2l1.4 1.4M13.4 13.4l1.4 1.4M14.8 5.2l-1.4 1.4M6.6 13.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/></g><path class="moon" d="M15 11.5A6 6 0 0 1 8.5 5a6 6 0 1 0 6.5 6.5Z" fill="currentColor"/></svg>
+      </button>
       <a class="lang" href="../pl/">PL</a>
-      <a class="btn" href="#catalog">Open catalog</a>
+      <a class="btn" href="catalog.html">Open catalog</a>
     </div>
   </nav>
 </header>
 
 <main id="main">
+
 <section id="top" class="hero paper">
   <canvas id="chains" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
     <div>
       <p class="badge reveal">Independent · non-commercial<i class="dot" aria-hidden="true"></i></p>
-      <h1 class="display">
-        <span class="reveal">Short chains.</span>
-        <span class="reveal dim">Long consequences.</span>
-        <span class="reveal">Evidence first.</span>
-      </h1>
+      <h1 class="display"><span class="reveal">Short chains.</span><span class="reveal dim">Long consequences.</span><span class="reveal">Evidence first.</span></h1>
       <p class="lede reveal">A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.</p>
       <p class="actions reveal">
-        <a class="btn big" href="#overlap">Check an overlap<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="var(--neon)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn ghost big" href="#catalog">Browse all 123</a>
+        <a class="btn big" href="#overlap">Check an overlap<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn ghost big" href="catalog.html">Browse all 123</a>
       </p>
     </div>
     <aside class="rail">
       <p class="kick reveal">Catalog, by status</p>
-      <dl><div class="rail-row reveal">
-      <dt>Approved medicines</dt>
-      <dd class="num"><span data-count="62">62</span></dd>
-    </div>
-<div class="rail-row reveal">
-      <dt>Unapproved</dt>
-      <dd class="num"><span data-count="41">41</span></dd>
-    </div>
-<div class="rail-row reveal">
-      <dt>In clinical trials</dt>
-      <dd class="num"><span data-count="3">3</span></dd>
-    </div>
-<div class="rail-row reveal">
-      <dt>Products sold</dt>
-      <dd class="num"><span data-count="0">0</span><i class="dot" aria-hidden="true"></i></dd>
-    </div></dl>
+      <dl><div class="rail-row reveal"><dt>Approved medicines</dt><dd class="num"><span data-count="62">62</span></dd></div><div class="rail-row reveal"><dt>Unapproved</dt><dd class="num"><span data-count="41">41</span></dd></div><div class="rail-row reveal"><dt>In clinical trials</dt><dd class="num"><span data-count="3">3</span></dd></div><div class="rail-row reveal"><dt>Products sold</dt><dd class="num"><span data-count="0">0</span><i class="dot"></i></dd></div></dl>
     </aside>
   </div>
 </section>
@@ -74,51 +63,17 @@
   <div class="wrap">
     <div class="head">
       <div><p class="kick reveal">01 — Overlap checker</p><h2 class="display reveal">Two names, one receptor.</h2></div>
-      <p class="reveal lead">The most common mistake online is stacking substances that act on the same target. Pick two groups and see whether they collide — with the reason, not just a red light.</p>
+      <p class="lead reveal">The most common mistake online is stacking substances that act on the same target. Pick two groups and see whether they collide — with the reason, not just a red light.</p>
     </div>
     <div class="bento">
       <div class="tile glass span4 reveal">
         <form id="checker" onsubmit="return false">
           <div class="picks">
-            <label><span class="kick">Group A</span>
-              <select id="selA"><option value="glp1" selected>GLP-1 agonists and related (GIP, glucagon)</option><option value="amylin">Amylin analogues</option><option value="gh">Growth hormone and IGF-1 axis</option><option value="gnrh">GnRH axis (agonists, antagonists and stimulators)</option><option value="sst">Somatostatin analogues</option><option value="pth">Parathyroid hormone analogues</option><option value="mc">Melanocortin receptor agonists</option><option value="vp">Vasopressin and its analogues</option><option value="gcc">Guanylate cyclase-C agonists</option><option value="anticoag">Anticoagulants used in coronary procedures</option><option value="repair">“Recovery” peptides (unapproved)</option><option value="muscle">Substances around myostatin and muscle growth</option><option value="cns">“Brain and mood” peptides (unapproved or regional)</option><option value="long">“Anti-ageing” substances (unapproved)</option><option value="fat">Unapproved “weight loss” substances</option></select></label>
-            <label><span class="kick">Group B</span>
-              <select id="selB"><option value="glp1">GLP-1 agonists and related (GIP, glucagon)</option><option value="amylin">Amylin analogues</option><option value="gh">Growth hormone and IGF-1 axis</option><option value="gnrh">GnRH axis (agonists, antagonists and stimulators)</option><option value="sst">Somatostatin analogues</option><option value="pth">Parathyroid hormone analogues</option><option value="mc">Melanocortin receptor agonists</option><option value="vp">Vasopressin and its analogues</option><option value="gcc">Guanylate cyclase-C agonists</option><option value="anticoag" selected>Anticoagulants used in coronary procedures</option><option value="repair">“Recovery” peptides (unapproved)</option><option value="muscle">Substances around myostatin and muscle growth</option><option value="cns">“Brain and mood” peptides (unapproved or regional)</option><option value="long">“Anti-ageing” substances (unapproved)</option><option value="fat">Unapproved “weight loss” substances</option></select></label>
+            <label><span class="kick">Group A</span><select id="selA"><option value="glp1" selected>GLP-1 agonists and related (GIP, glucagon)</option><option value="amylin">Amylin analogues</option><option value="gh">Growth hormone and IGF-1 axis</option><option value="gnrh">GnRH axis (agonists, antagonists and stimulators)</option><option value="sst">Somatostatin analogues</option><option value="pth">Parathyroid hormone analogues</option><option value="mc">Melanocortin receptor agonists</option><option value="vp">Vasopressin and its analogues</option><option value="gcc">Guanylate cyclase-C agonists</option><option value="anticoag">Anticoagulants used in coronary procedures</option><option value="repair">“Recovery” peptides (unapproved)</option><option value="muscle">Substances around myostatin and muscle growth</option><option value="cns">“Brain and mood” peptides (unapproved or regional)</option><option value="long">“Anti-ageing” substances (unapproved)</option><option value="fat">Unapproved “weight loss” substances</option></select></label>
+            <label><span class="kick">Group B</span><select id="selB"><option value="glp1">GLP-1 agonists and related (GIP, glucagon)</option><option value="amylin">Amylin analogues</option><option value="gh">Growth hormone and IGF-1 axis</option><option value="gnrh">GnRH axis (agonists, antagonists and stimulators)</option><option value="sst">Somatostatin analogues</option><option value="pth">Parathyroid hormone analogues</option><option value="mc">Melanocortin receptor agonists</option><option value="vp">Vasopressin and its analogues</option><option value="gcc">Guanylate cyclase-C agonists</option><option value="anticoag" selected>Anticoagulants used in coronary procedures</option><option value="repair">“Recovery” peptides (unapproved)</option><option value="muscle">Substances around myostatin and muscle growth</option><option value="cns">“Brain and mood” peptides (unapproved or regional)</option><option value="long">“Anti-ageing” substances (unapproved)</option><option value="fat">Unapproved “weight loss” substances</option></select></label>
           </div>
-          <output id="verdict" class="verdict">
-            <b>Different groups — different targets</b>
-            <span>These act on different targets, so there is no duplication between them. That is not the same as being safe together: interactions outside a shared receptor are a question for a doctor, not for a chart.</span>
-          </output>
-          <div hidden id="answers"><p class="answer" id="a-glp1" hidden>
-      <b>Do not combine: duplicated mechanism</b> All act on GLP-1 receptors, some also on GIP or glucagon. The maker of tirzepatide states there are no clinical data on combining it with another GLP-1 agonist. The result may be stronger side effects with no added benefit: nausea, vomiting, dehydration and hypoglycemia with other drugs. <span class="muted">11 entries in this group.</span></p>
-<p class="answer" id="a-amylin" hidden>
-      <b>Do not combine: duplicated mechanism</b> Both are amylin analogues acting on the same receptors. No data on combining; stronger effects include nausea and hypoglycemia with insulin. <span class="muted">2 entries in this group.</span></p>
-<p class="answer" id="a-gh" hidden>
-      <b>Do not combine: same hormonal axis</b> All stimulate or replace the growth hormone or IGF-1 axis. Effects and side effects can add up (blood glucose, fluid retention, swelling). There are no safety studies of such combinations, and some substances are not approved. <span class="muted">8 entries in this group.</span></p>
-<p class="answer" id="a-gnrh" hidden>
-      <b>Do not combine on your own</b> GnRH agonists and antagonists are different strategies for the same hormonal axis, chosen by a specialist. Mixing them without a protocol disrupts hormones. <span class="muted">7 entries in this group.</span></p>
-<p class="answer" id="a-sst" hidden>
-      <b>Do not combine: duplicated mechanism</b> All bind somatostatin receptors. Doubling up increases effects on blood glucose, digestion and the heart. The drug is chosen by an endocrinologist. <span class="muted">3 entries in this group.</span></p>
-<p class="answer" id="a-pth" hidden>
-      <b>Do not combine: same receptor</b> Both stimulate the PTH1 receptor. There is no evidence of benefit from using them together, and the labels do not provide for it. <span class="muted">2 entries in this group.</span></p>
-<p class="answer" id="a-mc" hidden>
-      <b>Do not combine: duplicated receptors</b> All activate melanocortin receptors. PT-141 (bremelanotide) is a derivative of Melanotan II without the C-terminal amide, also described as its likely metabolite, so they act similarly. Their status differs: PT-141 is approved, Melanotan II is not. Risks: raised blood pressure, nausea, mole changes. <span class="muted">4 entries in this group.</span></p>
-<p class="answer" id="a-vp" hidden>
-      <b>Do not combine: duplicated vasopressin receptors</b> All act on vasopressin receptors. Desmopressin carries a risk of low sodium (hyponatremia), and doubling up increases it. These are hospital or specialist drugs. <span class="muted">3 entries in this group.</span></p>
-<p class="answer" id="a-gcc" hidden>
-      <b>Do not combine: same mechanism</b> Both stimulate the same receptor in the gut. Doubling up worsens diarrhea and dehydration risk. <span class="muted">2 entries in this group.</span></p>
-<p class="answer" id="a-anticoag" hidden>
-      <b>Bleeding risk</b> Both prevent clotting. Combining with other anticoagulants increases bleeding risk. Decisions are made by the cardiology team. <span class="muted">2 entries in this group.</span></p>
-<p class="answer" id="a-repair" hidden>
-      <b>Do not combine: same claimed goal, no data</b> All are marketed for healing or recovery, and their mechanisms in humans are unconfirmed. Stacking several unstudied substances multiplies unknowns and makes it hard to tell what helped or harmed. <span class="muted">5 entries in this group.</span></p>
-<p class="answer" id="a-muscle" hidden>
-      <b>Do not combine: same claimed goal, no data</b> They target the same muscle growth axis. None has confirmed safety in healthy people, and ACE-031 was stopped because of vascular effects. <span class="muted">4 entries in this group.</span></p>
-<p class="answer" id="a-cns" hidden>
-      <b>Do not combine: same claimed goal, no data</b> All are described as acting on the central nervous system. Combining them with each other or with psychiatric drugs has not been studied. <span class="muted">8 entries in this group.</span></p>
-<p class="answer" id="a-long" hidden>
-      <b>Do not combine: same claimed goal, no data</b> Marketed as supporting mitochondria or slowing ageing, mainly on the basis of preclinical studies. Combinations are not studied. <span class="muted">6 entries in this group.</span></p>
-<p class="answer" id="a-fat" hidden>
-      <b>Do not combine: same claimed goal, no data</b> Marketed for fat loss but without convincing clinical results. Combining them with each other or with approved obesity drugs has not been studied. <span class="muted">7 entries in this group.</span></p><p class="answer" id="a-diff">These act on different targets, so there is no duplication between them. That is not the same as being safe together: interactions outside a shared receptor are a question for a doctor, not for a chart.</p></div>
+          <output id="verdict" class="verdict"><b>Different groups — different targets</b><span>These act on different targets, so there is no duplication between them. That is not the same as being safe together: interactions outside a shared receptor are a question for a doctor, not for a chart.</span></output>
+          <div hidden id="answers"><p class="answer" id="a-glp1" hidden><b>Do not combine: duplicated mechanism</b> All act on GLP-1 receptors, some also on GIP or glucagon. The maker of tirzepatide states there are no clinical data on combining it with another GLP-1 agonist. The result may be stronger side effects with no added benefit: nausea, vomiting, dehydration and hypoglycemia with other drugs. <span class="muted">11 entries in this group.</span></p><p class="answer" id="a-amylin" hidden><b>Do not combine: duplicated mechanism</b> Both are amylin analogues acting on the same receptors. No data on combining; stronger effects include nausea and hypoglycemia with insulin. <span class="muted">2 entries in this group.</span></p><p class="answer" id="a-gh" hidden><b>Do not combine: same hormonal axis</b> All stimulate or replace the growth hormone or IGF-1 axis. Effects and side effects can add up (blood glucose, fluid retention, swelling). There are no safety studies of such combinations, and some substances are not approved. <span class="muted">8 entries in this group.</span></p><p class="answer" id="a-gnrh" hidden><b>Do not combine on your own</b> GnRH agonists and antagonists are different strategies for the same hormonal axis, chosen by a specialist. Mixing them without a protocol disrupts hormones. <span class="muted">7 entries in this group.</span></p><p class="answer" id="a-sst" hidden><b>Do not combine: duplicated mechanism</b> All bind somatostatin receptors. Doubling up increases effects on blood glucose, digestion and the heart. The drug is chosen by an endocrinologist. <span class="muted">3 entries in this group.</span></p><p class="answer" id="a-pth" hidden><b>Do not combine: same receptor</b> Both stimulate the PTH1 receptor. There is no evidence of benefit from using them together, and the labels do not provide for it. <span class="muted">2 entries in this group.</span></p><p class="answer" id="a-mc" hidden><b>Do not combine: duplicated receptors</b> All activate melanocortin receptors. PT-141 (bremelanotide) is a derivative of Melanotan II without the C-terminal amide, also described as its likely metabolite, so they act similarly. Their status differs: PT-141 is approved, Melanotan II is not. Risks: raised blood pressure, nausea, mole changes. <span class="muted">4 entries in this group.</span></p><p class="answer" id="a-vp" hidden><b>Do not combine: duplicated vasopressin receptors</b> All act on vasopressin receptors. Desmopressin carries a risk of low sodium (hyponatremia), and doubling up increases it. These are hospital or specialist drugs. <span class="muted">3 entries in this group.</span></p><p class="answer" id="a-gcc" hidden><b>Do not combine: same mechanism</b> Both stimulate the same receptor in the gut. Doubling up worsens diarrhea and dehydration risk. <span class="muted">2 entries in this group.</span></p><p class="answer" id="a-anticoag" hidden><b>Bleeding risk</b> Both prevent clotting. Combining with other anticoagulants increases bleeding risk. Decisions are made by the cardiology team. <span class="muted">2 entries in this group.</span></p><p class="answer" id="a-repair" hidden><b>Do not combine: same claimed goal, no data</b> All are marketed for healing or recovery, and their mechanisms in humans are unconfirmed. Stacking several unstudied substances multiplies unknowns and makes it hard to tell what helped or harmed. <span class="muted">5 entries in this group.</span></p><p class="answer" id="a-muscle" hidden><b>Do not combine: same claimed goal, no data</b> They target the same muscle growth axis. None has confirmed safety in healthy people, and ACE-031 was stopped because of vascular effects. <span class="muted">4 entries in this group.</span></p><p class="answer" id="a-cns" hidden><b>Do not combine: same claimed goal, no data</b> All are described as acting on the central nervous system. Combining them with each other or with psychiatric drugs has not been studied. <span class="muted">8 entries in this group.</span></p><p class="answer" id="a-long" hidden><b>Do not combine: same claimed goal, no data</b> Marketed as supporting mitochondria or slowing ageing, mainly on the basis of preclinical studies. Combinations are not studied. <span class="muted">6 entries in this group.</span></p><p class="answer" id="a-fat" hidden><b>Do not combine: same claimed goal, no data</b> Marketed for fat loss but without convincing clinical results. Combining them with each other or with approved obesity drugs has not been studied. <span class="muted">7 entries in this group.</span></p><p class="answer" id="a-diff">These act on different targets, so there is no duplication between them. That is not the same as being safe together: interactions outside a shared receptor are a question for a doctor, not for a chart.</p></div>
           <p class="sr" data-same="Same group — do not combine" data-diff="Different groups — different targets"></p>
         </form>
       </div>
@@ -128,15 +83,11 @@
         <p class="small">Doubling a mechanism rarely doubles the effect. It reliably doubles the side effects.</p>
       </div>
       <div class="tile glass span2 reveal">
-        <p class="kick">Human studies</p>
-        <p class="display big-num">&lt;30</p>
-        <p class="small ink2">participants in total, across the three human studies of the most-discussed “research” peptide — none with a control group.</p>
+        <p class="kick">Human studies</p><p class="display big-num">&lt;30</p><p class="small ink2">participants in total, across the three human studies of the most-discussed “research” peptide — none with a control group.</p>
       </div>
       <div class="tile glass span4 reveal">
         <p class="kick">What “studied” can mean</p>
-        <ol class="ladder">
-          <li><span class="kick">01</span><b>Cells</b><em>A dish is not a body.</em></li><li><span class="kick">02</span><b>Animals</b><em>Roughly one in ten carries over.</em></li><li><span class="kick">03</span><b>A few people</b><em>Often with no control group.</em></li><li class="last"><span class="kick">04</span><b>Real trials</b><em>Where approval starts.</em></li>
-        </ol>
+        <ol class="ladder"><li><span class="kick">01</span><b>Cells</b><em>A dish is not a body.</em></li><li><span class="kick">02</span><b>Animals</b><em>Roughly one in ten carries over.</em></li><li><span class="kick">03</span><b>A few people</b><em>Often with no control group.</em></li><li class="last"><span class="kick">04</span><b>Real trials</b><em>Where approval starts.</em></li></ol>
       </div>
     </div>
   </div>
@@ -147,7 +98,7 @@
     <div data-par="0.8">
       <p class="kick reveal">02 — Peptide of the day</p>
       <h2 class="display reveal">Tesamorelin</h2>
-      <p class="muted reveal date">2026-10-21</p>
+      <p class="muted date reveal">2026-10-21</p>
     </div>
     <div class="reveal">
       <p class="lead">Tesamorelin is a synthetic analog of GHRH, the growth-hormone-releasing hormone, and one of very few peptides of this kind to complete a full regulatory review. The FDA approved it in 2010 under the brand name Egrifta for one narrow indication: reducing excess abdominal fat in people with HIV-associated lipodystrophy. Approval rested on two randomized placebo-controlled phase 3 trials, which showed a reduction in visceral adipose tissue alongside rises in IGF-1 and cases of worsened glucose tolerance. The manufacturer carries post-marketing safety obligations and the drug is prescription-only. By contrast, the peptides that dominate online discussion, such as BPC-157 and TB-500, never went through this process and hold no approved drug status.</p>
@@ -162,45 +113,36 @@
       <p class="kick reveal">03 — Catalog</p>
       <h2 class="display reveal">Status before story.</h2>
       <p class="lead reveal">Every entry opens with its legal status, then what the research shows, then what to watch for. Sources are linked. Where the evidence is thin, we say so plainly instead of filling the gap with adjectives.</p>
-      <p class="reveal"><a class="more" href="/p/">All 123 entries<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      <p class="reveal"><a class="more" href="catalog.html">All 123 entries<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
     </div>
-    <div class="cards" data-par="-0.6"><a class="card tile reveal" href="/p/semaglutide.html">
+    <div class="cards" data-par="-0.6"><a class="card tile reveal" href="p/semaglutide.html">
       <span><b>Semaglutide</b><em>GLP-1 agonist</em></span>
-      <span class="pill ok">Approved drug</span></a>
-<a class="card tile reveal" href="/p/tesamorelin.html">
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/tesamorelin.html">
       <span><b>Tesamorelin</b><em>GHRH analogue</em></span>
-      <span class="pill ok">Approved drug</span></a>
-<a class="card tile reveal" href="/p/retatrutide.html">
+      <span class="pill ok">Approved drug</span></a><a class="card tile reveal" href="p/retatrutide.html">
       <span><b>Retatrutide</b><em>Triple GIP, GLP-1 and glucagon agonist</em></span>
-      <span class="pill mid">In clinical trials</span></a>
-<a class="card tile reveal" href="/p/bpc-157.html">
+      <span class="pill mid">In clinical trials</span></a><a class="card tile reveal" href="p/bpc-157.html">
       <span><b>BPC-157</b><em>“Research” peptide</em></span>
-      <span class="pill warn">Unapproved</span></a>
-<a class="card tile reveal" href="/p/melanotan-ii.html">
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/melanotan-ii.html">
       <span><b>Melanotan II</b><em>Alpha-MSH analogue</em></span>
-      <span class="pill warn">Unapproved</span></a>
-<a class="card tile reveal" href="/p/ghk-cu.html">
+      <span class="pill warn">Unapproved</span></a><a class="card tile reveal" href="p/ghk-cu.html">
       <span><b>GHK-Cu</b><em>Cosmetic peptide</em></span>
-      <span class="pill warn">Cosmetic or supplement</span></a></div>
+      <span class="pill neutral">Cosmetic or supplement</span></a></div>
   </div>
 </section>
 
 <section id="faq" class="band">
   <div class="wrap">
     <p class="kick reveal">04 — Questions</p>
-    <div class="faq">
-      <details class="reveal"><summary>Are peptides proteins?</summary><p>Peptides and proteins are made of the same amino acids. Peptides are shorter, proteins longer and folded into a stable structure. The border is conventional, often around 50 amino acids.</p></details>
-<details class="reveal"><summary>Do peptides in creams reach the deeper skin?</summary><p>It depends on the molecule and carrier. Large molecules cross the epidermis poorly, so makers modify peptides, for example by attaching a fatty acid. Much of the data comes from lab studies.</p></details>
-<details class="reveal"><summary>Why are peptide drugs usually injected?</summary><p>Peptides are digested by gut acid and enzymes, trapped by mucus and cross the gut lining poorly. An exception is semaglutide tablets, approved in 2019, which work with an absorption enhancer.</p></details>
-<details class="reveal"><summary>Are peptides bought online safe?</summary><p>“Research only” products are not controlled like drugs and human data on them are scarce. Details are in the blog article.</p></details>
-    </div>
+    <div class="faq"><details class="reveal"><summary>Are peptides proteins?</summary><p>Peptides and proteins are made of the same amino acids. Peptides are shorter, proteins longer and folded into a stable structure. The border is conventional, often around 50 amino acids.</p></details><details class="reveal"><summary>Do peptides in creams reach the deeper skin?</summary><p>It depends on the molecule and carrier. Large molecules cross the epidermis poorly, so makers modify peptides, for example by attaching a fatty acid. Much of the data comes from lab studies.</p></details><details class="reveal"><summary>Why are peptide drugs usually injected?</summary><p>Peptides are digested by gut acid and enzymes, trapped by mucus and cross the gut lining poorly. An exception is semaglutide tablets, approved in 2019, which work with an absorption enhancer.</p></details><details class="reveal"><summary>Are peptides bought online safe?</summary><p>“Research only” products are not controlled like drugs and human data on them are scarce. Details are in the blog article.</p></details></div>
+    <p class="reveal"><a class="more" href="faq.html">Questions<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
   </div>
 </section>
 
 <section id="about" class="dark-sec">
   <div class="wrap">
     <p class="kick neon reveal">05 — What this is not</p>
-    <h2 class="display reveal huge">No shop. No doses from strangers. No promises.</h2>
+    <h2 class="display huge reveal">No shop. No doses from strangers. No promises.</h2>
     <div class="cols"><p class="reveal">We publish doses only for approved medicines, straight from the label, and only as information — never as a recommendation.</p><p class="reveal">For unapproved substances there is no dose to give. Where human safety is unestablished, that is the finding, not a gap to fill.</p><p class="reveal">Educational content, not medical advice. Decisions about treatment belong with a doctor who knows your case.</p></div>
   </div>
   <i class="glow" aria-hidden="true"></i>

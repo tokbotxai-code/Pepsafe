@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="pl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Katalog 123 peptydów | PepSafe</title>
+<meta name="description" content="Wszystkie 123 wpisów ze statusem prawnym, mechanizmem i siłą dowodów.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Cpath d=%22M6 24 L14 10 L22 22 L29 8%22 stroke=%22%238A918D%22 stroke-width=%222%22 fill=%22none%22/%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%224.5%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%224.5%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%224.5%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%224.5%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('pep-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Przejdź do treści</a>
+<i class="progress" aria-hidden="true"></i>
+
+<header class="bar">
+  <nav class="wrap">
+    <a class="brand" href="index.html"><svg class="logo" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M6 24 L14 10 L22 22 L29 8" stroke="var(--ink3)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="24" r="4.5" fill="var(--k1)"/><circle cx="14" cy="10" r="4.5" fill="var(--k2)"/><circle cx="22" cy="22" r="4.5" fill="var(--k3)"/><circle cx="29" cy="8" r="4.5" fill="var(--k4)"/></svg>PepSafe</a>
+    <ul class="links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="catalog.html" aria-current="page">Katalog</a></li>
+      <li><a href="groups.html">Grupy</a></li>
+      <li><a href="faq.html">Pytania</a></li>
+      <li><a href="alerts.html">Ostrzeżenia</a></li>
+      <li><a href="about.html">O projekcie</a></li>
+    </ul>
+    <div class="tools">
+      <button class="icon" id="theme" type="button" aria-label="Motyw">
+        <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><g class="sun"><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.2 5.2l1.4 1.4M13.4 13.4l1.4 1.4M14.8 5.2l-1.4 1.4M6.6 13.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/></g><path class="moon" d="M15 11.5A6 6 0 0 1 8.5 5a6 6 0 1 0 6.5 6.5Z" fill="currentColor"/></svg>
+      </button>
+      <a class="lang" href="../en/catalog.html">EN</a>
+      <a class="btn" href="catalog.html">Otwórz katalog</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">Katalog</p>
+    <h1 class="display reveal">Każdy wpis, razem ze statusem.</h1>
+    <p class="lede reveal">123 wpisów — czym jest, co pokazują badania i czy jakikolwiek regulator ją zatwierdził.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="filters reveal">
+      <label class="search"><span class="sr">Szukaj po nazwie lub marce</span>
+        <input id="q" type="search" placeholder="Szukaj po nazwie lub marce" autocomplete="off"></label>
+      <div class="chips" id="chips">
+        <button class="chip on" data-s="">Wszystkie <span class="num">123</span></button>
+        <button class="chip" data-s="A">Zatwierdzony lek <span class="num">62</span></button><button class="chip" data-s="P">W badaniach klinicznych <span class="num">3</span></button><button class="chip" data-s="R">Zatwierdzony regionalnie lub historycznie <span class="num">4</span></button><button class="chip" data-s="U">Niezatwierdzony <span class="num">41</span></button><button class="chip" data-s="N">Nie jest peptydem <span class="num">8</span></button><button class="chip" data-s="C">Kosmetyk lub suplement <span class="num">5</span></button>
+      </div>
+    </div>
+    <p id="nohit" class="muted" hidden>Nic nie pasuje.</p>
+    <div class="grid-cards" id="list">
+      <a class="entry tile" href="p/5-amino-1mq.html" data-s="N" data-n="5-amino-1mq  5-amino-1mq">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>5-amino-1MQ</b>
+        <em>Mała cząsteczka, nie peptyd</em>
+      </a><a class="entry tile" href="p/abaloparatide.html" data-s="A" data-n="abaloparatyd tymlos abaloparatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Abaloparatyd</b>
+        <em>Analog PTHrP</em>
+      </a><a class="entry tile" href="p/ace-031.html" data-s="U" data-n="ace-031  ace-031">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>ACE-031</b>
+        <em>Rozpuszczalny receptor aktywiny IIB</em>
+      </a><a class="entry tile" href="p/acth-1-39.html" data-s="A" data-n="acth 1–39 corticotropin, acthar acth 1–39">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>ACTH 1–39</b>
+        <em>Hormon przysadki</em>
+      </a><a class="entry tile" href="p/adamax.html" data-s="U" data-n="adamax n-acetyl semax amidate z grupą adamantanową adamax">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Adamax</b>
+        <em>Modyfikowany peptyd nootropowy</em>
+      </a><a class="entry tile" href="p/adipotide.html" data-s="U" data-n="adipotide ftpp adipotide">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Adipotide</b>
+        <em>Peptydomimetyk niszczący naczynia tkanki tłuszczowej</em>
+      </a><a class="entry tile" href="p/afamelanotide.html" data-s="A" data-n="afamelanotyd melanotan i, scenesse afamelanotyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Afamelanotyd</b>
+        <em>Analog alfa-MSH</em>
+      </a><a class="entry tile" href="p/ahk-cu.html" data-s="C" data-n="ahk-cu  ahk-cu">
+        <span class="pill neutral">Kosmetyk lub suplement</span>
+        <b>AHK-Cu</b>
+        <em>Peptyd kosmetyczny</em>
+      </a><a class="entry tile" href="p/aicar.html" data-s="N" data-n="aicar  aicar">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>AICAR</b>
+        <em>Nukleozyd, nie peptyd</em>
+      </a><a class="entry tile" href="p/angiotensin-ii.html" data-s="A" data-n="angiotensyna ii giapreza angiotensyna ii">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Angiotensyna II</b>
+        <em>Peptyd zwężający naczynia</em>
+      </a><a class="entry tile" href="p/aod9604.html" data-s="U" data-n="aod9604 hgh 176–191 + tyr aod9604">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>AOD9604</b>
+        <em>Fragment hormonu wzrostu</em>
+      </a><a class="entry tile" href="p/ara290.html" data-s="U" data-n="ara290 cibinetyd ara290">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>ARA290</b>
+        <em>Peptyd pochodny erytropoetyny</em>
+      </a><a class="entry tile" href="p/b7-33.html" data-s="U" data-n="b7-33  b7-33">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>B7-33</b>
+        <em>Pochodna relaksyny</em>
+      </a><a class="entry tile" href="p/bivalirudin.html" data-s="A" data-n="biwalirudyna angiomax biwalirudyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Biwalirudyna</b>
+        <em>Bezpośredni inhibitor trombiny</em>
+      </a><a class="entry tile" href="p/bpc-157.html" data-s="U" data-n="bpc-157 body protection compound bpc-157">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>BPC-157</b>
+        <em>Peptyd „badawczy”</em>
+      </a><a class="entry tile" href="p/bpc-157-tb-500.html" data-s="U" data-n="bpc-157 + tb-500 bpc+tb, glow, klow bpc-157 + tb-500">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>BPC-157 + TB-500</b>
+        <em>Mieszanki peptydów „badawczych”</em>
+      </a><a class="entry tile" href="p/cagrilintide.html" data-s="P" data-n="cagrilintyd  cagrilintyd">
+        <span class="pill mid">W badaniach klinicznych</span>
+        <b>Cagrilintyd</b>
+        <em>Długodziałający analog amyliny</em>
+      </a><a class="entry tile" href="p/cerebrolysin.html" data-s="R" data-n="cerebrolizyna  cerebrolizyna">
+        <span class="pill mid">Zatwierdzony regionalnie lub historycznie</span>
+        <b>Cerebrolizyna</b>
+        <em>Mieszanina peptydów z mózgu świńskiego</em>
+      </a><a class="entry tile" href="p/cetrorelix-and-ganirelix.html" data-s="A" data-n="cetroreliks i ganireliks cetrotide, ganirelix cetroreliks i ganireliks">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Cetroreliks i Ganireliks</b>
+        <em>Antagoniści GnRH</em>
+      </a><a class="entry tile" href="p/cjc-1295.html" data-s="U" data-n="cjc-1295 cjc-1295 dac, mod grf 1-29 cjc-1295">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>CJC-1295</b>
+        <em>Analog GHRH</em>
+      </a><a class="entry tile" href="p/cyclosporine.html" data-s="A" data-n="cyklosporyna sandimmune cyklosporyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Cyklosporyna</b>
+        <em>Cykliczny peptyd (lek immunosupresyjny)</em>
+      </a><a class="entry tile" href="p/dalbavancin.html" data-s="A" data-n="dalbawancyna dalvance dalbawancyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Dalbawancyna</b>
+        <em>Lipoglikopeptyd (antybiotyk)</em>
+      </a><a class="entry tile" href="p/daptomycin.html" data-s="A" data-n="daptomycyna cubicin daptomycyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Daptomycyna</b>
+        <em>Lipopeptyd cykliczny</em>
+      </a><a class="entry tile" href="p/dasiglucagon.html" data-s="A" data-n="dazyglukagon zegalogue dazyglukagon">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Dazyglukagon</b>
+        <em>Analog glukagonu</em>
+      </a><a class="entry tile" href="p/degarelix.html" data-s="A" data-n="degareliks firmagon degareliks">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Degareliks</b>
+        <em>Antagonista GnRH</em>
+      </a><a class="entry tile" href="p/desmopressin.html" data-s="A" data-n="desmopresyna ddavp desmopresyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Desmopresyna</b>
+        <em>Analog wazopresyny</em>
+      </a><a class="entry tile" href="p/difelikefalin.html" data-s="A" data-n="difelikefalina korsuva difelikefalina">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Difelikefalina</b>
+        <em>Agonista receptorów opioidowych kappa</em>
+      </a><a class="entry tile" href="p/dihexa.html" data-s="U" data-n="dihexa pnb-0408 dihexa">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Dihexa</b>
+        <em>Peptyd nootropowy</em>
+      </a><a class="entry tile" href="p/dsip.html" data-s="U" data-n="dsip emideltide dsip">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>DSIP</b>
+        <em>Peptyd „badawczy”</em>
+      </a><a class="entry tile" href="p/dulaglutide.html" data-s="A" data-n="dulaglutyd trulicity dulaglutyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Dulaglutyd</b>
+        <em>Agonista GLP-1</em>
+      </a><a class="entry tile" href="p/exenatide.html" data-s="A" data-n="eksenatyd byetta, bydureon eksenatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Eksenatyd</b>
+        <em>Agonista GLP-1</em>
+      </a><a class="entry tile" href="p/enfuvirtide.html" data-s="A" data-n="enfuwirtyd fuzeon enfuwirtyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Enfuwirtyd</b>
+        <em>Inhibitor wejścia HIV</em>
+      </a><a class="entry tile" href="p/epitalon.html" data-s="U" data-n="epitalon epithalon epitalon">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Epitalon</b>
+        <em>Krótki peptyd „bioregulator”</em>
+      </a><a class="entry tile" href="p/eptifibatide.html" data-s="A" data-n="eptyfibatyd integrilin eptyfibatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Eptyfibatyd</b>
+        <em>Inhibitor GP IIb/IIIa</em>
+      </a><a class="entry tile" href="p/erythropoietin-epo.html" data-s="A" data-n="erytropoetyna (epo)  erytropoetyna (epo)">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Erytropoetyna (EPO)</b>
+        <em>Białko</em>
+      </a><a class="entry tile" href="p/etelcalcetide.html" data-s="A" data-n="etelkalcetyd parsabiv etelkalcetyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Etelkalcetyd</b>
+        <em>Peptyd kalcymimetyczny</em>
+      </a><a class="entry tile" href="p/follistatin-and-fst-344.html" data-s="U" data-n="follistatyna i fst-344  follistatyna i fst-344">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Follistatyna i FST-344</b>
+        <em>Białko hamujące miostatynę</em>
+      </a><a class="entry tile" href="p/foundayo-orforglipron.html" data-s="N" data-n="foundayo (orforglipron) orforglipron, lilly foundayo (orforglipron)">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>Foundayo (orforglipron)</b>
+        <em>Doustny agonista GLP-1 (mała cząsteczka, nie peptyd)</em>
+      </a><a class="entry tile" href="p/foxo4-dri.html" data-s="U" data-n="foxo4-dri  foxo4-dri">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>FOXO4-DRI</b>
+        <em>Peptyd senolityczny (eksperymentalny)</em>
+      </a><a class="entry tile" href="p/gdf-8-myostatin.html" data-s="U" data-n="gdf-8 (miostatyna)  gdf-8 (miostatyna)">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>GDF-8 (miostatyna)</b>
+        <em>Czynnik wzrostu</em>
+      </a><a class="entry tile" href="p/ghk-cu.html" data-s="C" data-n="ghk-cu copper peptide ghk-cu">
+        <span class="pill neutral">Kosmetyk lub suplement</span>
+        <b>GHK-Cu</b>
+        <em>Peptyd kosmetyczny</em>
+      </a><a class="entry tile" href="p/ghrp-2.html" data-s="U" data-n="ghrp-2 pralmorelin ghrp-2">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>GHRP-2</b>
+        <em>Sekretagog hormonu wzrostu</em>
+      </a><a class="entry tile" href="p/ghrp-6.html" data-s="U" data-n="ghrp-6 growth hormone releasing peptide-6 ghrp-6">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>GHRP-6</b>
+        <em>Sekretagog hormonu wzrostu</em>
+      </a><a class="entry tile" href="p/glatiramer.html" data-s="A" data-n="glatyramer copaxone glatyramer">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Glatyramer</b>
+        <em>Syntetyczny polimer aminokwasów</em>
+      </a><a class="entry tile" href="p/glucagon.html" data-s="A" data-n="glukagon gvoke, zestawy glukagonu glukagon">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Glukagon</b>
+        <em>Hormon trzustki (peptyd)</em>
+      </a><a class="entry tile" href="p/glutathione.html" data-s="C" data-n="glutation  glutation">
+        <span class="pill neutral">Kosmetyk lub suplement</span>
+        <b>Glutation</b>
+        <em>Tripeptyd</em>
+      </a><a class="entry tile" href="p/gonadorelin.html" data-s="R" data-n="gonadorelina gnrh gonadorelina">
+        <span class="pill mid">Zatwierdzony regionalnie lub historycznie</span>
+        <b>Gonadorelina</b>
+        <em>Hormon podwzgórza</em>
+      </a><a class="entry tile" href="p/goserelin.html" data-s="A" data-n="goserelina zoladex goserelina">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Goserelina</b>
+        <em>Agonista GnRH</em>
+      </a><a class="entry tile" href="p/hcg-and-hmg.html" data-s="A" data-n="hcg i hmg novarel, pregnyl, menopur hcg i hmg">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>HCG i HMG</b>
+        <em>Hormony glikoproteinowe (białka)</em>
+      </a><a class="entry tile" href="p/hexarelin.html" data-s="U" data-n="heksarelina  heksarelina">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Heksarelina</b>
+        <em>Sekretagog hormonu wzrostu</em>
+      </a><a class="entry tile" href="p/hgh-fragment-176-191.html" data-s="U" data-n="hgh fragment 176–191 frag 176-191 hgh fragment 176–191">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>HGH Fragment 176–191</b>
+        <em>Fragment hormonu wzrostu</em>
+      </a><a class="entry tile" href="p/humanin.html" data-s="U" data-n="humanina  humanina">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Humanina</b>
+        <em>Peptyd mitochondrialny</em>
+      </a><a class="entry tile" href="p/igf-1-lr3.html" data-s="U" data-n="igf-1 lr3  igf-1 lr3">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>IGF-1 LR3</b>
+        <em>Analog insulinopodobnego czynnika wzrostu</em>
+      </a><a class="entry tile" href="p/icatibant.html" data-s="A" data-n="ikatybant firazyr ikatybant">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Ikatybant</b>
+        <em>Antagonista receptora bradykininy B2</em>
+      </a><a class="entry tile" href="p/insulins-and-analogues.html" data-s="A" data-n="insuliny i analogi humalog, novolog, apidra, lantus, levemir, tresiba insuliny i analogi">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Insuliny i analogi</b>
+        <em>Hormon peptydowy (2 łańcuchy)</em>
+      </a><a class="entry tile" href="p/ipamorelin.html" data-s="U" data-n="ipamorelina  ipamorelina">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Ipamorelina</b>
+        <em>Sekretagog hormonu wzrostu</em>
+      </a><a class="entry tile" href="p/salmon-calcitonin.html" data-s="A" data-n="kalcytonina łososiowa miacalcin kalcytonina łososiowa">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Kalcytonina łososiowa</b>
+        <em>Hormon peptydowy</em>
+      </a><a class="entry tile" href="p/kisspeptin-10.html" data-s="U" data-n="kisspeptyna-10  kisspeptyna-10">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Kisspeptyna-10</b>
+        <em>Neuropeptyd</em>
+      </a><a class="entry tile" href="p/kpv.html" data-s="U" data-n="kpv  kpv">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>KPV</b>
+        <em>Fragment alfa-MSH</em>
+      </a><a class="entry tile" href="p/l-carnitine.html" data-s="N" data-n="l-karnityna  l-karnityna">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>L-karnityna</b>
+        <em>Związek podobny do aminokwasów</em>
+      </a><a class="entry tile" href="p/lanreotide.html" data-s="A" data-n="lanreotyd somatuline lanreotyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Lanreotyd</b>
+        <em>Analog somatostatyny</em>
+      </a><a class="entry tile" href="p/leuprolide.html" data-s="A" data-n="leuprorelina lupron, eligard leuprorelina">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Leuprorelina</b>
+        <em>Agonista GnRH</em>
+      </a><a class="entry tile" href="p/lixisenatide.html" data-s="A" data-n="liksysenatyd adlyxin liksysenatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Liksysenatyd</b>
+        <em>Agonista GLP-1</em>
+      </a><a class="entry tile" href="p/linaclotide.html" data-s="A" data-n="linaklotyd linzess linaklotyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Linaklotyd</b>
+        <em>Agonista cyklazy guanylowej C</em>
+      </a><a class="entry tile" href="p/liraglutide.html" data-s="A" data-n="liraglutyd victoza, saxenda liraglutyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Liraglutyd</b>
+        <em>Agonista GLP-1</em>
+      </a><a class="entry tile" href="p/ll-37.html" data-s="U" data-n="ll-37 cathelicidin ll-37">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>LL-37</b>
+        <em>Peptyd przeciwdrobnoustrojowy</em>
+      </a><a class="entry tile" href="p/matrixyl.html" data-s="C" data-n="matrixyl palmitoyl pentapeptide-4 matrixyl">
+        <span class="pill neutral">Kosmetyk lub suplement</span>
+        <b>Matrixyl</b>
+        <em>Peptyd kosmetyczny</em>
+      </a><a class="entry tile" href="p/mazdutide.html" data-s="R" data-n="mazdutyd ibi362, innovent mazdutyd">
+        <span class="pill mid">Zatwierdzony regionalnie lub historycznie</span>
+        <b>Mazdutyd</b>
+        <em>Podwójny agonista GLP-1 i glukagonu</em>
+      </a><a class="entry tile" href="p/melanotan-ii.html" data-s="U" data-n="melanotan ii  melanotan ii">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Melanotan II</b>
+        <em>Analog alfa-MSH</em>
+      </a><a class="entry tile" href="p/melatonin.html" data-s="N" data-n="melatonina  melatonina">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>Melatonina</b>
+        <em>Hormon, nie peptyd</em>
+      </a><a class="entry tile" href="p/mgf-and-peg-mgf.html" data-s="U" data-n="mgf i peg-mgf mechano growth factor mgf i peg-mgf">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>MGF i PEG-MGF</b>
+        <em>Wariant splicingowy IGF-1</em>
+      </a><a class="entry tile" href="p/mic-and-lipo-c.html" data-s="N" data-n="mic i lipo-c mic, lipo-c, lipo-b mic i lipo-c">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>MIC i Lipo-C</b>
+        <em>Mieszanki iniekcyjne</em>
+      </a><a class="entry tile" href="p/blends-reta-tirzepatide-cagri-sema.html" data-s="U" data-n="mieszanki: reta + tirzepatyd, cagri + sema  mieszanki: reta + tirzepatyd, cagri + sema">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Mieszanki: Reta + Tirzepatyd, Cagri + Sema</b>
+        <em>Mieszanki dwóch substancji w jednej fiolce</em>
+      </a><a class="entry tile" href="p/mots-c.html" data-s="U" data-n="mots-c  mots-c">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>MOTS-c</b>
+        <em>Peptyd mitochondrialny</em>
+      </a><a class="entry tile" href="p/motixafortide.html" data-s="A" data-n="motyksafortyd aphexda motyksafortyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Motyksafortyd</b>
+        <em>Antagonista CXCR4</em>
+      </a><a class="entry tile" href="p/nad.html" data-s="N" data-n="nad+  nad+">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>NAD+</b>
+        <em>Koenzym, nie peptyd</em>
+      </a><a class="entry tile" href="p/nesiritide.html" data-s="A" data-n="nesirytyd natrecor nesirytyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Nesirytyd</b>
+        <em>Rekombinowany peptyd natriuretyczny typu B</em>
+      </a><a class="entry tile" href="p/oxytocin.html" data-s="A" data-n="oksytocyna pitocin oksytocyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Oksytocyna</b>
+        <em>Hormon peptydowy</em>
+      </a><a class="entry tile" href="p/octreotide.html" data-s="A" data-n="oktreotyd sandostatin, mycapssa oktreotyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Oktreotyd</b>
+        <em>Analog somatostatyny</em>
+      </a><a class="entry tile" href="p/orexin-a-and-b.html" data-s="U" data-n="oreksyna a i b hypocretins oreksyna a i b">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Oreksyna A i B</b>
+        <em>Neuropeptydy</em>
+      </a><a class="entry tile" href="p/oritavancin.html" data-s="A" data-n="orytawancyna orbactiv, kimyrsa orytawancyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Orytawancyna</b>
+        <em>Lipoglikopeptyd (antybiotyk)</em>
+      </a><a class="entry tile" href="p/p21.html" data-s="U" data-n="p21 p021 p21">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>P21</b>
+        <em>Peptyd neurotroficzny</em>
+      </a><a class="entry tile" href="p/palopegteriparatide.html" data-s="A" data-n="palopegteriparatyd yorvipath palopegteriparatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Palopegteriparatyd</b>
+        <em>Prolek parathormonu (PTH 1–34)</em>
+      </a><a class="entry tile" href="p/pasireotide.html" data-s="A" data-n="pasyreotyd signifor pasyreotyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Pasyreotyd</b>
+        <em>Analog somatostatyny</em>
+      </a><a class="entry tile" href="p/pe-22-28.html" data-s="U" data-n="pe-22-28  pe-22-28">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>PE-22-28</b>
+        <em>Peptyd modulujący kanały TREK-1</em>
+      </a><a class="entry tile" href="p/pegcetacoplan-and-zilucoplan.html" data-s="A" data-n="pegcetakoplan i zilukoplan empaveli, zilbrysq pegcetakoplan i zilukoplan">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Pegcetakoplan i zilukoplan</b>
+        <em>Inhibitory dopełniacza</em>
+      </a><a class="entry tile" href="p/bioregulator-peptides.html" data-s="U" data-n="peptydy bioregulatory pinealon, vesugen, cartalax, cardiogen, crystagen, bronchogen, cortagen peptydy bioregulatory">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Peptydy bioregulatory</b>
+        <em>Krótkie peptydy (2–4 aminokwasy)</em>
+      </a><a class="entry tile" href="p/plecanatide.html" data-s="A" data-n="plekanatyd trulance plekanatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Plekanatyd</b>
+        <em>Agonista cyklazy guanylowej C</em>
+      </a><a class="entry tile" href="p/pnc-27.html" data-s="U" data-n="pnc-27  pnc-27">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>PNC-27</b>
+        <em>Peptyd przeciwnowotworowy (eksperymentalny)</em>
+      </a><a class="entry tile" href="p/pramlintide.html" data-s="A" data-n="pramlintyd symlin pramlintyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Pramlintyd</b>
+        <em>Analog amyliny</em>
+      </a><a class="entry tile" href="p/pt-141.html" data-s="A" data-n="pt-141 bremelanotyd, vyleesi pt-141">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>PT-141</b>
+        <em>Agonista receptorów melanokortynowych</em>
+      </a><a class="entry tile" href="p/ptd-dbm.html" data-s="U" data-n="ptd-dbm  ptd-dbm">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>PTD-DBM</b>
+        <em>Peptyd w badaniach wzrostu włosów</em>
+      </a><a class="entry tile" href="p/retatrutide.html" data-s="P" data-n="retatrutyd reta, ly3437943 retatrutyd">
+        <span class="pill mid">W badaniach klinicznych</span>
+        <b>Retatrutyd</b>
+        <em>Potrójny agonista GIP, GLP-1 i glukagonu</em>
+      </a><a class="entry tile" href="p/romidepsin.html" data-s="A" data-n="romidepsyna istodax romidepsyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Romidepsyna</b>
+        <em>Cykliczny depsypeptyd (lek przeciwnowotworowy)</em>
+      </a><a class="entry tile" href="p/secretin.html" data-s="A" data-n="sekretyna chirhostim sekretyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Sekretyna</b>
+        <em>Hormon jelitowy (peptyd)</em>
+      </a><a class="entry tile" href="p/selank.html" data-s="U" data-n="selank  selank">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Selank</b>
+        <em>Peptyd nootropowy</em>
+      </a><a class="entry tile" href="p/semaglutide.html" data-s="A" data-n="semaglutyd ozempic, wegovy, rybelsus semaglutyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Semaglutyd</b>
+        <em>Agonista GLP-1</em>
+      </a><a class="entry tile" href="p/semax.html" data-s="U" data-n="semax  semax">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Semax</b>
+        <em>Peptyd nootropowy</em>
+      </a><a class="entry tile" href="p/sermorelin.html" data-s="U" data-n="sermorelina ghrh 1–29 sermorelina">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Sermorelina</b>
+        <em>Analog GHRH</em>
+      </a><a class="entry tile" href="p/setmelanotide.html" data-s="A" data-n="setmelanotyd imcivree setmelanotyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Setmelanotyd</b>
+        <em>Agonista MC4R</em>
+      </a><a class="entry tile" href="p/slu-pp-332.html" data-s="N" data-n="slu-pp-332  slu-pp-332">
+        <span class="pill neutral">Nie jest peptydem</span>
+        <b>SLU-PP-332</b>
+        <em>Mała cząsteczka, nie peptyd</em>
+      </a><a class="entry tile" href="p/snap-8.html" data-s="C" data-n="snap-8 acetyl octapeptide-3 snap-8">
+        <span class="pill neutral">Kosmetyk lub suplement</span>
+        <b>Snap-8</b>
+        <em>Peptyd kosmetyczny</em>
+      </a><a class="entry tile" href="p/somatropin-hgh.html" data-s="A" data-n="somatropina (hgh) genotropin, norditropin, omnitrope somatropina (hgh)">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Somatropina (HGH)</b>
+        <em>Białko (191 aminokwasów)</em>
+      </a><a class="entry tile" href="p/ss-31.html" data-s="A" data-n="ss-31 elamipretyd, forzinity ss-31">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>SS-31</b>
+        <em>Peptyd mitochondrialny</em>
+      </a><a class="entry tile" href="p/survodutide.html" data-s="P" data-n="survodutyd bi 456906 survodutyd">
+        <span class="pill mid">W badaniach klinicznych</span>
+        <b>Survodutyd</b>
+        <em>Podwójny agonista GLP-1 i glukagonu</em>
+      </a><a class="entry tile" href="p/sincalide.html" data-s="A" data-n="synkalid kinevac synkalid">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Synkalid</b>
+        <em>Analog cholecystokininy</em>
+      </a><a class="entry tile" href="p/tb-500.html" data-s="U" data-n="tb-500 thymosin β4 fragment, lkktetq tb-500">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>TB-500</b>
+        <em>Peptyd „badawczy”</em>
+      </a><a class="entry tile" href="p/teduglutide.html" data-s="A" data-n="teduglutyd gattex teduglutyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Teduglutyd</b>
+        <em>Analog GLP-2</em>
+      </a><a class="entry tile" href="p/telavancin.html" data-s="A" data-n="telawancyna vibativ telawancyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Telawancyna</b>
+        <em>Lipoglikopeptyd (antybiotyk)</em>
+      </a><a class="entry tile" href="p/terlipressin.html" data-s="A" data-n="terlipresyna terlivaz terlipresyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Terlipresyna</b>
+        <em>Analog wazopresyny</em>
+      </a><a class="entry tile" href="p/teriparatide.html" data-s="A" data-n="teryparatyd forteo teryparatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Teryparatyd</b>
+        <em>Fragment parathormonu (1–34)</em>
+      </a><a class="entry tile" href="p/tesamorelin.html" data-s="A" data-n="tesamorelina egrifta tesamorelina">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Tesamorelina</b>
+        <em>Analog GHRH</em>
+      </a><a class="entry tile" href="p/tirzepatide.html" data-s="A" data-n="tirzepatyd mounjaro, zepbound tirzepatyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Tirzepatyd</b>
+        <em>Agonista GIP i GLP-1</em>
+      </a><a class="entry tile" href="p/botulinum-toxin.html" data-s="A" data-n="toksyna botulinowa botox, dysport, xeomin toksyna botulinowa">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Toksyna botulinowa</b>
+        <em>Białko</em>
+      </a><a class="entry tile" href="p/triptorelin.html" data-s="A" data-n="triptorelina trelstar triptorelina">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Triptorelina</b>
+        <em>Agonista GnRH</em>
+      </a><a class="entry tile" href="p/trofinetide.html" data-s="A" data-n="trofinetyd daybue trofinetyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Trofinetyd</b>
+        <em>Analog fragmentu IGF-1</em>
+      </a><a class="entry tile" href="p/thymalin-and-thymulin.html" data-s="U" data-n="tymalina i tymulina thymalin, thymulin tymalina i tymulina">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>Tymalina i tymulina</b>
+        <em>Preparaty z grasicy</em>
+      </a><a class="entry tile" href="p/thymosin-alpha-1.html" data-s="R" data-n="tymozyna alfa-1 zadaxin tymozyna alfa-1">
+        <span class="pill mid">Zatwierdzony regionalnie lub historycznie</span>
+        <b>Tymozyna alfa-1</b>
+        <em>Peptyd grasicy</em>
+      </a><a class="entry tile" href="p/vip.html" data-s="U" data-n="vip aviptadil vip">
+        <span class="pill warn">Niezatwierdzony</span>
+        <b>VIP</b>
+        <em>Neuropeptyd</em>
+      </a><a class="entry tile" href="p/vancomycin.html" data-s="A" data-n="wankomycyna vancocin wankomycyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Wankomycyna</b>
+        <em>Glikopeptyd</em>
+      </a><a class="entry tile" href="p/vasopressin.html" data-s="A" data-n="wazopresyna vasostrict wazopresyna">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Wazopresyna</b>
+        <em>Hormon peptydowy</em>
+      </a><a class="entry tile" href="p/vosoritide.html" data-s="A" data-n="wosorytyd voxzogo wosorytyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Wosorytyd</b>
+        <em>Analog peptydu CNP</em>
+      </a><a class="entry tile" href="p/ziconotide.html" data-s="A" data-n="zikonotyd prialt zikonotyd">
+        <span class="pill ok">Zatwierdzony lek</span>
+        <b>Zikonotyd</b>
+        <em>Peptyd z jadu ślimaka stożkowatego</em>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>PepSafe — fakty o peptydach, bez sprzedaży. Treść edukacyjna, nie porada medyczna.</p>
+    <p><button id="motion" class="linkish" data-off="Zatrzymaj ruch" data-on="Włącz ruch">Zatrzymaj ruch</button> · <span class="mono">pepsafe.info</span></p>
+  </div>
+</footer>
+
+<script src="../assets/ruch.js" defer></script>
+</body>
+</html>

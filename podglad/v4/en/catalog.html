@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Catalog of 123 peptides | PepSafe</title>
+<meta name="description" content="All 123 entries with legal status, mechanism and evidence.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Cpath d=%22M6 24 L14 10 L22 22 L29 8%22 stroke=%22%238A918D%22 stroke-width=%222%22 fill=%22none%22/%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%224.5%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%224.5%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%224.5%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%224.5%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('pep-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<i class="progress" aria-hidden="true"></i>
+
+<header class="bar">
+  <nav class="wrap">
+    <a class="brand" href="index.html"><svg class="logo" width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M6 24 L14 10 L22 22 L29 8" stroke="var(--ink3)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="24" r="4.5" fill="var(--k1)"/><circle cx="14" cy="10" r="4.5" fill="var(--k2)"/><circle cx="22" cy="22" r="4.5" fill="var(--k3)"/><circle cx="29" cy="8" r="4.5" fill="var(--k4)"/></svg>PepSafe</a>
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html" aria-current="page">Catalog</a></li>
+      <li><a href="groups.html">Groups</a></li>
+      <li><a href="faq.html">Questions</a></li>
+      <li><a href="alerts.html">Warnings</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="tools">
+      <button class="icon" id="theme" type="button" aria-label="Theme">
+        <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><g class="sun"><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.2 5.2l1.4 1.4M13.4 13.4l1.4 1.4M14.8 5.2l-1.4 1.4M6.6 13.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/></g><path class="moon" d="M15 11.5A6 6 0 0 1 8.5 5a6 6 0 1 0 6.5 6.5Z" fill="currentColor"/></svg>
+      </button>
+      <a class="lang" href="../pl/catalog.html">PL</a>
+      <a class="btn" href="catalog.html">Open catalog</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">Catalog</p>
+    <h1 class="display reveal">Every entry, with its status.</h1>
+    <p class="lede reveal">123 entries — what each one is, what the research shows, and whether any regulator approved it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="filters reveal">
+      <label class="search"><span class="sr">Search by name or brand</span>
+        <input id="q" type="search" placeholder="Search by name or brand" autocomplete="off"></label>
+      <div class="chips" id="chips">
+        <button class="chip on" data-s="">All <span class="num">123</span></button>
+        <button class="chip" data-s="A">Approved drug <span class="num">62</span></button><button class="chip" data-s="P">In clinical trials <span class="num">3</span></button><button class="chip" data-s="R">Approved regionally or historically <span class="num">4</span></button><button class="chip" data-s="U">Unapproved <span class="num">41</span></button><button class="chip" data-s="N">Not a peptide <span class="num">8</span></button><button class="chip" data-s="C">Cosmetic or supplement <span class="num">5</span></button>
+      </div>
+    </div>
+    <p id="nohit" class="muted" hidden>Nothing matches that.</p>
+    <div class="grid-cards" id="list">
+      <a class="entry tile" href="p/5-amino-1mq.html" data-s="N" data-n="5-amino-1mq  5-amino-1mq">
+        <span class="pill neutral">Not a peptide</span>
+        <b>5-amino-1MQ</b>
+        <em>Small molecule, not a peptide</em>
+      </a><a class="entry tile" href="p/abaloparatide.html" data-s="A" data-n="abaloparatide tymlos abaloparatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Abaloparatide</b>
+        <em>PTHrP analogue</em>
+      </a><a class="entry tile" href="p/ace-031.html" data-s="U" data-n="ace-031  ace-031">
+        <span class="pill warn">Unapproved</span>
+        <b>ACE-031</b>
+        <em>Soluble activin receptor IIB</em>
+      </a><a class="entry tile" href="p/acth-1-39.html" data-s="A" data-n="acth 1–39 corticotropin, acthar acth 1–39">
+        <span class="pill ok">Approved drug</span>
+        <b>ACTH 1–39</b>
+        <em>Pituitary hormone</em>
+      </a><a class="entry tile" href="p/adamax.html" data-s="U" data-n="adamax n-acetyl semax amidate z grupą adamantanową adamax">
+        <span class="pill warn">Unapproved</span>
+        <b>Adamax</b>
+        <em>Modified nootropic peptide</em>
+      </a><a class="entry tile" href="p/adipotide.html" data-s="U" data-n="adipotide ftpp adipotide">
+        <span class="pill warn">Unapproved</span>
+        <b>Adipotide</b>
+        <em>Peptidomimetic targeting fat tissue blood vessels</em>
+      </a><a class="entry tile" href="p/afamelanotide.html" data-s="A" data-n="afamelanotide melanotan i, scenesse afamelanotyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Afamelanotide</b>
+        <em>Alpha-MSH analogue</em>
+      </a><a class="entry tile" href="p/ahk-cu.html" data-s="C" data-n="ahk-cu  ahk-cu">
+        <span class="pill neutral">Cosmetic or supplement</span>
+        <b>AHK-Cu</b>
+        <em>Cosmetic peptide</em>
+      </a><a class="entry tile" href="p/aicar.html" data-s="N" data-n="aicar  aicar">
+        <span class="pill neutral">Not a peptide</span>
+        <b>AICAR</b>
+        <em>Nucleoside, not a peptide</em>
+      </a><a class="entry tile" href="p/angiotensin-ii.html" data-s="A" data-n="angiotensin ii giapreza angiotensyna ii">
+        <span class="pill ok">Approved drug</span>
+        <b>Angiotensin II</b>
+        <em>Vasoconstrictor peptide</em>
+      </a><a class="entry tile" href="p/aod9604.html" data-s="U" data-n="aod9604 hgh 176–191 + tyr aod9604">
+        <span class="pill warn">Unapproved</span>
+        <b>AOD9604</b>
+        <em>Growth hormone fragment</em>
+      </a><a class="entry tile" href="p/ara290.html" data-s="U" data-n="ara290 cibinetyd ara290">
+        <span class="pill warn">Unapproved</span>
+        <b>ARA290</b>
+        <em>Erythropoietin-derived peptide</em>
+      </a><a class="entry tile" href="p/b7-33.html" data-s="U" data-n="b7-33  b7-33">
+        <span class="pill warn">Unapproved</span>
+        <b>B7-33</b>
+        <em>Relaxin derivative</em>
+      </a><a class="entry tile" href="p/bioregulator-peptides.html" data-s="U" data-n="bioregulator peptides pinealon, vesugen, cartalax, cardiogen, crystagen, bronchogen, cortagen peptydy bioregulatory">
+        <span class="pill warn">Unapproved</span>
+        <b>Bioregulator peptides</b>
+        <em>Short peptides (2–4 amino acids)</em>
+      </a><a class="entry tile" href="p/bivalirudin.html" data-s="A" data-n="bivalirudin angiomax biwalirudyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Bivalirudin</b>
+        <em>Direct thrombin inhibitor</em>
+      </a><a class="entry tile" href="p/blends-reta-tirzepatide-cagri-sema.html" data-s="U" data-n="blends: reta + tirzepatide, cagri + sema  mieszanki: reta + tirzepatyd, cagri + sema">
+        <span class="pill warn">Unapproved</span>
+        <b>Blends: Reta + Tirzepatide, Cagri + Sema</b>
+        <em>Two substances in one vial</em>
+      </a><a class="entry tile" href="p/botulinum-toxin.html" data-s="A" data-n="botulinum toxin botox, dysport, xeomin toksyna botulinowa">
+        <span class="pill ok">Approved drug</span>
+        <b>Botulinum toxin</b>
+        <em>Protein</em>
+      </a><a class="entry tile" href="p/bpc-157.html" data-s="U" data-n="bpc-157 body protection compound bpc-157">
+        <span class="pill warn">Unapproved</span>
+        <b>BPC-157</b>
+        <em>“Research” peptide</em>
+      </a><a class="entry tile" href="p/bpc-157-tb-500.html" data-s="U" data-n="bpc-157 + tb-500 bpc+tb, glow, klow bpc-157 + tb-500">
+        <span class="pill warn">Unapproved</span>
+        <b>BPC-157 + TB-500</b>
+        <em>Blends of “research” peptides</em>
+      </a><a class="entry tile" href="p/cagrilintide.html" data-s="P" data-n="cagrilintide  cagrilintyd">
+        <span class="pill mid">In clinical trials</span>
+        <b>Cagrilintide</b>
+        <em>Long-acting amylin analogue</em>
+      </a><a class="entry tile" href="p/cerebrolysin.html" data-s="R" data-n="cerebrolysin  cerebrolizyna">
+        <span class="pill mid">Approved regionally or historically</span>
+        <b>Cerebrolysin</b>
+        <em>Mixture of peptides from pig brain</em>
+      </a><a class="entry tile" href="p/cetrorelix-and-ganirelix.html" data-s="A" data-n="cetrorelix and ganirelix cetrotide, ganirelix cetroreliks i ganireliks">
+        <span class="pill ok">Approved drug</span>
+        <b>Cetrorelix and ganirelix</b>
+        <em>GnRH antagonists</em>
+      </a><a class="entry tile" href="p/cjc-1295.html" data-s="U" data-n="cjc-1295 cjc-1295 dac, mod grf 1-29 cjc-1295">
+        <span class="pill warn">Unapproved</span>
+        <b>CJC-1295</b>
+        <em>GHRH analogue</em>
+      </a><a class="entry tile" href="p/cyclosporine.html" data-s="A" data-n="cyclosporine sandimmune cyklosporyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Cyclosporine</b>
+        <em>Cyclic peptide (immunosuppressant)</em>
+      </a><a class="entry tile" href="p/dalbavancin.html" data-s="A" data-n="dalbavancin dalvance dalbawancyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Dalbavancin</b>
+        <em>Lipoglycopeptide (antibiotic)</em>
+      </a><a class="entry tile" href="p/daptomycin.html" data-s="A" data-n="daptomycin cubicin daptomycyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Daptomycin</b>
+        <em>Cyclic lipopeptide</em>
+      </a><a class="entry tile" href="p/dasiglucagon.html" data-s="A" data-n="dasiglucagon zegalogue dazyglukagon">
+        <span class="pill ok">Approved drug</span>
+        <b>Dasiglucagon</b>
+        <em>Glucagon analogue</em>
+      </a><a class="entry tile" href="p/degarelix.html" data-s="A" data-n="degarelix firmagon degareliks">
+        <span class="pill ok">Approved drug</span>
+        <b>Degarelix</b>
+        <em>GnRH antagonist</em>
+      </a><a class="entry tile" href="p/desmopressin.html" data-s="A" data-n="desmopressin ddavp desmopresyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Desmopressin</b>
+        <em>Vasopressin analogue</em>
+      </a><a class="entry tile" href="p/difelikefalin.html" data-s="A" data-n="difelikefalin korsuva difelikefalina">
+        <span class="pill ok">Approved drug</span>
+        <b>Difelikefalin</b>
+        <em>Kappa opioid receptor agonist</em>
+      </a><a class="entry tile" href="p/dihexa.html" data-s="U" data-n="dihexa pnb-0408 dihexa">
+        <span class="pill warn">Unapproved</span>
+        <b>Dihexa</b>
+        <em>Nootropic peptide</em>
+      </a><a class="entry tile" href="p/dsip.html" data-s="U" data-n="dsip emideltide dsip">
+        <span class="pill warn">Unapproved</span>
+        <b>DSIP</b>
+        <em>“Research” peptide</em>
+      </a><a class="entry tile" href="p/dulaglutide.html" data-s="A" data-n="dulaglutide trulicity dulaglutyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Dulaglutide</b>
+        <em>GLP-1 agonist</em>
+      </a><a class="entry tile" href="p/enfuvirtide.html" data-s="A" data-n="enfuvirtide fuzeon enfuwirtyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Enfuvirtide</b>
+        <em>HIV entry inhibitor</em>
+      </a><a class="entry tile" href="p/epitalon.html" data-s="U" data-n="epitalon epithalon epitalon">
+        <span class="pill warn">Unapproved</span>
+        <b>Epitalon</b>
+        <em>Short “bioregulator” peptide</em>
+      </a><a class="entry tile" href="p/eptifibatide.html" data-s="A" data-n="eptifibatide integrilin eptyfibatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Eptifibatide</b>
+        <em>GP IIb/IIIa inhibitor</em>
+      </a><a class="entry tile" href="p/erythropoietin-epo.html" data-s="A" data-n="erythropoietin (epo)  erytropoetyna (epo)">
+        <span class="pill ok">Approved drug</span>
+        <b>Erythropoietin (EPO)</b>
+        <em>Protein</em>
+      </a><a class="entry tile" href="p/etelcalcetide.html" data-s="A" data-n="etelcalcetide parsabiv etelkalcetyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Etelcalcetide</b>
+        <em>Calcimimetic peptide</em>
+      </a><a class="entry tile" href="p/exenatide.html" data-s="A" data-n="exenatide byetta, bydureon eksenatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Exenatide</b>
+        <em>GLP-1 agonist</em>
+      </a><a class="entry tile" href="p/follistatin-and-fst-344.html" data-s="U" data-n="follistatin and fst-344  follistatyna i fst-344">
+        <span class="pill warn">Unapproved</span>
+        <b>Follistatin and FST-344</b>
+        <em>Myostatin-blocking protein</em>
+      </a><a class="entry tile" href="p/foundayo-orforglipron.html" data-s="N" data-n="foundayo (orforglipron) orforglipron, lilly foundayo (orforglipron)">
+        <span class="pill neutral">Not a peptide</span>
+        <b>Foundayo (orforglipron)</b>
+        <em>Oral GLP-1 agonist (small molecule, not a peptide)</em>
+      </a><a class="entry tile" href="p/foxo4-dri.html" data-s="U" data-n="foxo4-dri  foxo4-dri">
+        <span class="pill warn">Unapproved</span>
+        <b>FOXO4-DRI</b>
+        <em>Senolytic peptide (experimental)</em>
+      </a><a class="entry tile" href="p/gdf-8-myostatin.html" data-s="U" data-n="gdf-8 (myostatin)  gdf-8 (miostatyna)">
+        <span class="pill warn">Unapproved</span>
+        <b>GDF-8 (myostatin)</b>
+        <em>Growth factor</em>
+      </a><a class="entry tile" href="p/ghk-cu.html" data-s="C" data-n="ghk-cu copper peptide ghk-cu">
+        <span class="pill neutral">Cosmetic or supplement</span>
+        <b>GHK-Cu</b>
+        <em>Cosmetic peptide</em>
+      </a><a class="entry tile" href="p/ghrp-2.html" data-s="U" data-n="ghrp-2 pralmorelin ghrp-2">
+        <span class="pill warn">Unapproved</span>
+        <b>GHRP-2</b>
+        <em>Growth hormone secretagogue</em>
+      </a><a class="entry tile" href="p/ghrp-6.html" data-s="U" data-n="ghrp-6 growth hormone releasing peptide-6 ghrp-6">
+        <span class="pill warn">Unapproved</span>
+        <b>GHRP-6</b>
+        <em>Growth hormone secretagogue</em>
+      </a><a class="entry tile" href="p/glatiramer.html" data-s="A" data-n="glatiramer copaxone glatyramer">
+        <span class="pill ok">Approved drug</span>
+        <b>Glatiramer</b>
+        <em>Synthetic amino acid polymer</em>
+      </a><a class="entry tile" href="p/glucagon.html" data-s="A" data-n="glucagon gvoke, zestawy glukagonu glukagon">
+        <span class="pill ok">Approved drug</span>
+        <b>Glucagon</b>
+        <em>Pancreatic hormone (peptide)</em>
+      </a><a class="entry tile" href="p/glutathione.html" data-s="C" data-n="glutathione  glutation">
+        <span class="pill neutral">Cosmetic or supplement</span>
+        <b>Glutathione</b>
+        <em>Tripeptide</em>
+      </a><a class="entry tile" href="p/gonadorelin.html" data-s="R" data-n="gonadorelin gnrh gonadorelina">
+        <span class="pill mid">Approved regionally or historically</span>
+        <b>Gonadorelin</b>
+        <em>Hypothalamic hormone</em>
+      </a><a class="entry tile" href="p/goserelin.html" data-s="A" data-n="goserelin zoladex goserelina">
+        <span class="pill ok">Approved drug</span>
+        <b>Goserelin</b>
+        <em>GnRH agonist</em>
+      </a><a class="entry tile" href="p/hcg-and-hmg.html" data-s="A" data-n="hcg and hmg novarel, pregnyl, menopur hcg i hmg">
+        <span class="pill ok">Approved drug</span>
+        <b>hCG and hMG</b>
+        <em>Glycoprotein hormones (proteins)</em>
+      </a><a class="entry tile" href="p/hexarelin.html" data-s="U" data-n="hexarelin  heksarelina">
+        <span class="pill warn">Unapproved</span>
+        <b>Hexarelin</b>
+        <em>Growth hormone secretagogue</em>
+      </a><a class="entry tile" href="p/hgh-fragment-176-191.html" data-s="U" data-n="hgh fragment 176–191 frag 176-191 hgh fragment 176–191">
+        <span class="pill warn">Unapproved</span>
+        <b>HGH Fragment 176–191</b>
+        <em>Growth hormone fragment</em>
+      </a><a class="entry tile" href="p/humanin.html" data-s="U" data-n="humanin  humanina">
+        <span class="pill warn">Unapproved</span>
+        <b>Humanin</b>
+        <em>Mitochondrial peptide</em>
+      </a><a class="entry tile" href="p/icatibant.html" data-s="A" data-n="icatibant firazyr ikatybant">
+        <span class="pill ok">Approved drug</span>
+        <b>Icatibant</b>
+        <em>Bradykinin B2 receptor antagonist</em>
+      </a><a class="entry tile" href="p/igf-1-lr3.html" data-s="U" data-n="igf-1 lr3  igf-1 lr3">
+        <span class="pill warn">Unapproved</span>
+        <b>IGF-1 LR3</b>
+        <em>Insulin-like growth factor analogue</em>
+      </a><a class="entry tile" href="p/insulins-and-analogues.html" data-s="A" data-n="insulins and analogues humalog, novolog, apidra, lantus, levemir, tresiba insuliny i analogi">
+        <span class="pill ok">Approved drug</span>
+        <b>Insulins and analogues</b>
+        <em>Peptide hormone (2 chains)</em>
+      </a><a class="entry tile" href="p/ipamorelin.html" data-s="U" data-n="ipamorelin  ipamorelina">
+        <span class="pill warn">Unapproved</span>
+        <b>Ipamorelin</b>
+        <em>Growth hormone secretagogue</em>
+      </a><a class="entry tile" href="p/kisspeptin-10.html" data-s="U" data-n="kisspeptin-10  kisspeptyna-10">
+        <span class="pill warn">Unapproved</span>
+        <b>Kisspeptin-10</b>
+        <em>Neuropeptide</em>
+      </a><a class="entry tile" href="p/kpv.html" data-s="U" data-n="kpv  kpv">
+        <span class="pill warn">Unapproved</span>
+        <b>KPV</b>
+        <em>Alpha-MSH fragment</em>
+      </a><a class="entry tile" href="p/l-carnitine.html" data-s="N" data-n="l-carnitine  l-karnityna">
+        <span class="pill neutral">Not a peptide</span>
+        <b>L-carnitine</b>
+        <em>Amino-acid-like compound</em>
+      </a><a class="entry tile" href="p/lanreotide.html" data-s="A" data-n="lanreotide somatuline lanreotyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Lanreotide</b>
+        <em>Somatostatin analogue</em>
+      </a><a class="entry tile" href="p/leuprolide.html" data-s="A" data-n="leuprolide lupron, eligard leuprorelina">
+        <span class="pill ok">Approved drug</span>
+        <b>Leuprolide</b>
+        <em>GnRH agonist</em>
+      </a><a class="entry tile" href="p/linaclotide.html" data-s="A" data-n="linaclotide linzess linaklotyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Linaclotide</b>
+        <em>Guanylate cyclase-C agonist</em>
+      </a><a class="entry tile" href="p/liraglutide.html" data-s="A" data-n="liraglutide victoza, saxenda liraglutyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Liraglutide</b>
+        <em>GLP-1 agonist</em>
+      </a><a class="entry tile" href="p/lixisenatide.html" data-s="A" data-n="lixisenatide adlyxin liksysenatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Lixisenatide</b>
+        <em>GLP-1 agonist</em>
+      </a><a class="entry tile" href="p/ll-37.html" data-s="U" data-n="ll-37 cathelicidin ll-37">
+        <span class="pill warn">Unapproved</span>
+        <b>LL-37</b>
+        <em>Antimicrobial peptide</em>
+      </a><a class="entry tile" href="p/matrixyl.html" data-s="C" data-n="matrixyl palmitoyl pentapeptide-4 matrixyl">
+        <span class="pill neutral">Cosmetic or supplement</span>
+        <b>Matrixyl</b>
+        <em>Cosmetic peptide</em>
+      </a><a class="entry tile" href="p/mazdutide.html" data-s="R" data-n="mazdutide ibi362, innovent mazdutyd">
+        <span class="pill mid">Approved regionally or historically</span>
+        <b>Mazdutide</b>
+        <em>Dual GLP-1 and glucagon agonist</em>
+      </a><a class="entry tile" href="p/melanotan-ii.html" data-s="U" data-n="melanotan ii  melanotan ii">
+        <span class="pill warn">Unapproved</span>
+        <b>Melanotan II</b>
+        <em>Alpha-MSH analogue</em>
+      </a><a class="entry tile" href="p/melatonin.html" data-s="N" data-n="melatonin  melatonina">
+        <span class="pill neutral">Not a peptide</span>
+        <b>Melatonin</b>
+        <em>Hormone, not a peptide</em>
+      </a><a class="entry tile" href="p/mgf-and-peg-mgf.html" data-s="U" data-n="mgf and peg-mgf mechano growth factor mgf i peg-mgf">
+        <span class="pill warn">Unapproved</span>
+        <b>MGF and PEG-MGF</b>
+        <em>IGF-1 splice variant</em>
+      </a><a class="entry tile" href="p/mic-and-lipo-c.html" data-s="N" data-n="mic and lipo-c mic, lipo-c, lipo-b mic i lipo-c">
+        <span class="pill neutral">Not a peptide</span>
+        <b>MIC and Lipo-C</b>
+        <em>Injectable blends</em>
+      </a><a class="entry tile" href="p/motixafortide.html" data-s="A" data-n="motixafortide aphexda motyksafortyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Motixafortide</b>
+        <em>CXCR4 antagonist</em>
+      </a><a class="entry tile" href="p/mots-c.html" data-s="U" data-n="mots-c  mots-c">
+        <span class="pill warn">Unapproved</span>
+        <b>MOTS-c</b>
+        <em>Mitochondrial peptide</em>
+      </a><a class="entry tile" href="p/nad.html" data-s="N" data-n="nad+  nad+">
+        <span class="pill neutral">Not a peptide</span>
+        <b>NAD+</b>
+        <em>Coenzyme, not a peptide</em>
+      </a><a class="entry tile" href="p/nesiritide.html" data-s="A" data-n="nesiritide natrecor nesirytyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Nesiritide</b>
+        <em>Recombinant B-type natriuretic peptide</em>
+      </a><a class="entry tile" href="p/octreotide.html" data-s="A" data-n="octreotide sandostatin, mycapssa oktreotyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Octreotide</b>
+        <em>Somatostatin analogue</em>
+      </a><a class="entry tile" href="p/orexin-a-and-b.html" data-s="U" data-n="orexin a and b hypocretins oreksyna a i b">
+        <span class="pill warn">Unapproved</span>
+        <b>Orexin A and B</b>
+        <em>Neuropeptides</em>
+      </a><a class="entry tile" href="p/oritavancin.html" data-s="A" data-n="oritavancin orbactiv, kimyrsa orytawancyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Oritavancin</b>
+        <em>Lipoglycopeptide (antibiotic)</em>
+      </a><a class="entry tile" href="p/oxytocin.html" data-s="A" data-n="oxytocin pitocin oksytocyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Oxytocin</b>
+        <em>Peptide hormone</em>
+      </a><a class="entry tile" href="p/p21.html" data-s="U" data-n="p21 p021 p21">
+        <span class="pill warn">Unapproved</span>
+        <b>P21</b>
+        <em>Neurotrophic peptide</em>
+      </a><a class="entry tile" href="p/palopegteriparatide.html" data-s="A" data-n="palopegteriparatide yorvipath palopegteriparatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Palopegteriparatide</b>
+        <em>Parathyroid hormone prodrug (PTH 1–34)</em>
+      </a><a class="entry tile" href="p/pasireotide.html" data-s="A" data-n="pasireotide signifor pasyreotyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Pasireotide</b>
+        <em>Somatostatin analogue</em>
+      </a><a class="entry tile" href="p/pe-22-28.html" data-s="U" data-n="pe-22-28  pe-22-28">
+        <span class="pill warn">Unapproved</span>
+        <b>PE-22-28</b>
+        <em>TREK-1 channel modulating peptide</em>
+      </a><a class="entry tile" href="p/pegcetacoplan-and-zilucoplan.html" data-s="A" data-n="pegcetacoplan and zilucoplan empaveli, zilbrysq pegcetakoplan i zilukoplan">
+        <span class="pill ok">Approved drug</span>
+        <b>Pegcetacoplan and zilucoplan</b>
+        <em>Complement inhibitors</em>
+      </a><a class="entry tile" href="p/plecanatide.html" data-s="A" data-n="plecanatide trulance plekanatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Plecanatide</b>
+        <em>Guanylate cyclase-C agonist</em>
+      </a><a class="entry tile" href="p/pnc-27.html" data-s="U" data-n="pnc-27  pnc-27">
+        <span class="pill warn">Unapproved</span>
+        <b>PNC-27</b>
+        <em>Anticancer peptide (experimental)</em>
+      </a><a class="entry tile" href="p/pramlintide.html" data-s="A" data-n="pramlintide symlin pramlintyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Pramlintide</b>
+        <em>Amylin analogue</em>
+      </a><a class="entry tile" href="p/pt-141.html" data-s="A" data-n="pt-141 bremelanotyd, vyleesi pt-141">
+        <span class="pill ok">Approved drug</span>
+        <b>PT-141</b>
+        <em>Melanocortin receptor agonist</em>
+      </a><a class="entry tile" href="p/ptd-dbm.html" data-s="U" data-n="ptd-dbm  ptd-dbm">
+        <span class="pill warn">Unapproved</span>
+        <b>PTD-DBM</b>
+        <em>Peptide in hair-growth research</em>
+      </a><a class="entry tile" href="p/retatrutide.html" data-s="P" data-n="retatrutide reta, ly3437943 retatrutyd">
+        <span class="pill mid">In clinical trials</span>
+        <b>Retatrutide</b>
+        <em>Triple GIP, GLP-1 and glucagon agonist</em>
+      </a><a class="entry tile" href="p/romidepsin.html" data-s="A" data-n="romidepsin istodax romidepsyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Romidepsin</b>
+        <em>Cyclic depsipeptide (anticancer)</em>
+      </a><a class="entry tile" href="p/salmon-calcitonin.html" data-s="A" data-n="salmon calcitonin miacalcin kalcytonina łososiowa">
+        <span class="pill ok">Approved drug</span>
+        <b>Salmon calcitonin</b>
+        <em>Peptide hormone</em>
+      </a><a class="entry tile" href="p/secretin.html" data-s="A" data-n="secretin chirhostim sekretyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Secretin</b>
+        <em>Gut hormone (peptide)</em>
+      </a><a class="entry tile" href="p/selank.html" data-s="U" data-n="selank  selank">
+        <span class="pill warn">Unapproved</span>
+        <b>Selank</b>
+        <em>Nootropic peptide</em>
+      </a><a class="entry tile" href="p/semaglutide.html" data-s="A" data-n="semaglutide ozempic, wegovy, rybelsus semaglutyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Semaglutide</b>
+        <em>GLP-1 agonist</em>
+      </a><a class="entry tile" href="p/semax.html" data-s="U" data-n="semax  semax">
+        <span class="pill warn">Unapproved</span>
+        <b>Semax</b>
+        <em>Nootropic peptide</em>
+      </a><a class="entry tile" href="p/sermorelin.html" data-s="U" data-n="sermorelin ghrh 1–29 sermorelina">
+        <span class="pill warn">Unapproved</span>
+        <b>Sermorelin</b>
+        <em>GHRH analogue</em>
+      </a><a class="entry tile" href="p/setmelanotide.html" data-s="A" data-n="setmelanotide imcivree setmelanotyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Setmelanotide</b>
+        <em>MC4R agonist</em>
+      </a><a class="entry tile" href="p/sincalide.html" data-s="A" data-n="sincalide kinevac synkalid">
+        <span class="pill ok">Approved drug</span>
+        <b>Sincalide</b>
+        <em>Cholecystokinin analogue</em>
+      </a><a class="entry tile" href="p/slu-pp-332.html" data-s="N" data-n="slu-pp-332  slu-pp-332">
+        <span class="pill neutral">Not a peptide</span>
+        <b>SLU-PP-332</b>
+        <em>Small molecule, not a peptide</em>
+      </a><a class="entry tile" href="p/snap-8.html" data-s="C" data-n="snap-8 acetyl octapeptide-3 snap-8">
+        <span class="pill neutral">Cosmetic or supplement</span>
+        <b>Snap-8</b>
+        <em>Cosmetic peptide</em>
+      </a><a class="entry tile" href="p/somatropin-hgh.html" data-s="A" data-n="somatropin (hgh) genotropin, norditropin, omnitrope somatropina (hgh)">
+        <span class="pill ok">Approved drug</span>
+        <b>Somatropin (HGH)</b>
+        <em>Protein (191 amino acids)</em>
+      </a><a class="entry tile" href="p/ss-31.html" data-s="A" data-n="ss-31 elamipretyd, forzinity ss-31">
+        <span class="pill ok">Approved drug</span>
+        <b>SS-31</b>
+        <em>Mitochondrial peptide</em>
+      </a><a class="entry tile" href="p/survodutide.html" data-s="P" data-n="survodutide bi 456906 survodutyd">
+        <span class="pill mid">In clinical trials</span>
+        <b>Survodutide</b>
+        <em>Dual GLP-1 and glucagon agonist</em>
+      </a><a class="entry tile" href="p/tb-500.html" data-s="U" data-n="tb-500 thymosin β4 fragment, lkktetq tb-500">
+        <span class="pill warn">Unapproved</span>
+        <b>TB-500</b>
+        <em>“Research” peptide</em>
+      </a><a class="entry tile" href="p/teduglutide.html" data-s="A" data-n="teduglutide gattex teduglutyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Teduglutide</b>
+        <em>GLP-2 analogue</em>
+      </a><a class="entry tile" href="p/telavancin.html" data-s="A" data-n="telavancin vibativ telawancyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Telavancin</b>
+        <em>Lipoglycopeptide (antibiotic)</em>
+      </a><a class="entry tile" href="p/teriparatide.html" data-s="A" data-n="teriparatide forteo teryparatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Teriparatide</b>
+        <em>Parathyroid hormone fragment (1–34)</em>
+      </a><a class="entry tile" href="p/terlipressin.html" data-s="A" data-n="terlipressin terlivaz terlipresyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Terlipressin</b>
+        <em>Vasopressin analogue</em>
+      </a><a class="entry tile" href="p/tesamorelin.html" data-s="A" data-n="tesamorelin egrifta tesamorelina">
+        <span class="pill ok">Approved drug</span>
+        <b>Tesamorelin</b>
+        <em>GHRH analogue</em>
+      </a><a class="entry tile" href="p/thymalin-and-thymulin.html" data-s="U" data-n="thymalin and thymulin thymalin, thymulin tymalina i tymulina">
+        <span class="pill warn">Unapproved</span>
+        <b>Thymalin and thymulin</b>
+        <em>Thymus preparations</em>
+      </a><a class="entry tile" href="p/thymosin-alpha-1.html" data-s="R" data-n="thymosin alpha-1 zadaxin tymozyna alfa-1">
+        <span class="pill mid">Approved regionally or historically</span>
+        <b>Thymosin alpha-1</b>
+        <em>Thymic peptide</em>
+      </a><a class="entry tile" href="p/tirzepatide.html" data-s="A" data-n="tirzepatide mounjaro, zepbound tirzepatyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Tirzepatide</b>
+        <em>GIP and GLP-1 agonist</em>
+      </a><a class="entry tile" href="p/triptorelin.html" data-s="A" data-n="triptorelin trelstar triptorelina">
+        <span class="pill ok">Approved drug</span>
+        <b>Triptorelin</b>
+        <em>GnRH agonist</em>
+      </a><a class="entry tile" href="p/trofinetide.html" data-s="A" data-n="trofinetide daybue trofinetyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Trofinetide</b>
+        <em>IGF-1 fragment analogue</em>
+      </a><a class="entry tile" href="p/vancomycin.html" data-s="A" data-n="vancomycin vancocin wankomycyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Vancomycin</b>
+        <em>Glycopeptide</em>
+      </a><a class="entry tile" href="p/vasopressin.html" data-s="A" data-n="vasopressin vasostrict wazopresyna">
+        <span class="pill ok">Approved drug</span>
+        <b>Vasopressin</b>
+        <em>Peptide hormone</em>
+      </a><a class="entry tile" href="p/vip.html" data-s="U" data-n="vip aviptadil vip">
+        <span class="pill warn">Unapproved</span>
+        <b>VIP</b>
+        <em>Neuropeptide</em>
+      </a><a class="entry tile" href="p/vosoritide.html" data-s="A" data-n="vosoritide voxzogo wosorytyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Vosoritide</b>
+        <em>CNP analogue</em>
+      </a><a class="entry tile" href="p/ziconotide.html" data-s="A" data-n="ziconotide prialt zikonotyd">
+        <span class="pill ok">Approved drug</span>
+        <b>Ziconotide</b>
+        <em>Cone snail venom peptide</em>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>PepSafe — peptide facts, no sales. Educational content, not medical advice.</p>
+    <p><button id="motion" class="linkish" data-off="Stop motion" data-on="Start motion">Stop motion</button> · <span class="mono">pepsafe.info</span></p>
+  </div>
+</footer>
+
+<script src="../assets/ruch.js" defer></script>
+</body>
+</html>
