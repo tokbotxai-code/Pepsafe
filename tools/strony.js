@@ -65,6 +65,7 @@ function page(e, en) {
 <link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="${en ? 'pl' : 'en'}" href="${other}">
 <link rel="alternate" hreflang="${en ? 'en' : 'pl'}" href="${url}">
+<link rel="alternate" hreflang="x-default" href="https://pepsafe.info/p/${s}.html">
 <meta property="og:title" content="${esc(name)} — ${esc(status)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
