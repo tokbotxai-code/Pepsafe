@@ -64,7 +64,7 @@ const SITE = 'https://pepsafe.info';
 // FormSubmit: nie wymaga konta ani klucza, wiadomosci ida na ten adres.
 // Pierwsza wysylka uruchamia maila aktywacyjnego, ktory wlasciciel klika raz.
 // Po aktywacji mozna podmienic adres na alias z panelu, zeby nie stal w kodzie strony.
-const FORM_TO = 'tokbotx.ai@gmail.com';
+const FORM_TO = 'contact@pepsafe.info';
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
 const ICO_TT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg>';

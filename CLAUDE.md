@@ -150,8 +150,11 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 
 ## Formularze
 - Kontakt (`/<lang>/about.html#contact`) i zgłoszenie skutku ubocznego (`/<lang>/symptoms.html#report`)
-  wysyłają przez **FormSubmit** na adres w `FORM_TO` w `tools/v4.js` (`tokbotx.ai@gmail.com`).
+  wysyłają przez **FormSubmit** na adres w `FORM_TO` w `tools/v4.js` (`contact@pepsafe.info`).
   Konto nie jest potrzebne; pierwszą wysyłkę właściciel potwierdza raz klikając link aktywacyjny w mailu.
+- Adres na własnej domenie, nie prywatna skrzynka: jeśli dostawca poczty zablokuje konto, wymieniamy
+  tylko przekierowanie, a kod strony zostaje bez zmian. 20.10 zablokowano `tokbotx.ai@gmail.com`
+  i formularz przez kilka godzin wysyłał w próżnię — stąd ta zasada.
 - Po aktywacji warto podmienić adres na alias z panelu FormSubmit, żeby nie stał jawnie w kodzie strony.
 - Formularz kontaktowy dotyczy strony i katalogu, formularz objawów wyłącznie objawów — oba mają notkę
   odsyłającą do drugiego. Nie łączyć ich.
