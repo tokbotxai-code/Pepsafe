@@ -1,0 +1,18 @@
+{
+ "topic": "Amino acid chains",
+ "tagline": "Science, plainly",
+ "slides": [
+  {"kicker": "Biology", "title": "Where does a peptide end and a protein begin?", "hero": true,
+   "vo": "Where does a peptide end and a protein begin?", "seconds": 2.6},
+  {"kicker": "The chain", "title": "Both are chains of amino acids joined end to end.",
+   "vo": "Both are chains of amino acids joined end to end.", "seconds": 2.8},
+  {"kicker": "The line", "big": "50", "title": "Roughly the number of links where the name changes.",
+   "vo": "Around fifty links, the name changes.", "seconds": 2.8},
+  {"kicker": "Why it matters", "title": "Shorter chains fold less, so the body handles them differently.",
+   "vo": "Shorter chains fold less, so the body handles them differently.", "seconds": 3.2},
+  {"kicker": "More biology", "title": "Insulin has 51. Collagen has over a thousand.", "cta": "pepsafe.info",
+   "vo": "Insulin has fifty one. Collagen, over a thousand.",
+   "foot": "Educational content. Questions? Comment or DM us.", "seconds": 3.0}
+ ],
+ "caption": "Where does a peptide end and a protein begin? 🧬 Both are amino acids joined end to end. Around fifty links the name changes, and shorter chains fold less, so the body handles them differently. Insulin has 51 links. Collagen has over a thousand.\n\nMore biology at pepsafe.info\n\n#biology #science #chemistry #learnontiktok #education #pepsafe"
+}
