@@ -5,7 +5,7 @@
 const fs = require('fs'), path = require('path');
 
 const root = path.join(__dirname, '..');
-const file = path.join(root, 'index.html');
+const file = path.join(root, 'dane.html');
 const entry = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
 
 for (const k of ['date', 'n', 'pl', 'en', 'src']) if (!entry[k]) { console.error('brak pola: ' + k); process.exit(1); }
@@ -16,7 +16,7 @@ if (!Array.isArray(entry.src) || !entry.src.length || entry.src.some(s => !Array
 
 const html = fs.readFileSync(file, 'utf8');
 const start = html.indexOf('var DAILY=[');
-if (start < 0) { console.error('nie znaleziono var DAILY=[ w index.html'); process.exit(1); }
+if (start < 0) { console.error('nie znaleziono var DAILY=[ w dane.html'); process.exit(1); }
 const at = start + 'var DAILY=['.length;
 
 if (html.slice(at, at + 4000).includes(`"date": "${entry.date}"`)) {

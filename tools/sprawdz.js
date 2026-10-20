@@ -3,7 +3,7 @@
 // Usage: node tools/sprawdz.js tiktok/<folder> [tiktok/<folder> ...]
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const root = path.join(__dirname, '..');
-const lines = fs.readFileSync(path.join(root, 'index.html'), 'utf8').split('\n');
+const lines = fs.readFileSync(path.join(root, 'dane.html'), 'utf8').split('\n');
 const a = lines.findIndex(l => /^var ST=\{A:/.test(l));
 const b = lines.length - [...lines].reverse().findIndex(l => /^E\(/.test(l));
 const s = { window: {}, document: {}, console }; vm.createContext(s);

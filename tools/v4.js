@@ -5,8 +5,10 @@
 const fs = require('fs'), path = require('path'), vm = require('vm');
 
 const root = path.join(__dirname, '..');
-const out = path.join(root, 'podglad', 'v4');
-const lines = fs.readFileSync(path.join(root, 'index.html'), 'utf8').split('\n');
+const out = process.env.PEP_OUT ? path.resolve(root, process.env.PEP_OUT) : path.join(root, 'podglad', 'v4');
+const BASE = process.env.PEP_BASE !== undefined ? process.env.PEP_BASE : '/podglad/v4/';  // prefiks adresow na serwerze
+const cardPath = (e, L) => 'p/' + key(e) + (L === 'en' ? '' : '.' + L) + '.html';          // adresy, ktore Google juz zna
+const lines = fs.readFileSync(path.join(root, 'dane.html'), 'utf8').split('\n');
 const at = re => lines.findIndex(l => re.test(l));
 const until = i => i + lines.slice(i).findIndex((l, n) => n > 0 && /^(\];|\};)/.test(l)) + 1;
 const slice = (a, b) => lines.slice(a, b).join('\n');
@@ -59,7 +61,10 @@ function searchText(e, en) {
 const LANGS = ['en', 'pl'];
 
 const SITE = 'https://pepsafe.info';
-const FORM_KEY = 'e081d316-781d-4bb4-971f-759d8d431ce7';  // Web3Forms, ten sam klucz co na starej stronie
+// FormSubmit: nie wymaga konta ani klucza, wiadomosci ida na ten adres.
+// Pierwsza wysylka uruchamia maila aktywacyjnego, ktory wlasciciel klika raz.
+// Po aktywacji mozna podmienic adres na alias z panelu, zeby nie stal w kodzie strony.
+const FORM_TO = 'tokbotx.ai@gmail.com';
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
 const ICO_TT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg>';
@@ -82,7 +87,7 @@ const W = {
     entries: 'entries', listedWada: 'Listed by WADA in class', always: ', prohibited at all times',
     save: 'Save', saved: 'Saved', pick: 'Pick a substance', clear: 'Clear',
     dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved',
-    findLab: 'Search', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
+    menuLab: 'Menu', menuClose: 'Close menu', findLab: 'Search', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
     findNone: 'Nothing matches that.', findClose: 'Close', findMore: 'See all results',
     follow: 'Follow', contact: 'Contact', writeUs: 'Write to us',
     contactP: 'Questions, a correction, a source we missed? Send us a direct message on TikTok or Instagram. We read every one and answer the best ones in a Q&A. We never advise on doses, where to buy, or how to use anything.',
@@ -121,7 +126,7 @@ const W = {
     entries: 'wpisów', listedWada: 'Wymieniony przez WADA w klasie', always: ', zakazany zawsze',
     save: 'Zapisz', saved: 'Zapisane', pick: 'Wybierz substancję', clear: 'Wyczyść',
     dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane',
-    findLab: 'Szukaj', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
+    menuLab: 'Menu', menuClose: 'Zamknij menu', findLab: 'Szukaj', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
     findNone: 'Nic nie pasuje.', findClose: 'Zamknij', findMore: 'Zobacz wszystkie wyniki',
     follow: 'Obserwuj', contact: 'Kontakt', writeUs: 'Napisz do nas',
     contactP: 'Pytanie, sprostowanie, przeoczone źródło? Napisz do nas wiadomość prywatną na TikToku albo Instagramie. Czytamy każdą, a najciekawsze omawiamy w Q&A. Nigdy nie doradzamy dawek, miejsc zakupu ani sposobu stosowania.',
@@ -166,9 +171,11 @@ const THEME_BOOT = `<script>(function(){try{var t=localStorage.getItem('pep-them
 
 function layout(o) {
   const L = o.lang, t = W[L];
-  const up = o.depth === 1 ? '../' : '';
   const other = L === 'en' ? 'pl' : 'en';
-  const self = o.depth ? o.twin : o.here;   // karty wpisow maja wlasna sciezke w twin
+  const self = o.depth ? o.twin : L + '/' + o.here;   // sciezka strony od korzenia witryny
+  const up = BASE + L + '/';                           // odnosniki do stron tego jezyka
+  const twinHref = BASE + (o.depth ? (o.twin || '').replace(/(\.pl)?\.html$/, other === 'pl' ? '.pl.html' : '.html')
+    : other + '/' + (o.twin || ''));
   const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['dosing.html', t.dosingNav],
   ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['about.html', t.nav.about]];
@@ -179,17 +186,16 @@ function layout(o) {
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(o.title)}</title>
 <meta name="description" content="${esc(o.desc)}">
-<meta name="robots" content="noindex">
-${FAVICON}
+${BASE === '/' ? '' : '<meta name="robots" content="noindex">\n'}${FAVICON}
 ${THEME_BOOT}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${up}../assets/site.css">
-<link rel="canonical" href="${SITE}/${L}/${self}">
-<link rel="alternate" hreflang="en" href="${SITE}/en/${self}">
-<link rel="alternate" hreflang="pl" href="${SITE}/pl/${self}">
-<link rel="alternate" hreflang="x-default" href="${SITE}/en/${self}">
+<link rel="stylesheet" href="${BASE}assets/site.css">
+<link rel="canonical" href="${SITE}${BASE}${self}">
+<link rel="alternate" hreflang="en" href="${SITE}${BASE}${self.replace(/^pl\//, 'en/').replace(/\.pl\.html$/, '.html')}">
+<link rel="alternate" hreflang="pl" href="${SITE}${BASE}${self.replace(/^en\//, 'pl/').replace(/(?<!\.pl)\.html$/, self.startsWith('p/') ? '.pl.html' : '.html')}">
+<link rel="alternate" hreflang="x-default" href="${SITE}${BASE}${self.replace(/^pl\//, 'en/').replace(/\.pl\.html$/, '.html')}">
 <meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0B0F0D" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
@@ -197,14 +203,14 @@ ${THEME_BOOT}
 <meta property="og:locale" content="${L === 'pl' ? 'pl_PL' : 'en_GB'}">
 <meta property="og:title" content="${esc(o.title)}">
 <meta property="og:description" content="${esc(o.desc)}">
-<meta property="og:url" content="${SITE}/${L}/${self}">
-<meta property="og:image" content="${SITE}/assets/og-${L}.png">
+<meta property="og:url" content="${SITE}${BASE}${self}">
+<meta property="og:image" content="${SITE}${BASE}assets/og-${L}.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(o.title)}">
 <meta name="twitter:description" content="${esc(o.desc)}">
-<meta name="twitter:image" content="${SITE}/assets/og-${L}.png">
+<meta name="twitter:image" content="${SITE}${BASE}assets/og-${L}.png">
 <script type="application/ld+json">${ORG}</${'script'}>
 </head>
 <body>
@@ -224,11 +230,24 @@ ${THEME_BOOT}
       <button class="icon" id="theme" type="button" aria-label="${esc(t.theme)}">
         <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><g class="sun"><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.2 5.2l1.4 1.4M13.4 13.4l1.4 1.4M14.8 5.2l-1.4 1.4M6.6 13.4l-1.4 1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/></g><path class="moon" d="M15 11.5A6 6 0 0 1 8.5 5a6 6 0 1 0 6.5 6.5Z" fill="currentColor"/></svg>
       </button>
-      <a class="lang" href="${up}../${other}/${o.twin || ''}">${other.toUpperCase()}</a>
-      <a class="btn" href="${up}catalog.html">${esc(t.cta)}</a>
+      <a class="lang" href="${twinHref}">${other.toUpperCase()}</a>
+      <button class="icon burger" id="burger" type="button" aria-label="${esc(t.menuLab)}" aria-expanded="false" aria-controls="menu">
+        <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </nav>
 </header>
+
+<div class="menuwrap" id="menu" hidden>
+  <nav class="menucard" aria-label="${esc(t.menuLab)}">
+    <p class="menutop"><span class="kick">${esc(t.menuLab)}</span>
+      <button class="icon" id="menux" type="button" aria-label="${esc(t.menuClose)}">
+        <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button></p>
+    <ul>${nav.map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('\n      ')}</ul>
+    <p class="menufoot"><a href="${twinHref}">${other.toUpperCase()}</a> · <a href="${TT}" rel="me noopener" target="_blank">TikTok</a> · <a href="${IG}" rel="me noopener" target="_blank">Instagram</a></p>
+  </nav>
+</div>
 
 <div class="findwrap" id="findwrap" hidden>
   <div class="findcard" role="dialog" aria-modal="true" aria-label="${esc(t.findLab)}">
@@ -261,9 +280,9 @@ ${o.body}
   </div>
 </footer>
 
-<script>window.PEP_FORM='${FORM_KEY}';</${'script'}>
-<script src="${up}../assets/dane-${L}.js" defer></script>
-<script src="${up}../assets/ruch.js" defer></script>
+<script>window.PEP_FORM='${FORM_TO}';</${'script'}>
+<script src="${BASE}assets/dane-${L}.js" defer></script>
+<script src="${BASE}assets/ruch.js" defer></script>
 </body>
 </html>
 `;
@@ -320,7 +339,7 @@ const H = {
 const FEATURED = ['Semaglutyd', 'Tesamorelina', 'Retatrutyd', 'BPC-157', 'Melanotan II', 'GHK-Cu']
   .map(n => D.find(e => e.n === n)).filter(Boolean);
 
-const cardRow = (e, en, up) => `<a class="card tile reveal" href="${up}${key(e)}.html">
+const cardRow = (e, en, L) => `<a class="card tile reveal" href="${BASE}${cardPath(e, L)}">
       <span><b>${esc(nm(e.n, en))}</b><em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em></span>
       <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span></a>`;
 
@@ -412,7 +431,7 @@ function home(L) {
       <p class="lead reveal">${esc(h.s3p)}</p>
       <p class="reveal"><a class="more" href="catalog.html">${esc(h.all)}${ARROW}</a></p>
     </div>
-    <div class="cards" data-par="-0.6">${FEATURED.map(e => cardRow(e, en, 'p/')).join('')}</div>
+    <div class="cards" data-par="-0.6">${FEATURED.map(e => cardRow(e, en, L)).join('')}</div>
   </div>
 </section>
 
@@ -467,7 +486,7 @@ function catalog(L) {
     <p id="nohit" class="muted" hidden>${esc(t.noHit)}</p>
     <div class="grid-cards" id="list">
       ${sorted.map(e => `<div class="entry tile" data-s="${e.s}" data-n="${esc((nm(e.n, en) + ' ' + (e.a || '') + ' ' + e.n).toLowerCase())}">
-        <a class="entry-link" href="p/${key(e)}.html">
+        <a class="entry-link" href="${BASE}${cardPath(e, L)}">
           <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span>
           <b>${esc(nm(e.n, en))}</b>
           <em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em>
@@ -529,11 +548,11 @@ function card(e, L) {
       : esc(wa[2] || (t.listedWada + ' ' + wa[0] + '.'))} <a href="${WADA_URL}" rel="nofollow noopener" target="_blank">WADA</a></p></section>` : ''}
     ${e.q ? `<section class="blk reveal"><h2 class="kick">${esc(t.seq)}</h2><p class="seq">${esc(e.q)}</p></section>` : ''}
     ${src.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul></section>` : ''}
-    ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.related)}</h2><div class="cards">${sibs.map(s => cardRow(s, en, '')).join('')}</div></section>` : ''}
+    ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.related)}</h2><div class="cards">${sibs.map(s => cardRow(s, en, L)).join('')}</div></section>` : ''}
   </div>
 </article>`;
   return layout({
-    lang: L, here: 'catalog.html', depth: 1, twin: 'p/' + key(e) + '.html', body,
+    lang: L, here: 'catalog.html', depth: 1, twin: cardPath(e, L), body,
     title: `${name} — ${statusOf(e, en)} | PepSafe`, desc: clip(`${name} — ${statusOf(e, en)}. ${d}`, 155)
   });
 }
@@ -555,7 +574,7 @@ function groups(L) {
     <p class="kick">${esc(g[L].rule)}</p>
     <h2 class="gtitle">${esc(g[L].label)}</h2>
     <p class="lead">${esc(g[L].why)}</p>
-    <div class="cards">${g.members.map(x => D.find(y => y.n === x)).filter(Boolean).map(s => cardRow(s, en, 'p/')).join('')}</div>
+    <div class="cards">${g.members.map(x => D.find(y => y.n === x)).filter(Boolean).map(s => cardRow(s, en, L)).join('')}</div>
   </article>`).join('')}
 </div></section>`;
   return layout({
@@ -854,17 +873,46 @@ function dataFile(L) {
 let n = 0;
 for (const L of LANGS) {
   const dir = path.join(out, L);
-  fs.mkdirSync(path.join(dir, 'p'), { recursive: true });
+  fs.mkdirSync(dir, { recursive: true });
+  fs.mkdirSync(path.join(out, 'p'), { recursive: true });
   const pages = {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
     'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
     'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L)
   };
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
+  // style, skrypt i obrazki udostepniania trzymamy w src/ i kopiujemy do kazdej kompilacji
+  for (const f of fs.readdirSync(path.join(root, 'src'))) fs.copyFileSync(path.join(root, 'src', f), path.join(out, 'assets', f));
   fs.writeFileSync(path.join(out, 'assets', 'dane-' + L + '.js'), dataFile(L));
   for (const [f, html] of Object.entries(pages)) { fs.writeFileSync(path.join(dir, f), html); n++; }
-  for (const e of D) { fs.writeFileSync(path.join(dir, 'p', key(e) + '.html'), card(e, L)); n++; }
+  for (const e of D) { fs.writeFileSync(path.join(out, cardPath(e, L)), card(e, L)); n++; }
 }
+
+// strony pod starymi adresami, zeby zaden zaindeksowany odnosnik nie zgasl:
+// korzen witryny oraz /p/ i /p/faq, ktore Google zna od tygodnia
+function retarget(html, canon) {
+  return html
+    .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}${BASE}${canon}">`)
+    .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${SITE}${BASE}${canon}">`);
+}
+fs.writeFileSync(path.join(out, 'index.html'), retarget(home('en'), ''));
+fs.writeFileSync(path.join(out, 'p', 'index.html'), retarget(catalog('en'), 'en/catalog.html'));
+fs.writeFileSync(path.join(out, 'p', 'faq.html'), retarget(faqPage('en'), 'en/faq.html'));
+fs.writeFileSync(path.join(out, 'p', 'faq.pl.html'), retarget(faqPage('pl'), 'pl/faq.html'));
+n += 4;
+
+// sitemapa: tylko adresy kanoniczne
+const when = new Date().toISOString().slice(0, 10);
+const urls = [''].concat(
+  LANGS.flatMap(L => ['index.html', 'catalog.html', 'dosing.html', 'groups.html', 'compare.html',
+    'symptoms.html', 'faq.html', 'alerts.html', 'about.html'].map(f => L + '/' + f)),
+  LANGS.flatMap(L => D.map(e => cardPath(e, L))));
+fs.writeFileSync(path.join(out, 'sitemap.xml'),
+  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  urls.map(u => `  <url><loc>${SITE}${BASE}${u}</loc><lastmod>${when}</lastmod></url>`).join('\n') +
+  '\n</urlset>\n');
+console.log(`sitemapa: ${urls.length} adresow`);
+
 console.log(`zbudowano ${n} stron: ${LANGS.length} języki × (10 + ${D.length} kart)`);
 console.log(`dawkowanie: ${(DOSE || []).length} pozycji, objawy: ${((SY_PL||[]).length)} hasel`);
 console.log(`grupy: ${GROUPS.length}, peptyd dnia: ${DAILY[0].n} (${DAILY[0].date}), ostrzezenia: ${(ALERTS || []).length}, triki: ${(TRICKS || []).length}, mity: ${(MYTHS || []).length}`);

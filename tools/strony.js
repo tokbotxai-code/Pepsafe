@@ -4,7 +4,7 @@
 const fs = require('fs'), path = require('path'), vm = require('vm');
 
 const root = path.join(__dirname, '..');
-const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const html = fs.readFileSync(path.join(root, 'dane.html'), 'utf8');
 const lines = html.split('\n');
 
 // Pull only the data blocks out of index.html and run them in a sandbox: the catalog (D),

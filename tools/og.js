@@ -1,7 +1,7 @@
 // Buduje obrazek pokazywany przy udostepnianiu linku (1200x630), po jednym na jezyk.
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
-const OUT = path.join(__dirname, '..', 'podglad', 'v4', 'assets');
+const OUT = path.join(__dirname, '..', 'src');
 const T = {
   en: { h: 'Peptide facts,<br>not sales.', p: '123 substances · status, evidence, warnings', d: 'pepsafe.info' },
   pl: { h: 'Fakty o peptydach,<br>bez sprzedaży.', p: '123 substancje · status, dowody, ostrzeżenia', d: 'pepsafe.info' }
