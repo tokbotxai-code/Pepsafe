@@ -100,10 +100,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Na stronie, w postach i w plikach w repo nie opisujemy, jakimi narzędziami powstają treści.
 
 ## Oszczędzanie limitu (ważne przy autopilocie)
-- `index.html` ma ok. 404 kB (~100 tys. tokenów). **Nie czytaj go całego.** Wpis „Peptyd dnia” dodawaj skryptem:
+- Katalog siedzi w `dane.html` (ok. 404 kB, ~100 tys. tokenów). **Nie czytaj go całego.** Wpis „Peptyd dnia” dodawaj skryptem:
   zapisz jeden wpis do pliku JSON i uruchom `node tools/daily.js <plik.json>`. Skrypt sam sprawdza, czy nazwa jest
   w katalogu i czy wpis z tą datą już istnieje.
-- Czegokolwiek szukasz w `index.html`, używaj `grep`/`Grep` z numerami linii i czytaj tylko potrzebny fragment
+- Czegokolwiek szukasz w `dane.html`, używaj `grep`/`Grep` z numerami linii i czytaj tylko potrzebny fragment
   (`Read` z `offset`/`limit`), nigdy całości.
 - Jedno uruchomienie dziennie robi całą dniówkę (4 tematy) zamiast wielu krótkich sesji — każda nowa sesja
   czyta od zera CLAUDE.md i plan.
@@ -118,12 +118,28 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   skąd przychodzą i kraje. Wymaga `CLOUDFLARE_API_TOKEN` (uprawnienie Account Analytics: Read)
   i `CLOUDFLARE_ACCOUNT_ID` w zmiennych środowiska.
 
-## Statyczne strony substancji (SEO)
-- `node tools/strony.js` generuje `p/<slug>.html` (EN) i `p/<slug>.pl.html` (PL) dla każdego wpisu z katalogu
-  oraz `p/index.html` (lista A–Z), a na koniec przebudowuje `sitemap.xml`. Uruchom po każdej zmianie katalogu.
-- Powód: cała strona to jeden `index.html` z przełączaniem w JavaScript, więc adresy `?e=` serwują ten sam
-  dokument i wyszukiwarka widzi jedną stronę zamiast 123.
-- Nie edytuj plików w `p/` ręcznie — są generowane i zostaną nadpisane. Zmiany wprowadzaj w katalogu w `index.html`.
+## Budowanie strony (od 20.10.2026)
+- Jedyne źródło treści to `dane.html` (katalog `E(...)`, `DAILY`, `FAQ`, `DOSE`, `FAMS`, `ALERTS`, `WADA` itd.).
+  Zmiany wprowadzaj tylko tam.
+- Po każdej zmianie: **`PEP_OUT=. PEP_BASE=/ node tools/v4.js`**. Buduje `/index.html`, `/en/`, `/pl/`,
+  `/p/<slug>.html` (EN), `/p/<slug>.pl.html` (PL), `/p/index.html`, `/p/faq.html`, `/assets/` i `sitemap.xml`.
+- Style i skrypt strony są w `src/site.css` i `src/ruch.js`; generator kopiuje je do `assets/`.
+  Nie edytuj `assets/`, `en/`, `pl/`, `p/` ani `index.html` — są generowane i zostaną nadpisane.
+- `tools/og.js` odświeża obrazki udostępniania (`src/og-en.png`, `src/og-pl.png`) — tylko gdy zmienia się hasło strony.
+- `tools/strony.js` i `tools/jezyki.js` są **nieużywane** (zastąpił je `v4.js`); zostają jako historia.
+- Podgląd przed publikacją: `PEP_OUT=/tmp/x PEP_BASE=/ node tools/v4.js`, potem `python3 -m http.server` w tym katalogu.
+  Przy `PEP_BASE` innym niż `/` strony dostają `noindex`.
+- **Żaden z 252 adresów zaindeksowanych przed przebudową nie może zgasnąć.** Po każdej zmianie struktury
+  sprawdź wszystkie `<loc>` ze starej sitemapy (`git show <commit>:sitemap.xml`) i upewnij się, że zwracają 200.
+- Po publikacji zgłoś zmiany: POST na `api.indexnow.org/indexnow` z kluczem z pliku `*.txt` w korzeniu.
+
+## Formularze
+- Kontakt (`/<lang>/about.html#contact`) i zgłoszenie skutku ubocznego (`/<lang>/symptoms.html#report`)
+  wysyłają przez **FormSubmit** na adres w `FORM_TO` w `tools/v4.js` (`tokbotx.ai@gmail.com`).
+  Konto nie jest potrzebne; pierwszą wysyłkę właściciel potwierdza raz klikając link aktywacyjny w mailu.
+- Po aktywacji warto podmienić adres na alias z panelu FormSubmit, żeby nie stał jawnie w kodzie strony.
+- Formularz kontaktowy dotyczy strony i katalogu, formularz objawów wyłącznie objawów — oba mają notkę
+  odsyłającą do drugiego. Nie łączyć ich.
 
 ## TikTok po ograniczeniu konta (od 20.10.2026)
 - 19–20.10 TikTok **usunął 13 filmów** (wszystkie oznaczone „Video removed”, nie samo ograniczenie zasięgu).
@@ -149,7 +165,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Wracamy do tematów z nazwami na TikToku dopiero, gdy ograniczenia znikną i kilka filmów przyrodniczych
   z rzędu wyjdzie bez kary.
 
-## Osobne adresy językowe (od 20.10.2026)
+## Osobne adresy językowe (historia, zrobione inaczej)
 - `node tools/jezyki.js` buduje `/pl/index.html` i `/en/index.html` — kopie strony głównej z zablokowanym
   językiem, własnym `canonical`, tytułem, opisem i wzajemnym `hreflang`. Korzeń `/` zostaje jako `x-default`
   z automatycznym wykrywaniem języka.
