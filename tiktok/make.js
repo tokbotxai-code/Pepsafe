@@ -112,7 +112,7 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
       off += dur[i] - fade;
     });
     if (fs.existsSync(music)) { a.push('-stream_loop', '-1', '-i', music); f += `[${++n}:a]volume=0.14[s${n}];`; mix += `[s${n}]`; }
-    f += `${mix}amix=inputs=${n}:duration=first:dropout_transition=0:normalize=0[m];[m]atrim=0:${total.toFixed(2)},afade=t=out:st=${Math.max(0, total - 1).toFixed(2)}:d=1[out]`;
+    f += `${mix}amix=inputs=${n}:duration=longest:dropout_transition=0:normalize=0[m];[m]atrim=0:${total.toFixed(2)},afade=t=out:st=${Math.max(0, total - 1).toFixed(2)}:d=1[out]`;
     a.push('-filter_complex', f, '-map', '0:v', '-map', '[out]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-shortest', out);
     execFileSync('ffmpeg', a, { stdio: 'ignore' });
   }
