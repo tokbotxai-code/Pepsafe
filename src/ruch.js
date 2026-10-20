@@ -431,69 +431,33 @@
   })();
 
 
-  /* ── formularze: kontakt i zgloszenie objawu (Web3Forms) ────────── */
+  /* ── formularze: sprawdzenie pol przed zwyklym wyslaniem ───────── */
   (function () {
     var co = document.getElementById('coForm'), ef = document.getElementById('efForm');
-    if (!co && !ef) return;
-    var pl = document.documentElement.lang === 'pl';
-    var W = pl ? {
-      err: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
-      ok: 'Wysłano. Dziękujemy, odpowiemy na podany adres.',
-      fail: 'Nie udało się wysłać. Sprawdź połączenie i spróbuj ponownie.',
-      efErr: 'Uzupełnij opis objawu i zaznacz zgodę.',
-      efOk: 'Wysłano. Dziękujemy za zgłoszenie.',
-      efEmerg: 'Wysłano. Przy silnych objawach zadzwoń pod 112 lub do lekarza, nie czekaj na odpowiedź od nas.',
-      off: 'Formularz jest chwilowo niedostępny. Napisz do nas wiadomość prywatną na TikToku albo Instagramie.'
+    var pl = html.lang === 'pl';
+    var MSG = pl ? {
+      co: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
+      ef: 'Uzupełnij opis objawu i zaznacz zgodę.'
     } : {
-      err: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
-      ok: 'Sent. Thank you, we will reply to the address you gave.',
-      fail: 'Could not send. Check your connection and try again.',
-      efErr: 'Describe the symptom and tick the consent box.',
-      efOk: 'Sent. Thank you for the report.',
-      efEmerg: 'Sent. With severe symptoms call 112 or your doctor, do not wait for a reply from us.',
-      off: 'The form is unavailable right now. Send us a direct message on TikTok or Instagram instead.'
+      co: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
+      ef: 'Describe the symptom and tick the consent box.'
     };
-
-    function say(el, text, bad) {
-      el.hidden = false; el.textContent = text;
-      el.classList.toggle('bad', !!bad);
-    }
-    function send(subject, fields, form, out, onOk) {
-      var btn = form.querySelector('[type="submit"]'), label = btn.textContent;
-      if (!window.PEP_FORM) { say(out, W.off, true); return; }
-      btn.disabled = true; btn.textContent = btn.dataset.busy || label;
-      var body = { _subject: 'PepSafe: ' + subject, _template: 'table', _captcha: 'false' };
-      Object.keys(fields).forEach(function (k) { body[k] = fields[k]; });
-      fetch('https://formsubmit.co/ajax/' + encodeURIComponent(window.PEP_FORM), {
-        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(body)
-      }).then(function (r) { return r.json(); }).then(function (j) {
-        btn.disabled = false; btn.textContent = label;
-        var ok = j && (j.success === true || j.success === 'true');
-        if (ok) { form.reset(); onOk(); done(form, out); } else say(out, W.fail, true);
-      }).catch(function () {
-        btn.disabled = false; btn.textContent = label; say(out, W.fail, true);
-      });
-    }
-    function done(form, out) {
-      form.hidden = true;
-      out.classList.add('big');
-      if (out.scrollIntoView) out.scrollIntoView({ block: 'center', behavior: 'smooth' });
-    }
+    function say(el, text) { el.hidden = false; el.textContent = text; el.classList.add('bad'); }
     function flag(el, bad) { if (el) el.setAttribute('aria-invalid', bad ? 'true' : 'false'); }
+    function busy(form) {
+      var b = form.querySelector('[type="submit"]');
+      if (b && b.dataset.busy) { b.disabled = true; b.textContent = b.dataset.busy; }
+    }
 
     if (co) {
       var out = document.getElementById('coMsgOut');
       co.addEventListener('submit', function (e) {
-        e.preventDefault();
         var n = co.coName.value.trim(), m = co.coEmail.value.trim(), msg = co.coMsg.value.trim();
         var cons = document.getElementById('coCons').checked;
-        flag(co.coName, !n); flag(co.coEmail, !/^\S+@\S+\.\S+$/.test(m)); flag(co.coMsg, msg.length < 10);
-        if (!n || !/^\S+@\S+\.\S+$/.test(m) || msg.length < 10 || !cons) { say(out, W.err, true); return; }
-        var topic = co.coTopic.value;
-        send(topic, { name: n, email: m, topic: topic, message: msg }, co, out, function () {
-          say(out, W.ok, false);
-        });
+        var okMail = /^\S+@\S+\.\S+$/.test(m);
+        flag(co.coName, !n); flag(co.coEmail, !okMail); flag(co.coMsg, msg.length < 10);
+        if (!n || !okMail || msg.length < 10 || !cons) { e.preventDefault(); say(out, MSG.co); return; }
+        out.hidden = true; busy(co);
       });
     }
 
@@ -505,23 +469,19 @@
         });
       }
       ef.addEventListener('submit', function (e) {
-        e.preventDefault();
         var sym = ef.efSym.value.trim(), cons = document.getElementById('efCons').checked;
-        var sev = document.getElementById('efSev'), sevT = sev.options[sev.selectedIndex].textContent;
         flag(ef.efSym, !sym);
-        if (!sym || !cons) { say(eout, W.efErr, true); return; }
-        var severe = sev.value === '3', when = ef.efWhen.value.trim() || '-';
-        var txt = (pl ? 'Substancja: ' : 'Substance: ') + (sub ? sub.value : '-') +
-          '\n' + (pl ? 'Objaw: ' : 'Symptom: ') + sym +
-          '\n' + (pl ? 'Nasilenie: ' : 'Severity: ') + sevT +
-          '\n' + (pl ? 'Kiedy wystapil: ' : 'When: ') + when;
-        send(pl ? 'zgloszenie skutku ubocznego' : 'side-effect report',
-          { substance: sub ? sub.value : '-', symptom: sym, severity: sevT, when: when, message: txt },
-          ef, eout, function () { say(eout, severe ? W.efEmerg : W.efOk, severe); });
+        if (!sym || !cons) { e.preventDefault(); say(eout, MSG.ef); return; }
+        eout.hidden = true; busy(ef);
       });
     }
   })();
 
+  /* ── strona z podziekowaniem: inny tekst po zgloszeniu objawu ───── */
+  (function () {
+    var m = document.getElementById('thxMsg');
+    if (m && /[?&]r=1/.test(location.search)) m.textContent = m.dataset.report;
+  })();
 
   /* ── menu na telefonie ─────────────────────────────── */
   (function () {

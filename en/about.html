@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>About the project | PepSafe</title>
-<meta name="description" content="A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
+<meta name="description" content="A reference for 145 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22%3E%3Cpath d=%22M6 24 L14 10 L22 22 L29 8%22 stroke=%22%238A918D%22 stroke-width=%222%22 fill=%22none%22/%3E%3Ccircle cx=%226%22 cy=%2224%22 r=%224.5%22 fill=%22%232F6DB5%22/%3E%3Ccircle cx=%2214%22 cy=%2210%22 r=%224.5%22 fill=%22%230A7C66%22/%3E%3Ccircle cx=%2222%22 cy=%2222%22 r=%224.5%22 fill=%22%23C2410C%22/%3E%3Ccircle cx=%2229%22 cy=%228%22 r=%224.5%22 fill=%22%238B3FA8%22/%3E%3C/svg%3E">
 <script>(function(){try{var t=localStorage.getItem('pep-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,14 @@
 <meta property="og:site_name" content="PepSafe">
 <meta property="og:locale" content="en_GB">
 <meta property="og:title" content="About the project | PepSafe">
-<meta property="og:description" content="A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
+<meta property="og:description" content="A reference for 145 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
 <meta property="og:url" content="https://pepsafe.info/en/about.html">
 <meta property="og:image" content="https://pepsafe.info/assets/og-en.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About the project | PepSafe">
-<meta name="twitter:description" content="A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
+<meta name="twitter:description" content="A reference for 145 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.">
 <meta name="twitter:image" content="https://pepsafe.info/assets/og-en.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://pepsafe.info/#org","name":"PepSafe","url":"https://pepsafe.info/","sameAs":["https://www.tiktok.com/@pepsafe.info","https://www.instagram.com/pepsafe.info/"]}</script>
 </head>
@@ -105,7 +105,7 @@
   <div class="wrap">
     <p class="kick reveal">About</p>
     <h1 class="display reveal">No shop. No doses from strangers. No promises.</h1>
-    <p class="lede reveal">A reference for 123 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.</p>
+    <p class="lede reveal">A reference for 145 peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.</p>
   </div>
 </section>
 <section><div class="wrap cols3"><p class="reveal lead">We publish doses only for approved medicines, straight from the label, and only as information — never as a recommendation.</p><p class="reveal lead">For unapproved substances there is no dose to give. Where human safety is unestablished, that is the finding, not a gap to fill.</p><p class="reveal lead">Educational content, not medical advice. Decisions about treatment belong with a doctor who knows your case.</p></div></section>
@@ -127,7 +127,12 @@
   <p class="lede reveal">Questions, a correction, a source we missed? Send us a direct message on TikTok or Instagram. We read every one and answer the best ones in a Q&amp;A. We never advise on doses, where to buy, or how to use anything.</p>
   <p class="notice reveal">This form is about the site and the catalog. If you want to report a symptom after taking something, use the
     <a href="symptoms.html#report">side-effect report</a>.</p>
-  <form class="sheet reveal" id="coForm" novalidate>
+  <form class="sheet reveal" id="coForm" method="POST" action="https://formsubmit.co/tokbotx.ai@gmail.com" novalidate>
+    <input type="hidden" name="_subject" value="PepSafe: message from the site">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://pepsafe.info/en/thanks.html">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="f2">
       <p class="frow"><label for="coName">Name</label><input type="text" id="coName" name="name" autocomplete="name" maxlength="80" required></p>
       <p class="frow"><label for="coEmail">Your email</label><input type="email" id="coEmail" name="email" autocomplete="email" maxlength="120" required></p>
@@ -162,7 +167,6 @@
   </div>
 </footer>
 
-<script>window.PEP_FORM='tokbotx.ai@gmail.com';</script>
 <script src="/assets/dane-en.js" defer></script>
 <script src="/assets/ruch.js" defer></script>
 </body>

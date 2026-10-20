@@ -96,6 +96,9 @@ const W = {
     coT: ['Question about the catalog', 'Correction or error on the site', 'Other'],
     coCons: 'I agree to my data being processed to reply to this message.',
     coSend: 'Send message', coSending: 'Sending\u2026',
+    thxH: 'Thank you.', thxP: 'Your message has reached us. We read every one and answer as soon as we can.',
+    thxR: 'Your report has reached us. It is not published anywhere. With severe symptoms call 112 or your doctor — do not wait for a reply from us.',
+    thxBack: 'Back to the catalog',
     coErr: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
     coOk: 'Sent. Thank you, we will reply to the address you gave.',
     coFail: 'Could not send. Check your connection and try again.',
@@ -135,6 +138,9 @@ const W = {
     coT: ['Pytanie o katalog', 'Poprawka lub błąd na stronie', 'Inne'],
     coCons: 'Zgadzam się na przetwarzanie podanych danych w celu odpowiedzi na wiadomość.',
     coSend: 'Wyślij wiadomość', coSending: 'Wysyłanie\u2026',
+    thxH: 'Dziękujemy.', thxP: 'Wiadomość do nas dotarła. Czytamy każdą i odpowiadamy, gdy tylko się da.',
+    thxR: 'Zgłoszenie do nas dotarło. Nigdzie go nie publikujemy. Przy silnych objawach dzwoń pod 112 lub do lekarza — nie czekaj na odpowiedź od nas.',
+    thxBack: 'Wróć do katalogu',
     coErr: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
     coOk: 'Wysłano. Dziękujemy, odpowiemy na podany adres.',
     coFail: 'Nie udało się wysłać. Sprawdź połączenie i spróbuj ponownie.',
@@ -186,7 +192,7 @@ function layout(o) {
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(o.title)}</title>
 <meta name="description" content="${esc(o.desc)}">
-${BASE === '/' ? '' : '<meta name="robots" content="noindex">\n'}${FAVICON}
+${BASE === '/' && !o.noindex ? '' : '<meta name="robots" content="noindex">\n'}${FAVICON}
 ${THEME_BOOT}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -280,7 +286,6 @@ ${o.body}
   </div>
 </footer>
 
-<script>window.PEP_FORM='${FORM_TO}';</${'script'}>
 <script src="${BASE}assets/dane-${L}.js" defer></script>
 <script src="${BASE}assets/ruch.js" defer></script>
 </body>
@@ -557,6 +562,27 @@ function card(e, L) {
   });
 }
 
+function thanks(L) {
+  const en = L === 'en', t = W[L];
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <p class="kick reveal">PepSafe</p>
+    <h1 class="display reveal">${esc(t.thxH)}</h1>
+    <p class="lede reveal" id="thxMsg" data-plain="${esc(t.thxP)}" data-report="${esc(t.thxR)}">${esc(t.thxP)}</p>
+    <p class="actions reveal">
+      <a class="btn big" href="${BASE}${L}/catalog.html">${esc(t.thxBack)}${ARROW}</a>
+      <a class="btn ghost big" href="${BASE}${L}/index.html">${esc(t.nav.home)}</a>
+    </p>
+  </div>
+</section>`;
+  return layout({
+    lang: L, here: 'thanks.html', twin: 'thanks.html', body, noindex: true,
+    title: (en ? 'Thank you' : 'Dziękujemy') + ' | PepSafe', desc: en ? t.thxP : t.thxP
+  });
+}
+
 // ── groups ────────────────────────────────────────────────────────────────────
 function groups(L) {
   const en = L === 'en', t = W[L];
@@ -676,7 +702,12 @@ function about(L) {
   <p class="lede reveal">${esc(t.contactP)}</p>
   <p class="notice reveal">${en ? 'This form is about the site and the catalog. If you want to report a symptom after taking something, use the' : 'Ten formularz dotyczy strony i katalogu. Jeśli chcesz zgłosić objaw po zażyciu czegoś, użyj'}
     <a href="symptoms.html#report">${en ? 'side-effect report' : 'zgłoszenia skutku ubocznego'}</a>.</p>
-  <form class="sheet reveal" id="coForm" novalidate>
+  <form class="sheet reveal" id="coForm" method="POST" action="https://formsubmit.co/${FORM_TO}" novalidate>
+    <input type="hidden" name="_subject" value="PepSafe: ${L === 'pl' ? 'wiadomość ze strony' : 'message from the site'}">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="${SITE}${BASE}${L}/thanks.html">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="f2">
       <p class="frow"><label for="coName">${esc(t.coName)}</label><input type="text" id="coName" name="name" autocomplete="name" maxlength="80" required></p>
       <p class="frow"><label for="coEmail">${esc(t.coMail)}</label><input type="email" id="coEmail" name="email" autocomplete="email" maxlength="120" required></p>
@@ -807,7 +838,12 @@ function symptoms(L) {
   <p class="notice warn reveal"><strong>${en ? 'Emergency' : 'Nagły przypadek'}:</strong> ${esc(t.efWarn)}</p>
   <p class="notice reveal">${en ? 'This form is only for symptoms. A question, an error on the site or anything else goes to' : 'Ten formularz dotyczy wyłącznie objawów. Pytanie, błąd na stronie i cokolwiek innego to'}
     <a href="about.html#contact">${en ? 'contact' : 'kontakt'}</a>.</p>
-  <form class="sheet reveal" id="efForm" novalidate>
+  <form class="sheet reveal" id="efForm" method="POST" action="https://formsubmit.co/${FORM_TO}" novalidate>
+    <input type="hidden" name="_subject" value="PepSafe: ${L === 'pl' ? 'zgłoszenie skutku ubocznego' : 'side-effect report'}">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="${SITE}${BASE}${L}/thanks.html?r=1">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="f2">
       <p class="frow"><label for="efSub">${esc(t.efSub)}</label><select id="efSub" name="substance"></select></p>
       <p class="frow"><label for="efSev">${esc(t.efSev)}</label><select id="efSev" name="severity">
@@ -878,7 +914,7 @@ for (const L of LANGS) {
   const pages = {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
     'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
-    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L)
+    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L)
   };
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
   // style, skrypt i obrazki udostepniania trzymamy w src/ i kopiujemy do kazdej kompilacji

@@ -112,7 +112,7 @@
   <div class="filters reveal">
     <label class="search"><span class="sr">Objaw</span>
       <input id="syQ" type="search" placeholder="Objaw" autocomplete="off"></label>
-    <div class="chips" id="syChips"><button class="chip" data-sy="nudności">nudności <span class="num">17</span></button><button class="chip" data-sy="hipoglikemia">hipoglikemia <span class="num">14</span></button><button class="chip" data-sy="wymioty">wymioty <span class="num">11</span></button><button class="chip" data-sy="obrzęk">obrzęk <span class="num">9</span></button><button class="chip" data-sy="biegunka">biegunka <span class="num">6</span></button><button class="chip" data-sy="ciśnienie">ciśnienie <span class="num">3</span></button><button class="chip" data-sy="nerki">nerki <span class="num">2</span></button><button class="chip" data-sy="senność">senność <span class="num">1</span></button><button class="chip" data-sy="świąd">świąd <span class="num">1</span></button><button class="chip" data-sy="znamiona">znamiona <span class="num">1</span></button><button class="chip" data-sy="zaczerwienienie">zaczerwienienie <span class="num">1</span></button><button class="chip" data-sy="trzustka">trzustka <span class="num">1</span></button></div>
+    <div class="chips" id="syChips"><button class="chip" data-sy="nudności">nudności <span class="num">19</span></button><button class="chip" data-sy="hipoglikemia">hipoglikemia <span class="num">14</span></button><button class="chip" data-sy="wymioty">wymioty <span class="num">11</span></button><button class="chip" data-sy="obrzęk">obrzęk <span class="num">9</span></button><button class="chip" data-sy="biegunka">biegunka <span class="num">7</span></button><button class="chip" data-sy="ciśnienie">ciśnienie <span class="num">4</span></button><button class="chip" data-sy="zaczerwienienie">zaczerwienienie <span class="num">2</span></button><button class="chip" data-sy="nerki">nerki <span class="num">2</span></button><button class="chip" data-sy="senność">senność <span class="num">1</span></button><button class="chip" data-sy="wysypka">wysypka <span class="num">1</span></button><button class="chip" data-sy="świąd">świąd <span class="num">1</span></button><button class="chip" data-sy="znamiona">znamiona <span class="num">1</span></button></div>
   </div>
   <p class="muted" id="syHint">Wpisz co najmniej 3 znaki albo kliknij podpowiedź.</p>
   <div class="grid-cards" id="syOut"></div>
@@ -125,7 +125,12 @@
   <p class="notice warn reveal"><strong>Nagły przypadek:</strong> Przy przedawkowaniu, silnej reakcji alergicznej, bólu w klatce piersiowej lub trudnościach z oddychaniem dzwoń pod 112 albo do centrum zatruć. Nie czekaj na odpowiedź od nas.</p>
   <p class="notice reveal">Ten formularz dotyczy wyłącznie objawów. Pytanie, błąd na stronie i cokolwiek innego to
     <a href="about.html#contact">kontakt</a>.</p>
-  <form class="sheet reveal" id="efForm" novalidate>
+  <form class="sheet reveal" id="efForm" method="POST" action="https://formsubmit.co/tokbotx.ai@gmail.com" novalidate>
+    <input type="hidden" name="_subject" value="PepSafe: zgłoszenie skutku ubocznego">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://pepsafe.info/pl/thanks.html?r=1">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="f2">
       <p class="frow"><label for="efSub">Substancja</label><select id="efSub" name="substance"></select></p>
       <p class="frow"><label for="efSev">Nasilenie</label><select id="efSev" name="severity">
@@ -158,7 +163,6 @@
   </div>
 </footer>
 
-<script>window.PEP_FORM='tokbotx.ai@gmail.com';</script>
 <script src="/assets/dane-pl.js" defer></script>
 <script src="/assets/ruch.js" defer></script>
 </body>
