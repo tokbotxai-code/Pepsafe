@@ -1,7 +1,7 @@
 // Reads visits to pepsafe.info from Cloudflare Web Analytics.
 // Usage: node tools/odwiedziny.js [liczba dni, domyslnie 7]
 // Needs CLOUDFLARE_API_TOKEN (uprawnienie Account Analytics: Read) and CLOUDFLARE_ACCOUNT_ID in the environment.
-const SITE = '68889a9fe6604022bd3fa7d786e5d79f'; // beacon token z index.html = siteTag
+const SITE = '1ba9f12bd6e545c79b6786f5785794cf'; // siteTag z API (to NIE jest token beacona z index.html)
 const token = process.env.CLOUDFLARE_API_TOKEN, account = process.env.CLOUDFLARE_ACCOUNT_ID;
 if (!token || !account) { console.error('brak CLOUDFLARE_API_TOKEN albo CLOUDFLARE_ACCOUNT_ID w srodowisku'); process.exit(1); }
 
