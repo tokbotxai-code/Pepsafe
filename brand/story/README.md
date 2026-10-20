@@ -12,11 +12,15 @@ więc po zmianie strony wystarczy uruchomić skrypt ponownie.
 | `04-symptoms` | Zacznij od objawu | **Instagram i TikTok** |
 | `05-dosing` | Liczby tylko tam, gdzie jest etykieta | tylko Instagram |
 | `06-sources` | Każde twierdzenie ma źródło | tylko Instagram |
+| `07-glossary` | Słowa po ludzku | **Instagram i TikTok** |
+| `08-reading` | Gdy jeden wpis nie wystarcza | **Instagram i TikTok** |
+| `09-groups` | Piętnaście grup, jedna zasada każda | tylko Instagram |
+| `10-blends` | Liczba w nazwie to tylko suma | tylko Instagram |
 
 ## Dlaczego część tylko na Instagram
 Na zrzutach katalogu, porównywarki, dawkowania i karty substancji **widać nazwy substancji**.
 TikTok czyta tekst z obrazu, a nie tylko opis — i właśnie za nazwy na okładce zdjął nam 15 filmów.
-Na TikToka nadają się dwie grafiki bez nazw: `01-what` i `04-symptoms`.
+Na TikToka nadają się cztery grafiki bez nazw: `01-what`, `04-symptoms`, `07-glossary` i `08-reading`.
 
 ## Jak publikować
 - Pod Story: wrzuć grafikę, dodaj naklejkę z linkiem do `pepsafe.info`, muzykę wybierz w aplikacji.

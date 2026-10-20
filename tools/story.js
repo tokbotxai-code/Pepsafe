@@ -25,6 +25,18 @@ const SLIDES = [
   { id: '06-sources', url: '/p/semaglutide.html', tiktok: false,
     kick: 'Sources', h: 'Every claim<br>has a link.',
     p: 'Trial registries, regulator decisions, published reviews. Where the evidence is thin, the entry says so.' },
+  { id: '07-glossary', url: '/en/glossary.html', tiktok: true,
+    kick: 'Glossary', h: 'The words,<br>in plain<br>language.',
+    p: 'Receptor, half-life, analogue, agonist. Explained once, so the rest of the site reads easily.' },
+  { id: '08-reading', url: '/en/blog.html', tiktok: true,
+    kick: 'Longer pieces', h: 'When one entry<br>is not enough.',
+    p: 'What a certificate actually proves. What a committee vote changed. What a study really measured.' },
+  { id: '09-groups', url: '/en/groups.html', tiktok: false,
+    kick: 'Groups', h: 'Fifteen groups.<br>One rule each.',
+    p: 'Substances that act on the same target, with the reason not to double up written out.' },
+  { id: '10-blends', url: '/p/klow.html', tiktok: false,
+    kick: 'Blends', h: 'The number<br>is just<br>the sum.',
+    p: 'Not strength, not quality, not a version. Three or four unstudied ingredients in one vial, and no trial of any of it.' },
 ];
 
 const LOGO = '<svg width="54" height="54" viewBox="0 0 34 34"><path d="M6 24 L14 10 L22 22 L29 8" stroke="#8A918D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="24" r="4.5" fill="#2F6DB5"/><circle cx="14" cy="10" r="4.5" fill="#0A7C66"/><circle cx="22" cy="22" r="4.5" fill="#C2410C"/><circle cx="29" cy="8" r="4.5" fill="#8B3FA8"/></svg>';
