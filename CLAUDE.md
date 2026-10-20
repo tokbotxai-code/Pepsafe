@@ -2,16 +2,16 @@
 
 ## Harmonogram (codziennie, czas UK)
 - 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
-- Każde okno: 1 temat, PL i EN ok. 15 min odstępu (8 postów dziennie).
+- Każde okno: 1 temat, tylko wersja EN (4 posty dziennie).
 - 1 z 4 tematów dziennie to Q&A/ankieta; okno ankiety rotuje z dnia na dzień.
 - Ankieta: wersja `feed` 4:5 zapisana jako JPG, jednym postem na IG (POST) i TikToka.
 - Treści tworzy codziennie o ~05:00 zaplanowane zadanie „PepSafe content autopilot”.
 - Żaden dzień nie może mieć pustego okna: przy każdym uruchomieniu sprawdź dziś i 2 kolejne dni
-  (`getScheduledPosts`) i uzupełnij każde wolne okno nowym tematem (PL + EN, oba kanały). Bez powtórek
+  (`getScheduledPosts`) i uzupełnij każde wolne okno nowym tematem (EN, oba kanały). Bez powtórek
   tematów z ostatnich 14 dni (sprawdź foldery w `tiktok/`).
 
 ## Instagram + TikTok zawsze razem
-- Każda treść idzie na **oba** kanały, o tej samej porze (najwyżej 1 min różnicy), w wersji PL i EN.
+- Każda treść idzie na **oba** kanały, o tej samej porze (najwyżej 1 min różnicy), w wersji EN.
 - Filmik (Reel/TikTok): jeden post Metricool z oboma providerami (`instagram` typ `REEL` + `tiktok`), ten sam MP4.
 - Karuzela na IG (`ig-...`, format `feed`): na TikToka idzie **film**, nie slajdy. Skopiuj `post.json` do
   `tiktok/RRRR-MM-DD-<temat>-<lang>/` bez pola `format`, wyrenderuj `node tiktok/make.js tiktok/<folder>`
@@ -19,13 +19,25 @@
 - Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST) i TikToka razem.
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
-## Muzyka i publikacja na TikToku (od 20.10.2026)
-- Nie dokładamy własnej muzyki do filmów na TikToka: w `media` postów TikTok podajemy wersję **bez dźwięku**
-  (`pepsafe-<folder>.mp4`, nie `-muzyka.mp4`). Muzykę właściciel dokłada sam w aplikacji TikTok przy publikacji.
-- Dlatego posty na TikToka planujemy z `autoPublish: false` (Metricool wysyła powiadomienie na telefon).
-- Instagram bez zmian: wersja `-muzyka.mp4` i `autoPublish: true`.
-- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie** (ta sama treść PL + EN). Instagram zostaje
-  w pełnym harmonogramie; nadwyżkowe tematy planujemy tylko na Instagram.
+## Język: tylko angielski (od 20.10.2026)
+- Nowe treści tworzymy **wyłącznie po angielsku** (decyzja właściciela). Zasięgi EN były ok. 20× wyższe niż PL.
+- Dotyczy obu kanałów, filmów, ankiet i wpisów „Peptyd dnia” (pole `pl` w `DAILY` zostaje w strukturze strony,
+  ale strona i tak ma dwie wersje językowe — treści postów robimy tylko EN).
+- Folder tematu: `tiktok/RRRR-MM-DD-<temat>-en/`. Nie dublujemy tematu w wersji `-pl`.
+- Pierwszy komentarz i zakończenie opisu w wersji EN („More at pepsafe.info”).
+
+## Dźwięk w filmach (od 20.10.2026)
+- Filmy mają **lektora**: `node tiktok/make.js` syntezuje głos dla każdego slajdu (piper, głos `en_US-amy-medium`)
+  i podkłada `music-calm.m4a` ściszony do 14%. Plik do publikacji: `pepsafe-<folder>-lektor.mp4`.
+- Modele głosu nie idą do repo (`.gitignore`). Dociągnięcie przy starcie:
+  `python3 -m piper.download_voices --data-dir .voices en_US-amy-medium`.
+- Publikacja zostaje automatyczna (`autoPublish: true`) na obu kanałach.
+- Muzyka z katalogu TikToka jest niemożliwa przez API (da się tylko montując w aplikacji). Katalog audio
+  Instagrama zwraca 403 dla tego konta — wymagałoby konta Business połączonego z Facebook Page.
+- Slajdy piszemy krótko: 1 zdanie na slajd, 4–5 slajdów, cały film 12–15 s. Lektor wydłuża slajd do długości
+  zdania, więc długie akapity dają filmy 45 s+ i zabijają retencję (średni czas obejrzenia to teraz 1–3 s).
+- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram zostaje w pełnym harmonogramie;
+  nadwyżkowe tematy planujemy tylko na Instagram.
 
 ## Media
 - Na początku każdej pracy z repo: `git fetch origin main && git reset --hard origin/main` (historia bywa przepisywana; nie używaj `git pull`).
