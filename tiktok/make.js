@@ -74,12 +74,20 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
   // Needs ELEVENLABS_API_KEY in the environment. Without it, or with "vo": false in post.json, the film stays music-only.
   const JESSICA = 'cgSgspJ2msm6clMCkdW9';
   const key = process.env.ELEVENLABS_API_KEY;
-  const narrate = s => s.vo !== undefined ? s.vo
-    : [s.big, s.title, s.text, s.ask, ...(s.list || []), ...(s.opts || [])].filter(Boolean).join('. ').replace(/\.\.+/g, '.');
+  // the last slide always ends with the site, unless post.json sets its own "outro"
+  const OUTRO = post.outro !== undefined ? post.outro
+    : (post.lang === 'pl' ? 'Więcej na pepsafe.info' : 'More at pepsafe.info');
+  const narrate = (s, last) => {
+    const base = s.vo !== undefined ? s.vo
+      : [s.big, s.title, s.text, s.ask, ...(s.list || []), ...(s.opts || [])].filter(Boolean).join('. ').replace(/\.\.+/g, '.');
+    if (!last || !OUTRO) return base;
+    if (base && new RegExp(OUTRO.replace(/\./g, '\\.'), 'i').test(base)) return base;  // already said
+    return base ? base.replace(/[.\s]*$/, '') + '. ' + OUTRO : OUTRO;
+  };
   const vo = post.slides.map(() => null);
   if (key && post.vo !== false) {
     for (let i = 0; i < post.slides.length; i++) {
-      const txt = narrate(post.slides[i]);
+      const txt = narrate(post.slides[i], i === post.slides.length - 1);
       if (!txt) continue;
       const mp3 = path.join(dir, `vo-${String(i + 1).padStart(2, '0')}.mp3`);
       const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${JESSICA}`, {

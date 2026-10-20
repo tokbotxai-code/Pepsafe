@@ -58,6 +58,7 @@ function searchText(e, en) {
 
 const LANGS = ['en', 'pl'];
 
+const SITE = 'https://pepsafe.info';
 const FORM_KEY = 'e081d316-781d-4bb4-971f-759d8d431ce7';  // Web3Forms, ten sam klucz co na starej stronie
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
@@ -87,7 +88,7 @@ const W = {
     contactP: 'Questions, a correction, a source we missed? Send us a direct message on TikTok or Instagram. We read every one and answer the best ones in a Q&A. We never advise on doses, where to buy, or how to use anything.',
     dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info',
     coName: 'Name', coMail: 'Your email', coTopic: 'Topic', coMsg: 'Message',
-    coT: ['Question about the catalog', 'Correction or error', 'Suggest a topic or a missing entry', 'Misleading marketing', 'Other'],
+    coT: ['Question about the catalog', 'Correction or error on the site', 'Other'],
     coCons: 'I agree to my data being processed to reply to this message.',
     coSend: 'Send message', coSending: 'Sending\u2026',
     coErr: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
@@ -126,7 +127,7 @@ const W = {
     contactP: 'Pytanie, sprostowanie, przeoczone źródło? Napisz do nas wiadomość prywatną na TikToku albo Instagramie. Czytamy każdą, a najciekawsze omawiamy w Q&A. Nigdy nie doradzamy dawek, miejsc zakupu ani sposobu stosowania.',
     dmTT: 'TikTok — @pepsafe.info', dmIG: 'Instagram — @pepsafe.info',
     coName: 'Imię', coMail: 'Twój e-mail', coTopic: 'Temat', coMsg: 'Wiadomość',
-    coT: ['Pytanie o katalog', 'Poprawka lub błąd w treści', 'Propozycja tematu lub brakującego wpisu', 'Mylący marketing', 'Inne'],
+    coT: ['Pytanie o katalog', 'Poprawka lub błąd na stronie', 'Inne'],
     coCons: 'Zgadzam się na przetwarzanie podanych danych w celu odpowiedzi na wiadomość.',
     coSend: 'Wyślij wiadomość', coSending: 'Wysyłanie\u2026',
     coErr: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
@@ -167,6 +168,7 @@ function layout(o) {
   const L = o.lang, t = W[L];
   const up = o.depth === 1 ? '../' : '';
   const other = L === 'en' ? 'pl' : 'en';
+  const self = o.depth ? o.twin : o.here;   // karty wpisow maja wlasna sciezke w twin
   const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['dosing.html', t.dosingNav],
   ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['about.html', t.nav.about]];
@@ -184,6 +186,25 @@ ${THEME_BOOT}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${up}../assets/site.css">
+<link rel="canonical" href="${SITE}/${L}/${self}">
+<link rel="alternate" hreflang="en" href="${SITE}/en/${self}">
+<link rel="alternate" hreflang="pl" href="${SITE}/pl/${self}">
+<link rel="alternate" hreflang="x-default" href="${SITE}/en/${self}">
+<meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0F0D" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PepSafe">
+<meta property="og:locale" content="${L === 'pl' ? 'pl_PL' : 'en_GB'}">
+<meta property="og:title" content="${esc(o.title)}">
+<meta property="og:description" content="${esc(o.desc)}">
+<meta property="og:url" content="${SITE}/${L}/${self}">
+<meta property="og:image" content="${SITE}/assets/og-${L}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(o.title)}">
+<meta name="twitter:description" content="${esc(o.desc)}">
+<meta name="twitter:image" content="${SITE}/assets/og-${L}.png">
 <script type="application/ld+json">${ORG}</${'script'}>
 </head>
 <body>
@@ -228,6 +249,7 @@ ${o.body}
 </main>
 
 <footer>
+  <canvas class="chains" data-dense="0.55" aria-hidden="true"></canvas>
   <div class="wrap foot">
     <p>${esc(t.foot)}</p>
     <p class="social">
@@ -298,7 +320,7 @@ const H = {
 const FEATURED = ['Semaglutyd', 'Tesamorelina', 'Retatrutyd', 'BPC-157', 'Melanotan II', 'GHK-Cu']
   .map(n => D.find(e => e.n === n)).filter(Boolean);
 
-const cardRow = (e, en, up) => `<a class="card tile reveal" href="${up}p/${key(e)}.html">
+const cardRow = (e, en, up) => `<a class="card tile reveal" href="${up}${key(e)}.html">
       <span><b>${esc(nm(e.n, en))}</b><em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em></span>
       <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span></a>`;
 
@@ -390,7 +412,7 @@ function home(L) {
       <p class="lead reveal">${esc(h.s3p)}</p>
       <p class="reveal"><a class="more" href="catalog.html">${esc(h.all)}${ARROW}</a></p>
     </div>
-    <div class="cards" data-par="-0.6">${FEATURED.map(e => cardRow(e, en, '')).join('')}</div>
+    <div class="cards" data-par="-0.6">${FEATURED.map(e => cardRow(e, en, 'p/')).join('')}</div>
   </div>
 </section>
 
@@ -533,7 +555,7 @@ function groups(L) {
     <p class="kick">${esc(g[L].rule)}</p>
     <h2 class="gtitle">${esc(g[L].label)}</h2>
     <p class="lead">${esc(g[L].why)}</p>
-    <div class="cards">${g.members.map(x => D.find(y => y.n === x)).filter(Boolean).map(s => cardRow(s, en, '')).join('')}</div>
+    <div class="cards">${g.members.map(x => D.find(y => y.n === x)).filter(Boolean).map(s => cardRow(s, en, 'p/')).join('')}</div>
   </article>`).join('')}
 </div></section>`;
   return layout({
@@ -633,6 +655,8 @@ function about(L) {
   <p class="kick reveal">${esc(t.contact)}</p>
   <h2 class="display sm reveal">${esc(t.writeUs)}</h2>
   <p class="lede reveal">${esc(t.contactP)}</p>
+  <p class="notice reveal">${en ? 'This form is about the site and the catalog. If you want to report a symptom after taking something, use the' : 'Ten formularz dotyczy strony i katalogu. Jeśli chcesz zgłosić objaw po zażyciu czegoś, użyj'}
+    <a href="symptoms.html#report">${en ? 'side-effect report' : 'zgłoszenia skutku ubocznego'}</a>.</p>
   <form class="sheet reveal" id="coForm" novalidate>
     <div class="f2">
       <p class="frow"><label for="coName">${esc(t.coName)}</label><input type="text" id="coName" name="name" autocomplete="name" maxlength="80" required></p>
@@ -641,7 +665,6 @@ function about(L) {
     <p class="frow"><label for="coTopic">${esc(t.coTopic)}</label><select id="coTopic" name="topic">${t.coT.map(x => `<option>${esc(x)}</option>`).join('')}</select></p>
     <p class="frow"><label for="coMsg">${esc(t.coMsg)}</label><textarea id="coMsg" name="message" rows="5" maxlength="2000" required></textarea></p>
     <p class="check"><label><input type="checkbox" id="coCons"> <span>${esc(t.coCons)}</span></label></p>
-    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
     <p class="formfoot"><button class="btn big" type="submit" data-busy="${esc(t.coSending)}">${esc(t.coSend)}</button></p>
     <p class="formmsg" id="coMsgOut" role="status" hidden></p>
   </form>
@@ -763,6 +786,8 @@ function symptoms(L) {
   <h2 class="display sm reveal">${esc(t.efH)}</h2>
   <p class="lede reveal">${esc(t.efLead)}</p>
   <p class="notice warn reveal"><strong>${en ? 'Emergency' : 'Nagły przypadek'}:</strong> ${esc(t.efWarn)}</p>
+  <p class="notice reveal">${en ? 'This form is only for symptoms. A question, an error on the site or anything else goes to' : 'Ten formularz dotyczy wyłącznie objawów. Pytanie, błąd na stronie i cokolwiek innego to'}
+    <a href="about.html#contact">${en ? 'contact' : 'kontakt'}</a>.</p>
   <form class="sheet reveal" id="efForm" novalidate>
     <div class="f2">
       <p class="frow"><label for="efSub">${esc(t.efSub)}</label><select id="efSub" name="substance"></select></p>
@@ -773,7 +798,6 @@ function symptoms(L) {
     <p class="frow"><label for="efSym">${esc(t.efSym)}</label><textarea id="efSym" name="symptom" rows="3" maxlength="600" required></textarea></p>
     <p class="frow"><label for="efWhen">${esc(t.efWhen)}</label><input type="text" id="efWhen" name="when" maxlength="100"></p>
     <p class="check"><label><input type="checkbox" id="efCons"> <span>${esc(t.efCons)}</span></label></p>
-    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
     <p class="formfoot"><button class="btn big" type="submit" data-busy="${esc(t.coSending)}">${esc(t.efSend)}</button></p>
     <p class="formmsg" id="efMsg" role="status" hidden></p>
   </form>

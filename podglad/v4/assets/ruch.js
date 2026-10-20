@@ -233,54 +233,54 @@
     place();
   }
 
-  /* ── drifting chains ───────────────────────────────── */
-  var cv = document.getElementById('chains');
-  var ctx = cv && cv.getContext ? cv.getContext('2d') : null;
-  var chains = [], w = 0, h = 0, dpr = Math.min(2, devicePixelRatio || 1), raf = 0, visible = true, seed = 7;
-  function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+  /* ── drifting chains, one instance per canvas ──────── */
+  var painters = [];
   function hues() {
-    var s = getComputedStyle(html);
-    return ['--k1', '--k2', '--k3', '--k4', '--neon'].map(function (v) { return s.getPropertyValue(v).trim() || '#2F6DB5'; });
+    var st = getComputedStyle(html);
+    return ['--k1', '--k2', '--k3', '--k4', '--neon'].map(function (v) { return st.getPropertyValue(v).trim() || '#2F6DB5'; });
   }
-  function size() { w = cv.clientWidth; h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
-  function init() {
-    var c = hues();
-    chains = []; var n = w < 600 ? 7 : 12;
-    for (var i = 0; i < n; i++) chains.push({
-      x: rnd() * w, y: rnd() * h, a: rnd() * 6.28, sp: .11 + rnd() * .17,
-      len: 5 + Math.floor(rnd() * 6), ph: rnd() * 6.28, sz: 2.8 + rnd() * 2.4,
-      col: c[i % c.length], glow: i % 5 === 4
-    });
-  }
-  function draw(t) {
-    ctx.clearRect(0, 0, w, h);
-    chains.forEach(function (c) {
-      if (motionOn) {
-        c.x += Math.cos(c.a) * c.sp; c.y += Math.sin(c.a) * c.sp; c.a += .0018;
-        if (c.x < -140) c.x = w + 70; if (c.x > w + 140) c.x = -70;
-        if (c.y < -140) c.y = h + 70; if (c.y > h + 140) c.y = -70;
-      }
-      var pts = [];
-      for (var i = 0; i < c.len; i++) {
-        var u = i * 20, ang = c.a + Math.sin(i * .7 + c.ph + t * .0005) * .6;
-        var wob = Math.sin(i * .9 + c.ph + t * .0007) * 8;
-        pts.push([c.x + Math.cos(c.a) * u + Math.cos(ang + 1.57) * wob,
-                  c.y + Math.sin(c.a) * u + Math.sin(ang + 1.57) * wob]);
-      }
-      ctx.globalAlpha = c.glow ? .34 : .26;
-      ctx.strokeStyle = c.col; ctx.lineWidth = 1.5; ctx.beginPath();
-      pts.forEach(function (p, i) { i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); });
-      ctx.stroke();
-      ctx.globalAlpha = c.glow ? .46 : .36;
-      ctx.fillStyle = c.col;
-      pts.forEach(function (p) { ctx.beginPath(); ctx.arc(p[0], p[1], c.sz, 0, 6.2832); ctx.fill(); });
-    });
-    ctx.globalAlpha = 1;
-    raf = (motionOn && visible) ? requestAnimationFrame(draw) : 0;
-  }
-  function paint() { if (!ctx) return; init(); if (!raf) requestAnimationFrame(draw); }
-
-  if (ctx) {
+  function makeChains(cv, dense) {
+    var ctx = cv.getContext ? cv.getContext('2d') : null;
+    if (!ctx) return;
+    var chains = [], w = 0, h = 0, dpr = Math.min(2, devicePixelRatio || 1), raf = 0, visible = true;
+    var seed = 7 + painters.length * 131;
+    function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    function size() { w = cv.clientWidth; h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    function init() {
+      var c = hues();
+      chains = []; var n = Math.round((w < 600 ? 7 : 12) * dense);
+      for (var i = 0; i < n; i++) chains.push({
+        x: rnd() * w, y: rnd() * h, a: rnd() * 6.28, sp: .11 + rnd() * .17,
+        len: 5 + Math.floor(rnd() * 6), ph: rnd() * 6.28, sz: 2.8 + rnd() * 2.4,
+        col: c[i % c.length], glow: i % 5 === 4
+      });
+    }
+    function draw(t) {
+      ctx.clearRect(0, 0, w, h);
+      chains.forEach(function (c) {
+        if (motionOn) {
+          c.x += Math.cos(c.a) * c.sp; c.y += Math.sin(c.a) * c.sp; c.a += .0018;
+          if (c.x < -140) c.x = w + 70; if (c.x > w + 140) c.x = -70;
+          if (c.y < -140) c.y = h + 70; if (c.y > h + 140) c.y = -70;
+        }
+        var pts = [];
+        for (var i = 0; i < c.len; i++) {
+          var u = i * 20, ang = c.a + Math.sin(i * .7 + c.ph + t * .0005) * .6;
+          var wob = Math.sin(i * .9 + c.ph + t * .0007) * 8;
+          pts.push([c.x + Math.cos(c.a) * u + Math.cos(ang + 1.57) * wob,
+                    c.y + Math.sin(c.a) * u + Math.sin(ang + 1.57) * wob]);
+        }
+        ctx.globalAlpha = c.glow ? .34 : .26;
+        ctx.strokeStyle = c.col; ctx.lineWidth = 1.5; ctx.beginPath();
+        pts.forEach(function (p, i) { i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); });
+        ctx.stroke();
+        ctx.globalAlpha = c.glow ? .46 : .36;
+        ctx.fillStyle = c.col;
+        pts.forEach(function (p) { ctx.beginPath(); ctx.arc(p[0], p[1], c.sz, 0, 6.2832); ctx.fill(); });
+      });
+      ctx.globalAlpha = 1;
+      raf = (motionOn && visible) ? requestAnimationFrame(draw) : 0;
+    }
     size(); init(); requestAnimationFrame(draw);
     addEventListener('resize', function () { size(); init(); if (!raf) requestAnimationFrame(draw); });
     if ('IntersectionObserver' in window) {
@@ -289,7 +289,13 @@
         if (visible && motionOn && !raf) raf = requestAnimationFrame(draw);
       }).observe(cv);
     }
+    painters.push(function () { init(); if (!raf) requestAnimationFrame(draw); });
+    return function () { if (!raf) requestAnimationFrame(draw); };
   }
+  function paint() { painters.forEach(function (f) { f(); }); }
+  [].slice.call(document.querySelectorAll('#chains, canvas.chains')).forEach(function (cv) {
+    makeChains(cv, cv.dataset.dense ? +cv.dataset.dense : 1);
+  });
 
   /* ── motion switch ─────────────────────────────────── */
   var btn = document.getElementById('motion');
@@ -447,10 +453,15 @@
         body: JSON.stringify(body)
       }).then(function (r) { return r.json(); }).then(function (j) {
         btn.disabled = false; btn.textContent = label;
-        if (j && j.success) { form.reset(); onOk(); } else say(out, W.fail, true);
+        if (j && j.success) { form.reset(); onOk(); done(form, out); } else say(out, W.fail, true);
       }).catch(function () {
         btn.disabled = false; btn.textContent = label; say(out, W.fail, true);
       });
+    }
+    function done(form, out) {
+      form.hidden = true;
+      out.classList.add('big');
+      if (out.scrollIntoView) out.scrollIntoView({ block: 'center', behavior: 'smooth' });
     }
     function flag(el, bad) { if (el) el.setAttribute('aria-invalid', bad ? 'true' : 'false'); }
 

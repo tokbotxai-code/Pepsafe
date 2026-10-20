@@ -12,6 +12,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://pepsafe.info/pl/symptoms.html">
+<link rel="alternate" hreflang="en" href="https://pepsafe.info/en/symptoms.html">
+<link rel="alternate" hreflang="pl" href="https://pepsafe.info/pl/symptoms.html">
+<link rel="alternate" hreflang="x-default" href="https://pepsafe.info/en/symptoms.html">
+<meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0F0D" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PepSafe">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Szukaj od objawu | PepSafe">
+<meta property="og:description" content="Znajdź wpisy katalogu, przy których dany objaw jest opisany w sekcji o bezpieczeństwie lub działaniu.">
+<meta property="og:url" content="https://pepsafe.info/pl/symptoms.html">
+<meta property="og:image" content="https://pepsafe.info/assets/og-pl.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Szukaj od objawu | PepSafe">
+<meta name="twitter:description" content="Znajdź wpisy katalogu, przy których dany objaw jest opisany w sekcji o bezpieczeństwie lub działaniu.">
+<meta name="twitter:image" content="https://pepsafe.info/assets/og-pl.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://pepsafe.info/#org","name":"PepSafe","url":"https://pepsafe.info/","sameAs":["https://www.tiktok.com/@pepsafe.info","https://www.instagram.com/pepsafe.info/"]}</script>
 </head>
 <body>
@@ -84,6 +103,8 @@
   <h2 class="display sm reveal">Zgłoś skutek uboczny</h2>
   <p class="lede reveal">Niepokojący objaw po leku peptydowym? Opisz go poniżej, a zgłoszenie trafi prosto do autorów strony. Zgłoszenia nie są publikowane. To nie jest pomoc medyczna.</p>
   <p class="notice warn reveal"><strong>Nagły przypadek:</strong> Przy przedawkowaniu, silnej reakcji alergicznej, bólu w klatce piersiowej lub trudnościach z oddychaniem dzwoń pod 112 albo do centrum zatruć. Nie czekaj na odpowiedź od nas.</p>
+  <p class="notice reveal">Ten formularz dotyczy wyłącznie objawów. Pytanie, błąd na stronie i cokolwiek innego to
+    <a href="about.html#contact">kontakt</a>.</p>
   <form class="sheet reveal" id="efForm" novalidate>
     <div class="f2">
       <p class="frow"><label for="efSub">Substancja</label><select id="efSub" name="substance"></select></p>
@@ -94,7 +115,6 @@
     <p class="frow"><label for="efSym">Opis objawu (bez danych osobowych)</label><textarea id="efSym" name="symptom" rows="3" maxlength="600" required></textarea></p>
     <p class="frow"><label for="efWhen">Kiedy wystąpiło (np. po 2 dniach)</label><input type="text" id="efWhen" name="when" maxlength="100"></p>
     <p class="check"><label><input type="checkbox" id="efCons"> <span>Rozumiem, że zgłoszenie nie zastępuje lekarza, trafia tylko do autorów strony i nie jest publikowane.</span></label></p>
-    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
     <p class="formfoot"><button class="btn big" type="submit" data-busy="Wysyłanie…">Wyślij zgłoszenie</button></p>
     <p class="formmsg" id="efMsg" role="status" hidden></p>
   </form>
@@ -106,6 +126,7 @@
 </main>
 
 <footer>
+  <canvas class="chains" data-dense="0.55" aria-hidden="true"></canvas>
   <div class="wrap foot">
     <p>PepSafe — fakty o peptydach, bez sprzedaży. Treść edukacyjna, nie porada medyczna.</p>
     <p class="social">

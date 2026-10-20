@@ -12,6 +12,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://pepsafe.info/en/symptoms.html">
+<link rel="alternate" hreflang="en" href="https://pepsafe.info/en/symptoms.html">
+<link rel="alternate" hreflang="pl" href="https://pepsafe.info/pl/symptoms.html">
+<link rel="alternate" hreflang="x-default" href="https://pepsafe.info/en/symptoms.html">
+<meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0F0D" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PepSafe">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Search by symptom | PepSafe">
+<meta property="og:description" content="Find catalog entries that mention a given symptom in their safety or effect sections.">
+<meta property="og:url" content="https://pepsafe.info/en/symptoms.html">
+<meta property="og:image" content="https://pepsafe.info/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Search by symptom | PepSafe">
+<meta name="twitter:description" content="Find catalog entries that mention a given symptom in their safety or effect sections.">
+<meta name="twitter:image" content="https://pepsafe.info/assets/og-en.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://pepsafe.info/#org","name":"PepSafe","url":"https://pepsafe.info/","sameAs":["https://www.tiktok.com/@pepsafe.info","https://www.instagram.com/pepsafe.info/"]}</script>
 </head>
 <body>
@@ -84,6 +103,8 @@
   <h2 class="display sm reveal">Report a side effect</h2>
   <p class="lede reveal">Noticed a worrying symptom after a peptide drug? Describe it below and the report goes straight to the site authors. Reports are not published. This is not medical help.</p>
   <p class="notice warn reveal"><strong>Emergency:</strong> For an overdose, a severe allergic reaction, chest pain or breathing difficulty call 112 (or your local emergency number) or a poison centre. Do not wait for a reply from us.</p>
+  <p class="notice reveal">This form is only for symptoms. A question, an error on the site or anything else goes to
+    <a href="about.html#contact">contact</a>.</p>
   <form class="sheet reveal" id="efForm" novalidate>
     <div class="f2">
       <p class="frow"><label for="efSub">Substance</label><select id="efSub" name="substance"></select></p>
@@ -94,7 +115,6 @@
     <p class="frow"><label for="efSym">Description of the symptom (no personal data)</label><textarea id="efSym" name="symptom" rows="3" maxlength="600" required></textarea></p>
     <p class="frow"><label for="efWhen">When it happened (e.g. after 2 days)</label><input type="text" id="efWhen" name="when" maxlength="100"></p>
     <p class="check"><label><input type="checkbox" id="efCons"> <span>I understand the report does not replace a doctor, goes only to the site authors and is not published.</span></label></p>
-    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
     <p class="formfoot"><button class="btn big" type="submit" data-busy="Sending…">Send report</button></p>
     <p class="formmsg" id="efMsg" role="status" hidden></p>
   </form>
@@ -106,6 +126,7 @@
 </main>
 
 <footer>
+  <canvas class="chains" data-dense="0.55" aria-hidden="true"></canvas>
   <div class="wrap foot">
     <p>PepSafe — peptide facts, no sales. Educational content, not medical advice.</p>
     <p class="social">
