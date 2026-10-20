@@ -124,3 +124,15 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Powód: cała strona to jeden `index.html` z przełączaniem w JavaScript, więc adresy `?e=` serwują ten sam
   dokument i wyszukiwarka widzi jedną stronę zamiast 123.
 - Nie edytuj plików w `p/` ręcznie — są generowane i zostaną nadpisane. Zmiany wprowadzaj w katalogu w `index.html`.
+
+## TikTok po ograniczeniu konta (od 20.10.2026)
+- 20.10 TikTok zdjął film o WADA i **ograniczył 13 postów**. To ograniczenie na poziomie konta, nie pojedynczej treści.
+- Dane z 14 dni są jednoznaczne: filmy **bez ani jednej nazwy substancji** („What actually is a peptide?”)
+  miały 251–252 wyświetlenia, a wszystko z nazwami 4–11. Różnica 20–60×.
+- Dlatego na TikToka idą **wyłącznie treści czysto przyrodnicze**: aminokwasy, łańcuchy, zwijanie białek,
+  okres półtrwania, enzymy, historia odkryć. Zero nazw substancji w opisie, na slajdach i w lektorze.
+  Nazwy zostają na stronie i na Instagramie.
+- Hashtagi na TikToka: `#biology #science #chemistry #learnontiktok #education #pepsafe`.
+- Instagram prowadzi dalej pełną treść z nazwami — tam ograniczeń nie ma.
+- Wracamy do tematów z nazwami na TikToku dopiero, gdy ograniczenia znikną i kilka filmów przyrodniczych
+  z rzędu wyjdzie bez kary.
