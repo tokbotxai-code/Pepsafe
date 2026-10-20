@@ -27,10 +27,14 @@
 - Pierwszy komentarz i zakończenie opisu w wersji EN („More at pepsafe.info”).
 
 ## Dźwięk w filmach (od 20.10.2026)
-- Filmy mają **lektora**: `node tiktok/make.js` syntezuje głos dla każdego slajdu (piper, głos `en_US-amy-medium`)
-  i podkłada `music-calm.m4a` ściszony do 14%. Plik do publikacji: `pepsafe-<folder>-lektor.mp4`.
-- Modele głosu nie idą do repo (`.gitignore`). Dociągnięcie przy starcie:
-  `python3 -m piper.download_voices --data-dir .voices en_US-amy-medium`.
+- Filmy mają **lektora**: `node tiktok/make.js` czyta każdy slajd głosem ElevenLabs „Jessica”
+  (`cgSgspJ2msm6clMCkdW9`, model `eleven_multilingual_v2`) i podkłada `music-calm.m4a` ściszony do 14%.
+  Plik do publikacji: `pepsafe-<folder>-lektor.mp4`.
+- Wymaga zmiennej `ELEVENLABS_API_KEY` w środowisku. Bez niej (albo przy `"vo": false` w `post.json`) film powstaje
+  z samą muzyką jako `pepsafe-<folder>-muzyka.mp4` — skrypt się nie wywala.
+- Pole `"vo"` w slajdzie nadpisuje zdanie czytane przez lektora (na slajdzie może być krótszy tekst).
+- Darmowy plan ElevenLabs: 10 000 znaków/mies. ≈ 40 filmów. Dopóki nie ma planu Starter, lektora dajemy
+  jednemu filmowi dziennie, pozostałe z `"vo": false`.
 - Publikacja zostaje automatyczna (`autoPublish: true`) na obu kanałach.
 - Muzyka z katalogu TikToka jest niemożliwa przez API (da się tylko montując w aplikacji). Katalog audio
   Instagrama zwraca 403 dla tego konta — wymagałoby konta Business połączonego z Facebook Page.
