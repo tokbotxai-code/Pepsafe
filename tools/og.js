@@ -1,10 +1,12 @@
 // Buduje obrazek pokazywany przy udostepnianiu linku (1200x630), po jednym na jezyk.
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
+// liczba wpisow prosto z katalogu, zeby obrazek nie klamal po kazdym dodaniu substancji
+const N = (fs.readFileSync(path.join(__dirname, '..', 'dane.html'), 'utf8').match(/^E\(/gm) || []).length;
 const OUT = path.join(__dirname, '..', 'src');
 const T = {
-  en: { h: 'Peptide facts,<br>not sales.', p: '123 substances · status, evidence, warnings', d: 'pepsafe.info' },
-  pl: { h: 'Fakty o peptydach,<br>bez sprzedaży.', p: '123 substancje · status, dowody, ostrzeżenia', d: 'pepsafe.info' }
+  en: { h: 'Peptide facts,<br>not sales.', p: `${N} substances · status, evidence, warnings`, d: 'pepsafe.info' },
+  pl: { h: 'Fakty o peptydach,<br>bez sprzedaży.', p: `${N} substancji · status, dowody, ostrzeżenia`, d: 'pepsafe.info' }
 };
 const page = t => `<!doctype html><meta charset="utf-8">
 <style>
