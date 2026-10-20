@@ -98,6 +98,14 @@ ${wada ? `<h2>${L('Status antydopingowy', 'Anti-doping status')}</h2><p>${en
       } <a href="${WADA_URL}" rel="nofollow">${esc(L('Lista WADA', 'WADA list'))}</a></p>` : ''}
 ${e.q ? `<h2>${L('Sekwencja', 'Sequence')}</h2><p class="seq">${esc(e.q)}</p>` : ''}
 ${src.length ? `<h2>${L('Źródła', 'Sources')}</h2><ul>${src.map(x => `<li><a href="${esc(x[1])}" rel="nofollow">${esc(x[0])}</a></li>`).join('')}</ul>` : ''}
+${(() => { // sasiedzi z tej samej kategorii: robot schodzi glebiej, czytelnik ma dokad kliknac
+    const sibs = D.filter(x => x.cat === e.cat && x.n !== e.n).slice(0, 6);
+    if (!sibs.length) return '';
+    return `<h2>${L('Podobne', 'Related')}</h2><ul>${sibs.map(x => {
+      const sl = slug(EN[x.n] ? EN[x.n][0] : x.n), nm = en ? (EN[x.n] ? EN[x.n][0] : x.n) : x.n;
+      return `<li><a href="/p/${sl}${en ? '' : '.pl'}.html">${esc(nm)}</a></li>`;
+    }).join('')}</ul>`;
+  })()}
 <footer>
 <p>${L('Treść edukacyjna, nie porada medyczna. Nie podajemy dawek ani źródeł zakupu.',
       'Educational content, not medical advice. We do not give doses or sources to buy from.')}</p>
