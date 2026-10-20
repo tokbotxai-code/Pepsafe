@@ -124,6 +124,9 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Nowe substancje dodawaj skryptem: zapisz wpisy do pliku JSON i uruchom **`node tools/dodaj.js <plik.json>`**
   (pola: n, a, s, c, cat, fam, d, m, u, ev, w, opcjonalnie q i wa, oraz `en` — 7 pól wersji angielskiej).
   Skrypt sprawdza statusy, kategorie i rodziny oraz pomija wpisy, które już są. Nie dopisuj ręcznie do `dane.html`.
+- Po dodaniu wpisów uruchom **`node tools/audyt.js`** (albo `--nowe N` dla ostatnich N): sprawdza urwane pola,
+  brak wersji angielskiej, powtórzone zdania, dawki przy substancjach niezatwierdzonych i zdanie zamykające
+  przy statusie „Niezatwierdzony”. Kod wyjścia 1 = popraw przed publikacją.
 - Po dodaniu wpisów uruchom **`node tools/rodziny.js`** — listy członków grup (`FAMS[].m`) są osobne od pola `fam`
   przy wpisie i bez tego nowa substancja nie trafia do grupy ani do sprawdzarki dublowania. `--sprawdz` tylko sprawdza.
 - Po każdej zmianie: **`PEP_OUT=. PEP_BASE=/ node tools/v4.js`**. Buduje `/index.html`, `/en/`, `/pl/`,
@@ -147,6 +150,12 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   odsyłającą do drugiego. Nie łączyć ich.
 
 ## TikTok po ograniczeniu konta (od 20.10.2026)
+- **Aktualizacja 20.10 wieczorem: usuniętych jest 15 filmów.** Para WADA opublikowana 20.10 o 06:15 i 06:30
+  została zdjęta tego samego dnia (strony filmów zwracają „This page isn't available”). Miały emotkę 🚫,
+  ramę „lista zakazanych substancji” i hashtag `#bpc157` — czyli dokładnie to, czego zakazują zasady niżej.
+  Zostały zaplanowane, zanim te zasady powstały.
+- **Przeżyły oba filmy bez tego wzorca**: ankieta KLOW/GLOW (nazwy mieszanek, bez nazw substancji w hashtagach)
+  i „Fifteen benefits is the tell” (zero nazw). Wzorzec potwierdzony po raz kolejny.
 - 19–20.10 TikTok **usunął 13 filmów** (wszystkie oznaczone „Video removed”, nie samo ograniczenie zasięgu).
   Decyzje podjęły automaty: „We have used automated measures in making this decision”.
 - Usunięte: para WADA (20.10), para „15 rzeczy, które TB-500 rzekomo leczy”, para CJC-1295 + Ipamorelin,
