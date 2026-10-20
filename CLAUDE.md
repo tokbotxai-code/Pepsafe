@@ -72,6 +72,13 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   „substancje zakazane” + nazwa substancji to sygnał treści narkotykowej, nawet gdy piszemy o antydopingu w sporcie.
   Zamiast tego neutralnie: „WADA's 2026 list — what changed”.
 - Pierwsze zdanie opisu to ciekawostka albo fakt, nigdy zakaz ani ostrzeżenie.
+- **Nazwa substancji nie otwiera opisu na żadnym kanale, także na Instagramie (decyzja właściciela, 20.10).**
+  Zamiast nazwy piszemy mechanizm albo klasę: „potrójny agonista GLP-1”, „kompleks miedziowy”,
+  „analog hormonu uwalniającego gonadotropiny”. Nazwa może pojawić się dalej w opisie, jeśli jest potrzebna,
+  ale nie w pierwszym zdaniu i nigdy w hashtagu. Powód: pierwsze słowa i hashtagi trafiają do indeksu
+  wyszukiwania, a to po nich platformy klasyfikują treść jako narkotykową.
+- Hashtagi ogólne zamiast nazw: `#glp1 #peptydy #nauka #fakty` zamiast `#retatrutyd #melanotan`.
+  Wyjątek: nazwy, które nie są substancjami regulowanymi, np. `#kolagen`.
 
 ## Zaproszenie do pytań i wiadomości prywatnych
 - Każdy post ma pierwszy komentarz (`firstCommentText`) w języku posta:
