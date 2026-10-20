@@ -143,6 +143,40 @@ fs.writeFileSync(path.join(dir, 'index.html'), `<!doctype html><html lang="en"><
 </div></body></html>`);
 urls.unshift('https://pepsafe.info/p/');
 
+// FAQ as a real page: in the app it is rendered by JavaScript, so no crawler ever sees the answers
+const faqStart = at(/^var FAQ=\[/);
+const faqEnd = faqStart + lines.slice(faqStart).findIndex(l => /^\];/.test(l)) + 1;
+vm.runInContext(slice(faqStart, faqEnd), sandbox);
+const FAQ = sandbox.FAQ || [];
+for (const en of [true, false]) {
+  const qa = FAQ.filter(x => Array.isArray(x) && x[0] && x[1]);
+  if (!qa.length) break;
+  const f = en ? 'faq.html' : 'faq.pl.html';
+  const L = (pl, e2) => en ? e2 : pl;
+  fs.writeFileSync(path.join(dir, f), `<!doctype html><html lang="${en ? 'en' : 'pl'}"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${L('Pytania i odpowiedzi o peptydach', 'Peptide questions and answers')} | PepSafe</title>
+<meta name="description" content="${esc(clip(qa.map(x => en ? x[0].en : x[0].pl).join(' '), 155))}">
+<link rel="canonical" href="https://pepsafe.info/p/${f}">
+<link rel="alternate" hreflang="${en ? 'pl' : 'en'}" href="https://pepsafe.info/p/${en ? 'faq.pl.html' : 'faq.html'}">
+<style>${css}</style>
+<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: qa.map(x => ({
+      '@type': 'Question', name: en ? x[0].en : x[0].pl,
+      acceptedAnswer: { '@type': 'Answer', text: en ? x[1].en : x[1].pl }
+    }))
+  })}</script></head><body><div class="w">
+<nav><a href="https://pepsafe.info/">PepSafe</a> › ${L('Pytania', 'Questions')}</nav>
+<h1>${L('Pytania i odpowiedzi', 'Questions and answers')}</h1>
+<p class="sub">${qa.length} ${L('pytań o peptydy, z odpowiedziami opartymi na badaniach.', 'questions about peptides, answered from the research.')}</p>
+${qa.map(x => `<h2>${esc(en ? x[0].en : x[0].pl)}</h2><p>${esc(en ? x[1].en : x[1].pl)}</p>`).join('')}
+<footer><p>${L('Treść edukacyjna, nie porada medyczna.', 'Educational content, not medical advice.')}
+ <a href="https://pepsafe.info/p/">${L('Katalog A–Z', 'Catalog A–Z')}</a></p></footer>
+</div></body></html>`);
+  urls.push('https://pepsafe.info/p/' + f);
+}
+
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(root, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
