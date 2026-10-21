@@ -553,6 +553,7 @@ function guideBox(e, en) {
   <p><a class="btn" href="${GUIDE_URL}" rel="noopener">${en ? 'Get the PDF — £5.99' : 'Pobierz PDF — £5.99'}${ARROW}</a></p>
   <p style="margin-top:14px"><b>${en ? 'Protein &amp; Muscle on GLP-1' : 'Białko i mięśnie przy GLP-1 (po angielsku)'}</b> — ${en ? 'keep your strength while you lose weight: protein calculator, 7-day meal plan, 20-minute home workouts, printable tracker.' : 'jak zachować siłę podczas chudnięcia: kalkulator białka, 7-dniowy plan posiłków, 20-minutowy trening w domu, dzienniczek.'}</p>
   <p><a class="btn ghost" href="${MUSCLE_URL}" rel="noopener">${en ? 'Get the muscle guide — £9.99' : 'Pobierz przewodnik — £9.99'}${ARROW}</a></p>
+  <p class="small"><a href="${BASE}${en ? 'en' : 'pl'}/guides.html">${en ? 'See inside both guides' : 'Zobacz podgląd obu przewodników'}${ARROW}</a></p>
 </section>`;
 }
 
@@ -601,6 +602,44 @@ function freeThanks(L) {
 </section>`;
   return layout({ lang: L, here: 'free-thanks.html', twin: 'free-thanks.html', body, noindex: true,
     title: (en ? 'Your checklist' : 'Twoja checklista') + ' | PepSafe', desc: en ? 'Download your checklist.' : 'Pobierz checklistę.' });
+}
+// strona z przewodnikami: podglad stron, prawdziwe sygnaly zaufania, gwarancja zwrotu (bez zmyslonych opinii)
+function guidesPage(L) {
+  const en = L === 'en';
+  const card = (url, price, title, what, list, imgs) => `
+<section class="blk reveal" style="border:2px solid #3CCFA9;border-radius:14px;padding:18px 20px;margin-top:22px">
+  <h2>${title}</h2>
+  <p>${what}</p>
+  <div style="display:flex;gap:10px;overflow-x:auto;padding:6px 0 10px">${imgs.map(i => `<img src="${BASE}guides/${i}.jpg" alt="${en ? 'Preview page' : 'Podgląd strony'}" loading="lazy" style="height:260px;width:auto;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.15);flex:none">`).join('')}</div>
+  <ul>${list.map(x => `<li>${x}</li>`).join('')}</ul>
+  <p><a class="btn big" href="${url}" rel="noopener">${en ? 'Get it' : 'Pobierz'} — ${price}${ARROW}</a></p>
+</section>`;
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <p class="kick reveal">${en ? 'PepSafe guides' : 'Przewodniki PepSafe (po angielsku)'}</p>
+    <h1 class="display reveal">${en ? 'Plain-English guides for people on GLP-1 medicines' : 'Przewodniki prostym językiem dla osób na lekach GLP-1'}</h1>
+    <p class="lede reveal">${en ? 'Built from official labels, regulators and the major clinical trials — with sources on every page. Instant PDF download.' : 'Oparte na etykietach, zaleceniach regulatorów i dużych badaniach klinicznych — ze źródłami na każdej stronie. PDF do pobrania od razu.'}</p>
+    <ul class="reveal small">
+      <li>${en ? 'Sources: MHRA, EMA, FDA labels, STEP and SURMOUNT trials, WHO and NHS guidance' : 'Źródła: MHRA, EMA, etykiety FDA, badania STEP i SURMOUNT, zalecenia WHO i NHS'}</li>
+      <li>${en ? 'Independent: no ads, and we never sell medicines or peptides' : 'Niezależne: bez reklam, nie sprzedajemy leków ani peptydów'}</li>
+      <li>${en ? 'Updated October 2026' : 'Aktualizacja: październik 2026'}</li>
+      <li><b>${en ? '14-day refund: not useful? Email ' + FORM_TO + ' and we will refund you.' : 'Zwrot w 14 dni: nie przydało się? Napisz na ' + FORM_TO + ', oddamy pieniądze.'}</b></li>
+    </ul>
+    ${card(GUIDE_URL, '£5.99', 'The GLP-1 Safety Guide', en ? '23 pages: what to expect, what to watch for and what to ask your doctor.' : '23 strony: czego się spodziewać, na co uważać i o co pytać lekarza.',
+      en ? ['Side effects and how often they really happen', 'Label warnings: pancreas, gallbladder, kidneys, eyes', 'Surgery, other medicines, pregnancy', 'Stopping and the long term; spotting fakes', 'Appointment checklist and pocket cheat sheet']
+         : ['Skutki uboczne i jak często naprawdę występują', 'Ostrzeżenia z etykiet: trzustka, woreczek, nerki, oczy', 'Zabiegi, inne leki, ciąża', 'Odstawienie i długi termin; podróbki', 'Lista pytań do lekarza i ściąga'], ['safety-1', 'safety-2', 'safety-3'])}
+    ${card(MUSCLE_URL, '£9.99', 'Protein &amp; Muscle on GLP-1', en ? '21-page guide + protein calculator + printable weekly tracker.' : '21 stron + kalkulator białka + dzienniczek do druku.',
+      en ? ['Your personal protein target in 2 minutes', '7-day meal plan with vegetarian swaps', '20-minute home strength routine, no gym', '12-week progression plan', 'Older adults, bones and balance']
+         : ['Twój cel białkowy w 2 minuty', '7-dniowy plan posiłków z wersją wegetariańską', '20-minutowy trening siłowy w domu', '12-tygodniowy plan postępów', 'Starsi dorośli, kości i równowaga'], ['muscle-1', 'muscle-2', 'muscle-3'])}
+    <p class="small ink2 reveal" style="margin-top:22px">${en ? 'Educational information only — not medical advice and no dosing instructions. Bought a guide? Tell us what you think at ' + FORM_TO + '.' : 'Informacje edukacyjne — nie porada medyczna i bez instrukcji dawkowania. Masz przewodnik? Napisz, co sądzisz: ' + FORM_TO + '.'}</p>
+    <p class="reveal"><a href="free.html">${en ? 'Not ready? Get the free one-page checklist first' : 'Nie teraz? Weź najpierw darmową checklistę'}${ARROW}</a></p>
+  </div>
+</section>`;
+  return layout({ lang: L, here: 'guides.html', twin: 'guides.html', body,
+    title: (en ? 'GLP-1 guides: safety, protein and muscle' : 'Przewodniki GLP-1: bezpieczeństwo, białko i mięśnie') + ' | PepSafe',
+    desc: en ? 'Plain-English PDF guides for people on semaglutide or tirzepatide: safety guide and protein & muscle guide, with preview pages.' : 'Przewodniki PDF dla osób na lekach GLP-1: bezpieczeństwo oraz białko i mięśnie, z podglądem stron.' });
 }
 function privacy(L) {
   const en = L === 'en';
@@ -1148,7 +1187,7 @@ for (const L of LANGS) {
   const pages = {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
     'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
-    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L), 'free.html': freePage(L), 'free-thanks.html': freeThanks(L), 'privacy.html': privacy(L),
+    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L), 'free.html': freePage(L), 'free-thanks.html': freeThanks(L), 'guides.html': guidesPage(L), 'privacy.html': privacy(L),
     'blog.html': blogIndex(L), 'glossary.html': glossary(L), '404.html': notFound(L)
   };
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
@@ -1169,8 +1208,7 @@ function start() {
   const links = [
     [`${BASE}${e ? cardPath(e, 'en') : 'en/index.html'}`, 'Peptide of the day', dayName],
     [`${BASE}en/free.html`, 'Free checklist 🎁', '5 mistakes that cost you muscle on GLP-1'],
-    [GUIDE_URL, 'The GLP-1 Safety Guide (PDF)', 'Side effects, risks, what to ask your doctor — £5.99'],
-    [MUSCLE_URL, 'Protein & Muscle on GLP-1 (PDF + calculator)', 'Keep your strength while you lose weight — £9.99'],
+    [`${BASE}en/guides.html`, 'Our GLP-1 guides (PDF) 📘', 'Safety £5.99 · Protein & Muscle £9.99 — see inside'],
     [`${BASE}en/catalog.html`, 'The catalog', `${D.length} peptides: status, research, sources`],
     [`${BASE}en/compare.html`, 'Compare two peptides', 'Side by side, in one screen'],
     [`${BASE}en/symptoms.html`, 'Symptoms and safety', 'What to watch for and where to report it'],
@@ -1215,7 +1253,7 @@ n += 5;
 const when = new Date().toISOString().slice(0, 10);
 const urls = [''].concat(
   LANGS.flatMap(L => ['index.html', 'catalog.html', 'dosing.html', 'groups.html', 'compare.html',
-    'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html', 'free.html', 'privacy.html'].map(f => L + '/' + f)),
+    'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html', 'free.html', 'guides.html', 'privacy.html'].map(f => L + '/' + f)),
   LANGS.flatMap(L => (POSTS || []).map(x => L + '/t/' + postSlug(x) + '.html')),
   LANGS.flatMap(L => D.map(e => cardPath(e, L))));
 fs.writeFileSync(path.join(out, 'sitemap.xml'),

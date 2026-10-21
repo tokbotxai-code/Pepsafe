@@ -270,6 +270,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   Przycisk „Free checklist 🎁” na `/start/`. MailerLite założony (formularz „PepSafe signup”), ale embed nie dał się
   skonfigurować z telefonu — gdy właściciel dokończy na komputerze, podmień `action` formularza i zaimportuj adresy.
   W postach IG + FB można czasem dodać: „Free checklist: 5 mistakes that cost you muscle on GLP-1 — link in bio”.
+- **Strona `/en/guides.html` (i `/pl/`)**: podgląd 3 stron z każdego PDF (`guides/*.jpg`, ze znakiem PREVIEW), prawdziwe źródła, gwarancja zwrotu 14 dni (prośba na contact@ → zwrot przez Ko-fi/PayPal). Link w bio i ramki GLP-1 do niej prowadzą. **Nigdy nie dodajemy zmyślonych opinii** (zakaz w UK — DMCC Act, w USA — FTC); tylko prawdziwe, z imieniem i krajem, za zgodą kupującego.
 - Pakiet obu przewodników (ZIP: 2 PDF + kalkulator + tracker) — £11.99; link jeszcze nie podany przez właściciela. Gdy będzie: stała `BUNDLE_URL` w v4.js i przycisk na `/start/` oraz w ramce GLP-1.
 - Wpłaty: profil Ko-fi **https://ko-fi.com/pepsafeinfo** (`KOFI` w `tools/v4.js`: stopka każdej strony + przycisk na `/start/`). Płatności przez PayPal właściciela.
 - Autopilot: 2–3 razy w tygodniu (np. pon, śr, pt) w opisie jednego posta IG + FB o GLP-1 dopisz linijkę
