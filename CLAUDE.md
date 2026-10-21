@@ -5,6 +5,17 @@
 > TikTok dostaje tylko tematy przyrodnicze bez nazw substancji (max 2 dziennie do 25.10), a lektor i nazwy plików
 > są opisane niżej. Przy każdej rozbieżności obowiązuje ten plik, także w sprawie okien i języka.
 
+## Pracuj samodzielnie (decyzja właściciela, 21.10)
+- Właściciel nie chce pytań ani propozycji do zatwierdzenia. Wszystko, co wynika z tego pliku, **rób od razu sam**
+  i opisz w podsumowaniu, co zrobiłeś. Pytaj tylko, gdy coś jest naprawdę ryzykowne albo fakt jest niepewny.
+- **Przed końcem każdego uruchomienia sprawdź plan na dziś + 2 dni** i napraw sam:
+  - ten sam temat dwa razy jednego dnia (np. karuzela i rolka o tym samym minutę po sobie) → przenieś drugi do pustego okna;
+  - puste okno albo brak 7 kart danego dnia → uzupełnij (gotowe tematy w `tiktok/` z datą w przyszłości bierz najpierw,
+    przenosząc folder na właściwą datę przez `git mv`);
+  - post ze statusem ERROR → ponów na wolną godzinę;
+  - opis ucięty w pół zdania (kończy się np. „e.” albo „11.”) albo słowo z listy unikanych → popraw przed zaplanowaniem.
+- Zmiana czasu: od 25.10 (02:00) UK ma GMT, czyli offset `+00:00` zamiast `+01:00` w polu `date`.
+
 ## Kanały: Instagram + Facebook + TikTok (od 21.10.2026)
 - 21.10 właściciel połączył ponownie Instagram i dodał Facebook (stronę) w Metricool. Od teraz każda treść idzie na
   **trzy kanały**: Instagram, Facebook i TikTok.
