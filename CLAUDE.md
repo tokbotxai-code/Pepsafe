@@ -127,13 +127,12 @@
   (każde okno ma film przyrodniczy). Warunek każdego kroku: przez ostatnie 3 dni żaden film nie został usunięty
   ani zablokowany (status ERROR/usunięty w Metricool albo „Video removed”). Jeśli był — wróć do 2 dziennie na 3 dni
   i napisz to w podsumowaniu. Więcej niż 4 dziennie nie dajemy bez decyzji właściciela.
-- **Karuzela zdjęć na TikToka z muzyką od TikToka (od 21.10, decyzja właściciela; test 21.10 15:40 opublikowany OK):**
-  1 dziennie o **17:00 UK**, tylko TikTok. `node tools/fotki.js tiktok/<folder-przyrodniczy> RRRR-MM-DD-photo-<temat>-en`
-  (z `post.json` tematu, który już wyszedł; bez powtórki tego samego tematu jako karuzela), potem `node tools/sprawdz.js` (exit 0),
-  commit + push, post z `media` = wszystkie `slide-N.jpg`, `text` = `caption.txt`, `tiktokData.autoAddMusic: true`, `isAigc: false`.
-  Wersja krótka (decyzja właściciela 21.10): 2–3 zdjęcia (`... 3` jako trzeci argument), TikTok sam je przełącza z muzyką;
-  na zmianę: jednego dnia pełna karuzela, drugiego krótka.
-  Nie liczy się do limitu filmów dziennie, ale liczy się do limitu API (12/24 h).
+- **Krótki pokaz slajdów na TikToka (od 22.10, decyzja właściciela):** karuzela zdjęć przez API stała w miejscu, więc
+  wysyłamy **film**, który sam przełącza 2–3 strony (ok. 7 s, nasza spokojna muzyka). 1 dziennie o **17:00 UK**, tylko TikTok.
+  `node tools/fotki.js tiktok/<folder-przyrodniczy> RRRR-MM-DD-short-<temat>-en 3` → `pepsafe-<folder>-slajdy.mp4`
+  (z `post.json` tematu, który już wyszedł; bez powtórki tego samego tematu), potem `node tools/sprawdz.js` (exit 0),
+  commit + push, post TikTok z tym MP4, `text` = `caption.txt`, `isAigc: false`. To jest normalny post: liczy się do limitu
+  API (12/24 h) i do dziennej liczby filmów na TikToku (do 25.10 max 2 — wtedy krótki pokaz zastępuje jeden z filmów).
 - Najprostsze źródło dodatkowych filmów: przyrodnicze tematy, które już poszły na IG + FB (np. białko jajka, zwijanie
   łańcuchów, receptor), wrzucone na TikToka 3–5 dni później — po `node tools/sprawdz.js` (exit 0).
 

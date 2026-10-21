@@ -5,6 +5,7 @@
 // Output: tiktok/<new-folder-name>/slide-1.jpg ... + caption.txt
 const fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
+const { execFileSync } = require('child_process');
 
 const root = path.join(__dirname, '..');
 const [src, name, max] = process.argv.slice(2);
@@ -47,6 +48,16 @@ for(const p of P){x.globalAlpha=.12+.2*p.z/1.5;x.fillStyle=p.c;x.beginPath();x.a
     await pg.screenshot({ path: path.join(dir, `slide-${i + 1}.jpg`), type: 'jpeg', quality: 90 });
   }
   await br.close();
+  // the same slides as a video that advances by itself (2.2 s each, short crossfade, calm music)
+  const SEC = 2.2, F = 0.35, args = ['-v', 'error', '-y'];
+  for (let i = 0; i < n; i++) args.push('-loop', '1', '-t', String(SEC + F), '-i', path.join(dir, `slide-${i + 1}.jpg`));
+  args.push('-stream_loop', '-1', '-i', path.join(root, 'tiktok', 'music-calm.m4a'));
+  let fc = '', last = '[0:v]';
+  for (let i = 1; i < n; i++) { fc += `${last}[${i}:v]xfade=transition=slideleft:duration=${F}:offset=${(SEC * i).toFixed(2)}[v${i}];`; last = `[v${i}]`; }
+  const total = (SEC * n + F).toFixed(2);
+  fc += `${n > 1 ? last : '[0:v]'}format=yuv420p[v];[${n}:a]volume=0.5,atrim=0:${total},afade=t=out:st=${(total - 1).toFixed(2)}:d=1[a]`;
+  args.push('-filter_complex', fc, '-map', '[v]', '-map', '[a]', '-r', '30', '-c:v', 'libx264', '-crf', '20', '-c:a', 'aac', '-t', total, '-movflags', '+faststart', path.join(dir, `pepsafe-${name}-slajdy.mp4`));
+  execFileSync('ffmpeg', args);
   fs.writeFileSync(path.join(dir, 'caption.txt'), post.caption + '\n');
   fs.writeFileSync(path.join(dir, 'post.json'), JSON.stringify({ ...post, format: 'tiktok-photo', source: src }, null, 1));
   console.log('fotki:', path.relative(root, dir), n, 'slides');
