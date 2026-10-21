@@ -305,7 +305,7 @@ ${o.body}
       <a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a>
       <a class="soc" href="${KOFI}" rel="noopener" target="_blank">☕ <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
     </p>
-    <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span></p>
+    <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span> · <a href="${BASE}${L}/privacy.html">${L === 'en' ? 'Privacy' : 'Prywatność'}</a></p>
   </div>
 </footer>
 
@@ -549,6 +549,83 @@ function guideBox(e, en) {
   <p style="margin-top:14px"><b>${en ? 'Protein &amp; Muscle on GLP-1' : 'Białko i mięśnie przy GLP-1 (po angielsku)'}</b> — ${en ? 'keep your strength while you lose weight: protein calculator, 7-day meal plan, 20-minute home workouts, printable tracker.' : 'jak zachować siłę podczas chudnięcia: kalkulator białka, 7-dniowy plan posiłków, 20-minutowy trening w domu, dzienniczek.'}</p>
   <p><a class="btn ghost" href="${MUSCLE_URL}" rel="noopener">${en ? 'Get the muscle guide — £4.99' : 'Pobierz przewodnik — £4.99'}${ARROW}</a></p>
 </section>`;
+}
+
+// ── darmowa checklista za zapis na liste mailowa (FormSubmit -> contact@), polityka prywatnosci ──
+const CHECKLIST = 'free/glp1-muscle-checklist.pdf';
+function freePage(L) {
+  const en = L === 'en';
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <p class="kick reveal">${en ? 'Free checklist' : 'Darmowa checklista (po angielsku)'}</p>
+    <h1 class="display reveal">${en ? '5 mistakes that cost you muscle on GLP-1 medicines' : '5 błędów, przez które tracisz mięśnie na lekach GLP-1'}</h1>
+    <p class="lede reveal">${en ? 'One page, plain English, with a simple fix for each mistake. Join our free weekly email — short research summaries and safety updates on peptides and GLP-1 medicines — and get the checklist straight away.' : 'Jedna strona, prosty język, przy każdym błędzie prosta poprawka. Zapisz się na darmowy cotygodniowy e-mail — krótkie podsumowania badań i ostrzeżeń o peptydach i lekach GLP-1 — a checklistę dostaniesz od razu.'}</p>
+    <form class="sheet reveal" method="POST" action="https://formsubmit.co/${FORM_TO}">
+      <input type="hidden" name="_subject" value="PepSafe: newsletter signup (${L})">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="${SITE}${BASE}${L}/free-thanks.html">
+      <input type="hidden" name="list" value="newsletter">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="frow"><label for="nlEmail">${en ? 'Your email' : 'Twój e-mail'}</label><input type="email" id="nlEmail" name="email" autocomplete="email" maxlength="120" required></p>
+      <p class="check"><label><input type="checkbox" name="consent" value="yes" required> <span>${en ? 'Yes, send me the weekly PepSafe email. I can unsubscribe at any time. See our' : 'Tak, wysyłajcie mi cotygodniowy e-mail PepSafe. Mogę się wypisać w każdej chwili. Zobacz'} <a href="privacy.html">${en ? 'privacy policy' : 'politykę prywatności'}</a>.</span></label></p>
+      <p class="formfoot"><button class="btn big" type="submit">${en ? 'Send me the checklist' : 'Wyślij checklistę'}${ARROW}</button></p>
+    </form>
+    <p class="small ink2 reveal">${en ? 'No spam, no sales of medicines or peptides. One email a week at most.' : 'Bez spamu i bez sprzedaży leków czy peptydów. Najwyżej jeden e-mail w tygodniu.'}</p>
+  </div>
+</section>`;
+  return layout({ lang: L, here: 'free.html', twin: 'free.html', body,
+    title: (en ? 'Free checklist: 5 mistakes that cost you muscle on GLP-1' : 'Darmowa checklista: 5 błędów przy GLP-1') + ' | PepSafe',
+    desc: en ? 'Free one-page checklist: five habits that cost you muscle on semaglutide or tirzepatide, and the simple fix for each.' : 'Darmowa checklista: pięć nawyków, przez które tracisz mięśnie na lekach GLP-1, i prosta poprawka dla każdego.' });
+}
+function freeThanks(L) {
+  const en = L === 'en';
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <p class="kick reveal">${en ? 'You are in' : 'Gotowe'}</p>
+    <h1 class="display reveal">${en ? 'Thank you — here is your checklist' : 'Dziękujemy — oto Twoja checklista'}</h1>
+    <p class="actions reveal"><a class="btn big" href="${BASE}${CHECKLIST}" download>${en ? 'Download the checklist (PDF)' : 'Pobierz checklistę (PDF)'}${ARROW}</a></p>
+    <p class="lede reveal">${en ? 'Want the full plan? Protein targets, a 7-day meal plan, a 12-week home routine, a protein calculator and a printable tracker.' : 'Chcesz pełny plan? Cele białkowe, 7-dniowy plan posiłków, 12-tygodniowy trening w domu, kalkulator białka i dzienniczek.'}</p>
+    <p class="actions reveal"><a class="btn ghost big" href="${MUSCLE_URL}" rel="noopener">${en ? 'Protein &amp; Muscle on GLP-1 — £4.99' : 'Białko i mięśnie przy GLP-1 — £4.99'}${ARROW}</a></p>
+  </div>
+</section>`;
+  return layout({ lang: L, here: 'free-thanks.html', twin: 'free-thanks.html', body, noindex: true,
+    title: (en ? 'Your checklist' : 'Twoja checklista') + ' | PepSafe', desc: en ? 'Download your checklist.' : 'Pobierz checklistę.' });
+}
+function privacy(L) {
+  const en = L === 'en';
+  const S = en ? [
+    ['Who we are', 'PepSafe (pepsafe.info) is an independent educational website about peptides and GLP-1 medicines. Contact: ' + FORM_TO + '.'],
+    ['What we collect', 'If you join our email list, we collect your email address and the date of your consent. If you use the contact or side-effect form, we collect what you type into it. We do not ask for health records and you should not send them.'],
+    ['Why', 'To send you the weekly PepSafe email and the free checklist (legal basis: your consent), and to answer messages you send us.'],
+    ['Who processes it', 'Forms are delivered to our inbox by FormSubmit (formsubmit.co). Our email list may be hosted by an email service provider such as MailerLite. Purchases on Ko-fi are handled by Ko-fi and PayPal/Stripe under their own privacy policies; we receive only what they share with sellers.'],
+    ['Analytics', 'We count visits with Cloudflare Web Analytics, which does not use cookies and does not track you across websites.'],
+    ['How long', 'We keep your email until you unsubscribe or ask us to delete it. Messages are kept only as long as needed to reply.'],
+    ['Your rights', 'You can unsubscribe at any time with the link in every email, or ask us to see, correct or delete your data by writing to ' + FORM_TO + '. UK residents can complain to the Information Commissioner\'s Office (ico.org.uk).'],
+    ['No sales of data', 'We never sell or rent your data, and we do not sell medicines or peptides.']
+  ] : [
+    ['Kim jesteśmy', 'PepSafe (pepsafe.info) to niezależna strona edukacyjna o peptydach i lekach GLP-1. Kontakt: ' + FORM_TO + '.'],
+    ['Co zbieramy', 'Jeśli zapiszesz się na listę mailową — Twój adres e-mail i datę zgody. Jeśli użyjesz formularza kontaktowego lub zgłoszenia objawu — to, co w nim wpiszesz. Nie prosimy o dokumentację medyczną i nie wysyłaj jej.'],
+    ['Po co', 'Żeby wysyłać cotygodniowy e-mail PepSafe i darmową checklistę (podstawa: Twoja zgoda) oraz odpowiadać na wiadomości.'],
+    ['Kto przetwarza', 'Formularze trafiają do naszej skrzynki przez FormSubmit (formsubmit.co). Lista mailowa może być prowadzona w serwisie takim jak MailerLite. Zakupy na Ko-fi obsługują Ko-fi i PayPal/Stripe według własnych zasad prywatności.'],
+    ['Statystyki', 'Odwiedziny liczymy przez Cloudflare Web Analytics, bez ciasteczek i bez śledzenia między stronami.'],
+    ['Jak długo', 'Adres trzymamy, dopóki się nie wypiszesz albo nie poprosisz o usunięcie. Wiadomości tylko tak długo, jak trzeba, by odpowiedzieć.'],
+    ['Twoje prawa', 'Możesz wypisać się w każdej chwili linkiem w każdym e-mailu albo poprosić o wgląd, poprawienie lub usunięcie danych pod adresem ' + FORM_TO + '. Możesz też złożyć skargę do organu nadzorczego (w UK: ICO, w Polsce: UODO).'],
+    ['Bez sprzedaży danych', 'Nigdy nie sprzedajemy ani nie udostępniamy Twoich danych i nie sprzedajemy leków ani peptydów.']
+  ];
+  const body = `
+<section class="page-head paper"><div class="wrap narrow">
+  <p class="kick reveal">PepSafe</p>
+  <h1 class="display reveal">${en ? 'Privacy policy' : 'Polityka prywatności'}</h1>
+  ${S.map(([h, b]) => `<section class="blk reveal"><h2 class="kick">${esc(h)}</h2><p>${esc(b)}</p></section>`).join('\n  ')}
+  <p class="small ink2">${en ? 'Last updated: October 2026.' : 'Ostatnia aktualizacja: październik 2026.'}</p>
+</div></section>`;
+  return layout({ lang: L, here: 'privacy.html', twin: 'privacy.html', body,
+    title: (en ? 'Privacy policy' : 'Polityka prywatności') + ' | PepSafe', desc: en ? 'How PepSafe handles your data.' : 'Jak PepSafe przetwarza Twoje dane.' });
 }
 function card(e, L) {
   const en = L === 'en', t = W[L], tr = EN[e.n] || [];
@@ -1064,7 +1141,7 @@ for (const L of LANGS) {
   const pages = {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
     'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
-    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L),
+    'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L), 'free.html': freePage(L), 'free-thanks.html': freeThanks(L), 'privacy.html': privacy(L),
     'blog.html': blogIndex(L), 'glossary.html': glossary(L), '404.html': notFound(L)
   };
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
@@ -1084,6 +1161,7 @@ function start() {
   const e = D.find(x => x.n === DAY.n), dayName = nm(DAY.n, true);
   const links = [
     [`${BASE}${e ? cardPath(e, 'en') : 'en/index.html'}`, 'Peptide of the day', dayName],
+    [`${BASE}en/free.html`, 'Free checklist 🎁', '5 mistakes that cost you muscle on GLP-1'],
     [GUIDE_URL, 'The GLP-1 Safety Guide (PDF)', 'Side effects, risks, what to ask your doctor — £4.99'],
     [MUSCLE_URL, 'Protein & Muscle on GLP-1 (PDF + calculator)', 'Keep your strength while you lose weight — £4.99'],
     [`${BASE}en/catalog.html`, 'The catalog', `${D.length} peptides: status, research, sources`],
@@ -1130,7 +1208,7 @@ n += 5;
 const when = new Date().toISOString().slice(0, 10);
 const urls = [''].concat(
   LANGS.flatMap(L => ['index.html', 'catalog.html', 'dosing.html', 'groups.html', 'compare.html',
-    'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html'].map(f => L + '/' + f)),
+    'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html', 'free.html', 'privacy.html'].map(f => L + '/' + f)),
   LANGS.flatMap(L => (POSTS || []).map(x => L + '/t/' + postSlug(x) + '.html')),
   LANGS.flatMap(L => D.map(e => cardPath(e, L))));
 fs.writeFileSync(path.join(out, 'sitemap.xml'),
