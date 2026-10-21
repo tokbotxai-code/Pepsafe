@@ -94,6 +94,12 @@
   `pip install -q kokoro-onnx soundfile` (model ~350 MB pobiera się sam do `~/.cache/kokoro`). Głos domyślny `af_heart`
   (US), brytyjski `bf_emma` przez `KOKORO_VOICE=bf_emma`. Gdy ElevenLabs zwróci błąd albo nie ma klucza, `make.js`
   sam przełącza się na Kokoro. Plik wynikowy jak zawsze `pepsafe-<folder>-lektor.mp4`.
+- **Stare filmy bez głosu (decyzja właściciela, 21.10: każdy film ma mieć lektora, także te, które już wyszły).**
+  Ponownie opublikowane z głosem: COA (21.10), GHK-Cu (23.10), „What is a peptide” i TB-500 vs BPC-157 (26.10).
+  Zostało 9 folderów z 18–19.10 (`bpc-157`, `cjc-ipa`, `melanotan`, `mt1-mt2-3diff`, `mt1-vs-mt2`, `semaglutyd`,
+  `tb500`, `wada` i podobne `-en`): mają na slajdach słowa z listy unikanych (injection, dose, banned, buy, shops, vials).
+  Od 27.10 bierz **1 dziennie**: przepisz slajdy bez tych słów (4–5 krótkich slajdów), opis wg obecnych zasad,
+  render z `"vo": "kokoro"`, publikacja tylko IG + FB w wolnym slocie. Na TikToka nigdy (nazwy substancji).
 - Publikacja zostaje automatyczna (`autoPublish: true`) na obu kanałach.
 - Muzyka z katalogu TikToka jest niemożliwa przez API (da się tylko montując w aplikacji). Katalog audio
   Instagrama zwraca 403 dla tego konta i **temat jest zamknięty**: wymagałby konta Business połączonego
