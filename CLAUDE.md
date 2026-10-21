@@ -263,6 +263,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£4.99).
   Plik PDF NIE trafia do repo (repo jest publiczne). `GUIDE_URL` w `tools/v4.js` daje ramkę „Get the PDF” na kartach leków GLP-1/GIP
   i przycisk na `/start/`.
+- Wpłaty: profil Ko-fi **https://ko-fi.com/pepsafeinfo** (`KOFI` w `tools/v4.js`: stopka każdej strony + przycisk na `/start/`). Płatności przez PayPal właściciela.
 - Autopilot: 2–3 razy w tygodniu (np. pon, śr, pt) w opisie jednego posta IG + FB o GLP-1 dopisz linijkę
   „📘 Our free-to-read catalog is at pepsafe.info — and the full GLP-1 Safety Guide (PDF) is linked in bio.” Nigdy na TikToku.
   Nie więcej niż 1 wzmianka dziennie, bez nachalnej sprzedaży.

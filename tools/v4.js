@@ -71,6 +71,7 @@ const CF_BEACON = '68889a9fe6604022bd3fa7d786e5d79f';  // licznik odwiedzin (Clo
 const FORM_TO = 'contact@pepsafe.info';
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
+const KOFI = 'https://ko-fi.com/pepsafeinfo';
 const ICO_TT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg>';
 const ICO_IG = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>';
 const ORG = JSON.stringify({
@@ -302,6 +303,7 @@ ${o.body}
       <a class="soc" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}<span>TikTok</span></a>
       <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>Instagram</span></a>
       <a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a>
+      <a class="soc" href="${KOFI}" rel="noopener" target="_blank">☕ <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
     </p>
     <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span></p>
   </div>
@@ -1084,6 +1086,7 @@ function start() {
     [`${BASE}en/compare.html`, 'Compare two peptides', 'Side by side, in one screen'],
     [`${BASE}en/symptoms.html`, 'Symptoms and safety', 'What to watch for and where to report it'],
     [`${BASE}en/glossary.html`, 'Glossary', 'Science words in plain English'],
+    [KOFI, 'Support PepSafe ☕', 'No ads, no sales — a coffee keeps it free'],
     [`${BASE}en/about.html#contact`, 'Ask us a question', 'We answer the best ones in a Q&A'],
   ];
   const body = `
