@@ -1211,36 +1211,14 @@ for (const L of LANGS) {
 }
 
 
-// strona „link in bio”: jedna tresc pod kilkoma adresami (/start/ig.html, /start/tt.html, /start/fb.html),
-// zeby licznik odwiedzin pokazal, ktora platforma przysyla ludzi; noindex, canonical na /start/
+// „link in bio” (/start/ig.html, /start/tt.html, /start/fb.html): pelna strona glowna pod osobnymi adresami,
+// zeby licznik odwiedzin pokazal, ktora platforma przysyla ludzi; canonical na korzen, noindex
 function start() {
-  const e = D.find(x => x.n === DAY.n), dayName = nm(DAY.n, true);
-  const links = [
-    [`${BASE}${e ? cardPath(e, 'en') : 'en/index.html'}`, 'Peptide of the day', dayName],
-    [`${BASE}en/free.html`, 'Free checklist 🎁', '5 mistakes that cost you muscle on GLP-1'],
-    [`${BASE}en/guides.html`, 'Our GLP-1 guides (PDF) 📘', 'Safety £5.99 · Protein & Muscle £9.99 — see inside'],
-    [`${BASE}en/catalog.html`, 'The catalog', `${D.length} peptides: status, research, sources`],
-    [`${BASE}en/compare.html`, 'Compare two peptides', 'Side by side, in one screen'],
-    [`${BASE}en/symptoms.html`, 'Symptoms and safety', 'What to watch for and where to report it'],
-    [`${BASE}en/glossary.html`, 'Glossary', 'Science words in plain English'],
-    [KOFI, 'Support PepSafe ☕', 'No ads, no sales — a coffee keeps it free'],
-    [`${BASE}en/about.html#contact`, 'Ask us a question', 'We answer the best ones in a Q&A'],
-  ];
-  const body = `
-<section class="page-head paper">
-  <canvas id="chains" aria-hidden="true"></canvas>
-  <div class="wrap narrow">
-    <p class="kick reveal">PepSafe</p>
-    <h1 class="display reveal">Peptide facts, no hype.</h1>
-    <p class="lede reveal">Status, research and real sources for every entry. Free, no sign-up.</p>
-    <div class="reveal" style="display:flex;flex-direction:column;gap:14px;margin-top:28px">
-${links.map(([h, a, b]) => `      <a class="btn big" style="display:flex;justify-content:space-between;align-items:center;text-align:left" href="${h}"><span><b>${esc(a)}</b><br><span class="small">${esc(b)}</span></span>${ARROW}</a>`).join('\n')}
-    </div>
-    <p class="small ink2 reveal" style="margin-top:24px">Educational content, not medical advice.</p>
-  </div>
-</section>`;
-  return retarget(layout({ lang: 'en', here: 'index.html', twin: 'index.html', body, noindex: true,
-    title: 'PepSafe — start here', desc: 'Peptide facts, no hype: catalog, peptide of the day, safety.' }), 'start/');
+  return enLinks(retarget(home('en'), '')).replace('<head>', '<head>\n<meta name="robots" content="noindex">');
+}
+// strona glowna poza /en/ (korzen, /start/): wzgledne odnosniki typu catalog.html prowadza do /en/
+function enLinks(html) {
+  return html.replace(/href="([a-z0-9-]+\.html(?:#[^"]*)?)"/g, `href="${BASE}en/$1"`);
 }
 
 // strony pod starymi adresami, zeby zaden zaindeksowany odnosnik nie zgasl:
@@ -1250,7 +1228,7 @@ function retarget(html, canon) {
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}${BASE}${canon}">`)
     .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${SITE}${BASE}${canon}">`);
 }
-fs.writeFileSync(path.join(out, 'index.html'), retarget(home('en'), ''));
+fs.writeFileSync(path.join(out, 'index.html'), enLinks(retarget(home('en'), '')));
 fs.writeFileSync(path.join(out, '404.html'), notFound('en'));
 fs.mkdirSync(path.join(out, 'start'), { recursive: true });
 for (const f of ['index.html', 'ig.html', 'tt.html', 'fb.html']) fs.writeFileSync(path.join(out, 'start', f), start());   // GitHub Pages serwuje to przy kazdym 404
