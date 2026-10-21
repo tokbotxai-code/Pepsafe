@@ -237,6 +237,8 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - **Codziennie rano (decyzja właściciela 21.10):** na początku porannego podsumowania autopilot daje krótki blok „Wczoraj”:
   odwiedziny strony (`node tools/odwiedziny.js 1`: odsłony, wizyty, top 3 adresy, skąd), na IG/FB/TikToku wyświetlenia
   i reakcje z wczoraj (Metricool analytics) oraz najlepszy post dnia. 5–6 linijek, bez wykresów; liczby tylko z danych.
+  Zawsze osobna linijka „Link w bio”: wejścia na `/start/ig.html`, `/start/tt.html`, `/start/fb.html` z wczoraj (z `odwiedziny.js 1`),
+  np. „Link w bio: IG 4 · TikTok 0 · FB 1”. Gdy któryś ma 0 kilka dni z rzędu, napisz, żeby sprawdzić link w bio.
 
 ## Link w bio (od 21.10)
 - `tools/v4.js` buduje stronę **pepsafe.info/start/** (przyciski: peptyd dnia, katalog, porównanie, objawy, słownik, pytanie)
