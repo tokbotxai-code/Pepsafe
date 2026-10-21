@@ -534,6 +534,17 @@ function catalog(L) {
 }
 
 // ── substance card ────────────────────────────────────────────────────────────
+
+// przewodnik PDF (sprzedaz przez Ko-fi): ramka na kartach lekow z rodziny GLP-1
+const GUIDE_URL = 'https://ko-fi.com/s/6d19973042';
+function guideBox(e, en) {
+  if (!/GLP-1|GIP/.test((EN[e.n] || [])[1] || '')) return '';
+  return `<section class="blk reveal" style="border:2px solid #3CCFA9;border-radius:14px;padding:18px 20px">
+  <h2 class="kick">${en ? 'The GLP-1 Safety Guide' : 'Przewodnik bezpieczeństwa GLP-1 (po angielsku)'}</h2>
+  <p>${en ? '23 pages in plain English: side effects and how often they happen, label warnings, surgery, pregnancy, protein and muscle, stopping, spotting fakes — with sources from MHRA, EMA and FDA.' : '23 strony prostym językiem: skutki uboczne i ich częstość, ostrzeżenia z etykiet, zabiegi, ciąża, białko i mięśnie, odstawienie, podróbki — ze źródłami MHRA, EMA i FDA.'}</p>
+  <p><a class="btn" href="${GUIDE_URL}" rel="noopener">${en ? 'Get the PDF — £4.99' : 'Pobierz PDF — £4.99'}${ARROW}</a></p>
+</section>`;
+}
 function card(e, L) {
   const en = L === 'en', t = W[L], tr = EN[e.n] || [];
   const name = nm(e.n, en);
@@ -569,7 +580,7 @@ function card(e, L) {
       </aside>` : ''}
     </div>
 
-    ${sec(t.what, d)}${sec(t.how, m)}${sec(t.use, u)}${sec(t.ev, ev)}
+    ${sec(t.what, d)}${sec(t.how, m)}${sec(t.use, u)}${sec(t.ev, ev)}${guideBox(e, en)}
     ${w ? `<section class="blk note reveal"><h2 class="kick">${esc(t.care)}</h2><p>${esc(w)}</p></section>` : ''}
     ${wa ? `<section class="blk reveal"><h2 class="kick">${esc(t.wada)}</h2><p>${en
       ? esc(t.listedWada + ' ' + wa[0] + (wa[1] === 'always' ? t.always : '') + '.')
@@ -1068,6 +1079,7 @@ function start() {
   const e = D.find(x => x.n === DAY.n), dayName = nm(DAY.n, true);
   const links = [
     [`${BASE}${e ? cardPath(e, 'en') : 'en/index.html'}`, 'Peptide of the day', dayName],
+    [GUIDE_URL, 'The GLP-1 Safety Guide (PDF)', 'Side effects, risks, what to ask your doctor — £4.99'],
     [`${BASE}en/catalog.html`, 'The catalog', `${D.length} peptides: status, research, sources`],
     [`${BASE}en/compare.html`, 'Compare two peptides', 'Side by side, in one screen'],
     [`${BASE}en/symptoms.html`, 'Symptoms and safety', 'What to watch for and where to report it'],
