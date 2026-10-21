@@ -550,9 +550,9 @@ function guideBox(e, en) {
   return `<section class="blk reveal" style="border:2px solid #3CCFA9;border-radius:14px;padding:18px 20px">
   <h2 class="kick">${en ? 'The GLP-1 Safety Guide' : 'Przewodnik bezpieczeństwa GLP-1 (po angielsku)'}</h2>
   <p>${en ? '23 pages in plain English: side effects and how often they happen, label warnings, surgery, pregnancy, protein and muscle, stopping, spotting fakes — with sources from MHRA, EMA and FDA.' : '23 strony prostym językiem: skutki uboczne i ich częstość, ostrzeżenia z etykiet, zabiegi, ciąża, białko i mięśnie, odstawienie, podróbki — ze źródłami MHRA, EMA i FDA.'}</p>
-  <p><a class="btn" href="${GUIDE_URL}" rel="noopener">${en ? 'Get the PDF — £9.99' : 'Pobierz PDF — £9.99'}${ARROW}</a></p>
+  <p><a class="btn" href="${GUIDE_URL}" rel="noopener">${en ? 'Get the PDF — £5.99' : 'Pobierz PDF — £5.99'}${ARROW}</a></p>
   <p style="margin-top:14px"><b>${en ? 'Protein &amp; Muscle on GLP-1' : 'Białko i mięśnie przy GLP-1 (po angielsku)'}</b> — ${en ? 'keep your strength while you lose weight: protein calculator, 7-day meal plan, 20-minute home workouts, printable tracker.' : 'jak zachować siłę podczas chudnięcia: kalkulator białka, 7-dniowy plan posiłków, 20-minutowy trening w domu, dzienniczek.'}</p>
-  <p><a class="btn ghost" href="${MUSCLE_URL}" rel="noopener">${en ? 'Get the muscle guide — £5.99' : 'Pobierz przewodnik — £5.99'}${ARROW}</a></p>
+  <p><a class="btn ghost" href="${MUSCLE_URL}" rel="noopener">${en ? 'Get the muscle guide — £9.99' : 'Pobierz przewodnik — £9.99'}${ARROW}</a></p>
 </section>`;
 }
 
@@ -596,7 +596,7 @@ function freeThanks(L) {
     <h1 class="display reveal">${en ? 'Thank you — here is your checklist' : 'Dziękujemy — oto Twoja checklista'}</h1>
     <p class="actions reveal"><a class="btn big" href="${BASE}${CHECKLIST}" download>${en ? 'Download the checklist (PDF)' : 'Pobierz checklistę (PDF)'}${ARROW}</a></p>
     <p class="lede reveal">${en ? 'Want the full plan? Protein targets, a 7-day meal plan, a 12-week home routine, a protein calculator and a printable tracker.' : 'Chcesz pełny plan? Cele białkowe, 7-dniowy plan posiłków, 12-tygodniowy trening w domu, kalkulator białka i dzienniczek.'}</p>
-    <p class="actions reveal"><a class="btn ghost big" href="${MUSCLE_URL}" rel="noopener">${en ? 'Protein &amp; Muscle on GLP-1 — £5.99' : 'Białko i mięśnie przy GLP-1 — £5.99'}${ARROW}</a></p>
+    <p class="actions reveal"><a class="btn ghost big" href="${MUSCLE_URL}" rel="noopener">${en ? 'Protein &amp; Muscle on GLP-1 — £9.99' : 'Białko i mięśnie przy GLP-1 — £9.99'}${ARROW}</a></p>
   </div>
 </section>`;
   return layout({ lang: L, here: 'free-thanks.html', twin: 'free-thanks.html', body, noindex: true,
@@ -1169,8 +1169,8 @@ function start() {
   const links = [
     [`${BASE}${e ? cardPath(e, 'en') : 'en/index.html'}`, 'Peptide of the day', dayName],
     [`${BASE}en/free.html`, 'Free checklist 🎁', '5 mistakes that cost you muscle on GLP-1'],
-    [GUIDE_URL, 'The GLP-1 Safety Guide (PDF)', 'Side effects, risks, what to ask your doctor — £9.99'],
-    [MUSCLE_URL, 'Protein & Muscle on GLP-1 (PDF + calculator)', 'Keep your strength while you lose weight — £5.99'],
+    [GUIDE_URL, 'The GLP-1 Safety Guide (PDF)', 'Side effects, risks, what to ask your doctor — £5.99'],
+    [MUSCLE_URL, 'Protein & Muscle on GLP-1 (PDF + calculator)', 'Keep your strength while you lose weight — £9.99'],
     [`${BASE}en/catalog.html`, 'The catalog', `${D.length} peptides: status, research, sources`],
     [`${BASE}en/compare.html`, 'Compare two peptides', 'Side by side, in one screen'],
     [`${BASE}en/symptoms.html`, 'Symptoms and safety', 'What to watch for and where to report it'],

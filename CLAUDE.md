@@ -260,10 +260,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   Facebook → `/start/fb.html`. Raporty liczą wejścia na te adresy jako „z Instagrama/TikToka/Facebooka”.
 
 ## Zarabianie (od 21.10)
-- Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£9.99).
+- Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£5.99).
   Plik PDF NIE trafia do repo (repo jest publiczne). `GUIDE_URL` w `tools/v4.js` daje ramkę „Get the PDF” na kartach leków GLP-1/GIP
   i przycisk na `/start/`.
-- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£5.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (dalej max 1 wzmianka dziennie, nigdy TikTok).
+- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£9.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (dalej max 1 wzmianka dziennie, nigdy TikTok).
 - **Lista mailowa (od 21.10):** `/en/free.html` (i `/pl/`) — zapis e-mail + zgoda → FormSubmit na contact@pepsafe.info
   (temat „PepSafe: newsletter signup”), potem `/en/free-thanks.html` z darmową checklistą `free/glp1-muscle-checklist.pdf`
   i poleceniem przewodnika o mięśniach. Polityka prywatności: `/en/privacy.html`, `/pl/privacy.html` (link w stopce).
