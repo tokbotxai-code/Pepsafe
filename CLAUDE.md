@@ -48,6 +48,13 @@
 - **Żadnych polskich postów** (decyzja właściciela, 21.10): kierujemy się na rynek **UK i USA**. Każdy polski post,
   który wisi w planie (niezależnie od daty utworzenia), usuń z planu (patrz zasada o szkicach wyżej); nie tworzymy nowych wersji PL.
 
+## Rolka z nazwami (IG + FB, od 22.10, pomysł właściciela)
+- Codziennie **1 rolka** w formacie: ruchome tło z cząsteczkami, duża nazwa, jedna linijka „do czego badano”, status, lektor US.
+  Robi ją skrypt: `node tools/reel.js RRRR-MM-DD-reel-<temat>-en "<krótkie intro>" "Nazwa z katalogu" ...` (4–6 nazw
+  z jednej grupy, np. GLP-1, hormon wzrostu, skóra, „research peptides”; nazwy dokładnie jak w `E("...")`).
+  Opis i hashtagi z nazwami robi sam (`caption.txt`). Slot **12:30 UK**, tylko IG (`REEL`) + FB (`REEL`). **Nigdy TikTok.**
+  Bez powtórki tej samej substancji w rolkach częściej niż raz na 7 dni.
+
 ## Harmonogram (codziennie, czas UK)
 - 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
 - Każde okno: 1 temat, tylko wersja EN (4 posty dziennie).
