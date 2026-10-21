@@ -110,7 +110,7 @@
     <p class="kick reveal">Darmowa checklista (po angielsku)</p>
     <h1 class="display reveal">5 błędów, przez które tracisz mięśnie na lekach GLP-1</h1>
     <p class="lede reveal">Jedna strona, prosty język, przy każdym błędzie prosta poprawka. Zapisz się na darmowy cotygodniowy e-mail — krótkie podsumowania badań i ostrzeżeń o peptydach i lekach GLP-1 — a checklistę dostaniesz od razu.</p>
-    <form class="sheet reveal" method="POST" action="https://formsubmit.co/contact@pepsafe.info">
+    <form class="sheet reveal" id="nlForm" method="POST" action="https://formsubmit.co/contact@pepsafe.info" data-next="/pl/free-thanks.html">
       <input type="hidden" name="_subject" value="PepSafe: newsletter signup (pl)">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -119,7 +119,8 @@
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="frow"><label for="nlEmail">Twój e-mail</label><input type="email" id="nlEmail" name="email" autocomplete="email" maxlength="120" required></p>
       <p class="check"><label><input type="checkbox" name="consent" value="yes" required> <span>Tak, wysyłajcie mi cotygodniowy e-mail PepSafe. Mogę się wypisać w każdej chwili. Zobacz <a href="privacy.html">politykę prywatności</a>.</span></label></p>
-      <p class="formfoot"><button class="btn big" type="submit">Wyślij checklistę<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p>
+      <p class="formfoot"><button class="btn big" type="submit" data-busy="Wysyłanie…">Wyślij checklistę<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p>
+      <p class="formmsg" id="nlOut" role="status" hidden></p>
     </form>
     <p class="small ink2 reveal">Bez spamu i bez sprzedaży leków czy peptydów. Najwyżej jeden e-mail w tygodniu.</p>
   </div>

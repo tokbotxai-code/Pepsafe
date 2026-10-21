@@ -110,7 +110,7 @@
     <p class="kick reveal">Free checklist</p>
     <h1 class="display reveal">5 mistakes that cost you muscle on GLP-1 medicines</h1>
     <p class="lede reveal">One page, plain English, with a simple fix for each mistake. Join our free weekly email — short research summaries and safety updates on peptides and GLP-1 medicines — and get the checklist straight away.</p>
-    <form class="sheet reveal" method="POST" action="https://formsubmit.co/contact@pepsafe.info">
+    <form class="sheet reveal" id="nlForm" method="POST" action="https://formsubmit.co/contact@pepsafe.info" data-next="/en/free-thanks.html">
       <input type="hidden" name="_subject" value="PepSafe: newsletter signup (en)">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -119,7 +119,8 @@
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="frow"><label for="nlEmail">Your email</label><input type="email" id="nlEmail" name="email" autocomplete="email" maxlength="120" required></p>
       <p class="check"><label><input type="checkbox" name="consent" value="yes" required> <span>Yes, send me the weekly PepSafe email. I can unsubscribe at any time. See our <a href="privacy.html">privacy policy</a>.</span></label></p>
-      <p class="formfoot"><button class="btn big" type="submit">Send me the checklist<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p>
+      <p class="formfoot"><button class="btn big" type="submit" data-busy="Sending…">Send me the checklist<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p>
+      <p class="formmsg" id="nlOut" role="status" hidden></p>
     </form>
     <p class="small ink2 reveal">No spam, no sales of medicines or peptides. One email a week at most.</p>
   </div>

@@ -565,7 +565,7 @@ function freePage(L) {
     <p class="kick reveal">${en ? 'Free checklist' : 'Darmowa checklista (po angielsku)'}</p>
     <h1 class="display reveal">${en ? '5 mistakes that cost you muscle on GLP-1 medicines' : '5 błędów, przez które tracisz mięśnie na lekach GLP-1'}</h1>
     <p class="lede reveal">${en ? 'One page, plain English, with a simple fix for each mistake. Join our free weekly email — short research summaries and safety updates on peptides and GLP-1 medicines — and get the checklist straight away.' : 'Jedna strona, prosty język, przy każdym błędzie prosta poprawka. Zapisz się na darmowy cotygodniowy e-mail — krótkie podsumowania badań i ostrzeżeń o peptydach i lekach GLP-1 — a checklistę dostaniesz od razu.'}</p>
-    <form class="sheet reveal" method="POST" action="https://formsubmit.co/${FORM_TO}">
+    <form class="sheet reveal" id="nlForm" method="POST" action="https://formsubmit.co/${FORM_TO}" data-next="${BASE}${L}/free-thanks.html">
       <input type="hidden" name="_subject" value="PepSafe: newsletter signup (${L})">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -574,7 +574,8 @@ function freePage(L) {
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="frow"><label for="nlEmail">${en ? 'Your email' : 'Twój e-mail'}</label><input type="email" id="nlEmail" name="email" autocomplete="email" maxlength="120" required></p>
       <p class="check"><label><input type="checkbox" name="consent" value="yes" required> <span>${en ? 'Yes, send me the weekly PepSafe email. I can unsubscribe at any time. See our' : 'Tak, wysyłajcie mi cotygodniowy e-mail PepSafe. Mogę się wypisać w każdej chwili. Zobacz'} <a href="privacy.html">${en ? 'privacy policy' : 'politykę prywatności'}</a>.</span></label></p>
-      <p class="formfoot"><button class="btn big" type="submit">${en ? 'Send me the checklist' : 'Wyślij checklistę'}${ARROW}</button></p>
+      <p class="formfoot"><button class="btn big" type="submit" data-busy="${en ? 'Sending…' : 'Wysyłanie…'}">${en ? 'Send me the checklist' : 'Wyślij checklistę'}${ARROW}</button></p>
+      <p class="formmsg" id="nlOut" role="status" hidden></p>
     </form>
     <p class="small ink2 reveal">${en ? 'No spam, no sales of medicines or peptides. One email a week at most.' : 'Bez spamu i bez sprzedaży leków czy peptydów. Najwyżej jeden e-mail w tygodniu.'}</p>
   </div>

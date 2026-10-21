@@ -492,6 +492,28 @@
     }
   })();
 
+  /* ── zapis na liste: wysylka w tle (FormSubmit ajax), potem strona z checklista ─ */
+  (function () {
+    var f = document.getElementById('nlForm');
+    if (!f || !window.fetch) return;
+    var out = document.getElementById('nlOut'), pl = html.lang === 'pl';
+    f.addEventListener('submit', function (e) {
+      var mail = f.email.value.trim(), cons = f.consent.checked;
+      if (!/^\S+@\S+\.\S+$/.test(mail) || !cons) {
+        e.preventDefault(); out.hidden = false; out.classList.add('bad');
+        out.textContent = pl ? 'Wpisz poprawny e-mail i zaznacz zgodę.' : 'Enter a valid email and tick the consent box.';
+        return;
+      }
+      e.preventDefault();
+      var b = f.querySelector('[type="submit"]'); if (b) { b.disabled = true; b.textContent = b.dataset.busy; }
+      out.hidden = false; out.classList.remove('bad'); out.textContent = pl ? 'Wysyłanie…' : 'Sending…';
+      fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(f)
+      }).then(function () { location.href = f.dataset.next; })
+        .catch(function () { f.submit(); });
+    });
+  })();
+
   /* ── strona z podziekowaniem: inny tekst po zgloszeniu objawu ───── */
   (function () {
     var m = document.getElementById('thxMsg');
