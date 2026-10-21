@@ -118,7 +118,8 @@
 - Publikacja zostaje automatyczna (`autoPublish: true`) na obu kanałach.
 - Muzyka z katalogu TikToka jest niemożliwa przez API (da się tylko montując w aplikacji). Katalog audio
   Instagrama zwraca 403 dla tego konta i **temat jest zamknięty**: wymagałby konta Business połączonego
-  z Facebook Page, a właściciel nie buduje obecności na Facebooku. Nie wracamy do tego.
+  z Facebook Page. 21.10 wieczorem, po przełączeniu konta na Business przez właściciela, test nadal dał
+  „Authorization Error” z katalogu audio Metricool. Nie próbuj ponownie, dopóki właściciel nie napisze, że podłączył IG w Metricool przez Facebooka.
 - Slajdy piszemy krótko: 1 zdanie na slajd, 4–5 slajdów, cały film 12–15 s. Lektor wydłuża slajd do długości
   zdania, więc długie akapity dają filmy 45 s+ i zabijają retencję (średni czas obejrzenia to teraz 1–3 s).
 - Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram i Facebook zostają w pełnym harmonogramie;
