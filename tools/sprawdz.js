@@ -13,14 +13,18 @@ vm.runInContext(lines.slice(a, b).join('\n').replace(/^var D=\[\].*$/m, '').repl
 const names = new Set();
 for (const e of s.D) { names.add(e.n); (e.aa || '').split(/,\s*/).filter(Boolean).forEach(x => names.add(x)); }
 for (const t of Object.values(s.EN || {})) if (t[0]) names.add(t[0]);
-const BANNED = ['🚫', '💉', 'banned', 'prohibited', 'zakazan', 'dose', 'dawk', 'buy', 'kup', 'vial', 'fiolk'];
+const BANNED = ['🚫', '💉', 'banned', 'prohibited', 'zakazan', 'dose', 'dawk', 'buy', 'kup', 'vial', 'fiolk',
+  'inject', 'wstrzyk', 'syringe', 'strzykaw', 'purchase', 'before you', 'sklep', 'protocol', 'protokó', 'protokol'];
+// whole words only: 'shop' must not catch 'workshop'; 'cycle' is left out on purpose ('cell cycle' is biology)
+const BANNED_RE = [/\bshops?\b/i, /\bstack(s|ed|ing)?\b/i, /#(biohacking|fitness|gym|bodybuilding)\b/i];
 
 let bad = 0;
 for (const dir of process.argv.slice(2)) {
   const txt = fs.readFileSync(path.join(root, dir, 'post.json'), 'utf8');
   const hits = [...names].filter(n => n.length > 3 &&
     new RegExp('\\b' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(txt));
-  const words = BANNED.filter(w => txt.toLowerCase().includes(w.toLowerCase()));
+  const words = BANNED.filter(w => txt.toLowerCase().includes(w.toLowerCase()))
+    .concat(BANNED_RE.filter(r => r.test(txt)).map(r => (txt.match(r) || [''])[0]));
   const problems = [...hits.map(h => 'nazwa: ' + h), ...words.map(w => 'słowo: ' + w)];
   console.log((problems.length ? 'UWAGA  ' : 'czysty ') + path.basename(dir) +
     (problems.length ? ' -> ' + problems.join(', ') : ''));

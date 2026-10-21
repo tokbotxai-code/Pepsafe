@@ -96,7 +96,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 
 ## Limit TikToka (API)
 - TikTok przepuszcza przez Metricool ok. 15 postów w przesuwnym oknie 24 h. Powyżej: błąd „too many posts via OpenAPI”.
-- Automatycznie (autoPublish true) wysyłamy na TikToka maks. 12 postów w ciągu 24 h. Harmonogram 8/dzień się mieści;
+- Automatycznie (autoPublish true) wysyłamy na TikToka maks. 12 postów w ciągu 24 h. Harmonogram 4/dzień (plus filmy do kart z IG) się mieści;
   dodatkowe posty (poprawki, powtórki) planuj na TikToka z autoPublish false, czyli do ręcznej publikacji z telefonu
   (Metricool wysyła powiadomienie), albo przesuń na kolejny dzień. Instagram może iść automatycznie.
 
@@ -117,7 +117,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Do rutynowej dniówki wystarczy tańszy model; Opus tylko do zmian w kodzie strony i analiz.
 
 ## Odwiedziny na stronie (Cloudflare Web Analytics)
-- Beacon wstawia **generator**: stała `CF_BEACON` w `tools/v4.js` trafia do każdej z 428 stron
+- Beacon wstawia **generator**: stała `CF_BEACON` w `tools/v4.js` trafia do każdej generowanej strony (21.10: 452)
   (token `68889a9fe6604022bd3fa7d786e5d79f`). Po każdej przebudowie sprawdź `grep -c cf-beacon index.html`.
 - **Uwaga:** przy przenoszeniu strony na v4 beacon został w starym `index.html` i przez kilka godzin
   20.10 nie zbierał nic. Przy każdej zmianie szablonu upewnij się, że skrypt licznika nadal tam jest.
@@ -147,7 +147,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Style i skrypt strony są w `src/site.css` i `src/ruch.js`; generator kopiuje je do `assets/`.
   Nie edytuj `assets/`, `en/`, `pl/`, `p/` ani `index.html` — są generowane i zostaną nadpisane.
 - `tools/og.js` odświeża obrazki udostępniania (`src/og-en.png`, `src/og-pl.png`) — tylko gdy zmienia się hasło strony.
-- `tools/strony.js` i `tools/jezyki.js` są **nieużywane** (zastąpił je `v4.js`); zostają jako historia.
+- `tools/strony.js` i `tools/jezyki.js` zostały usunięte (zastąpił je `v4.js`). Nie uruchamiaj ich i nie odtwarzaj.
 - Podgląd przed publikacją: `PEP_OUT=/tmp/x PEP_BASE=/ node tools/v4.js`, potem `python3 -m http.server` w tym katalogu.
   Przy `PEP_BASE` innym niż `/` strony dostają `noindex`.
 - **Żaden z 252 adresów zaindeksowanych przed przebudową nie może zgasnąć.** Po każdej zmianie struktury
@@ -198,17 +198,12 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   Nazwy zostają na stronie i na Instagramie.
 - Hashtagi na TikToka: `#biology #science #chemistry #learnontiktok #education #pepsafe`.
 - **Przed zaplanowaniem czegokolwiek na TikToka uruchom `node tools/sprawdz.js tiktok/<folder>`.**
-  Skrypt porównuje `post.json` z całym katalogiem 123 substancji i z listą zakazanych słów i emotek.
+  Skrypt porównuje `post.json` z całym katalogiem substancji (czytanym na bieżąco z `dane.html`, 21.10: 203) i z listą zakazanych słów i emotek.
   Kod wyjścia 1 = nie planuj, popraw. Sprawdza opis, slajdy, lektora i hashtagi naraz.
 - Instagram prowadzi dalej pełną treść z nazwami — tam ograniczeń nie ma.
 - Wracamy do tematów z nazwami na TikToku dopiero, gdy ograniczenia znikną i kilka filmów przyrodniczych
   z rzędu wyjdzie bez kary.
 
-## Osobne adresy językowe (historia, zrobione inaczej)
-- `node tools/jezyki.js` buduje `/pl/index.html` i `/en/index.html` — kopie strony głównej z zablokowanym
-  językiem, własnym `canonical`, tytułem, opisem i wzajemnym `hreflang`. Korzeń `/` zostaje jako `x-default`
-  z automatycznym wykrywaniem języka.
-- Powód: `/` i `/?lang=en` zwracały ten sam dokument, więc wersja angielska nie istniała dla wyszukiwarek.
-- Kolejność przy zmianach w `index.html`: najpierw `node tools/jezyki.js`, potem `node tools/strony.js`
-  (ten drugi przebudowuje sitemapę, która zawiera `/`, `/en/`, `/pl/`, `/p/` i 246 stron substancji + FAQ).
-- Nie edytuj `pl/` ani `en/` ręcznie — są generowane i zostaną nadpisane.
+## Osobne adresy językowe
+- `/en/` i `/pl/` mają własny `canonical`, tytuł i wzajemny `hreflang`; `/` to `x-default`. Wszystko buduje `tools/v4.js`
+  (dawne `jezyki.js` i `strony.js` są usunięte). Powód: `/` i `/?lang=en` były kiedyś tym samym dokumentem.
