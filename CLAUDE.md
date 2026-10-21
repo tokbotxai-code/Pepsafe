@@ -230,6 +230,11 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   czyta od zera CLAUDE.md i plan.
 - Do rutynowej dniówki wystarczy tańszy model; Opus tylko do zmian w kodzie strony i analiz.
 
+## Raport tygodniowy (decyzja właściciela 21.10)
+- Co **poniedziałek 07:41 UK** osobne zadanie „PepSafe tygodniowy raport” robi pełny raport: odwiedziny strony (wykresy dzień po dniu,
+  skąd i z jakich krajów), zasięgi i reakcje na IG, FB i TikToku, najlepsze i najsłabsze posty, porównanie formatów, rekomendacje.
+  Wynik: prywatna strona z wykresami + podsumowanie po polsku. Autopilot dzienny niczego tu nie robi.
+
 ## Odwiedziny na stronie (Cloudflare Web Analytics)
 - Beacon wstawia **generator**: stała `CF_BEACON` w `tools/v4.js` trafia do każdej generowanej strony (21.10: 452)
   (token `68889a9fe6604022bd3fa7d786e5d79f`). Po każdej przebudowie sprawdź `grep -c cf-beacon index.html`.
