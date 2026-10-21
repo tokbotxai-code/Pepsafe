@@ -231,9 +231,20 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Do rutynowej dniówki wystarczy tańszy model; Opus tylko do zmian w kodzie strony i analiz.
 
 ## Raport tygodniowy (decyzja właściciela 21.10)
-- Co **poniedziałek 07:41 UK** osobne zadanie „PepSafe tygodniowy raport” robi pełny raport: odwiedziny strony (wykresy dzień po dniu,
-  skąd i z jakich krajów), zasięgi i reakcje na IG, FB i TikToku, najlepsze i najsłabsze posty, porównanie formatów, rekomendacje.
-  Wynik: prywatna strona z wykresami + podsumowanie po polsku. Autopilot dzienny niczego tu nie robi.
+- **W każdy poniedziałek autopilot (ten sam poranny przebieg, ma połączenie z Metricool) robi też pełny raport tygodniowy**, po dniówce:
+  1. Strona: `node tools/odwiedziny.js 7` i `14` — odsłony/wizyty dzień po dniu, top adresy, skąd, kraje, wejścia z linku w bio
+     (`/start/ig|tt|fb.html`), porównanie z poprzednim tygodniem.
+  2. IG, FB, TikTok (Metricool `getAnalyticsAvailableMetrics` + `getAnalyticsDataByMetrics`): ostatnie 7 dni vs 7 wcześniej —
+     obserwujący, wyświetlenia, zasięg, polubienia, komentarze, udostępnienia, zapisy, wejścia na profil, kliknięcia; plus liczby
+     każdego posta z tygodnia z formatem (rolka z lektorem, rolka z nazwami, karta, story, obraz z Doli, pokaz slajdów, ankieta) i tematem.
+  3. **Najpierw sumy tygodnia**, w stylu: „Instagram: cały tydzień 2,0 mln wyświetleń (+X% vs poprzedni). Z tego 1 post —
+     <temat, format, dzień> — dał 1,5 mln (75%).” Dla każdej platformy i dla strony. Zawsze nazwij posty, które zrobiły dużą część wyniku,
+     i najsłabsze formaty.
+  4. Przy każdym hicie i wpadce wniosek i działanie: „dlatego: więcej X / mniej Y / powtórzyć temat Z w formacie W o godzinie H”,
+     oparte na liczbie. Wnioski od razu stosuj w planie na kolejny tydzień i napisz, co zmieniłeś.
+  5. Jedna prywatna strona z wykresami (Artifact „PepSafe raport tygodniowy <zakres dat>”): sumy na platformę, wyświetlenia dzień po dniu,
+     udział najlepszych postów, porównanie formatów, odwiedziny i link w bio. Po polsku, krótko.
+  6. Liczby tylko z danych; czego brak — „brak danych” i dlaczego. W podsumowaniu: link do raportu, sumy, 3 hity z udziałem, 3–5 działań.
 - **Codziennie rano (decyzja właściciela 21.10):** na początku porannego podsumowania autopilot daje krótki blok „Wczoraj”:
   odwiedziny strony (`node tools/odwiedziny.js 1`: odsłony, wizyty, top 3 adresy, skąd), na IG/FB/TikToku wyświetlenia
   i reakcje z wczoraj (Metricool analytics) oraz najlepszy post dnia. 5–6 linijek, bez wykresów; liczby tylko z danych.
