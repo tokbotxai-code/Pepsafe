@@ -96,6 +96,7 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
       vo[i] = { file: mp3, seconds: Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3]).toString().trim()) };
     }
   };
+  // ElevenLabs for the film without a "vo" field (one a day); "vo": "kokoro" or no key = the free US voice
   if (post.vo === 'kokoro' || (!key && post.vo !== false)) kokoro();
   else if (key && post.vo !== false) {
     for (let i = 0; i < post.slides.length; i++) {
