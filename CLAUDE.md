@@ -93,6 +93,12 @@
   zdania, więc długie akapity dają filmy 45 s+ i zabijają retencję (średni czas obejrzenia to teraz 1–3 s).
 - Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram i Facebook zostają w pełnym harmonogramie;
   nadwyżkowe tematy planujemy tylko na IG + FB.
+- **Wzrost na TikToku od 26.10** (decyzja właściciela, 21.10): pon–śr **3 filmy dziennie**, od czwartku 29.10 **4 dziennie**
+  (każde okno ma film przyrodniczy). Warunek każdego kroku: przez ostatnie 3 dni żaden film nie został usunięty
+  ani zablokowany (status ERROR/usunięty w Metricool albo „Video removed”). Jeśli był — wróć do 2 dziennie na 3 dni
+  i napisz to w podsumowaniu. Więcej niż 4 dziennie nie dajemy bez decyzji właściciela.
+- Najprostsze źródło dodatkowych filmów: przyrodnicze tematy, które już poszły na IG + FB (np. białko jajka, zwijanie
+  łańcuchów, receptor), wrzucone na TikToka 3–5 dni później — po `node tools/sprawdz.js` (exit 0).
 
 ## Media
 - Na początku każdej pracy z repo: `git fetch origin main && git reset --hard origin/main` (historia bywa przepisywana; nie używaj `git pull`).
