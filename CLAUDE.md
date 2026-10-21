@@ -121,6 +121,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Odpowiedzi na wiadomości prywatne: gotowce w `docs/odpowiedzi-dm.md`. Nigdy nie doradzamy dawek, źródeł zakupu ani sposobu stosowania.
 
 ## Strona: „Peptyd dnia”
+- **Priorytet nr 1 każdego dnia** (decyzja właściciela, 21.10): wpis robisz jako PIERWSZĄ rzecz po `git reset`, przed postami.
+- Trzymaj **zapas co najmniej 2 dni do przodu** (wpisy z datami jutro i pojutrze). Generator (`tools/v4.js`) pokazuje
+  najnowszy wpis z datą ≤ dziś (UK), a workflow `.github/workflows/codziennie.yml` przebudowuje stronę o 00:05 UK,
+  więc wpis pojawia się sam, nawet gdy autopilot danego dnia nie ruszy. Sprawdzaj, czy zapas nie spadł do zera.
 - Przy każdym uruchomieniu dopisz 1 wpis do `var DAILY=[...]` w `index.html` (na początek tablicy), z datą dzisiejszą (Europe/London),
   tematem jednego z dzisiejszych postów z faktami (musi istnieć w katalogu `E("Nazwa",...)`, pole "n" = dokładnie ta nazwa).
   Pola: "date", "n", "pl" (3–5 zdań), "en" (to samo po angielsku), "src" (1–3 prawdziwe źródła [tytuł, URL]).

@@ -23,6 +23,9 @@ for (const re of [/^var GL=/, /^var CONFUSE=/, /^var POSTS=/, /^var FAMS=/, /^va
 }
 for (const re of [/^var SRC=\{/, /^var WADA=\{/, /^var WADA_URL=/, /^var SY_PL=/, /^var SY_EN=/]) { const i = at(re); if (i >= 0) vm.runInContext(lines[i], box); }
 const { D, EN, ST, ST_EN, FAMS, FAMS_EN, DAILY, FAQ, QA, ALERTS, TRICKS, MYTHS, SRC, WADA, WADA_URL, DOSE, SY_PL, SY_EN, GL, CONFUSE, POSTS } = box;
+// "Peptyd dnia": the newest entry dated today or earlier (UK), so entries written ahead show up on their own day
+const TODAY = process.env.PEP_TODAY || new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
+const DAY = DAILY.filter(e => e.date <= TODAY).sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))[0] || DAILY[DAILY.length - 1];
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -368,7 +371,7 @@ const cardRow = (e, en, L) => `<a class="card tile reveal" href="${BASE}${cardPa
       <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span></a>`;
 
 function home(L) {
-  const en = L === 'en', t = W[L], h = H[L], day = DAILY[0];
+  const en = L === 'en', t = W[L], h = H[L], day = DAY;
   const faq = FAQ.filter(x => Array.isArray(x) && x[0] && x[1]).slice(0, 4);
   const answers = GROUPS.map(g => `<p class="answer" id="a-${g.id}" hidden><b>${esc(g[L].rule)}</b> ${esc(g[L].why)} <span class="muted">${g.n} ${esc(t.inGroup)}.</span></p>`).join('');
   const opts = sel => GROUPS.map((g, i) => `<option value="${g.id}"${i === sel ? ' selected' : ''}>${esc(g[L].label)}</option>`).join('');
@@ -1109,4 +1112,4 @@ console.log(`kanal RSS: ${(POSTS || []).length} tekstow`);
 
 console.log(`zbudowano ${n} stron: ${LANGS.length} języki × (10 + ${D.length} kart)`);
 console.log(`dawkowanie: ${(DOSE || []).length} pozycji, objawy: ${((SY_PL||[]).length)} hasel`);
-console.log(`grupy: ${GROUPS.length}, peptyd dnia: ${DAILY[0].n} (${DAILY[0].date}), ostrzezenia: ${(ALERTS || []).length}, triki: ${(TRICKS || []).length}, mity: ${(MYTHS || []).length}`);
+console.log(`grupy: ${GROUPS.length}, peptyd dnia: ${DAY.n} (${DAY.date}), ostrzezenia: ${(ALERTS || []).length}, triki: ${(TRICKS || []).length}, mity: ${(MYTHS || []).length}`);
