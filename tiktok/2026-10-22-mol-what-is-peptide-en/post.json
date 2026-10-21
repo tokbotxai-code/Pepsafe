@@ -1,0 +1,26 @@
+{
+ "format": "mol-reel",
+ "caption": "What actually is a peptide? 🧬 Everything in your body is built from protein, and protein is built from amino acids linked like beads. A few links make a peptide. Hundreds make a protein. Insulin is a peptide hormone: 51 amino acids in two chains, shown here from its real 3D structure.\n\nMore at pepsafe.info\n\n#peptides #biology #science #insulin #pepsafe",
+ "scenes": [
+  {
+   "say": "Everything in your body is built from protein.",
+   "show": "chain:14"
+  },
+  {
+   "say": "And protein is built from amino acids, linked like beads.",
+   "show": "chain:14"
+  },
+  {
+   "say": "A few links make a peptide.",
+   "show": "chain:6"
+  },
+  {
+   "say": "Insulin is one. Fifty-one amino acids, folded into one exact shape.",
+   "show": "pdb:3I40"
+  },
+  {
+   "say": "More at pepsafe dot info.",
+   "show": "pdb:3I40"
+  }
+ ]
+}
