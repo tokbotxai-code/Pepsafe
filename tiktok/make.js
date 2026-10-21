@@ -96,9 +96,9 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
       vo[i] = { file: mp3, seconds: Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3]).toString().trim()) };
     }
   };
-  // ElevenLabs for the film without a "vo" field (one a day); "vo": "kokoro" or no key = the free US voice
-  if (post.vo === 'kokoro' || (!key && post.vo !== false)) kokoro();
-  else if (key && post.vo !== false) {
+  // every film gets the free US voice (owner's decision, 21.10); ElevenLabs only if post.json says "vo": "eleven"
+  if (post.vo !== false && post.vo !== 'eleven') kokoro();
+  else if (key && post.vo === 'eleven') {
     for (let i = 0; i < post.slides.length; i++) {
       const txt = narrate(post.slides[i], i === post.slides.length - 1);
       if (!txt) continue;

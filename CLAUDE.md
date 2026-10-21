@@ -89,8 +89,9 @@
   od 20.10). Kod wyjścia 1 = zostało < 400 znaków: renderuj wszystko z `"vo": false` aż do odnowienia limitu.
   21.10 po 17 filmach zostało ok. 4 900 znaków, więc lektor **tylko 1 film dziennie i tylko ten, który idzie na TikToka**,
   zdania krótkie (cel ≤ 250 znaków na film). Gdy limit się odnowi, zmień datę startu w wywołaniu skryptu.
-- **Darmowy lektor Kokoro (od 21.10, decyzja właściciela: KAŻDY film ma głos):** 1 film dziennie ElevenLabs, wszystkie
-  pozostałe z `"vo": "kokoro"` (głos US `af_heart`). `"vo": false` nie używamy — wtedy też ma głos (open source, Apache 2.0, bez limitu). Przed pierwszym renderem w sesji:
+- **Darmowy lektor Kokoro (od 21.10, decyzja właściciela: KAŻDY film ma głos, ElevenLabs NIE używamy — kredyty zostają):**
+  `make.js` domyślnie czyta wszystko głosem US `af_heart`; nie dodawaj `"vo": "eleven"` bez decyzji właściciela.
+  Zasady o budżecie ElevenLabs i „1 film dziennie” wyżej są nieaktualne. `"vo": false` nie używamy — wtedy też ma głos (open source, Apache 2.0, bez limitu). Przed pierwszym renderem w sesji:
   `pip install -q kokoro-onnx soundfile` (model ~350 MB pobiera się sam do `~/.cache/kokoro`). Głos domyślny `af_heart`
   (US), brytyjski `bf_emma` przez `KOKORO_VOICE=bf_emma`. Gdy ElevenLabs zwróci błąd albo nie ma klucza, `make.js`
   sam przełącza się na Kokoro. Plik wynikowy jak zawsze `pepsafe-<folder>-lektor.mp4`.
