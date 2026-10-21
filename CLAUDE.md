@@ -85,6 +85,10 @@
 - Zostajemy na darmowym planie ElevenLabs (decyzja właściciela): 10 000 znaków/mies. ≈ 40 filmów.
   Dlatego lektora dostaje **tylko jeden film dziennie** — ten z najmocniejszym tematem. Pozostałe renderujemy
   z `"vo": false`, czyli z samym podkładem. Przekroczenie limitu kończy się błędem i filmem bez dźwięku.
+- **Budżet lektora:** przed renderem z lektorem uruchom `node tools/lektor.js` (liczy znaki z filmów `-lektor.mp4`
+  od 20.10). Kod wyjścia 1 = zostało < 400 znaków: renderuj wszystko z `"vo": false` aż do odnowienia limitu.
+  21.10 po 17 filmach zostało ok. 4 900 znaków, więc lektor **tylko 1 film dziennie i tylko ten, który idzie na TikToka**,
+  zdania krótkie (cel ≤ 250 znaków na film). Gdy limit się odnowi, zmień datę startu w wywołaniu skryptu.
 - Publikacja zostaje automatyczna (`autoPublish: true`) na obu kanałach.
 - Muzyka z katalogu TikToka jest niemożliwa przez API (da się tylko montując w aplikacji). Katalog audio
   Instagrama zwraca 403 dla tego konta i **temat jest zamknięty**: wymagałby konta Business połączonego
