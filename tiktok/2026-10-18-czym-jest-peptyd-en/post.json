@@ -2,13 +2,50 @@
  "topic": "What is a peptide",
  "tagline": "Peptide facts, no hype",
  "slides": [
-  {"kicker": "Biology in 25 seconds", "title": "Everyone says “peptides”. What are they?", "hero": true, "text": "Explained from zero 👉", "seconds": 3.5},
-  {"kicker": "Building blocks of life", "big": "20", "text": "That is how many kinds of amino acids build every protein in your body. Like LEGO bricks in 20 colours.", "seconds": 4.5},
-  {"kicker": "Peptide vs protein", "title": "Short chain = peptide", "text": "A few up to about 50 linked amino acids make a peptide. A longer, folded chain is called a protein.", "seconds": 5},
-  {"kicker": "Where you find them", "title": "Your body makes them itself", "list": ["Hormones like insulin and oxytocin", "Signals between cells", "Natural defence against bacteria"], "seconds": 5},
-  {"kicker": "Fun fact", "title": "A sweetener made of two amino acids", "text": "Aspartame is a derivative of a dipeptide, two amino acids joined together.", "seconds": 4},
-  {"kicker": "Biology, no hype", "cta": "pepsafe.info", "text": "More simple explanations and facts from studies.", "foot": "Educational content.", "seconds": 4}
+  {
+   "kicker": "Biology in 25 seconds",
+   "title": "Everyone says “peptides”. What are they?",
+   "hero": true,
+   "text": "Explained from zero 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "Building blocks of life",
+   "big": "20",
+   "text": "That is how many kinds of amino acids build every protein in your body. Like LEGO bricks in 20 colours.",
+   "seconds": 4.5
+  },
+  {
+   "kicker": "Peptide vs protein",
+   "title": "Short chain = peptide",
+   "text": "A few up to about 50 linked amino acids make a peptide. A longer, folded chain is called a protein.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Where you find them",
+   "title": "Your body makes them itself",
+   "list": [
+    "Hormones like insulin and oxytocin",
+    "Signals between cells",
+    "Natural defence against bacteria"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "Fun fact",
+   "title": "A sweetener made of two amino acids",
+   "text": "Aspartame is a derivative of a dipeptide, two amino acids joined together.",
+   "seconds": 4
+  },
+  {
+   "kicker": "Biology, no hype",
+   "cta": "pepsafe.info",
+   "text": "More simple explanations and facts from studies.",
+   "foot": "Educational content.",
+   "seconds": 4
+  }
  ],
  "tiktokTitle": "What is a peptide? Biology in 25 seconds",
- "caption": "What actually is a peptide? A quick biology lesson: amino acids, chains and proteins 🧬 More at pepsafe.info\n\n#biology #science #funfacts #education #chemistry #learnontiktok #pepsafe"
+ "caption": "What actually is a peptide? A quick biology lesson: amino acids, chains and proteins 🧬 More at pepsafe.info\n\n#biology #science #funfacts #education #chemistry #learnontiktok #pepsafe",
+ "vo": "kokoro"
 }

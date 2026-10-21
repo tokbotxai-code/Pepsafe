@@ -2,12 +2,52 @@
  "topic": "Online semaglutide vs pharmacy drug",
  "tagline": "Peptide facts, zero hype",
  "slides": [
-  {"kicker": "Fact check", "title": "Online semaglutide ≠ pharmacy Ozempic", "hero": true, "text": "\"Research grade\", \"same thing, cheaper\"? Let's check 👉", "seconds": 3.5},
-  {"kicker": "The label", "verdict": "NOT FOR HUMANS", "tone": "no", "title": "\"For research only\"", "text": "\"Not for human use\" means exactly that: the product is not meant for people.", "seconds": 5},
-  {"kicker": "Contents", "verdict": "SALT ≠ DRUG", "tone": "part", "title": "A different form", "text": "FDA warns: salt forms (sodium, acetate) are not the same active ingredient as in the approved drug. Counterfeit Ozempic has also been found.", "seconds": 6},
-  {"kicker": "Dose", "title": "Dosing errors", "text": "FDA has received adverse event reports linked to dosing errors with non-approved semaglutide. Some people were hospitalized.", "seconds": 6},
-  {"kicker": "Takeaway", "list": ["Pharmacy drug = quality control", "A doctor sets the dose", "\"Same, just cheaper\" is marketing"], "seconds": 5},
-  {"kicker": "More facts, zero hype", "cta": "pepsafe.info", "text": "Peptide catalog, myths vs facts, FDA decision timeline.", "foot": "Educational content, not medical advice.", "seconds": 4}
+  {
+   "kicker": "Fact check",
+   "title": "Online semaglutide ≠ pharmacy Ozempic",
+   "hero": true,
+   "text": "\"Research grade\", \"same thing, cheaper\"? Let's check 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "The label",
+   "verdict": "NOT FOR HUMANS",
+   "tone": "no",
+   "title": "\"For research only\"",
+   "text": "\"Not for human use\" means exactly that: the product is not meant for people.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Contents",
+   "verdict": "SALT ≠ DRUG",
+   "tone": "part",
+   "title": "A different form",
+   "text": "FDA warns: salt forms (sodium, acetate) are not the same active ingredient as in the approved drug. Counterfeit Ozempic has also been found.",
+   "seconds": 6
+  },
+  {
+   "kicker": "Dose",
+   "title": "Dosing errors",
+   "text": "FDA has received adverse event reports linked to dosing errors with non-approved semaglutide. Some people were hospitalized.",
+   "seconds": 6
+  },
+  {
+   "kicker": "Takeaway",
+   "list": [
+    "Pharmacy drug = quality control",
+    "A doctor sets the dose",
+    "\"Same, just cheaper\" is marketing"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "Peptide catalog, myths vs facts, FDA decision timeline.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4
+  }
  ],
- "caption": "Online 'research grade' semaglutide ≠ pharmacy Ozempic 💉 FDA warns: products from illegal shops may be counterfeit, contain different salt forms, and lead to dosing errors.\n\nEducational content, not medical advice. More at pepsafe.info\n\n#semaglutide #ozempic #peptides #facts #mythsvsfacts #safety #pepsafe"
+ "caption": "Online 'research grade' semaglutide ≠ pharmacy Ozempic 💉 FDA warns: products from illegal shops may be counterfeit, contain different salt forms, and lead to dosing errors.\n\nEducational content, not medical advice. More at pepsafe.info\n\n#semaglutide #ozempic #peptides #facts #mythsvsfacts #safety #pepsafe",
+ "vo": "kokoro"
 }

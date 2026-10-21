@@ -2,11 +2,42 @@
  "topic": "TB-500 vs BPC-157",
  "tagline": "Peptide facts, zero hype",
  "slides": [
-  {"kicker": "Fact-checking", "title": "TB-500 vs BPC-157: what's actually known", "hero": true, "text": "Swipe 👉", "seconds": 3.5},
-  {"kicker": "TB-500", "title": "Evidence: mostly animals", "text": "A thymosin beta-4 fragment. A 2024 study found TB-500 itself didn't speed healing — only its metabolite did. No controlled human trials.", "seconds": 6},
-  {"kicker": "BPC-157", "title": "3 small human studies", "text": "A 2025 review: under 30 people in total, no control groups. The rest of the data is animal studies.", "seconds": 5.5},
-  {"kicker": "The 'heals the whole body' myth", "list": ["'Systemic vs local' is a hypothesis, not a human result", "A 'research only' label doesn't mean 'tested'", "Neither is an approved drug"], "seconds": 7},
-  {"kicker": "More facts, zero hype", "cta": "pepsafe.info", "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.", "foot": "Educational content, not medical advice.", "seconds": 4}
+  {
+   "kicker": "Fact-checking",
+   "title": "TB-500 vs BPC-157: what's actually known",
+   "hero": true,
+   "text": "Swipe 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "TB-500",
+   "title": "Evidence: mostly animals",
+   "text": "A thymosin beta-4 fragment. A 2024 study found TB-500 itself didn't speed healing — only its metabolite did. No controlled human trials.",
+   "seconds": 6
+  },
+  {
+   "kicker": "BPC-157",
+   "title": "3 small human studies",
+   "text": "A 2025 review: under 30 people in total, no control groups. The rest of the data is animal studies.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "The 'heals the whole body' myth",
+   "list": [
+    "'Systemic vs local' is a hypothesis, not a human result",
+    "A 'research only' label doesn't mean 'tested'",
+    "Neither is an approved drug"
+   ],
+   "seconds": 7
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4
+  }
  ],
- "caption": "TB-500 vs BPC-157: what's actually known? 🧬 The evidence is mostly animal studies, and neither is an approved drug. 'Heals the whole body' claims are marketing, not trial results.\n\nMore at pepsafe.info\n\n#peptides #facts #mythsvsfacts #pepsafe"
+ "caption": "TB-500 vs BPC-157: what's actually known? 🧬 The evidence is mostly animal studies, and neither is an approved drug. 'Heals the whole body' claims are marketing, not trial results.\n\nMore at pepsafe.info\n\n#peptides #facts #mythsvsfacts #pepsafe",
+ "vo": "kokoro"
 }

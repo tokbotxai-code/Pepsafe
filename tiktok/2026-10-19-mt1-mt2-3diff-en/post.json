@@ -2,12 +2,49 @@
  "topic": "MT1 vs MT2: 3 differences",
  "tagline": "Peptide facts, zero hype",
  "slides": [
-  {"kicker": "Fact-checking", "title": "MT1 vs MT2: 3 differences", "hero": true, "text": "Swipe, it takes 20 seconds 👉", "seconds": 3.5},
-  {"kicker": "Difference 1: status", "verdict": "APPROVED", "tone": "yes", "title": "MT1 is a drug", "text": "Afamelanotide (Scenesse) was approved by the FDA in October 2019 for erythropoietic protoporphyria.", "seconds": 5.5},
-  {"kicker": "Difference 2: legal use", "verdict": "NOT APPROVED", "tone": "no", "title": "MT2 has no approved use", "text": "Sold online as a 'tanning injection'. Its safety has never been established.", "seconds": 5.5},
-  {"kicker": "Difference 3: receptors", "title": "Different receptor reach", "text": "MT1 targets MC1R. MT2 also hits MC3R and MC4R, which are linked to libido and appetite effects.", "seconds": 6},
-  {"kicker": "Remember", "title": "Same name, different substance", "text": "If a seller says MT2 is 'basically the same as the drug', it isn't.", "seconds": 5},
-  {"kicker": "More facts, zero hype", "cta": "pepsafe.info", "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.", "foot": "Educational content, not medical advice.", "seconds": 4}
+  {
+   "kicker": "Fact-checking",
+   "title": "MT1 vs MT2: 3 differences",
+   "hero": true,
+   "text": "Swipe, it takes 20 seconds 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "Difference 1: status",
+   "verdict": "APPROVED",
+   "tone": "yes",
+   "title": "MT1 is a drug",
+   "text": "Afamelanotide (Scenesse) was approved by the FDA in October 2019 for erythropoietic protoporphyria.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Difference 2: legal use",
+   "verdict": "NOT APPROVED",
+   "tone": "no",
+   "title": "MT2 has no approved use",
+   "text": "Sold online as a 'tanning injection'. Its safety has never been established.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Difference 3: receptors",
+   "title": "Different receptor reach",
+   "text": "MT1 targets MC1R. MT2 also hits MC3R and MC4R, which are linked to libido and appetite effects.",
+   "seconds": 6
+  },
+  {
+   "kicker": "Remember",
+   "title": "Same name, different substance",
+   "text": "If a seller says MT2 is 'basically the same as the drug', it isn't.",
+   "seconds": 5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4
+  }
  ],
- "caption": "MT1 vs MT2: 3 differences 🧪 MT1 (afamelanotide) is an FDA-approved drug. MT2 is an illegal 'tanning injection' with no established safety.\n\nMore at pepsafe.info\n\n#mt1 #mt2 #melanotan #peptides #facts #pepsafe"
+ "caption": "MT1 vs MT2: 3 differences 🧪 MT1 (afamelanotide) is an FDA-approved drug. MT2 is an illegal 'tanning injection' with no established safety.\n\nMore at pepsafe.info\n\n#mt1 #mt2 #melanotan #peptides #facts #pepsafe",
+ "vo": "kokoro"
 }
