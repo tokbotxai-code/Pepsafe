@@ -7,7 +7,9 @@
 
 ## Instagram odłączony (od 21.10.2026)
 - 21.10 rano Instagram zniknął z Metricool (posty z 06:15 i 06:30 dostały „Instagram was disconnected”).
-  Właściciel nie ma dostępu do konta przez zablokowaną skrzynkę `tokbotx.ai@gmail.com` i na razie go nie odzyskuje.
+  Samo konto Instagram działa; zerwane jest tylko połączenie w Metricool. Ponowne połączenie robi właściciel
+  (aplikacja Metricool → ustawienia marki → Instagram → Połącz). Konto Metricool jest na zablokowanej skrzynce
+  `tokbotx.ai@gmail.com`, więc logowanie przez kod z maila nie zadziała.
 - **Nie planuj nic na Instagram**, dopóki `getBrandSettings` nie pokaże Instagrama w `networksData`.
   Sprawdzaj to na początku każdego uruchomienia. Posty już zaplanowane na IG zostaw — same skończą się błędem.
 - Do tego czasu publikujemy tylko na TikToku: tematy przyrodnicze, bez nazw substancji, w limicie dziennym z sekcji o TikToku.
