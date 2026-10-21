@@ -72,11 +72,13 @@ const FORM_TO = 'contact@pepsafe.info';
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
 const KOFI = 'https://ko-fi.com/pepsafeinfo';
+const FB = 'https://www.facebook.com/1331805220024626';
+const ICO_FB = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg>';
 const ICO_TT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a5 5 0 0 0 3.5 1.4V10a8.1 8.1 0 0 1-4.5-1.4v6.3a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3a2.9 2.9 0 1 0 2 2.8V2h3a5 5 0 0 0 1 3.8Z"/></svg>';
 const ICO_IG = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>';
 const ORG = JSON.stringify({
   '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://pepsafe.info/#org',
-  name: 'PepSafe', url: 'https://pepsafe.info/', sameAs: [TT, IG]
+  name: 'PepSafe', url: 'https://pepsafe.info/', sameAs: [TT, IG, FB]
 });
 
 const W = {
@@ -273,7 +275,7 @@ ${THEME_BOOT}
         <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       </button></p>
     <ul>${nav.map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('\n      ')}</ul>
-    <p class="menufoot"><a href="${twinHref}">${other.toUpperCase()}</a> · <a href="${TT}" rel="me noopener" target="_blank">TikTok</a> · <a href="${IG}" rel="me noopener" target="_blank">Instagram</a></p>
+    <p class="menufoot"><a href="${twinHref}">${other.toUpperCase()}</a> · <a href="${TT}" rel="me noopener" target="_blank">TikTok</a> · <a href="${IG}" rel="me noopener" target="_blank">Instagram</a> · <a href="${FB}" rel="me noopener" target="_blank">Facebook</a></p>
   </nav>
 </div>
 
@@ -302,6 +304,7 @@ ${o.body}
     <p class="social">
       <a class="soc" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}<span>TikTok</span></a>
       <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>Instagram</span></a>
+      <a class="soc" href="${FB}" rel="me noopener" target="_blank">${ICO_FB}<span>Facebook</span></a>
       <a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a>
       <a class="soc" href="${KOFI}" rel="noopener" target="_blank">☕ <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
     </p>
@@ -946,7 +949,8 @@ function about(L) {
     <article class="tile glass reveal"><h3 class="gtitle sm">TikTok · Instagram</h3>
       <p class="small ink2">${en ? 'Prefer your phone? Send a direct message instead. We read every one and answer the best ones in a Q&A.' : 'Wolisz z telefonu? Napisz wiadomość prywatną. Czytamy każdą, a najciekawsze omawiamy w Q&A.'}</p>
       <p class="social"><a class="soc" href="${TT}" rel="me noopener" target="_blank">${ICO_TT}<span>${esc(t.dmTT)}</span></a>
-      <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>${esc(t.dmIG)}</span></a></p></article>
+      <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>${esc(t.dmIG)}</span></a>
+      <a class="soc" href="${FB}" rel="me noopener" target="_blank">${ICO_FB}<span>Facebook</span></a></p></article>
     <article class="tile glass reveal"><h3 class="gtitle sm">${en ? 'By email' : 'Mailem'}</h3>
       <p class="small ink2">${en ? 'If you would rather not use the form, write to us directly. Same inbox, same people.' : 'Jeśli wolisz nie korzystać z formularza, napisz wprost. Ta sama skrzynka, te same osoby.'}</p>
       <p class="social"><a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a></p></article>
