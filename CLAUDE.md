@@ -238,6 +238,12 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   odwiedziny strony (`node tools/odwiedziny.js 1`: odsłony, wizyty, top 3 adresy, skąd), na IG/FB/TikToku wyświetlenia
   i reakcje z wczoraj (Metricool analytics) oraz najlepszy post dnia. 5–6 linijek, bez wykresów; liczby tylko z danych.
 
+## Link w bio (od 21.10)
+- `tools/v4.js` buduje stronę **pepsafe.info/start/** (przyciski: peptyd dnia, katalog, porównanie, objawy, słownik, pytanie)
+  pod adresami `/start/ig.html`, `/start/tt.html`, `/start/fb.html` (noindex). Ta sama treść; osobne adresy pokazują
+  w `node tools/odwiedziny.js`, która platforma przysyła ludzi. W bio: IG → `pepsafe.info/start/ig.html`, TikTok → `/start/tt.html`,
+  Facebook → `/start/fb.html`. Raporty liczą wejścia na te adresy jako „z Instagrama/TikToka/Facebooka”.
+
 ## Odwiedziny na stronie (Cloudflare Web Analytics)
 - Beacon wstawia **generator**: stała `CF_BEACON` w `tools/v4.js` trafia do każdej generowanej strony (21.10: 452)
   (token `68889a9fe6604022bd3fa7d786e5d79f`). Po każdej przebudowie sprawdź `grep -c cf-beacon index.html`.
