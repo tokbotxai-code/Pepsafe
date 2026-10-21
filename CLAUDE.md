@@ -127,6 +127,16 @@
   (każde okno ma film przyrodniczy). Warunek każdego kroku: przez ostatnie 3 dni żaden film nie został usunięty
   ani zablokowany (status ERROR/usunięty w Metricool albo „Video removed”). Jeśli był — wróć do 2 dziennie na 3 dni
   i napisz to w podsumowaniu. Więcej niż 4 dziennie nie dajemy bez decyzji właściciela.
+- **TikTok dziennie (decyzja właściciela 21.10, zastępuje limity „2 dziennie” i „wzrost od 26.10” wyżej):**
+  - do soboty 24.10: **2 filmy z lektorem + 1 krótki pokaz slajdów z muzyką** (17:00) = 3;
+  - od niedzieli 25.10: **2 z lektorem + 2 z muzyką** = 4 — krótki pokaz slajdów (17:00) i **obraz w stylu Dola** (21:30 UK).
+  - Dalej obowiązuje hamulec: gdy w ostatnich 3 dniach jakiś film zniknął/ERROR, wracamy do 2 dziennie na 3 dni.
+- **Obraz w stylu Dola (TikTok, od 25.10):** `node tools/obraz.js RRRR-MM-DD-img-<temat>-en "<prompt tła po angielsku>" "<NAGŁÓWEK>" "<jedno zdanie faktu>"`.
+  Tło generuje darmowy Pollinations (ciemne, kinowe: sylwetki z żaru, przezroczyste ciało, narządy, komórki — bez strzykawek,
+  fiolek, tabletek, nagości i twarzy realnych osób), nagłówek i fakt nakłada skrypt (nasza pisownia). Temat: ostrzeżenia typu
+  „szybka utrata wagi → mięśnie / kości / woreczek / włosy / serce”, fakty ze źródeł, **zero nazw substancji**.
+  Post TikTok: `media` = `obraz.jpg`, `tiktokData.autoAddMusic: true`, opis z hashtagami TikToka + #pepsafe; przed planem `sprawdz.js`
+  (zrób `post.json` z polami caption i slides z nagłówkiem i faktem).
 - **Krótki pokaz slajdów na TikToka (od 22.10, decyzja właściciela):** karuzela zdjęć przez API stała w miejscu, więc
   wysyłamy **film**, który sam przełącza 2–3 strony (ok. 7 s, nasza spokojna muzyka). 1 dziennie o **17:00 UK**, tylko TikTok.
   `node tools/fotki.js tiktok/<folder-przyrodniczy> RRRR-MM-DD-short-<temat>-en 3` → `pepsafe-<folder>-slajdy.mp4`
