@@ -72,7 +72,11 @@
 - Karuzela na IG (`ig-...`, format `feed`): na TikToka idzie **film**, nie slajdy. Skopiuj `post.json` do
   `tiktok/RRRR-MM-DD-<temat>-<lang>/` bez pola `format`, wyrenderuj `node tiktok/make.js tiktok/<folder>`
   i zaplanuj osobny post TikTok **1 minutę po** poście na IG.
-- Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST), FB (POST) i TikToka razem.
+- Q&A/ankieta nie idzie jako story: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST), FB (POST) i TikToka razem.
+- **Story „Peptide of the Day” (od 21.10, decyzja właściciela):** codziennie `node tools/story.js RRRR-MM-DD`
+  (bierze wpis DAILY z tej daty) → `tiktok/RRRR-MM-DD-story-daily-en/story.jpg`. Commit + push, potem jeden post
+  Metricool o **18:15 UK**: providers `instagram` (`STORY`) + `facebook` (`STORY`), bez `text`, `autoPublish: true`.
+  **Nigdy TikTok** (nazwa substancji). W podsumowaniu podaj link do JPG — właściciel czasem wrzuca story sam z muzyką.
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
 ## Język: tylko angielski (od 20.10.2026)
