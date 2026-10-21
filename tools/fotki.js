@@ -1,14 +1,16 @@
 // TikTok photo carousel (JPG slides, TikTok adds its own music with autoAddMusic) from a topic's post.json.
 // Only for nature/biology topics without substance names: run tools/sprawdz.js on the source folder first.
-// Usage: node tools/fotki.js tiktok/<source-folder> <new-folder-name>
+// Usage: node tools/fotki.js tiktok/<source-folder> <new-folder-name> [max-slides]
+//   max-slides (e.g. 3) keeps the first slide, the key middle one and the last, for a short auto-advancing post.
 // Output: tiktok/<new-folder-name>/slide-1.jpg ... + caption.txt
 const fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 
 const root = path.join(__dirname, '..');
-const [src, name] = process.argv.slice(2);
+const [src, name, max] = process.argv.slice(2);
 if (!src || !name) { console.error('usage: node tools/fotki.js tiktok/<source> <new-folder>'); process.exit(1); }
 const post = JSON.parse(fs.readFileSync(path.join(root, src, 'post.json'), 'utf8'));
+if (max && post.slides.length > +max) { const sl = post.slides; post.slides = +max <= 1 ? [sl[0]] : [sl[0], ...sl.slice(1, -1).filter(x => x.big).concat(sl.slice(1, -1)).slice(0, +max - 2), sl[sl.length - 1]]; }
 const dir = path.join(root, 'tiktok', name); fs.mkdirSync(dir, { recursive: true });
 const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const AC = ['#3CCFA9', '#6FA3E8', '#FF9A66', '#C58BE0', '#F2B134'];

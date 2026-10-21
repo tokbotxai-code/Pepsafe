@@ -131,6 +131,8 @@
   1 dziennie o **17:00 UK**, tylko TikTok. `node tools/fotki.js tiktok/<folder-przyrodniczy> RRRR-MM-DD-photo-<temat>-en`
   (z `post.json` tematu, który już wyszedł; bez powtórki tego samego tematu jako karuzela), potem `node tools/sprawdz.js` (exit 0),
   commit + push, post z `media` = wszystkie `slide-N.jpg`, `text` = `caption.txt`, `tiktokData.autoAddMusic: true`, `isAigc: false`.
+  Wersja krótka (decyzja właściciela 21.10): 2–3 zdjęcia (`... 3` jako trzeci argument), TikTok sam je przełącza z muzyką;
+  na zmianę: jednego dnia pełna karuzela, drugiego krótka.
   Nie liczy się do limitu filmów dziennie, ale liczy się do limitu API (12/24 h).
 - Najprostsze źródło dodatkowych filmów: przyrodnicze tematy, które już poszły na IG + FB (np. białko jajka, zwijanie
   łańcuchów, receptor), wrzucone na TikToka 3–5 dni później — po `node tools/sprawdz.js` (exit 0).
