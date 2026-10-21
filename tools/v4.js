@@ -478,7 +478,8 @@ function home(L) {
 
   return layout({
     lang: L, here: 'index.html', twin: '', body,
-    title: en ? 'PepSafe — peptide facts, no sales' : 'PepSafe — fakty o peptydach, bez sprzedaży', desc: h.lede
+    title: en ? 'PepSafe — peptide facts, no sales' : 'PepSafe — fakty o peptydach, bez sprzedaży',
+    desc: en ? `Independent reference to ${D.length} peptides: legal status, what the research shows and which act on the same receptor. Nothing for sale.` : `Niezależny przewodnik po ${D.length} peptydach: status prawny, co pokazują badania i które działają na ten sam receptor. Nic tu nie sprzedajemy.`
   });
 }
 
@@ -858,7 +859,8 @@ function about(L) {
 </div></section>`;
   return layout({
     lang: L, here: 'about.html', twin: 'about.html', body,
-    title: (en ? 'About the project' : 'O projekcie') + ' | PepSafe', desc: h.lede
+    title: (en ? 'About the project' : 'O projekcie') + ' | PepSafe',
+    desc: en ? 'What PepSafe is, the rules every entry follows, what we never publish, and how to contact us.' : 'Czym jest PepSafe, jakie zasady obowiązują każdy wpis, czego nigdy nie publikujemy i jak się z nami skontaktować.'
   });
 }
 
