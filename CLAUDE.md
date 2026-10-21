@@ -1,22 +1,27 @@
 # PepSafe – zasady publikacji (Metricool, marka 7506075, Europe/London)
 
 > **Dla autopilota:** jego polecenie startowe (z 19.10) mówi o PL i EN, 8 postach dziennie, dwóch kanałach, każdej treści
-> na TikToku i pliku `-muzyka.mp4`. To jest nieaktualne. Kanały są dwa: Instagram i TikTok (Facebook usunięty, sekcja niżej). Okna zostają te same, ale w każdym jest **jeden temat tylko po angielsku**,
+> na TikToku i pliku `-muzyka.mp4`. To jest nieaktualne. Kanały są trzy: Instagram, Facebook i TikTok (sekcja niżej). Okna zostają te same, ale w każdym jest **jeden temat tylko po angielsku**,
 > TikTok dostaje tylko tematy przyrodnicze bez nazw substancji (max 2 dziennie do 25.10), a lektor i nazwy plików
 > są opisane niżej. Przy każdej rozbieżności obowiązuje ten plik, także w sprawie okien i języka.
 
-## Kanały: Instagram + TikTok (Facebook usunięty 21.10.2026)
-- Decyzja właściciela (21.10): **Facebooka nie używamy.** Nie dodajemy providera `facebook` do żadnego posta
-  i nie zgłaszamy jego braku w `networksData` jako problemu.
-- Na początku każdego uruchomienia sprawdź `getBrandSettings` → `networksData`. Planuj tylko na Instagram i TikTok,
-  jeśli tam są. Jeśli któregoś brakuje, pomiń go i napisz to w podsumowaniu.
+## Kanały: Instagram + Facebook + TikTok (od 21.10.2026)
+- 21.10 właściciel połączył ponownie Instagram i dodał Facebook (stronę) w Metricool. Od teraz każda treść idzie na
+  **trzy kanały**: Instagram, Facebook i TikTok.
+- Na początku każdego uruchomienia sprawdź `getBrandSettings` → `networksData`. Planuj tylko na kanały, które tam są.
+  Jeśli któregoś brakuje, pomiń go i napisz to w podsumowaniu.
+- Facebook dostaje to samo co Instagram, w tym samym poście Metricool (dodatkowy provider `facebook`):
+  film → `facebookData.type "REEL"`, karuzela/ankieta → `"POST"`. Te same zasady treści co na IG
+  (nazwa substancji nie otwiera opisu, bez nazw w hashtagach).
 - TikTok bez zmian: tylko tematy przyrodnicze, bez nazw substancji, w limicie dziennym.
 - Konto Metricool ma teraz dostęp przez właściciela; stara skrzynka `tokbotx.ai@gmail.com` jest zablokowana — nie używaj jej nigdzie.
+- **Tylko angielski na wszystkich trzech kanałach** (decyzja właściciela, 21.10): każda treść EN idzie na Instagram, Facebook i TikTok
+  (TikTok z ograniczeniami tematów niżej). Gdy Facebooka nie ma w `networksData`, napisz w podsumowaniu, że trzeba go połączyć.
 - **Szkice nie zostają w planie.** Właściciel nie chce, żeby cokolwiek zapychało planer: zamiast zamieniać post na szkic,
   usuń go w Metricool (API nie ma usuwania — jeśli nie da się usunąć, wypisz posty do ręcznego usunięcia w podsumowaniu).
 
-## Więcej postów na IG: karty z katalogu (od 21.10.2026)
-- Decyzja właściciela (21.10, na stałe): na Instagramie bazowo **10–12 postów na dobę**: 4 tematy z okien niżej
+## Więcej postów na IG i FB: karty z katalogu (od 21.10.2026)
+- Decyzja właściciela (21.10, na stałe): na Instagramie i Facebooku bazowo **10–12 postów na dobę**: 4 tematy z okien niżej
   + 7 kart z katalogu = 11.
 - **Tempo rośnie co tydzień** (decyzja właściciela, 21.10): w każdy poniedziałek dochodzi **+1 karta na dobę**
   (26.10: 8 kart = 12 postów, 2.11: 9 kart = 13, itd.). Nowe godziny kart wstawiaj w luki między istniejącymi,
@@ -26,7 +31,7 @@
   (4:5) i `caption.txt` z linkiem do strony substancji. Opis już spełnia zasady (nazwa nie otwiera opisu, bez nazw w hashtagach,
   bez słów z listy unikanych). Commit + push, potem planuj z URL z `karta.json`.
 - Godziny kart (UK): **08:00, 11:30, 16:00, 17:30, 21:00, 22:30, 00:30** (późne łapią USA, skąd jest połowa ruchu).
-- Post karty: provider `instagram` (`POST`), `media` = JPG karty, `text` = `caption.txt`, pierwszy komentarz EN.
+- Post karty: providers `instagram` (`POST`) + `facebook` (`POST`), `media` = JPG karty, `text` = `caption.txt`, pierwszy komentarz EN.
   **Karty nigdy nie idą na TikToka** (są z nazwami substancji).
 - Gdy karty się skończą (wszystkie substancje mają folder), zaczynamy drugi obieg dopiero po 30 dniach od pierwszej karty.
 - **Żadnych polskich postów** (decyzja właściciela, 21.10): kierujemy się na rynek **UK i USA**. Każdy polski post,
@@ -42,14 +47,14 @@
   (`getScheduledPosts`) i uzupełnij każde wolne okno nowym tematem (EN, oba kanały). Bez powtórek
   tematów z ostatnich 14 dni (sprawdź foldery w `tiktok/`).
 
-## Instagram + TikTok zawsze razem
+## Instagram + Facebook + TikTok zawsze razem
 - Każda treść idzie na **wszystkie** połączone kanały, o tej samej porze (najwyżej 1 min różnicy), w wersji EN.
-- Filmik: jeden post Metricool z providerami `instagram` (typ `REEL`) + `tiktok`, ten sam MP4.
-  Jeśli temat nie nadaje się na TikToka (nazwy substancji), idzie tylko na IG.
+- Filmik: jeden post Metricool z providerami `instagram` (typ `REEL`) + `facebook` (typ `REEL`) + `tiktok`, ten sam MP4.
+  Jeśli temat nie nadaje się na TikToka (nazwy substancji), idzie tylko na IG + FB.
 - Karuzela na IG (`ig-...`, format `feed`): na TikToka idzie **film**, nie slajdy. Skopiuj `post.json` do
   `tiktok/RRRR-MM-DD-<temat>-<lang>/` bez pola `format`, wyrenderuj `node tiktok/make.js tiktok/<folder>`
   i zaplanuj osobny post TikTok **1 minutę po** poście na IG.
-- Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST) i TikToka razem.
+- Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST), FB (POST) i TikToka razem.
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
 ## Język: tylko angielski (od 20.10.2026)
@@ -75,8 +80,8 @@
   z Facebook Page, a właściciel nie buduje obecności na Facebooku. Nie wracamy do tego.
 - Slajdy piszemy krótko: 1 zdanie na slajd, 4–5 slajdów, cały film 12–15 s. Lektor wydłuża slajd do długości
   zdania, więc długie akapity dają filmy 45 s+ i zabijają retencję (średni czas obejrzenia to teraz 1–3 s).
-- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram zostaje w pełnym harmonogramie;
-  nadwyżkowe tematy planujemy tylko na IG.
+- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram i Facebook zostają w pełnym harmonogramie;
+  nadwyżkowe tematy planujemy tylko na IG + FB.
 
 ## Media
 - Na początku każdej pracy z repo: `git fetch origin main && git reset --hard origin/main` (historia bywa przepisywana; nie używaj `git pull`).
