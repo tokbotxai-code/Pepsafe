@@ -245,11 +245,13 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   5. Jedna prywatna strona z wykresami (Artifact „PepSafe raport tygodniowy <zakres dat>”): sumy na platformę, wyświetlenia dzień po dniu,
      udział najlepszych postów, porównanie formatów, odwiedziny i link w bio. Po polsku, krótko.
   6. Liczby tylko z danych; czego brak — „brak danych” i dlaczego. W podsumowaniu: link do raportu, sumy, 3 hity z udziałem, 3–5 działań.
-- **Codziennie rano (decyzja właściciela 21.10):** na początku porannego podsumowania autopilot daje krótki blok „Wczoraj”:
-  odwiedziny strony (`node tools/odwiedziny.js 1`: odsłony, wizyty, top 3 adresy, skąd), na IG/FB/TikToku wyświetlenia
-  i reakcje z wczoraj (Metricool analytics) oraz najlepszy post dnia. 5–6 linijek, bez wykresów; liczby tylko z danych.
-  Zawsze osobna linijka „Link w bio”: wejścia na `/start/ig.html`, `/start/tt.html`, `/start/fb.html` z wczoraj (z `odwiedziny.js 1`),
-  np. „Link w bio: IG 4 · TikTok 0 · FB 1”. Gdy któryś ma 0 kilka dni z rzędu, napisz, żeby sprawdzić link w bio.
+- **Codziennie rano (decyzja właściciela 21.10), na samym początku podsumowania — blok „Wczoraj”, osobna linijka na każdą platformę:**
+  - **Strona:** odsłony, wizyty, top 3 adresy, skąd, kraje (`node tools/odwiedziny.js 1`) + zmiana vs przedwczoraj.
+  - **Link w bio:** „IG x · TikTok y · FB z” (wejścia na `/start/ig|tt|fb.html`); gdy któryś ma 0 kilka dni z rzędu — napisz, żeby sprawdzić.
+  - **Instagram / Facebook / TikTok** (Metricool analytics), każda osobno: obserwujący (+/−), wyświetlenia, zasięg, polubienia,
+    komentarze, udostępnienia, ile postów wyszło, najlepszy post (temat, format, liczba) i najsłabszy; posty ERROR/usunięte.
+  - Jedno zdanie wniosku na dziś (np. „grafika z Doli zrobiła 60% wyświetleń IG — dziś też taka o 09:15”). Liczby tylko z danych,
+    czego brak — „brak danych”.
 
 ## Link w bio (od 21.10)
 - `tools/v4.js` buduje stronę **pepsafe.info/start/** (przyciski: peptyd dnia, katalog, porównanie, objawy, słownik, pytanie)
