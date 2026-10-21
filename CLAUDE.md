@@ -73,10 +73,13 @@
   `tiktok/RRRR-MM-DD-<temat>-<lang>/` bez pola `format`, wyrenderuj `node tiktok/make.js tiktok/<folder>`
   i zaplanuj osobny post TikTok **1 minutę po** poście na IG.
 - Q&A/ankieta nie idzie jako story: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST), FB (POST) i TikToka razem.
-- **Story „Peptide of the Day” (od 21.10, decyzja właściciela):** codziennie `node tools/story.js RRRR-MM-DD`
-  (bierze wpis DAILY z tej daty) → `tiktok/RRRR-MM-DD-story-daily-en/story.jpg`. Commit + push, potem jeden post
-  Metricool o **18:15 UK**: providers `instagram` (`STORY`) + `facebook` (`STORY`), bez `text`, `autoPublish: true`.
-  **Nigdy TikTok** (nazwa substancji). W podsumowaniu podaj link do JPG — właściciel czasem wrzuca story sam z muzyką.
+- **Story (od 22.10, decyzja właściciela): 3 dziennie, za każdym razem inne tematy i wygląd.**
+  `node tools/story.js RRRR-MM-DD random 3` losuje (stale dla danej daty) typy: Peptide of the day, mit/fakt, słowo ze słownika,
+  FAQ, trik marketingowy, losowa karta z katalogu, promocja strony; każda w innym kolorze. Robi 6-sekundowe MP4
+  (ruch, pulsująca naklejka „pepsafe.info · link in bio”, spokojna muzyka) → `tiktok/RRRR-MM-DD-story-N-<typ>-en/story.mp4`.
+  Commit + push, potem 3 posty Metricool o **09:45, 15:45 i 18:15 UK**: providers `instagram` (`STORY`) + `facebook` (`STORY`),
+  media = `story.mp4`, bez `text`. **Nigdy TikTok.** Prawdziwej klikalnej naklejki z linkiem API nie umie dodać — stąd „link in bio”.
+  W podsumowaniu podaj linki do plików (właściciel czasem wrzuca story sam z muzyką z aplikacji).
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
 ## Język: tylko angielski (od 20.10.2026)
