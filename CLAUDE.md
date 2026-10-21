@@ -127,6 +127,11 @@
   (każde okno ma film przyrodniczy). Warunek każdego kroku: przez ostatnie 3 dni żaden film nie został usunięty
   ani zablokowany (status ERROR/usunięty w Metricool albo „Video removed”). Jeśli był — wróć do 2 dziennie na 3 dni
   i napisz to w podsumowaniu. Więcej niż 4 dziennie nie dajemy bez decyzji właściciela.
+- **Karuzela zdjęć na TikToka z muzyką od TikToka (od 21.10, decyzja właściciela; test 21.10 15:40 opublikowany OK):**
+  1 dziennie o **17:00 UK**, tylko TikTok. `node tools/fotki.js tiktok/<folder-przyrodniczy> RRRR-MM-DD-photo-<temat>-en`
+  (z `post.json` tematu, który już wyszedł; bez powtórki tego samego tematu jako karuzela), potem `node tools/sprawdz.js` (exit 0),
+  commit + push, post z `media` = wszystkie `slide-N.jpg`, `text` = `caption.txt`, `tiktokData.autoAddMusic: true`, `isAigc: false`.
+  Nie liczy się do limitu filmów dziennie, ale liczy się do limitu API (12/24 h).
 - Najprostsze źródło dodatkowych filmów: przyrodnicze tematy, które już poszły na IG + FB (np. białko jajka, zwijanie
   łańcuchów, receptor), wrzucone na TikToka 3–5 dni później — po `node tools/sprawdz.js` (exit 0).
 
