@@ -234,6 +234,9 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Co **poniedziałek 07:41 UK** osobne zadanie „PepSafe tygodniowy raport” robi pełny raport: odwiedziny strony (wykresy dzień po dniu,
   skąd i z jakich krajów), zasięgi i reakcje na IG, FB i TikToku, najlepsze i najsłabsze posty, porównanie formatów, rekomendacje.
   Wynik: prywatna strona z wykresami + podsumowanie po polsku. Autopilot dzienny niczego tu nie robi.
+- **Codziennie rano (decyzja właściciela 21.10):** na początku porannego podsumowania autopilot daje krótki blok „Wczoraj”:
+  odwiedziny strony (`node tools/odwiedziny.js 1`: odsłony, wizyty, top 3 adresy, skąd), na IG/FB/TikToku wyświetlenia
+  i reakcje z wczoraj (Metricool analytics) oraz najlepszy post dnia. 5–6 linijek, bez wykresów; liczby tylko z danych.
 
 ## Odwiedziny na stronie (Cloudflare Web Analytics)
 - Beacon wstawia **generator**: stała `CF_BEACON` w `tools/v4.js` trafia do każdej generowanej strony (21.10: 452)
