@@ -18,7 +18,8 @@ const slug = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '
 const esc = s => String(s || '').replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 // words the platforms read as facilitating use; a sentence with any of them stays off the card and the caption
 const AVOID = /\b(inject\w*|dose\w*|dosing|buy\w*|vials?|shops?|cycles?|protocols?|stacks?|syringes?|purchase\w*)\b/i;
-const sentences = t => String(t || '').match(/[^.!?]+[.!?]+/g) || (t ? [t] : []);
+// split only where a new sentence starts (capital letter after the stop), so "e.g." and "11.2%" stay whole
+const sentences = t => String(t || '').trim().split(/(?<=[.!?])\s+(?=[A-Z0-9"“„(])/).filter(Boolean);
 const clean = (t, n) => sentences(t).map(s => s.trim()).filter(s => !AVOID.test(s)).slice(0, n).join(' ');
 const TONE = { A: '#3CCFA9', R: '#6FA3E8', P: '#6FA3E8', U: '#FF9A66', C: '#F2B134', N: '#9AA8B3' };
 
@@ -27,6 +28,8 @@ function card(e) {
   const [name, cls, d, m, , ev] = t;
   const what = clean(d, 2), how = clean(m, 1), proof = clean(ev, 1);
   if (!what && !how) return null;
+  // the class line is printed as is, so an avoided word there (e.g. "vial") rules the card out
+  if (AVOID.test(cls) || AVOID.test(name)) { console.log('avoided word, skipped:', name); return null; }
   const s = slug(name), status = ST_EN[e.s] || e.s;
   // the caption never opens with the name: it starts from the class, the name comes after
   const nameRe = new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
