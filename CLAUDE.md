@@ -260,16 +260,17 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   Facebook → `/start/fb.html`. Raporty liczą wejścia na te adresy jako „z Instagrama/TikToka/Facebooka”.
 
 ## Zarabianie (od 21.10)
-- Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£4.99).
+- Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£9.99).
   Plik PDF NIE trafia do repo (repo jest publiczne). `GUIDE_URL` w `tools/v4.js` daje ramkę „Get the PDF” na kartach leków GLP-1/GIP
   i przycisk na `/start/`.
-- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£4.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (dalej max 1 wzmianka dziennie, nigdy TikTok).
+- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£5.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (dalej max 1 wzmianka dziennie, nigdy TikTok).
 - **Lista mailowa (od 21.10):** `/en/free.html` (i `/pl/`) — zapis e-mail + zgoda → FormSubmit na contact@pepsafe.info
   (temat „PepSafe: newsletter signup”), potem `/en/free-thanks.html` z darmową checklistą `free/glp1-muscle-checklist.pdf`
   i poleceniem przewodnika o mięśniach. Polityka prywatności: `/en/privacy.html`, `/pl/privacy.html` (link w stopce).
   Przycisk „Free checklist 🎁” na `/start/`. MailerLite założony (formularz „PepSafe signup”), ale embed nie dał się
   skonfigurować z telefonu — gdy właściciel dokończy na komputerze, podmień `action` formularza i zaimportuj adresy.
   W postach IG + FB można czasem dodać: „Free checklist: 5 mistakes that cost you muscle on GLP-1 — link in bio”.
+- Pakiet obu przewodników (ZIP: 2 PDF + kalkulator + tracker) — £11.99; link jeszcze nie podany przez właściciela. Gdy będzie: stała `BUNDLE_URL` w v4.js i przycisk na `/start/` oraz w ramce GLP-1.
 - Wpłaty: profil Ko-fi **https://ko-fi.com/pepsafeinfo** (`KOFI` w `tools/v4.js`: stopka każdej strony + przycisk na `/start/`). Płatności przez PayPal właściciela.
 - Autopilot: 2–3 razy w tygodniu (np. pon, śr, pt) w opisie jednego posta IG + FB o GLP-1 dopisz linijkę
   „📘 Our free-to-read catalog is at pepsafe.info — and the full GLP-1 Safety Guide (PDF) is linked in bio.” Nigdy na TikToku.
