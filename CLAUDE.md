@@ -16,6 +16,19 @@
 - TikTok bez zmian: tylko tematy przyrodnicze, bez nazw substancji, w limicie dziennym.
 - Konto Metricool ma teraz dostęp przez właściciela; stara skrzynka `tokbotx.ai@gmail.com` jest zablokowana — nie używaj jej nigdzie.
 
+## Więcej postów na IG i FB: karty z katalogu (od 21.10.2026)
+- Decyzja właściciela: na Instagramie i Facebooku publikujemy więcej. Start: **ok. 11 postów dziennie** (4 tematy z okien niżej
+  + 7 kart z katalogu). Co poniedziałek porównaj zasięg na post z poprzednim tygodniem: jeśli nie spadł, dodaj 2 karty dziennie
+  (górna granica na razie 20/dzień). Nie przyspieszaj gwałtownie — skok tempa na nowym koncie wygląda jak bot i tnie zasięgi.
+- Karty robi skrypt: **`node tools/karty.js 7`** — bierze 7 kolejnych substancji bez karty, tworzy `tiktok/karta-<slug>/karta.jpg`
+  (4:5) i `caption.txt` z linkiem do strony substancji. Opis już spełnia zasady (nazwa nie otwiera opisu, bez nazw w hashtagach,
+  bez słów z listy unikanych). Commit + push, potem planuj z URL z `karta.json`.
+- Godziny kart (UK): **08:00, 11:30, 16:00, 17:30, 21:00, 22:30, 00:30** (późne łapią USA, skąd jest połowa ruchu).
+- Post karty: providers `instagram` (`POST`) + `facebook` (`POST`), `media` = JPG karty, `text` = `caption.txt`, pierwszy komentarz EN.
+  **Karty nigdy nie idą na TikToka** (są z nazwami substancji).
+- Gdy karty się skończą (wszystkie substancje mają folder), zaczynamy drugi obieg dopiero po 30 dniach od pierwszej karty.
+- Polskie posty sprzed 20.10, które jeszcze wiszą w planie: zamień na szkice (`draft: true`), nie publikujemy ich.
+
 ## Harmonogram (codziennie, czas UK)
 - 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
 - Każde okno: 1 temat, tylko wersja EN (4 posty dziennie).
