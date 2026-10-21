@@ -17,8 +17,12 @@
 - Konto Metricool ma teraz dostęp przez właściciela; stara skrzynka `tokbotx.ai@gmail.com` jest zablokowana — nie używaj jej nigdzie.
 
 ## Więcej postów na IG i FB: karty z katalogu (od 21.10.2026)
-- Decyzja właściciela: na Instagramie i Facebooku **10–12 postów na dobę**, nie więcej: 4 tematy z okien niżej
-  + 7 kart z katalogu = 11. Tego tempa się trzymamy; nie zwiększamy go bez decyzji właściciela.
+- Decyzja właściciela (21.10, na stałe): na Instagramie i Facebooku bazowo **10–12 postów na dobę**: 4 tematy z okien niżej
+  + 7 kart z katalogu = 11.
+- **Tempo rośnie co tydzień** (decyzja właściciela, 21.10): w każdy poniedziałek dochodzi **+1 karta na dobę**
+  (26.10: 8 kart = 12 postów, 2.11: 9 kart = 13, itd.). Nowe godziny kart wstawiaj w luki między istniejącymi,
+  najlepiej wieczorem i w nocy UK (ruch z USA). Górny limit: 25 postów na dobę na kanał (limit API Instagrama to 50/24 h,
+  zostawiamy zapas). Przy błędach limitu albo spadku zasięgów wstrzymaj wzrost i napisz to w podsumowaniu.
 - Karty robi skrypt: **`node tools/karty.js 7`** — bierze 7 kolejnych substancji bez karty, tworzy `tiktok/karta-<slug>/karta.jpg`
   (4:5) i `caption.txt` z linkiem do strony substancji. Opis już spełnia zasady (nazwa nie otwiera opisu, bez nazw w hashtagach,
   bez słów z listy unikanych). Commit + push, potem planuj z URL z `karta.json`.
@@ -26,7 +30,8 @@
 - Post karty: providers `instagram` (`POST`) + `facebook` (`POST`), `media` = JPG karty, `text` = `caption.txt`, pierwszy komentarz EN.
   **Karty nigdy nie idą na TikToka** (są z nazwami substancji).
 - Gdy karty się skończą (wszystkie substancje mają folder), zaczynamy drugi obieg dopiero po 30 dniach od pierwszej karty.
-- Polskie posty sprzed 20.10, które jeszcze wiszą w planie: zamień na szkice (`draft: true`), nie publikujemy ich.
+- **Żadnych polskich postów** (decyzja właściciela, 21.10): kierujemy się na rynek **UK i USA**. Każdy polski post,
+  który wisi w planie (niezależnie od daty utworzenia), zamień na szkic (`draft: true`); nie tworzymy nowych wersji PL.
 
 ## Harmonogram (codziennie, czas UK)
 - 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
