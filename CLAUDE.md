@@ -17,9 +17,8 @@
 - Konto Metricool ma teraz dostęp przez właściciela; stara skrzynka `tokbotx.ai@gmail.com` jest zablokowana — nie używaj jej nigdzie.
 
 ## Więcej postów na IG i FB: karty z katalogu (od 21.10.2026)
-- Decyzja właściciela: na Instagramie i Facebooku publikujemy więcej. Start: **ok. 11 postów dziennie** (4 tematy z okien niżej
-  + 7 kart z katalogu). Co poniedziałek porównaj zasięg na post z poprzednim tygodniem: jeśli nie spadł, dodaj 2 karty dziennie
-  (górna granica na razie 20/dzień). Nie przyspieszaj gwałtownie — skok tempa na nowym koncie wygląda jak bot i tnie zasięgi.
+- Decyzja właściciela: na Instagramie i Facebooku **10–12 postów na dobę**, nie więcej: 4 tematy z okien niżej
+  + 7 kart z katalogu = 11. Tego tempa się trzymamy; nie zwiększamy go bez decyzji właściciela.
 - Karty robi skrypt: **`node tools/karty.js 7`** — bierze 7 kolejnych substancji bez karty, tworzy `tiktok/karta-<slug>/karta.jpg`
   (4:5) i `caption.txt` z linkiem do strony substancji. Opis już spełnia zasady (nazwa nie otwiera opisu, bez nazw w hashtagach,
   bez słów z listy unikanych). Commit + push, potem planuj z URL z `karta.json`.
