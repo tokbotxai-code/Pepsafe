@@ -17,9 +17,19 @@
   if (tbtn) tbtn.addEventListener('click', function () {
     var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
-    try { localStorage.setItem('pep-theme', next); } catch (e) {}
+    // picking the phone's own theme hands control back to the phone
+    try { if (next === (sys.matches ? 'dark' : 'light')) localStorage.removeItem('pep-theme'); else localStorage.setItem('pep-theme', next); } catch (e) {}
     paint();  // the chains repaint in the new palette straight away
   });
+  // follow the phone switching light/dark while the page is open, unless the reader chose a theme
+  var sys = matchMedia('(prefers-color-scheme: dark)');
+  var follow = function () {
+    var saved = null; try { saved = localStorage.getItem('pep-theme'); } catch (e) {}
+    if (saved === 'dark' || saved === 'light') return;
+    html.setAttribute('data-theme', sys.matches ? 'dark' : 'light');
+    paint();
+  };
+  if (sys.addEventListener) sys.addEventListener('change', follow); else if (sys.addListener) sys.addListener(follow);
 
   /* ── reveal on scroll ──────────────────────────────── */
   var els = [].slice.call(document.querySelectorAll('.reveal'));

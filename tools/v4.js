@@ -37,7 +37,7 @@ const famOf = e => FAMS.find(f => (f.m || []).includes(e.n));
 const wadaOf = e => (WADA || {})[e.n] || (e.wa ? ['S0'] : null);
 
 const STATS = [['approved', D.filter(e => e.s === 'A').length], ['unapproved', D.filter(e => e.s === 'U').length],
-['trials', D.filter(e => e.s === 'P').length]];
+['trials', D.filter(e => e.s === 'P').length], ['other', D.filter(e => !'AUP'.includes(e.s)).length]];
 
 const GROUPS = FAMS.filter(f => (f.m || []).length > 1).map(f => ({
   id: f.id, members: f.m, n: f.m.length,
@@ -318,7 +318,7 @@ const H = {
     badge: 'Independent · non-commercial', h1: ['Short chains.', 'Long consequences.', 'Evidence first.'],
     lede: `A reference for ${D.length} peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.`,
     b1: 'Check an overlap', b2: `Browse all ${D.length}`, railTitle: 'Catalog, by status',
-    stats: { approved: 'Approved medicines', unapproved: 'Unapproved', trials: 'In clinical trials' },
+    stats: { approved: 'Approved medicines', unapproved: 'Unapproved', trials: 'In clinical trials', other: 'Other statuses' },
     s1kick: '01 — Overlap checker', s1h: 'Two names, one receptor.',
     s1p: 'The most common mistake online is stacking substances that act on the same target. Pick two groups and see whether they collide — with the reason, not just a red light.',
     selA: 'Group A', selB: 'Group B', same: 'Same group — do not combine', diff: 'Different groups — different targets',
@@ -340,7 +340,7 @@ const H = {
     badge: 'Niezależnie · niekomercyjnie', h1: ['Krótkie łańcuchy.', 'Długie konsekwencje.', 'Najpierw dowody.'],
     lede: `Przewodnik po ${D.length} peptydach i substancjach pokrewnych: czym każda z nich jest, co naprawdę pokazują badania, czy jakikolwiek regulator ją zatwierdził i które grupy działają na ten sam receptor. Nic tu nie jest na sprzedaż, a dawek dla substancji niezatwierdzonych nie podajemy nigdy.`,
     b1: 'Sprawdź dublowanie', b2: `Zobacz wszystkie ${D.length}`, railTitle: 'Katalog według statusu',
-    stats: { approved: 'Zatwierdzone leki', unapproved: 'Niezatwierdzone', trials: 'W badaniach klinicznych' },
+    stats: { approved: 'Zatwierdzone leki', unapproved: 'Niezatwierdzone', trials: 'W badaniach klinicznych', other: 'Pozostałe statusy' },
     s1kick: '01 — Sprawdzarka dublowania', s1h: 'Dwie nazwy, jeden receptor.',
     s1p: 'Najczęstszy błąd w internecie to łączenie substancji działających na ten sam cel. Wybierz dwie grupy i zobacz, czy się pokrywają — razem z powodem, nie samym czerwonym światłem.',
     selA: 'Grupa A', selB: 'Grupa B', same: 'Ta sama grupa — nie łączyć', diff: 'Różne grupy — różne cele',

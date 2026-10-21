@@ -148,6 +148,7 @@ section { padding: 72px 0; }
 .rail-row:nth-child(1) dd { color: var(--k2); }
 .rail-row:nth-child(2) dd { color: var(--k3); }
 .rail-row:nth-child(3) dd { color: var(--k1); }
+.rail-row:nth-child(4) dd { color: var(--ink2); }
 .rail-row dd .dot { position: absolute; right: -14px; top: 6px; }
 
 /* ── tiles and bento ──────────────────────────────────── */
