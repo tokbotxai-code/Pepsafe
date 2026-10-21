@@ -34,9 +34,11 @@ function card(e) {
   // the caption never opens with the name: it starts from the class, the name comes after
   const nameRe = new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
   const lead = [what, how].map(x => sentences(x)[0]).find(x => x && !nameRe.test(x)) || `A closer look at one ${cls.toLowerCase()}.`;
-  const caption = `${lead.trim()} 🔬\n\n${name} — ${cls}. Status: ${status}.${proof ? ' Evidence: ' + proof : ''}\n\n` +
+  // Instagram and Facebook: the full name opens the caption and gets its own hashtag (owner's decision, 21.10)
+  const tag = '#' + name.toLowerCase().replace(/\(.*?\)/g, '').normalize('NFD').replace(/[^a-z0-9]/g, '');
+  const caption = `${name} — ${cls} 🔬 ${lead.trim()}\n\nStatus: ${status}.${proof ? ' Evidence: ' + proof : ''}\n\n` +
     `The full card, with sources: pepsafe.info/p/${s}.html\n\nEducational content, not medical advice. More at pepsafe.info\n\n` +
-    `#peptides #science #health #facts #pepsafe`;
+    `${tag} #peptides #science #health #facts #pepsafe`;
   const html = `<!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0}body{width:1080px;height:1350px;background:#0B1419;color:#E6EEF2;font-family:Inter,sans-serif;position:relative;overflow:hidden}
 .glow{position:absolute;width:900px;height:900px;right:-300px;top:-300px;border-radius:50%;background:radial-gradient(circle,${TONE[e.s]}33,transparent 65%)}

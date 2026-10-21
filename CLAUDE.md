@@ -142,7 +142,11 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   „substancje zakazane” + nazwa substancji to sygnał treści narkotykowej, nawet gdy piszemy o antydopingu w sporcie.
   Zamiast tego neutralnie: „WADA's 2026 list — what changed”.
 - Pierwsze zdanie opisu to ciekawostka albo fakt, nigdy zakaz ani ostrzeżenie.
-- **Nazwa substancji nie otwiera opisu na żadnym kanale, także na Instagramie (decyzja właściciela, 20.10).**
+- **Zmiana 21.10 (decyzja właściciela): na Instagramie i Facebooku piszemy PEŁNE NAZWY** — nazwa może otwierać opis
+  i mieć własny hashtag (np. `#semaglutide`). Karty robią to same (`tools/karty.js`). Dalej obowiązuje lista słów
+  unikanych (kup, dawka, wstrzyknąć itd.) i 💉/🚫. **TikTok bez zmian: zero nazw** (punkty niżej dotyczą już tylko TikToka).
+  Jeśli post idzie naraz na IG + FB + TikTok, ma jeden opis — wtedy bez nazw; nazwy tylko w postach IG + FB.
+- (Tylko TikTok) **Nazwa substancji nie otwiera opisu (decyzja z 20.10, od 21.10 zawężona do TikToka).**
   Zamiast nazwy piszemy mechanizm albo klasę: „potrójny agonista GLP-1”, „kompleks miedziowy”,
   „analog hormonu uwalniającego gonadotropiny”. Nazwa może pojawić się dalej w opisie, jeśli jest potrzebna,
   ale nie w pierwszym zdaniu i nigdy w hashtagu. Powód: pierwsze słowa i hashtagi trafiają do indeksu
