@@ -127,6 +127,8 @@ section { padding: 72px 0; }
 @media (min-width: 640px) { .page-head { padding: 88px 0 64px; } }
 .paper { background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px), linear-gradient(to bottom, var(--grid) 1px, transparent 1px); background-size: 72px 72px; }
 #chains { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+/* on a phone the text spans the full width, so the chains sit behind it, not across it */
+@media (max-width: 639px) { #chains { opacity: .45; } }
 .page-head .wrap, .hero .wrap { position: relative; }
 .page-head h1 { margin: 14px 0 0; }
 .hero-grid { display: grid; gap: 48px; padding-block: 64px 72px; }

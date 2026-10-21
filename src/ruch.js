@@ -13,21 +13,26 @@
   if (!motionOn) html.classList.add('still');
 
   /* ── theme ─────────────────────────────────────────── */
+  var sys = matchMedia('(prefers-color-scheme: dark)');
+  // the browser bar takes the page's colour, not the phone's, once the reader picks a theme
+  var themeBar = function () {
+    var c = html.getAttribute('data-theme') === 'dark' ? '#0B0F0D' : '#F6F6F3';
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', c); });
+  };
+  var setTheme = function (t) { html.setAttribute('data-theme', t); themeBar(); paint(); };
+  themeBar();
   var tbtn = document.getElementById('theme');
   if (tbtn) tbtn.addEventListener('click', function () {
     var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
     // picking the phone's own theme hands control back to the phone
     try { if (next === (sys.matches ? 'dark' : 'light')) localStorage.removeItem('pep-theme'); else localStorage.setItem('pep-theme', next); } catch (e) {}
-    paint();  // the chains repaint in the new palette straight away
+    setTheme(next);  // the chains repaint in the new palette straight away
   });
   // follow the phone switching light/dark while the page is open, unless the reader chose a theme
-  var sys = matchMedia('(prefers-color-scheme: dark)');
   var follow = function () {
     var saved = null; try { saved = localStorage.getItem('pep-theme'); } catch (e) {}
     if (saved === 'dark' || saved === 'light') return;
-    html.setAttribute('data-theme', sys.matches ? 'dark' : 'light');
-    paint();
+    setTheme(sys.matches ? 'dark' : 'light');
   };
   if (sys.addEventListener) sys.addEventListener('change', follow); else if (sys.addListener) sys.addListener(follow);
 
