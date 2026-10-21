@@ -1,19 +1,20 @@
 # PepSafe – zasady publikacji (Metricool, marka 7506075, Europe/London)
 
-> **Dla autopilota:** jego polecenie startowe (z 19.10) mówi o PL i EN, 8 postach dziennie, każdej treści na TikToku
-> i pliku `-muzyka.mp4`. To jest nieaktualne. Okna zostają te same, ale w każdym jest **jeden temat tylko po angielsku**,
+> **Dla autopilota:** jego polecenie startowe (z 19.10) mówi o PL i EN, 8 postach dziennie, dwóch kanałach, każdej treści
+> na TikToku i pliku `-muzyka.mp4`. To jest nieaktualne. Kanały są trzy: Instagram, Facebook i TikTok (sekcja niżej). Okna zostają te same, ale w każdym jest **jeden temat tylko po angielsku**,
 > TikTok dostaje tylko tematy przyrodnicze bez nazw substancji (max 2 dziennie do 25.10), a lektor i nazwy plików
 > są opisane niżej. Przy każdej rozbieżności obowiązuje ten plik, także w sprawie okien i języka.
 
-## Instagram odłączony (od 21.10.2026)
-- 21.10 rano Instagram zniknął z Metricool (posty z 06:15 i 06:30 dostały „Instagram was disconnected”).
-  Samo konto Instagram działa; zerwane jest tylko połączenie w Metricool. Ponowne połączenie robi właściciel
-  (aplikacja Metricool → ustawienia marki → Instagram → Połącz). Konto Metricool jest na zablokowanej skrzynce
-  `tokbotx.ai@gmail.com`, więc logowanie przez kod z maila nie zadziała.
-- **Nie planuj nic na Instagram**, dopóki `getBrandSettings` nie pokaże Instagrama w `networksData`.
-  Sprawdzaj to na początku każdego uruchomienia. Posty już zaplanowane na IG zostaw — same skończą się błędem.
-- Do tego czasu publikujemy tylko na TikToku: tematy przyrodnicze, bez nazw substancji, w limicie dziennym z sekcji o TikToku.
-  Zasady dla IG niżej zostają na wypadek powrotu konta.
+## Kanały: Instagram + Facebook + TikTok (od 21.10.2026)
+- 21.10 właściciel połączył ponownie Instagram i dodał Facebook (stronę) w Metricool. Od teraz każda treść idzie na
+  **trzy kanały**: Instagram, Facebook i TikTok.
+- Na początku każdego uruchomienia sprawdź `getBrandSettings` → `networksData`. Planuj tylko na kanały, które tam są.
+  Jeśli któregoś brakuje, pomiń go i napisz to w podsumowaniu.
+- Facebook dostaje to samo co Instagram, w tym samym poście Metricool (dodatkowy provider `facebook`):
+  film → `facebookData.type "REEL"`, karuzela/ankieta → `"POST"`. Te same zasady treści co na IG
+  (nazwa substancji nie otwiera opisu, bez nazw w hashtagach).
+- TikTok bez zmian: tylko tematy przyrodnicze, bez nazw substancji, w limicie dziennym.
+- Konto Metricool ma teraz dostęp przez właściciela; stara skrzynka `tokbotx.ai@gmail.com` jest zablokowana — nie używaj jej nigdzie.
 
 ## Harmonogram (codziennie, czas UK)
 - 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
@@ -25,13 +26,14 @@
   (`getScheduledPosts`) i uzupełnij każde wolne okno nowym tematem (EN, oba kanały). Bez powtórek
   tematów z ostatnich 14 dni (sprawdź foldery w `tiktok/`).
 
-## Instagram + TikTok zawsze razem
-- Każda treść idzie na **oba** kanały, o tej samej porze (najwyżej 1 min różnicy), w wersji EN.
-- Filmik (Reel/TikTok): jeden post Metricool z oboma providerami (`instagram` typ `REEL` + `tiktok`), ten sam MP4.
+## Instagram + Facebook + TikTok zawsze razem
+- Każda treść idzie na **wszystkie** połączone kanały, o tej samej porze (najwyżej 1 min różnicy), w wersji EN.
+- Filmik: jeden post Metricool z providerami `instagram` (typ `REEL`) + `facebook` (typ `REEL`) + `tiktok`, ten sam MP4.
+  Jeśli temat nie nadaje się na TikToka (nazwy substancji), idzie tylko na IG + FB.
 - Karuzela na IG (`ig-...`, format `feed`): na TikToka idzie **film**, nie slajdy. Skopiuj `post.json` do
   `tiktok/RRRR-MM-DD-<temat>-<lang>/` bez pola `format`, wyrenderuj `node tiktok/make.js tiktok/<folder>`
   i zaplanuj osobny post TikTok **1 minutę po** poście na IG.
-- Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST) i TikToka razem.
+- Stories nie są już używane: Q&A/ankieta idzie jako post `feed` 4:5 w JPG na IG (POST), FB (POST) i TikToka razem.
 - Przed dodaniem posta sprawdź plan (`getScheduledPosts`), czy treść nie jest już na danym kanale.
 
 ## Język: tylko angielski (od 20.10.2026)
@@ -57,8 +59,8 @@
   z Facebook Page, a właściciel nie buduje obecności na Facebooku. Nie wracamy do tego.
 - Slajdy piszemy krótko: 1 zdanie na slajd, 4–5 slajdów, cały film 12–15 s. Lektor wydłuża slajd do długości
   zdania, więc długie akapity dają filmy 45 s+ i zabijają retencję (średni czas obejrzenia to teraz 1–3 s).
-- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram zostaje w pełnym harmonogramie;
-  nadwyżkowe tematy planujemy tylko na Instagram.
+- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram i Facebook zostają w pełnym harmonogramie;
+  nadwyżkowe tematy planujemy tylko na IG + FB.
 
 ## Media
 - Na początku każdej pracy z repo: `git fetch origin main && git reset --hard origin/main` (historia bywa przepisywana; nie używaj `git pull`).
