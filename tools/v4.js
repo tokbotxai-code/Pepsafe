@@ -210,7 +210,7 @@ function layout(o) {
   const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['dosing.html', t.dosingNav],
   ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['blog.html', t.blogNav],
-  ['glossary.html', t.glossNav], ['about.html', t.nav.about]];
+  ['glossary.html', t.glossNav], ['guides.html', L === 'en' ? 'Guides (PDF)' : 'Przewodniki (PDF)'], ['about.html', t.nav.about]];
   return `<!doctype html>
 <html lang="${L}" data-theme="light">
 <head>
@@ -406,6 +406,16 @@ function home(L) {
       <p class="kick reveal">${esc(h.railTitle)}</p>
       <dl>${STATS.map(([k, n]) => `<div class="rail-row reveal"><dt>${esc(h.stats[k])}</dt><dd class="num"><span data-count="${n}">${n}</span></dd></div>`).join('')}</dl>
     </aside>
+  </div>
+</section>
+
+<section class="field" style="padding-top:0">
+  <div class="wrap">
+    <a class="reveal" href="${BASE}${L}/guides.html" style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border:2px solid #3CCFA9;border-radius:14px;padding:16px 20px;text-decoration:none;color:inherit">
+      <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Na lekach GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £5.99 · Protein &amp; Muscle £9.99 · sources on every page · 14-day refund' : 'Bezpieczeństwo £5.99 · Białko i mięśnie £9.99 · źródła na każdej stronie · zwrot w 14 dni'}</span></span>
+      <span class="btn">${en ? 'See inside' : 'Zobacz podgląd'}${ARROW}</span>
+    </a>
+    <p class="small ink2 reveal" style="margin-top:10px">${en ? 'The catalog stays free and ad-free.' : 'Katalog zostaje darmowy i bez reklam.'} <a href="${KOFI}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
   </div>
 </section>
 
