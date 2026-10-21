@@ -507,10 +507,11 @@
       e.preventDefault();
       var b = f.querySelector('[type="submit"]'); if (b) { b.disabled = true; b.textContent = b.dataset.busy; }
       out.hidden = false; out.classList.remove('bad'); out.textContent = pl ? 'Wysyłanie…' : 'Sending…';
+      var go = function () { location.href = f.dataset.next; };
+      setTimeout(go, 6000);   // gdyby serwer formularzy nie odpowiadal, i tak pokaz checkliste
       fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
         method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(f)
-      }).then(function () { location.href = f.dataset.next; })
-        .catch(function () { f.submit(); });
+      }).then(go, go);
     });
   })();
 

@@ -71,6 +71,8 @@ const CF_BEACON = '68889a9fe6604022bd3fa7d786e5d79f';  // licznik odwiedzin (Clo
 const FORM_TO = 'contact@pepsafe.info';
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
+// wersja plikow css/js w adresie, zeby telefony nie trzymaly starej kopii po zmianie
+const ASSET_V = require('crypto').createHash('md5').update(fs.readFileSync(path.join(__dirname, '..', 'src', 'ruch.js')) + fs.readFileSync(path.join(__dirname, '..', 'src', 'site.css'))).digest('hex').slice(0, 8);
 const KOFI = 'https://ko-fi.com/pepsafeinfo';
 const FB = 'https://www.facebook.com/1331805220024626';
 const ICO_FB = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg>';
@@ -221,7 +223,7 @@ ${THEME_BOOT}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${BASE}assets/site.css">
+<link rel="stylesheet" href="${BASE}assets/site.css?v=${ASSET_V}">
 <link rel="canonical" href="${SITE}${BASE}${self}">
 <link rel="alternate" hreflang="en" href="${SITE}${BASE}${self.replace(/^pl\//, 'en/').replace(/\.pl\.html$/, '.html')}">
 <link rel="alternate" hreflang="pl" href="${SITE}${BASE}${self.replace(/^en\//, 'pl/').replace(/(?<!\.pl)\.html$/, self.startsWith('p/') ? '.pl.html' : '.html')}">
@@ -313,7 +315,7 @@ ${o.body}
 </footer>
 
 <script src="${BASE}assets/dane-${L}.js" defer></script>
-<script src="${BASE}assets/ruch.js" defer></script>
+<script src="${BASE}assets/ruch.js?v=${ASSET_V}" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CF_BEACON}"}'></script>
 </body>
 </html>
