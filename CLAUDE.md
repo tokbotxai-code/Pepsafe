@@ -1,5 +1,10 @@
 # PepSafe – zasady publikacji (Metricool, marka 7506075, Europe/London)
 
+> **Dla autopilota:** jego polecenie startowe (z 19.10) mówi o PL i EN, 8 postach dziennie, każdej treści na TikToku
+> i pliku `-muzyka.mp4`. To jest nieaktualne. Okna zostają te same, ale w każdym jest **jeden temat tylko po angielsku**,
+> TikTok dostaje tylko tematy przyrodnicze bez nazw substancji (max 2 dziennie do 25.10), a lektor i nazwy plików
+> są opisane niżej. Przy każdej rozbieżności obowiązuje ten plik, także w sprawie okien i języka.
+
 ## Harmonogram (codziennie, czas UK)
 - 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
 - Każde okno: 1 temat, tylko wersja EN (4 posty dziennie).
