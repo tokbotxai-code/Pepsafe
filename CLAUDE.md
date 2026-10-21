@@ -5,6 +5,14 @@
 > TikTok dostaje tylko tematy przyrodnicze bez nazw substancji (max 2 dziennie do 25.10), a lektor i nazwy plików
 > są opisane niżej. Przy każdej rozbieżności obowiązuje ten plik, także w sprawie okien i języka.
 
+## Instagram odłączony (od 21.10.2026)
+- 21.10 rano Instagram zniknął z Metricool (posty z 06:15 i 06:30 dostały „Instagram was disconnected”).
+  Właściciel nie ma dostępu do konta przez zablokowaną skrzynkę `tokbotx.ai@gmail.com` i na razie go nie odzyskuje.
+- **Nie planuj nic na Instagram**, dopóki `getBrandSettings` nie pokaże Instagrama w `networksData`.
+  Sprawdzaj to na początku każdego uruchomienia. Posty już zaplanowane na IG zostaw — same skończą się błędem.
+- Do tego czasu publikujemy tylko na TikToku: tematy przyrodnicze, bez nazw substancji, w limicie dziennym z sekcji o TikToku.
+  Zasady dla IG niżej zostają na wypadek powrotu konta.
+
 ## Harmonogram (codziennie, czas UK)
 - 4 okna: 06:00–07:00, 09:00–11:00, 13:00–15:00, 19:00–20:00.
 - Każde okno: 1 temat, tylko wersja EN (4 posty dziennie).
