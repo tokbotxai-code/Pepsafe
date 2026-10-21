@@ -85,7 +85,19 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
     return base ? base.replace(/[.\s]*$/, '') + '. ' + OUTRO : OUTRO;
   };
   const vo = post.slides.map(() => null);
-  if (key && post.vo !== false) {
+  // free fallback voice (tools/kokoro.py): used with "vo": "kokoro", with no ElevenLabs key, or when ElevenLabs fails
+  const kokoro = () => {
+    for (let i = 0; i < post.slides.length; i++) {
+      const txt = narrate(post.slides[i], i === post.slides.length - 1);
+      if (!txt) continue;
+      const mp3 = path.join(dir, `vo-${String(i + 1).padStart(2, '0')}.mp3`);
+      try { execFileSync('python3', ['-I', path.join(__dirname, '..', 'tools', 'kokoro.py'), txt, mp3], { stdio: 'ignore' }); }
+      catch (e) { console.error('kokoro voice failed:', e.message.slice(0, 200)); vo.fill(null); return; }
+      vo[i] = { file: mp3, seconds: Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3]).toString().trim()) };
+    }
+  };
+  if (post.vo === 'kokoro' || (!key && post.vo !== false)) kokoro();
+  else if (key && post.vo !== false) {
     for (let i = 0; i < post.slides.length; i++) {
       const txt = narrate(post.slides[i], i === post.slides.length - 1);
       if (!txt) continue;
@@ -98,7 +110,7 @@ ${s.foot ? `<div class="foot">${esc(s.foot)}</div>` : ''}${chain(i)}</body></htm
       fs.writeFileSync(mp3, Buffer.from(await r.arrayBuffer()));
       vo[i] = { file: mp3, seconds: Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3]).toString().trim()) };
     }
-    if (!vo.length) post.slides.forEach(() => vo.push(null)); // a failed call leaves the film music-only
+    if (!vo.length) { post.slides.forEach(() => vo.push(null)); kokoro(); } // a failed paid call falls back to the free voice
   }
   const LEAD = 0.35, TAIL = 0.55; // breathing room before and after each line
   // silent MP4: each slide shown for its own duration with a short crossfade
