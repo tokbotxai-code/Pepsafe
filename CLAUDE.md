@@ -138,6 +138,10 @@
   „szybka utrata wagi → mięśnie / kości / woreczek / włosy / serce”, fakty ze źródeł, **zero nazw substancji**.
   Post TikTok: `media` = `obraz.jpg`, `tiktokData.autoAddMusic: true`, opis z hashtagami TikToka + #pepsafe; przed planem `sprawdz.js`
   (zrób `post.json` z polami caption i slides z nagłówkiem i faktem).
+- **Grafiki właściciela z Dola (21.10):** `node tools/dola.js <spec.json>` zasłania znak Doli, dodaje logo PepSafe i pasek z faktem
+  i źródłem (4:5). Zaplanowane: IG + FB z nazwami 20:30 (22–27.10), IG + FB + TikTok bez nazw 21:30 (25–30.10) —
+  te 6 postów **zajmują slot „obraz w stylu Dola” 21:30 na TikToku w dniach 25–30.10**, nie dokładaj tam drugiego.
+  Obrazy z generatora AI: `isAiGenerated: true` (IG) i `isAigc: true` (TikTok) — wyjątek od zasady w sekcji „Treść”.
 - **Krótki pokaz slajdów na TikToka (od 22.10, decyzja właściciela):** karuzela zdjęć przez API stała w miejscu, więc
   wysyłamy **film**, który sam przełącza 2–3 strony (ok. 7 s, nasza spokojna muzyka). 1 dziennie o **17:00 UK**, tylko TikTok.
   `node tools/fotki.js tiktok/<folder-przyrodniczy> RRRR-MM-DD-short-<temat>-en 3` → `pepsafe-<folder>-slajdy.mp4`
