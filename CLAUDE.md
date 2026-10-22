@@ -4,6 +4,9 @@
 > na TikToku i pliku `-muzyka.mp4`. To jest nieaktualne. Kanały są trzy: Instagram, Facebook i TikTok (sekcja niżej). Okna zostają te same, ale w każdym jest **jeden temat tylko po angielsku**,
 > TikTok dostaje tylko tematy przyrodnicze bez nazw substancji (max 2 dziennie do 25.10), a lektor i nazwy plików
 > są opisane niżej. Przy każdej rozbieżności obowiązuje ten plik, także w sprawie okien i języka.
+> **Aktualizacja 22.10:** polecenie autopilota zostało przepisane od nowa (wolna ręka, rolki, story, pokazy slajdów, reklamy,
+> testy, raport „Wczoraj”). Jego punkty STEP 4 to decyzje właściciela i są też zapisane w tym pliku (sekcje „Reklamy codziennie”,
+> „Opinie klientów”, „Link w bio”, „Plan testów”).
 
 ## Pracuj samodzielnie (decyzja właściciela, 21.10)
 - Właściciel nie chce pytań ani propozycji do zatwierdzenia. Wszystko, co wynika z tego pliku, **rób od razu sam**
@@ -254,8 +257,9 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
     czego brak — „brak danych”.
 
 ## Link w bio (od 21.10)
-- `tools/v4.js` buduje stronę **pepsafe.info/start/** (przyciski: peptyd dnia, katalog, porównanie, objawy, słownik, pytanie)
-  pod adresami `/start/ig.html`, `/start/tt.html`, `/start/fb.html` (noindex). Ta sama treść; osobne adresy pokazują
+- `tools/v4.js` pod adresami `/start/ig.html`, `/start/tt.html`, `/start/fb.html` wystawia **pełną stronę główną**
+  (decyzja właściciela 21.10: bez uproszczonej strony z przyciskami — nie przywracać), noindex, canonical na `/`.
+  Na stronie głównej jest baner z przewodnikami PDF i link do Ko-fi, w menu zakładka „Guides (PDF)”. Osobne adresy pokazują
   w `node tools/odwiedziny.js`, która platforma przysyła ludzi. W bio: IG → `pepsafe.info/start/ig.html`, TikTok → `/start/tt.html`,
   Facebook → `/start/fb.html`. Raporty liczą wejścia na te adresy jako „z Instagrama/TikToka/Facebooka”.
 
@@ -263,19 +267,33 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£5.99).
   Plik PDF NIE trafia do repo (repo jest publiczne). `GUIDE_URL` w `tools/v4.js` daje ramkę „Get the PDF” na kartach leków GLP-1/GIP
   i przycisk na `/start/`.
-- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£9.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (dalej max 1 wzmianka dziennie, nigdy TikTok).
+- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£9.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (limit reklam: sekcja „Reklamy codziennie” niżej; nigdy grafiki przewodnika na TikToku).
 - **Lista mailowa (od 21.10):** `/en/free.html` (i `/pl/`) — zapis e-mail + zgoda → FormSubmit na contact@pepsafe.info
   (temat „PepSafe: newsletter signup”), potem `/en/free-thanks.html` z darmową checklistą `free/glp1-muscle-checklist.pdf`
   i poleceniem przewodnika o mięśniach. Polityka prywatności: `/en/privacy.html`, `/pl/privacy.html` (link w stopce).
   Przycisk „Free checklist 🎁” na `/start/`. MailerLite założony (formularz „PepSafe signup”), ale embed nie dał się
   skonfigurować z telefonu — gdy właściciel dokończy na komputerze, podmień `action` formularza i zaimportuj adresy.
   W postach IG + FB można czasem dodać: „Free checklist: 5 mistakes that cost you muscle on GLP-1 — link in bio”.
-- **Strona `/en/guides.html` (i `/pl/`)**: podgląd 3 stron z każdego PDF (`guides/*.jpg`, ze znakiem PREVIEW), prawdziwe źródła, gwarancja zwrotu 14 dni (prośba na contact@ → zwrot przez Ko-fi/PayPal). Link w bio i ramki GLP-1 do niej prowadzą. **Nigdy nie dodajemy zmyślonych opinii** (zakaz w UK — DMCC Act, w USA — FTC); tylko prawdziwe, z imieniem i krajem, za zgodą kupującego.
+- **Strona `/en/guides.html` (i `/pl/`)**: podgląd 3 stron z każdego PDF (`guides/*.jpg`, ze znakiem PREVIEW), prawdziwe źródła, gwarancja zwrotu 14 dni (prośba na contact@ → zwrot przez Ko-fi/PayPal). Link w bio i ramki GLP-1 do niej prowadzą.
+- **Opinie klientów (decyzja właściciela 22.10):** dozwolone, ale tylko prawdziwe: autor zatwierdził na piśmie dokładny tekst,
+  podpis imieniem albo inicjałami + kraj, cytat słowo w słowo (skrót do dosłownego fragmentu wolno, przeróbki nie).
+  Gdy autor dostał przewodnik za darmo, zawsze krótka notka, np. „Reviewers received free copies of both guides.” (wymóg UK DMCC Act
+  i FTC w USA — nie usuwamy jej). Nigdy nie wymyślamy, nie łączymy ani nie „poprawiamy” opinii. Na `/en/guides.html` i w reklamach IG + FB, nigdy na TikToku.
 - Pakiet obu przewodników (ZIP: 2 PDF + kalkulator + tracker) — £11.99; link jeszcze nie podany przez właściciela. Gdy będzie: stała `BUNDLE_URL` w v4.js i przycisk na `/start/` oraz w ramce GLP-1.
 - Wpłaty: profil Ko-fi **https://ko-fi.com/pepsafeinfo** (`KOFI` w `tools/v4.js`: stopka każdej strony + przycisk na `/start/`). Płatności przez PayPal właściciela.
-- Autopilot: 2–3 razy w tygodniu (np. pon, śr, pt) w opisie jednego posta IG + FB o GLP-1 dopisz linijkę
-  „📘 Our free-to-read catalog is at pepsafe.info — and the full GLP-1 Safety Guide (PDF) is linked in bio.” Nigdy na TikToku.
-  Nie więcej niż 1 wzmianka dziennie, bez nachalnej sprzedaży.
+- **Reklamy codziennie (decyzja właściciela 22.10, zastępuje dawny limit „max 1 wzmianka dziennie”):** 6 postów dziennie,
+  po 2 na platformę, **każdy o innej godzinie** (nigdy dwie platformy naraz): IG 10:45 i 20:15, FB 14:15 i 23:15, TikTok 12:00 i 19:00 (UK).
+  Grafiki 4:5 w `tiktok/2026-10-22-ads-en/` (ad-safety, ad-muscle, ad-coffee, ad-checklist); codziennie inny opis, czasem nowy wariant grafiki.
+  - IG + FB: na zmianę przewodniki PDF (Safety £5.99, Protein & Muscle £9.99; na FB link `/en/guides.html`, na IG „link in bio”)
+    i prośba o kawę na Ko-fi (`ko-fi.com/pepsafeinfo`).
+  - TikTok: tylko kawa na Ko-fi i darmowa checklista („guides in bio”), bez nazw substancji i bez grafik z okładką przewodnika;
+    `tiktokData`: tytuł, `commercialContentOwnBrand: true`, `autoAddMusic: true`.
+  - Dalej obowiązuje lista słów unikanych, zero zmyślonych liczb i zasada o opiniach wyżej.
+
+## Plan testów (24–30.10)
+- Szczegóły w `docs/testy.md`: codziennie jedna zmienna (długość, haczyk, pierwsza klatka, temat, format, „do zapisania”, godzina),
+  wersje A/B na filmie z okna 13:00–15:00 i krótkim filmie TikToka o 17:00. Wynik po 48 h, podsumowanie w raporcie 2.11, zwycięzcy wchodzą do stałych zasad.
+- Punkt wyjścia: rolki IG oglądane średnio 1–3 s; filmy przyrodnicze na TikToku ~230 wyświetleń; powtórka tematu na TikToku tego samego dnia — 5.
 
 ## Odwiedziny na stronie (Cloudflare Web Analytics)
 - Beacon wstawia **generator**: stała `CF_BEACON` w `tools/v4.js` trafia do każdej generowanej strony (21.10: 452)
