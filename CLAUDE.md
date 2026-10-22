@@ -1,12 +1,8 @@
 # PepSafe – zasady publikacji (Metricool, marka 7506075, Europe/London)
 
-> **Dla autopilota:** jego polecenie startowe (z 19.10) mówi o PL i EN, 8 postach dziennie, dwóch kanałach, każdej treści
-> na TikToku i pliku `-muzyka.mp4`. To jest nieaktualne. Kanały są trzy: Instagram, Facebook i TikTok (sekcja niżej). Okna zostają te same, ale w każdym jest **jeden temat tylko po angielsku**,
-> TikTok dostaje tylko tematy przyrodnicze bez nazw substancji (max 2 dziennie do 25.10), a lektor i nazwy plików
-> są opisane niżej. Przy każdej rozbieżności obowiązuje ten plik, także w sprawie okien i języka.
-> **Aktualizacja 22.10:** polecenie autopilota zostało przepisane od nowa (wolna ręka, rolki, story, pokazy slajdów, reklamy,
-> testy, raport „Wczoraj”). Jego punkty STEP 4 to decyzje właściciela i są też zapisane w tym pliku (sekcje „Reklamy codziennie”,
-> „Opinie klientów”, „Link w bio”, „Plan testów”).
+> **Dla autopilota (stan na 22.10 wieczorem):** kanały: Instagram + Facebook + TikTok, wszystko po angielsku, rynek UK/USA.
+> Jego polecenie (przepisane 22.10) ma pierwszeństwo tylko w punktach STEP 4; resztę rozstrzyga ten plik.
+> Zasady z 22.10 wieczorem (sekcje „Mniej, a lepiej” i „Reklamy codziennie”) zastępują wcześniejsze limity, także STEP 4(a) w poleceniu.
 
 ## Pracuj samodzielnie (decyzja właściciela, 21.10)
 - Właściciel nie chce pytań ani propozycji do zatwierdzenia. Wszystko, co wynika z tego pliku, **rób od razu sam**
@@ -37,10 +33,9 @@
 ## Więcej postów na IG i FB: karty z katalogu (od 21.10.2026)
 - Decyzja właściciela (21.10, na stałe): na Instagramie i Facebooku bazowo **10–12 postów na dobę**: 4 tematy z okien niżej
   + 7 kart z katalogu = 11.
-- **Tempo rośnie co tydzień** (decyzja właściciela, 21.10): w każdy poniedziałek dochodzi **+1 karta na dobę**
-  (26.10: 8 kart = 12 postów, 2.11: 9 kart = 13, itd.). Nowe godziny kart wstawiaj w luki między istniejącymi,
-  najlepiej wieczorem i w nocy UK (ruch z USA). Górny limit: 25 postów na dobę na kanał (limit API Instagrama to 50/24 h,
-  zostawiamy zapas). Przy błędach limitu albo spadku zasięgów wstrzymaj wzrost i napisz to w podsumowaniu.
+- **Mniej, a lepiej (decyzja właściciela 22.10 wieczorem, zastępuje „+1 karta co poniedziałek”):** zostajemy przy **7 kartach dziennie**,
+  bez wzrostu. Przy ~22 postach dziennie IG miał 243 wyświetlenia — liczba postów nie podnosi zasięgu. Po wynikach testów (2.11)
+  raport proponuje, czy zmniejszyć liczbę kart; nie zwiększamy jej bez decyzji właściciela.
 - Karty robi skrypt: **`node tools/karty.js 7`** — bierze 7 kolejnych substancji bez karty, tworzy `tiktok/karta-<slug>/karta.jpg`
   (4:5) i `caption.txt` z linkiem do strony substancji. Opis już spełnia zasady (nazwa nie otwiera opisu, bez nazw w hashtagach,
   bez słów z listy unikanych). Commit + push, potem planuj z URL z `karta.json`.
@@ -92,67 +87,30 @@
 - Folder tematu: `tiktok/RRRR-MM-DD-<temat>-en/`. Nie dublujemy tematu w wersji `-pl`.
 - Pierwszy komentarz i zakończenie opisu w wersji EN („More at pepsafe.info”).
 
-## Dźwięk w filmach (od 20.10.2026)
-- Filmy mają **lektora**: `node tiktok/make.js` czyta każdy slajd głosem ElevenLabs „Jessica”
-  (`cgSgspJ2msm6clMCkdW9`, model `eleven_multilingual_v2`) i podkłada `music-calm.m4a` ściszony do 14%.
-  Plik do publikacji: `pepsafe-<folder>-lektor.mp4`.
-- Wymaga zmiennej `ELEVENLABS_API_KEY` w środowisku. Bez niej (albo przy `"vo": false` w `post.json`) film powstaje
-  z samą muzyką jako `pepsafe-<folder>-muzyka.mp4` — skrypt się nie wywala.
-- Pole `"vo"` w slajdzie nadpisuje zdanie czytane przez lektora (na slajdzie może być krótszy tekst).
-- Zostajemy na darmowym planie ElevenLabs (decyzja właściciela): 10 000 znaków/mies. ≈ 40 filmów.
-  Dlatego lektora dostaje **tylko jeden film dziennie** — ten z najmocniejszym tematem. Pozostałe renderujemy
-  z `"vo": false`, czyli z samym podkładem. Przekroczenie limitu kończy się błędem i filmem bez dźwięku.
-- **Budżet lektora:** przed renderem z lektorem uruchom `node tools/lektor.js` (liczy znaki z filmów `-lektor.mp4`
-  od 20.10). Kod wyjścia 1 = zostało < 400 znaków: renderuj wszystko z `"vo": false` aż do odnowienia limitu.
-  21.10 po 17 filmach zostało ok. 4 900 znaków, więc lektor **tylko 1 film dziennie i tylko ten, który idzie na TikToka**,
-  zdania krótkie (cel ≤ 250 znaków na film). Gdy limit się odnowi, zmień datę startu w wywołaniu skryptu.
-- **Darmowy lektor Kokoro (od 21.10, decyzja właściciela: KAŻDY film ma głos, ElevenLabs NIE używamy — kredyty zostają):**
-  `make.js` domyślnie czyta wszystko głosem US `af_heart`; nie dodawaj `"vo": "eleven"` bez decyzji właściciela.
-  Zasady o budżecie ElevenLabs i „1 film dziennie” wyżej są nieaktualne. `"vo": false` nie używamy — wtedy też ma głos (open source, Apache 2.0, bez limitu). Przed pierwszym renderem w sesji:
-  `pip install -q kokoro-onnx soundfile` (model ~350 MB pobiera się sam do `~/.cache/kokoro`). Głos domyślny `af_heart`
-  (US), brytyjski `bf_emma` przez `KOKORO_VOICE=bf_emma`. Gdy ElevenLabs zwróci błąd albo nie ma klucza, `make.js`
-  sam przełącza się na Kokoro. Plik wynikowy jak zawsze `pepsafe-<folder>-lektor.mp4`.
-- **Stare filmy bez głosu (decyzja właściciela, 21.10: każdy film ma mieć lektora, także te, które już wyszły).**
-  Ponownie opublikowane z głosem: COA (21.10), GHK-Cu (23.10), „What is a peptide” i TB-500 vs BPC-157 (26.10).
-  Zostało 9 folderów z 18–19.10 (`bpc-157`, `cjc-ipa`, `melanotan`, `mt1-mt2-3diff`, `mt1-vs-mt2`, `semaglutyd`,
-  `tb500`, `wada` i podobne `-en`): mają na slajdach słowa z listy unikanych (injection, dose, banned, buy, shops, vials).
-  Od 27.10 bierz **1 dziennie**: przepisz slajdy bez tych słów (4–5 krótkich slajdów), opis wg obecnych zasad,
-  render z `"vo": "kokoro"`, publikacja tylko IG + FB w wolnym slocie. Na TikToka nigdy (nazwy substancji).
-- Publikacja zostaje automatyczna (`autoPublish: true`) na obu kanałach.
-- Muzyka z katalogu TikToka jest niemożliwa przez API (da się tylko montując w aplikacji). Katalog audio
-  Instagrama zwraca 403 dla tego konta i **temat jest zamknięty**: wymagałby konta Business połączonego
-  z Facebook Page. 21.10 wieczorem, po przełączeniu konta na Business przez właściciela, test nadal dał
-  „Authorization Error” z katalogu audio Metricool. Nie próbuj ponownie, dopóki właściciel nie napisze, że podłączył IG w Metricool przez Facebooka.
-- Slajdy piszemy krótko: 1 zdanie na slajd, 4–5 slajdów, cały film 12–15 s. Lektor wydłuża slajd do długości
-  zdania, więc długie akapity dają filmy 45 s+ i zabijają retencję (średni czas obejrzenia to teraz 1–3 s).
-- Do niedzieli 25.10 na TikToka idą maks. **2 filmy dziennie**. Instagram i Facebook zostają w pełnym harmonogramie;
-  nadwyżkowe tematy planujemy tylko na IG + FB.
-- **Wzrost na TikToku od 26.10** (decyzja właściciela, 21.10): pon–śr **3 filmy dziennie**, od czwartku 29.10 **4 dziennie**
-  (każde okno ma film przyrodniczy). Warunek każdego kroku: przez ostatnie 3 dni żaden film nie został usunięty
-  ani zablokowany (status ERROR/usunięty w Metricool albo „Video removed”). Jeśli był — wróć do 2 dziennie na 3 dni
-  i napisz to w podsumowaniu. Więcej niż 4 dziennie nie dajemy bez decyzji właściciela.
-- **TikTok dziennie (decyzja właściciela 21.10, zastępuje limity „2 dziennie” i „wzrost od 26.10” wyżej):**
-  - do soboty 24.10: **2 filmy z lektorem + 1 krótki pokaz slajdów z muzyką** (17:00) = 3;
-  - od niedzieli 25.10: **2 z lektorem + 2 z muzyką** = 4 — krótki pokaz slajdów (17:00) i **obraz w stylu Dola** (21:30 UK).
-  - Dalej obowiązuje hamulec: gdy w ostatnich 3 dniach jakiś film zniknął/ERROR, wracamy do 2 dziennie na 3 dni.
-- **Obraz w stylu Dola (TikTok, od 25.10):** `node tools/obraz.js RRRR-MM-DD-img-<temat>-en "<prompt tła po angielsku>" "<NAGŁÓWEK>" "<jedno zdanie faktu>"`.
-  Tło generuje darmowy Pollinations (ciemne, kinowe: sylwetki z żaru, przezroczyste ciało, narządy, komórki — bez strzykawek,
-  fiolek, tabletek, nagości i twarzy realnych osób), nagłówek i fakt nakłada skrypt (nasza pisownia). Temat: ostrzeżenia typu
-  „szybka utrata wagi → mięśnie / kości / woreczek / włosy / serce”, fakty ze źródeł, **zero nazw substancji**.
-  Post TikTok: `media` = `obraz.jpg`, `tiktokData.autoAddMusic: true`, opis z hashtagami TikToka + #pepsafe; przed planem `sprawdz.js`
-  (zrób `post.json` z polami caption i slides z nagłówkiem i faktem).
-- **Grafiki właściciela z Dola (21.10):** `node tools/dola.js <spec.json>` zasłania znak Doli, dodaje logo PepSafe i pasek z faktem
-  i źródłem (4:5). Zaplanowane: IG + FB z nazwami 20:30 (22–27.10), IG + FB + TikTok bez nazw 21:30 (25–30.10) —
-  te 6 postów **zajmują slot „obraz w stylu Dola” 21:30 na TikToku w dniach 25–30.10**, nie dokładaj tam drugiego.
-  Obrazy z generatora AI: `isAiGenerated: true` (IG) i `isAigc: true` (TikTok) — wyjątek od zasady w sekcji „Treść”.
-- **Krótki pokaz slajdów na TikToka (od 22.10, decyzja właściciela):** karuzela zdjęć przez API stała w miejscu, więc
-  wysyłamy **film**, który sam przełącza 2–3 strony (ok. 7 s, nasza spokojna muzyka). 1 dziennie o **17:00 UK**, tylko TikTok.
-  `node tools/fotki.js tiktok/<folder-przyrodniczy> RRRR-MM-DD-short-<temat>-en 3` → `pepsafe-<folder>-slajdy.mp4`
-  (z `post.json` tematu, który już wyszedł; bez powtórki tego samego tematu), potem `node tools/sprawdz.js` (exit 0),
-  commit + push, post TikTok z tym MP4, `text` = `caption.txt`, `isAigc: false`. To jest normalny post: liczy się do limitu
-  API (12/24 h) i do dziennej liczby filmów na TikToku (do 25.10 max 2 — wtedy krótki pokaz zastępuje jeden z filmów).
-- Najprostsze źródło dodatkowych filmów: przyrodnicze tematy, które już poszły na IG + FB (np. białko jajka, zwijanie
-  łańcuchów, receptor), wrzucone na TikToka 3–5 dni później — po `node tools/sprawdz.js` (exit 0).
+## Dźwięk i długość filmów
+- **Każdy film ma lektora.** `node tiktok/make.js tiktok/<folder>` czyta slajdy darmowym głosem Kokoro (US `af_heart`, brytyjski
+  przez `KOKORO_VOICE=bf_emma`) i podkłada `music-calm.m4a`. Przed pierwszym renderem w sesji: `pip install -q kokoro-onnx soundfile`.
+  Plik do publikacji: `pepsafe-<folder>-lektor.mp4`. ElevenLabs nie używamy (kredyty zostają); nie dodawaj `"vo": "eleven"`.
+- Pole `"vo"` w slajdzie nadpisuje zdanie lektora (na slajdzie może być krótszy tekst).
+- **Krótko:** 1 zdanie na slajd, 3–5 slajdów, 7–15 s (lektor wydłuża slajd do długości zdania). Średni czas oglądania to 1–3 s,
+  więc pierwsze zdanie musi być haczykiem.
+- Stare filmy z 18–19.10 (`bpc-157`, `cjc-ipa`, `melanotan`, `mt1-mt2-3diff`, `mt1-vs-mt2`, `semaglutyd`, `tb500`, `wada`, wersje `-en`)
+  mają słowa z listy unikanych. Od 27.10 1 dziennie: przepisz slajdy bez tych słów, render z lektorem, tylko IG + FB w wolnym slocie.
+- Muzyka z katalogu TikToka/Instagrama przez API jest niemożliwa (403). Nie próbuj ponownie bez sygnału od właściciela.
+- Publikacja automatyczna (`autoPublish: true`).
+
+## TikTok dziennie (bez nazw substancji, max 4 filmy)
+- **2 filmy przyrodnicze z lektorem** w oknach + **krótki pokaz o 17:00** (`node tools/fotki.js tiktok/<folder> RRRR-MM-DD-short-<temat>-en 3`
+  albo 3-slajdowy `post.json` + `make.js`) + od 25.10 **obraz w stylu Dola o 21:30** (25–30.10 ten slot zajmują już grafiki właściciela).
+- Plus 1 reklama o 19:00 (kawa albo checklista, sekcja „Reklamy codziennie”). Razem maks. 5 postów na TikToku dziennie, limit API 12/24 h.
+- **Hamulec:** gdy w ostatnich 3 dniach jakiś film zniknął albo ma ERROR — 2 filmy dziennie przez 3 dni, napisz to w podsumowaniu.
+- Ten sam temat na TikToku najwyżej raz na 14 dni (powtórka tego samego dnia: 5 wyświetleń zamiast ~230).
+- **Obraz w stylu Dola:** `node tools/obraz.js RRRR-MM-DD-img-<temat>-en "<prompt tła po angielsku>" "<NAGŁÓWEK>" "<jedno zdanie faktu>"`.
+  Tło z Pollinations (ciemne, kinowe: sylwetki, przezroczyste ciało, narządy, komórki — bez strzykawek, fiolek, tabletek, nagości
+  i twarzy realnych osób). Temat: skutki szybkiej utraty wagi, fakty ze źródeł, zero nazw. Post: `obraz.jpg`, `autoAddMusic: true`,
+  `isAigc: true`; przed planem `sprawdz.js` (zrób `post.json` z caption i slides).
+- **Grafiki właściciela z Dola:** `node tools/dola.js <spec.json>`; obrazy AI mają `isAiGenerated: true` (IG) i `isAigc: true` (TikTok).
+- Źródło dodatkowych filmów: przyrodnicze tematy, które już poszły na IG + FB, wrzucone na TikToka 3–5 dni później (po `sprawdz.js`).
 
 ## Media
 - Na początku każdej pracy z repo: `git fetch origin main && git reset --hard origin/main` (historia bywa przepisywana; nie używaj `git pull`).
@@ -281,8 +239,9 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   i FTC w USA — nie usuwamy jej). Nigdy nie wymyślamy, nie łączymy ani nie „poprawiamy” opinii. Na `/en/guides.html` i w reklamach IG + FB, nigdy na TikToku.
 - Pakiet obu przewodników (ZIP: 2 PDF + kalkulator + tracker) — £11.99; link jeszcze nie podany przez właściciela. Gdy będzie: stała `BUNDLE_URL` w v4.js i przycisk na `/start/` oraz w ramce GLP-1.
 - Wpłaty: profil Ko-fi **https://ko-fi.com/pepsafeinfo** (`KOFI` w `tools/v4.js`: stopka każdej strony + przycisk na `/start/`). Płatności przez PayPal właściciela.
-- **Reklamy codziennie (decyzja właściciela 22.10, zastępuje dawny limit „max 1 wzmianka dziennie”):** 6 postów dziennie,
-  po 2 na platformę, **każdy o innej godzinie** (nigdy dwie platformy naraz): IG 10:45 i 20:15, FB 14:15 i 23:15, TikTok 12:00 i 19:00 (UK).
+- **Reklamy codziennie (decyzja właściciela 22.10 wieczorem, zastępuje 6 dziennie i STEP 4(a) w poleceniu autopilota):**
+  **3 posty dziennie, 1 na platformę, każdy o innej godzinie:** FB 14:15, TikTok 19:00, IG 20:15 (UK). Powód: przy małym koncie
+  6 reklam dziennie wygląda jak sklep i zniechęca obserwujących. Reklam już zaplanowanych na 23–24.10 nie ruszamy; od 25.10 robimy 3.
   Grafiki 4:5 w `tiktok/2026-10-22-ads-en/` (ad-safety, ad-muscle, ad-coffee, ad-checklist); codziennie inny opis, czasem nowy wariant grafiki.
   - IG + FB: na zmianę przewodniki PDF (Safety £5.99, Protein & Muscle £9.99; na FB link `/en/guides.html`, na IG „link in bio”)
     i prośba o kawę na Ko-fi (`ko-fi.com/pepsafeinfo`).
