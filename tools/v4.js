@@ -393,6 +393,8 @@ function spotlight(L) {
   const items = [];
   for (let r = 0; r < 6; r++) for (const g of [myths, tricks, words, cards]) { if (g[r]) { items.push(dayItem, g[r]); } }
   if (!items.length) return '';
+  const fresh = D.slice(-3).reverse();
+  const freshHtml = `<p class="small ink2" style="margin-top:14px"><b>${en ? 'New in the catalog:' : 'Nowe w katalogu:'}</b> ${fresh.map(x => `<a href="${esc(BASE + cardPath(x, L))}">${esc(nm(x.n, en))}</a>`).join(' · ')}</p>`;
   const first = items[1] || items[0];
   const more = en ? 'Read more' : 'Czytaj dalej';
   return `
@@ -403,6 +405,7 @@ function spotlight(L) {
       <p class="small ink2" id="spot-d">${esc(first.d)}</p>
       <p class="small"><b>${esc(more)}</b>${ARROW}</p>
     </a>
+    ${freshHtml}
   </div>
   <script>(function(){var I=${JSON.stringify(items).replace(/</g, '\\u003c')},n=1,a=document.getElementById('spot');if(!a||I.length<2)return;
   function show(){var x=I[n%I.length];a.style.opacity=0;setTimeout(function(){document.getElementById('spot-k').textContent=x.k;document.getElementById('spot-t').textContent=x.t;document.getElementById('spot-d').textContent=x.d;if(x.u)a.href=x.u;a.style.opacity=1;},400);n++;}
