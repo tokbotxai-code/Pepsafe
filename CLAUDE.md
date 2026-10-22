@@ -354,6 +354,8 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   odsyłającą do drugiego. Nie łączyć ich.
 
 ## TikTok po ograniczeniu konta (od 20.10.2026)
+- **Aktualizacja 22.10: TikTok przywraca filmy — usuniętych zostało już tylko 8** (właściciel sprawdza w aplikacji).
+  Przywróconych nie publikujemy ponownie ani nie edytujemy; nowe treści dalej wyłącznie przyrodnicze, bez nazw.
 - **Aktualizacja 20.10 wieczorem: usuniętych jest 15 filmów.** Para WADA opublikowana 20.10 o 06:15 i 06:30
   została zdjęta tego samego dnia (strony filmów zwracają „This page isn't available”). Miały emotkę 🚫,
   ramę „lista zakazanych substancji” i hashtag `#bpc157` — czyli dokładnie to, czego zakazują zasady niżej.
