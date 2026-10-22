@@ -377,6 +377,37 @@ const cardRow = (e, en, L) => `<a class="card tile reveal" href="${BASE}${cardPa
       <span><b>${esc(nm(e.n, en))}</b><em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em></span>
       <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span></a>`;
 
+// werdykt mitu z danych: f = falsz, p = czesciowo, t = do sprawdzenia
+const verdict = (v, en) => v === 'f' ? (en ? 'Myth' : 'Mit') : v === 'p' ? (en ? 'Partly true' : 'Częściowo prawda') : (en ? 'Worth checking' : 'Do sprawdzenia');
+// rotacja na glownej: peptyd dnia na zmiane z mitem, trikiem, slowkiem ze slownika i losowa karta katalogu.
+// Kolejnosc zalezy od daty, wiec codziennie inna; bez JS widac pierwszy element.
+function spotlight(L) {
+  const en = L === 'en', i = en ? 1 : 0, seed = +TODAY.replace(/-/g, '');
+  const pick = (arr, n) => { const a = arr.slice(); let x = seed; for (let k = a.length - 1; k > 0; k--) { x = (x * 1103515245 + 12345) % 2147483648; const j = x % (k + 1); [a[k], a[j]] = [a[j], a[k]]; } return a.slice(0, n); };
+  const de = D.find(x => x.n === DAY.n);
+  const dayItem = { k: en ? 'Peptide of the day' : 'Peptyd dnia', t: nm(DAY.n, en), d: (en ? DAY.en : DAY.pl).split('. ').slice(0, 2).join('. ').replace(/\.?$/, '.'), u: de ? BASE + cardPath(de, L) : '' };
+  const myths = pick((MYTHS || []).filter(x => Array.isArray(x) && x.length >= 4 && x[2] !== 't'), 6).map(x => ({ k: verdict(x[2], en), t: x[i], d: (x[en ? 4 : 3] || x[3]).split('. ')[0].replace(/\.?$/, '.'), u: `${BASE}${L}/alerts.html` }));
+  const tricks = pick((TRICKS || []).filter(x => x && x.t && x.d), 6).map(x => ({ k: en ? 'Marketing trick' : 'Trik marketingowy', t: x.t[i], d: x.d[i].split('. ')[0].replace(/\.?$/, '.'), u: `${BASE}${L}/alerts.html` }));
+  const words = pick((GL || []).map(g => (en ? g.en : g.pl)).filter(Boolean), 6).map(g => ({ k: en ? 'Word of the day' : 'Słowo ze słownika', t: g[0], d: g[1], u: `${BASE}${L}/glossary.html` }));
+  const cards = pick(D.filter(x => x.n !== DAY.n), 6).map(x => ({ k: en ? 'From the catalog' : 'Z katalogu', t: nm(x.n, en), d: en && EN[x.n] ? EN[x.n][1] : x.c, u: BASE + cardPath(x, L) }));
+  const items = [];
+  for (let r = 0; r < 6; r++) for (const g of [myths, tricks, words, cards]) { if (g[r]) { items.push(dayItem, g[r]); } }
+  if (!items.length) return '';
+  const first = items[1] || items[0];
+  const more = en ? 'Read more' : 'Czytaj dalej';
+  return `
+  <div class="wrap">
+    <a class="tile glass spot reveal" id="spot" href="${esc(first.u)}" style="display:block;margin-top:28px;text-decoration:none;color:inherit;transition:opacity .4s" aria-live="polite">
+      <p class="kick" id="spot-k">${esc(first.k)}</p>
+      <h3 class="gtitle sm" id="spot-t">${esc(first.t)}</h3>
+      <p class="small ink2" id="spot-d">${esc(first.d)}</p>
+      <p class="small"><b>${esc(more)}</b>${ARROW}</p>
+    </a>
+  </div>
+  <script>(function(){var I=${JSON.stringify(items).replace(/</g, '\\u003c')},n=1,a=document.getElementById('spot');if(!a||I.length<2)return;
+  function show(){var x=I[n%I.length];a.style.opacity=0;setTimeout(function(){document.getElementById('spot-k').textContent=x.k;document.getElementById('spot-t').textContent=x.t;document.getElementById('spot-d').textContent=x.d;if(x.u)a.href=x.u;a.style.opacity=1;},400);n++;}
+  var tm=setInterval(show,8000);a.addEventListener('mouseenter',function(){clearInterval(tm)});a.addEventListener('mouseleave',function(){tm=setInterval(show,8000)});})();</script>`;
+}
 function home(L) {
   const en = L === 'en', t = W[L], h = H[L], day = DAY;
   const faq = FAQ.filter(x => Array.isArray(x) && x[0] && x[1]).slice(0, 4);
@@ -465,6 +496,7 @@ function home(L) {
       ${(day.src || []).length ? `<p class="kick srcs">${esc(t.srcs)}</p><ul class="srcs-list">${day.src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul>` : ''}
     </div>
   </div>
+  ${spotlight(L)}
 </section>
 
 <section id="catalog">
@@ -940,7 +972,7 @@ ${tr.length ? `<section class="band"><div class="wrap">
 </div></section>` : ''}
 ${my.length ? `<section><div class="wrap">
   <p class="kick reveal">${en ? 'Myth or fact' : 'Mit czy fakt'}</p>
-  <div class="stack">${my.map(x => `<article class="tile glass reveal"><p class="verdict-tag ${x[2] === 'f' ? 'bad' : 'good'}">${x[2] === 'f' ? (en ? 'Myth' : 'Mit') : (en ? 'Fact' : 'Fakt')}</p><h3 class="gtitle sm">${esc(x[en ? 1 : 0])}</h3><p class="small ink2">${esc(x[en ? 4 : 3] || x[3])}</p></article>`).join('')}</div>
+  <div class="stack">${my.map(x => `<article class="tile glass reveal"><p class="verdict-tag ${x[2] === 'f' ? 'bad' : x[2] === 'p' ? '' : 'good'}">${verdict(x[2], en)}</p><h3 class="gtitle sm">${esc(x[en ? 1 : 0])}</h3><p class="small ink2">${esc(x[en ? 4 : 3] || x[3])}</p></article>`).join('')}</div>
 </div></section>` : ''}`;
   return layout({
     lang: L, here: 'alerts.html', twin: 'alerts.html', body,
