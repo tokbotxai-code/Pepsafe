@@ -89,7 +89,7 @@ const W = {
     cta: 'Open catalog', theme: 'Theme', motionOff: 'Stop motion', motionOn: 'Start motion',
     skip: 'Skip to content', srcs: 'Sources', back: 'Catalog',
     foot: 'PepSafe — peptide facts, no sales. Educational content, not medical advice.',
-    group: 'Group', wada: 'Anti-doping', seq: 'Sequence',
+    group: 'Group', wada: 'Anti-doping', wadaNone: 'not listed', seq: 'Sequence',
     what: 'What it is', how: 'How it works', use: 'Use', ev: 'What the research shows', care: 'What to watch for',
     related: 'Related', inGroup: 'entries in this group',
     search: 'Search by name or brand', filterAll: 'All', noHit: 'Nothing matches that.',
@@ -139,7 +139,7 @@ const W = {
     cta: 'Otwórz katalog', theme: 'Motyw', motionOff: 'Zatrzymaj ruch', motionOn: 'Włącz ruch',
     skip: 'Przejdź do treści', srcs: 'Źródła', back: 'Katalog',
     foot: 'PepSafe — fakty o peptydach, bez sprzedaży. Treść edukacyjna, nie porada medyczna.',
-    group: 'Grupa', wada: 'Antydoping', seq: 'Sekwencja',
+    group: 'Grupa', wada: 'Antydoping', wadaNone: 'nie ma na liście', seq: 'Sekwencja',
     what: 'Co to jest', how: 'Jak działa', use: 'Zastosowanie', ev: 'Co mówią badania', care: 'Na co uważać',
     related: 'Podobne', inGroup: 'wpisów w tej grupie',
     search: 'Szukaj po nazwie lub marce', filterAll: 'Wszystkie', noHit: 'Nic nie pasuje.',
@@ -741,7 +741,7 @@ function card(e, L) {
           </button>
           <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span>
           <span class="pill neutral">${esc(en && tr[1] ? tr[1] : e.c)}</span>
-          ${wa ? `<span class="pill warn">${esc(t.wada)}: ${esc(wa[0])}</span>` : ''}
+          ${wa ? (wa[1] === 'none' ? `<span class="pill">${esc(t.wada)}: ${esc(t.wadaNone)}</span>` : `<span class="pill warn">${esc(t.wada)}: ${esc(wa[0])}</span>`) : ''}
         </p>
       </div>
       ${f ? `<aside class="group-box tile glass reveal">
