@@ -1,7 +1,7 @@
 # PepSafe – zasady publikacji (Metricool, marka 7506075, Europe/London)
 
 > **Dla autopilota (stan na 22.10 wieczorem):** kanały: Instagram + Facebook + TikTok, wszystko po angielsku, rynek UK/USA.
-> Jego polecenie (przepisane 22.10) ma pierwszeństwo tylko w punktach STEP 4; resztę rozstrzyga ten plik.
+> Jego polecenie (przepisane 22.10) ma pierwszeństwo tylko w punktach STEP 4 (b), (c), (d). **STEP 4(a) o 6 reklamach dziennie właściciel odwołał 23.10 — obowiązuje sekcja „Reklamy: 2 w tygodniu”** (zero reklam na TikToku). Resztę rozstrzyga ten plik.
 > Zasady z 22.10 wieczorem („Mniej, a lepiej”) i z 23.10 („Reklamy: 2 w tygodniu”) zastępują wcześniejsze limity, także STEP 4(a) w poleceniu.
 
 ## Pracuj samodzielnie (decyzja właściciela, 21.10)
