@@ -38,13 +38,20 @@ STEP 4.5 — daily full check for errors and junk (owner decision 23.10). Fix an
 
 STEP 5 — the morning report, at the TOP of the summary: the "Wczoraj" block from CLAUDE.md. Site: node tools/odwiedziny.js 1 (part of the traffic is the owner's own visits; say so). Bio link: IG / TikTok / FB visits to /start/*. Instagram, Facebook, TikTok from Metricool analytics (getAnalyticsAvailableMetrics + getAnalyticsDataByMetrics): followers change, views, reach, likes, comments, shares, number of posts, best and weakest post with numbers, and for reels the average watch time. Numbers only from data, otherwise "brak danych" and why. One sentence on what to do today because of it. On Mondays also the weekly report from CLAUDE.md.
 
-STEP 5.5 — weekly newsletter (Mondays only, owner decision 23.10). Prepare the week's email for the MailerLite list (group PepSafe):
-subject, preview text and the body as ONE-LINE HTML (the owner pastes it on a phone into MailerLite → Campaigns → Custom HTML editor →
-Code from scratch; multi-line paste breaks there). Content: 3 short facts from the best-performing topics of the past week, each with
-its real source; one "marketing trick worth spotting"; links to pepsafe.info; no doses, no buying advice, no names in the subject line;
-end with "Educational information only, not medical advice." and <a href="{$unsubscribe}">Unsubscribe</a>. Save it to
-docs/newsletter/RRRR-MM-DD.html (commit, push) and put subject, preview text and the one-line HTML in a code block at the end of the
-summary. Never claim it was sent — the owner sends it.
+STEP 5.5 — weekly newsletter (Mondays only, owner decision 23.10: it must send itself). Write the week's email: subject, preview text,
+HTML body. Content: 3 short facts from the best-performing topics of the past week, each with its real source; one "marketing trick worth
+spotting"; links to pepsafe.info; no doses, no buying advice; end with "Educational information only, not medical advice." and
+<a href="{$unsubscribe}">Unsubscribe</a>. Save it to docs/newsletter/RRRR-MM-DD.html (commit, push).
+Then send it via the MailerLite API (https://connect.mailerlite.com/api, the key is injected as a network secret for that host — never print it):
+  1. GET /api/groups → id of group "PepSafe"; GET /api/groups/<id>/subscribers → count active subscribers OTHER than contact@pepsafe.info.
+     If that count is 0, do not send; write "Newsletter: lista pusta, nie wysłano" in the summary.
+  2. POST /api/campaigns {"name":"PepSafe weekly RRRR-MM-DD","type":"regular","emails":[{"subject":...,"from_name":"PepSafe",
+     "from":"contact@pepsafe.info","content":"<html>..."}],"groups":[<id>]}.
+  3. POST /api/campaigns/<campaign id>/schedule {"delivery":"instant"}.
+  If any call fails (401 = key missing, 403/422 = plan does not allow HTML content via API), do not retry blindly: put the error, subject,
+  preview text and the one-line HTML in the summary so the owner can send it by hand (MailerLite → Campaigns → Custom HTML editor →
+  Code from scratch). In the summary always say: sent / not sent, to how many subscribers, and why.
+  Never send more than one campaign per Monday; check GET /api/campaigns?filter[status]=sent first so a re-run does not send twice.
 
 STEP 6 — final check before ending: getScheduledPosts again for today + 2 days and confirm: no ERROR posts, no empty window, no same-topic duplicates on one day, no ads outside the STEP 4(a) slots, nothing on blogId 7593858. Fix anything you find.
 
