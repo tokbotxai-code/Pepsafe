@@ -69,6 +69,7 @@ const CF_BEACON = '68889a9fe6604022bd3fa7d786e5d79f';  // licznik odwiedzin (Clo
 // Pierwsza wysylka uruchamia maila aktywacyjnego, ktory wlasciciel klika raz.
 // Po aktywacji mozna podmienic adres na alias z panelu, zeby nie stal w kodzie strony.
 const FORM_TO = 'contact@pepsafe.info';
+const ML_FORM = 'https://assets.mailerlite.com/jsonp/2731773/forms/202148889924470010/subscribe'; // MailerLite „PepSafe signup”, grupa PepSafe
 const TT = 'https://www.tiktok.com/@pepsafe.info';
 const IG = 'https://www.instagram.com/pepsafe.info/';
 // wersja plikow css/js w adresie, zeby telefony nie trzymaly starej kopii po zmianie
@@ -613,7 +614,7 @@ function freePage(L) {
     <p class="kick reveal">${en ? 'Free checklist' : 'Darmowa checklista (po angielsku)'}</p>
     <h1 class="display reveal">${en ? '5 mistakes that cost you muscle on GLP-1 medicines' : '5 błędów, przez które tracisz mięśnie na lekach GLP-1'}</h1>
     <p class="lede reveal">${en ? 'One page, plain English, with a simple fix for each mistake. Join our free weekly email — short research summaries and safety updates on peptides and GLP-1 medicines — and get the checklist straight away.' : 'Jedna strona, prosty język, przy każdym błędzie prosta poprawka. Zapisz się na darmowy cotygodniowy e-mail — krótkie podsumowania badań i ostrzeżeń o peptydach i lekach GLP-1 — a checklistę dostaniesz od razu.'}</p>
-    <form class="sheet reveal" id="nlForm" method="POST" action="https://formsubmit.co/${FORM_TO}" data-next="${BASE}${L}/free-thanks.html">
+    <form class="sheet reveal" id="nlForm" method="POST" action="https://formsubmit.co/${FORM_TO}" data-next="${BASE}${L}/free-thanks.html" data-ml="${ML_FORM}">
       <input type="hidden" name="_subject" value="PepSafe: newsletter signup (${L})">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">

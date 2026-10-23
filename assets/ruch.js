@@ -509,9 +509,14 @@
       out.hidden = false; out.classList.remove('bad'); out.textContent = pl ? 'Wysyłanie…' : 'Sending…';
       var go = function () { location.href = f.dataset.next; };
       setTimeout(go, 6000);   // gdyby serwer formularzy nie odpowiadal, i tak pokaz checkliste
-      fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+      var jobs = [fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
         method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(f)
-      }).then(go, go);
+      }).catch(function () {})];
+      if (f.dataset.ml) {   // ta sama osoba trafia tez na liste w MailerLite (grupa PepSafe)
+        var ml = new FormData(); ml.append('fields[email]', mail); ml.append('ml-submit', '1'); ml.append('anticsrf', 'true');
+        jobs.push(fetch(f.dataset.ml, { method: 'POST', mode: 'no-cors', body: ml }).catch(function () {}));
+      }
+      Promise.all(jobs).then(go, go);
     });
   })();
 
