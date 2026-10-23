@@ -2,7 +2,7 @@
 
 > **Dla autopilota (stan na 22.10 wieczorem):** kanały: Instagram + Facebook + TikTok, wszystko po angielsku, rynek UK/USA.
 > Jego polecenie (przepisane 22.10) ma pierwszeństwo tylko w punktach STEP 4; resztę rozstrzyga ten plik.
-> Zasady z 22.10 wieczorem (sekcje „Mniej, a lepiej” i „Reklamy codziennie”) zastępują wcześniejsze limity, także STEP 4(a) w poleceniu.
+> Zasady z 22.10 wieczorem („Mniej, a lepiej”) i z 23.10 („Reklamy: 2 w tygodniu”) zastępują wcześniejsze limity, także STEP 4(a) w poleceniu.
 
 ## Pracuj samodzielnie (decyzja właściciela, 21.10)
 - Właściciel nie chce pytań ani propozycji do zatwierdzenia. Wszystko, co wynika z tego pliku, **rób od razu sam**
@@ -102,7 +102,7 @@
 ## TikTok dziennie (bez nazw substancji, max 4 filmy)
 - **2 filmy przyrodnicze z lektorem** w oknach + **krótki pokaz o 17:00** (`node tools/fotki.js tiktok/<folder> RRRR-MM-DD-short-<temat>-en 3`
   albo 3-slajdowy `post.json` + `make.js`) + od 25.10 **obraz w stylu Dola o 21:30** (25–30.10 ten slot zajmują już grafiki właściciela).
-- Plus 1 reklama o 19:00 (kawa albo checklista, sekcja „Reklamy codziennie”). Razem maks. 5 postów na TikToku dziennie, limit API 12/24 h.
+- Slot 19:00: film przyrodniczy z zapasu (od 25.10 bez reklam na TikToku). Razem maks. 5 postów na TikToku dziennie, limit API 12/24 h.
 - **Hamulec:** gdy w ostatnich 3 dniach jakiś film zniknął albo ma ERROR — 2 filmy dziennie przez 3 dni, napisz to w podsumowaniu.
 - Ten sam temat na TikToku najwyżej raz na 14 dni (powtórka tego samego dnia: 5 wyświetleń zamiast ~230).
 - **Obraz w stylu Dola:** `node tools/obraz.js RRRR-MM-DD-img-<temat>-en "<prompt tła po angielsku>" "<NAGŁÓWEK>" "<jedno zdanie faktu>"`.
@@ -225,7 +225,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£5.99).
   Plik PDF NIE trafia do repo (repo jest publiczne). `GUIDE_URL` w `tools/v4.js` daje ramkę „Get the PDF” na kartach leków GLP-1/GIP
   i przycisk na `/start/`.
-- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£9.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (limit reklam: sekcja „Reklamy codziennie” niżej; nigdy grafiki przewodnika na TikToku).
+- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£9.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (limit reklam: sekcja „Reklamy: 2 w tygodniu” niżej; nigdy grafiki przewodnika na TikToku).
 - **Lista mailowa (od 21.10):** `/en/free.html` (i `/pl/`) — zapis e-mail + zgoda → FormSubmit na contact@pepsafe.info
   (temat „PepSafe: newsletter signup”), potem `/en/free-thanks.html` z darmową checklistą `free/glp1-muscle-checklist.pdf`
   i poleceniem przewodnika o mięśniach. Polityka prywatności: `/en/privacy.html`, `/pl/privacy.html` (link w stopce).
@@ -239,15 +239,15 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   i FTC w USA — nie usuwamy jej). Nigdy nie wymyślamy, nie łączymy ani nie „poprawiamy” opinii. Na `/en/guides.html` i w reklamach IG + FB, nigdy na TikToku.
 - Pakiet obu przewodników (ZIP: 2 PDF + kalkulator + tracker) — £11.99; link jeszcze nie podany przez właściciela. Gdy będzie: stała `BUNDLE_URL` w v4.js i przycisk na `/start/` oraz w ramce GLP-1.
 - Wpłaty: profil Ko-fi **https://ko-fi.com/pepsafeinfo** (`KOFI` w `tools/v4.js`: stopka każdej strony + przycisk na `/start/`). Płatności przez PayPal właściciela.
-- **Reklamy codziennie (decyzja właściciela 22.10 wieczorem, zastępuje 6 dziennie i STEP 4(a) w poleceniu autopilota):**
-  **3 posty dziennie, 1 na platformę, każdy o innej godzinie:** FB 14:15, TikTok 19:00, IG 20:15 (UK). Powód: przy małym koncie
-  6 reklam dziennie wygląda jak sklep i zniechęca obserwujących. Reklam już zaplanowanych na 23–24.10 nie ruszamy; od 25.10 robimy 3.
-  Grafiki 4:5 w `tiktok/2026-10-22-ads-en/` (ad-safety, ad-muscle, ad-coffee, ad-checklist); codziennie inny opis, czasem nowy wariant grafiki.
-  - IG + FB: na zmianę przewodniki PDF (Safety £5.99, Protein & Muscle £9.99; na FB link `/en/guides.html`, na IG „link in bio”)
-    i prośba o kawę na Ko-fi (`ko-fi.com/pepsafeinfo`).
-  - TikTok: tylko kawa na Ko-fi i darmowa checklista („guides in bio”), bez nazw substancji i bez grafik z okładką przewodnika;
-    `tiktokData`: tytuł, `commercialContentOwnBrand: true`, `autoAddMusic: true`.
-  - Dalej obowiązuje lista słów unikanych, zero zmyślonych liczb i zasada o opiniach wyżej.
+- **Reklamy: 2 w tygodniu (decyzja właściciela 23.10, zastępuje „3 dziennie” z 22.10 i STEP 4(a) w poleceniu autopilota):**
+  Dane z 21–22.10: reklamy na IG i FB 0 wyświetleń, na TikToku 1 i 13, a filmy przyrodnicze na TikToku 221–237.
+  - **TikTok: zero reklam.** Slot 19:00 dostaje film przyrodniczy z lektorem (zapas: `tiktok/ZAPAS.md`, po `sprawdz.js`).
+  - **IG + FB: 1 reklama na platformę w tygodniu** — FB w środę 14:15 (przewodnik, link `/en/guides.html`),
+    IG w sobotę 20:15 (na zmianę przewodnik „link in bio” i kawa na Ko-fi). W pozostałe dni te sloty dostają kartę z katalogu
+    albo zwykły post z faktami.
+  - Ko-fi i darmowa checklista mogą być jedną linijką na końcu zwykłych opisów IG + FB (nie częściej niż co 3. post).
+  - Grafiki 4:5 w `tiktok/2026-10-22-ads-en/`; dalej obowiązuje lista słów unikanych, zero zmyślonych liczb i zasada o opiniach.
+  - Wracamy do większej liczby reklam dopiero na decyzję właściciela po raporcie 2.11.
 
 ## Plan testów (24–30.10)
 - Szczegóły w `docs/testy.md`: codziennie jedna zmienna (długość, haczyk, pierwsza klatka, temat, format, „do zapisania”, godzina),
