@@ -231,8 +231,9 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   (temat „PepSafe: newsletter signup”), potem `/en/free-thanks.html` z darmową checklistą `free/glp1-muscle-checklist.pdf`
   i poleceniem przewodnika o mięśniach. Polityka prywatności: `/en/privacy.html`, `/pl/privacy.html` (link w stopce).
   Przycisk „Free checklist 🎁” na `/start/`. Od 23.10 zapis idzie naraz do FormSubmit (mail na contact@) i do MailerLite
-  (formularz „PepSafe signup”, grupa PepSafe, `ML_FORM` w v4.js, wysyłka w `src/ruch.js`). Wysyłka newsletterów z MailerLite wymaga
-  jeszcze uwierzytelnienia domeny pepsafe.info (DKIM/SPF w IONOS) — w panelu MailerLite jest „Authentication failed”.
+  (formularz „PepSafe signup”, grupa PepSafe, `ML_FORM` w v4.js, wysyłka w `src/ruch.js`). Domena pepsafe.info jest uwierzytelniona
+  w MailerLite od 23.10 (DKIM CNAME `litesrv._domainkey`, SPF `v=spf1 include:_spf-eu.ionos.com include:_spf.mlsend.com ~all` w IONOS — nie zmieniać,
+  bo zepsuje pocztę contact@ albo wysyłkę newsletterów). „Domain alignment” (płatne) nie jest potrzebne.
   W postach IG + FB można czasem dodać: „Free checklist: 5 mistakes that cost you muscle on GLP-1 — link in bio”.
 - **Strona `/en/guides.html` (i `/pl/`)**: podgląd 3 stron z każdego PDF (`guides/*.jpg`, ze znakiem PREVIEW), prawdziwe źródła, gwarancja zwrotu 14 dni (prośba na contact@ → zwrot przez Ko-fi/PayPal). Link w bio i ramki GLP-1 do niej prowadzą.
 - **Opinie klientów (decyzja właściciela 22.10):** dozwolone, ale tylko prawdziwe: autor zatwierdził na piśmie dokładny tekst,
