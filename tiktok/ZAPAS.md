@@ -12,6 +12,8 @@ więc nadają się **i na TikToka, i na Instagram**.
 | `2026-10-28-purity-vs-identity-en` | Czystość to nie tożsamość: dwa różne pomiary, pokazują zwykle jeden | 16,0 s |
 | `2026-10-29-why-blends-are-harder-en` | Trzy składniki to siedem możliwych winowajców | 15,8 s |
 | `2026-10-30-what-a-receptor-is-en` | Czym właściwie jest receptor: wiadomość podróżuje jako kształt | 16,2 s |
+| `2026-10-26-nine-you-must-eat-en` | 20 aminokwasów, ciało robi 11, dziewięć trzeba zjeść (wyrenderowany) | ok. 13 s |
+| `2026-10-29-why-placebo-en` | Efekt placebo i dlaczego badania potrzebują grupy kontrolnej (wyrenderowany) | ok. 13 s |
 
 ## Jak ich użyć
 1. `node tiktok/make.js tiktok/<folder>` — lektor wymaga `ELEVENLABS_API_KEY`, bez niego powstaje wersja z samą muzyką.
