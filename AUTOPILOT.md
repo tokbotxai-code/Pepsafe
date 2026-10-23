@@ -38,6 +38,14 @@ STEP 4.5 — daily full check for errors and junk (owner decision 23.10). Fix an
 
 STEP 5 — the morning report, at the TOP of the summary: the "Wczoraj" block from CLAUDE.md. Site: node tools/odwiedziny.js 1 (part of the traffic is the owner's own visits; say so). Bio link: IG / TikTok / FB visits to /start/*. Instagram, Facebook, TikTok from Metricool analytics (getAnalyticsAvailableMetrics + getAnalyticsDataByMetrics): followers change, views, reach, likes, comments, shares, number of posts, best and weakest post with numbers, and for reels the average watch time. Numbers only from data, otherwise "brak danych" and why. One sentence on what to do today because of it. On Mondays also the weekly report from CLAUDE.md.
 
+STEP 5.5 — weekly newsletter (Mondays only, owner decision 23.10). Prepare the week's email for the MailerLite list (group PepSafe):
+subject, preview text and the body as ONE-LINE HTML (the owner pastes it on a phone into MailerLite → Campaigns → Custom HTML editor →
+Code from scratch; multi-line paste breaks there). Content: 3 short facts from the best-performing topics of the past week, each with
+its real source; one "marketing trick worth spotting"; links to pepsafe.info; no doses, no buying advice, no names in the subject line;
+end with "Educational information only, not medical advice." and <a href="{$unsubscribe}">Unsubscribe</a>. Save it to
+docs/newsletter/RRRR-MM-DD.html (commit, push) and put subject, preview text and the one-line HTML in a code block at the end of the
+summary. Never claim it was sent — the owner sends it.
+
 STEP 6 — final check before ending: getScheduledPosts again for today + 2 days and confirm: no ERROR posts, no empty window, no same-topic duplicates on one day, no ads outside the STEP 4(a) slots, nothing on blogId 7593858. Fix anything you find.
 
 End with a short Polish summary: the "Wczoraj" block, the "Kontrola i porządki" section, Peptyd dnia entries, what was added per day and channel (times), what was moved or retried, test results, drafts to delete by hand, and anything that needs the owner. No tool can read or reply to real comments; never claim you did.
