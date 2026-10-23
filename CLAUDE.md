@@ -33,10 +33,10 @@
 ## Więcej postów na IG i FB: karty z katalogu (od 21.10.2026)
 - Decyzja właściciela (21.10, na stałe): na Instagramie i Facebooku bazowo **10–12 postów na dobę**: 4 tematy z okien niżej
   + 3 karty z katalogu (decyzja właściciela 23.10).
-- **Mniej, a lepiej (decyzja właściciela 22.10 wieczorem, zastępuje „+1 karta co poniedziałek”):** zostajemy przy **7 kartach dziennie**,
+- **Mniej, a lepiej (decyzja właściciela 22.10 wieczorem, zastępuje „+1 karta co poniedziałek”):** (nieaktualne od 23.10 — obowiązują **3 karty dziennie**, punkt niżej),
   bez wzrostu. Przy ~22 postach dziennie IG miał 243 wyświetlenia — liczba postów nie podnosi zasięgu. Po wynikach testów (2.11)
   raport proponuje, czy zmniejszyć liczbę kart; nie zwiększamy jej bez decyzji właściciela.
-- Karty robi skrypt: **`node tools/karty.js 7`** — bierze 7 kolejnych substancji bez karty, tworzy `tiktok/karta-<slug>/karta.jpg`
+- Karty robi skrypt: **`node tools/karty.js 3`** — bierze 3 kolejne substancje bez karty, tworzy `tiktok/karta-<slug>/karta.jpg`
   (4:5) i `caption.txt` z linkiem do strony substancji. Opis już spełnia zasady (nazwa nie otwiera opisu, bez nazw w hashtagach,
   bez słów z listy unikanych). Commit + push, potem planuj z URL z `karta.json`.
 - **3 karty dziennie (decyzja właściciela 23.10):** godziny kart (UK) **11:30, 17:30, 22:30**, `node tools/karty.js 3`. Powód: przy 15–20 postach dziennie IG i FB miały 0–3 wyświetlenia na post. Na 26–30.10 część kart jest już w planie — dorób tylko brakujące.
@@ -99,7 +99,7 @@
 - Muzyka z katalogu TikToka/Instagrama przez API jest niemożliwa (403). Nie próbuj ponownie bez sygnału od właściciela.
 - Publikacja automatyczna (`autoPublish: true`).
 
-## TikTok dziennie (bez nazw substancji, max 4 filmy)
+## TikTok dziennie (bez nazw substancji, max 6 postów)
 - **2 filmy przyrodnicze z lektorem** w oknach + **krótki pokaz o 17:00** (`node tools/fotki.js tiktok/<folder> RRRR-MM-DD-short-<temat>-en 3`
   albo 3-slajdowy `post.json` + `make.js`) + od 25.10 **obraz w stylu Dola o 21:30** (25–30.10 ten slot zajmują już grafiki właściciela).
 - Slot 19:00: film przyrodniczy z zapasu (od 25.10 bez reklam na TikToku).
