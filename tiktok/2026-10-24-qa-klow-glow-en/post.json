@@ -1,0 +1,51 @@
+{
+ "topic": "Q&A KLOW and GLOW",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Q&A: answering your questions",
+   "title": "KLOW and GLOW: what to know",
+   "hero": true,
+   "text": "The most common questions about these blends 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "What are they?",
+   "title": "Blends of several peptides",
+   "text": "GLOW is GHK-Cu, BPC-157 and TB-500. KLOW is the same plus KPV. Sold as “research products”, not as medicines.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Is it an approved drug?",
+   "verdict": "NO",
+   "tone": "no",
+   "text": "Neither blend is approved by the FDA or EMA. There are no clinical trials of the blends themselves.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Do they work better together?",
+   "verdict": "NO EVIDENCE",
+   "tone": "part",
+   "text": "The ingredients were studied mostly in animals, and GHK-Cu mainly in skin cosmetics. Combining them adds no evidence.",
+   "seconds": 6
+  },
+  {
+   "kicker": "Sport",
+   "list": [
+    "BPC-157 and TB-500 are on the WADA banned list",
+    "That includes “research” products",
+    "Not knowing what's inside won't prevent a ban"
+   ],
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Got another question?",
+   "cta": "pepsafe.info",
+   "text": "Comment or send us a DM. We'll answer in the next Q&A.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4.5
+  }
+ ],
+ "caption": "Q&A: KLOW and GLOW 🧪✨ What these blends are, whether they're approved, whether they work better together, and what about WADA? We answer your questions.\n\nGot more? Comment or send us a DM.\n\nEducational content, not medical advice. More at pepsafe.info\n\n#klow #glow #peptides #qanda #mythsvsfacts #pepsafe",
+ "vo": "kokoro"
+}

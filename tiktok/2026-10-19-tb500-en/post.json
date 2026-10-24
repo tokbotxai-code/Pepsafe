@@ -1,0 +1,51 @@
+{
+ "topic": "TB-500",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Fact-checking",
+   "title": "TB-500: a recovery peptide?",
+   "hero": true,
+   "text": "What's actually known about this popular 'research' peptide 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "What it is",
+   "title": "A thymosin beta-4 fragment",
+   "text": "Sold as a peptide said to help tendons and tissue heal. Not FDA-approved for any use in people.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Regulatory status",
+   "verdict": "CATEGORY 2",
+   "tone": "no",
+   "title": "On the FDA's safety-concern list",
+   "text": "In late 2023 the FDA placed TB-500 among 17 'Category 2' peptides — substances of safety concern. An advisory committee was set to review it again in July 2026.",
+   "seconds": 6
+  },
+  {
+   "kicker": "What the research shows",
+   "title": "Almost entirely animals and cell dishes",
+   "text": "A 2024 study found TB-500 itself (Ac-LKKTETQ) didn't speed up healing — only its metabolite did. No controlled human trials exist.",
+   "seconds": 6
+  },
+  {
+   "kicker": "Risks",
+   "list": [
+    "Impurities and inaccurate doses in market vials",
+    "Immunogenic risk with certain routes of administration",
+    "Banned by WADA for athletes"
+   ],
+   "seconds": 5.5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4
+  }
+ ],
+ "caption": "TB-500 — a recovery peptide, or marketing? 🧬 The FDA flagged it as a safety concern, and human evidence is close to nonexistent.\n\nMore at pepsafe.info\n\n#tb500 #peptides #facts #recovery #mythsvsfacts #pepsafe",
+ "vo": "kokoro"
+}

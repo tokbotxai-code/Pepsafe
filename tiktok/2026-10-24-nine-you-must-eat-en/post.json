@@ -1,0 +1,37 @@
+{
+ "topic": "Nine you have to eat",
+ "tagline": "Science, plainly",
+ "slides": [
+  {
+   "kicker": "The count",
+   "title": "Your body builds proteins from 20 amino acids.",
+   "vo": "Your body builds proteins from 20 amino acids.",
+   "seconds": 3.2,
+   "hero": true,
+   "big": "20"
+  },
+  {
+   "kicker": "The catch",
+   "title": "It can make only 11 of them itself.",
+   "vo": "It can make only 11 of them itself.",
+   "seconds": 3.2
+  },
+  {
+   "kicker": "The rest",
+   "title": "The other nine must come from food, because there is no real store of them.",
+   "vo": "The other nine must come from food, because there is no real store of them.",
+   "seconds": 3.2,
+   "big": "9"
+  },
+  {
+   "kicker": "More",
+   "title": "Protein quality is about which amino acids, not just how much.",
+   "vo": "Protein quality is about which amino acids, not just how much.",
+   "seconds": 3.2,
+   "cta": "pepsafe.info",
+   "foot": "Educational content. Questions? Comment or DM us."
+  }
+ ],
+ "caption": "Your body uses 20 amino acids, but it can only make 11 of them 🧬 The other nine have to come from food, every day, because the body keeps no real store of them. That is why protein quality is about which amino acids a food brings, not just how much.\n\nMore biology at pepsafe.info\n\n#biology #science #nutrition #learnontiktok #education #pepsafe",
+ "vo": "kokoro"
+}

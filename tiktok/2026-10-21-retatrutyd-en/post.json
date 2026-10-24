@@ -1,0 +1,49 @@
+{
+ "topic": "Retatrutide",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Fact check",
+   "title": "Retatrutide: a drug that doesn't exist yet",
+   "hero": true,
+   "text": "Everyone online talks about it. What's true? 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "What it is",
+   "title": "An experimental Lilly peptide",
+   "text": "It acts on three receptors at once: GIP, GLP-1 and glucagon. Tirzepatide acts on two, semaglutide on one.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Is it approved?",
+   "verdict": "NO",
+   "tone": "no",
+   "text": "Neither the FDA nor the EMA has approved it. Phase 3 trials are ongoing, some until 2029.",
+   "seconds": 5
+  },
+  {
+   "kicker": "What trials showed",
+   "big": "24%",
+   "text": "Average body weight loss after 48 weeks in the phase 2 trial (NEJM, 2023). The full safety picture will only come from large phase 3 trials.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Heads up",
+   "list": [
+    "Online “research” products are not Lilly's drug",
+    "Nobody checks their contents or purity",
+    "Safety outside trials is unknown"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "Peptide catalog, myths vs facts, FDA decision timeline.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4
+  }
+ ],
+ "caption": "Retatrutide: a drug that doesn't exist yet 🧪 Not approved by the FDA or EMA, phase 3 trials still running. Online “research” products are not the manufacturer's drug.\n\nEducational content, not medical advice. More at pepsafe.info\n\n#retatrutide #glp1 #peptides #facts #mythsvsfacts #pepsafe"
+}

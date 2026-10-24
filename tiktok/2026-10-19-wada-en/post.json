@@ -1,0 +1,50 @@
+{
+ "topic": "WADA and peptides",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Fact-checking",
+   "title": "Is your peptide on WADA's list?",
+   "hero": true,
+   "text": "The 2026 Prohibited List took effect January 1st. Let's check 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "Class S2",
+   "title": "Peptide hormones and growth factors",
+   "text": "WADA expanded the S1, S2, S4 and S6 class descriptions for 2026, to help identify banned substances and their relatives.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Interesting twist",
+   "verdict": "S0, NOT S2",
+   "tone": "part",
+   "title": "BPC-157 sits in a different class",
+   "text": "BPC-157 isn't listed as a 'peptide hormone' — it falls under S0, the catch-all class for non-approved substances, alongside DNP and drugs still in clinical trials.",
+   "seconds": 6
+  },
+  {
+   "kicker": "What that means",
+   "text": "Class S0 bans any pharmacological substance that isn't an approved drug — whether or not it has its own named entry on the list.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Who this matters to",
+   "list": [
+    "Athletes subject to anti-doping testing",
+    "Also 'research' supplements bought online",
+    "Not knowing what's in it doesn't protect you from disqualification"
+   ],
+   "seconds": 5.5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.",
+   "foot": "Educational content, not medical or anti-doping advice.",
+   "seconds": 4
+  }
+ ],
+ "caption": "WADA's 2026 Prohibited List took effect January 1st 🚫 Fun fact: BPC-157 is banned, but technically not as a 'peptide hormone' (S2) — it's in class S0 instead.\n\nMore at pepsafe.info\n\n#wada #antidoping #peptides #bpc157 #facts #pepsafe",
+ "vo": "kokoro"
+}

@@ -1,0 +1,52 @@
+{
+ "topic": "Melanotan II",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Fact-checking",
+   "title": "A tanning injection? Think twice",
+   "hero": true,
+   "text": "Melanotan II: what the research and regulators actually say 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "What it is",
+   "title": "A synthetic hormone analog",
+   "text": "Melanotan II mimics alpha-MSH and drives melanin production. Sold illegally, without a prescription, as a 'tanning injection.'",
+   "seconds": 4.5
+  },
+  {
+   "kicker": "Is it FDA-approved?",
+   "verdict": "NO",
+   "tone": "no",
+   "text": "Not approved for any use. Its safety has not been established.",
+   "seconds": 4.5
+  },
+  {
+   "kicker": "What case reports describe",
+   "title": "Not just a tan",
+   "list": [
+    "Nausea, flushing",
+    "Increased libido, rarely priapism",
+    "New or rapidly changing moles",
+    "Melanoma reported after use"
+   ],
+   "seconds": 5.5
+  },
+  {
+   "kicker": "What's actually inside",
+   "title": "Not necessarily what's on the label",
+   "text": "An independent analysis of products sold online found 4.3-8.8 mg of actual peptide against a stated 10 mg.",
+   "seconds": 5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "A peptide catalog, myths vs. facts, and the FDA decision timeline.",
+   "foot": "Educational content, not medical advice. Always show a new or changing mole to a doctor.",
+   "seconds": 4
+  }
+ ],
+ "caption": "Melanotan II, the 'tanning injection' 🧡 Not FDA-approved, and case reports link it to new moles and melanoma. Independent tests found the content doesn't match the label.\n\nMore at pepsafe.info\n\n#melanotan #peptides #facts #health #skin #mythsvsfacts #pepsafe",
+ "vo": "kokoro"
+}

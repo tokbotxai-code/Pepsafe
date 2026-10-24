@@ -1,0 +1,42 @@
+{
+ "format": "feed",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Fact check",
+   "title": "A certificate of analysis (COA) is not a safety guarantee",
+   "hero": true,
+   "text": "What it tells you, and what it doesn't 👉"
+  },
+  {
+   "kicker": "What it is",
+   "title": "A result for one sample",
+   "text": "A COA describes one batch tested with a defined method: usually identity (mass spectrometry) and purity (HPLC)."
+  },
+  {
+   "kicker": "What it doesn't tell you",
+   "list": [
+    "Whether the product is sterile",
+    "Whether it's free of endotoxins",
+    "Whether it's legal or safe for people"
+   ]
+  },
+  {
+   "kicker": "The problem",
+   "title": "Documents get reused",
+   "text": "The same certificate is sometimes attached to different batches, and the lab is sometimes never named. Independent tests of market products have found mismatches with the label."
+  },
+  {
+   "kicker": "Takeaway",
+   "verdict": "COA ≠ SAFETY",
+   "tone": "no",
+   "text": "Even a genuine certificate doesn't change the fact that an unapproved substance has no established safety in humans."
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "foot": "Educational content, not medical advice."
+  }
+ ],
+ "caption": "A certificate of analysis (COA) is not a safety guarantee 🔬 What it tells you, what it doesn't, and why it gets reused.\n\nMore at pepsafe.info\n\n#coa #peptides #safety #facts #pepsafe"
+}

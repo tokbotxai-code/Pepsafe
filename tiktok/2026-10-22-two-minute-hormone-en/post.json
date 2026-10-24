@@ -1,0 +1,37 @@
+{
+ "topic": "The two-minute hormone",
+ "tagline": "Peptide facts, no hype",
+ "slides": [
+  {
+   "kicker": "The puzzle",
+   "title": "Your body makes a hormone that lasts about two minutes.",
+   "hero": true,
+   "seconds": 3.4
+  },
+  {
+   "kicker": "Somatostatin",
+   "title": "It switches off growth hormone and several gut hormones, then is broken down within minutes.",
+   "seconds": 3.6
+  },
+  {
+   "kicker": "The rewrite",
+   "title": "Chemists cut it from 14 amino acids to 8 and swapped two for mirror-image versions.",
+   "seconds": 3.6
+  },
+  {
+   "kicker": "The result",
+   "big": "~100",
+   "title": "Octreotide lasts around 100 minutes instead of two.",
+   "seconds": 3.2
+  },
+  {
+   "kicker": "Still in use",
+   "title": "Approved in the US in 1988, it is used for acromegaly and some hormone-producing tumours.",
+   "cta": "pepsafe.info",
+   "foot": "Educational content, not medical advice. Questions? Comment or DM us.",
+   "seconds": 3.4
+  }
+ ],
+ "caption": "Your body makes a hormone that lasts about two minutes 🔬 Somatostatin switches off growth hormone and several gut hormones, then is broken down almost at once. Chemists shortened it from 14 amino acids to 8 and swapped two for mirror-image versions — and octreotide lasts around 100 minutes instead.\n\nApproved in the US in 1988, it is still used for acromegaly and some hormone-producing tumours.\n\nEducational content, not medical advice. More at pepsafe.info\n\n#peptides #science #endocrinology #medicalhistory #pepsafe",
+ "vo": "kokoro"
+}

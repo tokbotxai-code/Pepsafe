@@ -1,0 +1,50 @@
+{
+ "topic": "Insulin",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "A story that saves lives",
+   "title": "Insulin: the first peptide to become a medicine",
+   "hero": true,
+   "text": "Before it, type 1 diabetes was a death sentence 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "Toronto, 1921",
+   "title": "Banting and Best",
+   "text": "They isolated insulin from the pancreas. Less than a year later the first patient got an injection.",
+   "seconds": 5
+  },
+  {
+   "kicker": "January 1922",
+   "title": "14-year-old Leonard Thompson",
+   "text": "He was critically ill. After purified insulin his condition improved markedly. He was the first person treated with insulin.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "1923",
+   "verdict": "NOBEL",
+   "tone": "yes",
+   "text": "The prize went to Banting and Macleod. Banting shared it with Best, and Macleod with Collip.",
+   "seconds": 5
+  },
+  {
+   "kicker": "What came next",
+   "list": [
+    "1955: first protein ever sequenced (Sanger)",
+    "1982: first genetically engineered drug",
+    "Today: a medicine saving millions"
+   ],
+   "seconds": 5.5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "Peptide catalog, myths vs facts, FDA decision timeline.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4
+  }
+ ],
+ "caption": "Insulin: the first peptide to become a medicine 🧬 From Toronto 1921 and 14-year-old Leonard Thompson to the 1923 Nobel Prize.\n\nEducational content, not medical advice. More at pepsafe.info\n\n#insulin #diabetes #medicalhistory #peptides #science #pepsafe",
+ "vo": "kokoro"
+}

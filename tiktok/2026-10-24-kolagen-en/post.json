@@ -1,0 +1,44 @@
+{
+ "tagline": "Peptide facts, no hype",
+ "slides": [
+  {
+   "kicker": "Myth or fact?",
+   "title": "Does collagen powder improve your skin?",
+   "hero": true,
+   "text": "Swipe, we checked the studies 👉",
+   "seconds": 5
+  },
+  {
+   "kicker": "What was analysed",
+   "big": "26",
+   "text": "randomised trials with 1,721 healthy adults in a 2023 meta-analysis.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Result",
+   "verdict": "PARTLY",
+   "tone": "part",
+   "text": "A modest improvement in skin elasticity and hydration. But trials were small and some results were self-reported.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Remember",
+   "title": "Collagen is not magic",
+   "list": [
+    "Effects after 8+ weeks",
+    "Does not replace sunscreen",
+    "Does not treat skin disease"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "Facts, no hype",
+   "cta": "pepsafe.info",
+   "text": "More reliable info on supplements and skincare.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 5
+  }
+ ],
+ "caption": "Collagen powder: myth or fact? We checked a meta-analysis of 26 trials 🔬 Swipe 👉\n\nMore at pepsafe.info\n\n#collagen #supplements #skincare #skin #science #mythbusting #pepsafe",
+ "vo": "kokoro"
+}
