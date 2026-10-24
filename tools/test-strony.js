@@ -1,6 +1,7 @@
 // Clicks through the live site like a visitor, on a phone and a computer, in EN, PL and ES.
 // kontrola.js checks files and links; this checks what only shows up in a real browser:
-// search (quick list, Enter, results page), language list, phone menu, card pages, console errors.
+// search (quick list, Enter, results page), language list, phone menu, card pages, console errors,
+// then opens every page in the sitemap on a phone.
 // Usage: node tools/test-strony.js [base URL]   (default https://pepsafe.info). Exit code 1 = something broke.
 const { chromium } = require('playwright');
 const BASE = (process.argv[2] || 'https://pepsafe.info').replace(/\/$/, '');
@@ -46,6 +47,25 @@ const fail = (what, why) => bad.push(`${what}: ${why}`);
     } catch (e) { fail(tag, e.message.split('\n')[0]); }
     await c.close();
   }
+  // every page in the sitemap, opened on a phone: loads, has a heading, no script error, no sideways scroll
+  const xml = await (await fetch(BASE + '/sitemap.xml')).text();
+  const urls = [...xml.matchAll(/<loc>https:\/\/pepsafe\.info([^<]*)<\/loc>/g)].map(m => m[1] || '/');
+  const c = await b.newContext(devices.phone);
+  let done = 0;
+  for (let i = 0; i < urls.length; i += 6) await Promise.all(urls.slice(i, i + 6).map(async u => {
+    const p = await c.newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message));
+    try {
+      const r = await p.goto(BASE + u, { waitUntil: 'load', timeout: 30000 });
+      if (!r || r.status() >= 400) fail(u, 'HTTP ' + (r && r.status()));
+      await p.waitForTimeout(400);
+      const [h1, wide] = await p.evaluate(() => [!!document.querySelector('h1'), document.documentElement.scrollWidth > innerWidth + 2]);
+      if (!h1) fail(u, 'brak nagłówka');
+      if (wide) fail(u, 'strona wystaje w bok na telefonie');
+      if (errs.length) fail(u, 'błąd skryptu: ' + errs[0]);
+    } catch (e) { fail(u, e.message.split('\n')[0]); }
+    done++; await p.close();
+  }));
+  console.log(`otwarto ${done} stron z mapy strony`);
   await b.close();
   console.log(bad.length ? `test strony: ${bad.length} problemów\n - ` + bad.join('\n - ') : 'test strony: wszystko działa (telefon i komputer, EN/PL/ES)');
   process.exit(bad.length ? 1 : 0);
