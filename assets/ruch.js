@@ -8,6 +8,8 @@
   // the Spanish pages reuse the English branch of every message, swapped here
   var ES = html.lang === 'es';
   function es(en, sp) { return ES ? sp : en; }
+  // card address in the page's own language, absolute so it works from /en/, /pl/, /es/ and /p/
+  function card(s) { return '/p/' + s + (html.lang === 'pl' ? '.pl' : ES ? '.es' : '') + '.html'; }
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var stored = null;
   try { stored = localStorage.getItem('pep-motion'); } catch (e) {}
@@ -175,7 +177,7 @@
   markStars();
 
   function rowCard(r) {
-    return '<div class="entry tile"><a class="entry-link" href="p/' + r.s + '.html">' +
+    return '<div class="entry tile"><a class="entry-link" href="' + card(r.s) + '">' +
       '<span class="pill ' + r.tone + '">' + r.st + '</span><b>' + r.n + '</b><em>' + r.c + '</em></a>' +
       '<button class="star on" data-key="' + r.s + '" aria-label="x"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 2.6l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14l-4.5 2.2.9-4.9L2.8 7.8l5-.7z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button></div>';
   }
@@ -200,7 +202,7 @@
           '<p class="small ink2">' + r.c + (r.gl ? ' · ' + r.gl : '') + '</p>' +
           (r.ev ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Dowody' : es('Evidence', 'Evidencia')) + '</p><p class="small">' + r.ev + '</p>' : '') +
           (r.w ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Uwaga' : es('Watch for', 'Atención')) + '</p><p class="small">' + r.w + '</p>' : '') +
-          '<p><a class="more" href="p/' + r.s + '.html">' + r.n + '</a></p></article>';
+          '<p><a class="more" href="' + card(r.s) + '">' + r.n + '</a></p></article>';
       }).join('');
       cempty.hidden = picked.length > 0;
       var groups = picked.filter(function (r) { return r.g; }).map(function (r) { return r.g; });
@@ -395,7 +397,7 @@
       hint.hidden = true;
       hits.slice(0, 40).forEach(function (r) {
         var li = document.createElement('li');
-        li.innerHTML = '<a href="' + up + 'p/' + r.s + '.html"><b>' + mark(r.n, n) + '</b>' +
+        li.innerHTML = '<a href="' + card(r.s) + '"><b>' + mark(r.n, n) + '</b>' +
           '<span class="fcat">' + esc(r.c || '') + '</span><small>' + esc(r.st || '') + '</small></a>';
         listEl.appendChild(li);
       });
