@@ -1158,7 +1158,8 @@ function dosing(L) {
 
 // ── compare, symptoms, saved: three tools over one shared dataset ─────────────
 // Head-to-head pages for the pairs people search most (semaglutide vs tirzepatide etc.), built only from catalog data
-const VS = [['Semaglutyd', 'Tirzepatyd'], ['Tirzepatyd', 'Retatrutyd'], ['Semaglutyd', 'Retatrutyd'], ['Semaglutyd', 'Liraglutyd'], ['Tirzepatyd', 'Mazdutyd']]
+const VS = [['Semaglutyd', 'Tirzepatyd'], ['Tirzepatyd', 'Retatrutyd'], ['Semaglutyd', 'Retatrutyd'], ['Semaglutyd', 'Liraglutyd'], ['Tirzepatyd', 'Mazdutyd'],
+  ['Liraglutyd', 'Tirzepatyd'], ['Semaglutyd', 'Dulaglutyd'], ['Semaglutyd', 'Foundayo (orforglipron)'], ['Semaglutyd', 'Cagrilintyd'], ['Retatrutyd', 'Survodutyd'], ['Liraglutyd', 'Eksenatyd']]
   .map(([a, b]) => [D.find(e => e.n === a), D.find(e => e.n === b)]).filter(([a, b]) => a && b);
 const vsFile = ([a, b]) => 'vs-' + key(a) + '-vs-' + key(b) + '.html';
 function vsPage(pair, L) {
