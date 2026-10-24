@@ -543,7 +543,7 @@
 
   /* ── wybor jezyka: zapamietany, zeby strona glowna wiecej nie przestawiala ─ */
   document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('.lp a[data-l]');
+    var a = e.target.closest && e.target.closest('a[data-l]');
     if (a) { try { localStorage.setItem('pep-lang', a.dataset.l); } catch (x) {} }
   });
 

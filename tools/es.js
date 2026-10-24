@@ -111,6 +111,8 @@ function langSwitch(file, cur, urls) {
   const sw = `<details class="lp"><summary aria-label="Language">🌐 ${cur} ▾</summary><ul>` +
     ['EN', 'PL', 'ES'].map(L => `<li><a class="lang${L === cur ? ' on" aria-current="true' : ''}" data-l="${L.toLowerCase()}" href="${urls[L]}">${NAME[L]}</a></li>`).join('') + '</ul></details>';
   let out = h.replace(/(?:<span class="lang on"[^>]*>[A-Z]{2}<\/span>|<a class="lang" href="[^"]*">[A-Z]{2}<\/a>)+/g, sw);
+  // phone menu footer: all three languages as plain links
+  out = out.replace(/(<p class="menufoot">)<a href="[^"]*">(?:EN|PL)<\/a>/, '$1' + ['EN', 'PL', 'ES'].map(L => L === cur ? `<b>${NAME[L]}</b>` : `<a href="${urls[L]}" data-l="${L.toLowerCase()}">${NAME[L]}</a>`).join(' · '));
   // home page only: first visit goes to the visitor's browser language; a choice made in the list wins
   if (file === 'index.html' && !out.includes('pep-lang'))
     out = out.replace('</head>', `<script>try{if(!localStorage.getItem('pep-lang')){var l=(navigator.languages&&navigator.languages[0]||navigator.language||'').slice(0,2).toLowerCase();if(l==='pl')location.replace('/pl/');else if(l==='es')location.replace('/es/');}}catch(e){}</script>\n</head>`);
