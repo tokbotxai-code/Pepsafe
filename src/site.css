@@ -474,3 +474,7 @@ footer>.wrap{position:relative;z-index:1}
   a.lang, footer a, button.linkish { display: inline-block; padding-top: 7px; padding-bottom: 7px; }
   input[type="checkbox"] { width: 22px; height: 22px; }
 }
+
+/* Head-to-head pages: two columns side by side, stacked on phones */
+.cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
+@media (max-width: 640px) { .cols2 { grid-template-columns: 1fr; } }
