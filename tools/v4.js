@@ -867,6 +867,16 @@ function blogIndex(L) {
   });
 }
 
+// Articles: link the first mention of each catalog name to its card (internal links for search engines and readers)
+const NAME_LINKS = D.flatMap(e => [...new Set([e.n, nm(e.n, true)])].filter(x => x && x.length > 3).map(x => [x, e]))
+  .sort((a, b) => b[0].length - a[0].length);
+const NAME_RE = new RegExp('(?<![\\w-])(' + NAME_LINKS.map(([x]) => esc(x).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')(?![\\w-])', 'g');
+function linkNames(html, L, seen) {
+  return html.replace(NAME_RE, m => {
+    const hit = NAME_LINKS.find(([x]) => esc(x) === m); if (!hit || seen.has(hit[1].n)) return m;
+    seen.add(hit[1].n); return `<a href="../../${cardPath(hit[1], L)}">${m}</a>`;
+  });
+}
 function piece(x, L) {
   const en = L === 'en', t = W[L];
   const paras = (x.p[L] || x.p.pl || []);
@@ -880,7 +890,7 @@ function piece(x, L) {
   </div>
 </section>
 <section><div class="wrap narrow">
-  ${paras.map(para => `<p class="lead reveal">${esc(para)}</p>`).join('\n  ')}
+  ${(() => { const seen = new Set(); return paras.map(para => `<p class="lead reveal">${linkNames(esc(para), L, seen)}</p>`).join('\n  '); })()}
   <p class="actions reveal"><a class="btn big" href="${BASE}${L}/blog.html">${esc(t.allPieces)}${ARROW}</a></p>
 </div></section>
 ${others.length ? `<section class="band"><div class="wrap">
