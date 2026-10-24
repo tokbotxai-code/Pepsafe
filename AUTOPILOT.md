@@ -44,7 +44,7 @@ HTML body. Content: 3 short facts from the best-performing topics of the past we
 spotting"; links to pepsafe.info; no doses, no buying advice; end with "Educational information only, not medical advice." and
 <a href="{$unsubscribe}">Unsubscribe</a>. Save it to docs/newsletter/RRRR-MM-DD.html (commit, push).
 Then send it via the MailerLite API (https://connect.mailerlite.com/api, the key is injected as a network secret for that host — never print it):
-  1. GET /api/groups → id of group "PepSafe"; GET /api/groups/<id>/subscribers → count active subscribers OTHER than contact@pepsafe.info.
+  1. GET /api/groups → id of group "Pepsafe" (match the name case-insensitively); GET /api/groups/<id>/subscribers → count active subscribers OTHER than contact@pepsafe.info.
      If that count is 0, do not send; write "Newsletter: lista pusta, nie wysłano" in the summary.
   2. POST /api/campaigns {"name":"PepSafe weekly RRRR-MM-DD","type":"regular","emails":[{"subject":...,"from_name":"PepSafe",
      "from":"contact@pepsafe.info","content":"<html>..."}],"groups":[<id>]}.
