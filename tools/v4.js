@@ -255,7 +255,7 @@ ${THEME_BOOT}
 <meta name="twitter:description" content="${esc(o.desc)}">
 <meta name="twitter:image" content="${SITE}${BASE}assets/og-${L}.png">
 <script type="application/ld+json">${ORG}</${'script'}>
-</head>
+${o.ld ? `<script type="application/ld+json">${o.ld}</${'script'}>\n` : ''}</head>
 <body>
 <a class="skip" href="#main">${esc(t.skip)}</a>
 <i class="progress" aria-hidden="true"></i>
@@ -781,7 +781,17 @@ function card(e, L) {
 </article>`;
   return layout({
     lang: L, here: 'catalog.html', depth: 1, twin: cardPath(e, L), body,
-    title: `${name} — ${statusOf(e, en)} | PepSafe`, desc: clip(`${name} — ${statusOf(e, en)}. ${d}`, 155)
+    title: `${name} — ${statusOf(e, en)} | PepSafe`, desc: clip(`${name} — ${statusOf(e, en)}. ${d}`, 155),
+    ld: JSON.stringify({ '@context': 'https://schema.org', '@graph': [
+      { '@type': 'MedicalWebPage', name: `${name} — ${statusOf(e, en)}`, url: `${SITE}${BASE}${cardPath(e, L)}`, inLanguage: L,
+        description: clip(d, 300), publisher: { '@id': 'https://pepsafe.info/#org' },
+        ...(ZM[key(e)] ? { dateModified: ZM[key(e)].d } : {}),
+        about: { '@type': e.s === 'A' ? 'Drug' : 'ChemicalSubstance', name, description: clip(d, 300) },
+        ...(src.length ? { citation: src.map(x => x[1]) } : {}) },
+      { '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: t.back, item: `${SITE}${BASE}${L}/catalog.html` },
+        { '@type': 'ListItem', position: 2, name } ] }
+    ] }).replace(/</g, '\\u003c')
   });
 }
 
