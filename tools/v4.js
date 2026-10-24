@@ -774,7 +774,7 @@ function card(e, L) {
     ${e.q ? `<section class="blk reveal"><h2 class="kick">${esc(t.seq)}</h2><p class="seq">${esc(e.q)}</p></section>` : ''}
     ${src.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul></section>` : ''}
     ${ZM[key(e)] ? `<p class="small muted reveal">${en ? 'Last updated' : 'Ostatnia aktualizacja'}: <time datetime="${ZM[key(e)].d}">${fmtDate(ZM[key(e)].d, en)}</time> · <a href="../${L}/about.html#corrections">${en ? 'Report an error' : 'Zgłoś błąd'}</a></p>` : ''}
-    ${(() => { const arts = articlesFor(e); return arts.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'Further reading' : 'Więcej do czytania'}</h2><ul class="srcs-list">${arts.map(x => `<li><a href="../${L}/t/${postSlug(x)}.html">${esc(x.title[L] || x.title.en)}</a></li>`).join('')}</ul></section>` : ''; })()}
+    ${(() => { const arts = articlesFor(e), vs = VS.filter(v => v.includes(e)); return arts.length || vs.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'Further reading' : 'Więcej do czytania'}</h2><ul class="srcs-list">${vs.map(v => `<li><a href="../${L}/${vsFile(v)}">${esc(nm(v[0].n, en) + ' vs ' + nm(v[1].n, en))}</a></li>`).join('')}${arts.map(x => `<li><a href="../${L}/t/${postSlug(x)}.html">${esc(x.title[L] || x.title.en)}</a></li>`).join('')}</ul></section>` : ''; })()}
     ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.related)}</h2><div class="cards">${sibs.map(s => cardRow(s, en, L)).join('')}</div></section>` : ''}
     ${(() => {
       const mix = ((CONFUSE || {})[e.n] || []).map(x => D.find(y => y.n === x)).filter(Boolean)
@@ -1053,7 +1053,7 @@ function about(L) {
     <article class="tile glass reveal"><h2 class="gtitle sm">${en ? 'No doses from strangers' : 'Bez dawek od obcych'}</h2>
       <p class="small ink2">${en ? 'Doses appear only for approved medicines, copied from the label, as information rather than advice.' : 'Dawki pojawiają się tylko przy zatwierdzonych lekach, przepisane z etykiety, jako informacja, nie porada.'}</p></article>
     <article class="tile glass reveal" id="corrections"><h2 class="gtitle sm">${en ? 'Corrections' : 'Poprawki'}</h2>
-      <p class="small ink2">${en ? 'Found an error or a newer source? Use the contact form below. We check every report against the source, fix confirmed errors and update the date on the entry. Every entry shows when it last changed.' : 'Widzisz błąd albo nowsze źródło? Napisz przez formularz niżej. Każde zgłoszenie sprawdzamy w źródle, potwierdzone błędy poprawiamy i aktualizujemy datę wpisu. Każdy wpis pokazuje, kiedy ostatnio się zmienił.'}</p></article>
+      <p class="small ink2">${en ? 'Found an error or a newer source? Use the contact form below. We check every report against the source, fix confirmed errors and update the date on the entry. Every entry shows when it last changed. <a href="methods.html">Sources &amp; methods</a>.' : 'Widzisz błąd albo nowsze źródło? Napisz przez formularz niżej. Każde zgłoszenie sprawdzamy w źródle, potwierdzone błędy poprawiamy i aktualizujemy datę wpisu. Każdy wpis pokazuje, kiedy ostatnio się zmienił. <a href="methods.html">Źródła i metoda</a>.'}</p></article>
   </div>
 </div></section>
 
@@ -1143,6 +1143,65 @@ function dosing(L) {
 }
 
 // ── compare, symptoms, saved: three tools over one shared dataset ─────────────
+// Head-to-head pages for the pairs people search most (semaglutide vs tirzepatide etc.), built only from catalog data
+const VS = [['Semaglutyd', 'Tirzepatyd'], ['Tirzepatyd', 'Retatrutyd'], ['Semaglutyd', 'Retatrutyd'], ['Semaglutyd', 'Liraglutyd'], ['Tirzepatyd', 'Mazdutyd']]
+  .map(([a, b]) => [D.find(e => e.n === a), D.find(e => e.n === b)]).filter(([a, b]) => a && b);
+const vsFile = ([a, b]) => 'vs-' + key(a) + '-vs-' + key(b) + '.html';
+function vsPage(pair, L) {
+  const en = L === 'en', t = W[L], [a, b] = pair;
+  const f = (e, i) => { const tr = EN[e.n] || []; return en ? (tr[i] || [0, 0, e.d, e.m, e.u, e.ev, e.w][i]) : [0, 0, e.d, e.m, e.u, e.ev, e.w][i]; };
+  const na = nm(a.n, en), nb = nm(b.n, en);
+  const rows = [[en ? 'Status' : 'Status', statusOf(a, en), statusOf(b, en)], [t.what, f(a, 2), f(b, 2)], [t.how, f(a, 3), f(b, 3)],
+    [t.use, f(a, 4), f(b, 4)], [t.ev, f(a, 5), f(b, 5)], [t.care, f(a, 6), f(b, 6)]];
+  const srcs = [...((SRC || {})[a.n] || []), ...((SRC || {})[b.n] || [])];
+  const title = `${na} vs ${nb}`;
+  const body = `
+<section class="page-head paper"><div class="wrap narrow">
+  <p class="kick reveal">${en ? 'Head to head' : 'Porównanie'}</p>
+  <h1 class="display reveal">${esc(title)}</h1>
+  <p class="lede reveal">${esc(en ? `How ${na} and ${nb} differ: approval status, how they work, what the research shows and what to watch for. Facts from the catalog, with sources.` : `Czym różnią się ${na} i ${nb}: status, mechanizm, wyniki badań i na co uważać. Fakty z katalogu, ze źródłami.`)}</p>
+</div></section>
+<section><div class="wrap narrow">
+  ${rows.map(([h, x, y]) => `<section class="blk reveal"><h2 class="kick">${esc(h)}</h2><div class="cols2"><p><b>${esc(na)}:</b> ${esc(x || '—')}</p><p><b>${esc(nb)}:</b> ${esc(y || '—')}</p></div></section>`).join('')}
+  <p class="actions reveal"><a class="btn" href="../${cardPath(a, L)}">${esc(na)}${ARROW}</a> <a class="btn" href="../${cardPath(b, L)}">${esc(nb)}${ARROW}</a></p>
+  ${srcs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${srcs.map(x => `<li><a href="${esc(x[1])}" rel="nofollow noopener" target="_blank">${esc(x[0])}</a></li>`).join('')}</ul></section>` : ''}
+  <p class="small ink2 reveal">${en ? 'Educational content, not medical advice. Decisions about treatment belong with a doctor.' : 'Treść edukacyjna, nie porada medyczna. Decyzje o leczeniu należą do lekarza.'}</p>
+</div></section>`;
+  return layout({ lang: L, here: vsFile(pair), twin: vsFile(pair), body,
+    title: `${title}: ${en ? 'differences, research and status' : 'różnice, badania i status'} | PepSafe`,
+    desc: clip(en ? `${na} vs ${nb}: approval status, mechanism, what the trials showed and side effects to watch for, with sources.` : `${na} czy ${nb}: status, mechanizm, wyniki badań i działania niepożądane, ze źródłami.`, 155) });
+}
+// Sources & methods: how the catalog is built and checked (only true statements about our process)
+function methods(L) {
+  const en = L === 'en';
+  const items = en ? [
+    ['Where the facts come from', 'Drug labels (DailyMed, FDA), trial registries (ClinicalTrials.gov), peer-reviewed studies (PubMed), regulators (FDA, EMA, MHRA) and the WADA Prohibited List. Each entry links its sources.'],
+    ['How evidence is described', 'Every entry says what kind of evidence exists: cells, animals, a few people, or full clinical trials. Where human data is missing or small, the entry says so instead of filling the gap.'],
+    ['Doses', 'Doses appear only for approved medicines, copied from the official label, as information. For unapproved substances we publish no doses.'],
+    ['How sources are checked', `Every week an automated check opens the source links, flags dead or moved documents, retracted papers and searches that point to the wrong substance. Broken sources are replaced with official registry searches.`],
+    ['How entries change', 'Each entry shows the date its content last changed. Corrections from readers are checked against the source before anything is changed.'],
+    ['What we are not', 'We sell no peptides or medicines and take no affiliate money. The catalog is free; two optional PDF guides help pay for it. This is educational content, not medical advice.']
+  ] : [
+    ['Skąd są fakty', 'Charakterystyki leków (DailyMed, FDA), rejestry badań (ClinicalTrials.gov), recenzowane publikacje (PubMed), regulatorzy (FDA, EMA, MHRA) i lista WADA. Każdy wpis linkuje swoje źródła.'],
+    ['Jak opisujemy dowody', 'Każdy wpis mówi, jakie są dowody: komórki, zwierzęta, kilka osób czy pełne badania kliniczne. Gdy danych u ludzi brak albo jest ich mało, piszemy to wprost.'],
+    ['Dawki', 'Dawki podajemy tylko dla zatwierdzonych leków, przepisane z oficjalnej charakterystyki, jako informację. Dla substancji niezatwierdzonych nie podajemy dawek.'],
+    ['Jak sprawdzamy źródła', 'Co tydzień automatyczna kontrola otwiera linki do źródeł i wyłapuje martwe lub przeniesione dokumenty, wycofane publikacje i wyszukiwania wskazujące inną substancję. Zepsute źródła zastępujemy wyszukiwaniem w oficjalnych rejestrach.'],
+    ['Jak zmieniają się wpisy', 'Każdy wpis pokazuje datę ostatniej zmiany treści. Zgłoszone poprawki sprawdzamy w źródle, zanim cokolwiek zmienimy.'],
+    ['Czym nie jesteśmy', 'Nie sprzedajemy peptydów ani leków i nie bierzemy prowizji. Katalog jest darmowy; utrzymują go dwa opcjonalne przewodniki PDF. To treść edukacyjna, nie porada medyczna.']
+  ];
+  const body = `
+<section class="page-head paper"><div class="wrap narrow">
+  <p class="kick reveal">${en ? 'Sources &amp; methods' : 'Źródła i metoda'}</p>
+  <h1 class="display reveal">${en ? 'How the catalog is built and checked' : 'Jak powstaje i jak sprawdzamy katalog'}</h1>
+</div></section>
+<section><div class="wrap narrow">
+  ${items.map(([h, p]) => `<section class="blk reveal"><h2 class="kick">${esc(h)}</h2><p>${esc(p)}</p></section>`).join('')}
+  <p class="reveal"><a href="about.html#corrections">${en ? 'Report an error' : 'Zgłoś błąd'}</a> · <a href="catalog.html">${en ? 'Browse the catalog' : 'Przeglądaj katalog'}</a></p>
+</div></section>`;
+  return layout({ lang: L, here: 'methods.html', twin: 'methods.html', body,
+    title: (en ? 'Sources & methods' : 'Źródła i metoda') + ' | PepSafe',
+    desc: en ? 'Where PepSafe facts come from, how evidence is described and how sources are checked every week.' : 'Skąd PepSafe bierze fakty, jak opisuje dowody i jak co tydzień sprawdza źródła.' });
+}
 function compare(L) {
   const en = L === 'en', t = W[L];
   const body = `
@@ -1281,7 +1340,8 @@ for (const L of LANGS) {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
     'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
     'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L), 'free.html': freePage(L), 'free-thanks.html': freeThanks(L), 'guides.html': guidesPage(L), 'privacy.html': privacy(L),
-    'blog.html': blogIndex(L), 'glossary.html': glossary(L), '404.html': notFound(L)
+    'blog.html': blogIndex(L), 'glossary.html': glossary(L), 'methods.html': methods(L), '404.html': notFound(L),
+    ...Object.fromEntries(VS.map(v => [vsFile(v), vsPage(v, L)]))
   };
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
   // style, skrypt i obrazki udostepniania trzymamy w src/ i kopiujemy do kazdej kompilacji
@@ -1324,8 +1384,9 @@ n += 5;
 const when = new Date().toISOString().slice(0, 10);
 const urls = [''].concat(
   LANGS.flatMap(L => ['index.html', 'catalog.html', 'dosing.html', 'groups.html', 'compare.html',
-    'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html', 'free.html', 'guides.html', 'privacy.html'].map(f => L + '/' + f)),
+    'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html', 'free.html', 'guides.html', 'privacy.html', 'methods.html'].map(f => L + '/' + f)),
   LANGS.flatMap(L => (POSTS || []).map(x => L + '/t/' + postSlug(x) + '.html')),
+  LANGS.flatMap(L => VS.map(v => L + '/' + vsFile(v))),
   LANGS.flatMap(L => D.map(e => cardPath(e, L))));
 fs.writeFileSync(path.join(out, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
