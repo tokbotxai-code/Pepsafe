@@ -54,6 +54,16 @@ for (const f of pliki) {
     if (!fs.existsSync(path.join(root, cel))) martwe.add(cel);
   }
 }
+// Polish words leaking onto English and Spanish pages (title of a source, product name): fix in tools/pl-en.json or dane.html
+{
+  const plChars = /[ąćęłńśźżĄĆĘŁŃŚŹŻ]/, wyciek = [];
+  const obce = pliki.filter(f => /^(en|es)\//.test(f) || /^p\/[^.]+(\.es)?\.html$/.test(f));
+  for (const f of obce) {
+    const t = fs.readFileSync(path.join(root, f), 'utf8').replace(/<(script|style)\b[\s\S]*?<\/\1>/g, '').replace(/<[^>]+>/g, '\n');
+    for (const l of t.split('\n')) if (plChars.test(l) && l.trim().length < 200 && !/Polski/.test(l)) wyciek.push(f + ': ' + l.trim().slice(0, 60));
+  }
+  wyciek.length ? zle('polskie napisy na stronach EN/ES', wyciek.length + ', np. ' + wyciek.slice(0, 3).join(' | ')) : ok('bez polskich napisów na EN/ES', obce.length + ' stron');
+}
 martwe.size ? zle('martwe linki', [...martwe].slice(0, 5).join(', ')) : ok('linki wewnętrzne', pliki.length + ' stron');
 
 console.log('\n── adresy znane wyszukiwarkom ──');

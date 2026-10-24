@@ -18,8 +18,20 @@ const norm = s => s.replace(/\s+/g, ' ').trim();
 const hasWords = s => /[A-Za-z]{2}/.test(s);
 
 function list(dir, filter) { return fs.existsSync(dir) ? fs.readdirSync(dir).filter(filter).map(f => path.join(dir, f)) : []; }
+// Polish source titles and product names that the generator still puts on English pages (tools/pl-en.json):
+// swap them on the English pages first, so the English and the Spanish editions both read right
+const PLEN = fs.existsSync(path.join(__dirname, 'pl-en.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'pl-en.json'), 'utf8')) : {};
+const enFiles = [...list(path.join(OUT, 'en'), f => f.endsWith('.html')), ...list(path.join(OUT, 'en', 't'), f => f.endsWith('.html')),
+  ...list(path.join(OUT, 'p'), f => /^[^.]+\.html$/.test(f)), path.join(OUT, 'index.html')].filter(f => fs.existsSync(f));
+for (const f of enFiles) {
+  let h = fs.readFileSync(f, 'utf8'), h0 = h;
+  for (const [pl, en] of Object.entries(PLEN).sort((a, b) => b[0].length - a[0].length)) if (h.includes(pl)) h = h.split(pl).join(en);
+  if (h !== h0) fs.writeFileSync(f, h);
+}
+for (const [pl, en] of Object.entries(PLEN)) if (TM[pl] && !TM[en]) TM[en] = TM[pl];
+
 const pages = [
-  ...list(path.join(OUT, 'en'), f => f.endsWith('.html')).map(f => [f, 'es/' + path.basename(f)]),
+  ...list(path.join(OUT, 'en'), f => f.endsWith('.html') && f !== 'search.html').map(f => [f, 'es/' + path.basename(f)]),
   ...list(path.join(OUT, 'en', 't'), f => f.endsWith('.html')).map(f => [f, 'es/t/' + path.basename(f)]),
   ...list(path.join(OUT, 'p'), f => /^[^.]+\.html$/.test(f) && f !== 'index.html' && !f.startsWith('faq')).map(f => [f, 'p/' + path.basename(f, '.html') + '.es.html'])
 ];
