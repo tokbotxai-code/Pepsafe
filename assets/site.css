@@ -478,3 +478,8 @@ footer>.wrap{position:relative;z-index:1}
 /* Head-to-head pages: two columns side by side, stacked on phones */
 .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
 @media (max-width: 640px) { .cols2 { grid-template-columns: 1fr; } }
+
+/* Card questions: collapsible, readable tap targets */
+details.qa { border-top: 1px solid var(--line, rgba(127,127,127,.25)); padding: 10px 0; }
+details.qa summary { cursor: pointer; font-weight: 600; min-height: 32px; }
+details.qa p { margin: 8px 0 0; }

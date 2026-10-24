@@ -774,6 +774,7 @@ function card(e, L) {
     ${e.q ? `<section class="blk reveal"><h2 class="kick">${esc(t.seq)}</h2><p class="seq">${esc(e.q)}</p></section>` : ''}
     ${src.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul></section>` : ''}
     ${ZM[key(e)] ? `<p class="small muted reveal">${en ? 'Last updated' : 'Ostatnia aktualizacja'}: <time datetime="${ZM[key(e)].d}">${fmtDate(ZM[key(e)].d, en)}</time> · <a href="../${L}/about.html#corrections">${en ? 'Report an error' : 'Zgłoś błąd'}</a></p>` : ''}
+    ${(() => { const qs = cardQs(e, en); return `<section class="blk reveal"><h2 class="kick">${en ? 'Common questions' : 'Częste pytania'}</h2>${qs.map(([q, a]) => `<details class="qa"><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</section>`; })()}
     ${(() => { const arts = articlesFor(e), vs = VS.filter(v => v.includes(e)); return arts.length || vs.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'Further reading' : 'Więcej do czytania'}</h2><ul class="srcs-list">${vs.map(v => `<li><a href="../${L}/${vsFile(v)}">${esc(nm(v[0].n, en) + ' vs ' + nm(v[1].n, en))}</a></li>`).join('')}${arts.map(x => `<li><a href="../${L}/t/${postSlug(x)}.html">${esc(x.title[L] || x.title.en)}</a></li>`).join('')}</ul></section>` : ''; })()}
     ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.related)}</h2><div class="cards">${sibs.map(s => cardRow(s, en, L)).join('')}</div></section>` : ''}
     ${(() => {
@@ -792,6 +793,7 @@ function card(e, L) {
         ...(ZM[key(e)] ? { dateModified: ZM[key(e)].d } : {}),
         about: { '@type': e.s === 'A' ? 'Drug' : 'ChemicalSubstance', name, description: clip(d, 300) },
         ...(src.length ? { citation: src.map(x => x[1]) } : {}) },
+      { '@type': 'FAQPage', mainEntity: cardQs(e, en).map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
       { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: t.back, item: `${SITE}${BASE}${L}/catalog.html` },
         { '@type': 'ListItem', position: 2, name } ] }
@@ -800,6 +802,17 @@ function card(e, L) {
 }
 
 const postSlug = x => slug(x.title.en || x.title.pl);
+// Questions people type into search, answered only with this entry's own fields
+function cardQs(e, en) {
+  const tr = EN[e.n] || [], name = nm(e.n, en);
+  const g = i => en ? (tr[i] || [0, 0, e.d, e.m, e.u, e.ev, e.w][i]) : [0, 0, e.d, e.m, e.u, e.ev, e.w][i];
+  return [
+    [en ? `Is ${name} approved?` : `${name}: czy jest zatwierdzony?`, `${statusOf(e, en)}. ${g(4) || ''}`.trim()],
+    [en ? `How does ${name} work?` : `${name}: jak działa?`, g(3)],
+    [en ? `What does the research on ${name} show?` : `${name}: co pokazują badania?`, g(5)],
+    [en ? `What are the risks and side effects of ${name}?` : `${name}: jakie są ryzyka i działania niepożądane?`, g(6)]
+  ].filter(([, a]) => a && a.length > 20);
+}
 // Cards link back to the long articles that mention them (reading paths for people and search engines)
 const ART_TEXT = new Map();
 function articlesFor(e) {
