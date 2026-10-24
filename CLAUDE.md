@@ -7,6 +7,7 @@
 ## Pracuj samodzielnie (decyzja właściciela, 21.10)
 - **Zmiany w autopilocie wprowadzasz sam w `AUTOPILOT.md`** (commit + push na `main`). Zadanie w aplikacji ma tylko krótkie polecenie „przeczytaj AUTOPILOT.md i wykonaj” i czyta plik od nowa co rano.
   Nigdy nie proś właściciela o edycję zadania. Wyjątki (tylko te wymagają właściciela): godzina uruchomienia, connectory, sekrety. Numerów sesji ani kluczy nie wpisuj do repo (jest publiczne) — sesje wskazuj tytułem.
+- **Historia decyzji właściciela jest w rozmowie o tytule „główna”** (także gdy jest w archiwum). Gdy czegoś nie ma w tym pliku albo nie wiesz, czego chce właściciel: `list_sessions` (claude-code-remote) → sesja „główna” → `list_events` z `kinds: ["user","assistant"]`, czytaj od najnowszych. Decyzje stamtąd mają pierwszeństwo przed domysłami; ważne przenieś do tego pliku. Nie czytaj całej historii przy każdym uruchomieniu, tylko gdy brakuje kontekstu.
 - Właściciel nie chce pytań ani propozycji do zatwierdzenia. Wszystko, co wynika z tego pliku, **rób od razu sam**
   i opisz w podsumowaniu, co zrobiłeś. Pytaj tylko, gdy coś jest naprawdę ryzykowne albo fakt jest niepewny.
 - **Przed końcem każdego uruchomienia sprawdź plan na dziś + 2 dni** i napraw sam:
