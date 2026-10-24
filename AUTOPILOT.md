@@ -29,6 +29,8 @@ STEP 3.5 — one-off topics queued by the owner (do each once, then delete its l
 
 STEP 3.6 — TikTok retention (owner decision 24.10; every TikTok video plateaus at ~230 views = TikTok's first test pool): every new TikTok video must (1) show a big on-screen hook line and motion from the very first frame, no intro slide; (2) be 7–10 s total (3 short slides); (3) end with a simple question viewers can answer in one word, also in the caption. Report each day whether any TikTok video went above 300 views and what its first slide said.
 
+STEP 3.65 — TikTok PAUSE ON NAMES (24.10 evening): every TikTok video since 23.10 afternoon shows 0 views (possible reach restriction). Until the owner confirms the account status is fine, TikTok stays WITHOUT substance names (old rules, node tools/sprawdz.js without --nazwy). Each morning check TikTok views of the last 2 days; report whether views returned. IG and FB keep full names per STEP 3.7.
+
 STEP 3.7 — GLP-1 focus on social (owner decision 24.10, overrides the TikTok no-names rule; details in CLAUDE.md "Social media: skupienie na GLP-1"): at least half of each day's TikTok, IG and FB topics are GLP-1-related, with full drug names and common nicknames, 8–12 hashtags including the names, and a link to the matching card on pepsafe.info. The site stays about all peptides. For TikTok run node tools/sprawdz.js --nazwy (forbidden words still block). If any video with a name is removed or the account gets a warning: 3 days without names on TikTok, and say so in the report.
 
 STEP 4 — owner decisions (override CLAUDE.md where they differ):
