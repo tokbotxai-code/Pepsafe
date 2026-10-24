@@ -305,6 +305,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Style i skrypt strony są w `src/site.css` i `src/ruch.js`; generator kopiuje je do `assets/`.
   Nie edytuj `assets/`, `en/`, `pl/`, `p/` ani `index.html` — są generowane i zostaną nadpisane.
 - `tools/og.js` odświeża obrazki udostępniania (`src/og-en.png`, `src/og-pl.png`) — tylko gdy zmienia się hasło strony.
+- **Wersja hiszpańska (od 24.10, decyzja właściciela):** po `v4.js` zawsze `node tools/es.js`. Skrypt tłumaczy gotowe strony EN segment po segmencie z pamięci `tools/es-tm.json` i buduje `/es/`, `/es/t/`, `/p/<slug>.es.html`, hreflang `es`, przełącznik EN·PL·ES i wpisy w sitemapie. Strona z nieprzetłumaczonym zdaniem jest pomijana (zostaje poprzednia wersja). `node tools/es.js --missing` → `tools/es-missing.json`; brakujące zdania tłumaczy autopilot (STEP 1.5) i dopisuje do `es-tm.json`. Komunikaty w `src/ruch.js` mają wersję ES przez `es(en, sp)`.
 - `tools/strony.js` i `tools/jezyki.js` zostały usunięte (zastąpił je `v4.js`). Nie uruchamiaj ich i nie odtwarzaj.
 - Podgląd przed publikacją: `PEP_OUT=/tmp/x PEP_BASE=/ node tools/v4.js`, potem `python3 -m http.server` w tym katalogu.
   Przy `PEP_BASE` innym niż `/` strony dostają `noindex`.

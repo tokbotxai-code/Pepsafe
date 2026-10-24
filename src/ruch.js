@@ -5,6 +5,9 @@
   'use strict';
 
   var html = document.documentElement;
+  // the Spanish pages reuse the English branch of every message, swapped here
+  var ES = html.lang === 'es';
+  function es(en, sp) { return ES ? sp : en; }
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var stored = null;
   try { stored = localStorage.getItem('pep-motion'); } catch (e) {}
@@ -112,8 +115,8 @@
     function side(sel) {
       var m = members(sel.value), ex = m.slice(0, 3).map(function (r) { return r.n; }).join(', ');
       return '<b>' + label(sel) + '</b>' +
-        (m.length ? ' <span class="muted">' + m.length + (pl ? ' wpisów' : ' entries') +
-          (ex ? (pl ? ', m.in. ' : ', e.g. ') + ex : '') + '</span>' : '');
+        (m.length ? ' <span class="muted">' + m.length + (pl ? ' wpisów' : es(' entries', ' fichas')) +
+          (ex ? (pl ? ', m.in. ' : es(', e.g. ', ', p. ej. ')) + ex : '') + '</span>' : '');
     }
     var render = function () {
       var same = a.value === b.value;
@@ -195,16 +198,16 @@
       cout.innerHTML = picked.map(function (r) {
         return '<article class="tile glass cmp"><p class="kick">' + r.st + '</p><h2 class="gtitle sm">' + r.n + '</h2>' +
           '<p class="small ink2">' + r.c + (r.gl ? ' · ' + r.gl : '') + '</p>' +
-          (r.ev ? '<p class="kick mt">' + (window.PEP.lang === 'en' ? 'Evidence' : 'Dowody') + '</p><p class="small">' + r.ev + '</p>' : '') +
-          (r.w ? '<p class="kick mt">' + (window.PEP.lang === 'en' ? 'Watch for' : 'Uwaga') + '</p><p class="small">' + r.w + '</p>' : '') +
+          (r.ev ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Dowody' : es('Evidence', 'Evidencia')) + '</p><p class="small">' + r.ev + '</p>' : '') +
+          (r.w ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Uwaga' : es('Watch for', 'Atención')) + '</p><p class="small">' + r.w + '</p>' : '') +
           '<p><a class="more" href="p/' + r.s + '.html">' + r.n + '</a></p></article>';
       }).join('');
       cempty.hidden = picked.length > 0;
       var groups = picked.filter(function (r) { return r.g; }).map(function (r) { return r.g; });
       var clash = groups.some(function (g, i) { return groups.indexOf(g) !== i; });
       cwarn.innerHTML = clash
-        ? '<div class="verdict same reveal in"><b>' + (window.PEP.lang === 'en' ? 'Two of these share a group — do not combine' : 'Dwie z nich są w tej samej grupie — nie łączyć') + '</b><span>' +
-          (window.PEP.lang === 'en' ? 'They act on the same target, so stacking repeats a mechanism instead of adding one.' : 'Działają na ten sam cel, więc łączenie powtarza mechanizm, zamiast dodawać drugi.') + '</span></div>'
+        ? '<div class="verdict same reveal in"><b>' + (html.lang === 'pl' ? 'Dwie z nich są w tej samej grupie — nie łączyć' : es('Two of these share a group — do not combine', 'Dos de ellas comparten grupo: no combinar')) + '</b><span>' +
+          (html.lang === 'pl' ? 'Działają na ten sam cel, więc łączenie powtarza mechanizm, zamiast dodawać drugi.' : es('They act on the same target, so stacking repeats a mechanism instead of adding one.', 'Actúan sobre la misma diana, así que combinarlas repite un mecanismo en lugar de añadir otro.')) + '</span></div>'
         : '';
     };
     cq.addEventListener('change', function () {
@@ -226,7 +229,7 @@
       if (v.length < 3) { sout.innerHTML = ''; shint.hidden = false; return; }
       var hits = window.PEP.rows.filter(function (r) { return r.t.indexOf(v) > -1; });
       shint.hidden = hits.length > 0;
-      if (!hits.length) { shint.hidden = false; shint.textContent = window.PEP.lang === 'en' ? 'Nothing matches that.' : 'Nic nie pasuje.'; }
+      if (!hits.length) { shint.hidden = false; shint.textContent = html.lang === 'pl' ? 'Nic nie pasuje.' : es('Nothing matches that.', 'No hay coincidencias.'); }
       sout.innerHTML = hits.slice(0, 60).map(rowCard).join('');
       markStars();
     };
@@ -425,8 +428,8 @@
     }
 
     hint.dataset.base = hint.textContent;
-    hint.dataset.none = hint.dataset.none || (document.documentElement.lang === 'pl' ? 'Nic nie pasuje.' : 'Nothing matches that.');
-    hint.dataset.more = document.documentElement.lang === 'pl' ? 'Zobacz wszystkie wyniki' : 'See all results';
+    hint.dataset.none = hint.dataset.none || (html.lang === 'pl' ? 'Nic nie pasuje.' : es('Nothing matches that.', 'No hay coincidencias.'));
+    hint.dataset.more = html.lang === 'pl' ? 'Zobacz wszystkie wyniki' : es('See all results', 'Ver todos los resultados');
 
     if (btn) btn.addEventListener('click', open);
     [].slice.call(document.querySelectorAll('[data-find]')).forEach(function (b) { b.addEventListener('click', open); });
@@ -457,8 +460,8 @@
       co: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
       ef: 'Uzupełnij opis objawu i zaznacz zgodę.'
     } : {
-      co: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
-      ef: 'Describe the symptom and tick the consent box.'
+      co: es('Enter your name, a valid email and a message (min. 10 characters) and tick the consent.', 'Escribe tu nombre, un correo válido y un mensaje (mín. 10 caracteres) y marca el consentimiento.'),
+      ef: es('Describe the symptom and tick the consent box.', 'Describe el síntoma y marca la casilla de consentimiento.')
     };
     function say(el, text) { el.hidden = false; el.textContent = text; el.classList.add('bad'); }
     function flag(el, bad) { if (el) el.setAttribute('aria-invalid', bad ? 'true' : 'false'); }
@@ -504,12 +507,12 @@
       var mail = f.email.value.trim(), cons = f.consent.checked;
       if (!/^\S+@\S+\.\S+$/.test(mail) || !cons) {
         e.preventDefault(); out.hidden = false; out.classList.add('bad');
-        out.textContent = pl ? 'Wpisz poprawny e-mail i zaznacz zgodę.' : 'Enter a valid email and tick the consent box.';
+        out.textContent = pl ? 'Wpisz poprawny e-mail i zaznacz zgodę.' : es('Enter a valid email and tick the consent box.', 'Escribe un correo válido y marca la casilla de consentimiento.');
         return;
       }
       e.preventDefault();
       var b = f.querySelector('[type="submit"]'); if (b) { b.disabled = true; b.textContent = b.dataset.busy; }
-      out.hidden = false; out.classList.remove('bad'); out.textContent = pl ? 'Wysyłanie…' : 'Sending…';
+      out.hidden = false; out.classList.remove('bad'); out.textContent = pl ? 'Wysyłanie…' : es('Sending…', 'Enviando…');
       var go = function () { location.href = f.dataset.next; };
       setTimeout(go, 6000);   // gdyby serwer formularzy nie odpowiadal, i tak pokaz checkliste
       var jobs = [fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {

@@ -1,3 +1,4 @@
 .voices/
 tiktok/*/vo-*.wav
 tiktok/*/vo-*.mp3
+tools/es-missing.json
