@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: PEP_OUT=. PEP_BASE=/ node tools/v4.js && node tools/es.js
+      - run: PEP_OUT=. PEP_BASE=/ node tools/v4.js && node tools/es.js && node tools/szukaj.js
       - run: node tools/kontrola.js
       - name: commit
         run: |
