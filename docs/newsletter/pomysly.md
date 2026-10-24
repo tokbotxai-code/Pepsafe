@@ -27,3 +27,5 @@
 - Z badań: najczęstsze działania niepożądane żołądkowo-jelitowe; obserwowany wzrost tętna (szczyt ok. 24. tygodnia) i dysestezja
   (zmienione czucie skóry) — w fazie 3 łagodna do umiarkowanej. Spadek masy ok. 28% w badaniach.
 - Pasuje do istniejących treści o „research peptides”. Bez słów z listy unikanych (buy, vial, dose…), bez porad, gdzie zdobyć.
+
+- Wycofanie tirzepatydu z apteki recepturowej Apothecary Pharma (24.09.2026, FDA D-0036-2027, klasa II, brak pewności jałowości). Wątek: czym lek recepturowy różni się od Mounjaro/Zepbound. Źródło: openFDA enforcement, https://pepsafe.info/en/alerts.html
