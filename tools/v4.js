@@ -652,6 +652,7 @@ function freeThanks(L) {
     <p class="kick reveal">${en ? 'You are in' : 'Gotowe'}</p>
     <h1 class="display reveal">${en ? 'Thank you — here is your checklist' : 'Dziękujemy — oto Twoja checklista'}</h1>
     <p class="actions reveal"><a class="btn big" href="${BASE}${CHECKLIST}" download>${en ? 'Download the checklist (PDF)' : 'Pobierz checklistę (PDF)'}${ARROW}</a></p>
+    <p class="notice reveal">${en ? 'Our weekly email comes from <b>contact@pepsafe.info</b>. Add it to your contacts, and if the first one lands in spam or Promotions, mark it “Not spam” so the next ones reach your inbox.' : 'Nasz cotygodniowy e-mail przychodzi z adresu <b>contact@pepsafe.info</b>. Dodaj go do kontaktów, a jeśli pierwszy trafi do spamu lub Ofert, oznacz go „To nie spam”, żeby kolejne trafiały do skrzynki odbiorczej.'}</p>
     <p class="lede reveal">${en ? 'Want the full plan? Protein targets, a 7-day meal plan, a 12-week home routine, a protein calculator and a printable tracker.' : 'Chcesz pełny plan? Cele białkowe, 7-dniowy plan posiłków, 12-tygodniowy trening w domu, kalkulator białka i dzienniczek.'}</p>
     <p class="actions reveal"><a class="btn ghost big" href="${MUSCLE_URL}" rel="noopener">${en ? 'Protein &amp; Muscle on GLP-1 — £9.99' : 'Białko i mięśnie przy GLP-1 — £9.99'}${ARROW}</a></p>
   </div>
