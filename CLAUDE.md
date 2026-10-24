@@ -8,6 +8,7 @@
 - **Zmiany w autopilocie wprowadzasz sam w `AUTOPILOT.md`** (commit + push na `main`). Zadanie w aplikacji ma tylko krótkie polecenie „przeczytaj AUTOPILOT.md i wykonaj” i czyta plik od nowa co rano.
   Nigdy nie proś właściciela o edycję zadania. Wyjątki (tylko te wymagają właściciela): godzina uruchomienia, connectory, sekrety. Numerów sesji ani kluczy nie wpisuj do repo (jest publiczne) — sesje wskazuj tytułem.
 - **Historia decyzji właściciela jest w rozmowie o tytule „główna”** (także gdy jest w archiwum). Gdy czegoś nie ma w tym pliku albo nie wiesz, czego chce właściciel: `list_sessions` (claude-code-remote) → sesja „główna” → `list_events` z `kinds: ["user","assistant"]`, czytaj od najnowszych. Decyzje stamtąd mają pierwszeństwo przed domysłami; ważne przenieś do tego pliku. Nie czytaj całej historii przy każdym uruchomieniu, tylko gdy brakuje kontekstu.
+- **Konto GitHub tokbotxai-code (24.10):** właściciel nie może się na nie zalogować (logowanie przez zablokowany Gmail). Sesje mają dostęp przez połączenie aplikacji i to wystarcza. Nie proś właściciela o nic w ustawieniach GitHuba (sekrety, Pages, prywatność repo). Przenosiny na IONOS wstrzymane; `.github/workflows/ionos.yml` czeka bezczynnie.
 - Właściciel nie chce pytań ani propozycji do zatwierdzenia. Wszystko, co wynika z tego pliku, **rób od razu sam**
   i opisz w podsumowaniu, co zrobiłeś. Pytaj tylko, gdy coś jest naprawdę ryzykowne albo fakt jest niepewny.
 - **Przed końcem każdego uruchomienia sprawdź plan na dziś + 2 dni** i napraw sam:
