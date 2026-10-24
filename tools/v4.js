@@ -434,7 +434,7 @@ function home(L) {
   <div class="wrap hero-grid">
     <div>
       <p class="badge reveal">${esc(h.badge)}<i class="dot" aria-hidden="true"></i></p>
-      <h1 class="display">${h.h1.map((x, i) => `<span class="reveal${i === 1 ? ' dim' : ''}">${esc(x)}</span>`).join('')}</h1>
+      <h1 class="display">${h.h1.map((x, i) => `<span class="reveal${i === 1 ? ' dim' : ''}">${esc(x)}</span>`).join(' ')}</h1>
       <p class="lede reveal">${esc(h.lede)}</p>
       <p class="herofind reveal">
         <button type="button" class="findfake" data-find>

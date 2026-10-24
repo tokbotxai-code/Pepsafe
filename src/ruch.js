@@ -133,7 +133,8 @@
   var q = document.getElementById('q'), chips = document.getElementById('chips'), list = document.getElementById('list');
   if (q && list) {
     var items = [].slice.call(list.children), nohit = document.getElementById('nohit'), pick = '';
-    var norm = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+    // accents, hyphens and spaces ignored, so "bpc157" finds BPC-157
+    var norm = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); };
     var apply = function () {
       var needle = norm(q.value.trim()), shown = 0;
       items.forEach(function (el) {
@@ -368,10 +369,12 @@
       var n = norm(v.trim());
       if (n.length < 2 || !window.PEP) return [];
       var pre = [], mid = [], deep = [];
+      var sq = n.replace(/[^a-z0-9]/g, ''); // "bpc157" also finds BPC-157
       window.PEP.rows.forEach(function (r) {
         var nn = norm(r.n);
         if (nn.indexOf(n) === 0) pre.push(r);
         else if (nn.indexOf(n) > -1) mid.push(r);
+        else if (sq.length > 1 && nn.replace(/[^a-z0-9]/g, '').indexOf(sq) > -1) mid.push(r);
         else if (norm(r.t).indexOf(n) > -1) deep.push(r);
       });
       var by = function (a, b) { return a.n.localeCompare(b.n); };
