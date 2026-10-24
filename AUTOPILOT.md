@@ -66,3 +66,5 @@ STEP 5.7 — Reddit replies for the owner (owner decision 24.10; the owner posts
 STEP 6 — final check before ending: getScheduledPosts again for today + 2 days and confirm: no ERROR posts, no empty window, no same-topic duplicates on one day, no ads outside the STEP 4(a) slots, nothing on blogId 7593858. Fix anything you find.
 
 End with a short Polish summary: the "Wczoraj" block, the "Kontrola i porządki" section, Peptyd dnia entries, what was added per day and channel (times), what was moved or retried, test results, drafts to delete by hand, and anything that needs the owner. No tool can read or reply to real comments; never claim you did.
+
+STEP 7 — deliver the report (owner decision 24.10). After the summary is final, call list_sessions (claude-code-remote; load via ToolSearch if needed), find the owner's session titled exactly "task" and send it the full Polish summary with send_message, starting with "📊 PepSafe – raport RRRR-MM-DD". Always send, even if nothing changed. If no such session exists, say so at the end of the summary.
