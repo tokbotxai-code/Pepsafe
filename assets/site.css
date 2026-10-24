@@ -75,7 +75,7 @@ a { color: inherit; }
 }
 
 /* ── type ─────────────────────────────────────────────── */
-.display { font-weight: 600; letter-spacing: -.045em; line-height: .94; margin: 0; }
+.display { font-weight: 600; letter-spacing: -.03em; line-height: 1.06; margin: 0; }
 h1.display { font-size: clamp(2.5rem, 8vw, 6rem); }
 h2.display { font-size: clamp(2rem, 5.2vw, 3.75rem); }
 h2.display.huge { font-size: clamp(2rem, 6.4vw, 4.75rem); max-width: 20ch; }
