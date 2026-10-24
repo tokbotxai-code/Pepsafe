@@ -252,7 +252,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   w MailerLite od 23.10 (DKIM CNAME `litesrv._domainkey`, SPF `v=spf1 include:_spf-eu.ionos.com include:_spf.mlsend.com ~all` w IONOS — nie zmieniać,
   bo zepsuje pocztę contact@ albo wysyłkę newsletterów). „Domain alignment” (płatne) nie jest potrzebne.
   W postach IG + FB można czasem dodać: „Free checklist: 5 mistakes that cost you muscle on GLP-1 — link in bio”.
-- **Strona `/en/guides.html` (i `/pl/`)**: podgląd 3 stron z każdego PDF (`guides/*.jpg`, ze znakiem PREVIEW), prawdziwe źródła, gwarancja zwrotu 14 dni (prośba na contact@ → zwrot przez Ko-fi/PayPal). Link w bio i ramki GLP-1 do niej prowadzą.
+- **Strona `/en/guides.html` (i `/pl/`)**: podgląd 3 stron z każdego PDF (`guides/*.jpg`, ze znakiem PREVIEW), prawdziwe źródła. **Bez gwarancji zwrotu** (decyzja właściciela 24.10: nie obiecujemy oddania pieniędzy). Link w bio i ramki GLP-1 do niej prowadzą.
 - **Opinie klientów (decyzja właściciela 22.10):** dozwolone, ale tylko prawdziwe: autor zatwierdził na piśmie dokładny tekst,
   podpis imieniem albo inicjałami + kraj, cytat słowo w słowo (skrót do dosłownego fragmentu wolno, przeróbki nie).
   Gdy autor dostał przewodnik za darmo, zawsze krótka notka, np. „Reviewers received free copies of both guides.” (wymóg UK DMCC Act

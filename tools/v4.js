@@ -457,7 +457,7 @@ function home(L) {
 <section class="field" style="padding-top:0">
   <div class="wrap">
     <a class="reveal" href="${BASE}${L}/guides.html" style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border:2px solid #3CCFA9;border-radius:14px;padding:16px 20px;text-decoration:none;color:inherit">
-      <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Na lekach GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £5.99 · Protein &amp; Muscle £9.99 · sources on every page · 14-day refund' : 'Bezpieczeństwo £5.99 · Białko i mięśnie £9.99 · źródła na każdej stronie · zwrot w 14 dni'}</span></span>
+      <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Na lekach GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £5.99 · Protein &amp; Muscle £9.99 · sources on every page' : 'Bezpieczeństwo £5.99 · Białko i mięśnie £9.99 · źródła na każdej stronie'}</span></span>
       <span class="btn">${en ? 'See inside' : 'Zobacz podgląd'}${ARROW}</span>
     </a>
     <p class="small ink2 reveal" style="margin-top:10px">${en ? 'The catalog stays free and ad-free.' : 'Katalog zostaje darmowy i bez reklam.'} <a href="${KOFI}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
@@ -660,7 +660,7 @@ function freeThanks(L) {
   return layout({ lang: L, here: 'free-thanks.html', twin: 'free-thanks.html', body, noindex: true,
     title: (en ? 'Your checklist' : 'Twoja checklista') + ' | PepSafe', desc: en ? 'Download your checklist.' : 'Pobierz checklistę.' });
 }
-// strona z przewodnikami: podglad stron, prawdziwe sygnaly zaufania, gwarancja zwrotu (bez zmyslonych opinii)
+// strona z przewodnikami: podglad stron, prawdziwe sygnaly zaufania, (bez zmyslonych opinii)
 function guidesPage(L) {
   const en = L === 'en';
   const card = (url, price, title, what, list, imgs) => `
@@ -682,7 +682,6 @@ function guidesPage(L) {
       <li>${en ? 'Sources: MHRA, EMA, FDA labels, STEP and SURMOUNT trials, WHO and NHS guidance' : 'Źródła: MHRA, EMA, etykiety FDA, badania STEP i SURMOUNT, zalecenia WHO i NHS'}</li>
       <li>${en ? 'Independent: no ads, and we never sell medicines or peptides' : 'Niezależne: bez reklam, nie sprzedajemy leków ani peptydów'}</li>
       <li>${en ? 'Updated October 2026' : 'Aktualizacja: październik 2026'}</li>
-      <li><b>${en ? '14-day refund: not useful? Email ' + FORM_TO + ' and we will refund you.' : 'Zwrot w 14 dni: nie przydało się? Napisz na ' + FORM_TO + ', oddamy pieniądze.'}</b></li>
     </ul>
     ${card(GUIDE_URL, '£5.99', 'The GLP-1 Safety Guide', en ? '23 pages: what to expect, what to watch for and what to ask your doctor.' : '23 strony: czego się spodziewać, na co uważać i o co pytać lekarza.',
       en ? ['Side effects and how often they really happen', 'Label warnings: pancreas, gallbladder, kidneys, eyes', 'Surgery, other medicines, pregnancy', 'Stopping and the long term; spotting fakes', 'Appointment checklist and pocket cheat sheet']
