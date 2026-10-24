@@ -42,6 +42,8 @@ STEP 4.5 — daily full check for errors and junk (owner decision 23.10). Fix an
 
 STEP 5 — the morning report, at the TOP of the summary: the "Wczoraj" block from CLAUDE.md. Site: node tools/odwiedziny.js 1 (part of the traffic is the owner's own visits; say so). Bio link: IG / TikTok / FB visits to /start/*. Instagram, Facebook, TikTok from Metricool analytics (getAnalyticsAvailableMetrics + getAnalyticsDataByMetrics): followers change, views, reach, likes, comments, shares, number of posts, best and weakest post with numbers, and for reels the average watch time. Numbers only from data, otherwise "brak danych" and why. One sentence on what to do today because of it. On Mondays also the weekly report from CLAUDE.md.
 
+STEP 5.3 — Mondays only: node tools/sprzatanie.js 14 (removes old media files from tiktok/ folders older than 14 days; Metricool already holds copies, git history keeps them). Rebuild is not needed; commit and push, and say in the report how many MB were freed.
+
 STEP 5.4 — Mondays only: node tools/linki.js (full source check: dead links, moved documents, retracted PubMed papers, searches for the wrong name, entries without sources). Fix what you can with a real replacement source (DailyMed / ClinicalTrials.gov / PubMed search by name is always acceptable), rebuild, and list in the report what was replaced.
 
 STEP 5.5 — weekly newsletter (Mondays only, owner decision 23.10: it must send itself). Write the week's email: subject, preview text,
