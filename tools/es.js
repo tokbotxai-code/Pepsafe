@@ -107,8 +107,14 @@ const addAlt = (file, enPath) => {
 function langSwitch(file, cur, urls) {
   const p = path.join(OUT, file); if (!fs.existsSync(p)) return;
   const h = fs.readFileSync(p, 'utf8');
-  const sw = ['EN', 'PL', 'ES'].map(L => L === cur ? `<span class="lang on" aria-current="true">${L}</span>` : `<a class="lang" href="${urls[L]}">${L}</a>`).join('');
-  fs.writeFileSync(p, h.replace(/(?:<span class="lang on"[^>]*>[A-Z]{2}<\/span>|<a class="lang" href="[^"]*">[A-Z]{2}<\/a>)+/g, sw));
+  const NAME = { EN: 'English', PL: 'Polski', ES: 'Español' };
+  const sw = `<details class="lp"><summary aria-label="Language">🌐 ${cur} ▾</summary><ul>` +
+    ['EN', 'PL', 'ES'].map(L => `<li><a class="lang${L === cur ? ' on" aria-current="true' : ''}" data-l="${L.toLowerCase()}" href="${urls[L]}">${NAME[L]}</a></li>`).join('') + '</ul></details>';
+  let out = h.replace(/(?:<span class="lang on"[^>]*>[A-Z]{2}<\/span>|<a class="lang" href="[^"]*">[A-Z]{2}<\/a>)+/g, sw);
+  // home page only: first visit goes to the visitor's browser language; a choice made in the list wins
+  if (file === 'index.html' && !out.includes('pep-lang'))
+    out = out.replace('</head>', `<script>try{if(!localStorage.getItem('pep-lang')){var l=(navigator.languages&&navigator.languages[0]||navigator.language||'').slice(0,2).toLowerCase();if(l==='pl')location.replace('/pl/');else if(l==='es')location.replace('/es/');}}catch(e){}</script>\n</head>`);
+  fs.writeFileSync(p, out);
 }
 for (const enPath of Object.keys(esOf)) {
   const plPath = enPath.startsWith('p/') ? enPath.replace('.html', '.pl.html') : enPath.replace(/^en\//, 'pl/');

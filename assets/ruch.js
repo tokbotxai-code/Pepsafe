@@ -532,6 +532,21 @@
     if (m && /[?&]r=1/.test(location.search)) m.textContent = m.dataset.report;
   })();
 
+  /* ── lista jezykow: na komputerze otwiera sie po najechaniu (zamkniete <details> nie rysuje listy) ─ */
+  if (matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.lp').forEach(function (d) {
+      var t;
+      d.addEventListener('mouseenter', function () { clearTimeout(t); d.open = true; });
+      d.addEventListener('mouseleave', function () { t = setTimeout(function () { d.open = false; }, 250); });
+    });
+  }
+
+  /* ── wybor jezyka: zapamietany, zeby strona glowna wiecej nie przestawiala ─ */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.lp a[data-l]');
+    if (a) { try { localStorage.setItem('pep-lang', a.dataset.l); } catch (x) {} }
+  });
+
   /* ── menu na telefonie ─────────────────────────────── */
   (function () {
     var wrap = document.getElementById('menu'), btn = document.getElementById('burger');
