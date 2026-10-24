@@ -512,7 +512,7 @@ function home(L) {
   </div>
   ${spotlight(L)}
 </section>
-
+${mostRead(L)}
 <section id="catalog">
   <div class="wrap cat-grid">
     <div data-par="1">
@@ -1215,6 +1215,18 @@ function methods(L) {
   return layout({ lang: L, here: 'methods.html', twin: 'methods.html', body,
     title: (en ? 'Sources & methods' : 'Źródła i metoda') + ' | PepSafe',
     desc: en ? 'Where PepSafe facts come from, how evidence is described and how sources are checked every week.' : 'Skąd PepSafe bierze fakty, jak opisuje dowody i jak co tydzień sprawdza źródła.' });
+}
+// "Most read this week": tools/najczytane.json is written every Monday from site analytics (node tools/odwiedziny.js); no file, no section
+function mostRead(L) {
+  let top = [];
+  try { top = JSON.parse(fs.readFileSync(path.join(root, 'tools', 'najczytane.json'), 'utf8')).slugs || []; } catch (x) { return ''; }
+  const rows = top.map(k => D.find(e => key(e) === k)).filter(Boolean).slice(0, 5);
+  if (!rows.length) return '';
+  const en = L === 'en';
+  return `<section class="field"><div class="wrap">
+  <p class="kick reveal">${en ? 'Most read this week' : 'Najczęściej czytane w tym tygodniu'}</p>
+  <ol class="reveal">${rows.map(e => `<li><a href="${BASE}${cardPath(e, L)}">${esc(nm(e.n, en))}</a> <span class="small ink2">${esc(statusOf(e, en))}</span></li>`).join('')}</ol>
+</div></section>`;
 }
 function compare(L) {
   const en = L === 'en', t = W[L];
