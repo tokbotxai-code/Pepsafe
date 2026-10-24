@@ -106,6 +106,8 @@ h1.display .dim { color: var(--ink3); }
 .tools { display: flex; align-items: center; gap: 10px; }
 .lang { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .14em; color: var(--ink3); text-decoration: none; }
 .lang:hover { color: var(--ink); }
+.lang + .lang { margin-left: 10px; }
+.lang.on { color: var(--ink); font-weight: 700; border-bottom: 2px solid currentColor; }
 .icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); background: var(--paper2); color: var(--ink2); cursor: pointer; transition: color .2s, border-color .2s; }
 .icon:hover { color: var(--ink); border-color: var(--ink3); }
 [data-theme="light"] .icon .moon { display: none; }
