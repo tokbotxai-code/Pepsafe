@@ -138,7 +138,7 @@ const W = {
     efSub: 'Substance', efSym: 'Description of the symptom (no personal data)',
     efSev: 'Severity', efSev1: 'Mild', efSev2: 'Moderate', efSev3: 'Severe or worrying',
     efWhen: 'When it happened (e.g. after 2 days)',
-    efCons: 'I understand the report does not replace a doctor, goes only to the site authors and is not published.',
+    efCons: 'I agree that PepSafe processes the health information in this report to read it and spot safety patterns. I understand it does not replace a doctor, goes only to the site authors and is not published.',
     efSend: 'Send report', efErr: 'Describe the symptom and tick the consent box.',
     efOk: 'Sent. Thank you for the report.',
     efEmerg: 'Sent. With severe symptoms call 112 or your doctor, do not wait for a reply from us.',
@@ -188,7 +188,7 @@ const W = {
     efSub: 'Substancja', efSym: 'Opis objawu (bez danych osobowych)',
     efSev: 'Nasilenie', efSev1: 'Lekkie', efSev2: 'Umiarkowane', efSev3: 'Silne lub niepokojące',
     efWhen: 'Kiedy wystąpiło (np. po 2 dniach)',
-    efCons: 'Rozumiem, że zgłoszenie nie zastępuje lekarza, trafia tylko do autorów strony i nie jest publikowane.',
+    efCons: 'Zgadzam się, by PepSafe przetwarzał informacje o zdrowiu z tego zgłoszenia, żeby je przeczytać i wychwycić powtarzające się problemy. Rozumiem, że zgłoszenie nie zastępuje lekarza, trafia tylko do autorów strony i nie jest publikowane.',
     efSend: 'Wyślij zgłoszenie', efErr: 'Uzupełnij opis objawu i zaznacz zgodę.',
     efOk: 'Wysłano. Dziękujemy za zgłoszenie.',
     efEmerg: 'Wysłano. Przy silnych objawach zadzwoń pod 112 lub do lekarza, nie czekaj na odpowiedź od nas.',
@@ -336,8 +336,8 @@ ${o.body}
 // ── homepage copy ─────────────────────────────────────────────────────────────
 const H = {
   en: {
-    badge: 'Independent · non-commercial', h1: [`${D.length} peptides.`, 'Legal status and evidence.', 'Nothing for sale.'],
-    lede: `A reference for ${D.length} peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. Nothing here is for sale, and we never publish doses for substances that are not approved medicines.`,
+    badge: 'Independent · no ads · no affiliates', h1: [`${D.length} peptides.`, 'Legal status and evidence.', 'No peptides for sale.'],
+    lede: `A reference for ${D.length} peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. We sell no peptides or medicines and take no affiliate money; the catalog is free and funded by our optional PDF guides. We never publish doses for substances that are not approved medicines.`,
     b1: 'Check an overlap', b2: `Browse all ${D.length}`, railTitle: 'Catalog, by status',
     stats: { approved: 'Approved medicines', unapproved: 'Unapproved', trials: 'In clinical trials', other: 'Other statuses' },
     s1kick: '01 — Overlap checker', s1h: 'Two names, one receptor.',
@@ -358,8 +358,8 @@ const H = {
       'Educational content, not medical advice. Decisions about treatment belong with a doctor who knows your case.']
   },
   pl: {
-    badge: 'Niezależnie · niekomercyjnie', h1: [`${D.length} peptydów.`, 'Status prawny i dowody.', 'Nic na sprzedaż.'],
-    lede: `Przewodnik po ${D.length} peptydach i substancjach pokrewnych: czym każda z nich jest, co naprawdę pokazują badania, czy jakikolwiek regulator ją zatwierdził i które grupy działają na ten sam receptor. Nic tu nie jest na sprzedaż, a dawek dla substancji niezatwierdzonych nie podajemy nigdy.`,
+    badge: 'Niezależnie · bez reklam · bez afiliacji', h1: [`${D.length} peptydów.`, 'Status prawny i dowody.', 'Nie sprzedajemy peptydów.'],
+    lede: `Przewodnik po ${D.length} peptydach i substancjach pokrewnych: czym każda z nich jest, co naprawdę pokazują badania, czy jakikolwiek regulator ją zatwierdził i które grupy działają na ten sam receptor. Nie sprzedajemy peptydów ani leków i nie bierzemy prowizji; katalog jest darmowy, a utrzymują go nasze opcjonalne przewodniki PDF. Dawek dla substancji niezatwierdzonych nie podajemy nigdy.`,
     b1: 'Sprawdź dublowanie', b2: `Zobacz wszystkie ${D.length}`, railTitle: 'Katalog według statusu',
     stats: { approved: 'Zatwierdzone leki', unapproved: 'Niezatwierdzone', trials: 'W badaniach klinicznych', other: 'Pozostałe statusy' },
     s1kick: '01 — Sprawdzarka dublowania', s1h: 'Dwie nazwy, jeden receptor.',
@@ -545,7 +545,7 @@ function home(L) {
   return layout({
     lang: L, here: 'index.html', twin: '', body,
     title: en ? 'PepSafe — peptide facts, no sales' : 'PepSafe — fakty o peptydach, bez sprzedaży',
-    desc: en ? `Independent reference to ${D.length} peptides: legal status, what the research shows and which act on the same receptor. Nothing for sale.` : `Niezależny przewodnik po ${D.length} peptydach: status prawny, co pokazują badania i które działają na ten sam receptor. Nic tu nie sprzedajemy.`
+    desc: en ? `Independent reference to ${D.length} peptides: legal status, what the research shows and which act on the same receptor. No peptides for sale, no affiliates.` : `Niezależny przewodnik po ${D.length} peptydach: status prawny, co pokazują badania i które działają na ten sam receptor. Nie sprzedajemy peptydów, bez afiliacji.`
   });
 }
 
@@ -703,7 +703,8 @@ function privacy(L) {
     ['Who we are', 'PepSafe (pepsafe.info) is an independent educational website about peptides and GLP-1 medicines. Contact: ' + FORM_TO + '.'],
     ['What we collect', 'If you join our email list, we collect your email address and the date of your consent. If you use the contact or side-effect form, we collect what you type into it. We do not ask for health records and you should not send them.'],
     ['Why', 'To send you the weekly PepSafe email and the free checklist (legal basis: your consent), and to answer messages you send us.'],
-    ['Who processes it', 'Forms are delivered to our inbox by FormSubmit (formsubmit.co). Our email list may be hosted by an email service provider such as MailerLite. Purchases on Ko-fi are handled by Ko-fi and PayPal/Stripe under their own privacy policies; we receive only what they share with sellers.'],
+    ['Who processes it', 'Forms are delivered to our inbox by FormSubmit (formsubmit.co). Our email list is hosted by MailerLite (UAB MailerLite, Lithuania, EU), which stores your email address and consent date and sends our emails on our behalf. Purchases on Ko-fi are handled by Ko-fi and PayPal/Stripe under their own privacy policies; we receive only what they share with sellers.'],
+    ['Side-effect reports', 'The side-effect form collects health information (special category data). We process it only with your explicit consent, given with the checkbox on the form, only to read the report and notice repeated safety problems. It is sent by FormSubmit to our inbox, read only by the site authors, never published, never shared and never used for marketing. Do not include your name, contact details or medical records. We delete reports within 12 months; you can ask us to delete yours earlier at ' + FORM_TO + '. We do not forward reports to regulators: to report officially, use the MHRA Yellow Card (UK) or FDA MedWatch (US).'],
     ['Analytics', 'We count visits with Cloudflare Web Analytics, which does not use cookies and does not track you across websites.'],
     ['How long', 'We keep your email until you unsubscribe or ask us to delete it. Messages are kept only as long as needed to reply.'],
     ['Your rights', 'You can unsubscribe at any time with the link in every email, or ask us to see, correct or delete your data by writing to ' + FORM_TO + '. UK residents can complain to the Information Commissioner\'s Office (ico.org.uk).'],
@@ -712,7 +713,8 @@ function privacy(L) {
     ['Kim jesteśmy', 'PepSafe (pepsafe.info) to niezależna strona edukacyjna o peptydach i lekach GLP-1. Kontakt: ' + FORM_TO + '.'],
     ['Co zbieramy', 'Jeśli zapiszesz się na listę mailową — Twój adres e-mail i datę zgody. Jeśli użyjesz formularza kontaktowego lub zgłoszenia objawu — to, co w nim wpiszesz. Nie prosimy o dokumentację medyczną i nie wysyłaj jej.'],
     ['Po co', 'Żeby wysyłać cotygodniowy e-mail PepSafe i darmową checklistę (podstawa: Twoja zgoda) oraz odpowiadać na wiadomości.'],
-    ['Kto przetwarza', 'Formularze trafiają do naszej skrzynki przez FormSubmit (formsubmit.co). Lista mailowa może być prowadzona w serwisie takim jak MailerLite. Zakupy na Ko-fi obsługują Ko-fi i PayPal/Stripe według własnych zasad prywatności.'],
+    ['Kto przetwarza', 'Formularze trafiają do naszej skrzynki przez FormSubmit (formsubmit.co). Listę mailową prowadzi MailerLite (UAB MailerLite, Litwa, UE): przechowuje Twój adres i datę zgody i wysyła w naszym imieniu e-maile. Zakupy na Ko-fi obsługują Ko-fi i PayPal/Stripe według własnych zasad prywatności.'],
+    ['Zgłoszenia objawów', 'Formularz zgłoszenia objawu zbiera informacje o zdrowiu (dane szczególnej kategorii). Przetwarzamy je wyłącznie za Twoją wyraźną zgodą (pole wyboru w formularzu), tylko po to, by przeczytać zgłoszenie i wychwycić powtarzające się problemy z bezpieczeństwem. Trafia przez FormSubmit do naszej skrzynki, czytają je tylko autorzy strony; nigdy go nie publikujemy, nie przekazujemy dalej i nie używamy do marketingu. Nie podawaj imienia, danych kontaktowych ani dokumentacji medycznej. Zgłoszenia usuwamy najpóźniej po 12 miesiącach, wcześniej na prośbę pod ' + FORM_TO + '. Nie przekazujemy zgłoszeń urzędom: oficjalnie zgłosisz działanie niepożądane w URPL (Polska), MHRA Yellow Card (UK) lub FDA MedWatch (USA).'],
     ['Statystyki', 'Odwiedziny liczymy przez Cloudflare Web Analytics, bez ciasteczek i bez śledzenia między stronami.'],
     ['Jak długo', 'Adres trzymamy, dopóki się nie wypiszesz albo nie poprosisz o usunięcie. Wiadomości tylko tak długo, jak trzeba, by odpowiedzieć.'],
     ['Twoje prawa', 'Możesz wypisać się w każdej chwili linkiem w każdym e-mailu albo poprosić o wgląd, poprawienie lub usunięcie danych pod adresem ' + FORM_TO + '. Możesz też złożyć skargę do organu nadzorczego (w UK: ICO, w Polsce: UODO).'],
