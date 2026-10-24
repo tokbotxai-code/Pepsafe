@@ -225,9 +225,10 @@
   if (sq && window.PEP) {
     var sout = document.getElementById('syOut'), shint = document.getElementById('syHint');
     var runSy = function () {
-      var v = sq.value.trim().toLowerCase();
+      var fold = function (s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+      var v = fold(sq.value.trim());
       if (v.length < 3) { sout.innerHTML = ''; shint.hidden = false; return; }
-      var hits = window.PEP.rows.filter(function (r) { return r.t.indexOf(v) > -1; });
+      var hits = window.PEP.rows.filter(function (r) { return fold(r.t).indexOf(v) > -1; });
       shint.hidden = hits.length > 0;
       if (!hits.length) { shint.hidden = false; shint.textContent = html.lang === 'pl' ? 'Nic nie pasuje.' : es('Nothing matches that.', 'No hay coincidencias.'); }
       sout.innerHTML = hits.slice(0, 60).map(rowCard).join('');

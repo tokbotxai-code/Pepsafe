@@ -87,10 +87,25 @@ if (missingMode) {
   process.exit(0);
 }
 
+// search: Spanish words next to the English ones, so both "semaglutida" and "semaglutide" find the entry
+const LOW = Object.entries(TM).map(([k, v]) => [k.toLowerCase(), v.toLowerCase()]).filter(([k, v]) => k !== v && k.length > 3);
+const SHORT = new Map(LOW.filter(([k]) => k.length < 40));
+function addEs(t) {
+  const extra = new Set();
+  for (const w of t.split(/[\s,;]+/)) if (SHORT.has(w)) extra.add(SHORT.get(w));
+  for (const [k, v] of LOW) if (k.length > 15 && t.includes(k)) extra.add(v);
+  return extra.size ? t + ' ' + [...extra].join(' ') : t;
+}
+for (const d of built) {
+  const f = path.join(OUT, d);
+  fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace(/ data-n="([^"]*)"/g, (all, v) => ` data-n="${addEs(v).replace(/"/g, '&quot;')}"`));
+}
+
 // data file for search and the overlap checker
 const dataEn = fs.readFileSync(path.join(OUT, 'assets', 'dane-en.js'), 'utf8');
 fs.writeFileSync(path.join(OUT, 'assets', 'dane-es.js'), dataEn.replace(/"((?:[^"\\]|\\.)*)"/g, (all, v) => {
   let s; try { s = JSON.parse('"' + v + '"'); } catch (e) { return all; }
+  if (/^[a-z0-9]/.test(s) && s.length > 30 && s === s.toLowerCase()) return JSON.stringify(addEs(s));
   const t = TM[norm(s)]; return t ? JSON.stringify(t) : all;
 }).replace(/lang:\s*"en"|"lang":"en"/, m => m.replace('en', 'es')));
 
