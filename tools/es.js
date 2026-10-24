@@ -101,9 +101,21 @@ const addAlt = (file, enPath) => {
   const p = path.join(OUT, file); if (!fs.existsSync(p) || !esOf[enPath]) return;
   let h = fs.readFileSync(p, 'utf8'); if (h.includes('hreflang="es"')) return;
   h = h.replace(/(<link rel="alternate" hreflang="x-default")/, `<link rel="alternate" hreflang="es" href="${SITE}/${esOf[enPath]}">\n$1`);
-  if (file !== esOf[enPath]) h = h.replace(/(<a class="lang" href="[^"]*">(?:EN|PL)<\/a>)/g, `$1<a class="lang" href="/${esOf[enPath]}">ES</a>`);
   fs.writeFileSync(p, h);
 };
+// one switch on every page: EN · PL · ES, with the current language marked instead of linked
+function langSwitch(file, cur, urls) {
+  const p = path.join(OUT, file); if (!fs.existsSync(p)) return;
+  const h = fs.readFileSync(p, 'utf8');
+  const sw = ['EN', 'PL', 'ES'].map(L => L === cur ? `<span class="lang on" aria-current="true">${L}</span>` : `<a class="lang" href="${urls[L]}">${L}</a>`).join('');
+  fs.writeFileSync(p, h.replace(/(?:<span class="lang on"[^>]*>[A-Z]{2}<\/span>|<a class="lang" href="[^"]*">[A-Z]{2}<\/a>)+/g, sw));
+}
+for (const enPath of Object.keys(esOf)) {
+  const plPath = enPath.startsWith('p/') ? enPath.replace('.html', '.pl.html') : enPath.replace(/^en\//, 'pl/');
+  const urls = { EN: '/' + enPath, PL: '/' + plPath, ES: '/' + esOf[enPath] };
+  langSwitch(enPath, 'EN', urls); langSwitch(plPath, 'PL', urls); langSwitch(esOf[enPath], 'ES', urls);
+  if (enPath === 'en/index.html') langSwitch('index.html', 'EN', { EN: '/', PL: '/pl/', ES: '/es/' });
+}
 if (esOf['en/index.html']) addAlt('index.html', 'en/index.html');
 for (const enPath of Object.keys(esOf)) {
   addAlt(enPath, enPath);
