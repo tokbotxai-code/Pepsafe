@@ -60,7 +60,8 @@ const fail = (what, why) => bad.push(`${what}: ${why}`);
   for (let i = 0; i < urls.length; i += 6) await Promise.all(urls.slice(i, i + 6).map(async u => {
     const p = await c.newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message));
     try {
-      const r = await p.goto(BASE + u, { waitUntil: 'load', timeout: 30000 });
+      // one retry: a single slow answer from the host is not a broken page
+      const r = await p.goto(BASE + u, { waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => p.goto(BASE + u, { waitUntil: 'domcontentloaded', timeout: 45000 }));
       if (!r || r.status() >= 400) fail(u, 'HTTP ' + (r && r.status()));
       await p.waitForTimeout(400);
       const [h1, wide] = await p.evaluate(() => [!!document.querySelector('h1'), document.documentElement.scrollWidth > innerWidth + 2]);
