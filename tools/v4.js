@@ -38,6 +38,16 @@ const statusOf = (e, en) => en ? (ST_EN[e.s] || e.s) : (ST[e.s] || e.s);
 const toneOf = e => e.s === 'A' ? 'ok' : (e.s === 'P' || e.s === 'R') ? 'mid' : (e.s === 'C' || e.s === 'N') ? 'neutral' : 'warn';
 const famOf = e => FAMS.find(f => (f.m || []).includes(e.n));
 const wadaOf = e => (WADA || {})[e.n] || (e.wa ? ['S0'] : null);
+// "Last updated" per card: date the entry's content (catalog, EN text, sources, WADA) last changed, kept in tools/zmiany.json
+const ZM_FILE = path.join(__dirname, 'zmiany.json');
+const ZM = (() => { try { return JSON.parse(fs.readFileSync(ZM_FILE, 'utf8')); } catch (e) { return {}; } })();
+for (const e of D) {
+  const h = require('crypto').createHash('md5').update(JSON.stringify([e, EN[e.n], (SRC || {})[e.n], (WADA || {})[e.n]])).digest('hex').slice(0, 12);
+  const k = key(e);
+  if (!ZM[k] || ZM[k].h !== h) ZM[k] = { h, d: TODAY };
+}
+fs.writeFileSync(ZM_FILE, JSON.stringify(ZM, null, 0).replace(/\},/g, '},\n') + '\n');
+const fmtDate = (d, en) => new Date(d + 'T12:00:00Z').toLocaleDateString(en ? 'en-GB' : 'pl-PL', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 const STATS = [['approved', D.filter(e => e.s === 'A').length], ['unapproved', D.filter(e => e.s === 'U').length],
 ['trials', D.filter(e => e.s === 'P').length], ['other', D.filter(e => !'AUP'.includes(e.s)).length]];
@@ -760,6 +770,7 @@ function card(e, L) {
       : esc(wa[2] || (t.listedWada + ' ' + wa[0] + '.'))} <a href="${WADA_URL}" rel="nofollow noopener" target="_blank">WADA</a></p></section>` : ''}
     ${e.q ? `<section class="blk reveal"><h2 class="kick">${esc(t.seq)}</h2><p class="seq">${esc(e.q)}</p></section>` : ''}
     ${src.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul></section>` : ''}
+    ${ZM[key(e)] ? `<p class="small muted reveal">${en ? 'Last updated' : 'Ostatnia aktualizacja'}: <time datetime="${ZM[key(e)].d}">${fmtDate(ZM[key(e)].d, en)}</time> · <a href="../${L}/about.html#corrections">${en ? 'Report an error' : 'Zgłoś błąd'}</a></p>` : ''}
     ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.related)}</h2><div class="cards">${sibs.map(s => cardRow(s, en, L)).join('')}</div></section>` : ''}
     ${(() => {
       const mix = ((CONFUSE || {})[e.n] || []).map(x => D.find(y => y.n === x)).filter(Boolean)
@@ -1007,6 +1018,8 @@ function about(L) {
       <p class="small ink2">${en ? 'Claims link to labels, reviews and trial registries. Where evidence is thin, the entry says so.' : 'Twierdzenia linkują do etykiet, przeglądów i rejestrów badań. Gdzie dowodów jest mało, wpis mówi to wprost.'}</p></article>
     <article class="tile glass reveal"><h2 class="gtitle sm">${en ? 'No doses from strangers' : 'Bez dawek od obcych'}</h2>
       <p class="small ink2">${en ? 'Doses appear only for approved medicines, copied from the label, as information rather than advice.' : 'Dawki pojawiają się tylko przy zatwierdzonych lekach, przepisane z etykiety, jako informacja, nie porada.'}</p></article>
+    <article class="tile glass reveal" id="corrections"><h2 class="gtitle sm">${en ? 'Corrections' : 'Poprawki'}</h2>
+      <p class="small ink2">${en ? 'Found an error or a newer source? Use the contact form below. We check every report against the source, fix confirmed errors and update the date on the entry. Every entry shows when it last changed.' : 'Widzisz błąd albo nowsze źródło? Napisz przez formularz niżej. Każde zgłoszenie sprawdzamy w źródle, potwierdzone błędy poprawiamy i aktualizujemy datę wpisu. Każdy wpis pokazuje, kiedy ostatnio się zmienił.'}</p></article>
   </div>
 </div></section>
 
