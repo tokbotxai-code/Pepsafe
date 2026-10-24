@@ -5,6 +5,8 @@
 > Zasady z 22.10 wieczorem („Mniej, a lepiej”) i z 23.10 („Reklamy: 2 w tygodniu”) zastępują wcześniejsze limity, także STEP 4(a) w poleceniu.
 
 ## Pracuj samodzielnie (decyzja właściciela, 21.10)
+- **Zmiany w autopilocie wprowadzasz sam w `AUTOPILOT.md`** (commit + push na `main`). Zadanie w aplikacji ma tylko krótkie polecenie „przeczytaj AUTOPILOT.md i wykonaj” i czyta plik od nowa co rano.
+  Nigdy nie proś właściciela o edycję zadania. Wyjątki (tylko te wymagają właściciela): godzina uruchomienia, connectory, sekrety. Numerów sesji ani kluczy nie wpisuj do repo (jest publiczne) — sesje wskazuj tytułem.
 - Właściciel nie chce pytań ani propozycji do zatwierdzenia. Wszystko, co wynika z tego pliku, **rób od razu sam**
   i opisz w podsumowaniu, co zrobiłeś. Pytaj tylko, gdy coś jest naprawdę ryzykowne albo fakt jest niepewny.
 - **Przed końcem każdego uruchomienia sprawdź plan na dziś + 2 dni** i napraw sam:
