@@ -31,6 +31,8 @@ mapa && mapa.length > 400 ? ok('adresy w mapie strony', mapa.length) : zle('mapa
 console.log('\n── katalog i dane ──');
 try { execSync('node ' + path.join(__dirname, 'audyt.js'), { cwd: root, stdio: 'pipe' }); ok('audyt wpisów'); }
 catch (e) { zle('audyt wpisów', String(e.stdout || '').trim().split('\n').pop()); }
+try { execSync('node ' + path.join(__dirname, 'linki.js') + ' --szybko', { cwd: root, stdio: 'pipe' }); ok('źródła przypisane do właściwych nazw'); }
+catch (e) { zle('źródła', String(e.stdout || '').trim().split('\n').slice(1, 4).join('; ')); }
 try { const r = execSync('node ' + path.join(__dirname, 'rodziny.js') + ' --sprawdz', { cwd: root, stdio: 'pipe' }).toString(); ok('grupy zgodne z katalogiem'); }
 catch (e) { zle('grupy', String(e.stdout || '').trim().split('\n').pop()); }
 try { execSync('node ' + path.join(__dirname, 'zrodla.js') + ' --sprawdz', { cwd: root, stdio: 'pipe' }); ok('źródła przy wpisach'); }
