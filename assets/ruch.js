@@ -374,7 +374,11 @@
 
     function find(v) {
       var n = norm(v.trim());
-      if (n.length < 2 || !window.PEP) return [];
+      if (!n.length || !window.PEP) return [];
+      if (n.length === 1) {   // one letter: names starting with it, A–Z
+        return window.PEP.rows.filter(function (r) { return norm(r.n).indexOf(n) === 0; })
+          .sort(function (a, b) { return a.n.localeCompare(b.n); });
+      }
       var pre = [], mid = [], deep = [];
       var sq = n.replace(/[^a-z0-9]/g, ''); // "bpc157" also finds BPC-157
       window.PEP.rows.forEach(function (r) {
@@ -393,7 +397,7 @@
       if (v === last) return; last = v;
       hits = find(v); sel = -1;
       listEl.innerHTML = '';
-      if (n.length < 2) { hint.textContent = hint.dataset.base || hint.textContent; hint.hidden = false; return; }
+      if (!n.length) { hint.textContent = hint.dataset.base || hint.textContent; hint.hidden = false; return; }
       if (!hits.length) { hint.textContent = hint.dataset.none; hint.hidden = false; return; }
       hint.hidden = true;
       hits.slice(0, 40).forEach(function (r) {
@@ -548,12 +552,15 @@
     var esc2 = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); };
     var q = new URLSearchParams(location.search).get('q') || '';
     box.value = q;
-    if (q.trim().length < 2) return;
+    if (!q.trim().length) return;
     fetch('/assets/szukaj-' + L + '.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }).then(function (idx) {
-      var words = fold(q).split(/\s+/).filter(function (w) { return w.length > 1; });
+      var words = fold(q).split(/\s+/).filter(function (w) { return w.length > 0; });
+      var one = words.length === 1 && words[0].length === 1;   // one letter: titles starting with it
       var res = [];
       idx.forEach(function (d) {
-        var ft = fold(d.t), fx = fold(d.x), score = 0, ok = words.every(function (w) {
+        var ft = fold(d.t), fx = fold(d.x), score = 0;
+        if (one) { if (ft.indexOf(words[0]) === 0) res.push({ d: d, s: 1 }); return; }
+        var ok = words.every(function (w) {
           var fw = flat(w);
           if (ft.indexOf(w) > -1 || flat(d.t).indexOf(fw) > -1) { score += 10; return true; }
           if (fx.indexOf(w) > -1 || (fw.length > 2 && flat(d.x).indexOf(fw) > -1)) { score += 1; return true; }
@@ -572,7 +579,7 @@
       };
       var html2 = '<p class="small ink2">' + res.length + ' ' + W[4] + '</p>';
       [['c', 0], ['a', 1], ['v', 2], ['p', 3]].forEach(function (g) {
-        var part = res.filter(function (r) { return r.d.k === g[0]; }).sort(function (a, b) { return b.s - a.s; });
+        var part = res.filter(function (r) { return r.d.k === g[0]; }).sort(function (a, b) { return b.s - a.s || a.d.t.localeCompare(b.d.t); });
         if (!part.length) return;
         html2 += '<h2 class="gtitle" style="margin-top:28px">' + W[g[1]] + ' <span class="muted">' + part.length + '</span></h2><ul class="sres">' +
           part.slice(0, 60).map(function (r) { return '<li><a href="' + r.d.u + '"><b>' + esc2(r.d.t) + '</b></a><p class="small ink2">' + snip(r.d.x) + '</p></li>'; }).join('') + '</ul>';
