@@ -40,7 +40,7 @@ STEP 4.5 — daily full check for errors and junk (owner decision 23.10). Fix an
 STEP 5 — the morning report, at the TOP of the summary: the "Wczoraj" block from CLAUDE.md. Site: node tools/odwiedziny.js 1 (part of the traffic is the owner's own visits; say so). Bio link: IG / TikTok / FB visits to /start/*. Instagram, Facebook, TikTok from Metricool analytics (getAnalyticsAvailableMetrics + getAnalyticsDataByMetrics): followers change, views, reach, likes, comments, shares, number of posts, best and weakest post with numbers, and for reels the average watch time. Numbers only from data, otherwise "brak danych" and why. One sentence on what to do today because of it. On Mondays also the weekly report from CLAUDE.md.
 
 STEP 5.5 — weekly newsletter (Mondays only, owner decision 23.10: it must send itself). Write the week's email: subject, preview text,
-HTML body. Content: 3 short facts from the best-performing topics of the past week, each with its real source; one "marketing trick worth
+HTML body. Content: first use unused items from docs/newsletter/pomysly.md (mark them as used), then 3 short facts from the best-performing topics of the past week, each with its real source; one "marketing trick worth
 spotting"; links to pepsafe.info; no doses, no buying advice; end with "Educational information only, not medical advice." and
 <a href="{$unsubscribe}">Unsubscribe</a>. Save it to docs/newsletter/RRRR-MM-DD.html (commit, push).
 Then send it via the MailerLite API (https://connect.mailerlite.com/api, the key is injected as a network secret for that host — never print it):
