@@ -138,6 +138,7 @@ for (const enPath of Object.keys(esOf)) {
   const urls = { EN: '/' + enPath, PL: '/' + plPath, ES: '/' + esOf[enPath] };
   langSwitch(enPath, 'EN', urls); langSwitch(plPath, 'PL', urls); langSwitch(esOf[enPath], 'ES', urls);
   if (enPath === 'en/index.html') langSwitch('index.html', 'EN', { EN: '/', PL: '/pl/', ES: '/es/' });
+  if (enPath === 'en/404.html') langSwitch('404.html', 'EN', { EN: '/', PL: '/pl/', ES: '/es/' });
 }
 if (esOf['en/index.html']) addAlt('index.html', 'en/index.html');
 for (const enPath of Object.keys(esOf)) {
