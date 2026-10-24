@@ -1,0 +1,35 @@
+{
+ "topic": "Hemoglobin",
+ "tagline": "Science, plainly",
+ "slides": [
+  {
+   "kicker": "The fact",
+   "title": "Hemoglobin is a protein made of four chains.",
+   "vo": "Hemoglobin is a protein made of four chains.",
+   "seconds": 3.2,
+   "hero": true
+  },
+  {
+   "kicker": "The job",
+   "title": "Each chain holds an iron-containing group that can catch one oxygen molecule.",
+   "vo": "Each chain holds an iron-containing group that can catch one oxygen molecule.",
+   "seconds": 3.2
+  },
+  {
+   "kicker": "The trick",
+   "title": "Catching the first one changes the shape, so the next ones are caught more easily.",
+   "vo": "When it catches the first oxygen, the shape changes, so the next ones are caught more easily.",
+   "seconds": 3.2
+  },
+  {
+   "kicker": "More",
+   "title": "That shape change is why blood picks up oxygen so well in the lungs.",
+   "vo": "That shape change is why blood picks up oxygen so well in the lungs.",
+   "seconds": 3.2,
+   "cta": "pepsafe.info",
+   "foot": "Educational content. Questions? Comment or DM us."
+  }
+ ],
+ "caption": "Hemoglobin is a protein built from four chains 🩸 Each chain holds an iron-containing group that can catch one oxygen molecule, and catching the first one changes the shape so the next ones are caught more easily.\n\nMore biology at pepsafe.info\n\n#biology #science #chemistry #learnontiktok #education #pepsafe",
+ "vo": "kokoro"
+}
