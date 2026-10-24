@@ -774,6 +774,7 @@ function card(e, L) {
     ${e.q ? `<section class="blk reveal"><h2 class="kick">${esc(t.seq)}</h2><p class="seq">${esc(e.q)}</p></section>` : ''}
     ${src.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul></section>` : ''}
     ${ZM[key(e)] ? `<p class="small muted reveal">${en ? 'Last updated' : 'Ostatnia aktualizacja'}: <time datetime="${ZM[key(e)].d}">${fmtDate(ZM[key(e)].d, en)}</time> · <a href="../${L}/about.html#corrections">${en ? 'Report an error' : 'Zgłoś błąd'}</a></p>` : ''}
+    ${(() => { const arts = articlesFor(e); return arts.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'Further reading' : 'Więcej do czytania'}</h2><ul class="srcs-list">${arts.map(x => `<li><a href="../${L}/t/${postSlug(x)}.html">${esc(x.title[L] || x.title.en)}</a></li>`).join('')}</ul></section>` : ''; })()}
     ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.related)}</h2><div class="cards">${sibs.map(s => cardRow(s, en, L)).join('')}</div></section>` : ''}
     ${(() => {
       const mix = ((CONFUSE || {})[e.n] || []).map(x => D.find(y => y.n === x)).filter(Boolean)
@@ -799,6 +800,16 @@ function card(e, L) {
 }
 
 const postSlug = x => slug(x.title.en || x.title.pl);
+// Cards link back to the long articles that mention them (reading paths for people and search engines)
+const ART_TEXT = new Map();
+function articlesFor(e) {
+  const names = [...new Set([e.n, nm(e.n, true)])].filter(x => x && x.length > 3);
+  const re = new RegExp('(?<![\\w-])(' + names.map(x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')(?![\\w-])', 'i');
+  return (POSTS || []).filter(x => x && x.title).filter(x => {
+    if (!ART_TEXT.has(x)) ART_TEXT.set(x, [x.title.en, x.title.pl, ...(x.p.en || []), ...(x.p.pl || [])].join(' '));
+    return re.test(ART_TEXT.get(x));
+  }).slice(0, 4);
+}
 
 function notFound(L) {
   const en = L === 'en', t = W[L];
@@ -1318,7 +1329,8 @@ const urls = [''].concat(
   LANGS.flatMap(L => D.map(e => cardPath(e, L))));
 fs.writeFileSync(path.join(out, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  urls.map(u => `  <url><loc>${SITE}${BASE}${u}</loc><lastmod>${when}</lastmod></url>`).join('\n') +
+  urls.map(u => { const k = (/^p\/([^.]+)(\.pl)?\.html$/.exec(u) || [])[1]; const d = (k && ZM[k] && ZM[k].d) || when;   // cards: real date of the last content change
+    return `  <url><loc>${SITE}${BASE}${u}</loc><lastmod>${d}</lastmod></url>`; }).join('\n') +
   '\n</urlset>\n');
 console.log(`sitemapa: ${urls.length} adresow`);
 
