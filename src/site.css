@@ -492,3 +492,12 @@ footer>.wrap{position:relative;z-index:1}
 details.qa { border-top: 1px solid var(--line, rgba(127,127,127,.25)); padding: 10px 0; }
 details.qa summary { cursor: pointer; font-weight: 600; min-height: 32px; }
 details.qa p { margin: 8px 0 0; }
+
+/* strona wynikow wyszukiwania */
+.sform { display: flex; gap: 10px; margin: 14px 0 8px; }
+.sform input { flex: 1; min-width: 0; font: inherit; font-size: 17px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--paper2); color: var(--ink); }
+.sres { list-style: none; margin: 0; padding: 0; }
+.sres li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.sres a { color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+.sres a:hover { text-decoration: underline; }
+.sres p { margin: 6px 0 0; }

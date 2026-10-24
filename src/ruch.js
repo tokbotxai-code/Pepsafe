@@ -9,6 +9,7 @@
   var ES = html.lang === 'es';
   function es(en, sp) { return ES ? sp : en; }
   // card address in the page's own language, absolute so it works from /en/, /pl/, /es/ and /p/
+  function searchUrl(q) { return '/' + (html.lang === 'pl' ? 'pl' : ES ? 'es' : 'en') + '/search.html?q=' + encodeURIComponent(q.trim()); }
   function card(s) { return '/p/' + s + (html.lang === 'pl' ? '.pl' : ES ? '.es' : '') + '.html'; }
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var stored = null;
@@ -381,7 +382,7 @@
         if (nn.indexOf(n) === 0) pre.push(r);
         else if (nn.indexOf(n) > -1) mid.push(r);
         else if (sq.length > 1 && nn.replace(/[^a-z0-9]/g, '').indexOf(sq) > -1) mid.push(r);
-        else if (norm(r.t).indexOf(n) > -1) deep.push(r);
+        else if (norm(r.t).indexOf(n) > -1 || (sq.length > 2 && norm(r.t).replace(/[^a-z0-9]/g, '').indexOf(sq) > -1)) deep.push(r);
       });
       var by = function (a, b) { return a.n.localeCompare(b.n); };
       return pre.sort(by).concat(mid.sort(by), deep.sort(by));
@@ -401,12 +402,10 @@
           '<span class="fcat">' + esc(r.c || '') + '</span><small>' + esc(r.st || '') + '</small></a>';
         listEl.appendChild(li);
       });
-      if (hits.length > 40) {
-        var li = document.createElement('li');
-        li.innerHTML = '<a href="' + up + 'catalog.html"><b>' + esc(hint.dataset.more || '') +
-          '</b><small>' + hits.length + '</small></a>';
-        listEl.appendChild(li);
-      }
+      // always offer the whole-site results: articles, glossary, FAQ, alerts, not only cards
+      var li = document.createElement('li');
+      li.innerHTML = '<a href="' + searchUrl(v) + '"><b>' + esc(hint.dataset.more || '') + ' →</b><small>' + esc(v.trim()) + '</small></a>';
+      listEl.appendChild(li);
     }
 
     function move(d) {
@@ -443,8 +442,9 @@
       if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
       else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
       else if (e.key === 'Enter') {
-        var a = (listEl.children[sel > -1 ? sel : 0] || {}).firstChild;
-        if (a && a.href) { e.preventDefault(); location.href = a.href; }
+        e.preventDefault();
+        var a = sel > -1 && listEl.children[sel] && listEl.children[sel].firstChild;
+        location.href = a && a.href ? a.href : searchUrl(inp.value);
       } else if (e.key === 'Escape') shut();
     });
     document.addEventListener('keydown', function (e) {
@@ -533,6 +533,52 @@
   (function () {
     var m = document.getElementById('thxMsg');
     if (m && /[?&]r=1/.test(location.search)) m.textContent = m.dataset.report;
+  })();
+
+  /* ── strona wynikow: cala witryna (karty, artykuly, porownania, slownik, FAQ, alerty) ─ */
+  (function () {
+    var out = document.getElementById('sres'), box = document.getElementById('sq');
+    if (!out || !box || !window.fetch) return;
+    var L = out.dataset.lang;
+    var W = { en: ['Substances', 'Articles', 'Comparisons', 'Other pages', 'results', 'Nothing found. Try a shorter word or another spelling.'],
+      pl: ['Substancje', 'Artykuły', 'Porównania', 'Inne strony', 'wyników', 'Nic nie znaleziono. Spróbuj krótszego słowa albo innej pisowni.'],
+      es: ['Sustancias', 'Artículos', 'Comparaciones', 'Otras páginas', 'resultados', 'Sin resultados. Prueba con una palabra más corta u otra grafía.'] }[L];
+    var fold = function (s) { return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ł/g, 'l'); };
+    var flat = function (s) { return fold(s).replace(/[^a-z0-9]/g, ''); };
+    var esc2 = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); };
+    var q = new URLSearchParams(location.search).get('q') || '';
+    box.value = q;
+    if (q.trim().length < 2) return;
+    fetch('/assets/szukaj-' + L + '.json').then(function (r) { return r.json(); }).then(function (idx) {
+      var words = fold(q).split(/\s+/).filter(function (w) { return w.length > 1; });
+      var res = [];
+      idx.forEach(function (d) {
+        var ft = fold(d.t), fx = fold(d.x), score = 0, ok = words.every(function (w) {
+          var fw = flat(w);
+          if (ft.indexOf(w) > -1 || flat(d.t).indexOf(fw) > -1) { score += 10; return true; }
+          if (fx.indexOf(w) > -1 || (fw.length > 2 && flat(d.x).indexOf(fw) > -1)) { score += 1; return true; }
+          return false;
+        });
+        if (ok) res.push({ d: d, s: score });
+      });
+      if (!res.length) { out.innerHTML = '<p class="lede">' + W[5] + '</p>'; return; }
+      var snip = function (x) {
+        var fx = fold(x), i = -1;
+        words.some(function (w) { i = fx.indexOf(w); return i > -1; });
+        var a = Math.max(0, i - 70), s = (a ? '…' : '') + x.slice(a, a + 220) + '…';
+        var h = esc2(s);
+        words.forEach(function (w) { h = h.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); });
+        return h;
+      };
+      var html2 = '<p class="small ink2">' + res.length + ' ' + W[4] + '</p>';
+      [['c', 0], ['a', 1], ['v', 2], ['p', 3]].forEach(function (g) {
+        var part = res.filter(function (r) { return r.d.k === g[0]; }).sort(function (a, b) { return b.s - a.s; });
+        if (!part.length) return;
+        html2 += '<h2 class="gtitle" style="margin-top:28px">' + W[g[1]] + ' <span class="muted">' + part.length + '</span></h2><ul class="sres">' +
+          part.slice(0, 60).map(function (r) { return '<li><a href="' + r.d.u + '"><b>' + esc2(r.d.t) + '</b></a><p class="small ink2">' + snip(r.d.x) + '</p></li>'; }).join('') + '</ul>';
+      });
+      out.innerHTML = html2;
+    });
   })();
 
   /* ── lista jezykow: na komputerze otwiera sie po najechaniu (zamkniete <details> nie rysuje listy) ─ */
