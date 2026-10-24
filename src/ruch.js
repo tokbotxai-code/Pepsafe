@@ -549,7 +549,7 @@
     var q = new URLSearchParams(location.search).get('q') || '';
     box.value = q;
     if (q.trim().length < 2) return;
-    fetch('/assets/szukaj-' + L + '.json').then(function (r) { return r.json(); }).then(function (idx) {
+    fetch('/assets/szukaj-' + L + '.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }).then(function (idx) {
       var words = fold(q).split(/\s+/).filter(function (w) { return w.length > 1; });
       var res = [];
       idx.forEach(function (d) {
@@ -578,6 +578,9 @@
           part.slice(0, 60).map(function (r) { return '<li><a href="' + r.d.u + '"><b>' + esc2(r.d.t) + '</b></a><p class="small ink2">' + snip(r.d.x) + '</p></li>'; }).join('') + '</ul>';
       });
       out.innerHTML = html2;
+    }).catch(function () {
+      // index did not load: say so instead of pretending nothing matched, and fall back to the catalog
+      out.innerHTML = '<p class="lede">' + { en: 'Search could not load. Refresh the page.', pl: 'Wyszukiwarka się nie wczytała. Odśwież stronę.', es: 'No se pudo cargar la búsqueda. Recarga la página.' }[L] + '</p>';
     });
   })();
 
