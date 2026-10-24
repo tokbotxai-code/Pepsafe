@@ -247,13 +247,13 @@ ${THEME_BOOT}
 <meta property="og:title" content="${esc(o.title)}">
 <meta property="og:description" content="${esc(o.desc)}">
 <meta property="og:url" content="${SITE}${BASE}${self}">
-<meta property="og:image" content="${SITE}${BASE}assets/og-${L}.png">
+<meta property="og:image" content="${SITE}${BASE}${o.og || `assets/og-${L}.png`}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(o.title)}">
 <meta name="twitter:description" content="${esc(o.desc)}">
-<meta name="twitter:image" content="${SITE}${BASE}assets/og-${L}.png">
+<meta name="twitter:image" content="${SITE}${BASE}${o.og || `assets/og-${L}.png`}">
 <script type="application/ld+json">${ORG}</${'script'}>
 ${o.ld ? `<script type="application/ld+json">${o.ld}</${'script'}>\n` : ''}</head>
 <body>
@@ -787,6 +787,7 @@ function card(e, L) {
   return layout({
     lang: L, here: 'catalog.html', depth: 1, twin: cardPath(e, L), body,
     title: `${name} — ${statusOf(e, en)} | PepSafe`, desc: clip(`${name} — ${statusOf(e, en)}. ${d}`, 155),
+    og: fs.existsSync(path.join(root, 'og', key(e) + '.png')) ? 'og/' + key(e) + '.png' : null,   // own share image for the most-read entries
     ld: JSON.stringify({ '@context': 'https://schema.org', '@graph': [
       { '@type': 'MedicalWebPage', name: `${name} — ${statusOf(e, en)}`, url: `${SITE}${BASE}${cardPath(e, L)}`, inLanguage: L,
         description: clip(d, 300), publisher: { '@id': 'https://pepsafe.info/#org' },
