@@ -103,6 +103,19 @@
 - Muzyka z katalogu TikToka/Instagrama przez API jest niemożliwa (403). Nie próbuj ponownie bez sygnału od właściciela.
 - Publikacja automatyczna (`autoPublish: true`).
 
+## Social media: skupienie na GLP-1 z pełnymi nazwami (decyzja właściciela 24.10, zastępuje zakaz nazw na TikToku)
+- **Strona zostaje o wszystkich peptydach.** Na TikToku, Instagramie i Facebooku skupiamy się na lekach GLP-1 i pokrewnych
+  (semaglutyd, tirzepatyd, retatrutyd, kagrilintyd, mazdutyd, survodutyd, orforglipron itd.), z **pełnymi nazwami** i nazwami potocznymi,
+  których ludzie szukają (np. „reta”, „tirz”, „sema”, „triple agonist”, „3x GLP-1”, Ozempic, Wegovy, Mounjaro, Zepbound).
+- **TikTok też z nazwami:** nazwa może być w pierwszym zdaniu, na slajdach, w lektorze i w hashtagach. Sprawdzenie: `node tools/sprawdz.js --nazwy tiktok/<folder>`
+  (nazwy przepuszcza, słowa zakazane i emotki dalej blokuje).
+- **Dużo hashtagów** (8–12): nazwy leków + `#glp1 #weightloss #weightlossjourney #ozempic #mounjaro #zepbound #wegovy #pepsafe` itp.
+- Każdy post kieruje na stronę: link do karty leku albo „More at pepsafe.info / link in bio”.
+- **Bez zmian:** lista słów unikanych (kup, dawka, wstrzyknąć, fiolka, sklep, protokół itd.), 💉 i 🚫, fakty tylko ze źródeł, bez dawkowania i zachęt.
+- **Bezpiecznik:** gdy film z nazwą zostanie usunięty albo konto dostanie ostrzeżenie — 3 dni bez nazw na TikToku, napisz to w raporcie.
+  Właściciel zna ryzyko (19–20.10 usunięto 15 filmów z nazwami) i zdecydował świadomie.
+- Punkty niżej o „zero nazw na TikToku” obowiązują tylko, gdy działa bezpiecznik.
+
 ## TikTok dziennie (bez nazw substancji, max 6 postów)
 - **2 filmy przyrodnicze z lektorem** w oknach + **krótki pokaz o 17:00** (`node tools/fotki.js tiktok/<folder> RRRR-MM-DD-short-<temat>-en 3`
   albo 3-slajdowy `post.json` + `make.js`) + od 25.10 **obraz w stylu Dola o 21:30** (25–30.10 ten slot zajmują już grafiki właściciela).

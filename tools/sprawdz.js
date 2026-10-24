@@ -1,6 +1,7 @@
 // Checks a TikTok post.json against the whole catalog: no substance name may appear
 // in the caption, on a slide, in the voiceover or in a hashtag. Run before scheduling anything on TikTok.
-// Usage: node tools/sprawdz.js tiktok/<folder> [tiktok/<folder> ...]
+// Usage: node tools/sprawdz.js [--nazwy] tiktok/<folder> [tiktok/<folder> ...]
+// --nazwy: substance names allowed (owner decision 24.10, GLP-1 focus); forbidden words and emoji are still checked.
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const root = path.join(__dirname, '..');
 const lines = fs.readFileSync(path.join(root, 'dane.html'), 'utf8').split('\n');
@@ -18,10 +19,11 @@ const BANNED = ['🚫', '💉', 'banned', 'prohibited', 'zakazan', 'dose', 'dawk
 // whole words only: 'shop' must not catch 'workshop'; 'cycle' is left out on purpose ('cell cycle' is biology)
 const BANNED_RE = [/\bshops?\b/i, /\bstack(s|ed|ing)?\b/i, /#(biohacking|fitness|gym|bodybuilding)\b/i];
 
+const allowNames = process.argv.includes('--nazwy');
 let bad = 0;
-for (const dir of process.argv.slice(2)) {
+for (const dir of process.argv.slice(2).filter(x => x !== '--nazwy')) {
   const txt = fs.readFileSync(path.join(root, dir, 'post.json'), 'utf8');
-  const hits = [...names].filter(n => n.length > 3 &&
+  const hits = allowNames ? [] : [...names].filter(n => n.length > 3 &&
     new RegExp('\\b' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(txt));
   const words = BANNED.filter(w => txt.toLowerCase().includes(w.toLowerCase()))
     .concat(BANNED_RE.filter(r => r.test(txt)).map(r => (txt.match(r) || [''])[0]));
