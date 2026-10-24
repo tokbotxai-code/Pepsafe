@@ -548,22 +548,25 @@
       pl: ['Substancje', 'Artykuły', 'Porównania', 'Inne strony', 'wyników', 'Nic nie znaleziono. Spróbuj krótszego słowa albo innej pisowni.'],
       es: ['Sustancias', 'Artículos', 'Comparaciones', 'Otras páginas', 'resultados', 'Sin resultados. Prueba con una palabra más corta u otra grafía.'] }[L];
     var fold = function (s) { return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ł/g, 'l'); };
-    var flat = function (s) { return fold(s).replace(/[^a-z0-9]/g, ''); };
+    // hyphens and dots ignored (glp1 = glp-1), spaces kept so words do not run together
+    var flat = function (s) { return fold(s).replace(/[-.\u2010-\u2015]/g, ''); };
     var esc2 = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); };
-    var q = new URLSearchParams(location.search).get('q') || '';
-    box.value = q;
-    if (!q.trim().length) return;
-    fetch('/assets/szukaj-' + L + '.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }).then(function (idx) {
+    var idx = null, timer;
+    box.value = new URLSearchParams(location.search).get('q') || '';
+    // results follow the box as you type; an empty box clears them
+    function run(q) {
+      if (!idx) return;
+      if (!q.trim()) { out.innerHTML = ''; return; }
       var words = fold(q).split(/\s+/).filter(function (w) { return w.length > 0; });
       var one = words.length === 1 && words[0].length === 1;   // one letter: titles starting with it
       var res = [];
       idx.forEach(function (d) {
-        var ft = fold(d.t), fx = fold(d.x), score = 0;
+        var ft = d.ft, fx = d.fx, score = 0;
         if (one) { if (ft.indexOf(words[0]) === 0) res.push({ d: d, s: 1 }); return; }
         var ok = words.every(function (w) {
           var fw = flat(w);
-          if (ft.indexOf(w) > -1 || flat(d.t).indexOf(fw) > -1) { score += 10; return true; }
-          if (fx.indexOf(w) > -1 || (fw.length > 2 && flat(d.x).indexOf(fw) > -1)) { score += 1; return true; }
+          if (ft.indexOf(w) > -1 || d.flt.indexOf(fw) > -1) { score += 10; return true; }
+          if (fx.indexOf(w) > -1 || (fw.length > 2 && d.flx.indexOf(fw) > -1)) { score += 1; return true; }
           return false;
         });
         if (ok) res.push({ d: d, s: score });
@@ -585,6 +588,18 @@
           part.slice(0, 60).map(function (r) { return '<li><a href="' + r.d.u + '"><b>' + esc2(r.d.t) + '</b></a><p class="small ink2">' + snip(r.d.x) + '</p></li>'; }).join('') + '</ul>';
       });
       out.innerHTML = html2;
+    }
+    box.addEventListener('input', function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        run(box.value);
+        try { history.replaceState(null, '', box.value.trim() ? '?q=' + encodeURIComponent(box.value.trim()) : location.pathname); } catch (x) {}
+      }, 120);
+    });
+    box.closest('form').addEventListener('submit', function (e) { e.preventDefault(); run(box.value); box.blur(); });
+    fetch('/assets/szukaj-' + L + '.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }).then(function (data) {
+      data.forEach(function (d) { d.ft = fold(d.t); d.fx = fold(d.x); d.flt = flat(d.t); d.flx = flat(d.x); });
+      idx = data; run(box.value);
     }).catch(function () {
       // index did not load: say so instead of pretending nothing matched, and fall back to the catalog
       out.innerHTML = '<p class="lede">' + { en: 'Search could not load. Refresh the page.', pl: 'Wyszukiwarka się nie wczytała. Odśwież stronę.', es: 'No se pudo cargar la búsqueda. Recarga la página.' }[L] + '</p>';

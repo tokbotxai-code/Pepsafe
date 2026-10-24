@@ -32,6 +32,11 @@ const fail = (what, why) => bad.push(`${what}: ${why}`);
       await p.click('#find'); await p.waitForTimeout(400); await p.keyboard.type(q, { delay: 40 }); await p.keyboard.press('Enter'); await p.waitForTimeout(1500);
       if (!p.url().includes(`/${L}/search.html`)) fail(`${tag} Enter "${q}"`, 'nie otworzył wyników: ' + p.url());
       if (!(await p.$$eval('#sres li', l => l.length))) fail(`${tag} wyniki "${q}"`, 'pusta lista');
+      // results page follows typing: clearing empties it, a new word fills it again
+      await p.fill('#sq', ''); await p.waitForTimeout(400);
+      if (await p.$$eval('#sres li', l => l.length)) fail(`${tag} wyniki`, 'po skasowaniu zostają stare');
+      await p.type('#sq', 'glp1', { delay: 40 }); await p.waitForTimeout(600);
+      if (!(await p.$$eval('#sres li', l => l.length))) fail(`${tag} wyniki`, 'pisanie nic nie pokazuje');
       // catalog filter
       await go(`/${L}/catalog.html`);
       await p.fill('#q', card.slice(0, 5)); await p.waitForTimeout(500);
