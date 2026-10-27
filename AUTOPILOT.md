@@ -7,6 +7,16 @@ Zmiany w rutynie wprowadzamy tutaj, w repo. Zasady publikacji są w CLAUDE.md.
 
 Autonomously produce and publish PepSafe content for TODAY and keep the next 2 days complete (UK dates). You have a free hand: the owner does not want questions or proposals to approve. Decide and act yourself on everything routine (content, scheduling, fixes, moving posts, small site changes) and describe what you did in the summary. Stop and ask only if something is genuinely risky (legal exposure, account safety, deleting data) or a factual claim is shaky. Write the final summary in Polish.
 
+BUDGET MODE (owner decision 27.10 — the plan's weekly limit must last 7 days for PepSafe AND Night; on 27.10 this run died on the usage limit). Overrides the steps below where they conflict:
+- Do the work in this order and stop adding extras once the essentials are done: STEP 1 (daily entries + Spanish missing segments) → STEP 3 social plan for today + 2 days → STEP 6 final check → short report. Everything else only on its own weekday.
+- Read only what you need: CLAUDE.md and AUTOPILOT.md once; never dane.html whole; getScheduledPosts once per day checked; no re-reading files you just wrote.
+- STEP 1.4: daily `node tools/test-strony.js --szybko` (clicks only, ~1 min). The full run over every page only on Mondays.
+- STEP 1.6 Spanish review: Mondays only (5 pages). Translating missing segments stays daily.
+- STEP 3.8 Canva graphic: Mondays and Thursdays only (2 a week). STEP 5.7 Reddit drafts: Fridays only.
+- STEP 5 "Wczoraj" block: numbers only, max 8 lines. The full report and the artifact only on Mondays.
+- If a step fails twice, skip it, say so in one line and move on. Never retry long renders more than once.
+- Do not do site redesigns or new features in the autopilot; list ideas in docs/ulepszenia.md instead.
+
 STEP 0 — tools and repo. Use ToolSearch to load the Metricool tools (search "metricool"); if they are not available, say so at the top of the summary and still do STEP 1. If /home/user/Pepsafe is missing, attach the repo with add_repo (owner "tokbotxai-code", repo "Pepsafe", access "push") and clone it to /home/user/Pepsafe. Then: cd /home/user/Pepsafe && git fetch origin main && git reset --hard origin/main (history is sometimes rewritten; never git pull; if HEAD is detached, push with git push origin HEAD:main). READ CLAUDE.md in full. CLAUDE.md holds the publishing rules (Metricool blogId 7506075 ONLY — never 7593858, that is the separate Night channel; timezone Europe/London; from 25.10 02:00 the UK offset is +00:00) and wins over this prompt EXCEPT for the owner decisions in STEP 4. For Playwright scripts use NODE_PATH=$(npm root -g); never run playwright install. Before the first video render: pip install -q kokoro-onnx soundfile. Commit as PepSafe <noreply@pepsafe.info> with neutral messages. When deleting files in shell, quote variables as "${d:?}".
 
 STEP 1 — PRIORITY NO. 1: "Peptyd dnia". Make sure DAILY in dane.html has entries for today, tomorrow and the day after (UK dates). Add missing ones with node tools/daily.js <file.json> (real facts, 1–3 real sources, no doses, no invented numbers; name must exist in the catalog). Then PEP_OUT=. PEP_BASE=/ node tools/v4.js && node tools/es.js && node tools/szukaj.js, node tools/kontrola.js (exit 1 = fix first), commit and push.

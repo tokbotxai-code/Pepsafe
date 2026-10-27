@@ -4,7 +4,7 @@
 // then opens every page in the sitemap on a phone.
 // Usage: node tools/test-strony.js [base URL]   (default https://pepsafe.info). Exit code 1 = something broke.
 const { chromium } = require('playwright');
-const BASE = (process.argv[2] || 'https://pepsafe.info').replace(/\/$/, '');
+const BASE = (process.argv.slice(2).find(a => !a.startsWith('--')) || 'https://pepsafe.info').replace(/\/$/, '');
 const bad = [];
 const fail = (what, why) => bad.push(`${what}: ${why}`);
 
@@ -58,6 +58,8 @@ const fail = (what, why) => bad.push(`${what}: ${why}`);
     } catch (e) { fail(tag, e.message.split('\n')[0]); }
     await c.close();
   }
+  // --szybko: clicks only (daily); without it also every sitemap page (Mondays)
+  if (process.argv.includes('--szybko')) { await b.close(); console.log(bad.length ? `test strony: ${bad.length} problemów\n - ` + bad.join('\n - ') : 'test strony (szybki): wszystko działa'); process.exit(bad.length ? 1 : 0); }
   // every page in the sitemap, opened on a phone: loads, has a heading, no script error, no sideways scroll
   const xml = await (await fetch(BASE + '/sitemap.xml')).text();
   const urls = [...xml.matchAll(/<loc>https:\/\/pepsafe\.info([^<]*)<\/loc>/g)].map(m => m[1] || '/');
