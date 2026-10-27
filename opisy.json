@@ -830,5 +830,425 @@
    "El ARA290 (cibinetida) es un péptido de 11 aminoácidos basado en un fragmento de la eritropoyetina (hélice B). Actúa sobre el llamado receptor de reparación tisular, pero no estimula la producción de glóbulos rojos, así que no tiene el riesgo de espesar la sangre de la EPO.",
    "En ensayos clínicos pequeños en personas con neuropatía de fibra fina por sarcoidosis y por diabetes redujo los síntomas de neuropatía. No ha pasado a grandes ensayos de fase 3 y no está aprobado."
   ]
+ },
+ "B7-33": {
+  "pl": [
+   "B7-33 to jednołańcuchowy peptyd zaprojektowany na podstawie hormonu relaksyny-2 przez australijski zespół (Nature Chemical Biology 2016). Pobudza receptor relaksyny RXFP1 tylko jedną z dróg przekazywania sygnału, tą wiązaną z działaniem przeciwwłóknieniowym.",
+   "U myszy zmniejszał włóknienie serca i płuc. To wczesny etap badań: nie ma badań u ludzi ani zatwierdzenia jako lek. Bezpieczeństwo stosowania u ludzi nie jest ustalone."
+  ],
+  "en": [
+   "B7-33 is a single-chain peptide designed from the hormone relaxin-2 by an Australian team (Nature Chemical Biology 2016). It activates the relaxin receptor RXFP1 through only one of its signalling routes, the one linked to anti-fibrotic effects.",
+   "In mice it reduced scarring (fibrosis) of the heart and lungs. This is an early stage of research: there are no human studies and no approval as a medicine. Human safety is not established."
+  ],
+  "es": [
+   "El B7-33 es un péptido de una sola cadena diseñado a partir de la hormona relaxina-2 por un equipo australiano (Nature Chemical Biology 2016). Activa el receptor de relaxina RXFP1 solo por una de sus vías de señalización, la ligada a efectos antifibróticos.",
+   "En ratones redujo la fibrosis del corazón y los pulmones. Es una fase inicial de investigación: no hay estudios en humanos ni aprobación como medicamento. La seguridad en humanos no está establecida."
+  ]
+ },
+ "DSIP": {
+  "pl": [
+   "DSIP (peptyd wywołujący sen delta) to 9-aminokwasowy peptyd wyizolowany w 1977 r. przez szwajcarski zespół z krwi królików w stanie snu. Miał pogłębiać sen wolnofalowy, stąd nazwa.",
+   "Badania u ludzi w latach 80. dały sprzeczne wyniki, a w organizmie nie znaleziono dla niego własnego receptora ani genu. Do dziś nie wiadomo, jak miałby działać. Nie jest zatwierdzony jako lek."
+  ],
+  "en": [
+   "DSIP (delta sleep-inducing peptide) is a 9-amino-acid peptide isolated in 1977 by a Swiss team from the blood of sleeping rabbits. It was meant to deepen slow-wave sleep, hence the name.",
+   "Human studies in the 1980s gave conflicting results, and no dedicated receptor or gene for it has been found in the body. It is still unclear how it would work. It is not approved as a medicine."
+  ],
+  "es": [
+   "El DSIP (péptido inductor del sueño delta) es un péptido de 9 aminoácidos aislado en 1977 por un equipo suizo de la sangre de conejos dormidos. Debía profundizar el sueño de ondas lentas, de ahí su nombre.",
+   "Los estudios en humanos de los años 80 dieron resultados contradictorios y no se ha encontrado en el cuerpo un receptor ni un gen propio para él. Sigue sin saberse cómo actuaría. No está aprobado como medicamento."
+  ]
+ },
+ "Semax": {
+  "pl": [
+   "Semax to syntetyczny heptapeptyd opracowany w latach 80. w Moskwie: fragment hormonu ACTH (4–7) przedłużony o sekwencję Pro-Gly-Pro, która chroni go przed rozkładem. Nie działa jak ACTH na nadnercza.",
+   "W Rosji jest zarejestrowany jako lek do nosa, m.in. po udarze i w zaburzeniach poznawczych. Badania pochodzą niemal wyłącznie z Rosji i rzadko spełniają kryteria FDA czy EMA. Poza Rosją i kilkoma krajami nie jest lekiem."
+  ],
+  "en": [
+   "Semax is a synthetic heptapeptide developed in Moscow in the 1980s: a fragment of the hormone ACTH (4–7) extended with the Pro-Gly-Pro sequence, which protects it from breakdown. It does not act on the adrenal glands like ACTH.",
+   "In Russia it is registered as a nasal medicine, for example after stroke and for cognitive problems. The studies come almost entirely from Russia and rarely meet FDA or EMA criteria. Outside Russia and a few other countries it is not a medicine."
+  ],
+  "es": [
+   "El semax es un heptapéptido sintético desarrollado en Moscú en los años 80: un fragmento de la hormona ACTH (4–7) prolongado con la secuencia Pro-Gly-Pro, que lo protege de la degradación. No actúa sobre las suprarrenales como la ACTH.",
+   "En Rusia está registrado como medicamento nasal, por ejemplo tras un ictus y para problemas cognitivos. Los estudios proceden casi solo de Rusia y rara vez cumplen los criterios de la FDA o la EMA. Fuera de Rusia y algunos países no es un medicamento."
+  ]
+ },
+ "Dihexa": {
+  "pl": [
+   "Dihexa (PNB-0408) to krótka, zmodyfikowana pochodna angiotensyny IV, opracowana na Washington State University przez zespół Josepha Hardinga. Wzmacnia działanie czynnika wzrostu hepatocytów (HGF) na receptor c-Met, który u zwierząt sprzyjał tworzeniu połączeń między neuronami.",
+   "U szczurów poprawiała pamięć w modelach choroby Alzheimera. Spokrewniona cząsteczka fosgonimeton firmy Athira w badaniu u chorych z alzheimerem (2024) nie poprawiła wyników. Szlak HGF/c-Met bierze też udział we wzroście nowotworów; dihexy nie badano u ludzi."
+  ],
+  "en": [
+   "Dihexa (PNB-0408) is a short, modified derivative of angiotensin IV, developed at Washington State University by Joseph Harding's team. It boosts the action of hepatocyte growth factor (HGF) on the c-Met receptor, which in animals encouraged new connections between neurons.",
+   "In rats it improved memory in Alzheimer's models. The related molecule fosgonimeton from Athira did not improve outcomes in a trial in Alzheimer's patients (2024). The HGF/c-Met pathway is also involved in tumour growth; dihexa has not been studied in humans."
+  ],
+  "es": [
+   "La dihexa (PNB-0408) es un derivado corto y modificado de la angiotensina IV, desarrollado en la Washington State University por el equipo de Joseph Harding. Potencia la acción del factor de crecimiento de hepatocitos (HGF) sobre el receptor c-Met, que en animales favoreció nuevas conexiones entre neuronas.",
+   "En ratas mejoró la memoria en modelos de alzhéimer. La molécula afín fosgonimetón, de Athira, no mejoró los resultados en un ensayo con pacientes con alzhéimer (2024). La vía HGF/c-Met interviene también en el crecimiento tumoral; la dihexa no se ha estudiado en humanos."
+  ]
+ },
+ "Adamax": {
+  "pl": [
+   "Adamax to nazwa handlowa pochodnej Semaxu z dołączoną grupą adamantanową, sprzedawanej w internecie jako „ulepszona” wersja. Nie istnieją publikacje naukowe opisujące tę konkretną cząsteczkę.",
+   "Sprzedawcy przypisują jej działanie (BDNF, dopamina) zapożyczone z badań nad Semaxem, a te dotyczą innej substancji. Bez badań nie wiadomo, czy związek w ogóle działa i czy jest bezpieczny."
+  ],
+  "en": [
+   "Adamax is a trade name for a Semax derivative with an attached adamantane group, sold online as an 'improved' version. There are no scientific publications describing this specific molecule.",
+   "Sellers credit it with effects (BDNF, dopamine) borrowed from research on Semax, which concerns a different substance. Without studies there is no way to know whether the compound works at all or is safe."
+  ],
+  "es": [
+   "Adamax es el nombre comercial de un derivado del semax con un grupo adamantano unido, vendido en internet como versión «mejorada». No existen publicaciones científicas que describan esta molécula concreta.",
+   "Los vendedores le atribuyen efectos (BDNF, dopamina) tomados de la investigación sobre el semax, que trata de otra sustancia. Sin estudios no se puede saber si el compuesto funciona ni si es seguro."
+  ]
+ },
+ "Selank": {
+  "pl": [
+   "Selank to syntetyczny heptapeptyd opracowany w Rosji na bazie tuftsyny, naturalnego fragmentu przeciwciał (Thr-Lys-Pro-Arg), przedłużonego o Pro-Gly-Pro. W 2009 r. zarejestrowano go w Rosji jako lek przeciwlękowy w postaci kropli do nosa.",
+   "Według rosyjskich badań działa na układ GABA i wpływa na wydzielanie interleukin, bez senności typowej dla benzodiazepin. Niezależnych badań spoza Rosji praktycznie nie ma i poza tym krajem nie jest lekiem."
+  ],
+  "en": [
+   "Selank is a synthetic heptapeptide developed in Russia from tuftsin, a natural antibody fragment (Thr-Lys-Pro-Arg), extended with Pro-Gly-Pro. In 2009 it was registered in Russia as an anti-anxiety medicine in nasal drop form.",
+   "According to Russian studies it acts on the GABA system and influences interleukin release, without the drowsiness typical of benzodiazepines. Independent studies from outside Russia are practically absent, and outside that country it is not a medicine."
+  ],
+  "es": [
+   "El selank es un heptapéptido sintético desarrollado en Rusia a partir de la tuftsina, un fragmento natural de anticuerpo (Thr-Lys-Pro-Arg), prolongado con Pro-Gly-Pro. En 2009 se registró en Rusia como ansiolítico en gotas nasales.",
+   "Según estudios rusos actúa sobre el sistema GABA e influye en la liberación de interleucinas, sin la somnolencia típica de las benzodiacepinas. Prácticamente no hay estudios independientes fuera de Rusia y fuera de ese país no es un medicamento."
+  ]
+ },
+ "P21": {
+  "pl": [
+   "P21 (P021) to peptydomimetyk oparty na fragmencie czynnika neurotroficznego CNTF, opracowany w Nowym Jorku w zespole Khalida Iqbala. Ma pobudzać tworzenie nowych neuronów i połączeń w hipokampie.",
+   "U myszy w modelach choroby Alzheimera i zespołu Downa poprawiał pamięć i zmniejszał zmiany w mózgu. Nie ma żadnych badań u ludzi ani zatwierdzenia jako lek."
+  ],
+  "en": [
+   "P21 (P021) is a peptidomimetic based on a fragment of the neurotrophic factor CNTF, developed in New York in Khalid Iqbal's group. It is meant to encourage new neurons and connections in the hippocampus.",
+   "In mouse models of Alzheimer's disease and Down syndrome it improved memory and reduced brain changes. There are no human studies and no approval as a medicine."
+  ],
+  "es": [
+   "El P21 (P021) es un peptidomimético basado en un fragmento del factor neurotrófico CNTF, desarrollado en Nueva York en el grupo de Khalid Iqbal. Debería favorecer nuevas neuronas y conexiones en el hipocampo.",
+   "En modelos de ratón de alzhéimer y síndrome de Down mejoró la memoria y redujo los cambios cerebrales. No hay estudios en humanos ni aprobación como medicamento."
+  ]
+ },
+ "PE-22-28": {
+  "pl": [
+   "PE-22-28 to skrócona pochodna spadyny, naturalnego peptydu powstającego z białka sortyliny. Blokuje kanał potasowy TREK-1 w neuronach; myszy bez tego kanału zachowują się, jakby były odporne na depresję.",
+   "W badaniach na myszach działał przeciwdepresyjnie już po kilku dniach, szybciej niż klasyczne leki. Nie ma badań u ludzi ani zatwierdzenia jako lek; sprzedawany jest jako „nootropik do badań”."
+  ],
+  "en": [
+   "PE-22-28 is a shortened derivative of spadin, a natural peptide made from the protein sortilin. It blocks the TREK-1 potassium channel in neurons; mice without this channel behave as if resistant to depression.",
+   "In mouse studies it had an antidepressant effect within days, faster than classic drugs. There are no human studies and no approval as a medicine; it is sold as a 'research nootropic'."
+  ],
+  "es": [
+   "El PE-22-28 es un derivado acortado de la espadina, un péptido natural que se forma a partir de la proteína sortilina. Bloquea el canal de potasio TREK-1 de las neuronas; los ratones sin este canal se comportan como si fueran resistentes a la depresión.",
+   "En estudios con ratones tuvo efecto antidepresivo en pocos días, más rápido que los fármacos clásicos. No hay estudios en humanos ni aprobación como medicamento; se vende como «nootrópico para investigación»."
+  ]
+ },
+ "Oreksyna A i B": {
+  "pl": [
+   "Oreksyny (hipokretyny) A i B to naturalne peptydy wytwarzane przez niewielką grupę neuronów podwzgórza. Odkryły je w 1998 r. niezależnie dwa zespoły, stąd dwie nazwy. Podtrzymują czuwanie i wpływają na apetyt.",
+   "W narkolepsji typu 1 neurony wytwarzające oreksynę zanikają, co tłumaczy napady senności. Zatwierdzone leki działają odwrotnie: blokują receptory oreksyny i ułatwiają zasypianie (np. suworeksant, 2014). Nad lekami pobudzającymi receptor oreksyny w narkolepsji trwają badania; sama oreksyna nie jest lekiem."
+  ],
+  "en": [
+   "Orexins (hypocretins) A and B are natural peptides made by a small group of neurons in the hypothalamus. Two teams discovered them independently in 1998, hence the two names. They sustain wakefulness and influence appetite.",
+   "In type 1 narcolepsy the orexin-making neurons are lost, which explains the sleep attacks. Approved drugs do the opposite: they block orexin receptors to help sleep (e.g. suvorexant, 2014). Drugs that activate the orexin receptor in narcolepsy are under study; orexin itself is not a medicine."
+  ],
+  "es": [
+   "Las orexinas (hipocretinas) A y B son péptidos naturales producidos por un pequeño grupo de neuronas del hipotálamo. Dos equipos las descubrieron por separado en 1998, de ahí los dos nombres. Mantienen la vigilia e influyen en el apetito.",
+   "En la narcolepsia tipo 1 se pierden las neuronas que producen orexina, lo que explica los ataques de sueño. Los fármacos aprobados hacen lo contrario: bloquean los receptores de orexina para facilitar el sueño (p. ej., suvorexant, 2014). Se investigan fármacos que activen el receptor de orexina en la narcolepsia; la orexina en sí no es un medicamento."
+  ]
+ },
+ "Cerebrolizyna": {
+  "pl": [
+   "Cerebrolizyna to mieszanina peptydów i aminokwasów uzyskiwana z mózgu świń, produkowana przez austriacką firmę Ever Pharma. Jest zarejestrowana w kilkudziesięciu krajach, głównie w Europie Wschodniej i Azji, w udarze, urazach mózgu i otępieniu.",
+   "Przeglądy Cochrane w ostrym udarze nie wykazały zmniejszenia śmiertelności ani niepełnosprawności, a dane o otępieniu naczyniowym oceniono jako niepewne. Lek nie jest zatwierdzony przez FDA ani w większości krajów UE. Skład wyciągu nie jest w pełni określony, więc trudno opisać mechanizm działania."
+  ],
+  "en": [
+   "Cerebrolysin is a mixture of peptides and amino acids obtained from pig brain, made by the Austrian company Ever Pharma. It is registered in several dozen countries, mainly in Eastern Europe and Asia, for stroke, brain injury and dementia.",
+   "Cochrane reviews in acute stroke found no reduction in death or disability, and the data in vascular dementia were judged uncertain. It is not approved by the FDA or in most EU countries. The extract's composition is not fully defined, so its mechanism is hard to describe."
+  ],
+  "es": [
+   "La cerebrolisina es una mezcla de péptidos y aminoácidos obtenida de cerebro de cerdo, fabricada por la empresa austriaca Ever Pharma. Está registrada en varias decenas de países, sobre todo de Europa del Este y Asia, para el ictus, el traumatismo cerebral y la demencia.",
+   "Las revisiones Cochrane en el ictus agudo no hallaron menos muertes ni discapacidad, y los datos en demencia vascular se consideraron inciertos. No está aprobada por la FDA ni en la mayoría de los países de la UE. La composición del extracto no está del todo definida, así que es difícil describir su mecanismo."
+  ]
+ },
+ "Zikonotyd": {
+  "pl": [
+   "Zikonotyd to syntetyczna wersja omega-konotoksyny MVIIA, 25-aminokwasowego peptydu z jadu ślimaka stożka Conus magus. Blokuje kanały wapniowe typu N w neuronach przewodzących ból w rdzeniu kręgowym.",
+   "FDA zatwierdziła go w 2004 r. (Prialt) w ciężkim, przewlekłym bólu. Podaje się go wyłącznie przez pompę bezpośrednio do płynu mózgowo-rdzeniowego, bo nie przechodzi do układu nerwowego z krwi. Ulotka ostrzega przed ciężkimi objawami psychiatrycznymi i zaburzeniami świadomości."
+  ],
+  "en": [
+   "Ziconotide is a synthetic version of omega-conotoxin MVIIA, a 25-amino-acid peptide from the venom of the cone snail Conus magus. It blocks N-type calcium channels in pain-carrying neurons of the spinal cord.",
+   "The FDA approved it in 2004 (Prialt) for severe chronic pain. It is given only through a pump directly into the spinal fluid, because it does not reach the nervous system from the blood. The label warns about severe psychiatric symptoms and impaired consciousness."
+  ],
+  "es": [
+   "El ziconotida es una versión sintética de la omega-conotoxina MVIIA, un péptido de 25 aminoácidos del veneno del caracol cono Conus magus. Bloquea los canales de calcio tipo N de las neuronas que transmiten el dolor en la médula espinal.",
+   "La FDA lo aprobó en 2004 (Prialt) para el dolor crónico grave. Solo se administra con una bomba directamente al líquido cefalorraquídeo, porque desde la sangre no llega al sistema nervioso. La ficha advierte de síntomas psiquiátricos graves y alteraciones de la conciencia."
+  ]
+ },
+ "Trofinetyd": {
+  "pl": [
+   "Trofinetyd to zmodyfikowany tripeptyd oparty na glicynie-prolinie-glutaminianie, fragmencie odcinanym z początku IGF-1. Przyjmuje się go doustnie w płynie.",
+   "FDA zatwierdziła go w 2023 r. (Daybue) jako pierwszy lek w zespole Retta, rzadkiej chorobie neurologicznej u dziewczynek. W badaniu LAVENDER objawy poprawiły się nieco bardziej niż przy placebo. Najczęstszym działaniem niepożądanym jest biegunka, występująca u większości pacjentów."
+  ],
+  "en": [
+   "Trofinetide is a modified tripeptide based on glycine-proline-glutamate, a fragment cut from the start of IGF-1. It is taken by mouth as a liquid.",
+   "The FDA approved it in 2023 (Daybue) as the first medicine for Rett syndrome, a rare neurological disorder in girls. In the LAVENDER trial, symptoms improved somewhat more than on placebo. The most common side effect is diarrhoea, which affects most patients."
+  ],
+  "es": [
+   "La trofinetida es un tripéptido modificado basado en glicina-prolina-glutamato, un fragmento que se separa del comienzo del IGF-1. Se toma por boca en forma líquida.",
+   "La FDA la aprobó en 2023 (Daybue) como el primer medicamento para el síndrome de Rett, un trastorno neurológico raro en niñas. En el ensayo LAVENDER los síntomas mejoraron algo más que con placebo. El efecto adverso más frecuente es la diarrea, que afecta a la mayoría de los pacientes."
+  ]
+ },
+ "Difelikefalina": {
+  "pl": [
+   "Difelikefalina to peptyd pobudzający receptory opioidowe kappa, zaprojektowany tak, by prawie nie przenikał do mózgu. Dzięki temu łagodzi świąd bez typowego dla opioidów ryzyka uzależnienia i depresji oddechowej.",
+   "FDA zatwierdziła ją w 2021 r. (Korsuva) w umiarkowanym i ciężkim świądzie u dorosłych z przewlekłą chorobą nerek leczonych hemodializą. Podaje ją personel dożylnie na koniec dializy. Działania niepożądane to m.in. biegunka, zawroty głowy i senność."
+  ],
+  "en": [
+   "Difelikefalin is a peptide that activates kappa opioid receptors, designed so that it barely enters the brain. This lets it ease itch without the addiction and breathing risks typical of opioids.",
+   "The FDA approved it in 2021 (Korsuva) for moderate to severe itch in adults with chronic kidney disease on haemodialysis. Staff give it intravenously at the end of dialysis. Side effects include diarrhoea, dizziness and drowsiness."
+  ],
+  "es": [
+   "La difelikefalina es un péptido que activa los receptores opioides kappa, diseñado para que apenas entre en el cerebro. Así alivia el picor sin los riesgos de adicción y depresión respiratoria típicos de los opioides.",
+   "La FDA la aprobó en 2021 (Korsuva) para el picor moderado a grave en adultos con enfermedad renal crónica en hemodiálisis. El personal la administra por vía intravenosa al final de la diálisis. Entre sus efectos adversos están la diarrea, el mareo y la somnolencia."
+  ]
+ },
+ "Gonadorelina": {
+  "pl": [
+   "Gonadorelina to syntetyczna wersja naturalnego GnRH, 10-aminokwasowego hormonu podwzgórza, który pobudza przysadkę do wydzielania LH i FSH. Za odkrycie budowy tego hormonu Andrew Schally i Roger Guillemin otrzymali Nagrodę Nobla w 1977 r.",
+   "Podawana pulsacyjnie z pompy pobudza owulację w niektórych postaciach niepłodności, a jednorazowo służy do badania przysadki. W USA ludzki preparat wycofano, a dziś stosuje się go głównie w weterynarii i w kilku krajach. Ciągłe podawanie działa odwrotnie i wygasza oś hormonalną, na czym opierają się agoniści GnRH."
+  ],
+  "en": [
+   "Gonadorelin is a synthetic version of natural GnRH, the 10-amino-acid hypothalamic hormone that tells the pituitary to release LH and FSH. Andrew Schally and Roger Guillemin received the 1977 Nobel Prize for working out such hypothalamic hormones.",
+   "Given in pulses from a pump it can trigger ovulation in some forms of infertility, and a single dose is used to test the pituitary. The human product was withdrawn in the US; today it is used mainly in veterinary medicine and in a few countries. Continuous dosing does the opposite and switches the hormonal axis off, which is how GnRH agonists work."
+  ],
+  "es": [
+   "La gonadorelina es una versión sintética de la GnRH natural, la hormona del hipotálamo de 10 aminoácidos que ordena a la hipófisis liberar LH y FSH. Andrew Schally y Roger Guillemin recibieron el Nobel de 1977 por descifrar estas hormonas del hipotálamo.",
+   "Administrada en pulsos con una bomba puede inducir la ovulación en algunas formas de infertilidad, y una sola dosis sirve para estudiar la hipófisis. El producto humano se retiró en EE. UU.; hoy se usa sobre todo en veterinaria y en algunos países. La administración continua hace lo contrario y apaga el eje hormonal, que es como actúan los agonistas de GnRH."
+  ]
+ },
+ "Kisspeptyna-10": {
+  "pl": [
+   "Kisspeptyny to rodzina peptydów kodowanych przez gen KISS1, który opisano w 1996 r. w Hershey w Pensylwanii, stąd nazwa nawiązująca do czekoladek „Kisses”. W 2003 r. odkryto, że są niezbędne do rozpoczęcia dojrzewania płciowego. Kisspeptyna-10 to jej najkrótszy aktywny fragment.",
+   "Badania u ludzi, głównie w Imperial College London, pokazały, że kisspeptyna pobudza wydzielanie LH i może wyzwalać dojrzewanie komórek jajowych w in vitro z mniejszym ryzykiem zespołu hiperstymulacji. To nadal badania kliniczne; kisspeptyna nie jest zatwierdzonym lekiem."
+  ],
+  "en": [
+   "Kisspeptins are a family of peptides encoded by the KISS1 gene, described in 1996 in Hershey, Pennsylvania, hence a name nodding to Hershey's 'Kisses' chocolates. In 2003 they were found to be essential for starting puberty. Kisspeptin-10 is the shortest active fragment.",
+   "Human studies, mainly at Imperial College London, showed that kisspeptin stimulates LH release and can trigger egg maturation in IVF with a lower risk of ovarian hyperstimulation syndrome. This is still clinical research; kisspeptin is not an approved medicine."
+  ],
+  "es": [
+   "Las kisspeptinas son una familia de péptidos codificados por el gen KISS1, descrito en 1996 en Hershey (Pensilvania), de ahí un nombre que alude a los bombones «Kisses». En 2003 se descubrió que son imprescindibles para iniciar la pubertad. La kisspeptina-10 es su fragmento activo más corto.",
+   "Estudios en humanos, sobre todo en el Imperial College London, mostraron que la kisspeptina estimula la liberación de LH y puede desencadenar la maduración de óvulos en la FIV con menos riesgo de síndrome de hiperestimulación ovárica. Sigue siendo investigación clínica; la kisspeptina no es un medicamento aprobado."
+  ]
+ },
+ "Triptorelina": {
+  "pl": [
+   "Triptorelina to agonista GnRH, w którym jeden aminokwas zastąpiono D-tryptofanem, co czyni ją wielokrotnie silniejszą i trwalszą od naturalnego hormonu. Ciągłe podawanie najpierw krótko pobudza, a potem wygasza oś hormonalną.",
+   "Stosuje się ją w zaawansowanym raku prostaty (w USA Trelstar od 2000 r.), w endometriozie, mięśniakach, przedwczesnym dojrzewaniu (Triptodur) i w programach in vitro. Działania niepożądane wynikają z niedoboru hormonów płciowych: uderzenia gorąca, spadek libido, utrata masy kostnej przy długim stosowaniu."
+  ],
+  "en": [
+   "Triptorelin is a GnRH agonist in which one amino acid was swapped for D-tryptophan, making it many times stronger and longer-lasting than the natural hormone. Continuous dosing first briefly stimulates and then switches off the hormonal axis.",
+   "It is used in advanced prostate cancer (in the US as Trelstar since 2000), endometriosis, fibroids, precocious puberty (Triptodur) and in IVF. Side effects come from low sex hormones: hot flushes, lower libido and bone loss with long use."
+  ],
+  "es": [
+   "La triptorelina es un agonista de GnRH en el que un aminoácido se cambió por D-triptófano, lo que la hace mucho más potente y duradera que la hormona natural. La administración continua primero estimula brevemente y después apaga el eje hormonal.",
+   "Se usa en el cáncer de próstata avanzado (en EE. UU. como Trelstar desde 2000), endometriosis, miomas, pubertad precoz (Triptodur) y en la FIV. Los efectos adversos se deben a la falta de hormonas sexuales: sofocos, menos libido y pérdida ósea con el uso prolongado."
+  ]
+ },
+ "Leuprorelina": {
+  "pl": [
+   "Leuprorelina to jeden z najstarszych peptydowych leków hormonalnych: agonista GnRH zatwierdzony przez FDA w 1985 r. w raku prostaty. Postacie depot (Lupron Depot, Eligard) uwalniają lek przez 1–6 miesięcy.",
+   "Stosuje się ją też w endometriozie, mięśniakach macicy i przedwczesnym dojrzewaniu. Na początku leczenia hormony krótko rosną, co w raku prostaty może nasilić objawy, dlatego czasem dodaje się antyandrogen. Długie stosowanie powoduje utratę masy kostnej i objawy podobne do menopauzy."
+  ],
+  "en": [
+   "Leuprolide is one of the oldest peptide hormone drugs: a GnRH agonist approved by the FDA in 1985 for prostate cancer. Depot forms (Lupron Depot, Eligard) release the drug over 1–6 months.",
+   "It is also used in endometriosis, uterine fibroids and precocious puberty. At the start of treatment hormones briefly rise, which in prostate cancer can worsen symptoms, so an anti-androgen is sometimes added. Long-term use causes bone loss and menopause-like symptoms."
+  ],
+  "es": [
+   "La leuprorelina es uno de los fármacos hormonales peptídicos más antiguos: un agonista de GnRH aprobado por la FDA en 1985 para el cáncer de próstata. Las formas depot (Lupron Depot, Eligard) liberan el fármaco durante 1–6 meses.",
+   "También se usa en la endometriosis, los miomas uterinos y la pubertad precoz. Al inicio del tratamiento las hormonas suben brevemente, lo que en el cáncer de próstata puede empeorar los síntomas, por eso a veces se añade un antiandrógeno. El uso prolongado causa pérdida ósea y síntomas de tipo menopáusico."
+  ]
+ },
+ "Goserelina": {
+  "pl": [
+   "Goserelina to agonista GnRH podawany jako mały implant pod skórę brzucha, który uwalnia lek przez 28 dni albo 12 tygodni. FDA zatwierdziła ją w 1989 r. (Zoladex).",
+   "Stosuje się ją w raku prostaty, raku piersi u kobiet przed menopauzą, endometriozie i przed niektórymi zabiegami ginekologicznymi. Implant wprowadza personel medyczny grubą igłą; zdarzają się krwiaki w miejscu wkłucia. Działania niepożądane wynikają z obniżenia hormonów płciowych."
+  ],
+  "en": [
+   "Goserelin is a GnRH agonist given as a small implant under the skin of the abdomen, releasing the drug over 28 days or 12 weeks. The FDA approved it in 1989 (Zoladex).",
+   "It is used in prostate cancer, breast cancer in premenopausal women, endometriosis and before some gynaecological procedures. Staff insert the implant with a wide needle; bruising at the site can occur. Side effects come from lowered sex hormones."
+  ],
+  "es": [
+   "La goserelina es un agonista de GnRH que se administra como un pequeño implante bajo la piel del abdomen y libera el fármaco durante 28 días o 12 semanas. La FDA la aprobó en 1989 (Zoladex).",
+   "Se usa en el cáncer de próstata, el cáncer de mama en mujeres premenopáusicas, la endometriosis y antes de algunas intervenciones ginecológicas. El personal sanitario coloca el implante con una aguja gruesa; pueden aparecer hematomas en la zona. Los efectos adversos se deben al descenso de las hormonas sexuales."
+  ]
+ },
+ "Degareliks": {
+  "pl": [
+   "Degareliks to antagonista GnRH: od razu blokuje receptor w przysadce, bez początkowego wzrostu hormonów, jaki dają agoniści. Dzięki temu testosteron spada w ciągu kilku dni. FDA zatwierdziła go w 2008 r. (Firmagon) w zaawansowanym raku prostaty.",
+   "Podaje się go podskórnie w brzuch co miesiąc. Najczęstsze są reakcje w miejscu wstrzyknięcia (ból, zaczerwienienie, guzek) oraz uderzenia gorąca. W 2020 r. dołączył doustny antagonista relugoliks, który nie jest peptydem."
+  ],
+  "en": [
+   "Degarelix is a GnRH antagonist: it blocks the pituitary receptor straight away, without the initial hormone surge that agonists cause. This lowers testosterone within days. The FDA approved it in 2008 (Firmagon) for advanced prostate cancer.",
+   "It is injected under the skin of the abdomen every month. The most common effects are injection-site reactions (pain, redness, a lump) and hot flushes. In 2020 it was joined by an oral antagonist, relugolix, which is not a peptide."
+  ],
+  "es": [
+   "El degarelix es un antagonista de GnRH: bloquea el receptor de la hipófisis de inmediato, sin el pico hormonal inicial que causan los agonistas. Así la testosterona baja en pocos días. La FDA lo aprobó en 2008 (Firmagon) para el cáncer de próstata avanzado.",
+   "Se inyecta bajo la piel del abdomen cada mes. Lo más frecuente son reacciones en el lugar de inyección (dolor, enrojecimiento, un bulto) y sofocos. En 2020 se sumó un antagonista oral, el relugolix, que no es un péptido."
+  ]
+ },
+ "Cetroreliks i Ganireliks": {
+  "pl": [
+   "Cetroreliks (Cetrotide) i ganireliks to antagoniści GnRH zatwierdzeni pod koniec lat 90. do programów in vitro. Podawane przez kilka dni podczas stymulacji jajników zapobiegają przedwczesnemu wyrzutowi LH, który mógłby zepsuć cykl.",
+   "W porównaniu z dawnymi długimi protokołami z agonistami skracają leczenie i zmniejszają ryzyko zespołu hiperstymulacji jajników. Stosuje się je wyłącznie pod nadzorem kliniki leczenia niepłodności; najczęstsze są reakcje w miejscu wstrzyknięcia."
+  ],
+  "en": [
+   "Cetrorelix (Cetrotide) and ganirelix are GnRH antagonists approved in the late 1990s for IVF. Given for a few days during ovarian stimulation, they prevent a premature LH surge that could ruin the cycle.",
+   "Compared with older long protocols using agonists, they shorten treatment and lower the risk of ovarian hyperstimulation syndrome. They are used only under the supervision of a fertility clinic; injection-site reactions are the most common effect."
+  ],
+  "es": [
+   "El cetrorelix (Cetrotide) y el ganirelix son antagonistas de GnRH aprobados a finales de los 90 para la FIV. Administrados unos días durante la estimulación ovárica, evitan un pico prematuro de LH que podría arruinar el ciclo.",
+   "Frente a los antiguos protocolos largos con agonistas, acortan el tratamiento y reducen el riesgo de síndrome de hiperestimulación ovárica. Solo se usan bajo supervisión de una clínica de fertilidad; lo más frecuente son las reacciones en el lugar de inyección."
+  ]
+ },
+ "Oksytocyna": {
+  "pl": [
+   "Oksytocyna to 9-aminokwasowy hormon peptydowy wytwarzany w podwzgórzu i uwalniany z przysadki. W 1953 r. Vincent du Vigneaud ustalił jej budowę i zsyntetyzował ją jako pierwszy hormon peptydowy, za co w 1955 r. dostał Nagrodę Nobla z chemii.",
+   "Jako lek podaje się ją w szpitalu do indukcji porodu i do zapobiegania krwotokom poporodowym; jest na liście leków podstawowych WHO. Popularne określenie „hormon miłości” wzięło się z badań nad więziami, ale badania z oksytocyną w nosie u ludzi dają niespójne wyniki. Przedawkowanie grozi zbyt silnymi skurczami macicy i zatruciem wodnym."
+  ],
+  "en": [
+   "Oxytocin is a 9-amino-acid peptide hormone made in the hypothalamus and released from the pituitary. In 1953 Vincent du Vigneaud worked out its structure and synthesised it as the first peptide hormone, earning the 1955 Nobel Prize in Chemistry.",
+   "As a medicine it is given in hospital to induce labour and to prevent bleeding after birth; it is on the WHO list of essential medicines. The popular label 'love hormone' comes from bonding research, but human studies with nasal oxytocin give inconsistent results. Overdose risks overly strong contractions and water intoxication."
+  ],
+  "es": [
+   "La oxitocina es una hormona peptídica de 9 aminoácidos producida en el hipotálamo y liberada desde la hipófisis. En 1953 Vincent du Vigneaud descifró su estructura y la sintetizó como la primera hormona peptídica, lo que le valió el Nobel de Química de 1955.",
+   "Como medicamento se administra en el hospital para inducir el parto y prevenir la hemorragia posparto; figura en la lista de medicamentos esenciales de la OMS. La etiqueta popular de «hormona del amor» viene de la investigación sobre vínculos, pero los estudios con oxitocina nasal en humanos dan resultados inconsistentes. Una sobredosis puede causar contracciones demasiado fuertes e intoxicación por agua."
+  ]
+ },
+ "HCG i HMG": {
+  "pl": [
+   "hCG (gonadotropina kosmówkowa) to hormon ciąży, a hMG (menotropiny) to mieszanina FSH i LH. Dawniej oba pozyskiwano z moczu, odpowiednio kobiet w ciąży i po menopauzie; dziś istnieją też wersje rekombinowane. To duże białka (glikoproteiny), nie krótkie peptydy.",
+   "Stosuje się je w leczeniu niepłodności: hMG pobudza dojrzewanie pęcherzyków, a hCG wyzwala owulację. FDA ostrzegała, że hCG nie jest skuteczny w odchudzaniu, a produkty „HCG” do diety sprzedawane bez recepty są nielegalne. Przy stymulacji grozi zespół hiperstymulacji jajników i ciąża mnoga."
+  ],
+  "en": [
+   "hCG (chorionic gonadotropin) is the pregnancy hormone, and hMG (menotropins) is a mixture of FSH and LH. Both used to be obtained from urine, of pregnant and postmenopausal women respectively; recombinant versions now exist too. They are large proteins (glycoproteins), not short peptides.",
+   "They are used to treat infertility: hMG drives follicle growth and hCG triggers ovulation. The FDA has warned that hCG does not work for weight loss and that over-the-counter 'HCG' diet products are illegal. Stimulation carries a risk of ovarian hyperstimulation syndrome and multiple pregnancy."
+  ],
+  "es": [
+   "La hCG (gonadotropina coriónica) es la hormona del embarazo y la hMG (menotropinas) es una mezcla de FSH y LH. Antes ambas se obtenían de la orina, de mujeres embarazadas y posmenopáusicas respectivamente; hoy también hay versiones recombinantes. Son proteínas grandes (glucoproteínas), no péptidos cortos.",
+   "Se usan para tratar la infertilidad: la hMG estimula el crecimiento de los folículos y la hCG desencadena la ovulación. La FDA ha advertido que la hCG no sirve para adelgazar y que los productos dietéticos «HCG» sin receta son ilegales. La estimulación conlleva riesgo de síndrome de hiperestimulación ovárica y embarazo múltiple."
+  ]
+ },
+ "Afamelanotyd": {
+  "pl": [
+   "Afamelanotyd (dawniej Melanotan I) to analog hormonu alfa-MSH opracowany na Uniwersytecie Arizony, a potem przez australijską firmę Clinuvel. Pobudza receptor MC1R i zwiększa wytwarzanie ciemnej melaniny w skórze.",
+   "Jako implant pod skórę (Scenesse) jest zatwierdzony w EU od 2014 r. i w USA od 2019 r. w protoporfirii erytropoetycznej, rzadkiej chorobie, w której światło słoneczne wywołuje silny ból. Wszczepia go przeszkolony personel, a pacjent ma regularne kontrole znamion. To nie jest środek do opalania."
+  ],
+  "en": [
+   "Afamelanotide (formerly Melanotan I) is an alpha-MSH analogue developed at the University of Arizona and later by the Australian company Clinuvel. It activates the MC1R receptor and increases dark melanin production in the skin.",
+   "As an implant under the skin (Scenesse) it has been approved in the EU since 2014 and in the US since 2019 for erythropoietic protoporphyria, a rare disease in which sunlight causes severe pain. Trained staff insert it, and patients have regular mole checks. It is not a tanning product."
+  ],
+  "es": [
+   "La afamelanotida (antes Melanotan I) es un análogo de la alfa-MSH desarrollado en la Universidad de Arizona y después por la empresa australiana Clinuvel. Activa el receptor MC1R y aumenta la producción de melanina oscura en la piel.",
+   "Como implante bajo la piel (Scenesse) está aprobada en la UE desde 2014 y en EE. UU. desde 2019 para la protoporfiria eritropoyética, una enfermedad rara en la que la luz solar causa un dolor intenso. La coloca personal formado y el paciente se revisa los lunares con regularidad. No es un producto para broncearse."
+  ]
+ },
+ "Melanotan II": {
+  "pl": [
+   "Melanotan II to cykliczny analog alfa-MSH opracowany w latach 80. na Uniwersytecie Arizony. W przeciwieństwie do afamelanotydu działa na kilka receptorów melanokortyny naraz, dlatego obok opalenizny wywołuje nudności, spadek apetytu i spontaniczne erekcje.",
+   "Nie jest zatwierdzony nigdzie na świecie, a sprzedaje się go w internecie i salonach „do opalania”. MHRA i inne urzędy ostrzegały przed nim; opisywano szybkie zmiany i pojawianie się znamion, a także przypadki czerniaka u stosujących. Opalenizna z melanotanu nie chroni przed rakiem skóry."
+  ],
+  "en": [
+   "Melanotan II is a cyclic alpha-MSH analogue developed in the 1980s at the University of Arizona. Unlike afamelanotide it acts on several melanocortin receptors at once, so besides tanning it causes nausea, reduced appetite and spontaneous erections.",
+   "It is not approved anywhere in the world but is sold online and in salons 'for tanning'. The MHRA and other agencies have warned against it; rapid mole changes and new moles have been reported, as have melanoma cases in users. A melanotan tan does not protect against skin cancer."
+  ],
+  "es": [
+   "El Melanotan II es un análogo cíclico de la alfa-MSH desarrollado en los años 80 en la Universidad de Arizona. A diferencia de la afamelanotida actúa sobre varios receptores de melanocortina a la vez, así que además del bronceado causa náuseas, menos apetito y erecciones espontáneas.",
+   "No está aprobado en ningún país, pero se vende en internet y en salones «para broncearse». La MHRA y otras agencias han advertido contra él; se han descrito cambios rápidos en lunares y lunares nuevos, así como casos de melanoma en usuarios. El bronceado del melanotan no protege del cáncer de piel."
+  ]
+ },
+ "PT-141": {
+  "pl": [
+   "PT-141 (bremelanotyd) powstał z Melanotanu II, gdy zauważono, że ten wywołuje u badanych pobudzenie seksualne. Działa na receptory melanokortyny w mózgu, a nie na naczynia krwionośne jak sildenafil.",
+   "FDA zatwierdziła go w 2019 r. (Vyleesi) w obniżonym popędzie seksualnym u kobiet przed menopauzą; wstrzykuje się go podskórnie przed planowaną aktywnością. W badaniach nudności miało około 40% kobiet, a ciśnienie krwi przejściowo rosło; częste stosowanie może przyciemniać skórę i dziąsła."
+  ],
+  "en": [
+   "PT-141 (bremelanotide) came from Melanotan II after researchers noticed that it caused sexual arousal in volunteers. It acts on melanocortin receptors in the brain, not on blood vessels like sildenafil.",
+   "The FDA approved it in 2019 (Vyleesi) for low sexual desire in premenopausal women; it is injected under the skin before anticipated activity. In trials about 40% of women had nausea and blood pressure rose temporarily; frequent use can darken skin and gums."
+  ],
+  "es": [
+   "El PT-141 (bremelanotida) surgió del Melanotan II cuando se observó que este causaba excitación sexual en los voluntarios. Actúa sobre los receptores de melanocortina del cerebro, no sobre los vasos como el sildenafilo.",
+   "La FDA lo aprobó en 2019 (Vyleesi) para el deseo sexual bajo en mujeres premenopáusicas; se inyecta bajo la piel antes de la actividad prevista. En los ensayos, cerca del 40% de las mujeres tuvo náuseas y la presión arterial subió de forma pasajera; el uso frecuente puede oscurecer la piel y las encías."
+  ]
+ },
+ "ACTH 1–39": {
+  "pl": [
+   "ACTH (kortykotropina) to 39-aminokwasowy hormon przysadki, który pobudza nadnercza do wydzielania kortyzolu. Żel z ACTH (Acthar Gel) zatwierdzono w USA w 1952 r.; krótsza syntetyczna wersja, kosyntropina, służy do badania czynności nadnerczy.",
+   "Acthar jest dziś stosowany m.in. w napadach zgięciowych u niemowląt i w rzutach stwardnienia rozsianego. Stał się znany także z ogromnego wzrostu ceny po 2007 r. Działania niepożądane przypominają przewlekłe sterydy: nadciśnienie, wzrost cukru, zatrzymanie wody, podatność na zakażenia."
+  ],
+  "en": [
+   "ACTH (corticotropin) is a 39-amino-acid pituitary hormone that drives the adrenal glands to release cortisol. ACTH gel (Acthar Gel) was approved in the US in 1952; a shorter synthetic version, cosyntropin, is used to test adrenal function.",
+   "Acthar is used today in infantile spasms and multiple sclerosis relapses, among others. It also became known for its huge price increase after 2007. Side effects resemble long-term steroids: high blood pressure, raised blood sugar, fluid retention and infection risk."
+  ],
+  "es": [
+   "La ACTH (corticotropina) es una hormona hipofisaria de 39 aminoácidos que hace que las suprarrenales liberen cortisol. El gel de ACTH (Acthar Gel) se aprobó en EE. UU. en 1952; una versión sintética más corta, la cosintropina, sirve para estudiar la función suprarrenal.",
+   "Hoy el Acthar se usa, entre otros, en los espasmos infantiles y los brotes de esclerosis múltiple. También se hizo conocido por la enorme subida de su precio tras 2007. Sus efectos adversos se parecen a los de los corticoides prolongados: hipertensión, glucosa alta, retención de líquidos y riesgo de infecciones."
+  ]
+ },
+ "Melatonina": {
+  "pl": [
+   "Melatonina to hormon szyszynki, pochodna tryptofanu, a nie peptyd. Jej wydzielanie rośnie wieczorem w ciemności i sygnalizuje organizmowi porę snu.",
+   "W USA jest suplementem diety, a w Wielkiej Brytanii i wielu krajach UE lekiem na receptę (np. Circadin dla osób po 55. roku życia). Badania pokazują niewielki efekt przy bezsenności, większy przy zmianie stref czasowych i zaburzeniach rytmu snu. Analizy suplementów wykazywały zawartość wyraźnie różną od deklarowanej."
+  ],
+  "en": [
+   "Melatonin is a pineal gland hormone derived from tryptophan, not a peptide. Its release rises in the evening in darkness and signals bedtime to the body.",
+   "In the US it is a dietary supplement, while in the UK and many EU countries it is a prescription medicine (e.g. Circadin for people aged 55 and over). Studies show a small effect in insomnia and a larger one for jet lag and sleep-timing disorders. Analyses of supplements have found content clearly different from the label."
+  ],
+  "es": [
+   "La melatonina es una hormona de la glándula pineal derivada del triptófano, no un péptido. Su liberación aumenta por la tarde-noche en la oscuridad e indica al cuerpo la hora de dormir.",
+   "En EE. UU. es un suplemento dietético, mientras que en el Reino Unido y muchos países de la UE es un medicamento con receta (p. ej., Circadin para mayores de 55 años). Los estudios muestran un efecto pequeño en el insomnio y mayor en el jet lag y los trastornos del ritmo del sueño. Análisis de suplementos han hallado contenidos claramente distintos de los declarados."
+  ]
+ },
+ "Erytropoetyna (EPO)": {
+  "pl": [
+   "Erytropoetyna to hormon wytwarzany głównie przez nerki, który pobudza szpik do produkcji czerwonych krwinek. Rekombinowaną epoetynę alfa zatwierdzono w 1989 r., co zmieniło leczenie niedokrwistości u osób dializowanych, które wcześniej potrzebowały częstych przetoczeń krwi.",
+   "W latach 90. EPO stała się symbolem dopingu w kolarstwie, bo zwiększa wytrzymałość. Ulotki mają ostrzeżenie w ramce: dążenie do zbyt wysokiej hemoglobiny zwiększa ryzyko zgonu, zawału i udaru. Zagęszczona krew sprzyja zakrzepom; WADA zakazuje EPO w każdym momencie."
+  ],
+  "en": [
+   "Erythropoietin is a hormone made mainly by the kidneys that drives the bone marrow to produce red blood cells. Recombinant epoetin alfa was approved in 1989, transforming the treatment of anaemia in dialysis patients who had previously needed frequent blood transfusions.",
+   "In the 1990s EPO became a symbol of doping in cycling, because it increases endurance. Labels carry a boxed warning: aiming for too high a haemoglobin raises the risk of death, heart attack and stroke. Thickened blood promotes clots; WADA prohibits EPO at all times."
+  ],
+  "es": [
+   "La eritropoyetina es una hormona que fabrican sobre todo los riñones y que hace que la médula ósea produzca glóbulos rojos. La epoetina alfa recombinante se aprobó en 1989 y transformó el tratamiento de la anemia en pacientes en diálisis, que antes necesitaban transfusiones frecuentes.",
+   "En los años 90 la EPO se convirtió en símbolo del dopaje en el ciclismo, porque aumenta la resistencia. Las fichas llevan una advertencia destacada: buscar una hemoglobina demasiado alta aumenta el riesgo de muerte, infarto e ictus. La sangre espesa favorece los coágulos; la AMA prohíbe la EPO en todo momento."
+  ]
+ },
+ "Toksyna botulinowa": {
+  "pl": [
+   "Toksyna botulinowa to białko bakterii Clostridium botulinum, jedna z najsilniejszych znanych trucizn. W małych dawkach blokuje uwalnianie acetylocholiny i rozluźnia wstrzyknięte mięśnie. FDA zatwierdziła Botox w 1989 r. w zezie i kurczu powiek, a w 2002 r. w zmarszczkach między brwiami.",
+   "Dziś stosuje się ją też w migrenie przewlekłej, nadpotliwości, spastyczności i nadreaktywnym pęcherzu. Jednostki różnych preparatów (Botox, Dysport, Xeomin) nie są wymienne. Ulotki ostrzegają przed rozprzestrzenianiem się toksyny poza miejsce wstrzyknięcia; podróbki z internetu powodowały przypadki zatrucia jadem kiełbasianym."
+  ],
+  "en": [
+   "Botulinum toxin is a protein from the bacterium Clostridium botulinum, one of the most potent poisons known. In small doses it blocks acetylcholine release and relaxes the injected muscles. The FDA approved Botox in 1989 for squint and eyelid spasm, and in 2002 for frown lines between the brows.",
+   "Today it is also used for chronic migraine, excessive sweating, spasticity and overactive bladder. Units of different products (Botox, Dysport, Xeomin) are not interchangeable. Labels warn about toxin spreading beyond the injection site; counterfeits bought online have caused cases of botulism."
+  ],
+  "es": [
+   "La toxina botulínica es una proteína de la bacteria Clostridium botulinum, uno de los venenos más potentes que se conocen. En dosis pequeñas bloquea la liberación de acetilcolina y relaja los músculos inyectados. La FDA aprobó el Botox en 1989 para el estrabismo y el espasmo palpebral, y en 2002 para las arrugas del entrecejo.",
+   "Hoy también se usa en la migraña crónica, la sudoración excesiva, la espasticidad y la vejiga hiperactiva. Las unidades de distintos productos (Botox, Dysport, Xeomin) no son intercambiables. Las fichas advierten de que la toxina puede extenderse más allá de la zona inyectada; falsificaciones compradas en internet han causado casos de botulismo."
+  ]
+ },
+ "NAD+": {
+  "pl": [
+   "NAD+ (dinukleotyd nikotynamidoadeninowy) to koenzym obecny w każdej komórce, niezbędny do wytwarzania energii i naprawy DNA. Jego poziom w tkankach spada z wiekiem, co zrodziło popularność wlewów NAD+ i suplementów z prekursorami (NR, NMN).",
+   "Prekursory podnoszą poziom NAD+ we krwi, ale badania u ludzi pokazują jak dotąd niewielkie lub żadne korzyści zdrowotne. Wlewy dożylne NAD+ w klinikach „longevity” opierają się na małych badaniach pilotażowych; częste są nudności i uczucie ucisku w klatce przy szybkim podaniu. We wrześniu 2026 r. apteka recepturowa Apothecary Pharma wycofała swój NAD+ do wstrzykiwań z powodu braku gwarancji jałowości."
+  ],
+  "en": [
+   "NAD+ (nicotinamide adenine dinucleotide) is a coenzyme found in every cell, needed for energy production and DNA repair. Its tissue levels fall with age, which made NAD+ infusions and precursor supplements (NR, NMN) popular.",
+   "Precursors raise NAD+ in the blood, but human studies so far show small or no health benefits. Intravenous NAD+ drips in 'longevity' clinics rest on small pilot studies; nausea and chest tightness are common when it is given fast. In September 2026 the compounding pharmacy Apothecary Pharma recalled its NAD+ injection because sterility could not be assured."
+  ],
+  "es": [
+   "El NAD+ (nicotinamida adenina dinucleótido) es una coenzima presente en todas las células, necesaria para producir energía y reparar el ADN. Su nivel en los tejidos baja con la edad, lo que popularizó las infusiones de NAD+ y los suplementos de precursores (NR, NMN).",
+   "Los precursores elevan el NAD+ en sangre, pero los estudios en humanos muestran hasta ahora beneficios pequeños o nulos. Las infusiones intravenosas de NAD+ de las clínicas de «longevidad» se basan en pequeños estudios piloto; son frecuentes las náuseas y la opresión en el pecho si se administra rápido. En septiembre de 2026, la farmacia de fórmulas magistrales Apothecary Pharma retiró su NAD+ inyectable porque no podía garantizar la esterilidad."
+  ]
  }
 }
