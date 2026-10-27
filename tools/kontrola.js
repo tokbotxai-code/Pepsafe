@@ -49,9 +49,13 @@ const pliki = [];
 })('');
 const martwe = new Set();
 for (const f of pliki) {
-  for (const m of (czytaj(f) || '').matchAll(/href="\/([^"#?]*)"/g)) {
-    const cel = m[1] || 'index.html';
-    if (!fs.existsSync(path.join(root, cel))) martwe.add(cel);
+  // absolute and relative links alike: "../groups.html" from /p/ once pointed at a page that does not exist
+  for (const m of (czytaj(f) || '').matchAll(/href="([^"#?]*)[^"]*"/g)) {
+    const h = m[1];
+    if (!h || f === 'dane.html' || /['+${}]/.test(h) || /^(https?:|mailto:|tel:|data:|javascript:|\/\/)/.test(h)) continue;
+    let cel = h.startsWith('/') ? h.slice(1) : path.posix.normalize(path.posix.join(path.posix.dirname(f), h));
+    if (cel === '' || cel === '.' || cel.endsWith('/')) cel = (cel === '.' ? '' : cel) + 'index.html';
+    if (cel.startsWith('..') || !fs.existsSync(path.join(root, cel))) martwe.add(f + ' → ' + h);
   }
 }
 // Polish words leaking onto English and Spanish pages (title of a source, product name): fix in tools/pl-en.json or dane.html

@@ -742,7 +742,7 @@ function card(e, L) {
   const body = `
 <article class="card-page">
   <div class="wrap">
-    <p class="crumbs reveal"><a href="../catalog.html">${esc(t.back)}</a> › <span>${esc(name)}</span></p>
+    <p class="crumbs reveal"><a href="/${L}/catalog.html">${esc(t.back)}</a> › <span>${esc(name)}</span></p>
     <div class="card-head">
       <div>
         <h1 class="display reveal">${esc(name)}</h1>
@@ -761,7 +761,7 @@ function card(e, L) {
         <p class="kick">${esc(t.group)}</p>
         <p class="gname">${esc(en ? ((FAMS_EN[f.id] || [])[0] || f.lab) : f.lab)}</p>
         <p class="small ink2">${esc(en ? ((FAMS_EN[f.id] || [])[1] || f.t) : f.t)}</p>
-        <a class="more" href="../groups.html#${f.id}">${esc(t.group)}${ARROW}</a>
+        <a class="more" href="/${L}/groups.html#${f.id}">${esc(t.group)}${ARROW}</a>
       </aside>` : ''}
     </div>
 
