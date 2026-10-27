@@ -11,6 +11,13 @@ const SITE = 'https://pepsafe.info';
 const TM_FILE = path.join(__dirname, 'es-tm.json');
 const TM = fs.existsSync(TM_FILE) ? JSON.parse(fs.readFileSync(TM_FILE, 'utf8')) : {};
 const missingMode = process.argv.includes('--missing');
+// Spanish of the longer write-ups lives next to the EN/PL text in opisy.json ("es" paragraphs, same order as "en")
+{
+  const OP = path.join(root, 'opisy.json');
+  if (fs.existsSync(OP)) for (const o of Object.values(JSON.parse(fs.readFileSync(OP, 'utf8'))))
+    (o.en || []).forEach((p, i) => { if (o.es && o.es[i]) TM[p.replace(/\s+/g, " ").trim()] = o.es[i]; });
+  TM['In depth'] = TM['In depth'] || 'En detalle';
+}
 
 const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-busy', 'data-off', 'data-on', 'data-base', 'data-report', 'value'];
 const META = /<meta (name|property)="(description|og:title|og:description|twitter:title|twitter:description)" content="([^"]*)">/g;
