@@ -773,7 +773,15 @@ function card(e, L) {
       ? esc(t.listedWada + ' ' + wa[0] + (wa[1] === 'always' ? t.always : '') + '.')
       : esc(wa[2] || (t.listedWada + ' ' + wa[0] + '.'))} <a href="${WADA_URL}" rel="nofollow noopener" target="_blank">WADA</a></p></section>` : ''}
     ${e.q ? `<section class="blk reveal"><h2 class="kick">${esc(t.seq)}</h2><p class="seq">${esc(e.q)}</p></section>` : ''}
-    ${src.length ? `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${src.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul></section>` : ''}
+    ${(() => {
+      // every card also gets searches in PubMed and ClinicalTrials.gov (idea from the owner's data package, 27.10),
+      // plus a note that a search result is not evidence; EMA and accessdata.fda.gov block automated checks, so they are left out
+      const term = encodeURIComponent((EN[e.n] || [])[0] || e.n);
+      const all = src.slice();
+      if (!all.some(x => /pubmed\.ncbi/.test(x[1]))) all.push([en ? 'PubMed: scientific publications' : 'PubMed: publikacje naukowe', 'https://pubmed.ncbi.nlm.nih.gov/?term=' + term]);
+      if (!all.some(x => /clinicaltrials\.gov/.test(x[1]))) all.push([en ? 'ClinicalTrials.gov: registered clinical trials' : 'ClinicalTrials.gov: zarejestrowane badania kliniczne', 'https://clinicaltrials.gov/search?term=' + term]);
+      return `<section class="blk reveal"><h2 class="kick">${esc(t.srcs)}</h2><ul class="srcs-list">${all.map(s => `<li><a href="${esc(s[1])}" rel="nofollow noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul><p class="small muted">${en ? 'Search links show what is published or registered for this name. A result alone does not prove efficacy, safety or approval.' : 'Linki wyszukiwania pokazują, co opublikowano lub zarejestrowano pod tą nazwą. Sam wynik nie dowodzi skuteczności, bezpieczeństwa ani zatwierdzenia.'}</p></section>`;
+    })()}
     ${ZM[key(e)] ? `<p class="small muted reveal">${en ? 'Last updated' : 'Ostatnia aktualizacja'}: <time datetime="${ZM[key(e)].d}">${fmtDate(ZM[key(e)].d, en)}</time> · <a href="../${L}/about.html#corrections">${en ? 'Report an error' : 'Zgłoś błąd'}</a></p>` : ''}
     ${(() => { const qs = cardQs(e, en); return `<section class="blk reveal"><h2 class="kick">${en ? 'Common questions' : 'Częste pytania'}</h2>${qs.map(([q, a]) => `<details class="qa"><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</section>`; })()}
     ${(() => { const arts = articlesFor(e), vs = VS.filter(v => v.includes(e)); return arts.length || vs.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'Further reading' : 'Więcej do czytania'}</h2><ul class="srcs-list">${vs.map(v => `<li><a href="../${L}/${vsFile(v)}">${esc(nm(v[0].n, en) + ' vs ' + nm(v[1].n, en))}</a></li>`).join('')}${arts.map(x => `<li><a href="../${L}/t/${postSlug(x)}.html">${esc(x.title[L] || x.title.en)}</a></li>`).join('')}</ul></section>` : ''; })()}
