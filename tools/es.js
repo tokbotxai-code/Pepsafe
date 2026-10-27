@@ -57,7 +57,10 @@ function translate(html, miss) {
       });
     } else if (/application\/ld\+json/.test(tag)) {
       tag = tag.replace(/"(name|description|text)":"((?:[^"\\]|\\.)*)"/g, (all, k, v) => {
-        const t = TM[norm(JSON.parse('"' + v + '"'))]; return t ? `"${k}":${JSON.stringify(t)}` : all;
+        const src = norm(JSON.parse('"' + v + '"'));
+        let t = TM[src];
+        if (!t && src.includes(' — ')) { const [x, y] = src.split(' — '); if (TM[y]) t = (TM[x] || x) + ' — ' + TM[y]; }
+        return t ? `"${k}":${JSON.stringify(t)}` : all;
       });
     }
     out += tag; i = re.lastIndex;
@@ -74,6 +77,13 @@ function relink(html, dest) {
     .replace(/href="(\.\.\/)?en\//g, 'href="$1es/')
     .replace(/href="((?:\.\.\/)*|\/)p\/([a-z0-9-]+)\.html"/g, (a, pre, s) => `href="${pre}p/${s}.es.html"`)
     .replace(/assets\/dane-en\.js/g, 'assets/dane-es.js')
+    // structured data, form redirects and the signup tag point at the Spanish pages too
+    .replace(/(<script type="application\/ld\+json">[\s\S]*?<\/script>)/g, j => j
+      .replace(/https:\/\/pepsafe\.info\/en\//g, `${SITE}/es/`)
+      .replace(/https:\/\/pepsafe\.info\/p\/([a-z0-9-]+)\.html/g, `${SITE}/p/$1.es.html`))
+    .replace(/(name="_next" value=")https:\/\/pepsafe\.info\/en\//g, `$1${SITE}/es/`)
+    .replace(/data-next="\/en\//g, 'data-next="/es/')
+    .replace(/newsletter signup \(en\)/g, 'newsletter signup (es)')
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}/${dest}">`)
     .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${SITE}/${dest}">`);
 }
@@ -118,7 +128,13 @@ const dataEn = fs.readFileSync(path.join(OUT, 'assets', 'dane-en.js'), 'utf8');
 fs.writeFileSync(path.join(OUT, 'assets', 'dane-es.js'), dataEn.replace(/"((?:[^"\\]|\\.)*)"/g, (all, v) => {
   let s; try { s = JSON.parse('"' + v + '"'); } catch (e) { return all; }
   if (/^[a-z0-9]/.test(s) && s.length > 30 && s === s.toLowerCase()) return JSON.stringify(addEs(s));
-  const t = TM[norm(s)]; return t ? JSON.stringify(t) : all;
+  let t = TM[norm(s)];
+  // shortened texts ("…") in the data file: cut the Spanish of the full sentence to a similar length
+  if (!t && s.endsWith('…')) {
+    const pre = s.slice(0, -1).trim(), full = Object.keys(TM).find(k => k.length > pre.length && k.startsWith(pre));
+    if (full) { const v = TM[full], cut = v.slice(0, Math.max(pre.length, 40)); t = cut.slice(0, cut.lastIndexOf(' ')).replace(/[ ,.;:]+$/, '') + '…'; }
+  }
+  return t ? JSON.stringify(t) : all;
 }).replace(/lang:\s*"en"|"lang":"en"/, m => m.replace('en', 'es')));
 
 // hreflang es on the English and Polish twins of every built page, and es urls in the sitemap
