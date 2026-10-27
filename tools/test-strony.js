@@ -48,6 +48,12 @@ const fail = (what, why) => bad.push(`${what}: ${why}`);
       // card page in this language
       await go(`/p/${card}${L === 'en' ? '' : '.' + L}.html`);
       if (!(await p.$('h1'))) fail(`${tag} karta ${card}`, 'brak nagłówka');
+      // every link on the card (group, catalog, further reading) opens a real page
+      for (const h of await p.$$eval('main a[href]', a => [...new Set(a.map(x => x.href))].filter(u => u.startsWith(location.origin)))) {
+        const r = await p.request.get(h.split('#')[0]); if (r.status() >= 400) fail(`${tag} karta ${card} link`, h + ' HTTP ' + r.status());
+      }
+      await p.click('a.more[href*="groups.html"]'); await p.waitForTimeout(800);
+      if (/404|not found|nie znaleziono|no encontrada/i.test(await p.title())) fail(`${tag} karta ${card} → grupa`, '404 ' + p.url());
       if (errs.length) fail(tag, 'błąd skryptu: ' + errs[0]);
     } catch (e) { fail(tag, e.message.split('\n')[0]); }
     await c.close();
