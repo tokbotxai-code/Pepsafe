@@ -2300,5 +2300,635 @@
    "El donanemab es un anticuerpo monoclonal, no un péptido: reconoce una forma modificada de beta-amiloide presente solo en las placas ya formadas y las elimina. Se administra en infusión una vez al mes y el tratamiento puede suspenderse cuando desaparecen las placas.",
    "La FDA lo aprobó en 2024 (Kisunla) para el alzhéimer temprano, con base en el ensayo TRAILBLAZER-ALZ 2 (JAMA 2023). El riesgo de inflamación y hemorragias cerebrales (ARIA) es similar o mayor que con el lecanemab, y en los ensayos se registraron muertes. Solo se administra en centros de neurología."
   ]
+ },
+ "Erenumab": {
+  "pl": [
+   "Erenumab to przeciwciało monoklonalne, a nie peptyd. Blokuje receptor peptydu CGRP, który bierze udział w wywoływaniu napadu migreny. Był pierwszym lekiem z tej grupy, zatwierdzonym przez FDA w 2018 r. (Aimovig).",
+   "Podaje się go raz w miesiącu podskórnie, by zapobiegać migrenie epizodycznej i przewlekłej; nie przerywa trwającego napadu. Częstym działaniem niepożądanym są zaparcia, czasem ciężkie, a po rejestracji dodano ostrzeżenie o wzroście ciśnienia krwi."
+  ],
+  "en": [
+   "Erenumab is a monoclonal antibody, not a peptide. It blocks the receptor for the CGRP peptide, which takes part in triggering a migraine attack. It was the first drug of this group, approved by the FDA in 2018 (Aimovig).",
+   "It is injected under the skin once a month to prevent episodic and chronic migraine; it does not stop an attack in progress. Constipation, sometimes severe, is common, and a warning about raised blood pressure was added after approval."
+  ],
+  "es": [
+   "El erenumab es un anticuerpo monoclonal, no un péptido. Bloquea el receptor del péptido CGRP, que participa en el desencadenamiento de la migraña. Fue el primer fármaco de este grupo, aprobado por la FDA en 2018 (Aimovig).",
+   "Se inyecta bajo la piel una vez al mes para prevenir la migraña episódica y crónica; no detiene una crisis en curso. El estreñimiento, a veces grave, es frecuente, y tras la aprobación se añadió una advertencia sobre la subida de la presión arterial."
+  ]
+ },
+ "Galkanezumab": {
+  "pl": [
+   "Galkanezumab to przeciwciało monoklonalne, które neutralizuje sam peptyd CGRP, zanim dotrze on do receptora. FDA zatwierdziła go w 2018 r. (Emgality) w zapobieganiu migrenie.",
+   "W 2019 r. został też pierwszym lekiem zatwierdzonym w epizodycznym klasterowym bólu głowy. Podaje się go raz w miesiącu podskórnie, po dawce nasycającej. Działania niepożądane to głównie reakcje w miejscu wstrzyknięcia."
+  ],
+  "en": [
+   "Galcanezumab is a monoclonal antibody that neutralises the CGRP peptide itself before it reaches its receptor. The FDA approved it in 2018 (Emgality) to prevent migraine.",
+   "In 2019 it also became the first drug approved for episodic cluster headache. It is injected under the skin once a month after a loading dose. Side effects are mainly injection-site reactions."
+  ],
+  "es": [
+   "El galcanezumab es un anticuerpo monoclonal que neutraliza el propio péptido CGRP antes de que llegue a su receptor. La FDA lo aprobó en 2018 (Emgality) para prevenir la migraña.",
+   "En 2019 también fue el primer fármaco aprobado para la cefalea en racimos episódica. Se inyecta bajo la piel una vez al mes tras una dosis de carga. Los efectos adversos son sobre todo reacciones en el lugar de inyección."
+  ]
+ },
+ "Fremanezumab": {
+  "pl": [
+   "Fremanezumab to przeciwciało monoklonalne neutralizujące peptyd CGRP, zatwierdzone przez FDA w 2018 r. (Ajovy) w zapobieganiu migrenie.",
+   "Można go podawać raz w miesiącu albo raz na trzy miesiące w trzech wstrzyknięciach naraz, co dla części chorych jest wygodniejsze. Działania niepożądane to głównie reakcje w miejscu wstrzyknięcia; to lek zapobiegawczy, a nie przerywający napad."
+  ],
+  "en": [
+   "Fremanezumab is a monoclonal antibody that neutralises the CGRP peptide, approved by the FDA in 2018 (Ajovy) to prevent migraine.",
+   "It can be given once a month or once every three months as three injections at once, which some patients find more convenient. Side effects are mainly injection-site reactions; it prevents attacks rather than stopping them."
+  ],
+  "es": [
+   "El fremanezumab es un anticuerpo monoclonal que neutraliza el péptido CGRP, aprobado por la FDA en 2018 (Ajovy) para prevenir la migraña.",
+   "Puede administrarse una vez al mes o una vez cada tres meses en tres inyecciones a la vez, algo más cómodo para algunos pacientes. Los efectos adversos son sobre todo reacciones en el lugar de inyección; previene las crisis, no las detiene."
+  ]
+ },
+ "Eptinezumab": {
+  "pl": [
+   "Eptinezumab to przeciwciało monoklonalne neutralizujące peptyd CGRP, jedyne w swojej grupie podawane dożylnie, raz na trzy miesiące. FDA zatwierdziła je w 2020 r. (Vyepti).",
+   "Wlew trwa około 30 minut i podaje go personel medyczny; działanie zaczyna się szybciej niż przy postaciach podskórnych. Działania niepożądane to m.in. objawy przypominające przeziębienie i reakcje nadwrażliwości."
+  ],
+  "en": [
+   "Eptinezumab is a monoclonal antibody that neutralises the CGRP peptide, the only one in its group given intravenously, once every three months. The FDA approved it in 2020 (Vyepti).",
+   "The infusion takes about 30 minutes and is given by medical staff; it starts working faster than the under-the-skin forms. Side effects include cold-like symptoms and hypersensitivity reactions."
+  ],
+  "es": [
+   "El eptinezumab es un anticuerpo monoclonal que neutraliza el péptido CGRP, el único de su grupo que se administra por vía intravenosa, cada tres meses. La FDA lo aprobó en 2020 (Vyepti).",
+   "La infusión dura unos 30 minutos y la administra el personal sanitario; empieza a actuar antes que las formas subcutáneas. Entre sus efectos adversos están los síntomas parecidos a un resfriado y las reacciones de hipersensibilidad."
+  ]
+ },
+ "Stamulumab": {
+  "pl": [
+   "Stamulumab (MYO-029) firmy Wyeth to przeciwciało monoklonalne przeciw miostatynie, czyli białku hamującemu wzrost mięśni. Był jedną z pierwszych prób zablokowania miostatyny u ludzi.",
+   "W badaniu fazy 1/2 u dorosłych z dystrofiami mięśniowymi (2008) był dobrze tolerowany, ale nie poprawił siły ani masy mięśni i program zakończono. To pierwsze niepowodzenie blokady miostatyny u ludzi i powód ostrożności wobec „antymiostatynowych” produktów z internetu."
+  ],
+  "en": [
+   "Stamulumab (MYO-029) from Wyeth is a monoclonal antibody against myostatin, the protein that restrains muscle growth. It was one of the first attempts to block myostatin in humans.",
+   "In a phase 1/2 trial in adults with muscular dystrophies (2008) it was well tolerated but did not improve muscle strength or mass, and the programme was stopped. It was the first failure of myostatin blockade in humans and a reason for caution about 'anti-myostatin' products sold online."
+  ],
+  "es": [
+   "El stamulumab (MYO-029) de Wyeth es un anticuerpo monoclonal contra la miostatina, la proteína que frena el crecimiento muscular. Fue uno de los primeros intentos de bloquear la miostatina en humanos.",
+   "En un ensayo de fase 1/2 en adultos con distrofias musculares (2008) se toleró bien, pero no mejoró la fuerza ni la masa muscular y el programa se detuvo. Fue el primer fracaso del bloqueo de la miostatina en humanos y un motivo de cautela ante los productos «antimiostatina» de internet."
+  ]
+ },
+ "Abatacept": {
+  "pl": [
+   "Abatacept to białko fuzyjne (CTLA-4 połączone z fragmentem przeciwciała), a nie peptyd. Blokuje drugi sygnał potrzebny limfocytom T do aktywacji i tłumi reakcję autoimmunologiczną u jej źródła.",
+   "FDA zatwierdziła go w 2005 r. (Orencia) w reumatoidalnym zapaleniu stawów, później także w młodzieńczym i łuszczycowym zapaleniu stawów oraz w zapobieganiu ostrej chorobie przeszczep przeciw gospodarzowi. Osłabia odporność, dlatego przed leczeniem wyklucza się gruźlicę."
+  ],
+  "en": [
+   "Abatacept is a fusion protein (CTLA-4 joined to an antibody fragment), not a peptide. It blocks the second signal T cells need to activate and damps the autoimmune reaction at its source.",
+   "The FDA approved it in 2005 (Orencia) for rheumatoid arthritis, later also for juvenile and psoriatic arthritis and to prevent acute graft-versus-host disease. It weakens immunity, so tuberculosis is ruled out before treatment."
+  ],
+  "es": [
+   "El abatacept es una proteína de fusión (CTLA-4 unido a un fragmento de anticuerpo), no un péptido. Bloquea la segunda señal que los linfocitos T necesitan para activarse y frena la reacción autoinmune en su origen.",
+   "La FDA lo aprobó en 2005 (Orencia) para la artritis reumatoide y después también para la artritis idiopática juvenil y psoriásica y para prevenir la enfermedad injerto contra huésped aguda. Debilita la inmunidad, por eso antes se descarta la tuberculosis."
+  ]
+ },
+ "Belatacept": {
+  "pl": [
+   "Belatacept to pochodna abataceptu, która silniej wiąże swoje cele na komórkach prezentujących antygen. To białko fuzyjne, a nie peptyd, stosowane w zapobieganiu odrzuceniu przeszczepionej nerki.",
+   "FDA zatwierdziła go w 2011 r. (Nulojix). W badaniach BENEFIT chorzy mieli lepszą czynność nerki niż przy cyklosporynie. Ostrzeżenie w ramce dotyczy chłoniaka po przeszczepie u osób, które nie przeszły zakażenia wirusem Epsteina-Barr, dlatego stosuje się go tylko u osób z przeciwciałami EBV."
+  ],
+  "en": [
+   "Belatacept is a derivative of abatacept that binds its targets on antigen-presenting cells more tightly. It is a fusion protein, not a peptide, used to prevent rejection of a transplanted kidney.",
+   "The FDA approved it in 2011 (Nulojix). In the BENEFIT trials patients had better kidney function than with ciclosporin. A boxed warning concerns post-transplant lymphoma in people never infected with Epstein-Barr virus, so it is used only in people with EBV antibodies."
+  ],
+  "es": [
+   "El belatacept es un derivado del abatacept que se une con más fuerza a sus dianas en las células presentadoras de antígeno. Es una proteína de fusión, no un péptido, que se usa para prevenir el rechazo de un riñón trasplantado.",
+   "La FDA lo aprobó en 2011 (Nulojix). En los ensayos BENEFIT, los pacientes tuvieron mejor función renal que con ciclosporina. Una advertencia destacada se refiere al linfoma postrasplante en personas que nunca han tenido el virus de Epstein-Barr, por eso solo se usa en personas con anticuerpos frente al VEB."
+  ]
+ },
+ "Ziw-aflibercept": {
+  "pl": [
+   "Ziw-aflibercept to białko fuzyjne działające jak sztuczny receptor: wyłapuje czynniki wzrostu naczyń VEGF-A, VEGF-B i PlGF i odcina guz od nowych naczyń krwionośnych. To ta sama cząsteczka co aflibercept stosowany w okulistyce (Eylea), ale w innej postaci i dawce.",
+   "FDA zatwierdziła go w 2012 r. (Zaltrap) w przerzutowym raku jelita grubego razem z chemioterapią FOLFIRI, na podstawie badania VELOUR. Działania niepożądane to nadciśnienie, krwawienia, utrudnione gojenie ran i rzadko perforacja jelita."
+  ],
+  "en": [
+   "Ziv-aflibercept is a fusion protein that acts as an artificial receptor: it traps the vessel growth factors VEGF-A, VEGF-B and PlGF and cuts the tumour off from new blood vessels. It is the same molecule as aflibercept used in eye disease (Eylea), but in a different form and dose.",
+   "The FDA approved it in 2012 (Zaltrap) for metastatic colorectal cancer together with FOLFIRI chemotherapy, based on the VELOUR trial. Side effects include high blood pressure, bleeding, poor wound healing and, rarely, bowel perforation."
+  ],
+  "es": [
+   "El ziv-aflibercept es una proteína de fusión que actúa como un receptor artificial: atrapa los factores de crecimiento vascular VEGF-A, VEGF-B y PlGF y deja al tumor sin nuevos vasos. Es la misma molécula que el aflibercept usado en oftalmología (Eylea), pero en otra forma y dosis.",
+   "La FDA lo aprobó en 2012 (Zaltrap) para el cáncer colorrectal metastásico junto con la quimioterapia FOLFIRI, con base en el ensayo VELOUR. Entre sus efectos adversos están la hipertensión, el sangrado, la mala cicatrización y, rara vez, la perforación intestinal."
+  ]
+ },
+ "Anakinra": {
+  "pl": [
+   "Anakinra to rekombinowana wersja naturalnego białka, które blokuje receptor interleukiny-1, jednego z głównych przekaźników zapalenia. To białko, a nie krótki peptyd.",
+   "FDA zatwierdziła ją w 2001 r. (Kineret) w reumatoidalnym zapaleniu stawów, a później w rzadkich zespołach autozapalnych (CAPS, DIRA); w UE także w chorobie Stilla i w części przypadków COVID-19. Podaje się ją codziennie podskórnie; zwiększa ryzyko zakażeń."
+  ],
+  "en": [
+   "Anakinra is a recombinant version of a natural protein that blocks the receptor for interleukin-1, one of the main inflammation messengers. It is a protein, not a short peptide.",
+   "The FDA approved it in 2001 (Kineret) for rheumatoid arthritis, and later for rare autoinflammatory syndromes (CAPS, DIRA); in the EU also for Still's disease and some cases of COVID-19. It is injected under the skin daily; it raises the risk of infection."
+  ],
+  "es": [
+   "La anakinra es una versión recombinante de una proteína natural que bloquea el receptor de la interleucina-1, uno de los principales mensajeros de la inflamación. Es una proteína, no un péptido corto.",
+   "La FDA la aprobó en 2001 (Kineret) para la artritis reumatoide y después para síndromes autoinflamatorios raros (CAPS, DIRA); en la UE también para la enfermedad de Still y algunos casos de COVID-19. Se inyecta bajo la piel a diario; aumenta el riesgo de infecciones."
+  ]
+ },
+ "Apadamtaza alfa": {
+  "pl": [
+   "Apadamtaza alfa to rekombinowany enzym ADAMTS13, który tnie bardzo duże cząsteczki czynnika von Willebranda. W wrodzonej zakrzepowej plamicy małopłytkowej tego enzymu brakuje, a nadmiar czynnika tworzy zakrzepy w drobnych naczyniach.",
+   "FDA zatwierdziła ją w 2023 r. (Adzynma) jako pierwszą terapię zastępczą w tej rzadkiej, zagrażającej życiu chorobie; wcześniej chorym podawano osocze. Leczenie prowadzi ośrodek hematologiczny."
+  ],
+  "en": [
+   "Apadamtase alfa is recombinant ADAMTS13, an enzyme that cuts very large von Willebrand factor molecules. In congenital thrombotic thrombocytopenic purpura this enzyme is missing, and excess factor forms clots in small vessels.",
+   "The FDA approved it in 2023 (Adzynma) as the first replacement therapy for this rare, life-threatening disease; patients previously received plasma. Treatment is run by a haematology centre."
+  ],
+  "es": [
+   "La apadamtasa alfa es ADAMTS13 recombinante, una enzima que corta las grandes moléculas del factor de von Willebrand. En la púrpura trombocitopénica trombótica congénita falta esta enzima y el exceso de factor forma coágulos en vasos pequeños.",
+   "La FDA la aprobó en 2023 (Adzynma) como la primera terapia de reemplazo para esta enfermedad rara y potencialmente mortal; antes se administraba plasma. El tratamiento lo lleva un centro de hematología."
+  ]
+ },
+ "Asfotaza alfa": {
+  "pl": [
+   "Asfotaza alfa to enzymatyczna terapia zastępcza: rekombinowana fosfataza alkaliczna z odcinkiem, który kieruje ją do kości. W hipofosfatazji, dziedzicznej chorobie, brak tego enzymu uniemożliwia prawidłową mineralizację kości.",
+   "FDA zatwierdziła ją w 2015 r. (Strensiq) u osób z hipofosfatazją, która ujawniła się w dzieciństwie. U niemowląt z ciężką postacią poprawiała przeżycie i oddychanie. Podaje się ją podskórnie kilka razy w tygodniu; częste są reakcje w miejscu wstrzyknięcia i zmiany tłuszczu podskórnego."
+  ],
+  "en": [
+   "Asfotase alfa is an enzyme replacement therapy: recombinant alkaline phosphatase with a tag that directs it to bone. In hypophosphatasia, an inherited disease, the lack of this enzyme prevents normal bone mineralisation.",
+   "The FDA approved it in 2015 (Strensiq) for people whose hypophosphatasia began in childhood. In infants with the severe form it improved survival and breathing. It is injected under the skin several times a week; injection-site reactions and changes in fat under the skin are common."
+  ],
+  "es": [
+   "La asfotasa alfa es una terapia de reemplazo enzimático: fosfatasa alcalina recombinante con un fragmento que la dirige al hueso. En la hipofosfatasia, una enfermedad hereditaria, la falta de esta enzima impide la mineralización normal del hueso.",
+   "La FDA la aprobó en 2015 (Strensiq) para personas cuya hipofosfatasia empezó en la infancia. En lactantes con la forma grave mejoró la supervivencia y la respiración. Se inyecta bajo la piel varias veces por semana; son frecuentes las reacciones en el lugar de inyección y los cambios en la grasa subcutánea."
+  ]
+ },
+ "Sebelipaza alfa": {
+  "pl": [
+   "Sebelipaza alfa to rekombinowana kwaśna lipaza lizosomalna, enzym rozkładający cholesterol i tłuszcze wewnątrz komórek. Jej niedobór powoduje gromadzenie tłuszczu w wątrobie i innych narządach; najcięższą postacią jest choroba Wolmana u niemowląt.",
+   "FDA i EMA zatwierdziły ją w 2015 r. (Kanuma). U niemowląt z chorobą Wolmana, które bez leczenia zwykle umierają w pierwszym roku życia, część dzieci przeżyła dzięki leczeniu. Podaje się ją we wlewie dożylnym; możliwe są reakcje uczuleniowe."
+  ],
+  "en": [
+   "Sebelipase alfa is recombinant lysosomal acid lipase, an enzyme that breaks down cholesterol and fats inside cells. Its deficiency makes fat build up in the liver and other organs; the most severe form is Wolman disease in infants.",
+   "The FDA and EMA approved it in 2015 (Kanuma). In infants with Wolman disease, who usually die in their first year without treatment, some children survived thanks to treatment. It is given by intravenous infusion; allergic reactions are possible."
+  ],
+  "es": [
+   "La sebelipasa alfa es lipasa ácida lisosomal recombinante, una enzima que degrada el colesterol y las grasas dentro de las células. Su déficit hace que la grasa se acumule en el hígado y otros órganos; la forma más grave es la enfermedad de Wolman en lactantes.",
+   "La FDA y la EMA la aprobaron en 2015 (Kanuma). En lactantes con enfermedad de Wolman, que sin tratamiento suelen morir en el primer año, algunos niños sobrevivieron gracias al tratamiento. Se administra en infusión intravenosa; puede haber reacciones alérgicas."
+  ]
+ },
+ "Elosulfaza alfa": {
+  "pl": [
+   "Elosulfaza alfa to enzymatyczna terapia zastępcza w mukopolisacharydozie typu IVA (zespół Morquio A), w której brak enzymu prowadzi do gromadzenia się cukrów złożonych w kościach i stawach.",
+   "FDA zatwierdziła ją w 2014 r. (Vimizim). W badaniu rejestracyjnym leczeni chorzy przechodzili w teście marszu nieco dłuższy dystans niż przy placebo. Podaje się ją we wlewie co tydzień; główne ryzyko to reakcje podczas wlewu, w tym anafilaksja."
+  ],
+  "en": [
+   "Elosulfase alfa is an enzyme replacement therapy for mucopolysaccharidosis type IVA (Morquio A syndrome), in which a missing enzyme leads to complex sugars building up in bones and joints.",
+   "The FDA approved it in 2014 (Vimizim). In the approval trial treated patients walked a somewhat longer distance in a walking test than on placebo. It is given by weekly infusion; the main risk is infusion reactions, including anaphylaxis."
+  ],
+  "es": [
+   "La elosulfasa alfa es una terapia de reemplazo enzimático para la mucopolisacaridosis tipo IVA (síndrome de Morquio A), en la que la falta de una enzima hace que se acumulen azúcares complejos en huesos y articulaciones.",
+   "La FDA la aprobó en 2014 (Vimizim). En el ensayo de aprobación, los pacientes tratados caminaron algo más de distancia en una prueba de marcha que con placebo. Se administra en infusión semanal; el principal riesgo son las reacciones a la infusión, incluida la anafilaxia."
+  ]
+ },
+ "Idursulfaza": {
+  "pl": [
+   "Idursulfaza to enzymatyczna terapia zastępcza w mukopolisacharydozie typu II (zespół Huntera), chorobie dotykającej niemal wyłącznie chłopców, w której gromadzą się cukry złożone w wielu narządach.",
+   "FDA zatwierdziła ją w 2006 r. (Elaprase). Poprawia m.in. dystans marszu i zmniejsza wielkość wątroby, ale nie przechodzi do mózgu, więc nie zapobiega zmianom neurologicznym w ciężkiej postaci. Podaje się ją we wlewie co tydzień; możliwe są ciężkie reakcje alergiczne."
+  ],
+  "en": [
+   "Idursulfase is an enzyme replacement therapy for mucopolysaccharidosis type II (Hunter syndrome), a disease affecting almost only boys, in which complex sugars build up in many organs.",
+   "The FDA approved it in 2006 (Elaprase). It improves walking distance and reduces liver size, among other things, but does not reach the brain, so it does not prevent neurological decline in the severe form. It is given by weekly infusion; serious allergic reactions are possible."
+  ],
+  "es": [
+   "La idursulfasa es una terapia de reemplazo enzimático para la mucopolisacaridosis tipo II (síndrome de Hunter), una enfermedad que afecta casi solo a niños varones, en la que se acumulan azúcares complejos en muchos órganos.",
+   "La FDA la aprobó en 2006 (Elaprase). Mejora, entre otras cosas, la distancia caminada y reduce el tamaño del hígado, pero no llega al cerebro, así que no evita el deterioro neurológico en la forma grave. Se administra en infusión semanal; puede haber reacciones alérgicas graves."
+  ]
+ },
+ "Galsulfaza": {
+  "pl": [
+   "Galsulfaza to enzymatyczna terapia zastępcza w mukopolisacharydozie typu VI (zespół Maroteaux-Lamy), w której brak enzymu prowadzi do zmian w kościach, sercu i drogach oddechowych.",
+   "FDA zatwierdziła ją w 2005 r. (Naglazyme). W badaniach poprawiała wytrzymałość w testach marszu i wchodzenia po schodach. Podaje się ją we wlewie co tydzień, z premedykacją przeciw reakcjom na wlew."
+  ],
+  "en": [
+   "Galsulfase is an enzyme replacement therapy for mucopolysaccharidosis type VI (Maroteaux-Lamy syndrome), in which a missing enzyme leads to changes in bones, heart and airways.",
+   "The FDA approved it in 2005 (Naglazyme). In trials it improved endurance in walking and stair-climbing tests. It is given by weekly infusion, with premedication against infusion reactions."
+  ],
+  "es": [
+   "La galsulfasa es una terapia de reemplazo enzimático para la mucopolisacaridosis tipo VI (síndrome de Maroteaux-Lamy), en la que la falta de una enzima provoca cambios en huesos, corazón y vías respiratorias.",
+   "La FDA la aprobó en 2005 (Naglazyme). En los ensayos mejoró la resistencia en pruebas de marcha y de subir escaleras. Se administra en infusión semanal, con premedicación contra las reacciones a la infusión."
+  ]
+ },
+ "Alglukozydaza alfa": {
+  "pl": [
+   "Alglukozydaza alfa to enzymatyczna terapia zastępcza w chorobie Pompego, w której brak enzymu rozkładającego glikogen niszczy mięśnie szkieletowe i serce. W najcięższej, niemowlęcej postaci dzieci bez leczenia zwykle umierały przed pierwszymi urodzinami.",
+   "Zatwierdzona w 2006 r. (Myozyme), a w USA także jako Lumizyme (2010), znacznie wydłużyła przeżycie niemowląt. Część chorych wytwarza przeciw niej przeciwciała, które osłabiają działanie. Dziś są też nowsze enzymy, np. awalglukozydaza alfa."
+  ],
+  "en": [
+   "Alglucosidase alfa is an enzyme replacement therapy for Pompe disease, in which a missing glycogen-clearing enzyme destroys skeletal muscle and the heart. In the most severe infantile form, untreated children usually died before their first birthday.",
+   "Approved in 2006 (Myozyme), and in the US also as Lumizyme (2010), it greatly extended infant survival. Some patients develop antibodies against it that weaken its effect. Newer enzymes, such as avalglucosidase alfa, now exist too."
+  ],
+  "es": [
+   "La alglucosidasa alfa es una terapia de reemplazo enzimático para la enfermedad de Pompe, en la que la falta de una enzima que elimina el glucógeno destruye el músculo esquelético y el corazón. En la forma infantil más grave, los niños sin tratamiento solían morir antes de su primer cumpleaños.",
+   "Aprobada en 2006 (Myozyme), y en EE. UU. también como Lumizyme (2010), alargó mucho la supervivencia de los lactantes. Algunos pacientes desarrollan anticuerpos contra ella que reducen su efecto. Hoy también hay enzimas más nuevas, como la avalglucosidasa alfa."
+  ]
+ },
+ "Agalzydaza beta": {
+  "pl": [
+   "Agalzydaza beta to rekombinowana alfa-galaktozydaza A, enzym, którego brakuje w chorobie Fabry'ego. Bez niego tłuszcze gromadzą się w naczyniach i uszkadzają nerki, serce i nerwy.",
+   "FDA zatwierdziła ją w 2003 r. (Fabrazyme). Leczenie zmniejsza złogi w naczyniach nerek i może spowalniać uszkodzenie narządów, zwłaszcza gdy zacznie się wcześnie. Podaje się ją we wlewie co dwa tygodnie przez całe życie; częste są reakcje na wlew i powstawanie przeciwciał."
+  ],
+  "en": [
+   "Agalsidase beta is recombinant alpha-galactosidase A, the enzyme missing in Fabry disease. Without it, fats build up in blood vessels and damage the kidneys, heart and nerves.",
+   "The FDA approved it in 2003 (Fabrazyme). Treatment reduces deposits in kidney vessels and may slow organ damage, especially when started early. It is given by infusion every two weeks for life; infusion reactions and antibody formation are common."
+  ],
+  "es": [
+   "La agalsidasa beta es alfa-galactosidasa A recombinante, la enzima que falta en la enfermedad de Fabry. Sin ella, las grasas se acumulan en los vasos y dañan los riñones, el corazón y los nervios.",
+   "La FDA la aprobó en 2003 (Fabrazyme). El tratamiento reduce los depósitos en los vasos renales y puede frenar el daño de los órganos, sobre todo si empieza pronto. Se administra en infusión cada dos semanas de por vida; son frecuentes las reacciones a la infusión y la formación de anticuerpos."
+  ]
+ },
+ "Imigluceraza": {
+  "pl": [
+   "Imigluceraza to rekombinowana glukocerebrozydaza, enzym, którego niedobór powoduje chorobę Gauchera: tłuszcz gromadzi się w makrofagach, powiększając śledzionę i wątrobę i niszcząc kości.",
+   "FDA zatwierdziła ją w 1994 r. (Cerezyme), po wcześniejszej wersji pozyskiwanej z łożysk (1991). Była jednym z pierwszych sukcesów enzymatycznej terapii zastępczej: zmniejsza śledzionę i wątrobę i poprawia morfologię. Podaje się ją we wlewie co dwa tygodnie."
+  ],
+  "en": [
+   "Imiglucerase is recombinant glucocerebrosidase, the enzyme whose deficiency causes Gaucher disease: fat builds up in macrophages, enlarging the spleen and liver and damaging bone.",
+   "The FDA approved it in 1994 (Cerezyme), after an earlier version extracted from placentas (1991). It was one of the first successes of enzyme replacement therapy: it shrinks the spleen and liver and improves blood counts. It is given by infusion every two weeks."
+  ],
+  "es": [
+   "La imiglucerasa es glucocerebrosidasa recombinante, la enzima cuyo déficit causa la enfermedad de Gaucher: la grasa se acumula en los macrófagos, agranda el bazo y el hígado y daña el hueso.",
+   "La FDA la aprobó en 1994 (Cerezyme), tras una versión anterior obtenida de placentas (1991). Fue uno de los primeros éxitos de la terapia de reemplazo enzimático: reduce el bazo y el hígado y mejora el hemograma. Se administra en infusión cada dos semanas."
+  ]
+ },
+ "Taligluceraza alfa": {
+  "pl": [
+   "Taligluceraza alfa to enzym do leczenia choroby Gauchera typu 1, wytwarzany w hodowli komórek marchwi. W 2012 r. (Elelyso) była pierwszym lekiem z komórek roślinnych zatwierdzonym przez FDA.",
+   "Działa jak inne enzymy w chorobie Gauchera: zmniejsza śledzionę i wątrobę oraz poprawia morfologię. Podaje się ją we wlewie co dwa tygodnie; możliwe są reakcje alergiczne. W UE nie uzyskała rejestracji."
+  ],
+  "en": [
+   "Taliglucerase alfa is an enzyme for type 1 Gaucher disease made in cultured carrot cells. In 2012 (Elelyso) it became the first plant-cell-made medicine approved by the FDA.",
+   "It works like other Gaucher enzymes: it shrinks the spleen and liver and improves blood counts. It is given by infusion every two weeks; allergic reactions are possible. It was not authorised in the EU."
+  ],
+  "es": [
+   "La taliglucerasa alfa es una enzima para la enfermedad de Gaucher tipo 1 fabricada en cultivos de células de zanahoria. En 2012 (Elelyso) fue el primer medicamento producido en células vegetales aprobado por la FDA.",
+   "Actúa como otras enzimas de la enfermedad de Gaucher: reduce el bazo y el hígado y mejora el hemograma. Se administra en infusión cada dos semanas; puede haber reacciones alérgicas. No obtuvo autorización en la UE."
+  ]
+ },
+ "Welagluceraza alfa": {
+  "pl": [
+   "Welagluceraza alfa to enzym do leczenia choroby Gauchera typu 1, wytwarzany w ludzkich liniach komórkowych, przez co ma budowę identyczną z naturalnym enzymem.",
+   "FDA zatwierdziła ją w 2010 r. (Vpriv), w czasie gdy problemy produkcyjne ograniczały dostępność imiglucerazy. Działa podobnie jak inne enzymy w tej chorobie i jest podawana we wlewie co dwa tygodnie."
+  ],
+  "en": [
+   "Velaglucerase alfa is an enzyme for type 1 Gaucher disease made in human cell lines, so its structure is identical to the natural enzyme.",
+   "The FDA approved it in 2010 (Vpriv), at a time when manufacturing problems limited the supply of imiglucerase. It works like the other enzymes for this disease and is given by infusion every two weeks."
+  ],
+  "es": [
+   "La velaglucerasa alfa es una enzima para la enfermedad de Gaucher tipo 1 fabricada en líneas celulares humanas, por lo que su estructura es idéntica a la de la enzima natural.",
+   "La FDA la aprobó en 2010 (Vpriv), cuando problemas de fabricación limitaban el suministro de imiglucerasa. Actúa como las demás enzimas de esta enfermedad y se administra en infusión cada dos semanas."
+  ]
+ },
+ "Westronidaza alfa": {
+  "pl": [
+   "Westronidaza alfa to rekombinowana beta-glukuronidaza, enzym brakujący w mukopolisacharydozie typu VII (zespół Sly), jednej z najrzadszych chorób tej grupy.",
+   "FDA zatwierdziła ją w 2017 r. (Mepsevii). Badanie rejestracyjne objęło bardzo niewielu chorych, co jest typowe w chorobach ultrarzadkich. Podaje się ją we wlewie co dwa tygodnie; ulotka ostrzega przed anafilaksją."
+  ],
+  "en": [
+   "Vestronidase alfa is recombinant beta-glucuronidase, the enzyme missing in mucopolysaccharidosis type VII (Sly syndrome), one of the rarest diseases of this group.",
+   "The FDA approved it in 2017 (Mepsevii). The approval trial included very few patients, as is typical for ultra-rare diseases. It is given by infusion every two weeks; the label warns about anaphylaxis."
+  ],
+  "es": [
+   "La vestronidasa alfa es beta-glucuronidasa recombinante, la enzima que falta en la mucopolisacaridosis tipo VII (síndrome de Sly), una de las enfermedades más raras de este grupo.",
+   "La FDA la aprobó en 2017 (Mepsevii). El ensayo de aprobación incluyó muy pocos pacientes, algo típico en enfermedades ultrarraras. Se administra en infusión cada dos semanas; la ficha advierte de anafilaxia."
+  ]
+ },
+ "Vilon": {
+  "pl": [
+   "Vilon (Lys-Glu) to dwuaminokwasowy peptyd z grupy „bioregulatorów Chawinsona”, opracowanych w Rosji. Opisywany jest jako regulator odporności i odczytu genów w grasicy.",
+   "Dane pochodzą niemal wyłącznie od jednego rosyjskiego ośrodka, często z badań komórkowych i zwierzęcych. Przyjmowany doustnie dwuaminokwasowy peptyd jest trawiony jak białko z pożywienia. Nie jest lekiem w UE ani w USA; bezpieczeństwo u ludzi nie jest ustalone."
+  ],
+  "en": [
+   "Vilon (Lys-Glu) is a two-amino-acid peptide from the group of 'Khavinson bioregulators' developed in Russia. It is described as a regulator of immunity and gene reading in the thymus.",
+   "The data come almost entirely from one Russian centre, often from cell and animal studies. Taken by mouth, a two-amino-acid peptide is digested like food protein. It is not a medicine in the EU or US; human safety is not established."
+  ],
+  "es": [
+   "El Vilon (Lys-Glu) es un péptido de dos aminoácidos del grupo de los «biorreguladores de Jávinson» desarrollados en Rusia. Se describe como regulador de la inmunidad y de la lectura de genes en el timo.",
+   "Los datos proceden casi solo de un centro ruso, a menudo de estudios celulares y animales. Tomado por boca, un péptido de dos aminoácidos se digiere como la proteína de los alimentos. No es un medicamento en la UE ni en EE. UU.; la seguridad en humanos no está establecida."
+  ]
+ },
+ "Livagen": {
+  "pl": [
+   "Livagen (Lys-Glu-Asp-Ala) to tetrapeptyd z tej samej rosyjskiej grupy co Vilon, opisywany jako jego następca. Według autorów rozluźnia upakowanie chromatyny w limfocytach starszych osób.",
+   "Opisy działania pochodzą z prac tego samego zespołu, bez niezależnego potwierdzenia ani badań klinicznych spełniających dzisiejsze standardy. Nie jest zatwierdzony jako lek; sprzedawany jest jako suplement lub „peptyd badawczy”."
+  ],
+  "en": [
+   "Livagen (Lys-Glu-Asp-Ala) is a tetrapeptide from the same Russian group as Vilon, described as its successor. According to its authors it loosens chromatin packing in the lymphocytes of older people.",
+   "Descriptions of its action come from the same team's work, without independent confirmation or clinical trials that meet today's standards. It is not approved as a medicine; it is sold as a supplement or 'research peptide'."
+  ],
+  "es": [
+   "El Livagen (Lys-Glu-Asp-Ala) es un tetrapéptido del mismo grupo ruso que el Vilon, descrito como su sucesor. Según sus autores, afloja el empaquetado de la cromatina en los linfocitos de personas mayores.",
+   "Las descripciones de su acción proceden del mismo equipo, sin confirmación independiente ni ensayos clínicos que cumplan los estándares actuales. No está aprobado como medicamento; se vende como suplemento o «péptido de investigación»."
+  ]
+ },
+ "Tymogen": {
+  "pl": [
+   "Tymogen (Glu-Trp) to dipeptyd odpowiadający najmniejszemu aktywnemu fragmentowi tymozyny alfa-1. Jest zarejestrowany jako lek w Rosji i kilku sąsiednich krajach, m.in. w postaci aerozolu do nosa.",
+   "Stosuje się go tam wspomagająco w zakażeniach i niedoborach odporności. Badania są głównie rosyjskie, rzadko z losowaniem i grupą kontrolną. Poza tymi krajami nie jest lekiem, a jego skuteczność nie została niezależnie potwierdzona."
+  ],
+  "en": [
+   "Thymogen (Glu-Trp) is a dipeptide matching the smallest active fragment of thymosin alpha-1. It is registered as a medicine in Russia and a few neighbouring countries, including as a nasal spray.",
+   "It is used there as support in infections and immune deficiencies. The studies are mainly Russian and rarely randomised or controlled. Outside these countries it is not a medicine, and its efficacy has not been independently confirmed."
+  ],
+  "es": [
+   "El Timogen (Glu-Trp) es un dipéptido que corresponde al fragmento activo más pequeño de la timosina alfa-1. Está registrado como medicamento en Rusia y algunos países vecinos, también en aerosol nasal.",
+   "Allí se usa como apoyo en infecciones e inmunodeficiencias. Los estudios son sobre todo rusos y rara vez aleatorizados o controlados. Fuera de esos países no es un medicamento y su eficacia no se ha confirmado de forma independiente."
+  ]
+ },
+ "Imunofan": {
+  "pl": [
+   "Imunofan to siedmioaminokwasowy peptyd wzorowany na fragmencie tymopoetyny, hormonu grasicy, zarejestrowany jako lek w Rosji.",
+   "Opisywany jest jako regulator odpowiedzi odpornościowej i równowagi oksydacyjnej, stosowany wspomagająco w zakażeniach, onkologii i po operacjach. Mechanizm i skuteczność nie zostały potwierdzone w niezależnych badaniach; poza Rosją i kilkoma krajami nie jest lekiem."
+  ],
+  "en": [
+   "Imunofan is a seven-amino-acid peptide modelled on a fragment of thymopoietin, a thymus hormone, registered as a medicine in Russia.",
+   "It is described as a regulator of immune response and oxidative balance and is used as support in infections, oncology and after surgery. Its mechanism and efficacy have not been confirmed in independent studies; outside Russia and a few countries it is not a medicine."
+  ],
+  "es": [
+   "El Imunofan es un péptido de siete aminoácidos basado en un fragmento de la timopoyetina, una hormona del timo, registrado como medicamento en Rusia.",
+   "Se describe como regulador de la respuesta inmunitaria y del equilibrio oxidativo, y se usa como apoyo en infecciones, oncología y tras cirugía. Su mecanismo y su eficacia no se han confirmado en estudios independientes; fuera de Rusia y algunos países no es un medicamento."
+  ]
+ },
+ "Korteksyna": {
+  "pl": [
+   "Korteksyna to mieszanina peptydów uzyskiwana z kory mózgowej bydła i świń, zarejestrowana jako lek w Rosji, m.in. w udarze, encefalopatii i u dzieci z opóźnieniem rozwoju.",
+   "Skład wyciągu nie jest w pełni określony, a badania są głównie rosyjskie. Preparaty z mózgów zwierząt niosą też osobne ryzyko zakażeń, w tym chorób prionowych, przez co podobne wyciągi wycofano w UE. Poza Rosją nie jest lekiem."
+  ],
+  "en": [
+   "Cortexin is a mixture of peptides obtained from the brain cortex of cattle and pigs, registered as a medicine in Russia for stroke, encephalopathy and children with developmental delay, among others.",
+   "The extract's composition is not fully defined, and the studies are mainly Russian. Animal brain preparations also carry a separate infection risk, including prion disease, which is why similar extracts were withdrawn in the EU. Outside Russia it is not a medicine."
+  ],
+  "es": [
+   "La cortexina es una mezcla de péptidos obtenida de la corteza cerebral de vaca y cerdo, registrada como medicamento en Rusia, entre otros, para el ictus, la encefalopatía y niños con retraso del desarrollo.",
+   "La composición del extracto no está del todo definida y los estudios son sobre todo rusos. Los preparados de cerebro animal conllevan además un riesgo propio de infección, incluidas enfermedades priónicas, por eso extractos similares se retiraron en la UE. Fuera de Rusia no es un medicamento."
+  ]
+ },
+ "Noopept": {
+  "pl": [
+   "Noopept (omberacetam, GVS-111) to cząsteczka opracowana w Rosji w latach 90., zbudowana na szkielecie dipeptydu prolina-glicyna. Formalnie to pochodna peptydowa, a nie naturalny peptyd; uważa się, że częściowo przekształca się w metabolit podobny do cykloprolilglicyny.",
+   "W Rosji jest lekiem w łagodnych zaburzeniach poznawczych. W UE nie jest dopuszczony ani jako lek, ani jako składnik suplementów, choć bywa tak sprzedawany; w USA FDA wysyłała ostrzeżenia sprzedawcom. Opisywane działania niepożądane to drażliwość, bóle głowy i zaburzenia snu."
+  ],
+  "en": [
+   "Noopept (omberacetam, GVS-111) is a molecule developed in Russia in the 1990s, built on a proline-glycine dipeptide backbone. Formally it is a peptide derivative rather than a natural peptide; it is thought to be partly converted into a metabolite similar to cycloprolylglycine.",
+   "In Russia it is a medicine for mild cognitive impairment. In the EU it is authorised neither as a medicine nor as a supplement ingredient, although it is sold as one; in the US the FDA has sent warnings to sellers. Reported side effects include irritability, headaches and sleep disturbance."
+  ],
+  "es": [
+   "El Noopept (omberacetam, GVS-111) es una molécula desarrollada en Rusia en los años 90, construida sobre un esqueleto de dipéptido prolina-glicina. Formalmente es un derivado peptídico y no un péptido natural; se cree que se transforma en parte en un metabolito parecido a la cicloprolilglicina.",
+   "En Rusia es un medicamento para el deterioro cognitivo leve. En la UE no está autorizado ni como medicamento ni como ingrediente de suplementos, aunque se vende como tal; en EE. UU. la FDA ha enviado advertencias a vendedores. Los efectos adversos descritos incluyen irritabilidad, dolor de cabeza y alteraciones del sueño."
+  ]
+ },
+ "N-acetylo-selank": {
+  "pl": [
+   "N-acetylo-selank to selank z dołączoną grupą acetylową, która ma spowalniać rozkład cząsteczki. Sprzedawany jest w internecie jako substancja „do badań”, najczęściej w aerozolu do nosa.",
+   "Sam selank ma tylko rosyjskie badania, a dla formy acetylowanej nie ma żadnych opublikowanych badań u ludzi. Zmiana chemiczna zmienia zachowanie cząsteczki, więc danych o selanku nie można na nią przenosić. Bezpieczeństwo nie jest ustalone."
+  ],
+  "en": [
+   "N-Acetyl Selank is Selank with an attached acetyl group meant to slow the molecule's breakdown. It is sold online as a 'research' chemical, most often as a nasal spray.",
+   "Selank itself has only Russian studies, and for the acetylated form there are no published human studies at all. A chemical change alters how a molecule behaves, so data on Selank cannot be carried over. Safety is not established."
+  ],
+  "es": [
+   "El N-acetil selank es selank con un grupo acetilo unido para frenar la degradación de la molécula. Se vende en internet como sustancia «para investigación», casi siempre en aerosol nasal.",
+   "El propio selank solo tiene estudios rusos y de la forma acetilada no hay ningún estudio publicado en humanos. Un cambio químico altera el comportamiento de la molécula, así que los datos del selank no valen para ella. La seguridad no está establecida."
+  ]
+ },
+ "Glypromate": {
+  "pl": [
+   "Glypromate (GPE, Gly-Pro-Glu) to tripeptyd odcinany naturalnie z początku IGF-1. Nie działa na receptor IGF-1, więc nie pobudza wzrostu, ale w badaniach zwierzęcych chronił neurony.",
+   "Nowozelandzka firma Neuren badała go dożylnie w ochronie mózgu przy operacjach serca; badanie fazy 2 nie wykazało przewagi nad placebo i program zamknięto. Jego zmodyfikowana wersja, trofinetyd, została później zatwierdzona w zespole Retta."
+  ],
+  "en": [
+   "Glypromate (GPE, Gly-Pro-Glu) is a tripeptide naturally cut from the start of IGF-1. It does not act on the IGF-1 receptor, so it does not drive growth, but in animal studies it protected neurons.",
+   "The New Zealand company Neuren studied it intravenously for brain protection during heart surgery; the phase 2 trial showed no advantage over placebo and the programme was closed. Its modified version, trofinetide, was later approved for Rett syndrome."
+  ],
+  "es": [
+   "El Glypromate (GPE, Gly-Pro-Glu) es un tripéptido que se separa de forma natural del comienzo del IGF-1. No actúa sobre el receptor de IGF-1, así que no impulsa el crecimiento, pero en estudios con animales protegió las neuronas.",
+   "La empresa neozelandesa Neuren lo estudió por vía intravenosa para proteger el cerebro durante la cirugía cardíaca; el ensayo de fase 2 no mostró ventaja sobre el placebo y el programa se cerró. Su versión modificada, la trofinetida, se aprobó después para el síndrome de Rett."
+  ]
+ },
+ "FGL": {
+  "pl": [
+   "FGL to syntetyczny peptyd odtwarzający fragment cząsteczki adhezyjnej NCAM, przez który łączy się ona z receptorem czynnika wzrostu fibroblastów (FGFR1). Opracował go zespół z Uniwersytetu Kopenhaskiego.",
+   "U zwierząt sprzyjał tworzeniu połączeń między neuronami i poprawiał pamięć. Przeszedł jedynie wczesne badania u ludzi, bez danych o skuteczności, i nie jest zatwierdzony. Bezpieczeństwo przy dłuższym stosowaniu nie jest znane."
+  ],
+  "en": [
+   "FGL is a synthetic peptide that reproduces the part of the neural cell adhesion molecule NCAM through which it binds the fibroblast growth factor receptor (FGFR1). It was developed by a team at the University of Copenhagen.",
+   "In animals it encouraged connections between neurons and improved memory. It has only gone through early human testing, with no efficacy data, and is not approved. Safety with longer use is unknown."
+  ],
+  "es": [
+   "El FGL es un péptido sintético que reproduce la parte de la molécula de adhesión neural NCAM con la que se une al receptor del factor de crecimiento de fibroblastos (FGFR1). Lo desarrolló un equipo de la Universidad de Copenhague.",
+   "En animales favoreció las conexiones entre neuronas y mejoró la memoria. Solo ha pasado pruebas iniciales en humanos, sin datos de eficacia, y no está aprobado. Se desconoce su seguridad con un uso prolongado."
+  ]
+ },
+ "Rigin": {
+  "pl": [
+   "Rigin to palmitoilotetrapeptyd-7: tetrapeptyd z dołączonym kwasem palmitynowym, który ułatwia mu przenikanie przez tłuszczową warstwę skóry. Wprowadziła go firma Sederma jako składnik kremów, często razem z palmitoilotripeptydem-1 (Matrixyl 3000).",
+   "Producenci opisują zmniejszenie wydzielania interleukiny-6 w skórze, co ma ograniczać stan zapalny towarzyszący starzeniu. Dowody to głównie badania producentów; kosmetyk musi udowodnić bezpieczeństwo, a nie skuteczność."
+  ],
+  "en": [
+   "Rigin is palmitoyl tetrapeptide-7: a tetrapeptide with palmitic acid attached that helps it pass through the skin's fatty layer. Sederma introduced it as a cream ingredient, often alongside palmitoyl tripeptide-1 (Matrixyl 3000).",
+   "Manufacturers describe reduced interleukin-6 release in the skin, meant to limit the inflammation that comes with ageing. The evidence is mainly manufacturer studies; a cosmetic must prove safety, not effectiveness."
+  ],
+  "es": [
+   "El Rigin es palmitoil tetrapéptido-7: un tetrapéptido con ácido palmítico unido que le ayuda a atravesar la capa grasa de la piel. Sederma lo introdujo como ingrediente de cremas, a menudo junto al palmitoil tripéptido-1 (Matrixyl 3000).",
+   "Los fabricantes describen menos liberación de interleucina-6 en la piel, lo que debería limitar la inflamación que acompaña al envejecimiento. La evidencia es sobre todo de estudios del fabricante; un cosmético debe demostrar seguridad, no eficacia."
+  ]
+ },
+ "GHK": {
+  "pl": [
+   "GHK (tripeptyd-1) to ten sam tripeptyd glicyna-histydyna-lizyna co w GHK-Cu, ale bez przyłączonego jonu miedzi. W skórze może wiązać miedź, która już tam jest.",
+   "Większość badań dotyczy formy z miedzią, a część działania przypisywanego GHK-Cu zależy właśnie od tego jonu, więc forma bez miedzi może działać słabiej. Nie należy mylić etykiet: „Tripeptide-1” to inny składnik niż „Copper Tripeptide-1”. To składnik kosmetyków działający miejscowo."
+  ],
+  "en": [
+   "GHK (tripeptide-1) is the same glycine-histidine-lysine tripeptide as in GHK-Cu, but without the attached copper ion. In the skin it can bind copper that is already there.",
+   "Most studies concern the copper form, and part of the activity credited to GHK-Cu depends on that ion, so the copper-free form may do less. Labels should not be confused: 'Tripeptide-1' is a different ingredient from 'Copper Tripeptide-1'. It is a cosmetic ingredient that acts locally."
+  ],
+  "es": [
+   "El GHK (tripéptido-1) es el mismo tripéptido glicina-histidina-lisina que en el GHK-Cu, pero sin el ion de cobre. En la piel puede unirse al cobre que ya hay allí.",
+   "La mayoría de los estudios tratan la forma con cobre, y parte de la actividad atribuida al GHK-Cu depende de ese ion, así que la forma sin cobre puede hacer menos. No hay que confundir las etiquetas: «Tripeptide-1» es un ingrediente distinto de «Copper Tripeptide-1». Es un ingrediente cosmético de acción local."
+  ]
+ },
+ "Tabimorelina": {
+  "pl": [
+   "Tabimorelina (NN703) firmy Novo Nordisk była jedną z pierwszych substancji naśladujących grelinę, które działały po połknięciu i podnosiły hormon wzrostu.",
+   "Badano ją u osób starszych i w niedoborze hormonu wzrostu, ale rozwój przerwano, gdy okazało się, że hamuje enzym CYP3A4, którym organizm rozkłada bardzo wiele leków, i wpływa na enzymy wątrobowe. To przykład, że o losie leku decydują też interakcje, a nie tylko główne działanie."
+  ],
+  "en": [
+   "Tabimorelin (NN703) from Novo Nordisk was one of the first ghrelin-mimicking substances that worked when swallowed and raised growth hormone.",
+   "It was studied in older people and in growth hormone deficiency, but development stopped when it turned out to inhibit CYP3A4, the enzyme the body uses to break down a great many drugs, and to affect liver enzymes. It is an example of interactions, not just the main effect, deciding a drug's fate."
+  ],
+  "es": [
+   "La tabimorelina (NN703) de Novo Nordisk fue una de las primeras sustancias miméticas de la grelina que funcionaban tragadas y elevaban la hormona del crecimiento.",
+   "Se estudió en personas mayores y en el déficit de hormona del crecimiento, pero su desarrollo se detuvo al comprobarse que inhibía la CYP3A4, la enzima con la que el cuerpo degrada muchísimos fármacos, y que afectaba a las enzimas hepáticas. Es un ejemplo de que las interacciones, y no solo el efecto principal, deciden el destino de un fármaco."
+  ]
+ },
+ "Teprotyd": {
+  "pl": [
+   "Teprotyd (SQ 20881) to 9-aminokwasowy peptyd wyizolowany z jadu brazylijskiej żararaki (Bothrops jararaca) przez zespół Sérgio Ferreiry. Hamował enzym konwertujący angiotensynę (ACE) i obniżał ciśnienie.",
+   "U ludzi działał tylko dożylnie, więc nie nadawał się do codziennego leczenia. Na jego podstawie naukowcy z firmy Squibb zaprojektowali kaptopryl, pierwszy doustny inhibitor ACE (1981), od którego wywodzi się klasa leków przyjmowanych dziś przez miliony ludzi."
+  ],
+  "en": [
+   "Teprotide (SQ 20881) is a 9-amino-acid peptide isolated from the venom of the Brazilian pit viper (Bothrops jararaca) by Sérgio Ferreira's team. It inhibited angiotensin-converting enzyme (ACE) and lowered blood pressure.",
+   "In humans it worked only intravenously, so it was unsuitable for daily treatment. Based on it, Squibb scientists designed captopril, the first oral ACE inhibitor (1981), the start of a drug class millions of people take today."
+  ],
+  "es": [
+   "La teprotida (SQ 20881) es un péptido de 9 aminoácidos aislado del veneno de la víbora brasileña jararaca (Bothrops jararaca) por el equipo de Sérgio Ferreira. Inhibía la enzima convertidora de angiotensina (ECA) y bajaba la presión.",
+   "En humanos solo funcionaba por vía intravenosa, así que no servía para un tratamiento diario. A partir de ella, científicos de Squibb diseñaron el captopril, el primer IECA oral (1981), origen de una clase de fármacos que hoy toman millones de personas."
+  ]
+ },
+ "Epifadyna": {
+  "pl": [
+   "Epifadyna to substancja wytwarzana przez bakterię Staphylococcus epidermidis żyjącą w ludzkim nosie, opisana w 2023 r. przez zespół z Uniwersytetu w Tybindze. Łączy peptyd wytwarzany poza rybosomami, część poliketydową i zmodyfikowany aminokwas.",
+   "Zabija gronkowca złocistego w najbliższym otoczeniu, ale jest bardzo nietrwała i aktywna tylko przez kilka godzin. To odkrycie naukowe, a nie produkt: nie jest nigdzie dostępna i nie ma zastosowania poza laboratorium."
+  ],
+  "en": [
+   "Epifadin is a substance made by the bacterium Staphylococcus epidermidis living in the human nose, described in 2023 by a team at the University of Tübingen. It combines a peptide made outside ribosomes, a polyketide part and a modified amino acid.",
+   "It kills Staphylococcus aureus in its immediate surroundings, but it is very unstable and active for only a few hours. It is a scientific discovery, not a product: it is not available anywhere and has no use outside the lab."
+  ],
+  "es": [
+   "La epifadina es una sustancia producida por la bacteria Staphylococcus epidermidis que vive en la nariz humana, descrita en 2023 por un equipo de la Universidad de Tubinga. Combina un péptido sintetizado fuera de los ribosomas, una parte policétida y un aminoácido modificado.",
+   "Mata al Staphylococcus aureus en su entorno inmediato, pero es muy inestable y solo está activa unas horas. Es un descubrimiento científico, no un producto: no está disponible en ningún sitio y no tiene uso fuera del laboratorio."
+  ]
+ },
+ "Sekwencja G-L-O-W": {
+  "pl": [
+   "Nazwa GLOW ma dwa zupełnie różne znaczenia: gotowa mieszanka trzech peptydów (GHK-Cu, BPC-157, TB-500) i czteroaminokwasowa sekwencja Gly-Leu-Orn-Trp. Sprzedawcy używają ich zamiennie.",
+   "Dla samej sekwencji Gly-Leu-Orn-Trp nie opisano w literaturze żadnego mechanizmu. Ornityna nie należy do dwudziestu aminokwasów budujących białka, więc taki peptyd nie występuje naturalnie w organizmie. Kupujący może dostać substancję bez żadnych badań, myśląc, że to znana mieszanka."
+  ],
+  "en": [
+   "The name GLOW has two completely different meanings: a ready-made blend of three peptides (GHK-Cu, BPC-157, TB-500) and the four-amino-acid sequence Gly-Leu-Orn-Trp. Sellers use them interchangeably.",
+   "No mechanism has been described in the literature for the Gly-Leu-Orn-Trp sequence itself. Ornithine is not one of the twenty protein-building amino acids, so such a peptide does not occur naturally in the body. A buyer may receive a substance with no studies at all while thinking it is the known blend."
+  ],
+  "es": [
+   "El nombre GLOW tiene dos significados totalmente distintos: una mezcla preparada de tres péptidos (GHK-Cu, BPC-157, TB-500) y la secuencia de cuatro aminoácidos Gly-Leu-Orn-Trp. Los vendedores los usan indistintamente.",
+   "La literatura no describe ningún mecanismo para la secuencia Gly-Leu-Orn-Trp en sí. La ornitina no es uno de los veinte aminoácidos que forman proteínas, así que ese péptido no existe de forma natural en el cuerpo. Quien compra puede recibir una sustancia sin ningún estudio creyendo que es la mezcla conocida."
+  ]
+ },
+ "Nazwy bez potwierdzenia": {
+  "pl": [
+   "To zbiorczy wpis dla nazw, które krążą na listach „ponad 200 peptydów”, ale których nie udało się potwierdzić w żadnym wiarygodnym źródle: ani w rejestrach leków, ani w rejestrach badań klinicznych, ani w literaturze naukowej.",
+   "Naukowo brzmiąca nazwa nie oznacza, że substancja istnieje. Na rynku „chemikaliów do badań” nazwy bywają wymyślane na potrzeby sprzedaży, a produkt pod taką nazwą może zawierać cokolwiek. Ten wpis jest po to, by osoba, która trafi na taką nazwę, dostała jasną odpowiedź zamiast ciszy."
+  ],
+  "en": [
+   "This is a combined entry for names that circulate on 'over 200 peptides' lists but could not be confirmed in any reliable source: not in drug registers, not in clinical trial registries and not in the scientific literature.",
+   "A scientific-sounding name does not mean the substance exists. In the 'research chemicals' market names are sometimes invented for selling, and a product under such a name may contain anything. This entry exists so that anyone who runs into such a name gets a clear answer instead of silence."
+  ],
+  "es": [
+   "Es una ficha conjunta para nombres que circulan en listas de «más de 200 péptidos» pero que no se pudieron confirmar en ninguna fuente fiable: ni en registros de medicamentos, ni en registros de ensayos clínicos, ni en la literatura científica.",
+   "Un nombre con aire científico no significa que la sustancia exista. En el mercado de «sustancias para investigación» a veces se inventan nombres para vender, y un producto con ese nombre puede contener cualquier cosa. Esta ficha existe para que quien se tope con uno de esos nombres reciba una respuesta clara en lugar de silencio."
+  ]
+ },
+ "Peptydy owsiane": {
+  "pl": [
+   "Peptydy owsiane to nie jedna substancja, lecz mieszanina fragmentów białek owsa rozłożonych enzymami lub kwasem. Skład zależy od producenta i partii, więc dwa produkty z tą samą nazwą mogą zawierać co innego.",
+   "Kojące działanie owsa jest dobrze udokumentowane dla koloidalnej mąki owsianej jako całości, słabiej dla samych peptydów. Osoby z celiakią lub alergią na zboża powinny uważać na takie składniki na podrażnionej skórze."
+  ],
+  "en": [
+   "Oat peptides are not one substance but a mixture of oat protein fragments broken down with enzymes or acid. The composition depends on the maker and batch, so two products with the same name may contain different things.",
+   "The soothing effect of oats is well documented for colloidal oatmeal as a whole, less so for the peptides alone. People with coeliac disease or cereal allergy should be careful with such ingredients on irritated skin."
+  ],
+  "es": [
+   "Los péptidos de avena no son una sola sustancia sino una mezcla de fragmentos de proteína de avena obtenidos con enzimas o ácido. La composición depende del fabricante y del lote, así que dos productos con el mismo nombre pueden contener cosas distintas.",
+   "El efecto calmante de la avena está bien documentado para la avena coloidal en conjunto, menos para los péptidos solos. Las personas con celiaquía o alergia a los cereales deben tener cuidado con estos ingredientes sobre piel irritada."
+  ]
+ },
+ "Peptydy jedwabiu": {
+  "pl": [
+   "Peptydy jedwabiu to fragmenty fibroiny lub serycyny, dwóch białek nici jedwabnej, rozłożone na krótsze łańcuchy. Są składnikiem kosmetyków i odżywek do włosów.",
+   "Działają na powierzchni: wygładzają łuskę włosa i tworzą na skórze film zatrzymujący wodę, czemu sprzyja duża zawartość glicyny i alaniny. Efekt jest kosmetyczny i zmywa się; hydrolizat nie dociera do żywych warstw skóry ani włosa."
+  ],
+  "en": [
+   "Silk peptides are fragments of fibroin or sericin, the two proteins of silk thread, broken into shorter chains. They are an ingredient in cosmetics and hair conditioners.",
+   "They work on the surface: they smooth the hair cuticle and form a water-holding film on the skin, helped by their high glycine and alanine content. The effect is cosmetic and washes off; a hydrolysate does not reach the living layers of skin or hair."
+  ],
+  "es": [
+   "Los péptidos de seda son fragmentos de fibroína o sericina, las dos proteínas del hilo de seda, partidos en cadenas más cortas. Son un ingrediente de cosméticos y acondicionadores.",
+   "Actúan en la superficie: alisan la cutícula del pelo y forman en la piel una película que retiene agua, gracias a su alto contenido en glicina y alanina. El efecto es cosmético y se va con el lavado; un hidrolizado no llega a las capas vivas de la piel ni del pelo."
+  ]
+ },
+ "Mekasermina rinfabat": {
+  "pl": [
+   "Mekasermina rinfabat (Iplex) firmy Insmed to IGF-1 połączony z naturalnym białkiem nośnikowym IGFBP-3. Kompleks uwalnia IGF-1 stopniowo, naśladując naturalne krążenie, co miało zmniejszać ryzyko hipoglikemii.",
+   "FDA zatwierdziła go w 2005 r. w ciężkim pierwotnym niedoborze IGF-1, ale w 2007 r. producent wycofał go z tego wskazania po sporze patentowym z producentem mekaserminy, a nie z powodu bezpieczeństwa. Później był dostępny jedynie w ograniczonych programach, m.in. w badaniach w stwardnieniu zanikowym bocznym."
+  ],
+  "en": [
+   "Mecasermin rinfabate (Iplex) from Insmed is IGF-1 joined to its natural carrier protein IGFBP-3. The complex releases IGF-1 gradually, mimicking natural circulation, which was meant to lower the risk of hypoglycaemia.",
+   "The FDA approved it in 2005 for severe primary IGF-1 deficiency, but in 2007 the maker withdrew it from that use after a patent dispute with the maker of mecasermin, not for safety reasons. Afterwards it was available only in limited programmes, including studies in amyotrophic lateral sclerosis."
+  ],
+  "es": [
+   "La mecasermina rinfabato (Iplex) de Insmed es IGF-1 unido a su proteína transportadora natural IGFBP-3. El complejo libera IGF-1 poco a poco, imitando la circulación natural, lo que debía reducir el riesgo de hipoglucemia.",
+   "La FDA la aprobó en 2005 para el déficit primario grave de IGF-1, pero en 2007 el fabricante la retiró de ese uso tras un litigio de patentes con el fabricante de la mecasermina, no por seguridad. Después solo estuvo disponible en programas limitados, entre ellos estudios en la esclerosis lateral amiotrófica."
+  ]
+ },
+ "GLOW": {
+  "pl": [
+   "GLOW to liofilizowana mieszanka trzech substancji w jednej fiolce, złożona przez sprzedawców: zwykle 50 mg GHK-Cu oraz po 10 mg BPC-157 i TB-500. Liczba w nazwie (70) to po prostu suma tych miligramów, a nie moc, jakość ani wersja.",
+   "Nie ma żadnego badania klinicznego tej mieszanki. Dane o GHK-Cu dotyczą głównie stosowania na skórę i nie mówią nic o bezpieczeństwie wstrzykiwania. Przy trzech niebadanych składnikach nie da się ustalić, który wywołał ewentualną reakcję; BPC-157 i TB-500 są zakazane przez WADA."
+  ],
+  "en": [
+   "GLOW is a freeze-dried blend of three substances in one vial, put together by sellers: usually 50 mg GHK-Cu plus 10 mg each of BPC-157 and TB-500. The number in the name (70) is simply the sum of those milligrams, not strength, quality or a version.",
+   "There is not a single clinical trial of this blend. Data on GHK-Cu concern mainly use on the skin and say nothing about the safety of injecting it. With three unstudied ingredients there is no way to tell which one caused a reaction; BPC-157 and TB-500 are prohibited by WADA."
+  ],
+  "es": [
+   "GLOW es una mezcla liofilizada de tres sustancias en un vial, montada por los vendedores: normalmente 50 mg de GHK-Cu y 10 mg de BPC-157 y de TB-500. El número del nombre (70) es solo la suma de esos miligramos, no potencia, calidad ni versión.",
+   "No hay ni un solo ensayo clínico de esta mezcla. Los datos del GHK-Cu se refieren sobre todo al uso sobre la piel y no dicen nada de la seguridad de inyectarlo. Con tres ingredientes no estudiados no se puede saber cuál causó una reacción; el BPC-157 y el TB-500 están prohibidos por la AMA."
+  ]
+ },
+ "KLOW": {
+  "pl": [
+   "KLOW to mieszanka GLOW rozszerzona o czwarty składnik, KPV: sprzedawcy podają 50 mg GHK-Cu oraz po 10 mg BPC-157, TB-500 i KPV, razem 80 mg, stąd nazwa „KLOW 80”. Proporcje różnią się między firmami i nikt ich niezależnie nie sprawdza.",
+   "Ani mieszanka, ani żaden jej składnik nie jest zatwierdzonym lekiem, a dane o składnikach pochodzą głównie z badań komórkowych i zwierzęcych. Dodanie KPV nie znaczy, że KLOW działa lepiej niż GLOW; nikt tego nie porównywał. Każdy dodatkowy składnik to kolejna niewiadoma."
+  ],
+  "en": [
+   "KLOW is the GLOW blend extended with a fourth ingredient, KPV: sellers list 50 mg GHK-Cu plus 10 mg each of BPC-157, TB-500 and KPV, 80 mg in total, hence 'KLOW 80'. Ratios vary between companies and nobody checks them independently.",
+   "Neither the blend nor any of its ingredients is an approved medicine, and data on the ingredients come mainly from cell and animal studies. Adding KPV does not mean KLOW works better than GLOW; nobody has compared them. Each extra ingredient is another unknown."
+  ],
+  "es": [
+   "KLOW es la mezcla GLOW ampliada con un cuarto ingrediente, el KPV: los vendedores indican 50 mg de GHK-Cu y 10 mg de BPC-157, TB-500 y KPV, 80 mg en total, de ahí «KLOW 80». Las proporciones varían entre empresas y nadie las comprueba de forma independiente.",
+   "Ni la mezcla ni ninguno de sus ingredientes es un medicamento aprobado, y los datos de los ingredientes proceden sobre todo de estudios celulares y animales. Añadir KPV no significa que KLOW funcione mejor que GLOW; nadie los ha comparado. Cada ingrediente extra es otra incógnita."
+  ]
+ },
+ "Rusfertyd": {
+  "pl": [
+   "Rusfertyd to syntetyczny peptyd naśladujący hepcydynę, hormon kontrolujący żelazo. Wiąże ferroportynę i ogranicza uwalnianie żelaza, więc szpik ma mniej żelaza do produkcji czerwonych krwinek. Opracowała go firma Protagonist Therapeutics, a rozwijał Takeda.",
+   "W badaniu fazy 3 VERIFY (293 chorych z czerwienicą prawdziwą) 76,9% leczonych nie potrzebowało upustów krwi w tygodniach 20–32, wobec 32,9% przy placebo. FDA zatwierdziła go w sierpniu 2026 r. jako pierwszy lek w tej klasie. Najczęstsze działania niepożądane to reakcje w miejscu wstrzyknięcia, niedokrwistość i zmęczenie."
+  ],
+  "en": [
+   "Rusfertide is a synthetic peptide that mimics hepcidin, the hormone that controls iron. It binds ferroportin and limits iron release, so the bone marrow has less iron to make red blood cells. It was developed by Protagonist Therapeutics and taken forward by Takeda.",
+   "In the phase 3 VERIFY trial (293 patients with polycythaemia vera), 76.9% of treated patients needed no blood-letting in weeks 20–32, versus 32.9% on placebo. The FDA approved it in August 2026 as the first medicine in its class. The most common side effects are injection-site reactions, anaemia and fatigue."
+  ],
+  "es": [
+   "La rusfertida es un péptido sintético que imita la hepcidina, la hormona que controla el hierro. Se une a la ferroportina y limita la liberación de hierro, así que la médula tiene menos hierro para fabricar glóbulos rojos. La desarrolló Protagonist Therapeutics y la impulsó Takeda.",
+   "En el ensayo de fase 3 VERIFY (293 pacientes con policitemia vera), el 76,9% de los tratados no necesitó flebotomías en las semanas 20–32, frente al 32,9% con placebo. La FDA la aprobó en agosto de 2026 como el primer medicamento de su clase. Los efectos adversos más frecuentes son reacciones en el lugar de inyección, anemia y cansancio."
+  ]
+ },
+ "Eloralintyd": {
+  "pl": [
+   "Eloralintyd to eksperymentalny agonista receptora amyliny firmy Eli Lilly, podawany raz w tygodniu. Amylina działa na sytość innym szlakiem niż GLP-1, dlatego badana jest sama i w połączeniu z innymi lekami.",
+   "W badaniu fazy 2 (The Lancet, 2025) przy najwyższej dawce uczestnicy stracili w 48 tygodni średnio do 20,1% masy ciała, wobec około 0,4% przy placebo. W 2025 r. lek wszedł do fazy 3. Nie jest zatwierdzony; produkty z internetu pod tą nazwą nie są lekiem producenta."
+  ],
+  "en": [
+   "Eloralintide is an experimental once-weekly amylin receptor agonist from Eli Lilly. Amylin acts on fullness through a different pathway from GLP-1, so it is studied alone and combined with other drugs.",
+   "In a phase 2 trial (The Lancet, 2025), participants on the highest dose lost on average up to 20.1% of body weight over 48 weeks, versus about 0.4% on placebo. It entered phase 3 in 2025. It is not approved; products sold online under this name are not the maker's medicine."
+  ],
+  "es": [
+   "La eloralintida es un agonista experimental del receptor de amilina de Eli Lilly, de uso semanal. La amilina actúa sobre la saciedad por una vía distinta al GLP-1, por eso se estudia sola y combinada con otros fármacos.",
+   "En un ensayo de fase 2 (The Lancet, 2025), los participantes con la dosis más alta perdieron de media hasta el 20,1% del peso en 48 semanas, frente a alrededor del 0,4% con placebo. Pasó a fase 3 en 2025. No está aprobada; los productos vendidos en internet con este nombre no son el medicamento del fabricante."
+  ]
+ },
+ "Petrelintyd": {
+  "pl": [
+   "Petrelintyd to długo działający analog amyliny opracowany przez Zealand Pharma i rozwijany z Roche, podawany raz w tygodniu. Ma być alternatywą dla leków GLP-1, z możliwie łagodniejszymi dolegliwościami żołądkowo-jelitowymi.",
+   "W badaniu fazy 2 ZUPREME-1 (493 osoby, wyniki w marcu 2026 r.) uczestnicy stracili w 42 tygodnie średnio do 10,7% masy ciała, wobec 1,7% przy placebo; zapowiedziano fazę 3. Najczęstsze działania niepożądane to nudności i zmęczenie. Lek nie jest zatwierdzony."
+  ],
+  "en": [
+   "Petrelintide is a long-acting amylin analogue developed by Zealand Pharma and taken forward with Roche, given once weekly. It is meant as an alternative to GLP-1 drugs, ideally with milder gut side effects.",
+   "In the phase 2 ZUPREME-1 trial (493 people, results in March 2026), participants lost on average up to 10.7% of body weight over 42 weeks, versus 1.7% on placebo; phase 3 has been announced. The most common side effects were nausea and fatigue. It is not approved."
+  ],
+  "es": [
+   "La petrelintida es un análogo de la amilina de acción prolongada desarrollado por Zealand Pharma e impulsado con Roche, de uso semanal. Se plantea como alternativa a los fármacos GLP-1, a ser posible con molestias digestivas más leves.",
+   "En el ensayo de fase 2 ZUPREME-1 (493 personas, resultados en marzo de 2026), los participantes perdieron de media hasta el 10,7% del peso en 42 semanas, frente al 1,7% con placebo; se ha anunciado la fase 3. Los efectos adversos más frecuentes fueron náuseas y cansancio. No está aprobada."
+  ]
  }
 }
