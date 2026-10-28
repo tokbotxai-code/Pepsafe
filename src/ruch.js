@@ -479,27 +479,28 @@
       var b = form.querySelector('[type="submit"]');
       if (b && b.dataset.busy) { b.disabled = true; b.textContent = b.dataset.busy; }
     }
-    // The form service answers from another server. If it hangs or refuses, the reader must not be stuck on a dead page:
-    // we send in the background (12 s limit) and, on failure, keep the typed text and offer a ready e-mail instead.
-    var TO = (form_to()), FAIL = pl
-      ? 'Nie udało się wysłać wiadomości przez formularz (serwer formularza nie odpowiada). Twój tekst został na stronie. Możesz go wysłać zwykłym e-mailem:'
-      : es('The form could not be sent (the form server did not answer). Your text is still on the page. You can send it as a normal email:', 'No se pudo enviar el formulario (el servidor no respondió). Tu texto sigue en la página. Puedes enviarlo como un correo normal:');
-    function form_to() { var a = document.querySelector('a[href^="mailto:"]'); return a ? a.getAttribute('href').replace(/^mailto:/, '').split('?')[0] : 'contact@pepsafe.info'; }
-    function deliver(form, out, text) {
-      var next = form.querySelector('input[name="_next"]'), b = form.querySelector('[type="submit"]'), idle = b ? b.textContent : '';
-      var ctl = window.AbortController ? new AbortController() : null, timer = setTimeout(function () { if (ctl) ctl.abort(); fail(); }, 12000), done = false;
-      function fail() {
-        if (done) return; done = true; clearTimeout(timer);
-        if (b) { b.disabled = false; b.textContent = b.dataset.idle || idle; }
-        out.hidden = false; out.classList.add('bad'); out.textContent = FAIL + ' ';
-        var a = document.createElement('a'); a.href = 'mailto:' + TO + '?subject=' + encodeURIComponent('PepSafe') + '&body=' + encodeURIComponent(text);
-        a.textContent = TO; out.appendChild(a);
-      }
-      fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form), signal: ctl ? ctl.signal : undefined })
-        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return r.ok && j && String(j.success) !== 'false'; }); })
-        .then(function (ok) { if (done) return; if (!ok) return fail(); done = true; clearTimeout(timer); location.href = next ? next.value : '/'; })
-        .catch(fail);
+    // Contact and symptom forms no longer depend on an outside form service (it stopped answering for our address).
+    // The text typed in the form opens the reader's own mail app, addressed to us; a copy button covers computers without one.
+    var TO = (function () { var a = document.querySelector('a[href^="mailto:"]'); return a ? a.getAttribute('href').replace(/^mailto:/, '').split('?')[0] : 'contact@pepsafe.info'; })();
+    var OPEN = pl ? 'Otwieram Twój program pocztowy z gotową wiadomością. Wyślij ją tam jednym kliknięciem. Jeśli nic się nie otworzyło, skopiuj tekst i wyślij go na adres '
+      : es('Opening your email app with the message ready. Send it there with one click. If nothing opened, copy the text and send it to ', 'Abriendo tu aplicación de correo con el mensaje listo. Envíalo allí con un clic. Si no se abrió nada, copia el texto y envíalo a ');
+    var COPY = pl ? 'Skopiuj wiadomość' : es('Copy the message', 'Copiar el mensaje'), COPIED = pl ? 'Skopiowano' : es('Copied', 'Copiado');
+    function compose(form, out, subject, text) {
+      var b = form.querySelector('[type="submit"]');
+      if (b) { b.disabled = false; if (b.dataset.idle) b.textContent = b.dataset.idle; }
+      var full = TO + '\n' + subject + '\n\n' + text;
+      out.hidden = false; out.classList.remove('bad'); out.textContent = OPEN;
+      var a = document.createElement('a'); a.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text); a.textContent = TO; out.appendChild(a);
+      var c = document.createElement('button'); c.type = 'button'; c.className = 'btn ghost'; c.style.marginLeft = '10px'; c.textContent = COPY;
+      c.addEventListener('click', function () {
+        var done = function () { c.textContent = COPIED; };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(full).then(done, function () { fallbackCopy(full); done(); });
+        else { fallbackCopy(full); done(); }
+      });
+      out.appendChild(c);
+      location.href = a.href;
     }
+    function fallbackCopy(t) { var x = document.createElement('textarea'); x.value = t; x.style.position = 'fixed'; x.style.opacity = '0'; document.body.appendChild(x); x.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(x); }
 
     if (co) {
       var out = document.getElementById('coMsgOut');
@@ -509,8 +510,9 @@
         var okMail = /^\S+@\S+\.\S+$/.test(m);
         flag(co.coName, !n); flag(co.coEmail, !okMail); flag(co.coMsg, msg.length < 10);
         if (!n || !okMail || msg.length < 10 || !cons) { e.preventDefault(); say(out, MSG.co); return; }
-        e.preventDefault(); out.hidden = true; var bb = co.querySelector('[type="submit"]'); if (bb) bb.dataset.idle = bb.textContent; busy(co);
-        deliver(co, out, n + ' <' + m + '>\n\n' + msg);
+        e.preventDefault();
+        var tp = co.querySelector('select[name="topic"]');
+        compose(co, out, 'PepSafe: ' + (tp ? tp.value : ''), (pl ? 'Imię: ' : 'Name: ') + n + '\n' + (pl ? 'E-mail: ' : 'Email: ') + m + '\n\n' + msg);
       });
     }
 
@@ -525,8 +527,9 @@
         var sym = ef.efSym.value.trim(), cons = document.getElementById('efCons').checked;
         flag(ef.efSym, !sym);
         if (!sym || !cons) { e.preventDefault(); say(eout, MSG.ef); return; }
-        e.preventDefault(); eout.hidden = true; var bf = ef.querySelector('[type="submit"]'); if (bf) bf.dataset.idle = bf.textContent; busy(ef);
-        deliver(ef, eout, ef.efSym.value.trim());
+        e.preventDefault();
+        var su = document.getElementById('efSub');
+        compose(ef, eout, 'PepSafe: ' + (pl ? 'zgłoszenie objawu' : 'symptom report') + (su && su.value ? ' (' + su.value + ')' : ''), (su && su.value ? su.value + '\n\n' : '') + ef.efSym.value.trim());
       });
     }
   })();
