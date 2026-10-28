@@ -477,6 +477,17 @@ function home(L) {
 
 <section class="field" style="padding-top:0">
   <div class="wrap">
+    <p class="kick reveal">${en ? 'Who this is for' : 'Dla kogo to jest'}</p>
+    <div class="grid-cards">
+      <a class="card tile reveal piece" href="${BASE}${L}/groups.html"><span><em class="kick">GLP-1</em><b>${en ? 'You take or are thinking about a GLP-1 medicine' : 'Bierzesz lek GLP-1 albo o nim myślisz'}</b><em>${en ? 'See which names are the same drug and which should never be mixed' : 'Zobacz, które nazwy to ten sam lek i których nie wolno łączyć'}</em></span>${ARROW}</a>
+      <a class="card tile reveal piece" href="${BASE}${L}/steroids.html"><span><em class="kick">${en ? 'Sport' : 'Sport'}</em><b>${en ? 'You hear about steroids or peptides in the gym' : 'Słyszysz o sterydach lub peptydach na siłowni'}</b><em>${en ? 'Plain facts on what they do, the risks and the law' : 'Fakty prostym językiem: co robią, jakie ryzyko i co mówi prawo'}</em></span>${ARROW}</a>
+      <a class="card tile reveal piece" href="${BASE}${L}/symptoms.html"><span><em class="kick">${en ? 'Safety' : 'Bezpieczeństwo'}</em><b>${en ? 'You want to check a symptom or a warning' : 'Chcesz sprawdzić objaw albo ostrzeżenie'}</b><em>${en ? 'Search side effects and see what regulators have warned about' : 'Wyszukaj skutki uboczne i ostrzeżenia organów nadzoru'}</em></span>${ARROW}</a>
+    </div>
+  </div>
+</section>
+
+<section class="field" style="padding-top:0">
+  <div class="wrap">
     <a class="reveal" href="${BASE}${L}/guides.html" style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border:2px solid #3CCFA9;border-radius:14px;padding:16px 20px;text-decoration:none;color:inherit">
       <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Na lekach GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £5.99 · Protein &amp; Muscle £9.99 · sources on every page' : 'Bezpieczeństwo £5.99 · Białko i mięśnie £9.99 · źródła na każdej stronie'}</span></span>
       <span class="btn">${en ? 'See inside' : 'Zobacz podgląd'}${ARROW}</span>
