@@ -196,10 +196,10 @@
   /* ── compare ───────────────────────────────────────── */
   var cq = document.getElementById('cmpQ');
   if (cq && window.PEP) {
-    var picked = [], dl = document.getElementById('cmpList'),
+    var picked = [], sug = document.getElementById('cmpSug'),
         cout = document.getElementById('cmpOut'), cempty = document.getElementById('cmpEmpty'),
         cwarn = document.getElementById('cmpWarn');
-    dl.innerHTML = allRows().map(function (r) { return '<option value="' + r.n + '">'; }).join('');
+    var cfold = function (s) { return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ł/g, 'l'); };
     var drawCmp = function () {
       cout.innerHTML = picked.map(function (r) {
         return '<article class="tile glass cmpcard"><p class="kick">' + r.st + '</p><h2 class="gtitle sm">' + r.n + '</h2>' +
@@ -216,11 +216,44 @@
           (html.lang === 'pl' ? 'Działają na ten sam cel, więc łączenie powtarza mechanizm, zamiast dodawać drugi.' : es('They act on the same target, so stacking repeats a mechanism instead of adding one.', 'Actúan sobre la misma diana, así que combinarlas repite un mecanismo en lugar de añadir otro.')) + '</span></div>'
         : '';
     };
-    cq.addEventListener('change', function () {
-      var r = allRows().filter(function (x) { return x.n.toLowerCase() === cq.value.trim().toLowerCase(); })[0];
+    var addRow = function (r) {
       if (r && picked.indexOf(r) < 0) { picked.push(r); if (picked.length > 6) picked.shift(); }
-      cq.value = ''; drawCmp();
+      cq.value = ''; sug.hidden = true; sug.innerHTML = ''; drawCmp();
+    };
+    var matches = function () {
+      var n = cfold(cq.value.trim()); if (!n) return [];
+      var sq = n.replace(/[^a-z0-9]/g, ''), pre = [], mid = [];
+      allRows().forEach(function (r) {
+        var nn = cfold(r.n);
+        if (nn.indexOf(n) === 0) pre.push(r);
+        else if (nn.indexOf(n) > -1 || (sq.length > 1 && nn.replace(/[^a-z0-9]/g, '').indexOf(sq) > -1)) mid.push(r);
+      });
+      var by = function (a, b) { return a.n.localeCompare(b.n); };
+      return pre.sort(by).concat(mid.sort(by));
+    };
+    var showSug = function () {
+      var m = matches().slice(0, 30);
+      sug.innerHTML = '';
+      m.forEach(function (r) {
+        var li = document.createElement('li'), b = document.createElement('button');
+        b.type = 'button'; b.className = 'cmpopt';
+        b.innerHTML = '<b></b><span class="fcat"></span>'; b.firstChild.textContent = r.n; b.lastChild.textContent = r.c || '';
+        b.addEventListener('mousedown', function (e) { e.preventDefault(); });
+        b.addEventListener('click', function () { addRow(r); });
+        li.appendChild(b); sug.appendChild(li);
+      });
+      sug.hidden = !m.length;
+    };
+    cq.addEventListener('input', showSug);
+    cq.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); var m = matches(); if (m.length) addRow(m[0]); }
+      else if (e.key === 'Escape') { sug.hidden = true; }
     });
+    cq.addEventListener('change', function () {   // exact name typed or pasted
+      var r = allRows().filter(function (x) { return x.n.toLowerCase() === cq.value.trim().toLowerCase(); })[0];
+      if (r) addRow(r);
+    });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.filters')) sug.hidden = true; });
     var cc = document.getElementById('cmpClear');
     if (cc) cc.addEventListener('click', function () { picked = []; drawCmp(); });
     drawCmp();

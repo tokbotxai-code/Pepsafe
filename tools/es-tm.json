@@ -4062,5 +4062,7 @@
  "Messages from the contact form are passed to our inbox by the form service Web3Forms. Our email list is hosted by MailerLite (UAB MailerLite, Lithuania, EU), which stores your email address and consent date and sends our emails on our behalf. Purchases on Ko-fi are handled by Ko-fi and PayPal/Stripe under their own privacy policies; we receive only what they share with sellers.": "Los mensajes del formulario de contacto llegan a nuestra bandeja a través del servicio de formularios Web3Forms. Nuestra lista de correo la aloja MailerLite (UAB MailerLite, Lituania, UE), que guarda tu correo y la fecha de consentimiento y envía nuestros mensajes en nuestro nombre. Las compras en Ko-fi las gestionan Ko-fi y PayPal/Stripe según sus propias políticas de privacidad; solo recibimos lo que comparten con los vendedores.",
  "What we do not know": "Lo que no sabemos",
  "Common effects": "Efectos frecuentes",
- "Serious: get medical help": "Graves: busca atención médica"
+ "Serious: get medical help": "Graves: busca atención médica",
+ "Pick up to six substances and read their status, group, evidence and warnings in one view. If two share a group, the page says so.": "Elige hasta seis sustancias y consulta su estatus, grupo, evidencia y advertencias en una sola vista. Si dos comparten grupo, la página lo indica.",
+ "Put up to six substances, peptides or steroids, side by side: status, group, evidence and warnings.": "Pon hasta seis sustancias, péptidos o esteroides, una junto a otra: estado, grupo, evidencia y advertencias."
 }

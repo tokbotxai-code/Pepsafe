@@ -1275,14 +1275,14 @@ function compare(L) {
   <div class="wrap">
     <p class="kick reveal">${esc(t.compareNav)}</p>
     <h1 class="display reveal">${en ? 'Side by side, same questions.' : 'Obok siebie, te same pytania.'}</h1>
-    <p class="lede reveal">${en ? 'Pick up to three substances and read their status, group, evidence and warnings in one view. If two share a group, the page says so.' : 'Wybierz do trzech substancji i przeczytaj ich status, grupę, dowody i ostrzeżenia w jednym widoku. Jeśli dwie należą do tej samej grupy, strona to powie.'}</p>
+    <p class="lede reveal">${en ? 'Pick up to six substances and read their status, group, evidence and warnings in one view. If two share a group, the page says so.' : 'Wybierz do sześciu substancji i przeczytaj ich status, grupę, dowody i ostrzeżenia w jednym widoku. Jeśli dwie należą do tej samej grupy, strona to powie.'}</p>
   </div>
 </section>
 <section><div class="wrap">
   <div class="filters reveal">
     <label class="search"><span class="sr">${esc(t.pick)}</span>
-      <input id="cmpQ" type="search" placeholder="${esc(t.pick)}" autocomplete="off" list="cmpList"></label>
-    <datalist id="cmpList"></datalist>
+      <input id="cmpQ" type="search" placeholder="${esc(t.pick)}" autocomplete="off" autocorrect="off" spellcheck="false"></label>
+    <ul class="findlist cmpsug" id="cmpSug" hidden></ul>
     <div class="chips"><button class="chip" id="cmpClear">${esc(t.clear)}</button></div>
   </div>
   <div id="cmpWarn"></div>
@@ -1292,7 +1292,7 @@ function compare(L) {
   return layout({
     lang: L, here: 'compare.html', twin: 'compare.html', body,
     title: (en ? 'Compare substances' : 'Porównaj substancje') + ' | PepSafe',
-    desc: en ? 'Put up to three substances, peptides or steroids, side by side: status, group, evidence and warnings.' : 'Zestaw do trzech substancji, peptydów lub sterydów, obok siebie: status, grupa, dowody i ostrzeżenia.'
+    desc: en ? 'Put up to six substances, peptides or steroids, side by side: status, group, evidence and warnings.' : 'Zestaw do sześciu substancji, peptydów lub sterydów, obok siebie: status, grupa, dowody i ostrzeżenia.'
   });
 }
 
