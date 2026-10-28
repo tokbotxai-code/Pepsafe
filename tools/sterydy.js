@@ -115,6 +115,7 @@ const UI = {
   pros: ['Advantages', 'Zalety', 'Ventajas'],
   cons: ['Disadvantages', 'Wady', 'Desventajas'],
   srcs: ['Sources and further reading', 'Źródła i dalsza lektura', 'Fuentes y lecturas adicionales'],
+  molCap: ['Chemical structure (PubChem)', 'Struktura chemiczna (PubChem)', 'Estructura química (PubChem)'],
   srcNote: ['These links open searches, not endorsements: a search result is not evidence on its own. We give no doses and no way to buy.', 'Te odnośniki otwierają wyszukiwania, a nie rekomendacje: wynik wyszukiwania sam w sobie nie jest dowodem. Nie podajemy dawek ani sposobu zakupu.', 'Estos enlaces abren búsquedas, no recomendaciones: un resultado de búsqueda no es una prueba por sí solo. No damos dosis ni formas de comprar.'],
   pubmed: ['PubMed: scientific publications', 'PubMed: publikacje naukowe', 'PubMed: publicaciones científicas'],
   daily: ['DailyMed: drug label', 'DailyMed: etykieta leku', 'DailyMed: etiqueta del medicamento'],
@@ -205,7 +206,9 @@ module.exports = function build(ctx) {
       <h1 class="display reveal">${esc(name)}</h1>
       ${e.alt ? `<p class="sub reveal">${esc(altOf(L, e))}</p>` : ''}
       <p class="pills reveal"><span class="pill neutral">${esc(clsName)}</span><span class="pill">${esc(formLab(L, e))}</span></p>
-    </div></div>
+    </div>
+    ${fs.existsSync(path.join(root, 'mol', e.id + '.png')) ? `<aside class="mol reveal"><img src="/mol/${e.id}.png" width="240" height="240" loading="lazy" alt="${esc(S(L, l => (l === 'en' ? 'Chemical structure of ' : l === 'pl' ? 'Struktura chemiczna: ' : 'Estructura química de ') + nmL(e, l)))}"><p class="small muted">${esc(u(L, 'molCap'))}</p></aside>` : ''}
+    </div>
     <section class="blk note reveal"><p>${esc(u(L, 'note'))}</p></section>
     ${sec('what', lead)}${sec('how', e.how && tx(L, e.how))}${sec('med', e.med && tx(L, e.med))}${sec('risk', e.risk && tx(L, e.risk))}${sec('mixH', tx(L, e.mix || CLSMIX[e.cls]))}
     ${sec('legal', status)}${sec('wadaH', wada)}

@@ -534,3 +534,8 @@ details.qa p { margin: 8px 0 0; }
 .nm ul a:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); }
 .nm ul a[aria-current] { font-weight: 700; }
 .nm ul a[aria-current]::after { display: none; }
+
+/* steroid cards: chemical structure picture */
+.mol { margin: 0; text-align: center; }
+.mol img { max-width: 240px; width: 100%; height: auto; border-radius: 14px; background: #f4f4f2; border: 1px solid var(--line); }
+.mol p { margin: 6px 0 0; }

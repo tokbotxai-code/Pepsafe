@@ -1,0 +1,378 @@
+[
+ {
+  "id": "trestolone",
+  "n": "Trestolone",
+  "nm": {
+   "pl": "Trestolon",
+   "es": "Trestolona"
+  },
+  "alt": {
+   "en": "MENT, an investigational androgen",
+   "pl": "MENT, eksperymentalny androgen",
+   "es": "MENT, un andrógeno en investigación"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "trestolone",
+  "what": {
+   "en": "Trestolone, also called MENT, is a very potent synthetic androgen made from nandrolone. It was developed as a possible male contraceptive and for androgen replacement, and it has never been approved.",
+   "pl": "Trestolon, zwany też MENT, to bardzo silny syntetyczny androgen zbudowany na bazie nandrolonu. Opracowano go jako możliwy męski środek antykoncepcyjny i do terapii zastępczej androgenami, i nigdy nie został zatwierdzony.",
+   "es": "La trestolona, también llamada MENT, es un andrógeno sintético muy potente derivado de la nandrolona. Se desarrolló como posible anticonceptivo masculino y para el reemplazo de andrógenos, y nunca fue aprobada."
+  },
+  "how": {
+   "en": "It binds the androgen receptor strongly and, unlike many steroids, is converted into oestrogen in the body. By switching off the brain’s signals to the testes it lowers sperm production, which is why it was studied for contraception.",
+   "pl": "Silnie wiąże się z receptorem androgenowym i, w odróżnieniu od wielu steroidów, zamienia się w organizmie w estrogen. Wyłączając sygnały z mózgu do jąder, obniża produkcję plemników, dlatego badano go w antykoncepcji.",
+   "es": "Se une con fuerza al receptor de andrógenos y, a diferencia de muchos esteroides, se convierte en estrógeno en el cuerpo. Al apagar las señales del cerebro a los testículos reduce la producción de espermatozoides, por eso se estudió como anticonceptivo."
+  },
+  "med": {
+   "en": "Research by the Population Council tested it in small studies of men. It has no approved use, so the evidence is limited to those early trials.",
+   "pl": "Badania Population Council testowały go w małych badaniach u mężczyzn. Nie ma zatwierdzonego zastosowania, więc dowody ograniczają się do tych wczesnych badań.",
+   "es": "La investigación del Population Council lo probó en estudios pequeños en hombres. No tiene ningún uso aprobado, así que la evidencia se limita a esos ensayos tempranos."
+  },
+  "risk": {
+   "en": "Because it acts on both androgen and oestrogen pathways, it can cause acne, fluid retention, breast tissue growth and a fall in natural testosterone and sperm count. Long-term safety in people is not established.",
+   "pl": "Ponieważ działa zarówno na szlaki androgenowe, jak i estrogenowe, może powodować trądzik, zatrzymywanie wody, rozrost tkanki piersi oraz spadek naturalnego testosteronu i liczby plemników. Bezpieczeństwo długoterminowe u ludzi nie jest ustalone.",
+   "es": "Como actúa tanto sobre las vías androgénicas como estrogénicas, puede causar acné, retención de líquidos, crecimiento del tejido mamario y descenso de la testosterona natural y del recuento de espermatozoides. No se ha establecido su seguridad a largo plazo en personas."
+  },
+  "pros": {
+   "en": [
+    "Studied as a possible male contraceptive",
+    "Very potent androgen in early trials",
+    "Documented in published research"
+   ],
+   "pl": [
+    "Badany jako możliwy męski środek antykoncepcyjny",
+    "Bardzo silny androgen we wczesnych badaniach",
+    "Opisany w opublikowanych badaniach"
+   ],
+   "es": [
+    "Estudiada como posible anticonceptivo masculino",
+    "Andrógeno muy potente en ensayos tempranos",
+    "Documentada en investigación publicada"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Never approved and only small early studies",
+    "Also converts to oestrogen, adding side effects",
+    "Products sold online are unregulated"
+   ],
+   "pl": [
+    "Nigdy niezatwierdzony i tylko małe wczesne badania",
+    "Zamienia się też w estrogen, co dokłada skutków ubocznych",
+    "Produkty sprzedawane w internecie nie są regulowane"
+   ],
+   "es": [
+    "Nunca aprobada y solo estudios pequeños y tempranos",
+    "También se convierte en estrógeno, lo que suma efectos secundarios",
+    "Los productos vendidos en línea no están regulados"
+   ]
+  },
+  "status": {
+   "en": "Not approved as a medicine. It is treated as an anabolic steroid under the same controls as other steroids in the UK (Class C) and the US (Schedule III).",
+   "pl": "Niezatwierdzony jako lek. Traktowany jako steroid anaboliczny, objęty tą samą kontrolą co inne steroidy w Wielkiej Brytanii (klasa C) i USA (lista III).",
+   "es": "No aprobada como medicamento. Se trata como esteroide anabólico con los mismos controles que otros esteroides en el Reino Unido (clase C) y en EE. UU. (lista III)."
+  },
+  "label": false
+ },
+ {
+  "id": "clostebol",
+  "n": "Clostebol",
+  "nm": {
+   "pl": "Klostebol",
+   "es": "Clostebol"
+  },
+  "alt": {
+   "en": "Topical anabolic steroid, 4-chlorotestosterone",
+   "pl": "Miejscowy steroid anaboliczny, 4-chlorotestosteron",
+   "es": "Esteroide anabólico tópico, 4-clorotestosterona"
+  },
+  "cls": "oral",
+  "form": "top",
+  "q": "clostebol",
+  "what": {
+   "en": "Clostebol is an anabolic steroid made by adding a chlorine atom to testosterone. It is the parent of the better-known oral steroid known as Turinabol, and in a few countries it is sold as a skin cream or spray for wound healing.",
+   "pl": "Klostebol to steroid anaboliczny powstały przez dodanie atomu chloru do testosteronu. To związek macierzysty lepiej znanego doustnego steroidu Turinabol, a w kilku krajach sprzedaje się go jako krem lub spray na skórę wspomagający gojenie ran.",
+   "es": "El clostebol es un esteroide anabólico que se obtiene añadiendo un átomo de cloro a la testosterona. Es el compuesto de origen del esteroide oral más conocido como Turinabol y en algunos países se vende como crema o espray cutáneo para favorecer la cicatrización."
+  },
+  "how": {
+   "en": "It acts on the androgen receptor and promotes tissue repair. Chlorination stops it turning into oestrogen.",
+   "pl": "Działa na receptor androgenowy i sprzyja naprawie tkanek. Chlorowanie zapobiega zamianie w estrogen.",
+   "es": "Actúa sobre el receptor de andrógenos y favorece la reparación de los tejidos. La cloración evita que se convierta en estrógeno."
+  },
+  "med": {
+   "en": "Topical products are registered in a few countries, such as Italy, for slow-healing wounds and skin problems. It is not approved in the US or the UK.",
+   "pl": "Preparaty miejscowe są zarejestrowane w kilku krajach, na przykład we Włoszech, w trudno gojących się ranach i problemach skórnych. Nie jest zatwierdzony w USA ani w Wielkiej Brytanii.",
+   "es": "Los productos tópicos están registrados en algunos países, como Italia, para heridas de curación lenta y problemas de la piel. No está aprobado en EE. UU. ni en el Reino Unido."
+  },
+  "risk": {
+   "en": "Used on skin it carries little systemic risk, but taken in other ways it behaves like other anabolic steroids and can suppress natural testosterone. Athletes have tested positive after skin contact with a topical product, even without meaning to take a steroid.",
+   "pl": "Stosowany na skórę niesie niewielkie ryzyko ogólnoustrojowe, ale przyjmowany inaczej zachowuje się jak inne steroidy anaboliczne i może hamować naturalny testosteron. Sportowcy dawali wynik pozytywny po kontakcie skóry z preparatem miejscowym, nawet bez zamiaru przyjęcia steroidu.",
+   "es": "Aplicado sobre la piel conlleva poco riesgo sistémico, pero tomado de otras formas se comporta como otros esteroides anabólicos y puede suprimir la testosterona natural. Se han producido positivos en deportistas tras el contacto de la piel con un producto tópico, incluso sin intención de tomar un esteroide."
+  },
+  "pros": {
+   "en": [
+    "Registered in some countries as a wound-healing cream",
+    "Low systemic exposure when used only on skin",
+    "Does not convert to oestrogen"
+   ],
+   "pl": [
+    "Zarejestrowany w niektórych krajach jako krem na gojenie ran",
+    "Niskie narażenie ogólnoustrojowe przy stosowaniu tylko na skórę",
+    "Nie zamienia się w estrogen"
+   ],
+   "es": [
+    "Registrado en algunos países como crema cicatrizante",
+    "Baja exposición sistémica si se usa solo sobre la piel",
+    "No se convierte en estrógeno"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Not approved in the UK or the US",
+    "Doping positives from accidental skin contact are documented",
+    "Still an anabolic steroid with the usual hormonal effects if taken another way"
+   ],
+   "pl": [
+    "Niezatwierdzony w Wielkiej Brytanii ani USA",
+    "Udokumentowano pozytywne wyniki dopingowe po przypadkowym kontakcie ze skórą",
+    "Nadal steroid anaboliczny z typowymi skutkami hormonalnymi, gdy przyjmowany inaczej"
+   ],
+   "es": [
+    "No aprobado en el Reino Unido ni en EE. UU.",
+    "Están documentados positivos de dopaje por contacto accidental con la piel",
+    "Sigue siendo un esteroide anabólico con los efectos hormonales habituales si se toma de otra forma"
+   ]
+  },
+  "status": {
+   "en": "Registered as a topical medicine in a few countries and not approved in the UK or the US. As an anabolic steroid it falls under the same controls as other steroids there.",
+   "pl": "Zarejestrowany jako lek miejscowy w kilku krajach, niezatwierdzony w Wielkiej Brytanii ani USA. Jako steroid anaboliczny podlega tam tej samej kontroli co inne steroidy.",
+   "es": "Registrado como medicamento tópico en algunos países y no aprobado en el Reino Unido ni en EE. UU. Como esteroide anabólico está sujeto allí a los mismos controles que otros esteroides."
+  }
+ },
+ {
+  "id": "androstanolone",
+  "n": "Dihydrotestosterone",
+  "nm": {
+   "pl": "Dihydrotestosteron",
+   "es": "Dihidrotestosterona"
+  },
+  "alt": {
+   "en": "DHT, the strongest natural androgen",
+   "pl": "DHT, najsilniejszy naturalny androgen",
+   "es": "DHT, el andrógeno natural más potente"
+  },
+  "cls": "pro",
+  "form": "top",
+  "q": "dihydrotestosterone androstanolone",
+  "what": {
+   "en": "Dihydrotestosterone, or DHT, is a hormone the body makes from testosterone. It binds the androgen receptor more tightly than testosterone and drives male development in the womb and at puberty.",
+   "pl": "Dihydrotestosteron, czyli DHT, to hormon wytwarzany w organizmie z testosteronu. Wiąże się z receptorem androgenowym mocniej niż testosteron i napędza rozwój męski w życiu płodowym i w okresie dojrzewania.",
+   "es": "La dihidrotestosterona, o DHT, es una hormona que el cuerpo fabrica a partir de la testosterona. Se une al receptor de andrógenos con más fuerza que la testosterona e impulsa el desarrollo masculino en el útero y en la pubertad."
+  },
+  "how": {
+   "en": "An enzyme called 5-alpha reductase converts testosterone into DHT in the skin, prostate and hair follicles. DHT cannot be turned into oestrogen.",
+   "pl": "Enzym zwany 5-alfa-reduktazą zamienia testosteron w DHT w skórze, gruczole krokowym i mieszkach włosowych. DHT nie może zamienić się w estrogen.",
+   "es": "Una enzima llamada 5-alfa reductasa convierte la testosterona en DHT en la piel, la próstata y los folículos pilosos. La DHT no puede transformarse en estrógeno."
+  },
+  "med": {
+   "en": "As a topical gel, DHT has been used in some European countries for low androgen levels in men. Most doctors use testosterone instead.",
+   "pl": "Jako żel miejscowy DHT stosowano w niektórych krajach europejskich przy niskim poziomie androgenów u mężczyzn. Większość lekarzy używa zamiast tego testosteronu.",
+   "es": "Como gel tópico, la DHT se ha usado en algunos países europeos para los niveles bajos de andrógenos en hombres. La mayoría de los médicos usan testosterona en su lugar."
+  },
+  "risk": {
+   "en": "DHT is the main driver of male-pattern hair loss and of prostate enlargement, so more of it raises those risks. Drugs that block its production, such as finasteride and dutasteride, are used for both conditions.",
+   "pl": "DHT jest głównym czynnikiem łysienia typu męskiego i rozrostu gruczołu krokowego, więc jej większa ilość zwiększa te ryzyka. Leki blokujące jej wytwarzanie, takie jak finasteryd i dutasteryd, stosuje się w obu schorzeniach.",
+   "es": "La DHT es el principal motor de la alopecia androgénica y del crecimiento de la próstata, así que más DHT aumenta esos riesgos. Los fármacos que bloquean su producción, como el finasteride y el dutasteride, se usan para ambas afecciones."
+  },
+  "pros": {
+   "en": [
+    "A natural hormone the body already makes",
+    "Cannot convert to oestrogen",
+    "Studied as a topical treatment for low androgen levels"
+   ],
+   "pl": [
+    "Naturalny hormon, który organizm już wytwarza",
+    "Nie może zamienić się w estrogen",
+    "Badany jako leczenie miejscowe niskiego poziomu androgenów"
+   ],
+   "es": [
+    "Hormona natural que el cuerpo ya fabrica",
+    "No puede convertirse en estrógeno",
+    "Estudiada como tratamiento tópico de los niveles bajos de andrógenos"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Drives hair loss and prostate growth",
+    "Not widely approved or used",
+    "Suppresses natural testosterone when added from outside"
+   ],
+   "pl": [
+    "Napędza łysienie i rozrost gruczołu krokowego",
+    "Niezatwierdzony powszechnie i rzadko stosowany",
+    "Hamuje naturalny testosteron, gdy jest dostarczany z zewnątrz"
+   ],
+   "es": [
+    "Impulsa la caída del cabello y el crecimiento de la próstata",
+    "No está ampliamente aprobada ni se usa mucho",
+    "Suprime la testosterona natural cuando se aporta desde fuera"
+   ]
+  },
+  "status": {
+   "en": "Approved as a topical gel in a few European countries and not approved in the UK or the US. It falls under the same anabolic steroid controls as other steroids.",
+   "pl": "Zatwierdzony jako żel miejscowy w kilku krajach europejskich i niezatwierdzony w Wielkiej Brytanii ani USA. Podlega tej samej kontroli co inne steroidy anaboliczne.",
+   "es": "Aprobada como gel tópico en algunos países europeos y no aprobada en el Reino Unido ni en EE. UU. Está sujeta a los mismos controles que otros esteroides anabólicos."
+  }
+ },
+ {
+  "id": "finasteride",
+  "n": "Finasteride",
+  "nm": {
+   "pl": "Finasteryd",
+   "es": "Finasterida"
+  },
+  "alt": {
+   "en": "5-alpha reductase inhibitor, for hair loss and prostate",
+   "pl": "Inhibitor 5-alfa-reduktazy stosowany w łysieniu i chorobach prostaty",
+   "es": "Inhibidor de la 5-alfa reductasa para la alopecia y la próstata"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "finasteride",
+  "what": {
+   "en": "Finasteride is a prescription tablet that blocks the enzyme turning testosterone into DHT. It is used for male-pattern hair loss and for an enlarged prostate.",
+   "pl": "Finasteryd to tabletka na receptę blokująca enzym zamieniający testosteron w DHT. Stosuje się go w łysieniu typu męskiego i przy powiększonej prostacie.",
+   "es": "La finasterida es un comprimido con receta que bloquea la enzima que convierte la testosterona en DHT. Se usa para la alopecia androgénica y para el aumento de la próstata."
+  },
+  "how": {
+   "en": "By lowering DHT in the scalp and prostate, it slows hair loss and shrinks the prostate. It does not act on the androgen receptor itself.",
+   "pl": "Obniżając DHT w skórze głowy i gruczole krokowym, spowalnia wypadanie włosów i zmniejsza prostatę. Nie działa na sam receptor androgenowy.",
+   "es": "Al reducir la DHT en el cuero cabelludo y la próstata, frena la caída del cabello y reduce la próstata. No actúa sobre el propio receptor de andrógenos."
+  },
+  "med": {
+   "en": "It is approved at one strength for benign prostate enlargement and at a lower one for male-pattern hair loss. It is not approved for women or for use in children.",
+   "pl": "Jest zatwierdzony w jednej mocy w łagodnym rozroście prostaty, a w niższej w łysieniu typu męskiego. Nie jest zatwierdzony dla kobiet ani dla dzieci.",
+   "es": "Está aprobada en una concentración para el aumento benigno de la próstata y en otra menor para la alopecia androgénica. No está aprobada para mujeres ni para niños."
+  },
+  "risk": {
+   "en": "Possible effects include lower sex drive, erection problems and breast tenderness. In 2022 the UK regulator added warnings about low mood and suicidal thoughts, and some men report sexual effects that continue after they stop. It can also lower the PSA blood test used to screen for prostate cancer.",
+   "pl": "Możliwe skutki to obniżone libido, problemy z erekcją i tkliwość piersi. W 2022 roku brytyjski organ nadzoru dodał ostrzeżenia o obniżonym nastroju i myślach samobójczych, a część mężczyzn zgłasza skutki seksualne utrzymujące się po odstawieniu. Może też obniżać wynik testu PSA, używanego do wykrywania raka prostaty.",
+   "es": "Los efectos posibles incluyen menor deseo sexual, problemas de erección y sensibilidad mamaria. En 2022 el regulador británico añadió advertencias sobre ánimo bajo y pensamientos suicidas, y algunos hombres refieren efectos sexuales que continúan tras dejarla. También puede reducir el resultado de la prueba de PSA que se usa para detectar el cáncer de próstata."
+  },
+  "pros": {
+   "en": [
+    "Proven to slow male-pattern hair loss",
+    "Approved and widely studied",
+    "Taken by mouth once a day"
+   ],
+   "pl": [
+    "Udowodnione spowalnianie łysienia typu męskiego",
+    "Zatwierdzony i szeroko zbadany",
+    "Przyjmowany doustnie raz dziennie"
+   ],
+   "es": [
+    "Eficacia demostrada para frenar la alopecia androgénica",
+    "Aprobada y muy estudiada",
+    "Se toma por vía oral una vez al día"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Sexual side effects, sometimes lasting",
+    "Low mood and suicidal-thought warnings",
+    "Hair loss returns when it is stopped"
+   ],
+   "pl": [
+    "Skutki seksualne, czasem długotrwałe",
+    "Ostrzeżenia o obniżonym nastroju i myślach samobójczych",
+    "Wypadanie włosów wraca po odstawieniu"
+   ],
+   "es": [
+    "Efectos sexuales, a veces duraderos",
+    "Advertencias por ánimo bajo y pensamientos suicidas",
+    "La caída del cabello vuelve al suspenderla"
+   ]
+  },
+  "wada": {
+   "en": "Not on the WADA list since 2009. Before that it was prohibited as a masking agent.",
+   "pl": "Nie ma go na liście WADA od 2009 roku. Wcześniej był zakazany jako środek maskujący.",
+   "es": "No figura en la lista de la AMA desde 2009. Antes estaba prohibida como agente enmascarante."
+  }
+ },
+ {
+  "id": "dutasteride",
+  "n": "Dutasteride",
+  "nm": {
+   "pl": "Dutasteryd",
+   "es": "Dutasterida"
+  },
+  "alt": {
+   "en": "Stronger 5-alpha reductase inhibitor",
+   "pl": "Silniejszy inhibitor 5-alfa-reduktazy",
+   "es": "Inhibidor más potente de la 5-alfa reductasa"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "dutasteride",
+  "what": {
+   "en": "Dutasteride is a prescription capsule that blocks two forms of the enzyme that makes DHT, so it lowers DHT further than finasteride.",
+   "pl": "Dutasteryd to kapsułka na receptę blokująca dwie postaci enzymu wytwarzającego DHT, więc obniża DHT mocniej niż finasteryd.",
+   "es": "La dutasterida es una cápsula con receta que bloquea dos formas de la enzima que fabrica la DHT, por lo que reduce la DHT más que la finasterida."
+  },
+  "how": {
+   "en": "It lowers DHT in blood and tissue by around 90%, which shrinks an enlarged prostate over time.",
+   "pl": "Obniża DHT we krwi i tkankach o ok. 90%, co z czasem zmniejsza powiększoną prostatę.",
+   "es": "Reduce la DHT en sangre y tejidos en torno a un 90 %, lo que con el tiempo reduce una próstata agrandada."
+  },
+  "med": {
+   "en": "It is approved for benign prostate enlargement in men. In some countries it is also approved for male-pattern hair loss, but not in the UK or the US.",
+   "pl": "Jest zatwierdzony w łagodnym rozroście prostaty u mężczyzn. W niektórych krajach zatwierdzono go też w łysieniu typu męskiego, ale nie w Wielkiej Brytanii ani USA.",
+   "es": "Está aprobada para el aumento benigno de la próstata en hombres. En algunos países también está aprobada para la alopecia androgénica, pero no en el Reino Unido ni en EE. UU."
+  },
+  "risk": {
+   "en": "Reported effects are lower sex drive, erection and ejaculation problems and breast tenderness, with some men noting persistent effects. It stays in the body for weeks, and women who are or may be pregnant must not handle the capsules because of the risk to a male baby.",
+   "pl": "Zgłaszane skutki to niższe libido, problemy z erekcją i wytryskiem oraz tkliwość piersi, a część mężczyzn zauważa skutki utrzymujące się dłużej. Pozostaje w organizmie przez tygodnie, a kobiety w ciąży lub mogące być w ciąży nie mogą dotykać kapsułek z powodu ryzyka dla chłopca.",
+   "es": "Los efectos descritos son menor deseo sexual, problemas de erección y de eyaculación y sensibilidad mamaria, y algunos hombres refieren efectos persistentes. Permanece semanas en el cuerpo, y las mujeres embarazadas o que puedan estarlo no deben manipular las cápsulas por el riesgo para un bebé varón."
+  },
+  "pros": {
+   "en": [
+    "Lowers DHT more than finasteride",
+    "Approved and well studied for prostate enlargement",
+    "Taken by mouth once a day"
+   ],
+   "pl": [
+    "Obniża DHT mocniej niż finasteryd",
+    "Zatwierdzony i dobrze zbadany w rozroście prostaty",
+    "Przyjmowany doustnie raz dziennie"
+   ],
+   "es": [
+    "Reduce la DHT más que la finasterida",
+    "Aprobada y bien estudiada para el aumento de la próstata",
+    "Se toma por vía oral una vez al día"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Sexual side effects, sometimes persistent",
+    "Stays in the body for weeks",
+    "Not approved for hair loss in the UK or the US"
+   ],
+   "pl": [
+    "Skutki seksualne, czasem utrzymujące się",
+    "Pozostaje w organizmie przez tygodnie",
+    "Niezatwierdzony w łysieniu w Wielkiej Brytanii ani USA"
+   ],
+   "es": [
+    "Efectos sexuales, a veces persistentes",
+    "Permanece en el cuerpo durante semanas",
+    "No aprobada para la alopecia en el Reino Unido ni en EE. UU."
+   ]
+  },
+  "wada": {
+   "en": "Not listed by WADA as prohibited on its own. Check the current list with a sports doctor.",
+   "pl": "Nie jest sam w sobie wymieniony przez WADA jako zabroniony. Sprawdź aktualną listę z lekarzem sportowym.",
+   "es": "No figura por sí sola como prohibida por la AMA. Consulta la lista vigente con un médico deportivo."
+  }
+ }
+]
