@@ -78,7 +78,7 @@
   },
   "alt": {
    "en": "Synthetic steroid for endometriosis and angioedema",
-   "pl": "Syntetyczny steroid stosowany w endometriozie i obrzęku naczynioruchowym",
+   "pl": "Syntetyczny steryd stosowany w endometriozie i obrzęku naczynioruchowym",
    "es": "Esteroide sintético para la endometriosis y el angioedema"
   },
   "cls": "oral",
@@ -86,7 +86,7 @@
   "q": "danazol",
   "what": {
    "en": "Danazol is a synthetic steroid with weak androgen activity. It is a real medicine, taken as capsules, and is not designed for muscle building.",
-   "pl": "Danazol to syntetyczny steroid o słabym działaniu androgennym. To prawdziwy lek przyjmowany w kapsułkach, nieprzeznaczony do budowy mięśni.",
+   "pl": "Danazol to syntetyczny steryd o słabym działaniu androgennym. To prawdziwy lek przyjmowany w kapsułkach, nieprzeznaczony do budowy mięśni.",
    "es": "El danazol es un esteroide sintético con actividad androgénica débil. Es un medicamento real, en cápsulas, y no está pensado para ganar músculo."
   },
   "how": {
@@ -153,7 +153,7 @@
   },
   "alt": {
    "en": "A steroid-based lab compound, SARM-like",
-   "pl": "Laboratoryjny związek na bazie steroidu, podobny do SARM",
+   "pl": "Laboratoryjny związek na bazie sterydu, podobny do SARM",
    "es": "Compuesto de laboratorio de base esteroidea, similar a un SARM"
   },
   "cls": "sarm",
@@ -162,7 +162,7 @@
   "label": false,
   "what": {
    "en": "YK-11 is a lab compound built on a steroid backbone that acts on the androgen receptor. It is often sold as a SARM, but its structure is a steroid’s.",
-   "pl": "YK-11 to związek laboratoryjny zbudowany na szkielecie steroidu, który działa na receptor androgenowy. Często sprzedaje się go jako SARM, ale jego budowa jest budową steroidu.",
+   "pl": "YK-11 to związek laboratoryjny zbudowany na szkielecie sterydu, który działa na receptor androgenowy. Często sprzedaje się go jako SARM, ale jego budowa jest budową sterydu.",
    "es": "El YK-11 es un compuesto de laboratorio con un esqueleto de esteroide que actúa sobre el receptor de andrógenos. A menudo se vende como SARM, pero su estructura es la de un esteroide."
   },
   "how": {
@@ -189,7 +189,7 @@
    "pl": [
     "Ciekawe wyniki laboratoryjne dotyczące sygnałów w mięśniach",
     "Aktywny związek badawczy w laboratoriach",
-    "Nie jest klasycznym steroidem w sposobie działania na receptor"
+    "Nie jest klasycznym sterydem w sposobie działania na receptor"
    ],
    "es": [
     "Resultados de laboratorio interesantes sobre la señalización muscular",
@@ -233,7 +233,7 @@
   "label": false,
   "what": {
    "en": "MK-677, or ibutamoren, is an oral drug that raises growth hormone and IGF-1 by acting on the ghrelin receptor. It is not a steroid and not a peptide, and it was never approved.",
-   "pl": "MK-677, czyli ibutamoren, to doustny lek podnoszący hormon wzrostu i IGF-1 przez działanie na receptor greliny. To nie steroid i nie peptyd, i nigdy nie został zatwierdzony.",
+   "pl": "MK-677, czyli ibutamoren, to doustny lek podnoszący hormon wzrostu i IGF-1 przez działanie na receptor greliny. To nie steryd i nie peptyd, i nigdy nie został zatwierdzony.",
    "es": "El MK-677, o ibutamoren, es un fármaco oral que eleva la hormona del crecimiento y el IGF-1 actuando sobre el receptor de la grelina. No es un esteroide ni un péptido, y nunca fue aprobado."
   },
   "how": {
@@ -389,12 +389,12 @@
   "q": "somatropin",
   "status": {
    "en": "A prescription-only medicine in the UK and the US. Supplying it without a prescription is illegal, and it is not a steroid: growth hormone is a protein hormone.",
-   "pl": "Lek wydawany wyłącznie na receptę w Wielkiej Brytanii i USA. Dostarczanie go bez recepty jest nielegalne, i nie jest steroidem: hormon wzrostu to hormon białkowy.",
+   "pl": "Lek wydawany wyłącznie na receptę w Wielkiej Brytanii i USA. Dostarczanie go bez recepty jest nielegalne, i nie jest sterydem: hormon wzrostu to hormon białkowy.",
    "es": "Un medicamento solo con receta en el Reino Unido y EE. UU. Suministrarlo sin receta es ilegal, y no es un esteroide: la hormona del crecimiento es una hormona proteica."
   },
   "what": {
    "en": "Somatropin is lab-made human growth hormone, a protein of 191 amino acids. It is a peptide-family hormone, not a steroid.",
-   "pl": "Somatropina to produkowany w laboratorium ludzki hormon wzrostu, białko z 191 aminokwasów. To hormon z rodziny peptydowej, a nie steroid.",
+   "pl": "Somatropina to produkowany w laboratorium ludzki hormon wzrostu, białko z 191 aminokwasów. To hormon z rodziny peptydowej, a nie steryd.",
    "es": "La somatropina es hormona del crecimiento humana fabricada en laboratorio, una proteína de 191 aminoácidos. Es una hormona de la familia de los péptidos, no un esteroide."
   },
   "how": {
@@ -461,7 +461,7 @@
   },
   "alt": {
    "en": "A beta-2 agonist, not a steroid",
-   "pl": "Agonista receptorów beta-2, nie steroid",
+   "pl": "Agonista receptorów beta-2, nie steryd",
    "es": "Un agonista beta-2, no un esteroide"
   },
   "cls": "oth",
@@ -688,7 +688,7 @@
   },
   "alt": {
    "en": "Steroid-based aromatase inactivator",
-   "pl": "Inaktywator aromatazy oparty na steroidzie",
+   "pl": "Inaktywator aromatazy oparty na sterydzie",
    "es": "Inactivador de la aromatasa de base esteroidea"
   },
   "cls": "mod",
@@ -696,7 +696,7 @@
   "q": "exemestane",
   "what": {
    "en": "Exemestane is a breast cancer drug that is itself built on a steroid backbone. It permanently shuts down the enzyme aromatase.",
-   "pl": "Eksemestan to lek na raka piersi zbudowany na szkielecie steroidu. Trwale wyłącza enzym aromatazę.",
+   "pl": "Eksemestan to lek na raka piersi zbudowany na szkielecie sterydu. Trwale wyłącza enzym aromatazę.",
    "es": "El exemestano es un fármaco contra el cáncer de mama que tiene un esqueleto de esteroide. Desactiva de forma permanente la enzima aromatasa."
   },
   "how": {
@@ -781,7 +781,7 @@
   },
   "risk": {
    "en": "Short courses are usually well tolerated, with trouble sleeping, mood changes and a bigger appetite. Long courses carry the usual steroid risks, and treatment given for a long time must be reduced slowly rather than stopped suddenly.",
-   "pl": "Krótkie kuracje są zwykle dobrze tolerowane, z kłopotami ze snem, zmianami nastroju i większym apetytem. Długie kuracje niosą zwykłe ryzyka steroidów, a leczenie stosowane długo trzeba zmniejszać stopniowo, a nie przerywać nagle.",
+   "pl": "Krótkie kuracje są zwykle dobrze tolerowane, z kłopotami ze snem, zmianami nastroju i większym apetytem. Długie kuracje niosą zwykłe ryzyka sterydów, a leczenie stosowane długo trzeba zmniejszać stopniowo, a nie przerywać nagle.",
    "es": "Los tratamientos cortos suelen tolerarse bien, con problemas para dormir, cambios de humor y más apetito. Los largos conllevan los riesgos habituales de los esteroides, y el tratamiento prolongado debe reducirse poco a poco y no suspenderse de golpe."
   },
   "pros": {

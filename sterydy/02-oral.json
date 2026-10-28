@@ -1,58 +1,499 @@
 [
-{"id":"oxandrolone","n":"Oxandrolone","nm":{"pl":"Oksandrolon","es":"Oxandrolona"},"alt":{"en":"Mild oral anabolic steroid, “Anavar” (withdrawn in the US)","pl":"Łagodny doustny steroid anaboliczny, „Anavar” (wycofany w USA)","es":"Esteroide anabólico oral suave, “Anavar” (retirado en EE. UU.)"},"cls":"oral","form":"oral","q":"oxandrolone",
-"what":{"en":"Oxandrolone is an oral anabolic steroid with relatively weak androgenic effects. It was a licensed medicine, and its US approval was withdrawn in 2023.","pl":"Oksandrolon to doustny steroid anaboliczny o stosunkowo słabym działaniu androgennym. Był lekiem zarejestrowanym, a jego zatwierdzenie w USA wycofano w 2023 roku.","es":"La oxandrolona es un esteroide anabólico oral con efectos androgénicos relativamente débiles. Fue un medicamento autorizado y su aprobación en EE. UU. se retiró en 2023."},
-"how":{"en":"It acts on the androgen receptor and promotes protein building. It is not converted to oestrogen, but it is altered at one position so that it survives the liver.","pl":"Działa na receptor androgenowy i sprzyja budowie białka. Nie zamienia się w estrogen, ale ma zmianę w jednym miejscu, dzięki której przetrwa przejście przez wątrobę.","es":"Actúa sobre el receptor de andrógenos y favorece la formación de proteínas. No se convierte en estrógeno, pero tiene una modificación en una posición que le permite sobrevivir al hígado."},
-"med":{"en":"It was prescribed to help people regain weight after surgery, serious injury or long illness, and to support growth in certain conditions such as Turner syndrome.","pl":"Przepisywano go, by pomóc odzyskać wagę po operacji, ciężkim urazie lub długiej chorobie, oraz wspierać wzrost w niektórych schorzeniach, na przykład w zespole Turnera.","es":"Se recetaba para ayudar a recuperar peso tras una cirugía, una lesión grave o una enfermedad larga, y para favorecer el crecimiento en ciertas afecciones como el síndrome de Turner."},
-"risk":{"en":"The label warns of serious liver problems, including peliosis hepatis (blood-filled cysts in the liver) and liver tumours, as well as lower HDL cholesterol. Those warnings apply to oral steroids as a group, not only this one.","pl":"Ulotka ostrzega przed poważnymi problemami z wątrobą, w tym peliosis hepatis (wypełnione krwią torbiele w wątrobie) i guzami wątroby, a także przed niższym cholesterolem HDL. Te ostrzeżenia dotyczą doustnych steroidów jako grupy, nie tylko tego jednego.","es":"El prospecto advierte de problemas hepáticos graves, como la peliosis hepática (quistes llenos de sangre en el hígado) y tumores hepáticos, además de un colesterol HDL más bajo. Esas advertencias se aplican a los esteroides orales como grupo, no solo a este."},
-"pros":{"en":["Had real medical uses and published trials","Mild androgenic effects compared with many steroids","No conversion to oestrogen"],"pl":["Miał realne zastosowania medyczne i opublikowane badania","Łagodne działanie androgenne w porównaniu z wieloma steroidami","Brak przemiany w estrogen"],"es":["Tuvo usos médicos reales y ensayos publicados","Efectos androgénicos suaves en comparación con muchos esteroides","No se convierte en estrógeno"]},
-"cons":{"en":["Withdrawn from the US market, so supply is mostly illicit","Strain on the liver and lower HDL cholesterol","Still suppresses natural testosterone"],"pl":["Wycofany z rynku USA, więc podaż pochodzi głównie z nielegalnego obiegu","Obciąża wątrobę i obniża cholesterol HDL","Nadal hamuje naturalny testosteron"],"es":["Retirado del mercado de EE. UU., así que el suministro es sobre todo ilícito","Sobrecarga el hígado y baja el colesterol HDL","Sigue suprimiendo la testosterona natural"]}},
-
-{"id":"methandienone","n":"Methandienone","nm":{"pl":"Metandienon","es":"Metandienona"},"alt":{"en":"Old oral steroid, “Dianabol”","pl":"Dawny doustny steroid, „Dianabol”","es":"Antiguo esteroide oral, “Dianabol”"},"cls":"oral","form":"oral","q":"methandienone","label":false,
-"what":{"en":"Methandienone is one of the first anabolic steroids made for people, developed in the 1950s. It is no longer approved as a medicine in the UK or the US.","pl":"Metandienon to jeden z pierwszych steroidów anabolicznych stworzonych dla ludzi, opracowany w latach 50. Nie jest już zatwierdzony jako lek w Wielkiej Brytanii ani w USA.","es":"La metandienona es uno de los primeros esteroides anabólicos creados para personas, desarrollado en la década de 1950. Ya no está aprobada como medicamento en el Reino Unido ni en EE. UU."},
-"how":{"en":"It binds the androgen receptor and, as a methylated oral steroid, passes through the liver intact. A portion of it is converted into oestrogen in the body.","pl":"Wiąże się z receptorem androgenowym i jako metylowany steroid doustny przechodzi przez wątrobę w nienaruszonej postaci. Część zamienia się w organizmie w estrogen.","es":"Se une al receptor de andrógenos y, al ser un esteroide oral metilado, pasa por el hígado sin degradarse. Una parte se convierte en estrógeno en el cuerpo."},
-"med":{"en":"It was once prescribed for muscle loss and weakness. Newer treatments replaced it, and it is mainly of historical interest in medicine today.","pl":"Dawniej przepisywano go przy utracie mięśni i osłabieniu. Zastąpiły go nowsze terapie, a dziś w medycynie ma głównie znaczenie historyczne.","es":"Antes se recetaba por pérdida de músculo y debilidad. Tratamientos más nuevos lo sustituyeron y hoy tiene sobre todo interés histórico en medicina."},
-"risk":{"en":"Documented risks include liver strain, raised blood pressure, fluid retention, breast tissue growth in men, acne and a sharp drop in natural testosterone. It has also been linked to heart enlargement and lipid changes in people who misuse it.","pl":"Udokumentowane ryzyka to obciążenie wątroby, wyższe ciśnienie, zatrzymywanie wody, rozrost tkanki piersi u mężczyzn, trądzik i gwałtowny spadek naturalnego testosteronu. Wiąże się go też z powiększeniem serca i zmianami lipidów u osób, które go nadużywają.","es":"Los riesgos documentados incluyen sobrecarga hepática, presión arterial alta, retención de líquidos, crecimiento de tejido mamario en hombres, acné y una fuerte caída de la testosterona natural. También se ha vinculado con agrandamiento del corazón y cambios en los lípidos en quienes lo usan de forma indebida."},
-"pros":{"en":["Historic drug with decades of reports","Strong effect on muscle in studies of misuse","Taken by mouth"],"pl":["Historyczny lek z dziesięcioleciami doniesień","Silne działanie na mięśnie w badaniach nadużywania","Przyjmowany doustnie"],"es":["Fármaco histórico con décadas de informes","Efecto marcado sobre el músculo en estudios de mal uso","Se toma por vía oral"]},
-"cons":{"en":["No longer an approved medicine","Raises blood pressure and fluid retention, and strains the liver","Converts partly to oestrogen, adding to side effects"],"pl":["Nie jest już zatwierdzonym lekiem","Podnosi ciśnienie, zatrzymuje wodę i obciąża wątrobę","Częściowo zamienia się w estrogen, co zwiększa skutki uboczne"],"es":["Ya no es un medicamento aprobado","Eleva la presión arterial, retiene líquidos y sobrecarga el hígado","Se convierte en parte en estrógeno, lo que suma efectos secundarios"]}},
-
-{"id":"stanozolol","n":"Stanozolol","nm":{"pl":"Stanozolol","es":"Estanozolol"},"alt":{"en":"Oral and injectable steroid, “Winstrol”","pl":"Steroid doustny i do iniekcji, „Winstrol”","es":"Esteroide oral e inyectable, “Winstrol”"},"cls":"oral","form":"mix","q":"stanozolol",
-"what":{"en":"Stanozolol is a synthetic steroid derived from dihydrotestosterone, sold in tablet and injectable forms. It became famous in 1988 when sprinter Ben Johnson tested positive for it.","pl":"Stanozolol to syntetyczny steroid pochodzący od dihydrotestosteronu, sprzedawany w postaci tabletek i do iniekcji. Zasłynął w 1988 roku, gdy sprinter Ben Johnson dał pozytywny wynik testu na jego obecność.","es":"El estanozolol es un esteroide sintético derivado de la dihidrotestosterona, que se vendía en comprimidos e inyectable. Se hizo famoso en 1988, cuando el velocista Ben Johnson dio positivo por esta sustancia."},
-"how":{"en":"It acts on the androgen receptor and does not convert to oestrogen. It also lowers a blood protein that binds sex hormones, which changes how much free hormone is active.","pl":"Działa na receptor androgenowy i nie zamienia się w estrogen. Obniża też białko krwi wiążące hormony płciowe, co zmienia ilość wolnego, aktywnego hormonu.","es":"Actúa sobre el receptor de andrógenos y no se convierte en estrógeno. También reduce una proteína de la sangre que fija las hormonas sexuales, lo que cambia la cantidad de hormona libre activa."},
-"med":{"en":"It was approved in the US to treat hereditary angioedema, a rare disease that causes swelling attacks. It has since been discontinued there, and it still has a veterinary use.","pl":"W USA został zatwierdzony do leczenia dziedzicznego obrzęku naczynioruchowego, rzadkiej choroby powodującej ataki obrzęków. Później go tam wycofano, a nadal ma zastosowanie weterynaryjne.","es":"Se aprobó en EE. UU. para tratar el angioedema hereditario, una enfermedad rara que causa episodios de hinchazón. Después se discontinuó allí y aún tiene un uso veterinario."},
-"risk":{"en":"The main concerns are liver damage, worse cholesterol with a drop in HDL, higher blood pressure and tendon problems. It is also a known cause of positive doping tests and was in the Johnson case.","pl":"Główne obawy to uszkodzenie wątroby, gorszy cholesterol ze spadkiem HDL, wyższe ciśnienie i problemy ze ścięgnami. To też znana przyczyna pozytywnych testów antydopingowych, jak w sprawie Johnsona.","es":"Las principales preocupaciones son el daño hepático, un colesterol peor con descenso del HDL, presión arterial más alta y problemas en los tendones. También es una causa conocida de positivos en controles antidopaje, como en el caso de Johnson."},
-"pros":{"en":["Had a licensed medical use for hereditary angioedema","No oestrogen conversion","Available in oral and injectable forms"],"pl":["Miał zarejestrowane zastosowanie w dziedzicznym obrzęku naczynioruchowym","Brak przemiany w estrogen","Dostępny w postaci doustnej i do iniekcji"],"es":["Tuvo un uso médico autorizado en el angioedema hereditario","No se convierte en estrógeno","Existía en formas oral e inyectable"]},
-"cons":{"en":["Liver strain and a fall in HDL cholesterol","Tendon problems reported","Discontinued as a human medicine in the US"],"pl":["Obciążenie wątroby i spadek cholesterolu HDL","Opisywano problemy ze ścięgnami","Wycofany jako lek dla ludzi w USA"],"es":["Sobrecarga hepática y descenso del colesterol HDL","Se han descrito problemas en los tendones","Discontinuado como medicamento humano en EE. UU."]}},
-
-{"id":"oxymetholone","n":"Oxymetholone","nm":{"pl":"Oksymetolon","es":"Oximetolona"},"alt":{"en":"Oral steroid for anaemia, “Anadrol”","pl":"Doustny steroid stosowany w niedokrwistości, „Anadrol”","es":"Esteroide oral para la anemia, “Anadrol”"},"cls":"oral","form":"oral","q":"oxymetholone",
-"what":{"en":"Oxymetholone is a strong oral anabolic steroid that is still a licensed medicine in the US for certain anaemias. It stimulates red blood cell production.","pl":"Oksymetolon to silny doustny steroid anaboliczny, który w USA nadal jest lekiem zarejestrowanym w niektórych niedokrwistościach. Pobudza produkcję czerwonych krwinek.","es":"La oximetolona es un esteroide anabólico oral potente que sigue siendo un medicamento autorizado en EE. UU. para ciertas anemias. Estimula la producción de glóbulos rojos."},
-"how":{"en":"It acts on the androgen receptor and increases red blood cell production in the bone marrow. It is altered chemically so that it survives the liver.","pl":"Działa na receptor androgenowy i zwiększa produkcję czerwonych krwinek w szpiku kostnym. Ma zmienioną budowę, dzięki czemu przetrwa przejście przez wątrobę.","es":"Actúa sobre el receptor de andrógenos y aumenta la producción de glóbulos rojos en la médula ósea. Está modificada químicamente para sobrevivir al hígado."},
-"med":{"en":"It is approved for anaemias caused by too little red blood cell production, such as aplastic anaemia and some bone marrow failures. Doctors weigh that benefit against its liver risks.","pl":"Jest zatwierdzony w niedokrwistościach wynikających ze zbyt małej produkcji czerwonych krwinek, na przykład w niedokrwistości aplastycznej i niektórych niewydolnościach szpiku. Lekarze porównują tę korzyść z ryzykiem dla wątroby.","es":"Está aprobada para anemias causadas por una producción insuficiente de glóbulos rojos, como la anemia aplásica y algunas insuficiencias de la médula ósea. Los médicos sopesan ese beneficio frente a sus riesgos hepáticos."},
-"risk":{"en":"Its label carries a boxed warning about peliosis hepatis, liver tumours and harmful changes in blood cholesterol. It is considered one of the harder steroids on the liver, which is why medical use is strictly limited.","pl":"Jego ulotka zawiera ostrzeżenie w ramce o peliosis hepatis, guzach wątroby i szkodliwych zmianach cholesterolu we krwi. Uważa się go za jeden z bardziej obciążających wątrobę steroidów, dlatego stosowanie medyczne jest ściśle ograniczone.","es":"Su prospecto lleva una advertencia en recuadro sobre peliosis hepática, tumores hepáticos y cambios perjudiciales del colesterol en sangre. Se considera uno de los esteroides más agresivos para el hígado, por lo que su uso médico está muy limitado."},
-"pros":{"en":["Approved for specific anaemias","Raises red blood cell counts where the bone marrow fails","Orally active"],"pl":["Zatwierdzony w określonych niedokrwistościach","Podnosi liczbę czerwonych krwinek tam, gdzie szpik zawodzi","Skuteczny doustnie"],"es":["Aprobada para anemias concretas","Eleva los glóbulos rojos cuando falla la médula ósea","Activa por vía oral"]},
-"cons":{"en":["Boxed warning for liver tumours and peliosis hepatis","Harmful cholesterol changes","Fluid retention and strain on the heart"],"pl":["Ostrzeżenie w ramce o guzach wątroby i peliosis hepatis","Szkodliwe zmiany cholesterolu","Zatrzymywanie wody i obciążenie serca"],"es":["Advertencia en recuadro por tumores hepáticos y peliosis hepática","Cambios perjudiciales del colesterol","Retención de líquidos y sobrecarga del corazón"]}},
-
-{"id":"methyltestosterone","n":"Methyltestosterone","nm":{"pl":"Metylotestosteron","es":"Metiltestosterona"},"alt":{"en":"Oral testosterone with a methyl group","pl":"Doustny testosteron z grupą metylową","es":"Testosterona oral con un grupo metilo"},"cls":"oral","form":"oral","q":"methyltestosterone",
-"what":{"en":"Methyltestosterone is testosterone with one extra methyl group so that it can be swallowed. It is an old oral androgen that is still prescribed in some countries.","pl":"Metylotestosteron to testosteron z jedną dodatkową grupą metylową, dzięki której można go połknąć. To dawny androgen doustny, który w niektórych krajach nadal się przepisuje.","es":"La metiltestosterona es testosterona con un grupo metilo adicional que permite tragarla. Es un andrógeno oral antiguo que todavía se receta en algunos países."},
-"how":{"en":"It acts like testosterone at the androgen receptor. The extra group slows its breakdown in the liver, which is also the source of its liver risk.","pl":"Działa jak testosteron na receptor androgenowy. Dodatkowa grupa spowalnia jego rozkład w wątrobie, co jest też źródłem ryzyka dla wątroby.","es":"Actúa como la testosterona sobre el receptor de andrógenos. El grupo adicional frena su degradación en el hígado, que es también el origen de su riesgo hepático."},
-"med":{"en":"It is approved for low testosterone in men, delayed puberty and, in some products, to relieve menopause symptoms combined with oestrogen. Newer testosterone forms are generally preferred today.","pl":"Jest zatwierdzony w niskim poziomie testosteronu u mężczyzn, opóźnionym dojrzewaniu i, w niektórych preparatach, w łagodzeniu objawów menopauzy w połączeniu z estrogenem. Dziś zwykle preferuje się nowsze postacie testosteronu.","es":"Está aprobada para la testosterona baja en hombres, la pubertad retrasada y, en algunos productos, para aliviar los síntomas de la menopausia combinada con estrógeno. Hoy suelen preferirse las formas más nuevas de testosterona."},
-"risk":{"en":"As a methylated oral steroid it can harm the liver, including cholestatic jaundice and, with long use, liver tumours. It also carries the usual androgen risks of thicker blood, acne and lower fertility.","pl":"Jako metylowany steroid doustny może uszkadzać wątrobę, w tym powodować żółtaczkę cholestatyczną, a przy długim stosowaniu guzy wątroby. Niesie też typowe ryzyka androgenów: gęstszą krew, trądzik i niższą płodność.","es":"Al ser un esteroide oral metilado puede dañar el hígado, incluida la ictericia colestásica y, con el uso prolongado, tumores hepáticos. Además conlleva los riesgos habituales de los andrógenos: sangre más espesa, acné y menor fertilidad."},
-"pros":{"en":["Approved for hypogonadism and delayed puberty","Taken by mouth","Long clinical history"],"pl":["Zatwierdzony w hipogonadyzmie i opóźnionym dojrzewaniu","Przyjmowany doustnie","Długa historia kliniczna"],"es":["Aprobada para el hipogonadismo y la pubertad retrasada","Se toma por vía oral","Largo historial clínico"]},
-"cons":{"en":["Liver toxicity, so doctors prefer other forms","Harder to dose steadily than gels or long-acting esters","Suppresses the body’s own testosterone"],"pl":["Toksyczność dla wątroby, więc lekarze wolą inne postacie","Trudniej utrzymać stały poziom niż przy żelach czy długodziałających estrach","Hamuje własny testosteron organizmu"],"es":["Toxicidad hepática, por lo que los médicos prefieren otras formas","Más difícil mantener un nivel estable que con geles o ésteres de acción prolongada","Suprime la testosterona del propio cuerpo"]}},
-
-{"id":"turinabol","n":"Chlorodehydromethyltestosterone","nm":{"pl":"Chlorodehydrometylotestosteron","es":"Clorodehidrometiltestosterona"},"alt":{"en":"Oral steroid known as “Turinabol”","pl":"Doustny steroid znany jako „Turinabol”","es":"Esteroide oral conocido como “Turinabol”"},"cls":"oral","form":"oral","q":"chlorodehydromethyltestosterone","label":false,
-"what":{"en":"This is a synthetic oral steroid developed in East Germany in the 1960s and sold as Oral-Turinabol. It was at the centre of that country’s state doping programme.","pl":"To syntetyczny doustny steroid opracowany w NRD w latach 60. i sprzedawany jako Oral-Turinabol. Był w centrum państwowego programu dopingowego tego kraju.","es":"Es un esteroide oral sintético desarrollado en la Alemania Oriental en la década de 1960 y vendido como Oral-Turinabol. Estuvo en el centro del programa estatal de dopaje de ese país."},
-"how":{"en":"It is a modified version of testosterone that acts on the androgen receptor and was designed to have weak androgenic effects. Like other oral steroids it is chemically altered to survive the liver.","pl":"To zmodyfikowana wersja testosteronu działająca na receptor androgenowy, zaprojektowana tak, by miała słabe działanie androgenne. Jak inne steroidy doustne ma zmienioną budowę, by przetrwać przejście przez wątrobę.","es":"Es una versión modificada de la testosterona que actúa sobre el receptor de andrógenos y se diseñó para tener efectos androgénicos débiles. Como otros esteroides orales, está alterada químicamente para sobrevivir al hígado."},
-"med":{"en":"It is not an approved medicine today. Its modern profile comes mainly from doping investigations and long-term follow-up of former athletes.","pl":"Dziś nie jest zatwierdzonym lekiem. Jego współczesny obraz pochodzi głównie z dochodzeń dopingowych i wieloletnich obserwacji byłych sportowców.","es":"Hoy no es un medicamento aprobado. Su perfil actual procede sobre todo de investigaciones de dopaje y del seguimiento a largo plazo de antiguos deportistas."},
-"risk":{"en":"Follow-up of athletes from the East German programme documented serious long-term harm, including liver problems and, in women, masculinising changes and fertility problems. Traces remain detectable for months, which is why retesting of old samples has caught athletes years later.","pl":"Obserwacja sportowców z programu NRD udokumentowała poważne długotrwałe szkody, w tym problemy z wątrobą, a u kobiet zmiany maskulinizujące i problemy z płodnością. Ślady są wykrywalne przez miesiące, dlatego ponowne badanie starych próbek wykrywało sportowców po latach.","es":"El seguimiento de deportistas del programa de la Alemania Oriental documentó daños graves a largo plazo, como problemas hepáticos y, en mujeres, cambios masculinizantes y problemas de fertilidad. Las trazas siguen siendo detectables durante meses, por eso la repetición de análisis de muestras antiguas ha descubierto a deportistas años después."},
-"status":{"en":"Not approved as a medicine anywhere today. It is a controlled anabolic steroid in the UK (Class C) and the US (Schedule III).","pl":"Dziś nie jest nigdzie zatwierdzony jako lek. To kontrolowany steroid anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III).","es":"Hoy no está aprobado como medicamento en ningún lugar. Es un esteroide anabólico controlado en el Reino Unido (clase C) y en EE. UU. (lista III)."},
-"pros":{"en":["Designed to have weak androgenic effects","Long history of study in athletes","No oestrogen conversion"],"pl":["Zaprojektowany tak, by miał słabe działanie androgenne","Długa historia badań u sportowców","Brak przemiany w estrogen"],"es":["Diseñado para tener efectos androgénicos débiles","Largo historial de estudio en deportistas","No se convierte en estrógeno"]},
-"cons":{"en":["Not an approved medicine","Documented long-term harm in former athletes","Long detection window leads to doping bans"],"pl":["Nie jest zatwierdzonym lekiem","Udokumentowane długotrwałe szkody u byłych sportowców","Długi okres wykrywalności prowadzi do dyskwalifikacji"],"es":["No es un medicamento aprobado","Daños a largo plazo documentados en antiguos deportistas","Su larga ventana de detección conduce a sanciones por dopaje"]}},
-
-{"id":"mesterolone","n":"Mesterolone","nm":{"pl":"Mesterolon","es":"Mesterolona"},"alt":{"en":"Mild oral androgen, “Proviron”","pl":"Łagodny androgen doustny, „Proviron”","es":"Andrógeno oral suave, “Proviron”"},"cls":"oral","form":"oral","q":"mesterolone",
-"what":{"en":"Mesterolone is a mild oral androgen derived from dihydrotestosterone. It is a licensed medicine in some European countries and is not approved in the US.","pl":"Mesterolon to łagodny androgen doustny pochodzący od dihydrotestosteronu. Jest lekiem zarejestrowanym w niektórych krajach europejskich i nie jest zatwierdzony w USA.","es":"La mesterolona es un andrógeno oral suave derivado de la dihidrotestosterona. Es un medicamento autorizado en algunos países europeos y no está aprobado en EE. UU."},
-"how":{"en":"It acts on the androgen receptor but, unlike methylated steroids, is not designed to build large amounts of muscle. It does not convert to oestrogen.","pl":"Działa na receptor androgenowy, ale w odróżnieniu od steroidów metylowanych nie ma budować dużej masy mięśniowej. Nie zamienia się w estrogen.","es":"Actúa sobre el receptor de andrógenos pero, a diferencia de los esteroides metilados, no está pensada para formar mucho músculo. No se convierte en estrógeno."},
-"med":{"en":"It is prescribed for androgen deficiency in men, and has been used in some places to treat certain forms of male infertility.","pl":"Przepisuje się go przy niedoborze androgenów u mężczyzn, a w niektórych miejscach stosowano go w pewnych postaciach niepłodności męskiej.","es":"Se receta para la deficiencia de andrógenos en hombres y en algunos lugares se ha usado para tratar ciertas formas de infertilidad masculina."},
-"risk":{"en":"It is milder on the liver than methylated steroids, but it still affects hormone balance and cholesterol, and at higher use it can lower the body’s own testosterone.","pl":"Mniej obciąża wątrobę niż steroidy metylowane, ale nadal wpływa na równowagę hormonalną i cholesterol, a przy większym stosowaniu może obniżać własny testosteron organizmu.","es":"Es más suave con el hígado que los esteroides metilados, pero aun así afecta al equilibrio hormonal y al colesterol y, con un uso mayor, puede reducir la testosterona del propio cuerpo."},
-"pros":{"en":["Licensed in some countries for androgen deficiency","Gentler on the liver than methylated steroids","No oestrogen conversion"],"pl":["Zarejestrowany w niektórych krajach w niedoborze androgenów","Łagodniejszy dla wątroby niż steroidy metylowane","Brak przemiany w estrogen"],"es":["Autorizada en algunos países para la deficiencia de andrógenos","Más suave para el hígado que los esteroides metilados","No se convierte en estrógeno"]},
-"cons":{"en":["Weak muscle effect","Not approved in the US","Can still disturb hormone balance"],"pl":["Słabe działanie na mięśnie","Niezatwierdzony w USA","Nadal może zaburzać równowagę hormonalną"],"es":["Efecto débil sobre el músculo","No está aprobada en EE. UU.","Aun así puede alterar el equilibrio hormonal"]}}
+ {
+  "id": "oxandrolone",
+  "n": "Oxandrolone",
+  "nm": {
+   "pl": "Oksandrolon",
+   "es": "Oxandrolona"
+  },
+  "alt": {
+   "en": "Mild oral anabolic steroid, “Anavar” (withdrawn in the US)",
+   "pl": "Łagodny doustny steryd anaboliczny, „Anavar” (wycofany w USA)",
+   "es": "Esteroide anabólico oral suave, “Anavar” (retirado en EE. UU.)"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "oxandrolone",
+  "what": {
+   "en": "Oxandrolone is an oral anabolic steroid with relatively weak androgenic effects. It was a licensed medicine, and its US approval was withdrawn in 2023.",
+   "pl": "Oksandrolon to doustny steryd anaboliczny o stosunkowo słabym działaniu androgennym. Był lekiem zarejestrowanym, a jego zatwierdzenie w USA wycofano w 2023 roku.",
+   "es": "La oxandrolona es un esteroide anabólico oral con efectos androgénicos relativamente débiles. Fue un medicamento autorizado y su aprobación en EE. UU. se retiró en 2023."
+  },
+  "how": {
+   "en": "It acts on the androgen receptor and promotes protein building. It is not converted to oestrogen, but it is altered at one position so that it survives the liver.",
+   "pl": "Działa na receptor androgenowy i sprzyja budowie białka. Nie zamienia się w estrogen, ale ma zmianę w jednym miejscu, dzięki której przetrwa przejście przez wątrobę.",
+   "es": "Actúa sobre el receptor de andrógenos y favorece la formación de proteínas. No se convierte en estrógeno, pero tiene una modificación en una posición que le permite sobrevivir al hígado."
+  },
+  "med": {
+   "en": "It was prescribed to help people regain weight after surgery, serious injury or long illness, and to support growth in certain conditions such as Turner syndrome.",
+   "pl": "Przepisywano go, by pomóc odzyskać wagę po operacji, ciężkim urazie lub długiej chorobie, oraz wspierać wzrost w niektórych schorzeniach, na przykład w zespole Turnera.",
+   "es": "Se recetaba para ayudar a recuperar peso tras una cirugía, una lesión grave o una enfermedad larga, y para favorecer el crecimiento en ciertas afecciones como el síndrome de Turner."
+  },
+  "risk": {
+   "en": "The label warns of serious liver problems, including peliosis hepatis (blood-filled cysts in the liver) and liver tumours, as well as lower HDL cholesterol. Those warnings apply to oral steroids as a group, not only this one.",
+   "pl": "Ulotka ostrzega przed poważnymi problemami z wątrobą, w tym peliosis hepatis (wypełnione krwią torbiele w wątrobie) i guzami wątroby, a także przed niższym cholesterolem HDL. Te ostrzeżenia dotyczą doustnych sterydów jako grupy, nie tylko tego jednego.",
+   "es": "El prospecto advierte de problemas hepáticos graves, como la peliosis hepática (quistes llenos de sangre en el hígado) y tumores hepáticos, además de un colesterol HDL más bajo. Esas advertencias se aplican a los esteroides orales como grupo, no solo a este."
+  },
+  "pros": {
+   "en": [
+    "Had real medical uses and published trials",
+    "Mild androgenic effects compared with many steroids",
+    "No conversion to oestrogen"
+   ],
+   "pl": [
+    "Miał realne zastosowania medyczne i opublikowane badania",
+    "Łagodne działanie androgenne w porównaniu z wieloma sterydami",
+    "Brak przemiany w estrogen"
+   ],
+   "es": [
+    "Tuvo usos médicos reales y ensayos publicados",
+    "Efectos androgénicos suaves en comparación con muchos esteroides",
+    "No se convierte en estrógeno"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Withdrawn from the US market, so supply is mostly illicit",
+    "Strain on the liver and lower HDL cholesterol",
+    "Still suppresses natural testosterone"
+   ],
+   "pl": [
+    "Wycofany z rynku USA, więc podaż pochodzi głównie z nielegalnego obiegu",
+    "Obciąża wątrobę i obniża cholesterol HDL",
+    "Nadal hamuje naturalny testosteron"
+   ],
+   "es": [
+    "Retirado del mercado de EE. UU., así que el suministro es sobre todo ilícito",
+    "Sobrecarga el hígado y baja el colesterol HDL",
+    "Sigue suprimiendo la testosterona natural"
+   ]
+  }
+ },
+ {
+  "id": "methandienone",
+  "n": "Methandienone",
+  "nm": {
+   "pl": "Metandienon",
+   "es": "Metandienona"
+  },
+  "alt": {
+   "en": "Old oral steroid, “Dianabol”",
+   "pl": "Dawny doustny steryd, „Dianabol”",
+   "es": "Antiguo esteroide oral, “Dianabol”"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "methandienone",
+  "label": false,
+  "what": {
+   "en": "Methandienone is one of the first anabolic steroids made for people, developed in the 1950s. It is no longer approved as a medicine in the UK or the US.",
+   "pl": "Metandienon to jeden z pierwszych sterydów anabolicznych stworzonych dla ludzi, opracowany w latach 50. Nie jest już zatwierdzony jako lek w Wielkiej Brytanii ani w USA.",
+   "es": "La metandienona es uno de los primeros esteroides anabólicos creados para personas, desarrollado en la década de 1950. Ya no está aprobada como medicamento en el Reino Unido ni en EE. UU."
+  },
+  "how": {
+   "en": "It binds the androgen receptor and, as a methylated oral steroid, passes through the liver intact. A portion of it is converted into oestrogen in the body.",
+   "pl": "Wiąże się z receptorem androgenowym i jako metylowany steryd doustny przechodzi przez wątrobę w nienaruszonej postaci. Część zamienia się w organizmie w estrogen.",
+   "es": "Se une al receptor de andrógenos y, al ser un esteroide oral metilado, pasa por el hígado sin degradarse. Una parte se convierte en estrógeno en el cuerpo."
+  },
+  "med": {
+   "en": "It was once prescribed for muscle loss and weakness. Newer treatments replaced it, and it is mainly of historical interest in medicine today.",
+   "pl": "Dawniej przepisywano go przy utracie mięśni i osłabieniu. Zastąpiły go nowsze terapie, a dziś w medycynie ma głównie znaczenie historyczne.",
+   "es": "Antes se recetaba por pérdida de músculo y debilidad. Tratamientos más nuevos lo sustituyeron y hoy tiene sobre todo interés histórico en medicina."
+  },
+  "risk": {
+   "en": "Documented risks include liver strain, raised blood pressure, fluid retention, breast tissue growth in men, acne and a sharp drop in natural testosterone. It has also been linked to heart enlargement and lipid changes in people who misuse it.",
+   "pl": "Udokumentowane ryzyka to obciążenie wątroby, wyższe ciśnienie, zatrzymywanie wody, rozrost tkanki piersi u mężczyzn, trądzik i gwałtowny spadek naturalnego testosteronu. Wiąże się go też z powiększeniem serca i zmianami lipidów u osób, które go nadużywają.",
+   "es": "Los riesgos documentados incluyen sobrecarga hepática, presión arterial alta, retención de líquidos, crecimiento de tejido mamario en hombres, acné y una fuerte caída de la testosterona natural. También se ha vinculado con agrandamiento del corazón y cambios en los lípidos en quienes lo usan de forma indebida."
+  },
+  "pros": {
+   "en": [
+    "Historic drug with decades of reports",
+    "Strong effect on muscle in studies of misuse",
+    "Taken by mouth"
+   ],
+   "pl": [
+    "Historyczny lek z dziesięcioleciami doniesień",
+    "Silne działanie na mięśnie w badaniach nadużywania",
+    "Przyjmowany doustnie"
+   ],
+   "es": [
+    "Fármaco histórico con décadas de informes",
+    "Efecto marcado sobre el músculo en estudios de mal uso",
+    "Se toma por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No longer an approved medicine",
+    "Raises blood pressure and fluid retention, and strains the liver",
+    "Converts partly to oestrogen, adding to side effects"
+   ],
+   "pl": [
+    "Nie jest już zatwierdzonym lekiem",
+    "Podnosi ciśnienie, zatrzymuje wodę i obciąża wątrobę",
+    "Częściowo zamienia się w estrogen, co zwiększa skutki uboczne"
+   ],
+   "es": [
+    "Ya no es un medicamento aprobado",
+    "Eleva la presión arterial, retiene líquidos y sobrecarga el hígado",
+    "Se convierte en parte en estrógeno, lo que suma efectos secundarios"
+   ]
+  }
+ },
+ {
+  "id": "stanozolol",
+  "n": "Stanozolol",
+  "nm": {
+   "pl": "Stanozolol",
+   "es": "Estanozolol"
+  },
+  "alt": {
+   "en": "Oral and injectable steroid, “Winstrol”",
+   "pl": "Steryd doustny i do iniekcji, „Winstrol”",
+   "es": "Esteroide oral e inyectable, “Winstrol”"
+  },
+  "cls": "oral",
+  "form": "mix",
+  "q": "stanozolol",
+  "what": {
+   "en": "Stanozolol is a synthetic steroid derived from dihydrotestosterone, sold in tablet and injectable forms. It became famous in 1988 when sprinter Ben Johnson tested positive for it.",
+   "pl": "Stanozolol to syntetyczny steryd pochodzący od dihydrotestosteronu, sprzedawany w postaci tabletek i do iniekcji. Zasłynął w 1988 roku, gdy sprinter Ben Johnson dał pozytywny wynik testu na jego obecność.",
+   "es": "El estanozolol es un esteroide sintético derivado de la dihidrotestosterona, que se vendía en comprimidos e inyectable. Se hizo famoso en 1988, cuando el velocista Ben Johnson dio positivo por esta sustancia."
+  },
+  "how": {
+   "en": "It acts on the androgen receptor and does not convert to oestrogen. It also lowers a blood protein that binds sex hormones, which changes how much free hormone is active.",
+   "pl": "Działa na receptor androgenowy i nie zamienia się w estrogen. Obniża też białko krwi wiążące hormony płciowe, co zmienia ilość wolnego, aktywnego hormonu.",
+   "es": "Actúa sobre el receptor de andrógenos y no se convierte en estrógeno. También reduce una proteína de la sangre que fija las hormonas sexuales, lo que cambia la cantidad de hormona libre activa."
+  },
+  "med": {
+   "en": "It was approved in the US to treat hereditary angioedema, a rare disease that causes swelling attacks. It has since been discontinued there, and it still has a veterinary use.",
+   "pl": "W USA został zatwierdzony do leczenia dziedzicznego obrzęku naczynioruchowego, rzadkiej choroby powodującej ataki obrzęków. Później go tam wycofano, a nadal ma zastosowanie weterynaryjne.",
+   "es": "Se aprobó en EE. UU. para tratar el angioedema hereditario, una enfermedad rara que causa episodios de hinchazón. Después se discontinuó allí y aún tiene un uso veterinario."
+  },
+  "risk": {
+   "en": "The main concerns are liver damage, worse cholesterol with a drop in HDL, higher blood pressure and tendon problems. It is also a known cause of positive doping tests and was in the Johnson case.",
+   "pl": "Główne obawy to uszkodzenie wątroby, gorszy cholesterol ze spadkiem HDL, wyższe ciśnienie i problemy ze ścięgnami. To też znana przyczyna pozytywnych testów antydopingowych, jak w sprawie Johnsona.",
+   "es": "Las principales preocupaciones son el daño hepático, un colesterol peor con descenso del HDL, presión arterial más alta y problemas en los tendones. También es una causa conocida de positivos en controles antidopaje, como en el caso de Johnson."
+  },
+  "pros": {
+   "en": [
+    "Had a licensed medical use for hereditary angioedema",
+    "No oestrogen conversion",
+    "Available in oral and injectable forms"
+   ],
+   "pl": [
+    "Miał zarejestrowane zastosowanie w dziedzicznym obrzęku naczynioruchowym",
+    "Brak przemiany w estrogen",
+    "Dostępny w postaci doustnej i do iniekcji"
+   ],
+   "es": [
+    "Tuvo un uso médico autorizado en el angioedema hereditario",
+    "No se convierte en estrógeno",
+    "Existía en formas oral e inyectable"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Liver strain and a fall in HDL cholesterol",
+    "Tendon problems reported",
+    "Discontinued as a human medicine in the US"
+   ],
+   "pl": [
+    "Obciążenie wątroby i spadek cholesterolu HDL",
+    "Opisywano problemy ze ścięgnami",
+    "Wycofany jako lek dla ludzi w USA"
+   ],
+   "es": [
+    "Sobrecarga hepática y descenso del colesterol HDL",
+    "Se han descrito problemas en los tendones",
+    "Discontinuado como medicamento humano en EE. UU."
+   ]
+  }
+ },
+ {
+  "id": "oxymetholone",
+  "n": "Oxymetholone",
+  "nm": {
+   "pl": "Oksymetolon",
+   "es": "Oximetolona"
+  },
+  "alt": {
+   "en": "Oral steroid for anaemia, “Anadrol”",
+   "pl": "Doustny steryd stosowany w niedokrwistości, „Anadrol”",
+   "es": "Esteroide oral para la anemia, “Anadrol”"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "oxymetholone",
+  "what": {
+   "en": "Oxymetholone is a strong oral anabolic steroid that is still a licensed medicine in the US for certain anaemias. It stimulates red blood cell production.",
+   "pl": "Oksymetolon to silny doustny steryd anaboliczny, który w USA nadal jest lekiem zarejestrowanym w niektórych niedokrwistościach. Pobudza produkcję czerwonych krwinek.",
+   "es": "La oximetolona es un esteroide anabólico oral potente que sigue siendo un medicamento autorizado en EE. UU. para ciertas anemias. Estimula la producción de glóbulos rojos."
+  },
+  "how": {
+   "en": "It acts on the androgen receptor and increases red blood cell production in the bone marrow. It is altered chemically so that it survives the liver.",
+   "pl": "Działa na receptor androgenowy i zwiększa produkcję czerwonych krwinek w szpiku kostnym. Ma zmienioną budowę, dzięki czemu przetrwa przejście przez wątrobę.",
+   "es": "Actúa sobre el receptor de andrógenos y aumenta la producción de glóbulos rojos en la médula ósea. Está modificada químicamente para sobrevivir al hígado."
+  },
+  "med": {
+   "en": "It is approved for anaemias caused by too little red blood cell production, such as aplastic anaemia and some bone marrow failures. Doctors weigh that benefit against its liver risks.",
+   "pl": "Jest zatwierdzony w niedokrwistościach wynikających ze zbyt małej produkcji czerwonych krwinek, na przykład w niedokrwistości aplastycznej i niektórych niewydolnościach szpiku. Lekarze porównują tę korzyść z ryzykiem dla wątroby.",
+   "es": "Está aprobada para anemias causadas por una producción insuficiente de glóbulos rojos, como la anemia aplásica y algunas insuficiencias de la médula ósea. Los médicos sopesan ese beneficio frente a sus riesgos hepáticos."
+  },
+  "risk": {
+   "en": "Its label carries a boxed warning about peliosis hepatis, liver tumours and harmful changes in blood cholesterol. It is considered one of the harder steroids on the liver, which is why medical use is strictly limited.",
+   "pl": "Jego ulotka zawiera ostrzeżenie w ramce o peliosis hepatis, guzach wątroby i szkodliwych zmianach cholesterolu we krwi. Uważa się go za jeden z bardziej obciążających wątrobę sterydów, dlatego stosowanie medyczne jest ściśle ograniczone.",
+   "es": "Su prospecto lleva una advertencia en recuadro sobre peliosis hepática, tumores hepáticos y cambios perjudiciales del colesterol en sangre. Se considera uno de los esteroides más agresivos para el hígado, por lo que su uso médico está muy limitado."
+  },
+  "pros": {
+   "en": [
+    "Approved for specific anaemias",
+    "Raises red blood cell counts where the bone marrow fails",
+    "Orally active"
+   ],
+   "pl": [
+    "Zatwierdzony w określonych niedokrwistościach",
+    "Podnosi liczbę czerwonych krwinek tam, gdzie szpik zawodzi",
+    "Skuteczny doustnie"
+   ],
+   "es": [
+    "Aprobada para anemias concretas",
+    "Eleva los glóbulos rojos cuando falla la médula ósea",
+    "Activa por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Boxed warning for liver tumours and peliosis hepatis",
+    "Harmful cholesterol changes",
+    "Fluid retention and strain on the heart"
+   ],
+   "pl": [
+    "Ostrzeżenie w ramce o guzach wątroby i peliosis hepatis",
+    "Szkodliwe zmiany cholesterolu",
+    "Zatrzymywanie wody i obciążenie serca"
+   ],
+   "es": [
+    "Advertencia en recuadro por tumores hepáticos y peliosis hepática",
+    "Cambios perjudiciales del colesterol",
+    "Retención de líquidos y sobrecarga del corazón"
+   ]
+  }
+ },
+ {
+  "id": "methyltestosterone",
+  "n": "Methyltestosterone",
+  "nm": {
+   "pl": "Metylotestosteron",
+   "es": "Metiltestosterona"
+  },
+  "alt": {
+   "en": "Oral testosterone with a methyl group",
+   "pl": "Doustny testosteron z grupą metylową",
+   "es": "Testosterona oral con un grupo metilo"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "methyltestosterone",
+  "what": {
+   "en": "Methyltestosterone is testosterone with one extra methyl group so that it can be swallowed. It is an old oral androgen that is still prescribed in some countries.",
+   "pl": "Metylotestosteron to testosteron z jedną dodatkową grupą metylową, dzięki której można go połknąć. To dawny androgen doustny, który w niektórych krajach nadal się przepisuje.",
+   "es": "La metiltestosterona es testosterona con un grupo metilo adicional que permite tragarla. Es un andrógeno oral antiguo que todavía se receta en algunos países."
+  },
+  "how": {
+   "en": "It acts like testosterone at the androgen receptor. The extra group slows its breakdown in the liver, which is also the source of its liver risk.",
+   "pl": "Działa jak testosteron na receptor androgenowy. Dodatkowa grupa spowalnia jego rozkład w wątrobie, co jest też źródłem ryzyka dla wątroby.",
+   "es": "Actúa como la testosterona sobre el receptor de andrógenos. El grupo adicional frena su degradación en el hígado, que es también el origen de su riesgo hepático."
+  },
+  "med": {
+   "en": "It is approved for low testosterone in men, delayed puberty and, in some products, to relieve menopause symptoms combined with oestrogen. Newer testosterone forms are generally preferred today.",
+   "pl": "Jest zatwierdzony w niskim poziomie testosteronu u mężczyzn, opóźnionym dojrzewaniu i, w niektórych preparatach, w łagodzeniu objawów menopauzy w połączeniu z estrogenem. Dziś zwykle preferuje się nowsze postacie testosteronu.",
+   "es": "Está aprobada para la testosterona baja en hombres, la pubertad retrasada y, en algunos productos, para aliviar los síntomas de la menopausia combinada con estrógeno. Hoy suelen preferirse las formas más nuevas de testosterona."
+  },
+  "risk": {
+   "en": "As a methylated oral steroid it can harm the liver, including cholestatic jaundice and, with long use, liver tumours. It also carries the usual androgen risks of thicker blood, acne and lower fertility.",
+   "pl": "Jako metylowany steryd doustny może uszkadzać wątrobę, w tym powodować żółtaczkę cholestatyczną, a przy długim stosowaniu guzy wątroby. Niesie też typowe ryzyka androgenów: gęstszą krew, trądzik i niższą płodność.",
+   "es": "Al ser un esteroide oral metilado puede dañar el hígado, incluida la ictericia colestásica y, con el uso prolongado, tumores hepáticos. Además conlleva los riesgos habituales de los andrógenos: sangre más espesa, acné y menor fertilidad."
+  },
+  "pros": {
+   "en": [
+    "Approved for hypogonadism and delayed puberty",
+    "Taken by mouth",
+    "Long clinical history"
+   ],
+   "pl": [
+    "Zatwierdzony w hipogonadyzmie i opóźnionym dojrzewaniu",
+    "Przyjmowany doustnie",
+    "Długa historia kliniczna"
+   ],
+   "es": [
+    "Aprobada para el hipogonadismo y la pubertad retrasada",
+    "Se toma por vía oral",
+    "Largo historial clínico"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Liver toxicity, so doctors prefer other forms",
+    "Harder to dose steadily than gels or long-acting esters",
+    "Suppresses the body’s own testosterone"
+   ],
+   "pl": [
+    "Toksyczność dla wątroby, więc lekarze wolą inne postacie",
+    "Trudniej utrzymać stały poziom niż przy żelach czy długodziałających estrach",
+    "Hamuje własny testosteron organizmu"
+   ],
+   "es": [
+    "Toxicidad hepática, por lo que los médicos prefieren otras formas",
+    "Más difícil mantener un nivel estable que con geles o ésteres de acción prolongada",
+    "Suprime la testosterona del propio cuerpo"
+   ]
+  }
+ },
+ {
+  "id": "turinabol",
+  "n": "Chlorodehydromethyltestosterone",
+  "nm": {
+   "pl": "Chlorodehydrometylotestosteron",
+   "es": "Clorodehidrometiltestosterona"
+  },
+  "alt": {
+   "en": "Oral steroid known as “Turinabol”",
+   "pl": "Doustny steryd znany jako „Turinabol”",
+   "es": "Esteroide oral conocido como “Turinabol”"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "chlorodehydromethyltestosterone",
+  "label": false,
+  "what": {
+   "en": "This is a synthetic oral steroid developed in East Germany in the 1960s and sold as Oral-Turinabol. It was at the centre of that country’s state doping programme.",
+   "pl": "To syntetyczny doustny steryd opracowany w NRD w latach 60. i sprzedawany jako Oral-Turinabol. Był w centrum państwowego programu dopingowego tego kraju.",
+   "es": "Es un esteroide oral sintético desarrollado en la Alemania Oriental en la década de 1960 y vendido como Oral-Turinabol. Estuvo en el centro del programa estatal de dopaje de ese país."
+  },
+  "how": {
+   "en": "It is a modified version of testosterone that acts on the androgen receptor and was designed to have weak androgenic effects. Like other oral steroids it is chemically altered to survive the liver.",
+   "pl": "To zmodyfikowana wersja testosteronu działająca na receptor androgenowy, zaprojektowana tak, by miała słabe działanie androgenne. Jak inne sterydy doustne ma zmienioną budowę, by przetrwać przejście przez wątrobę.",
+   "es": "Es una versión modificada de la testosterona que actúa sobre el receptor de andrógenos y se diseñó para tener efectos androgénicos débiles. Como otros esteroides orales, está alterada químicamente para sobrevivir al hígado."
+  },
+  "med": {
+   "en": "It is not an approved medicine today. Its modern profile comes mainly from doping investigations and long-term follow-up of former athletes.",
+   "pl": "Dziś nie jest zatwierdzonym lekiem. Jego współczesny obraz pochodzi głównie z dochodzeń dopingowych i wieloletnich obserwacji byłych sportowców.",
+   "es": "Hoy no es un medicamento aprobado. Su perfil actual procede sobre todo de investigaciones de dopaje y del seguimiento a largo plazo de antiguos deportistas."
+  },
+  "risk": {
+   "en": "Follow-up of athletes from the East German programme documented serious long-term harm, including liver problems and, in women, masculinising changes and fertility problems. Traces remain detectable for months, which is why retesting of old samples has caught athletes years later.",
+   "pl": "Obserwacja sportowców z programu NRD udokumentowała poważne długotrwałe szkody, w tym problemy z wątrobą, a u kobiet zmiany maskulinizujące i problemy z płodnością. Ślady są wykrywalne przez miesiące, dlatego ponowne badanie starych próbek wykrywało sportowców po latach.",
+   "es": "El seguimiento de deportistas del programa de la Alemania Oriental documentó daños graves a largo plazo, como problemas hepáticos y, en mujeres, cambios masculinizantes y problemas de fertilidad. Las trazas siguen siendo detectables durante meses, por eso la repetición de análisis de muestras antiguas ha descubierto a deportistas años después."
+  },
+  "status": {
+   "en": "Not approved as a medicine anywhere today. It is a controlled anabolic steroid in the UK (Class C) and the US (Schedule III).",
+   "pl": "Dziś nie jest nigdzie zatwierdzony jako lek. To kontrolowany steryd anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III).",
+   "es": "Hoy no está aprobado como medicamento en ningún lugar. Es un esteroide anabólico controlado en el Reino Unido (clase C) y en EE. UU. (lista III)."
+  },
+  "pros": {
+   "en": [
+    "Designed to have weak androgenic effects",
+    "Long history of study in athletes",
+    "No oestrogen conversion"
+   ],
+   "pl": [
+    "Zaprojektowany tak, by miał słabe działanie androgenne",
+    "Długa historia badań u sportowców",
+    "Brak przemiany w estrogen"
+   ],
+   "es": [
+    "Diseñado para tener efectos androgénicos débiles",
+    "Largo historial de estudio en deportistas",
+    "No se convierte en estrógeno"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Not an approved medicine",
+    "Documented long-term harm in former athletes",
+    "Long detection window leads to doping bans"
+   ],
+   "pl": [
+    "Nie jest zatwierdzonym lekiem",
+    "Udokumentowane długotrwałe szkody u byłych sportowców",
+    "Długi okres wykrywalności prowadzi do dyskwalifikacji"
+   ],
+   "es": [
+    "No es un medicamento aprobado",
+    "Daños a largo plazo documentados en antiguos deportistas",
+    "Su larga ventana de detección conduce a sanciones por dopaje"
+   ]
+  }
+ },
+ {
+  "id": "mesterolone",
+  "n": "Mesterolone",
+  "nm": {
+   "pl": "Mesterolon",
+   "es": "Mesterolona"
+  },
+  "alt": {
+   "en": "Mild oral androgen, “Proviron”",
+   "pl": "Łagodny androgen doustny, „Proviron”",
+   "es": "Andrógeno oral suave, “Proviron”"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "mesterolone",
+  "what": {
+   "en": "Mesterolone is a mild oral androgen derived from dihydrotestosterone. It is a licensed medicine in some European countries and is not approved in the US.",
+   "pl": "Mesterolon to łagodny androgen doustny pochodzący od dihydrotestosteronu. Jest lekiem zarejestrowanym w niektórych krajach europejskich i nie jest zatwierdzony w USA.",
+   "es": "La mesterolona es un andrógeno oral suave derivado de la dihidrotestosterona. Es un medicamento autorizado en algunos países europeos y no está aprobado en EE. UU."
+  },
+  "how": {
+   "en": "It acts on the androgen receptor but, unlike methylated steroids, is not designed to build large amounts of muscle. It does not convert to oestrogen.",
+   "pl": "Działa na receptor androgenowy, ale w odróżnieniu od sterydów metylowanych nie ma budować dużej masy mięśniowej. Nie zamienia się w estrogen.",
+   "es": "Actúa sobre el receptor de andrógenos pero, a diferencia de los esteroides metilados, no está pensada para formar mucho músculo. No se convierte en estrógeno."
+  },
+  "med": {
+   "en": "It is prescribed for androgen deficiency in men, and has been used in some places to treat certain forms of male infertility.",
+   "pl": "Przepisuje się go przy niedoborze androgenów u mężczyzn, a w niektórych miejscach stosowano go w pewnych postaciach niepłodności męskiej.",
+   "es": "Se receta para la deficiencia de andrógenos en hombres y en algunos lugares se ha usado para tratar ciertas formas de infertilidad masculina."
+  },
+  "risk": {
+   "en": "It is milder on the liver than methylated steroids, but it still affects hormone balance and cholesterol, and at higher use it can lower the body’s own testosterone.",
+   "pl": "Mniej obciąża wątrobę niż sterydy metylowane, ale nadal wpływa na równowagę hormonalną i cholesterol, a przy większym stosowaniu może obniżać własny testosteron organizmu.",
+   "es": "Es más suave con el hígado que los esteroides metilados, pero aun así afecta al equilibrio hormonal y al colesterol y, con un uso mayor, puede reducir la testosterona del propio cuerpo."
+  },
+  "pros": {
+   "en": [
+    "Licensed in some countries for androgen deficiency",
+    "Gentler on the liver than methylated steroids",
+    "No oestrogen conversion"
+   ],
+   "pl": [
+    "Zarejestrowany w niektórych krajach w niedoborze androgenów",
+    "Łagodniejszy dla wątroby niż sterydy metylowane",
+    "Brak przemiany w estrogen"
+   ],
+   "es": [
+    "Autorizada en algunos países para la deficiencia de andrógenos",
+    "Más suave para el hígado que los esteroides metilados",
+    "No se convierte en estrógeno"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Weak muscle effect",
+    "Not approved in the US",
+    "Can still disturb hormone balance"
+   ],
+   "pl": [
+    "Słabe działanie na mięśnie",
+    "Niezatwierdzony w USA",
+    "Nadal może zaburzać równowagę hormonalną"
+   ],
+   "es": [
+    "Efecto débil sobre el músculo",
+    "No está aprobada en EE. UU.",
+    "Aun así puede alterar el equilibrio hormonal"
+   ]
+  }
+ }
 ]

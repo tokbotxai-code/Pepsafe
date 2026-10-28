@@ -6,6 +6,8 @@
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
 
+// Polish spells it "steryd" (corticosteroids stay "kortykosteroidy"); applied to every Polish string the section produces
+const plFix = s => typeof s === 'string' ? s.replace(/(?<!kortyko)([Ss])teroid/g, '$1teryd') : s;
 const norm = s => s.replace(/\s+/g, ' ').trim();
 const ESC = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -169,7 +171,7 @@ module.exports = function build(ctx) {
   const ARTS = loadArticles();
   const PAIRS = {};
   // fn(l) -> the text in language l; records EN->ES for tools/es.js and returns the text for the page being built
-  const S = (L, fn) => { const en = fn('en'), es = fn('es'); if (en && es) PAIRS[norm(ESC(en))] = ESC(es); return fn(L); };
+  const S = (L, fn) => { const en = fn('en'), es = fn('es'); if (en && es) PAIRS[norm(ESC(en))] = ESC(es); return L === 'pl' ? plFix(fn(L)) : fn(L); };
   const u = (L, k) => S(L, l => U(k, l));
   const tx = (L, o) => S(L, l => o[l]);           // o = {en,pl,es}
   const txA = (L, a) => S(L, l => a[{ en: 0, pl: 1, es: 2 }[l]]);   // a = [en, pl, es]
@@ -345,7 +347,7 @@ module.exports.navLabel = UI.nav;
 module.exports.finder = function (L) {
   const i = { en: 0, pl: 1, es: 2 }[L], low = x => String(x || '').toLowerCase();
   return load().map(e => ({
-    s: 's-' + e.id, x: 1, n: nmL(e, L), c: CLS[e.cls].name[L], st: UI.form[e.form || 'inj'][i],
-    t: low(['en', 'pl', 'es'].map(l => nmL(e, l) + ' ' + (e.alt ? e.alt[l] : '') + ' ' + e.what[l].split('. ')[0]).join(' ') + ' ' + CLS[e.cls].name.en + ' steroid steroidy esteroides')
+    s: 's-' + e.id, x: 1, n: nmL(e, L), c: L === 'pl' ? plFix(CLS[e.cls].name[L]) : CLS[e.cls].name[L], st: UI.form[e.form || 'inj'][i],
+    t: low(['en', 'pl', 'es'].map(l => nmL(e, l) + ' ' + (e.alt ? e.alt[l] : '') + ' ' + e.what[l].split('. ')[0]).join(' ') + ' ' + CLS[e.cls].name.en + ' steroid steryd sterydy esteroides')
   }));
 };

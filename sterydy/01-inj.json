@@ -56,7 +56,7 @@
    "pl": [
     "Wyłącza własną produkcję organizmu, a powrót może być wolny",
     "U części osób podnosi liczbę czerwonych krwinek i ciśnienie",
-    "Nadużywanie daje najdłuższą listę skutków ubocznych spośród steroidów"
+    "Nadużywanie daje najdłuższą listę skutków ubocznych spośród sterydów"
    ],
    "es": [
     "Apaga la producción propia del cuerpo y la recuperación puede ser lenta",
@@ -236,7 +236,7 @@
    ],
    "pl": [
     "Bardzo długie działanie oznacza mało dawek",
-    "Postać doustna omija uszkodzenie wątroby znane ze starszych doustnych steroidów",
+    "Postać doustna omija uszkodzenie wątroby znane ze starszych doustnych sterydów",
     "Zatwierdzony i kontrolowany w placówkach"
    ],
    "es": [
@@ -334,7 +334,7 @@
   "n": "Nandrolone decanoate",
   "alt": {
    "en": "Anabolic steroid, “Deca”",
-   "pl": "Steroid anaboliczny, „Deca”",
+   "pl": "Steryd anaboliczny, „Deca”",
    "es": "Esteroide anabólico, “Deca”"
   },
   "cls": "inj",
@@ -342,7 +342,7 @@
   "q": "nandrolone decanoate",
   "what": {
    "en": "Nandrolone decanoate is a long-acting anabolic steroid made from a testosterone-like molecule with one methyl group removed. It has a strong effect on muscle and bone and a weaker androgenic effect.",
-   "pl": "Dekanian nandrolonu to długodziałający steroid anaboliczny zbudowany na bazie cząsteczki podobnej do testosteronu, z usuniętą jedną grupą metylową. Silnie wpływa na mięśnie i kości, a słabiej androgennie.",
+   "pl": "Dekanian nandrolonu to długodziałający steryd anaboliczny zbudowany na bazie cząsteczki podobnej do testosteronu, z usuniętą jedną grupą metylową. Silnie wpływa na mięśnie i kości, a słabiej androgennie.",
    "es": "El decanoato de nandrolona es un esteroide anabólico de acción prolongada basado en una molécula parecida a la testosterona a la que falta un grupo metilo. Tiene un efecto marcado sobre el músculo y el hueso y uno androgénico más débil."
   },
   "how": {
@@ -400,7 +400,7 @@
   "n": "Trenbolone",
   "alt": {
    "en": "Veterinary anabolic steroid",
-   "pl": "Weterynaryjny steroid anaboliczny",
+   "pl": "Weterynaryjny steryd anaboliczny",
    "es": "Esteroide anabólico veterinario"
   },
   "cls": "inj",
@@ -409,12 +409,12 @@
   "label": false,
   "what": {
    "en": "Trenbolone is a very potent anabolic steroid made for cattle, where it is used as a growth implant. It has never been approved as a medicine for people.",
-   "pl": "Trenbolon to bardzo silny steroid anaboliczny stworzony dla bydła, gdzie stosuje się go jako implant wzrostowy. Nigdy nie został zatwierdzony jako lek dla ludzi.",
+   "pl": "Trenbolon to bardzo silny steryd anaboliczny stworzony dla bydła, gdzie stosuje się go jako implant wzrostowy. Nigdy nie został zatwierdzony jako lek dla ludzi.",
    "es": "La trembolona es un esteroide anabólico muy potente creado para el ganado, donde se usa como implante de crecimiento. Nunca se ha aprobado como medicamento para personas."
   },
   "how": {
    "en": "It binds the androgen receptor much more strongly than testosterone. It is not converted into oestrogen the way testosterone is, which is why its effects and side effects differ from other steroids.",
-   "pl": "Wiąże się z receptorem androgenowym znacznie silniej niż testosteron. Nie zamienia się w estrogen tak jak testosteron, dlatego jego działanie i skutki uboczne różnią się od innych steroidów.",
+   "pl": "Wiąże się z receptorem androgenowym znacznie silniej niż testosteron. Nie zamienia się w estrogen tak jak testosteron, dlatego jego działanie i skutki uboczne różnią się od innych sterydów.",
    "es": "Se une al receptor de andrógenos con mucha más fuerza que la testosterona. No se convierte en estrógeno como esta, por lo que sus efectos y efectos secundarios difieren de los de otros esteroides."
   },
   "med": {
@@ -429,7 +429,7 @@
   },
   "status": {
    "en": "Not approved for human use anywhere. It is a controlled anabolic steroid in the UK (Class C) and the US (Schedule III), and veterinary products are not legal for people to use.",
-   "pl": "Nie jest zatwierdzony do stosowania u ludzi nigdzie. To kontrolowany steroid anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III), a preparatów weterynaryjnych ludziom nie wolno stosować.",
+   "pl": "Nie jest zatwierdzony do stosowania u ludzi nigdzie. To kontrolowany steryd anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III), a preparatów weterynaryjnych ludziom nie wolno stosować.",
    "es": "No está aprobado para uso humano en ningún lugar. Es un esteroide anabólico controlado en el Reino Unido (clase C) y en EE. UU. (lista III), y los productos veterinarios no son legales para uso en personas."
   },
   "pros": {
@@ -472,7 +472,7 @@
   "n": "Boldenone",
   "alt": {
    "en": "Veterinary anabolic steroid, mainly used in horses",
-   "pl": "Weterynaryjny steroid anaboliczny, głównie u koni",
+   "pl": "Weterynaryjny steryd anaboliczny, głównie u koni",
    "es": "Esteroide anabólico veterinario, sobre todo en caballos"
   },
   "cls": "inj",
@@ -481,7 +481,7 @@
   "label": false,
   "what": {
    "en": "Boldenone is an anabolic steroid related to testosterone, developed for veterinary use, mainly in horses. It has no approved use in human medicine.",
-   "pl": "Boldenon to steroid anaboliczny spokrewniony z testosteronem, opracowany do użytku weterynaryjnego, głównie u koni. Nie ma zatwierdzonego zastosowania w medycynie ludzkiej.",
+   "pl": "Boldenon to steryd anaboliczny spokrewniony z testosteronem, opracowany do użytku weterynaryjnego, głównie u koni. Nie ma zatwierdzonego zastosowania w medycynie ludzkiej.",
    "es": "La boldenona es un esteroide anabólico emparentado con la testosterona, desarrollado para uso veterinario, sobre todo en caballos. No tiene ningún uso aprobado en medicina humana."
   },
   "how": {
@@ -501,7 +501,7 @@
   },
   "status": {
    "en": "Not approved for human use. It is a controlled anabolic steroid in the UK (Class C) and the US (Schedule III).",
-   "pl": "Nie jest zatwierdzony do stosowania u ludzi. To kontrolowany steroid anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III).",
+   "pl": "Nie jest zatwierdzony do stosowania u ludzi. To kontrolowany steryd anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III).",
    "es": "No está aprobado para uso humano. Es un esteroide anabólico controlado en el Reino Unido (clase C) y en EE. UU. (lista III)."
   },
   "pros": {
@@ -512,7 +512,7 @@
    ],
    "pl": [
     "Uznany preparat weterynaryjny",
-    "Łagodniejszy profil androgenny niż u niektórych steroidów",
+    "Łagodniejszy profil androgenny niż u niektórych sterydów",
     "Długie działanie dzięki estrowi"
    ],
    "es": [
@@ -618,12 +618,12 @@
   "q": "methenolone enanthate",
   "what": {
    "en": "Methenolone enanthate is a long-acting injectable form of a mild anabolic steroid derived from dihydrotestosterone. It was sold in Europe under the brand Primobolan Depot.",
-   "pl": "Enantan metenolonu to długodziałająca postać iniekcyjna łagodnego steroidu anabolicznego pochodzącego od dihydrotestosteronu. Sprzedawano go w Europie pod marką Primobolan Depot.",
+   "pl": "Enantan metenolonu to długodziałająca postać iniekcyjna łagodnego sterydu anabolicznego pochodzącego od dihydrotestosteronu. Sprzedawano go w Europie pod marką Primobolan Depot.",
    "es": "El enantato de metenolona es una forma inyectable de acción prolongada de un esteroide anabólico suave derivado de la dihidrotestosterona. Se vendía en Europa con la marca Primobolan Depot."
   },
   "how": {
    "en": "It acts on the androgen receptor with relatively low androgenic activity and does not turn into oestrogen. Its effect on muscle is modest next to stronger steroids.",
-   "pl": "Działa na receptor androgenowy ze stosunkowo niską aktywnością androgenną i nie zamienia się w estrogen. Jego wpływ na mięśnie jest umiarkowany w porównaniu z silniejszymi steroidami.",
+   "pl": "Działa na receptor androgenowy ze stosunkowo niską aktywnością androgenną i nie zamienia się w estrogen. Jego wpływ na mięśnie jest umiarkowany w porównaniu z silniejszymi sterydami.",
    "es": "Actúa sobre el receptor de andrógenos con una actividad androgénica relativamente baja y no se convierte en estrógeno. Su efecto sobre el músculo es modesto frente a esteroides más fuertes."
   },
   "med": {
@@ -633,7 +633,7 @@
   },
   "risk": {
    "en": "It suppresses natural testosterone, and in women it can cause masculinising effects. It is one of the most counterfeited steroids, so products sold under this name often contain something else.",
-   "pl": "Hamuje naturalny testosteron, a u kobiet może powodować maskulinizację. To jeden z najczęściej podrabianych steroidów, więc produkty sprzedawane pod tą nazwą często zawierają coś innego.",
+   "pl": "Hamuje naturalny testosteron, a u kobiet może powodować maskulinizację. To jeden z najczęściej podrabianych sterydów, więc produkty sprzedawane pod tą nazwą często zawierają coś innego.",
    "es": "Suprime la testosterona natural y en las mujeres puede causar efectos masculinizantes. Es uno de los esteroides más falsificados, así que los productos vendidos con este nombre a menudo contienen otra cosa."
   },
   "pros": {

@@ -1,66 +1,567 @@
 [
-{"id":"clomiphene","n":"Clomiphene","nm":{"pl":"Klomifen","es":"Clomifeno"},"alt":{"en":"Fertility drug, SERM","pl":"Lek na płodność, SERM","es":"Fármaco de fertilidad, SERM"},"cls":"mod","form":"oral","q":"clomiphene",
-"what":{"en":"Clomiphene is a selective oestrogen receptor modulator (SERM) that blocks oestrogen signals in the brain. It has been used for decades to help women ovulate.","pl":"Klomifen to selektywny modulator receptora estrogenowego (SERM), który blokuje sygnały estrogenowe w mózgu. Od dziesięcioleci pomaga kobietom w owulacji.","es":"El clomifeno es un modulador selectivo de los receptores de estrógeno (SERM) que bloquea las señales de estrógeno en el cerebro. Se usa desde hace décadas para ayudar a las mujeres a ovular."},
-"how":{"en":"By blocking oestrogen’s feedback to the brain, it makes the pituitary release more of the hormones that tell the ovaries, or in men the testes, to work.","pl":"Blokując zwrotne działanie estrogenu na mózg, sprawia, że przysadka wydziela więcej hormonów, które każą pracować jajnikom, a u mężczyzn jądrom.","es":"Al bloquear la retroalimentación del estrógeno hacia el cerebro, hace que la hipófisis libere más de las hormonas que ordenan trabajar a los ovarios o, en hombres, a los testículos."},
-"med":{"en":"It is approved to treat ovulation problems in women. Doctors sometimes use it off-label in men with low testosterone who want to keep their fertility.","pl":"Jest zatwierdzony w leczeniu zaburzeń owulacji u kobiet. Lekarze czasem stosują go poza wskazaniami u mężczyzn z niskim testosteronem, którzy chcą zachować płodność.","es":"Está aprobado para tratar problemas de ovulación en mujeres. Los médicos a veces lo usan fuera de indicación en hombres con testosterona baja que quieren conservar su fertilidad."},
-"risk":{"en":"Common effects include hot flushes, mood changes and headaches, and it can cause visual disturbances that need to be reported to a doctor. In women it can lead to multiple pregnancies and ovarian overstimulation.","pl":"Częste skutki to uderzenia gorąca, zmiany nastroju i bóle głowy, a może powodować zaburzenia widzenia, o których trzeba powiedzieć lekarzowi. U kobiet może prowadzić do ciąż mnogich i nadmiernej stymulacji jajników.","es":"Los efectos frecuentes incluyen sofocos, cambios de humor y dolores de cabeza, y puede provocar alteraciones visuales que hay que comunicar al médico. En mujeres puede llevar a embarazos múltiples y a hiperestimulación ovárica."},
-"pros":{"en":["Approved fertility medicine with decades of use","Taken by mouth","In men it can raise the body’s own testosterone without adding hormone"],"pl":["Zatwierdzony lek na płodność z dziesięcioleciami stosowania","Przyjmowany doustnie","U mężczyzn może podnosić własny testosteron bez dodawania hormonu"],"es":["Medicamento de fertilidad aprobado con décadas de uso","Se toma por vía oral","En hombres puede subir la testosterona propia sin añadir hormona"]},
-"cons":{"en":["Visual disturbances and mood effects","Use in men is off-label","Prohibited in sport"],"pl":["Zaburzenia widzenia i wpływ na nastrój","Stosowanie u mężczyzn jest poza wskazaniami","Zabroniony w sporcie"],"es":["Alteraciones visuales y efectos sobre el ánimo","El uso en hombres es fuera de indicación","Prohibido en el deporte"]}},
-
-{"id":"tamoxifen","n":"Tamoxifen","nm":{"pl":"Tamoksyfen","es":"Tamoxifeno"},"alt":{"en":"Breast cancer drug, SERM","pl":"Lek na raka piersi, SERM","es":"Fármaco contra el cáncer de mama, SERM"},"cls":"mod","form":"oral","q":"tamoxifen",
-"what":{"en":"Tamoxifen is a SERM that blocks oestrogen’s action on breast tissue. It has been a standard treatment for oestrogen-sensitive breast cancer for decades.","pl":"Tamoksyfen to SERM blokujący działanie estrogenu na tkankę piersi. Od dziesięcioleci jest standardowym leczeniem raka piersi wrażliwego na estrogeny.","es":"El tamoxifeno es un SERM que bloquea la acción del estrógeno sobre el tejido mamario. Es desde hace décadas un tratamiento estándar del cáncer de mama sensible a los estrógenos."},
-"how":{"en":"It occupies oestrogen receptors in breast cells, which stops hormone-driven tumours from growing. In some other tissues, such as bone and the uterus, it acts like a weak oestrogen.","pl":"Zajmuje receptory estrogenowe w komórkach piersi, co zatrzymuje wzrost nowotworów zależnych od hormonów. W niektórych innych tkankach, jak kość i macica, działa jak słaby estrogen.","es":"Ocupa los receptores de estrógeno de las células mamarias, lo que frena el crecimiento de tumores dependientes de hormonas. En otros tejidos, como el hueso y el útero, actúa como un estrógeno débil."},
-"med":{"en":"It is approved for treating and lowering the risk of recurrence of breast cancer, and to reduce risk in some high-risk women.","pl":"Jest zatwierdzony w leczeniu raka piersi i zmniejszaniu ryzyka nawrotu oraz w ograniczaniu ryzyka u niektórych kobiet z grupy wysokiego ryzyka.","es":"Está aprobado para tratar el cáncer de mama, reducir el riesgo de recaída y disminuir el riesgo en algunas mujeres de alto riesgo."},
-"risk":{"en":"Serious risks include blood clots and stroke, and in women a higher chance of endometrial cancer. Hot flushes and mood changes are common.","pl":"Poważne ryzyka to zakrzepy i udar, a u kobiet większa szansa na raka błony śluzowej macicy. Częste są uderzenia gorąca i zmiany nastroju.","es":"Los riesgos graves incluyen coágulos y accidente cerebrovascular y, en mujeres, una mayor probabilidad de cáncer de endometrio. Los sofocos y los cambios de humor son frecuentes."},
-"pros":{"en":["Proven to lower breast cancer recurrence","Decades of large trials","Taken by mouth"],"pl":["Udowodnione zmniejszanie nawrotów raka piersi","Dziesięciolecia dużych badań","Przyjmowany doustnie"],"es":["Demostrado que reduce las recaídas del cáncer de mama","Décadas de grandes ensayos","Se toma por vía oral"]},
-"cons":{"en":["Blood clot and stroke risk","Raises endometrial cancer risk","Needs a doctor and monitoring"],"pl":["Ryzyko zakrzepów i udaru","Zwiększa ryzyko raka błony śluzowej macicy","Wymaga lekarza i kontroli"],"es":["Riesgo de coágulos e ictus","Aumenta el riesgo de cáncer de endometrio","Requiere médico y seguimiento"]}},
-
-{"id":"anastrozole","n":"Anastrozole","nm":{"pl":"Anastrozol","es":"Anastrozol"},"alt":{"en":"Aromatase inhibitor, breast cancer drug","pl":"Inhibitor aromatazy, lek na raka piersi","es":"Inhibidor de la aromatasa, fármaco contra el cáncer de mama"},"cls":"mod","form":"oral","q":"anastrozole",
-"what":{"en":"Anastrozole is an aromatase inhibitor. It blocks the enzyme that turns testosterone into oestrogen and is used in breast cancer treatment.","pl":"Anastrozol to inhibitor aromatazy. Blokuje enzym przekształcający testosteron w estrogen i stosuje się go w leczeniu raka piersi.","es":"El anastrozol es un inhibidor de la aromatasa. Bloquea la enzima que convierte la testosterona en estrógeno y se usa en el tratamiento del cáncer de mama."},
-"how":{"en":"By stopping oestrogen production in fat and other tissue, it lowers oestrogen levels sharply. That starves oestrogen-driven tumours.","pl":"Zatrzymując produkcję estrogenu w tkance tłuszczowej i innych tkankach, mocno obniża jego poziom. To pozbawia wzrostu nowotwory zależne od estrogenu.","es":"Al frenar la producción de estrógeno en la grasa y otros tejidos, reduce mucho sus niveles. Eso priva de estímulo a los tumores dependientes de estrógeno."},
-"med":{"en":"It is approved for hormone-receptor-positive breast cancer in women after menopause. Its use in men is off-label.","pl":"Jest zatwierdzony w raku piersi z receptorami hormonalnymi u kobiet po menopauzie. Stosowanie u mężczyzn jest poza wskazaniami.","es":"Está aprobado para el cáncer de mama con receptores hormonales en mujeres tras la menopausia. Su uso en hombres es fuera de indicación."},
-"risk":{"en":"The label lists bone thinning and fractures, joint pain, hot flushes and higher cholesterol. Lowering oestrogen too far is harmful in men too, because oestrogen helps protect bones and affects mood and libido.","pl":"Ulotka wymienia ścieńczenie kości i złamania, bóle stawów, uderzenia gorąca i wyższy cholesterol. Zbyt duże obniżenie estrogenu szkodzi także mężczyznom, bo estrogen pomaga chronić kości oraz wpływa na nastrój i libido.","es":"El prospecto cita adelgazamiento óseo y fracturas, dolor articular, sofocos y colesterol más alto. Reducir demasiado el estrógeno es perjudicial también en hombres, porque el estrógeno ayuda a proteger los huesos y afecta al ánimo y a la libido."},
-"pros":{"en":["Proven in postmenopausal breast cancer","Taken by mouth","Large trial base"],"pl":["Sprawdzony w raku piersi po menopauzie","Przyjmowany doustnie","Duża baza badań"],"es":["Probado en el cáncer de mama posmenopáusico","Se toma por vía oral","Amplia base de ensayos"]},
-"cons":{"en":["Bone loss and joint pain","Off-label in men, with less safety data there","Prohibited in sport"],"pl":["Utrata kości i bóle stawów","U mężczyzn poza wskazaniami, z mniejszą ilością danych o bezpieczeństwie","Zabroniony w sporcie"],"es":["Pérdida ósea y dolor articular","En hombres es fuera de indicación, con menos datos de seguridad","Prohibido en el deporte"]}},
-
-{"id":"letrozole","n":"Letrozole","nm":{"pl":"Letrozol","es":"Letrozol"},"alt":{"en":"Aromatase inhibitor, breast cancer drug","pl":"Inhibitor aromatazy, lek na raka piersi","es":"Inhibidor de la aromatasa, fármaco contra el cáncer de mama"},"cls":"mod","form":"oral","q":"letrozole",
-"what":{"en":"Letrozole is a strong aromatase inhibitor used mainly for breast cancer in women after menopause. It is also used off-label to help ovulation.","pl":"Letrozol to silny inhibitor aromatazy stosowany głównie w raku piersi u kobiet po menopauzie. Stosuje się go też poza wskazaniami, by wspomóc owulację.","es":"El letrozol es un inhibidor de la aromatasa potente que se usa sobre todo en el cáncer de mama de mujeres tras la menopausia. También se usa fuera de indicación para favorecer la ovulación."},
-"how":{"en":"It blocks aromatase and cuts the body’s oestrogen production, more than most drugs of its type. In fertility care that lower oestrogen makes the brain release more of the hormones that trigger ovulation.","pl":"Blokuje aromatazę i obniża produkcję estrogenu w organizmie, silniej niż większość leków tego typu. W leczeniu niepłodności niższy estrogen sprawia, że mózg wydziela więcej hormonów wyzwalających owulację.","es":"Bloquea la aromatasa y reduce la producción de estrógeno del cuerpo, más que la mayoría de los fármacos de su tipo. En fertilidad, ese estrógeno más bajo hace que el cerebro libere más de las hormonas que desencadenan la ovulación."},
-"med":{"en":"It is approved for early and advanced breast cancer in postmenopausal women. Fertility clinics also use it off-label in some women.","pl":"Jest zatwierdzony we wczesnym i zaawansowanym raku piersi u kobiet po menopauzie. Kliniki leczenia niepłodności stosują go też poza wskazaniami u niektórych kobiet.","es":"Está aprobado para el cáncer de mama precoz y avanzado en mujeres posmenopáusicas. Las clínicas de fertilidad también lo usan fuera de indicación en algunas mujeres."},
-"risk":{"en":"Common problems are hot flushes, joint and muscle aches, tiredness and bone thinning. Taken without a medical reason it can drive oestrogen too low and upset hormone balance.","pl":"Częste problemy to uderzenia gorąca, bóle stawów i mięśni, zmęczenie i ścieńczenie kości. Przyjmowany bez wskazań medycznych może obniżyć estrogen zbyt mocno i zaburzyć równowagę hormonalną.","es":"Los problemas frecuentes son sofocos, dolores articulares y musculares, cansancio y adelgazamiento óseo. Tomado sin motivo médico puede bajar demasiado el estrógeno y alterar el equilibrio hormonal."},
-"pros":{"en":["Proven in breast cancer","Used in fertility care under supervision","Taken by mouth"],"pl":["Sprawdzony w raku piersi","Stosowany w leczeniu niepłodności pod nadzorem","Przyjmowany doustnie"],"es":["Probado en el cáncer de mama","Usado en fertilidad bajo supervisión","Se toma por vía oral"]},
-"cons":{"en":["Bone thinning and joint pain","Can push oestrogen too low","Prohibited in sport"],"pl":["Ścieńczenie kości i bóle stawów","Może obniżyć estrogen zbyt mocno","Zabroniony w sporcie"],"es":["Adelgazamiento óseo y dolor articular","Puede bajar demasiado el estrógeno","Prohibido en el deporte"]}},
-
-{"id":"hcg","n":"hCG","nm":{"pl":"hCG","es":"hCG"},"alt":{"en":"Human chorionic gonadotropin, a pregnancy hormone","pl":"Gonadotropina kosmówkowa, hormon ciąży","es":"Gonadotropina coriónica humana, una hormona del embarazo"},"cls":"mod","form":"inj","q":"chorionic gonadotropin",
-"what":{"en":"hCG is a protein hormone made by the placenta in pregnancy. As a medicine it mimics LH, the hormone that tells the testes and ovaries to work, which makes it a peptide-family drug, not a steroid.","pl":"hCG to hormon białkowy wytwarzany przez łożysko w ciąży. Jako lek naśladuje LH, hormon każący pracować jądrom i jajnikom, więc należy do rodziny leków peptydowych, a nie steroidów.","es":"La hCG es una hormona proteica fabricada por la placenta durante el embarazo. Como medicamento imita a la LH, la hormona que ordena trabajar a los testículos y los ovarios, por lo que es un fármaco de la familia de los péptidos y no un esteroide."},
-"how":{"en":"In men it stimulates the testes to make testosterone and sperm. In women it triggers the release of an egg.","pl":"U mężczyzn pobudza jądra do produkcji testosteronu i plemników. U kobiet wyzwala uwolnienie komórki jajowej.","es":"En hombres estimula los testículos para producir testosterona y espermatozoides. En mujeres desencadena la liberación de un óvulo."},
-"med":{"en":"It is approved for fertility treatment, for boys with undescended testes and for men with certain pituitary-related forms of low testosterone.","pl":"Jest zatwierdzony w leczeniu niepłodności, u chłopców z niezstąpionymi jądrami i u mężczyzn z niektórymi postaciami niskiego testosteronu o podłożu przysadkowym.","es":"Está aprobada para el tratamiento de la fertilidad, para niños con testículos sin descender y para hombres con ciertas formas de testosterona baja de origen hipofisario."},
-"risk":{"en":"Possible effects are headaches, mood changes, breast tenderness, and in women ovarian overstimulation. Its use to chase muscle or weight loss is not supported by evidence and is among the issues regulators have warned about.","pl":"Możliwe skutki to bóle głowy, zmiany nastroju, tkliwość piersi, a u kobiet nadmierna stymulacja jajników. Jego stosowanie dla mięśni lub utraty wagi nie ma poparcia w dowodach i należy do spraw, przed którymi ostrzegały organy nadzoru.","es":"Los efectos posibles son dolor de cabeza, cambios de humor, sensibilidad mamaria y, en mujeres, hiperestimulación ovárica. Su uso para ganar músculo o perder peso no está respaldado por la evidencia y es uno de los temas sobre los que han advertido los reguladores."},
-"wada":{"en":"WADA prohibits hCG in male athletes at all times (category S2), because it raises testosterone.","pl":"WADA zakazuje hCG u sportowców mężczyzn przez cały czas (kategoria S2), bo podnosi testosteron.","es":"La AMA prohíbe la hCG en deportistas varones en todo momento (categoría S2), porque eleva la testosterona."},
-"pros":{"en":["Approved for fertility and for specific hormone disorders","Raises testosterone while keeping the testes active","Long clinical use"],"pl":["Zatwierdzony w niepłodności i w określonych zaburzeniach hormonalnych","Podnosi testosteron, utrzymując aktywność jąder","Długie stosowanie kliniczne"],"es":["Aprobada para fertilidad y para trastornos hormonales concretos","Sube la testosterona manteniendo activos los testículos","Largo uso clínico"]},
-"cons":{"en":["Needs a doctor and is given by injection","Not supported for weight loss or muscle gain","Prohibited in male athletes"],"pl":["Wymaga lekarza i jest podawany w iniekcji","Brak poparcia w utracie wagi i budowie mięśni","Zabroniony u sportowców mężczyzn"],"es":["Requiere médico y se administra por inyección","Sin respaldo para perder peso ni ganar músculo","Prohibida en deportistas varones"]}},
-
-{"id":"prednisone","n":"Prednisone","nm":{"pl":"Prednizon","es":"Prednisona"},"alt":{"en":"Common corticosteroid tablet","pl":"Popularna tabletka kortykosteroidowa","es":"Comprimido corticosteroide habitual"},"cls":"cort","form":"oral","q":"prednisone",
-"what":{"en":"Prednisone is a corticosteroid taken by mouth. The body converts it to prednisolone, which copies the stress hormone cortisol.","pl":"Prednizon to kortykosteroid przyjmowany doustnie. Organizm przekształca go w prednizolon, który naśladuje hormon stresu kortyzol.","es":"La prednisona es un corticosteroide que se toma por vía oral. El cuerpo la convierte en prednisolona, que imita la hormona del estrés cortisol."},
-"how":{"en":"It calms inflammation and slows the immune system. It does not build muscle; over time it breaks muscle down.","pl":"Hamuje zapalenie i spowalnia układ odpornościowy. Nie buduje mięśni; z czasem je rozkłada.","es":"Calma la inflamación y frena el sistema inmunitario. No construye músculo; con el tiempo lo degrada."},
-"med":{"en":"It is used for asthma flares, allergic reactions, autoimmune conditions such as lupus and rheumatoid arthritis, inflammatory bowel disease and some cancers.","pl":"Stosuje się go w zaostrzeniach astmy, reakcjach alergicznych, chorobach autoimmunologicznych, takich jak toczeń i reumatoidalne zapalenie stawów, nieswoistych zapaleniach jelit i niektórych nowotworach.","es":"Se usa en crisis de asma, reacciones alérgicas, enfermedades autoinmunes como el lupus y la artritis reumatoide, enfermedad inflamatoria intestinal y algunos cánceres."},
-"risk":{"en":"Longer use can cause weight gain, high blood sugar, raised blood pressure, mood changes, thinner bones, cataracts and a higher chance of infection. After weeks of use the body’s own cortisol production switches off, so treatment must not be stopped suddenly without medical advice.","pl":"Dłuższe stosowanie może powodować przyrost wagi, wysoki cukier, podwyższone ciśnienie, zmiany nastroju, ścieńczenie kości, zaćmę i większą podatność na zakażenia. Po tygodniach stosowania własna produkcja kortyzolu wyłącza się, dlatego nie wolno nagle przerywać leczenia bez porady lekarza.","es":"El uso prolongado puede causar aumento de peso, azúcar alto, presión arterial elevada, cambios de ánimo, huesos más delgados, cataratas y mayor probabilidad de infecciones. Tras semanas de uso, la producción propia de cortisol se apaga, por lo que el tratamiento no debe suspenderse bruscamente sin consejo médico."},
-"pros":{"en":["Fast, powerful control of inflammation","Can be lifesaving in severe flares","Cheap and widely available on prescription"],"pl":["Szybkie, silne opanowanie zapalenia","Może ratować życie w ciężkich zaostrzeniach","Tani i szeroko dostępny na receptę"],"es":["Control rápido y potente de la inflamación","Puede salvar la vida en brotes graves","Barato y ampliamente disponible con receta"]},
-"cons":{"en":["Many side effects with long use","Switches off natural cortisol, so it must be tapered","Weakens bones and the immune system"],"pl":["Wiele skutków ubocznych przy długim stosowaniu","Wyłącza naturalny kortyzol, więc trzeba go odstawiać stopniowo","Osłabia kości i układ odpornościowy"],"es":["Muchos efectos secundarios con el uso prolongado","Apaga el cortisol natural, por lo que debe retirarse de forma gradual","Debilita los huesos y el sistema inmunitario"]}},
-
-{"id":"dexamethasone","n":"Dexamethasone","nm":{"pl":"Deksametazon","es":"Dexametasona"},"alt":{"en":"Potent corticosteroid","pl":"Silny kortykosteroid","es":"Corticosteroide potente"},"cls":"cort","form":"mix","q":"dexamethasone",
-"what":{"en":"Dexamethasone is a very potent, long-acting corticosteroid, given by mouth, injection or drops. It became widely known in 2020 for its role in severe COVID-19.","pl":"Deksametazon to bardzo silny, długodziałający kortykosteroid podawany doustnie, w iniekcji lub w kroplach. W 2020 roku zrobiło się o nim głośno z powodu roli w ciężkim COVID-19.","es":"La dexametasona es un corticosteroide muy potente y de acción prolongada, administrado por vía oral, inyectable o en gotas. Se hizo muy conocida en 2020 por su papel en la COVID-19 grave."},
-"how":{"en":"It strongly dampens inflammation and the immune response. It is many times more potent than hydrocortisone and acts for longer.","pl":"Silnie tłumi zapalenie i odpowiedź immunologiczną. Jest wielokrotnie silniejszy od hydrokortyzonu i działa dłużej.","es":"Reduce con fuerza la inflamación y la respuesta inmunitaria. Es muchas veces más potente que la hidrocortisona y actúa durante más tiempo."},
-"med":{"en":"It is used in severe allergic reactions, swelling in the brain, many cancers and as supportive care in chemotherapy. In the UK RECOVERY trial it reduced deaths in hospitalised COVID-19 patients who needed oxygen or ventilation.","pl":"Stosuje się go w ciężkich reakcjach alergicznych, obrzęku mózgu, wielu nowotworach i jako leczenie wspomagające przy chemioterapii. W brytyjskim badaniu RECOVERY zmniejszył liczbę zgonów wśród hospitalizowanych chorych na COVID-19, którzy potrzebowali tlenu lub wentylacji.","es":"Se usa en reacciones alérgicas graves, edema cerebral, muchos cánceres y como tratamiento de apoyo en quimioterapia. En el ensayo británico RECOVERY redujo las muertes en pacientes hospitalizados con COVID-19 que necesitaban oxígeno o ventilación."},
-"risk":{"en":"High or long use can raise blood sugar, weaken bones and muscles, disturb sleep and mood, cause stomach irritation and raise infection risk. As with prednisone, stopping suddenly after long use can be dangerous because the adrenal glands have switched off.","pl":"Duże lub długie stosowanie może podnosić cukier, osłabiać kości i mięśnie, zaburzać sen i nastrój, drażnić żołądek i zwiększać ryzyko zakażeń. Tak jak przy prednizonie nagłe przerwanie po długim stosowaniu może być niebezpieczne, bo nadnercza się wyłączyły.","es":"El uso elevado o prolongado puede subir el azúcar, debilitar huesos y músculos, alterar el sueño y el ánimo, irritar el estómago y aumentar el riesgo de infecciones. Como con la prednisona, suspenderla de golpe tras un uso prolongado puede ser peligroso porque las glándulas suprarrenales se han apagado."},
-"pros":{"en":["Very potent and long acting","Proven benefit in severe COVID-19","Many routes of administration"],"pl":["Bardzo silny i długo działający","Udowodniona korzyść w ciężkim COVID-19","Wiele dróg podania"],"es":["Muy potente y de acción prolongada","Beneficio demostrado en la COVID-19 grave","Muchas vías de administración"]},
-"cons":{"en":["Raises blood sugar and weakens muscle and bone with long use","Suppresses the immune system","Must be tapered after long use"],"pl":["Podnosi cukier i osłabia mięśnie oraz kości przy długim stosowaniu","Osłabia układ odpornościowy","Po długim stosowaniu trzeba odstawiać stopniowo"],"es":["Sube el azúcar y debilita músculo y hueso con el uso prolongado","Debilita el sistema inmunitario","Debe retirarse gradualmente tras un uso prolongado"]}},
-
-{"id":"hydrocortisone","n":"Hydrocortisone","nm":{"pl":"Hydrokortyzon","es":"Hidrocortisona"},"alt":{"en":"The medicine form of cortisol","pl":"Lekowa postać kortyzolu","es":"La forma medicamentosa del cortisol"},"cls":"cort","form":"mix","q":"hydrocortisone",
-"what":{"en":"Hydrocortisone is the medicine version of cortisol, the hormone the adrenal glands make every day. It is used as a cream, a tablet or an injection.","pl":"Hydrokortyzon to lekowa wersja kortyzolu, hormonu, który nadnercza wytwarzają codziennie. Występuje jako krem, tabletka lub iniekcja.","es":"La hidrocortisona es la versión medicamentosa del cortisol, la hormona que las glándulas suprarrenales fabrican a diario. Se usa en crema, comprimidos o inyección."},
-"how":{"en":"It replaces or adds to the body’s cortisol and calms inflammation. It is weaker than prednisone, which makes it suitable for replacement therapy.","pl":"Zastępuje lub uzupełnia kortyzol organizmu i hamuje zapalenie. Jest słabszy niż prednizon, dlatego nadaje się do leczenia substytucyjnego.","es":"Sustituye o complementa el cortisol del cuerpo y calma la inflamación. Es más débil que la prednisona, lo que lo hace adecuado para la terapia de sustitución."},
-"med":{"en":"It is the standard replacement for people whose adrenal glands do not make enough cortisol, as in Addison’s disease. Creams treat eczema and skin irritation.","pl":"To standardowe leczenie zastępcze u osób, których nadnercza nie wytwarzają dość kortyzolu, na przykład w chorobie Addisona. Kremy leczą wyprysk i podrażnienia skóry.","es":"Es el reemplazo estándar para quienes tienen unas glándulas suprarrenales que no producen suficiente cortisol, como en la enfermedad de Addison. Las cremas tratan el eccema y la irritación de la piel."},
-"risk":{"en":"Replacement doses are generally well tolerated. Higher doses over time can cause weight gain, thin skin, high blood sugar and bone loss, and creams used for long on thin skin can make it weaker.","pl":"Dawki zastępcze są zwykle dobrze tolerowane. Wyższe dawki w dłuższym czasie mogą powodować przyrost wagi, ścieńczenie skóry, wysoki cukier i utratę kości, a kremy stosowane długo na cienkiej skórze mogą ją osłabiać.","es":"Las dosis de sustitución suelen tolerarse bien. Dosis más altas durante mucho tiempo pueden causar aumento de peso, piel fina, azúcar alto y pérdida ósea, y las cremas usadas mucho tiempo sobre piel delgada pueden debilitarla."},
-"pros":{"en":["The standard replacement in adrenal insufficiency","Mild enough for long replacement therapy","Cream form is widely used for skin conditions"],"pl":["Standardowe leczenie zastępcze w niewydolności nadnerczy","Wystarczająco łagodny do długiego leczenia substytucyjnego","Postać kremu szeroko stosowana w chorobach skóry"],"es":["El reemplazo estándar en la insuficiencia suprarrenal","Suficientemente suave para una terapia de sustitución prolongada","La crema se usa mucho en enfermedades de la piel"]},
-"cons":{"en":["Weaker anti-inflammatory power than newer steroids","High doses over time carry the usual steroid risks","Cannot be stopped suddenly in people who depend on it"],"pl":["Słabsze działanie przeciwzapalne niż nowsze steroidy","Wysokie dawki w dłuższym czasie niosą zwykłe ryzyka steroidów","Nie można go nagle odstawić u osób od niego zależnych"],"es":["Menor potencia antiinflamatoria que los esteroides más nuevos","Las dosis altas durante mucho tiempo conllevan los riesgos habituales de los esteroides","No se puede suspender de golpe en quienes dependen de él"]}}
+ {
+  "id": "clomiphene",
+  "n": "Clomiphene",
+  "nm": {
+   "pl": "Klomifen",
+   "es": "Clomifeno"
+  },
+  "alt": {
+   "en": "Fertility drug, SERM",
+   "pl": "Lek na płodność, SERM",
+   "es": "Fármaco de fertilidad, SERM"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "clomiphene",
+  "what": {
+   "en": "Clomiphene is a selective oestrogen receptor modulator (SERM) that blocks oestrogen signals in the brain. It has been used for decades to help women ovulate.",
+   "pl": "Klomifen to selektywny modulator receptora estrogenowego (SERM), który blokuje sygnały estrogenowe w mózgu. Od dziesięcioleci pomaga kobietom w owulacji.",
+   "es": "El clomifeno es un modulador selectivo de los receptores de estrógeno (SERM) que bloquea las señales de estrógeno en el cerebro. Se usa desde hace décadas para ayudar a las mujeres a ovular."
+  },
+  "how": {
+   "en": "By blocking oestrogen’s feedback to the brain, it makes the pituitary release more of the hormones that tell the ovaries, or in men the testes, to work.",
+   "pl": "Blokując zwrotne działanie estrogenu na mózg, sprawia, że przysadka wydziela więcej hormonów, które każą pracować jajnikom, a u mężczyzn jądrom.",
+   "es": "Al bloquear la retroalimentación del estrógeno hacia el cerebro, hace que la hipófisis libere más de las hormonas que ordenan trabajar a los ovarios o, en hombres, a los testículos."
+  },
+  "med": {
+   "en": "It is approved to treat ovulation problems in women. Doctors sometimes use it off-label in men with low testosterone who want to keep their fertility.",
+   "pl": "Jest zatwierdzony w leczeniu zaburzeń owulacji u kobiet. Lekarze czasem stosują go poza wskazaniami u mężczyzn z niskim testosteronem, którzy chcą zachować płodność.",
+   "es": "Está aprobado para tratar problemas de ovulación en mujeres. Los médicos a veces lo usan fuera de indicación en hombres con testosterona baja que quieren conservar su fertilidad."
+  },
+  "risk": {
+   "en": "Common effects include hot flushes, mood changes and headaches, and it can cause visual disturbances that need to be reported to a doctor. In women it can lead to multiple pregnancies and ovarian overstimulation.",
+   "pl": "Częste skutki to uderzenia gorąca, zmiany nastroju i bóle głowy, a może powodować zaburzenia widzenia, o których trzeba powiedzieć lekarzowi. U kobiet może prowadzić do ciąż mnogich i nadmiernej stymulacji jajników.",
+   "es": "Los efectos frecuentes incluyen sofocos, cambios de humor y dolores de cabeza, y puede provocar alteraciones visuales que hay que comunicar al médico. En mujeres puede llevar a embarazos múltiples y a hiperestimulación ovárica."
+  },
+  "pros": {
+   "en": [
+    "Approved fertility medicine with decades of use",
+    "Taken by mouth",
+    "In men it can raise the body’s own testosterone without adding hormone"
+   ],
+   "pl": [
+    "Zatwierdzony lek na płodność z dziesięcioleciami stosowania",
+    "Przyjmowany doustnie",
+    "U mężczyzn może podnosić własny testosteron bez dodawania hormonu"
+   ],
+   "es": [
+    "Medicamento de fertilidad aprobado con décadas de uso",
+    "Se toma por vía oral",
+    "En hombres puede subir la testosterona propia sin añadir hormona"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Visual disturbances and mood effects",
+    "Use in men is off-label",
+    "Prohibited in sport"
+   ],
+   "pl": [
+    "Zaburzenia widzenia i wpływ na nastrój",
+    "Stosowanie u mężczyzn jest poza wskazaniami",
+    "Zabroniony w sporcie"
+   ],
+   "es": [
+    "Alteraciones visuales y efectos sobre el ánimo",
+    "El uso en hombres es fuera de indicación",
+    "Prohibido en el deporte"
+   ]
+  }
+ },
+ {
+  "id": "tamoxifen",
+  "n": "Tamoxifen",
+  "nm": {
+   "pl": "Tamoksyfen",
+   "es": "Tamoxifeno"
+  },
+  "alt": {
+   "en": "Breast cancer drug, SERM",
+   "pl": "Lek na raka piersi, SERM",
+   "es": "Fármaco contra el cáncer de mama, SERM"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "tamoxifen",
+  "what": {
+   "en": "Tamoxifen is a SERM that blocks oestrogen’s action on breast tissue. It has been a standard treatment for oestrogen-sensitive breast cancer for decades.",
+   "pl": "Tamoksyfen to SERM blokujący działanie estrogenu na tkankę piersi. Od dziesięcioleci jest standardowym leczeniem raka piersi wrażliwego na estrogeny.",
+   "es": "El tamoxifeno es un SERM que bloquea la acción del estrógeno sobre el tejido mamario. Es desde hace décadas un tratamiento estándar del cáncer de mama sensible a los estrógenos."
+  },
+  "how": {
+   "en": "It occupies oestrogen receptors in breast cells, which stops hormone-driven tumours from growing. In some other tissues, such as bone and the uterus, it acts like a weak oestrogen.",
+   "pl": "Zajmuje receptory estrogenowe w komórkach piersi, co zatrzymuje wzrost nowotworów zależnych od hormonów. W niektórych innych tkankach, jak kość i macica, działa jak słaby estrogen.",
+   "es": "Ocupa los receptores de estrógeno de las células mamarias, lo que frena el crecimiento de tumores dependientes de hormonas. En otros tejidos, como el hueso y el útero, actúa como un estrógeno débil."
+  },
+  "med": {
+   "en": "It is approved for treating and lowering the risk of recurrence of breast cancer, and to reduce risk in some high-risk women.",
+   "pl": "Jest zatwierdzony w leczeniu raka piersi i zmniejszaniu ryzyka nawrotu oraz w ograniczaniu ryzyka u niektórych kobiet z grupy wysokiego ryzyka.",
+   "es": "Está aprobado para tratar el cáncer de mama, reducir el riesgo de recaída y disminuir el riesgo en algunas mujeres de alto riesgo."
+  },
+  "risk": {
+   "en": "Serious risks include blood clots and stroke, and in women a higher chance of endometrial cancer. Hot flushes and mood changes are common.",
+   "pl": "Poważne ryzyka to zakrzepy i udar, a u kobiet większa szansa na raka błony śluzowej macicy. Częste są uderzenia gorąca i zmiany nastroju.",
+   "es": "Los riesgos graves incluyen coágulos y accidente cerebrovascular y, en mujeres, una mayor probabilidad de cáncer de endometrio. Los sofocos y los cambios de humor son frecuentes."
+  },
+  "pros": {
+   "en": [
+    "Proven to lower breast cancer recurrence",
+    "Decades of large trials",
+    "Taken by mouth"
+   ],
+   "pl": [
+    "Udowodnione zmniejszanie nawrotów raka piersi",
+    "Dziesięciolecia dużych badań",
+    "Przyjmowany doustnie"
+   ],
+   "es": [
+    "Demostrado que reduce las recaídas del cáncer de mama",
+    "Décadas de grandes ensayos",
+    "Se toma por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Blood clot and stroke risk",
+    "Raises endometrial cancer risk",
+    "Needs a doctor and monitoring"
+   ],
+   "pl": [
+    "Ryzyko zakrzepów i udaru",
+    "Zwiększa ryzyko raka błony śluzowej macicy",
+    "Wymaga lekarza i kontroli"
+   ],
+   "es": [
+    "Riesgo de coágulos e ictus",
+    "Aumenta el riesgo de cáncer de endometrio",
+    "Requiere médico y seguimiento"
+   ]
+  }
+ },
+ {
+  "id": "anastrozole",
+  "n": "Anastrozole",
+  "nm": {
+   "pl": "Anastrozol",
+   "es": "Anastrozol"
+  },
+  "alt": {
+   "en": "Aromatase inhibitor, breast cancer drug",
+   "pl": "Inhibitor aromatazy, lek na raka piersi",
+   "es": "Inhibidor de la aromatasa, fármaco contra el cáncer de mama"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "anastrozole",
+  "what": {
+   "en": "Anastrozole is an aromatase inhibitor. It blocks the enzyme that turns testosterone into oestrogen and is used in breast cancer treatment.",
+   "pl": "Anastrozol to inhibitor aromatazy. Blokuje enzym przekształcający testosteron w estrogen i stosuje się go w leczeniu raka piersi.",
+   "es": "El anastrozol es un inhibidor de la aromatasa. Bloquea la enzima que convierte la testosterona en estrógeno y se usa en el tratamiento del cáncer de mama."
+  },
+  "how": {
+   "en": "By stopping oestrogen production in fat and other tissue, it lowers oestrogen levels sharply. That starves oestrogen-driven tumours.",
+   "pl": "Zatrzymując produkcję estrogenu w tkance tłuszczowej i innych tkankach, mocno obniża jego poziom. To pozbawia wzrostu nowotwory zależne od estrogenu.",
+   "es": "Al frenar la producción de estrógeno en la grasa y otros tejidos, reduce mucho sus niveles. Eso priva de estímulo a los tumores dependientes de estrógeno."
+  },
+  "med": {
+   "en": "It is approved for hormone-receptor-positive breast cancer in women after menopause. Its use in men is off-label.",
+   "pl": "Jest zatwierdzony w raku piersi z receptorami hormonalnymi u kobiet po menopauzie. Stosowanie u mężczyzn jest poza wskazaniami.",
+   "es": "Está aprobado para el cáncer de mama con receptores hormonales en mujeres tras la menopausia. Su uso en hombres es fuera de indicación."
+  },
+  "risk": {
+   "en": "The label lists bone thinning and fractures, joint pain, hot flushes and higher cholesterol. Lowering oestrogen too far is harmful in men too, because oestrogen helps protect bones and affects mood and libido.",
+   "pl": "Ulotka wymienia ścieńczenie kości i złamania, bóle stawów, uderzenia gorąca i wyższy cholesterol. Zbyt duże obniżenie estrogenu szkodzi także mężczyznom, bo estrogen pomaga chronić kości oraz wpływa na nastrój i libido.",
+   "es": "El prospecto cita adelgazamiento óseo y fracturas, dolor articular, sofocos y colesterol más alto. Reducir demasiado el estrógeno es perjudicial también en hombres, porque el estrógeno ayuda a proteger los huesos y afecta al ánimo y a la libido."
+  },
+  "pros": {
+   "en": [
+    "Proven in postmenopausal breast cancer",
+    "Taken by mouth",
+    "Large trial base"
+   ],
+   "pl": [
+    "Sprawdzony w raku piersi po menopauzie",
+    "Przyjmowany doustnie",
+    "Duża baza badań"
+   ],
+   "es": [
+    "Probado en el cáncer de mama posmenopáusico",
+    "Se toma por vía oral",
+    "Amplia base de ensayos"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Bone loss and joint pain",
+    "Off-label in men, with less safety data there",
+    "Prohibited in sport"
+   ],
+   "pl": [
+    "Utrata kości i bóle stawów",
+    "U mężczyzn poza wskazaniami, z mniejszą ilością danych o bezpieczeństwie",
+    "Zabroniony w sporcie"
+   ],
+   "es": [
+    "Pérdida ósea y dolor articular",
+    "En hombres es fuera de indicación, con menos datos de seguridad",
+    "Prohibido en el deporte"
+   ]
+  }
+ },
+ {
+  "id": "letrozole",
+  "n": "Letrozole",
+  "nm": {
+   "pl": "Letrozol",
+   "es": "Letrozol"
+  },
+  "alt": {
+   "en": "Aromatase inhibitor, breast cancer drug",
+   "pl": "Inhibitor aromatazy, lek na raka piersi",
+   "es": "Inhibidor de la aromatasa, fármaco contra el cáncer de mama"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "letrozole",
+  "what": {
+   "en": "Letrozole is a strong aromatase inhibitor used mainly for breast cancer in women after menopause. It is also used off-label to help ovulation.",
+   "pl": "Letrozol to silny inhibitor aromatazy stosowany głównie w raku piersi u kobiet po menopauzie. Stosuje się go też poza wskazaniami, by wspomóc owulację.",
+   "es": "El letrozol es un inhibidor de la aromatasa potente que se usa sobre todo en el cáncer de mama de mujeres tras la menopausia. También se usa fuera de indicación para favorecer la ovulación."
+  },
+  "how": {
+   "en": "It blocks aromatase and cuts the body’s oestrogen production, more than most drugs of its type. In fertility care that lower oestrogen makes the brain release more of the hormones that trigger ovulation.",
+   "pl": "Blokuje aromatazę i obniża produkcję estrogenu w organizmie, silniej niż większość leków tego typu. W leczeniu niepłodności niższy estrogen sprawia, że mózg wydziela więcej hormonów wyzwalających owulację.",
+   "es": "Bloquea la aromatasa y reduce la producción de estrógeno del cuerpo, más que la mayoría de los fármacos de su tipo. En fertilidad, ese estrógeno más bajo hace que el cerebro libere más de las hormonas que desencadenan la ovulación."
+  },
+  "med": {
+   "en": "It is approved for early and advanced breast cancer in postmenopausal women. Fertility clinics also use it off-label in some women.",
+   "pl": "Jest zatwierdzony we wczesnym i zaawansowanym raku piersi u kobiet po menopauzie. Kliniki leczenia niepłodności stosują go też poza wskazaniami u niektórych kobiet.",
+   "es": "Está aprobado para el cáncer de mama precoz y avanzado en mujeres posmenopáusicas. Las clínicas de fertilidad también lo usan fuera de indicación en algunas mujeres."
+  },
+  "risk": {
+   "en": "Common problems are hot flushes, joint and muscle aches, tiredness and bone thinning. Taken without a medical reason it can drive oestrogen too low and upset hormone balance.",
+   "pl": "Częste problemy to uderzenia gorąca, bóle stawów i mięśni, zmęczenie i ścieńczenie kości. Przyjmowany bez wskazań medycznych może obniżyć estrogen zbyt mocno i zaburzyć równowagę hormonalną.",
+   "es": "Los problemas frecuentes son sofocos, dolores articulares y musculares, cansancio y adelgazamiento óseo. Tomado sin motivo médico puede bajar demasiado el estrógeno y alterar el equilibrio hormonal."
+  },
+  "pros": {
+   "en": [
+    "Proven in breast cancer",
+    "Used in fertility care under supervision",
+    "Taken by mouth"
+   ],
+   "pl": [
+    "Sprawdzony w raku piersi",
+    "Stosowany w leczeniu niepłodności pod nadzorem",
+    "Przyjmowany doustnie"
+   ],
+   "es": [
+    "Probado en el cáncer de mama",
+    "Usado en fertilidad bajo supervisión",
+    "Se toma por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Bone thinning and joint pain",
+    "Can push oestrogen too low",
+    "Prohibited in sport"
+   ],
+   "pl": [
+    "Ścieńczenie kości i bóle stawów",
+    "Może obniżyć estrogen zbyt mocno",
+    "Zabroniony w sporcie"
+   ],
+   "es": [
+    "Adelgazamiento óseo y dolor articular",
+    "Puede bajar demasiado el estrógeno",
+    "Prohibido en el deporte"
+   ]
+  }
+ },
+ {
+  "id": "hcg",
+  "n": "hCG",
+  "nm": {
+   "pl": "hCG",
+   "es": "hCG"
+  },
+  "alt": {
+   "en": "Human chorionic gonadotropin, a pregnancy hormone",
+   "pl": "Gonadotropina kosmówkowa, hormon ciąży",
+   "es": "Gonadotropina coriónica humana, una hormona del embarazo"
+  },
+  "cls": "mod",
+  "form": "inj",
+  "q": "chorionic gonadotropin",
+  "what": {
+   "en": "hCG is a protein hormone made by the placenta in pregnancy. As a medicine it mimics LH, the hormone that tells the testes and ovaries to work, which makes it a peptide-family drug, not a steroid.",
+   "pl": "hCG to hormon białkowy wytwarzany przez łożysko w ciąży. Jako lek naśladuje LH, hormon każący pracować jądrom i jajnikom, więc należy do rodziny leków peptydowych, a nie sterydów.",
+   "es": "La hCG es una hormona proteica fabricada por la placenta durante el embarazo. Como medicamento imita a la LH, la hormona que ordena trabajar a los testículos y los ovarios, por lo que es un fármaco de la familia de los péptidos y no un esteroide."
+  },
+  "how": {
+   "en": "In men it stimulates the testes to make testosterone and sperm. In women it triggers the release of an egg.",
+   "pl": "U mężczyzn pobudza jądra do produkcji testosteronu i plemników. U kobiet wyzwala uwolnienie komórki jajowej.",
+   "es": "En hombres estimula los testículos para producir testosterona y espermatozoides. En mujeres desencadena la liberación de un óvulo."
+  },
+  "med": {
+   "en": "It is approved for fertility treatment, for boys with undescended testes and for men with certain pituitary-related forms of low testosterone.",
+   "pl": "Jest zatwierdzony w leczeniu niepłodności, u chłopców z niezstąpionymi jądrami i u mężczyzn z niektórymi postaciami niskiego testosteronu o podłożu przysadkowym.",
+   "es": "Está aprobada para el tratamiento de la fertilidad, para niños con testículos sin descender y para hombres con ciertas formas de testosterona baja de origen hipofisario."
+  },
+  "risk": {
+   "en": "Possible effects are headaches, mood changes, breast tenderness, and in women ovarian overstimulation. Its use to chase muscle or weight loss is not supported by evidence and is among the issues regulators have warned about.",
+   "pl": "Możliwe skutki to bóle głowy, zmiany nastroju, tkliwość piersi, a u kobiet nadmierna stymulacja jajników. Jego stosowanie dla mięśni lub utraty wagi nie ma poparcia w dowodach i należy do spraw, przed którymi ostrzegały organy nadzoru.",
+   "es": "Los efectos posibles son dolor de cabeza, cambios de humor, sensibilidad mamaria y, en mujeres, hiperestimulación ovárica. Su uso para ganar músculo o perder peso no está respaldado por la evidencia y es uno de los temas sobre los que han advertido los reguladores."
+  },
+  "wada": {
+   "en": "WADA prohibits hCG in male athletes at all times (category S2), because it raises testosterone.",
+   "pl": "WADA zakazuje hCG u sportowców mężczyzn przez cały czas (kategoria S2), bo podnosi testosteron.",
+   "es": "La AMA prohíbe la hCG en deportistas varones en todo momento (categoría S2), porque eleva la testosterona."
+  },
+  "pros": {
+   "en": [
+    "Approved for fertility and for specific hormone disorders",
+    "Raises testosterone while keeping the testes active",
+    "Long clinical use"
+   ],
+   "pl": [
+    "Zatwierdzony w niepłodności i w określonych zaburzeniach hormonalnych",
+    "Podnosi testosteron, utrzymując aktywność jąder",
+    "Długie stosowanie kliniczne"
+   ],
+   "es": [
+    "Aprobada para fertilidad y para trastornos hormonales concretos",
+    "Sube la testosterona manteniendo activos los testículos",
+    "Largo uso clínico"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Needs a doctor and is given by injection",
+    "Not supported for weight loss or muscle gain",
+    "Prohibited in male athletes"
+   ],
+   "pl": [
+    "Wymaga lekarza i jest podawany w iniekcji",
+    "Brak poparcia w utracie wagi i budowie mięśni",
+    "Zabroniony u sportowców mężczyzn"
+   ],
+   "es": [
+    "Requiere médico y se administra por inyección",
+    "Sin respaldo para perder peso ni ganar músculo",
+    "Prohibida en deportistas varones"
+   ]
+  }
+ },
+ {
+  "id": "prednisone",
+  "n": "Prednisone",
+  "nm": {
+   "pl": "Prednizon",
+   "es": "Prednisona"
+  },
+  "alt": {
+   "en": "Common corticosteroid tablet",
+   "pl": "Popularna tabletka kortykosteroidowa",
+   "es": "Comprimido corticosteroide habitual"
+  },
+  "cls": "cort",
+  "form": "oral",
+  "q": "prednisone",
+  "what": {
+   "en": "Prednisone is a corticosteroid taken by mouth. The body converts it to prednisolone, which copies the stress hormone cortisol.",
+   "pl": "Prednizon to kortykosteroid przyjmowany doustnie. Organizm przekształca go w prednizolon, który naśladuje hormon stresu kortyzol.",
+   "es": "La prednisona es un corticosteroide que se toma por vía oral. El cuerpo la convierte en prednisolona, que imita la hormona del estrés cortisol."
+  },
+  "how": {
+   "en": "It calms inflammation and slows the immune system. It does not build muscle; over time it breaks muscle down.",
+   "pl": "Hamuje zapalenie i spowalnia układ odpornościowy. Nie buduje mięśni; z czasem je rozkłada.",
+   "es": "Calma la inflamación y frena el sistema inmunitario. No construye músculo; con el tiempo lo degrada."
+  },
+  "med": {
+   "en": "It is used for asthma flares, allergic reactions, autoimmune conditions such as lupus and rheumatoid arthritis, inflammatory bowel disease and some cancers.",
+   "pl": "Stosuje się go w zaostrzeniach astmy, reakcjach alergicznych, chorobach autoimmunologicznych, takich jak toczeń i reumatoidalne zapalenie stawów, nieswoistych zapaleniach jelit i niektórych nowotworach.",
+   "es": "Se usa en crisis de asma, reacciones alérgicas, enfermedades autoinmunes como el lupus y la artritis reumatoide, enfermedad inflamatoria intestinal y algunos cánceres."
+  },
+  "risk": {
+   "en": "Longer use can cause weight gain, high blood sugar, raised blood pressure, mood changes, thinner bones, cataracts and a higher chance of infection. After weeks of use the body’s own cortisol production switches off, so treatment must not be stopped suddenly without medical advice.",
+   "pl": "Dłuższe stosowanie może powodować przyrost wagi, wysoki cukier, podwyższone ciśnienie, zmiany nastroju, ścieńczenie kości, zaćmę i większą podatność na zakażenia. Po tygodniach stosowania własna produkcja kortyzolu wyłącza się, dlatego nie wolno nagle przerywać leczenia bez porady lekarza.",
+   "es": "El uso prolongado puede causar aumento de peso, azúcar alto, presión arterial elevada, cambios de ánimo, huesos más delgados, cataratas y mayor probabilidad de infecciones. Tras semanas de uso, la producción propia de cortisol se apaga, por lo que el tratamiento no debe suspenderse bruscamente sin consejo médico."
+  },
+  "pros": {
+   "en": [
+    "Fast, powerful control of inflammation",
+    "Can be lifesaving in severe flares",
+    "Cheap and widely available on prescription"
+   ],
+   "pl": [
+    "Szybkie, silne opanowanie zapalenia",
+    "Może ratować życie w ciężkich zaostrzeniach",
+    "Tani i szeroko dostępny na receptę"
+   ],
+   "es": [
+    "Control rápido y potente de la inflamación",
+    "Puede salvar la vida en brotes graves",
+    "Barato y ampliamente disponible con receta"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Many side effects with long use",
+    "Switches off natural cortisol, so it must be tapered",
+    "Weakens bones and the immune system"
+   ],
+   "pl": [
+    "Wiele skutków ubocznych przy długim stosowaniu",
+    "Wyłącza naturalny kortyzol, więc trzeba go odstawiać stopniowo",
+    "Osłabia kości i układ odpornościowy"
+   ],
+   "es": [
+    "Muchos efectos secundarios con el uso prolongado",
+    "Apaga el cortisol natural, por lo que debe retirarse de forma gradual",
+    "Debilita los huesos y el sistema inmunitario"
+   ]
+  }
+ },
+ {
+  "id": "dexamethasone",
+  "n": "Dexamethasone",
+  "nm": {
+   "pl": "Deksametazon",
+   "es": "Dexametasona"
+  },
+  "alt": {
+   "en": "Potent corticosteroid",
+   "pl": "Silny kortykosteroid",
+   "es": "Corticosteroide potente"
+  },
+  "cls": "cort",
+  "form": "mix",
+  "q": "dexamethasone",
+  "what": {
+   "en": "Dexamethasone is a very potent, long-acting corticosteroid, given by mouth, injection or drops. It became widely known in 2020 for its role in severe COVID-19.",
+   "pl": "Deksametazon to bardzo silny, długodziałający kortykosteroid podawany doustnie, w iniekcji lub w kroplach. W 2020 roku zrobiło się o nim głośno z powodu roli w ciężkim COVID-19.",
+   "es": "La dexametasona es un corticosteroide muy potente y de acción prolongada, administrado por vía oral, inyectable o en gotas. Se hizo muy conocida en 2020 por su papel en la COVID-19 grave."
+  },
+  "how": {
+   "en": "It strongly dampens inflammation and the immune response. It is many times more potent than hydrocortisone and acts for longer.",
+   "pl": "Silnie tłumi zapalenie i odpowiedź immunologiczną. Jest wielokrotnie silniejszy od hydrokortyzonu i działa dłużej.",
+   "es": "Reduce con fuerza la inflamación y la respuesta inmunitaria. Es muchas veces más potente que la hidrocortisona y actúa durante más tiempo."
+  },
+  "med": {
+   "en": "It is used in severe allergic reactions, swelling in the brain, many cancers and as supportive care in chemotherapy. In the UK RECOVERY trial it reduced deaths in hospitalised COVID-19 patients who needed oxygen or ventilation.",
+   "pl": "Stosuje się go w ciężkich reakcjach alergicznych, obrzęku mózgu, wielu nowotworach i jako leczenie wspomagające przy chemioterapii. W brytyjskim badaniu RECOVERY zmniejszył liczbę zgonów wśród hospitalizowanych chorych na COVID-19, którzy potrzebowali tlenu lub wentylacji.",
+   "es": "Se usa en reacciones alérgicas graves, edema cerebral, muchos cánceres y como tratamiento de apoyo en quimioterapia. En el ensayo británico RECOVERY redujo las muertes en pacientes hospitalizados con COVID-19 que necesitaban oxígeno o ventilación."
+  },
+  "risk": {
+   "en": "High or long use can raise blood sugar, weaken bones and muscles, disturb sleep and mood, cause stomach irritation and raise infection risk. As with prednisone, stopping suddenly after long use can be dangerous because the adrenal glands have switched off.",
+   "pl": "Duże lub długie stosowanie może podnosić cukier, osłabiać kości i mięśnie, zaburzać sen i nastrój, drażnić żołądek i zwiększać ryzyko zakażeń. Tak jak przy prednizonie nagłe przerwanie po długim stosowaniu może być niebezpieczne, bo nadnercza się wyłączyły.",
+   "es": "El uso elevado o prolongado puede subir el azúcar, debilitar huesos y músculos, alterar el sueño y el ánimo, irritar el estómago y aumentar el riesgo de infecciones. Como con la prednisona, suspenderla de golpe tras un uso prolongado puede ser peligroso porque las glándulas suprarrenales se han apagado."
+  },
+  "pros": {
+   "en": [
+    "Very potent and long acting",
+    "Proven benefit in severe COVID-19",
+    "Many routes of administration"
+   ],
+   "pl": [
+    "Bardzo silny i długo działający",
+    "Udowodniona korzyść w ciężkim COVID-19",
+    "Wiele dróg podania"
+   ],
+   "es": [
+    "Muy potente y de acción prolongada",
+    "Beneficio demostrado en la COVID-19 grave",
+    "Muchas vías de administración"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Raises blood sugar and weakens muscle and bone with long use",
+    "Suppresses the immune system",
+    "Must be tapered after long use"
+   ],
+   "pl": [
+    "Podnosi cukier i osłabia mięśnie oraz kości przy długim stosowaniu",
+    "Osłabia układ odpornościowy",
+    "Po długim stosowaniu trzeba odstawiać stopniowo"
+   ],
+   "es": [
+    "Sube el azúcar y debilita músculo y hueso con el uso prolongado",
+    "Debilita el sistema inmunitario",
+    "Debe retirarse gradualmente tras un uso prolongado"
+   ]
+  }
+ },
+ {
+  "id": "hydrocortisone",
+  "n": "Hydrocortisone",
+  "nm": {
+   "pl": "Hydrokortyzon",
+   "es": "Hidrocortisona"
+  },
+  "alt": {
+   "en": "The medicine form of cortisol",
+   "pl": "Lekowa postać kortyzolu",
+   "es": "La forma medicamentosa del cortisol"
+  },
+  "cls": "cort",
+  "form": "mix",
+  "q": "hydrocortisone",
+  "what": {
+   "en": "Hydrocortisone is the medicine version of cortisol, the hormone the adrenal glands make every day. It is used as a cream, a tablet or an injection.",
+   "pl": "Hydrokortyzon to lekowa wersja kortyzolu, hormonu, który nadnercza wytwarzają codziennie. Występuje jako krem, tabletka lub iniekcja.",
+   "es": "La hidrocortisona es la versión medicamentosa del cortisol, la hormona que las glándulas suprarrenales fabrican a diario. Se usa en crema, comprimidos o inyección."
+  },
+  "how": {
+   "en": "It replaces or adds to the body’s cortisol and calms inflammation. It is weaker than prednisone, which makes it suitable for replacement therapy.",
+   "pl": "Zastępuje lub uzupełnia kortyzol organizmu i hamuje zapalenie. Jest słabszy niż prednizon, dlatego nadaje się do leczenia substytucyjnego.",
+   "es": "Sustituye o complementa el cortisol del cuerpo y calma la inflamación. Es más débil que la prednisona, lo que lo hace adecuado para la terapia de sustitución."
+  },
+  "med": {
+   "en": "It is the standard replacement for people whose adrenal glands do not make enough cortisol, as in Addison’s disease. Creams treat eczema and skin irritation.",
+   "pl": "To standardowe leczenie zastępcze u osób, których nadnercza nie wytwarzają dość kortyzolu, na przykład w chorobie Addisona. Kremy leczą wyprysk i podrażnienia skóry.",
+   "es": "Es el reemplazo estándar para quienes tienen unas glándulas suprarrenales que no producen suficiente cortisol, como en la enfermedad de Addison. Las cremas tratan el eccema y la irritación de la piel."
+  },
+  "risk": {
+   "en": "Replacement doses are generally well tolerated. Higher doses over time can cause weight gain, thin skin, high blood sugar and bone loss, and creams used for long on thin skin can make it weaker.",
+   "pl": "Dawki zastępcze są zwykle dobrze tolerowane. Wyższe dawki w dłuższym czasie mogą powodować przyrost wagi, ścieńczenie skóry, wysoki cukier i utratę kości, a kremy stosowane długo na cienkiej skórze mogą ją osłabiać.",
+   "es": "Las dosis de sustitución suelen tolerarse bien. Dosis más altas durante mucho tiempo pueden causar aumento de peso, piel fina, azúcar alto y pérdida ósea, y las cremas usadas mucho tiempo sobre piel delgada pueden debilitarla."
+  },
+  "pros": {
+   "en": [
+    "The standard replacement in adrenal insufficiency",
+    "Mild enough for long replacement therapy",
+    "Cream form is widely used for skin conditions"
+   ],
+   "pl": [
+    "Standardowe leczenie zastępcze w niewydolności nadnerczy",
+    "Wystarczająco łagodny do długiego leczenia substytucyjnego",
+    "Postać kremu szeroko stosowana w chorobach skóry"
+   ],
+   "es": [
+    "El reemplazo estándar en la insuficiencia suprarrenal",
+    "Suficientemente suave para una terapia de sustitución prolongada",
+    "La crema se usa mucho en enfermedades de la piel"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Weaker anti-inflammatory power than newer steroids",
+    "High doses over time carry the usual steroid risks",
+    "Cannot be stopped suddenly in people who depend on it"
+   ],
+   "pl": [
+    "Słabsze działanie przeciwzapalne niż nowsze sterydy",
+    "Wysokie dawki w dłuższym czasie niosą zwykłe ryzyka sterydów",
+    "Nie można go nagle odstawić u osób od niego zależnych"
+   ],
+   "es": [
+    "Menor potencia antiinflamatoria que los esteroides más nuevos",
+    "Las dosis altas durante mucho tiempo conllevan los riesgos habituales de los esteroides",
+    "No se puede suspender de golpe en quienes dependen de él"
+   ]
+  }
+ }
 ]

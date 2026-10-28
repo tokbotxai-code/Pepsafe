@@ -21,7 +21,7 @@
   },
   "how": {
    "en": "It binds the androgen receptor strongly and, unlike many steroids, is converted into oestrogen in the body. By switching off the brain’s signals to the testes it lowers sperm production, which is why it was studied for contraception.",
-   "pl": "Silnie wiąże się z receptorem androgenowym i, w odróżnieniu od wielu steroidów, zamienia się w organizmie w estrogen. Wyłączając sygnały z mózgu do jąder, obniża produkcję plemników, dlatego badano go w antykoncepcji.",
+   "pl": "Silnie wiąże się z receptorem androgenowym i, w odróżnieniu od wielu sterydów, zamienia się w organizmie w estrogen. Wyłączając sygnały z mózgu do jąder, obniża produkcję plemników, dlatego badano go w antykoncepcji.",
    "es": "Se une con fuerza al receptor de andrógenos y, a diferencia de muchos esteroides, se convierte en estrógeno en el cuerpo. Al apagar las señales del cerebro a los testículos reduce la producción de espermatozoides, por eso se estudió como anticonceptivo."
   },
   "med": {
@@ -70,7 +70,7 @@
   },
   "status": {
    "en": "Not approved as a medicine. It is treated as an anabolic steroid under the same controls as other steroids in the UK (Class C) and the US (Schedule III).",
-   "pl": "Niezatwierdzony jako lek. Traktowany jako steroid anaboliczny, objęty tą samą kontrolą co inne steroidy w Wielkiej Brytanii (klasa C) i USA (lista III).",
+   "pl": "Niezatwierdzony jako lek. Traktowany jako steryd anaboliczny, objęty tą samą kontrolą co inne sterydy w Wielkiej Brytanii (klasa C) i USA (lista III).",
    "es": "No aprobada como medicamento. Se trata como esteroide anabólico con los mismos controles que otros esteroides en el Reino Unido (clase C) y en EE. UU. (lista III)."
   },
   "label": false
@@ -84,7 +84,7 @@
   },
   "alt": {
    "en": "Topical anabolic steroid, 4-chlorotestosterone",
-   "pl": "Miejscowy steroid anaboliczny, 4-chlorotestosteron",
+   "pl": "Miejscowy steryd anaboliczny, 4-chlorotestosteron",
    "es": "Esteroide anabólico tópico, 4-clorotestosterona"
   },
   "cls": "oral",
@@ -92,7 +92,7 @@
   "q": "clostebol",
   "what": {
    "en": "Clostebol is an anabolic steroid made by adding a chlorine atom to testosterone. It is the parent of the better-known oral steroid known as Turinabol, and in a few countries it is sold as a skin cream or spray for wound healing.",
-   "pl": "Klostebol to steroid anaboliczny powstały przez dodanie atomu chloru do testosteronu. To związek macierzysty lepiej znanego doustnego steroidu Turinabol, a w kilku krajach sprzedaje się go jako krem lub spray na skórę wspomagający gojenie ran.",
+   "pl": "Klostebol to steryd anaboliczny powstały przez dodanie atomu chloru do testosteronu. To związek macierzysty lepiej znanego doustnego sterydu Turinabol, a w kilku krajach sprzedaje się go jako krem lub spray na skórę wspomagający gojenie ran.",
    "es": "El clostebol es un esteroide anabólico que se obtiene añadiendo un átomo de cloro a la testosterona. Es el compuesto de origen del esteroide oral más conocido como Turinabol y en algunos países se vende como crema o espray cutáneo para favorecer la cicatrización."
   },
   "how": {
@@ -107,7 +107,7 @@
   },
   "risk": {
    "en": "Used on skin it carries little systemic risk, but taken in other ways it behaves like other anabolic steroids and can suppress natural testosterone. Athletes have tested positive after skin contact with a topical product, even without meaning to take a steroid.",
-   "pl": "Stosowany na skórę niesie niewielkie ryzyko ogólnoustrojowe, ale przyjmowany inaczej zachowuje się jak inne steroidy anaboliczne i może hamować naturalny testosteron. Sportowcy dawali wynik pozytywny po kontakcie skóry z preparatem miejscowym, nawet bez zamiaru przyjęcia steroidu.",
+   "pl": "Stosowany na skórę niesie niewielkie ryzyko ogólnoustrojowe, ale przyjmowany inaczej zachowuje się jak inne sterydy anaboliczne i może hamować naturalny testosteron. Sportowcy dawali wynik pozytywny po kontakcie skóry z preparatem miejscowym, nawet bez zamiaru przyjęcia sterydu.",
    "es": "Aplicado sobre la piel conlleva poco riesgo sistémico, pero tomado de otras formas se comporta como otros esteroides anabólicos y puede suprimir la testosterona natural. Se han producido positivos en deportistas tras el contacto de la piel con un producto tópico, incluso sin intención de tomar un esteroide."
   },
   "pros": {
@@ -136,7 +136,7 @@
    "pl": [
     "Niezatwierdzony w Wielkiej Brytanii ani USA",
     "Udokumentowano pozytywne wyniki dopingowe po przypadkowym kontakcie ze skórą",
-    "Nadal steroid anaboliczny z typowymi skutkami hormonalnymi, gdy przyjmowany inaczej"
+    "Nadal steryd anaboliczny z typowymi skutkami hormonalnymi, gdy przyjmowany inaczej"
    ],
    "es": [
     "No aprobado en el Reino Unido ni en EE. UU.",
@@ -146,7 +146,7 @@
   },
   "status": {
    "en": "Registered as a topical medicine in a few countries and not approved in the UK or the US. As an anabolic steroid it falls under the same controls as other steroids there.",
-   "pl": "Zarejestrowany jako lek miejscowy w kilku krajach, niezatwierdzony w Wielkiej Brytanii ani USA. Jako steroid anaboliczny podlega tam tej samej kontroli co inne steroidy.",
+   "pl": "Zarejestrowany jako lek miejscowy w kilku krajach, niezatwierdzony w Wielkiej Brytanii ani USA. Jako steryd anaboliczny podlega tam tej samej kontroli co inne sterydy.",
    "es": "Registrado como medicamento tópico en algunos países y no aprobado en el Reino Unido ni en EE. UU. Como esteroide anabólico está sujeto allí a los mismos controles que otros esteroides."
   }
  },
@@ -221,7 +221,7 @@
   },
   "status": {
    "en": "Approved as a topical gel in a few European countries and not approved in the UK or the US. It falls under the same anabolic steroid controls as other steroids.",
-   "pl": "Zatwierdzony jako żel miejscowy w kilku krajach europejskich i niezatwierdzony w Wielkiej Brytanii ani USA. Podlega tej samej kontroli co inne steroidy anaboliczne.",
+   "pl": "Zatwierdzony jako żel miejscowy w kilku krajach europejskich i niezatwierdzony w Wielkiej Brytanii ani USA. Podlega tej samej kontroli co inne sterydy anaboliczne.",
    "es": "Aprobada como gel tópico en algunos países europeos y no aprobada en el Reino Unido ni en EE. UU. Está sujeta a los mismos controles que otros esteroides anabólicos."
   }
  },

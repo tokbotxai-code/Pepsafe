@@ -176,12 +176,12 @@
   },
   "risk": {
    "en": "Studies found raised oestrogen and falling HDL cholesterol in men, plus acne and, in women, masculinising effects. Since it behaves like a steroid in the body, the US moved it under controls.",
-   "pl": "Badania wykazały podwyższony estrogen i spadek cholesterolu HDL u mężczyzn, a także trądzik i maskulinizację u kobiet. Ponieważ w organizmie zachowuje się jak steroid, w USA objęto go kontrolą.",
+   "pl": "Badania wykazały podwyższony estrogen i spadek cholesterolu HDL u mężczyzn, a także trądzik i maskulinizację u kobiet. Ponieważ w organizmie zachowuje się jak steryd, w USA objęto go kontrolą.",
    "es": "Los estudios encontraron estrógeno elevado y descenso del colesterol HDL en hombres, además de acné y, en mujeres, efectos masculinizantes. Como en el cuerpo se comporta como un esteroide, EE. UU. lo sometió a control."
   },
   "status": {
    "en": "Controlled as an anabolic steroid in the US (Schedule III) since 2005, after being sold as a supplement, and prohibited in sport.",
-   "pl": "W USA objęty kontrolą jako steroid anaboliczny (lista III) od 2005 roku, po okresie sprzedaży jako suplement, i zabroniony w sporcie.",
+   "pl": "W USA objęty kontrolą jako steryd anaboliczny (lista III) od 2005 roku, po okresie sprzedaży jako suplement, i zabroniony w sporcie.",
    "es": "Controlada como esteroide anabólico en EE. UU. (lista III) desde 2005, tras venderse como suplemento, y prohibida en el deporte."
   },
   "pros": {
@@ -236,7 +236,7 @@
   "q": "tibolone",
   "what": {
    "en": "Tibolone is a synthetic steroid used for menopause symptoms. Its metabolites act on oestrogen, progesterone and androgen receptors.",
-   "pl": "Tibolon to syntetyczny steroid stosowany w objawach menopauzy. Jego metabolity działają na receptory estrogenowe, progesteronowe i androgenowe.",
+   "pl": "Tibolon to syntetyczny steryd stosowany w objawach menopauzy. Jego metabolity działają na receptory estrogenowe, progesteronowe i androgenowe.",
    "es": "La tibolona es un esteroide sintético que se usa para los síntomas de la menopausia. Sus metabolitos actúan sobre receptores de estrógeno, progesterona y andrógenos."
   },
   "how": {
@@ -333,7 +333,7 @@
    ],
    "pl": [
     "Badana w badaniach klinicznych na ludziach",
-    "W założeniu bardziej selektywna niż steroid",
+    "W założeniu bardziej selektywna niż steryd",
     "Przyjmowana doustnie"
    ],
    "es": [
@@ -404,7 +404,7 @@
    ],
    "pl": [
     "Wczesne badanie wykazało wzrost masy beztłuszczowej",
-    "Zaprojektowany jako bardziej selektywny niż steroid",
+    "Zaprojektowany jako bardziej selektywny niż steryd",
     "Ma pewne dane z badań na ludziach"
    ],
    "es": [
@@ -582,7 +582,7 @@
   },
   "alt": {
    "en": "GW501516, not a SARM and not a steroid",
-   "pl": "GW501516, to nie SARM i nie steroid",
+   "pl": "GW501516, to nie SARM i nie steryd",
    "es": "GW501516, ni SARM ni esteroide"
   },
   "cls": "oth",
@@ -622,7 +622,7 @@
    ],
    "pl": [
     "Zwiększała wytrzymałość w badaniach na zwierzętach",
-    "To nie hormon i nie steroid",
+    "To nie hormon i nie steryd",
     "Badana we wczesnych badaniach na ludziach w chorobach metabolicznych"
    ],
    "es": [
