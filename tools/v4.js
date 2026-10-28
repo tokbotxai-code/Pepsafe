@@ -679,6 +679,7 @@ const STOP_URL = 'https://ko-fi.com/s/1fa460444b';   // Coming Off a GLP-1: What
 // every buy / support link goes through /go/<product>-<place>.html, a tiny page that counts the click and forwards to Ko-fi
 const GO = {};
 const goUrl = (kind, place) => { const url = { guide: GUIDE_URL, muscle: MUSCLE_URL, stop: STOP_URL, kofi: KOFI }[kind]; GO[kind + '-' + place] = url; return BASE + 'go/' + kind + '-' + place + '.html'; };
+for (const k of ['guide', 'muscle', 'stop']) goUrl(k, 'mail');   // links used in the weekly newsletter
 function guideBox(e, en, L) {
   if (!/GLP-1|GIP/.test((EN[e.n] || [])[1] || '')) return '';
   const g = x => (x[L] || x.en);
