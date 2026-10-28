@@ -577,3 +577,13 @@ html.still .wm i { animation: none; color: var(--ink); }
 /* the top bar is controls, not text: it cannot be selected (no neon highlight over the menu) */
 header.bar, header.bar * { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 header.bar input { -webkit-user-select: text; user-select: text; }
+
+/* guide promotion (cards and home) */
+.gbox { display: grid; grid-template-columns: 150px 1fr; gap: 22px; align-items: start; border: 2px solid var(--k2); border-radius: 18px; padding: 20px; background: color-mix(in srgb, var(--k2) 6%, transparent); }
+.gthumb img { display: block; width: 150px; height: auto; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.18); transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+.gthumb:hover img { transform: translateY(-3px) rotate(-1deg); }
+.gbox .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+.gpromo { display: grid; grid-template-columns: 170px 1fr; gap: 34px; align-items: center; }
+.gpromo .gthumb img { width: 170px; }
+.gpromo .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+@media (max-width: 640px) { .gbox, .gpromo { grid-template-columns: 1fr; } .gthumb img { width: 120px; } }

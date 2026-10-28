@@ -326,7 +326,7 @@ ${o.body}
       <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>Instagram</span></a>
       <a class="soc" href="${FB}" rel="me noopener" target="_blank">${ICO_FB}<span>Facebook</span></a>
       <a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a>
-      <a class="soc" href="${KOFI}" rel="noopener" target="_blank">☕ <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
+      <a class="soc" href="${goUrl('kofi', 'footer')}" rel="noopener" target="_blank">☕ <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
     </p>
     <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span> · <a href="${BASE}${L}/privacy.html">${L === 'en' ? 'Privacy' : 'Prywatność'}</a></p>
   </div>
@@ -494,7 +494,7 @@ function home(L) {
       <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Przyjmujesz lek GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £5.99 · Protein &amp; Muscle £9.99 · sources on every page' : 'Bezpieczeństwo £5.99 · Białko i mięśnie £9.99 · źródła na każdej stronie'}</span></span>
       <span class="btn">${en ? 'See inside' : 'Zobacz podgląd'}${ARROW}</span>
     </a>
-    <p class="small ink2 reveal" style="margin-top:10px">${en ? 'The catalog stays free and ad-free.' : 'Katalog zostaje darmowy i bez reklam.'} <a href="${KOFI}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
+    <p class="small ink2 reveal" style="margin-top:10px">${en ? 'The catalog stays free and ad-free.' : 'Katalog zostaje darmowy i bez reklam.'} <a href="${goUrl('kofi', 'home')}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
   </div>
 </section>
 
@@ -556,6 +556,21 @@ ${mostRead(L)}
       <p class="reveal"><a class="more" href="catalog.html">${esc(h.all)}${ARROW}</a></p>
     </div>
     <div class="cards" data-par="-0.6">${FEATURED.map(e => cardRow(e, en, L)).join('')}</div>
+  </div>
+</section>
+
+<section id="guides" class="band gband">
+  <div class="wrap gpromo">
+    <a class="gthumb" href="${goUrl('guide', 'home')}" rel="noopener"><img src="${BASE}guides/safety-1.jpg" alt="${esc(en ? 'The GLP-1 Safety Guide, preview of page 1' : 'Przewodnik bezpieczeństwa GLP-1, podgląd strony 1')}" width="150" height="212" loading="lazy"></a>
+    <div>
+      <p class="kick reveal">${en ? 'Guides' : 'Przewodniki (po angielsku)'}</p>
+      <h2 class="display sm reveal">${en ? 'Taking a GLP-1 medicine? Read this first.' : 'Przyjmujesz lek GLP-1? Przeczytaj to najpierw.'}</h2>
+      <p class="lead reveal">${en ? 'Two plain-English PDF guides built from official labels and clinical trials: side effects, warnings, protein and muscle. Instant download.' : 'Dwa przystępne przewodniki PDF oparte na etykietach i badaniach: skutki uboczne, ostrzeżenia, białko i mięśnie. Natychmiastowe pobranie.'}</p>
+      <p class="actions reveal"><a class="btn" href="${goUrl('guide', 'home')}" rel="noopener">${en ? 'Safety guide — £5.99' : 'Przewodnik bezpieczeństwa — £5.99'}${ARROW}</a>
+      <a class="btn ghost" href="${goUrl('muscle', 'home')}" rel="noopener">${en ? 'Muscle guide — £9.99' : 'Przewodnik o mięśniach — £9.99'}</a>
+      <a class="btn ghost" href="${BASE}${L}/free.html">${en ? 'Free checklist' : 'Darmowa checklista'}</a></p>
+      <p class="small ink2 reveal"><a href="${BASE}${L}/guides.html">${en ? 'See inside both guides' : 'Zobacz podgląd obu przewodników'}${ARROW}</a></p>
+    </div>
   </div>
 </section>
 
@@ -659,15 +674,22 @@ function catalog(L) {
 // przewodnik PDF (sprzedaz przez Ko-fi): ramka na kartach lekow z rodziny GLP-1
 const GUIDE_URL = 'https://ko-fi.com/s/6d19973042';
 const MUSCLE_URL = 'https://ko-fi.com/s/424db783e5';
-function guideBox(e, en) {
+// every buy / support link goes through /go/<product>-<place>.html, a tiny page that counts the click and forwards to Ko-fi
+const GO = {};
+const goUrl = (kind, place) => { const url = { guide: GUIDE_URL, muscle: MUSCLE_URL, kofi: KOFI }[kind]; GO[kind + '-' + place] = url; return BASE + 'go/' + kind + '-' + place + '.html'; };
+function guideBox(e, en, L) {
   if (!/GLP-1|GIP/.test((EN[e.n] || [])[1] || '')) return '';
-  return `<section class="blk reveal" style="border:2px solid #3CCFA9;border-radius:14px;padding:18px 20px">
-  <h2 class="kick">${en ? 'The GLP-1 Safety Guide' : 'Przewodnik bezpieczeństwa GLP-1 (po angielsku)'}</h2>
-  <p>${en ? '23 pages in plain English: side effects and how often they happen, label warnings, surgery, pregnancy, protein and muscle, stopping, spotting fakes — with sources from MHRA, EMA and FDA.' : '23 strony napisane zrozumiale: skutki uboczne i ich częstość, ostrzeżenia z etykiet, zabiegi, ciąża, białko i mięśnie, odstawienie, podróbki — ze źródłami MHRA, EMA i FDA.'}</p>
-  <p><a class="btn" href="${GUIDE_URL}" rel="noopener">${en ? 'Get the PDF — £5.99' : 'Pobierz PDF — £5.99'}${ARROW}</a></p>
-  <p style="margin-top:14px"><b>${en ? 'Protein &amp; Muscle on GLP-1' : 'Białko i mięśnie przy GLP-1 (po angielsku)'}</b> — ${en ? 'keep your strength while you lose weight: protein calculator, 7-day meal plan, 20-minute home workouts, printable tracker.' : 'jak zachować siłę podczas chudnięcia: kalkulator białka, 7-dniowy plan posiłków, 20-minutowy trening w domu, dzienniczek.'}</p>
-  <p><a class="btn ghost" href="${MUSCLE_URL}" rel="noopener">${en ? 'Get the muscle guide — £9.99' : 'Pobierz przewodnik — £9.99'}${ARROW}</a></p>
-  <p class="small"><a href="${BASE}${en ? 'en' : 'pl'}/guides.html">${en ? 'See inside both guides' : 'Zobacz podgląd obu przewodników'}${ARROW}</a></p>
+  const g = x => (x[L] || x.en);
+  return `<section class="blk reveal gbox">
+  <a class="gthumb" href="${goUrl('guide', 'card')}" rel="noopener"><img src="${BASE}guides/safety-1.jpg" alt="${esc(g({ en: 'The GLP-1 Safety Guide, preview of page 1', pl: 'Przewodnik bezpieczeństwa GLP-1, podgląd strony 1' }))}" width="150" height="212" loading="lazy"></a>
+  <div>
+    <h2 class="kick">${esc(g({ en: 'The GLP-1 Safety Guide', pl: 'Przewodnik bezpieczeństwa GLP-1 (po angielsku)' }))}</h2>
+    <p>${esc(g({ en: '23 pages in plain English: side effects and how often they happen, label warnings, surgery, pregnancy, protein and muscle, stopping, spotting fakes. Sources from MHRA, EMA and FDA.', pl: '23 strony napisane zrozumiale: skutki uboczne i ich częstość, ostrzeżenia z etykiet, zabiegi, ciąża, białko i mięśnie, odstawienie, podróbki. Źródła MHRA, EMA i FDA.' }))}</p>
+    <p class="actions"><a class="btn" href="${goUrl('guide', 'card')}" rel="noopener">${esc(g({ en: 'Get the PDF — £5.99', pl: 'Pobierz PDF — £5.99' }))}${ARROW}</a>
+    <a class="btn ghost" href="${BASE}${L}/free.html">${esc(g({ en: 'Free checklist', pl: 'Darmowa checklista' }))}</a></p>
+    <p class="small ink2">${esc(g({ en: 'Also: Protein & Muscle on GLP-1 — protein calculator, 7-day meal plan, home workouts.', pl: 'Także: Białko i mięśnie przy GLP-1: kalkulator białka, 7-dniowy plan posiłków, trening w domu.' }))}
+    <a href="${goUrl('muscle', 'card')}" rel="noopener">${esc(g({ en: 'Get it — £9.99', pl: 'Pobierz — £9.99' }))}</a> · <a href="${BASE}${L}/guides.html">${esc(g({ en: 'See inside both guides', pl: 'Zobacz podgląd obu przewodników' }))}</a></p>
+  </div>
 </section>`;
 }
 
@@ -712,7 +734,7 @@ function freeThanks(L) {
     <p class="actions reveal"><a class="btn big" href="${BASE}${CHECKLIST}" download>${en ? 'Download the checklist (PDF)' : 'Pobierz checklistę (PDF)'}${ARROW}</a></p>
     <p class="notice reveal">${en ? 'Our weekly email comes from <b>contact@pepsafe.info</b>. Add it to your contacts, and if the first one lands in spam or Promotions, mark it “Not spam” so the next ones reach your inbox.' : 'Nasz cotygodniowy e-mail przychodzi z adresu <b>contact@pepsafe.info</b>. Dodaj go do kontaktów, a jeśli pierwszy trafi do spamu lub Ofert, oznacz go „To nie spam”, żeby kolejne trafiały do skrzynki odbiorczej.'}</p>
     <p class="lede reveal">${en ? 'Want the full plan? Protein targets, a 7-day meal plan, a 12-week home routine, a protein calculator and a printable tracker.' : 'Chcesz pełny plan? Cele białkowe, 7-dniowy plan posiłków, 12-tygodniowy trening w domu, kalkulator białka i dzienniczek.'}</p>
-    <p class="actions reveal"><a class="btn ghost big" href="${MUSCLE_URL}" rel="noopener">${en ? 'Protein &amp; Muscle on GLP-1 — £9.99' : 'Białko i mięśnie przy GLP-1 — £9.99'}${ARROW}</a></p>
+    <p class="actions reveal"><a class="btn ghost big" href="${goUrl('muscle', 'thanks')}" rel="noopener">${en ? 'Protein &amp; Muscle on GLP-1 — £9.99' : 'Białko i mięśnie przy GLP-1 — £9.99'}${ARROW}</a></p>
   </div>
 </section>`;
   return layout({ lang: L, here: 'free-thanks.html', twin: 'free-thanks.html', body, noindex: true,
@@ -741,10 +763,10 @@ function guidesPage(L) {
       <li>${en ? 'Independent: no ads, and we never sell medicines or peptides' : 'Niezależne: bez reklam, nie sprzedajemy leków ani peptydów'}</li>
       <li>${en ? 'Updated October 2026' : 'Aktualizacja: październik 2026'}</li>
     </ul>
-    ${card(GUIDE_URL, '£5.99', 'The GLP-1 Safety Guide', en ? '23 pages: what to expect, what to watch for and what to ask your doctor.' : '23 strony: czego się spodziewać, na co uważać i o co pytać lekarza.',
+    ${card(goUrl('guide', 'guides'), '£5.99', 'The GLP-1 Safety Guide', en ? '23 pages: what to expect, what to watch for and what to ask your doctor.' : '23 strony: czego się spodziewać, na co uważać i o co pytać lekarza.',
       en ? ['Side effects and how often they really happen', 'Label warnings: pancreas, gallbladder, kidneys, eyes', 'Surgery, other medicines, pregnancy', 'Stopping and the long term; spotting fakes', 'Appointment checklist and pocket cheat sheet']
          : ['Skutki uboczne i jak często naprawdę występują', 'Ostrzeżenia z etykiet: trzustka, woreczek, nerki, oczy', 'Zabiegi, inne leki, ciąża', 'Odstawienie i długi termin; podróbki', 'Lista pytań do lekarza i ściąga'], ['safety-1', 'safety-2', 'safety-3'])}
-    ${card(MUSCLE_URL, '£9.99', 'Protein &amp; Muscle on GLP-1', en ? '21-page guide + protein calculator + printable weekly tracker.' : '21 stron + kalkulator białka + dzienniczek do druku.',
+    ${card(goUrl('muscle', 'guides'), '£9.99', 'Protein &amp; Muscle on GLP-1', en ? '21-page guide + protein calculator + printable weekly tracker.' : '21 stron + kalkulator białka + dzienniczek do druku.',
       en ? ['Your personal protein target in 2 minutes', '7-day meal plan with vegetarian swaps', '20-minute home strength routine, no gym', '12-week progression plan', 'Older adults, bones and balance']
          : ['Twój cel białkowy w 2 minuty', '7-dniowy plan posiłków z wersją wegetariańską', '20-minutowy trening siłowy w domu', '12-tygodniowy plan postępów', 'Starsi dorośli, kości i równowaga'], ['muscle-1', 'muscle-2', 'muscle-3'])}
     <p class="small ink2 reveal" style="margin-top:22px">${en ? 'Educational information only — not medical advice and no dosing instructions. Bought a guide? Tell us what you think at ' + FORM_TO + '.' : 'Informacje edukacyjne — nie porada medyczna i bez instrukcji dawkowania. Masz już przewodnik? Napisz nam, co o nim sądzisz: ' + FORM_TO + '.'}</p>
@@ -821,7 +843,7 @@ function card(e, L) {
       </aside>` : ''}
     </div>
 
-    ${sec(t.what, d)}${sec(t.how, m)}${sec(t.use, u)}${sec(t.ev, ev)}${(() => { const o = (OPISY[e.n] || {})[L] || (OPISY[e.n] || {}).en; return o && o.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'In depth' : 'Więcej szczegółów'}</h2>${o.map(x => `<p>${esc(x)}</p>`).join('')}</section>` : ''; })()}${guideBox(e, en)}
+    ${sec(t.what, d)}${sec(t.how, m)}${sec(t.use, u)}${sec(t.ev, ev)}${(() => { const o = (OPISY[e.n] || {})[L] || (OPISY[e.n] || {}).en; return o && o.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'In depth' : 'Więcej szczegółów'}</h2>${o.map(x => `<p>${esc(x)}</p>`).join('')}</section>` : ''; })()}${guideBox(e, en, L)}
     ${(() => { const pc = PLUS[e.n]; if (!pc) return ''; const li = a => (a[L] || a.en || []).map(x => `<li>${esc(x)}</li>`).join(''); return `<section class="blk reveal pcgrid"><div class="pc"><h2 class="kick">${en ? 'Advantages' : 'Zalety'}</h2><ul class="srcs-list">${li(pc.pros)}</ul></div><div class="pc"><h2 class="kick">${en ? 'Disadvantages' : 'Wady'}</h2><ul class="srcs-list">${li(pc.cons)}</ul></div></section>`; })()}
     ${SKUTKI.html(e.n, L, esc)}
     ${w ? `<section class="blk note reveal"><h2 class="kick">${esc(t.care)}</h2><p>${esc(w)}</p></section>` : ''}
@@ -1451,6 +1473,17 @@ n += 5;
 
 // steroids section (data in sterydy/*.json, code in tools/sterydy.js)
 const STER = require('./sterydy.js')({ layout, esc, BASE, ARROW, clip, out, LANGS, SITE });
+
+// /go/*.html: count the click (Cloudflare page view), then forward to Ko-fi
+fs.mkdirSync(path.join(out, 'go'), { recursive: true });
+for (const [name, url] of Object.entries(GO)) {
+  fs.writeFileSync(path.join(out, 'go', name + '.html'),
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Opening Ko-fi…</title>` +
+    `<meta http-equiv="refresh" content="3;url=${url}"><style>body{font:16px system-ui,sans-serif;margin:0;display:grid;place-items:center;min-height:100vh;background:#f6f6f2;color:#161a18}a{color:#0A7C66}</style></head>` +
+    `<body><p>Opening Ko-fi… · Otwieram Ko-fi… · Abriendo Ko-fi… <a href="${url}">Ko-fi</a></p>` +
+    `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CF_BEACON}"}'></script>` +
+    `<script>setTimeout(function(){location.replace(${JSON.stringify(url)})},900)</script></body></html>`);
+}
 
 // sitemapa: tylko adresy kanoniczne
 const when = new Date().toISOString().slice(0, 10);

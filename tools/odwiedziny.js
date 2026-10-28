@@ -15,6 +15,8 @@ const q = `query($a:String!,$s:String!,$since:Time!,$until:Time!){
       orderBy:[date_ASC]){ count dimensions{date} sum{visits} }
     strony: rumPageloadEventsAdaptiveGroups(limit:15, filter:{siteTag:$s, datetime_geq:$since, datetime_lt:$until},
       orderBy:[count_DESC]){ count dimensions{requestPath} }
+    wszystkie: rumPageloadEventsAdaptiveGroups(limit:1000, filter:{siteTag:$s, datetime_geq:$since, datetime_lt:$until},
+      orderBy:[count_DESC]){ count dimensions{requestPath} }
     skad: rumPageloadEventsAdaptiveGroups(limit:15, filter:{siteTag:$s, datetime_geq:$since, datetime_lt:$until},
       orderBy:[count_DESC]){ count dimensions{refererHost} }
     kraje: rumPageloadEventsAdaptiveGroups(limit:10, filter:{siteTag:$s, datetime_geq:$since, datetime_lt:$until},
@@ -40,6 +42,15 @@ const q = `query($a:String!,$s:String!,$since:Time!,$until:Time!){
     for (const x of rows) console.log(`  ${String(x.count).padStart(5)}  ${x.dimensions[key] || '(brak)'}`);
   };
   top('Najczesciej otwierane adresy', d.strony, 'requestPath');
+  // money funnel: clicks on tracked buy / support links (/go/<product>-<place>.html) and the free checklist
+  const path = x => x.dimensions.requestPath || '';
+  const goRows = d.wszystkie.filter(x => /^\/go\//.test(path(x)));
+  const sumPath = re => d.wszystkie.filter(x => re.test(path(x))).reduce((t, x) => t + x.count, 0);
+  console.log('\nPrzewodniki i Ko-fi (klikniecia w linki /go/ w ostatnich ' + days + ' dniach):');
+  if (!goRows.length) console.log('  brak klikniec (linki sa nowe albo nikt jeszcze nie kliknal)');
+  for (const x of goRows) console.log(`  ${String(x.count).padStart(5)}  ${path(x).replace('/go/', '').replace('.html', '')}`);
+  console.log(`  razem przewodnik bezpieczenstwa: ${sumPath(/^\/go\/guide-/)}, przewodnik o miesniach: ${sumPath(/^\/go\/muscle-/)}, Ko-fi: ${sumPath(/^\/go\/kofi-/)}`);
+  console.log(`  strona z podgladem przewodnikow (/guides.html): ${sumPath(/\/guides\.html$/)}, darmowa checklista: otwarcia ${sumPath(/\/free\.html$/)}, zapisy ${sumPath(/\/free-thanks\.html$/)}`);
   top('Skad przychodza', d.skad, 'refererHost');
   top('Kraje', d.kraje, 'countryName');
 })();
