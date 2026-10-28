@@ -239,7 +239,7 @@ ${BASE === '/' && !o.noindex ? '' : '<meta name="robots" content="noindex">\n'}$
 ${THEME_BOOT}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${BASE}assets/site.css?v=${ASSET_V}">
 <link rel="canonical" href="${SITE}${BASE}${self}">
 <link rel="alternate" hreflang="en" href="${SITE}${BASE}${self.replace(/^pl\//, 'en/').replace(/\.pl\.html$/, '.html')}">

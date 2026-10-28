@@ -569,3 +569,7 @@ select option, select optgroup { background-color: var(--paper2); color: var(--i
 @keyframes wmcol { 0%, 100% { color: var(--k1); } 25% { color: var(--k2); } 50% { color: var(--k3); } 75% { color: var(--k4); } }
 html.still .wm i { animation: none; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .wm i { animation: none; color: var(--ink); } }
+
+/* wordmark typeface */
+.brand { font-family: "Sora", "Inter Tight", system-ui, sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -.01em; gap: 11px; }
+.wm i { letter-spacing: 0; }
