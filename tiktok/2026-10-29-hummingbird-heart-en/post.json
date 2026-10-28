@@ -1,0 +1,35 @@
+{
+ "topic": "A heart that beats over 1,000 times a minute",
+ "tagline": "Science, plainly",
+ "slides": [
+  {
+   "kicker": "The fact",
+   "title": "A hummingbird's heart can beat over 1,000 times a minute.",
+   "vo": "A hummingbird's heart can beat over 1,000 times a minute.",
+   "seconds": 2.8,
+   "hero": true
+  },
+  {
+   "kicker": "How",
+   "title": "Its wings beat dozens of times each second, which burns huge amounts of energy.",
+   "vo": "Its wings beat dozens of times each second, which burns huge amounts of energy.",
+   "seconds": 3
+  },
+  {
+   "kicker": "Why",
+   "title": "It must feed often, and at night it can enter a deep, energy-saving state called torpor.",
+   "vo": "It must feed often, and at night it can enter a deep, energy-saving state called torpor.",
+   "seconds": 3
+  },
+  {
+   "kicker": "Your turn",
+   "title": "What is your resting pulse? Guess in a number.",
+   "vo": "What is your resting pulse? Guess in a number.",
+   "seconds": 2.8,
+   "cta": "pepsafe.info",
+   "foot": "Educational content. Questions? Comment or DM us."
+  }
+ ],
+ "caption": "A hummingbird heart can beat over 1,000 times a minute, and at night the bird can drop into an energy-saving state called torpor. What is your resting pulse? Guess a number. 🐦\n\nMore biology at pepsafe.info\n\n#biology #science #chemistry #learnontiktok #education #pepsafe",
+ "vo": "kokoro"
+}
