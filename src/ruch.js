@@ -120,8 +120,8 @@
     function label(sel) { return sel.options[sel.selectedIndex].textContent; }
     function side(sel) {
       var m = members(sel.value), n = m.length;
-      var chips = m.slice(0, 8).map(function (r) { return '<em>' + r.n + '</em>'; }).join('') +
-        (n > 8 ? '<em class="more">+' + (n - 8) + '</em>' : '');
+      var sfx = pl ? '.pl.html' : ES ? '.es.html' : '.html';
+      var chips = m.map(function (r) { return '<a href="/p/' + r.s + sfx + '">' + r.n + '</a>'; }).join('');
       return '<div class="vside"><b>' + label(sel) + '</b>' +
         (n ? '<small>' + n + (pl ? ' wpisów' : es(' entries', ' fichas')) + '</small><p class="vchips">' + chips + '</p>' : '') + '</div>';
     }
