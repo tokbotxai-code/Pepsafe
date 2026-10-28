@@ -254,13 +254,13 @@ su: Su fabricante lo retiró de la venta en 2018 por razones comerciales, no de 
 t: nausea, flushing, dizziness, injsite, allergy
 ec: Nausea ; Flushing ; Dizziness ; Pain where it is injected
 es: Allergic reaction, rare ; Low calcium in the blood
-eu: It is used in Japan and some other countries for bone pain and osteoporosis, and it is not approved in the US or the EU.
+eu: It has been used mainly in Japan, where it was first approved in 1982, and in some other Asian countries for bone pain and osteoporosis.
 pc: Nudności ; Nagłe zaczerwienienie ; Zawroty głowy ; Ból w miejscu wstrzyknięcia
 ps: Reakcja alergiczna, rzadka ; Niski poziom wapnia we krwi
-pu: Stosuje się ją w Japonii i niektórych innych krajach przy bólu kości i osteoporozie, a w USA i UE nie jest zatwierdzona.
+pu: Stosuje się ją głównie w Japonii, gdzie po raz pierwszy zatwierdzono ją w 1982 r., oraz w niektórych innych krajach Azji przy bólu kości i osteoporozie.
 sc: Náuseas ; Rubor ; Mareo ; Dolor en el lugar de la inyección
 ss: Reacción alérgica, rara ; Calcio bajo en sangre
-su: Se usa en Japón y otros países para el dolor óseo y la osteoporosis, y no está aprobada en EE. UU. ni en la UE.
+su: Se usa sobre todo en Japón, donde se aprobó por primera vez en 1982, y en algunos otros países asiáticos para el dolor óseo y la osteoporosis.
 
 =CJC-1295 z DAC
 t: injsite, flushing, headache, water
@@ -408,9 +408,9 @@ su: Se administra en una vena cada tres meses para prevenir la migraña, y los d
 
 =Stamulumab
 t:
-eu: It was tested in people with muscular dystrophy and did not show enough benefit, so development stopped. It is not approved, and published safety data are limited.
-pu: Badano go u osób z dystrofią mięśniową i nie wykazał dostatecznej korzyści, więc prace przerwano. Nie jest zatwierdzony, a opublikowane dane o bezpieczeństwie są ograniczone.
-su: Se probó en personas con distrofia muscular y no mostró suficiente beneficio, así que se detuvo su desarrollo. No está aprobado y los datos de seguridad publicados son limitados.
+eu: It was tested in a safety study in adults with muscular dystrophy that showed no clear benefit, and its maker stopped development in 2008. It is not approved, and skin reactions occurred at the higher doses.
+pu: Badano go w badaniu bezpieczeństwa u dorosłych z dystrofią mięśniową, które nie wykazało wyraźnej korzyści, a producent przerwał prace w 2008 r. Nie jest zatwierdzony, a przy wyższych dawkach występowały reakcje skórne.
+su: Se probó en un estudio de seguridad en adultos con distrofia muscular que no mostró un beneficio claro, y su fabricante detuvo el desarrollo en 2008. No está aprobado, y con las dosis más altas aparecieron reacciones cutáneas.
 
 =Abatacept
 t: headache, infection, nausea, breathing, allergy

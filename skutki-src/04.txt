@@ -281,13 +281,13 @@ su: Es un antibiótico para infecciones graves de la piel y la sangre, administr
 t: injsite, nausea, headache, vomiting, mood, libido
 ec: Darkening of the skin and moles ; Reactions where it is injected ; Nausea, vomiting and headache ; Spontaneous erections
 es: Depression and thoughts of suicide, which need prompt medical help
-eu: It is approved for rare genetic causes of severe obesity and for Bardet-Biedl syndrome, and moles should be checked regularly.
+eu: It is approved for specific rare forms of severe obesity, and moles should be checked regularly.
 pc: Ciemnienie skóry i znamion ; Odczyny w miejscu wstrzyknięcia ; Nudności, wymioty i ból głowy ; Samoistne erekcje
 ps: Depresja i myśli samobójcze, które wymagają szybkiej pomocy lekarza
-pu: Jest zatwierdzony w rzadkich genetycznych przyczynach ciężkiej otyłości i w zespole Bardeta-Biedla, a znamiona trzeba regularnie kontrolować.
+pu: Jest zatwierdzony w określonych rzadkich postaciach ciężkiej otyłości, a znamiona trzeba regularnie kontrolować.
 sc: Oscurecimiento de la piel y de los lunares ; Reacciones en el lugar de la inyección ; Náuseas, vómitos y dolor de cabeza ; Erecciones espontáneas
 ss: Depresión e ideas de suicidio, que requieren ayuda médica rápida
-su: Está aprobado para causas genéticas raras de obesidad grave y para el síndrome de Bardet-Biedl, y hay que revisar los lunares con regularidad.
+su: Está aprobado para formas raras concretas de obesidad grave, y hay que revisar los lunares con regularidad.
 
 =Cyklosporyna
 t: kidney, bp, tremor, headache, infection, cancer, nausea

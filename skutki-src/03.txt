@@ -1,11 +1,11 @@
 =Tymozyna alfa-1
 t: injsite
 ec: Redness, pain or itching where it is injected
-eu: It is approved only in some Asian countries and was generally well tolerated in trials, which were mostly small. It is not approved in the US or the EU, and long-term data in healthy people are missing.
+eu: It is approved as a medicine in a number of countries, for example China, and not by the FDA. In trials, which were mostly small, it was generally well tolerated, and long-term data in healthy people are missing.
 pc: Zaczerwienienie, ból lub swędzenie w miejscu wstrzyknięcia
-pu: Jest zatwierdzona tylko w niektórych krajach azjatyckich i w badaniach, głównie małych, była na ogół dobrze tolerowana. Nie jest zatwierdzona w USA ani UE, a brakuje danych długoterminowych u zdrowych osób.
+pu: Jest zatwierdzona jako lek w wielu krajach, np. w Chinach, a nie przez FDA. W badaniach, głównie małych, była na ogół dobrze tolerowana, a brakuje danych długoterminowych u zdrowych osób.
 sc: Enrojecimiento, dolor o picor en el lugar de la inyección
-su: Solo está aprobada en algunos países asiáticos y en los ensayos, mayormente pequeños, se toleró bien en general. No está aprobada en EE. UU. ni en la UE, y faltan datos a largo plazo en personas sanas.
+su: Está aprobada como medicamento en varios países, por ejemplo China, y no por la FDA. En los ensayos, mayormente pequeños, se toleró bien en general, y faltan datos a largo plazo en personas sanas.
 
 =Tymalina i tymulina
 t:
