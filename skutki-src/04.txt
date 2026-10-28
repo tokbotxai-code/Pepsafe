@@ -11,25 +11,25 @@ su: Hay pocos ensayos controlados de inyecciones o goteos, y la calidad de los p
 t: nausea, musclejoint, dizziness, headache, bone
 ec: Nausea ; Joint pain and leg cramps ; Dizziness, including on standing up ; Headache
 es: High calcium in the blood: thirst, constipation, confusion ; Fast heartbeat after the injection
-eu: In rat studies it caused bone cancer, so earlier labels carried a boxed warning that was removed in 2020 after human data did not confirm a risk. Treatment is limited to two years.
+eu: In rat studies it caused bone cancer, so earlier labels carried a boxed warning that was removed in 2020 after human data did not confirm a risk. The label now allows longer use in people who stay at high fracture risk.
 pc: Nudności ; Ból stawów i skurcze nóg ; Zawroty głowy, także przy wstawaniu ; Ból głowy
 ps: Wysoki poziom wapnia we krwi: pragnienie, zaparcia, splątanie ; Szybkie bicie serca po wstrzyknięciu
-pu: W badaniach na szczurach powodował raka kości, więc wcześniejsze ulotki miały ramkę ostrzegawczą, którą usunięto w 2020 r., gdy dane z ludzi nie potwierdziły ryzyka. Leczenie ogranicza się do dwóch lat.
+pu: W badaniach na szczurach powodował raka kości, więc wcześniejsze ulotki miały ramkę ostrzegawczą, którą usunięto w 2020 r., gdy dane z ludzi nie potwierdziły ryzyka. Ulotka dopuszcza teraz dłuższe leczenie u osób, które nadal mają wysokie ryzyko złamań.
 sc: Náuseas ; Dolor de articulaciones y calambres en las piernas ; Mareo, también al ponerse de pie ; Dolor de cabeza
 ss: Calcio alto en sangre: sed, estreñimiento, confusión ; Latido rápido tras la inyección
-su: En estudios con ratas causó cáncer de hueso, por lo que etiquetas anteriores llevaban una advertencia destacada que se retiró en 2020 al no confirmar los datos en personas un riesgo. El tratamiento se limita a dos años.
+su: En estudios con ratas causó cáncer de hueso, por lo que etiquetas anteriores llevaban una advertencia destacada que se retiró en 2020 al no confirmar los datos en personas un riesgo. El prospecto ahora permite un uso más prolongado en personas que siguen con alto riesgo de fractura.
 
 =Abaloparatyd
 t: heart, dizziness, nausea, headache, fatigue, abdominal
 ec: Dizziness ; Nausea ; Headache ; Fast heartbeat or palpitations ; Tiredness and upper stomach pain
 es: A drop in blood pressure on standing, with fainting ; High calcium in the blood
-eu: In rats it caused bone cancer, and human data have not confirmed that risk. Treatment is limited to two years.
+eu: In rats it caused bone cancer, so its boxed warning was in place until December 2021, when it was removed because human data did not confirm the risk.
 pc: Zawroty głowy ; Nudności ; Ból głowy ; Szybkie bicie serca lub kołatanie ; Zmęczenie i ból w nadbrzuszu
 ps: Spadek ciśnienia przy wstawaniu, z omdleniem ; Wysoki poziom wapnia we krwi
-pu: U szczurów powodował raka kości, a dane z ludzi nie potwierdziły takiego ryzyka. Leczenie ogranicza się do dwóch lat.
+pu: U szczurów powodował raka kości, więc jego ramka ostrzegawcza obowiązywała do grudnia 2021 r., gdy ją usunięto, bo dane z ludzi nie potwierdziły ryzyka.
 sc: Mareo ; Náuseas ; Dolor de cabeza ; Latido rápido o palpitaciones ; Cansancio y dolor en la parte alta del estómago
 ss: Bajada de la presión al ponerse de pie, con desmayo ; Calcio alto en sangre
-su: En ratas causó cáncer de hueso, y los datos en personas no han confirmado ese riesgo. El tratamiento se limita a dos años.
+su: En ratas causó cáncer de hueso, por lo que su advertencia destacada estuvo vigente hasta diciembre de 2021, cuando se retiró porque los datos en personas no confirmaron el riesgo.
 
 =Kalcytonina łososiowa
 t: nausea, flushing, injsite, allergy, cancer
@@ -46,11 +46,11 @@ su: Las autoridades europeas observaron un pequeño aumento del riesgo de cánce
 =Wosorytyd
 t: injsite, vomiting, bp, dizziness, fatigue, musclejoint
 ec: Reactions where it is injected ; Vomiting ; Low blood pressure and dizziness ; Tiredness ; Joint pain
-eu: It is approved only for children with achondroplasia, and its long-term effects on growth and health are still being followed.
+eu: It is approved for children with achondroplasia, and its long-term effects on growth and health are still being followed.
 pc: Odczyny w miejscu wstrzyknięcia ; Wymioty ; Niskie ciśnienie krwi i zawroty głowy ; Zmęczenie ; Ból stawów
-pu: Jest zatwierdzony tylko dla dzieci z achondroplazją, a jego długoterminowy wpływ na wzrost i zdrowie jest nadal obserwowany.
+pu: Jest zatwierdzony dla dzieci z achondroplazją, a jego długoterminowy wpływ na wzrost i zdrowie jest nadal obserwowany.
 sc: Reacciones en el lugar de la inyección ; Vómitos ; Presión arterial baja y mareo ; Cansancio ; Dolor de articulaciones
-su: Solo está aprobado para niños con acondroplasia, y sus efectos a largo plazo sobre el crecimiento y la salud todavía se están siguiendo.
+su: Está aprobado para niños con acondroplasia, y sus efectos a largo plazo sobre el crecimiento y la salud todavía se están siguiendo.
 
 =Wazopresyna
 t: heart, bp, water
@@ -281,13 +281,13 @@ su: Es un antibiótico para infecciones graves de la piel y la sangre, administr
 t: injsite, nausea, headache, vomiting, mood, libido
 ec: Darkening of the skin and moles ; Reactions where it is injected ; Nausea, vomiting and headache ; Spontaneous erections
 es: Depression and thoughts of suicide, which need prompt medical help
-eu: It is approved only for rare genetic causes of severe obesity and Bardet-Biedl syndrome, and moles should be checked regularly.
+eu: It is approved for rare genetic causes of severe obesity and for Bardet-Biedl syndrome, and moles should be checked regularly.
 pc: Ciemnienie skóry i znamion ; Odczyny w miejscu wstrzyknięcia ; Nudności, wymioty i ból głowy ; Samoistne erekcje
 ps: Depresja i myśli samobójcze, które wymagają szybkiej pomocy lekarza
-pu: Jest zatwierdzony tylko w rzadkich genetycznych przyczynach ciężkiej otyłości i zespole Bardeta-Biedla, a znamiona trzeba regularnie kontrolować.
+pu: Jest zatwierdzony w rzadkich genetycznych przyczynach ciężkiej otyłości i w zespole Bardeta-Biedla, a znamiona trzeba regularnie kontrolować.
 sc: Oscurecimiento de la piel y de los lunares ; Reacciones en el lugar de la inyección ; Náuseas, vómitos y dolor de cabeza ; Erecciones espontáneas
 ss: Depresión e ideas de suicidio, que requieren ayuda médica rápida
-su: Solo está aprobado para causas genéticas raras de obesidad grave y para el síndrome de Bardet-Biedl, y hay que revisar los lunares con regularidad.
+su: Está aprobado para causas genéticas raras de obesidad grave y para el síndrome de Bardet-Biedl, y hay que revisar los lunares con regularidad.
 
 =Cyklosporyna
 t: kidney, bp, tremor, headache, infection, cancer, nausea

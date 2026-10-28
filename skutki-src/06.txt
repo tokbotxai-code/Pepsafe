@@ -335,13 +335,13 @@ su: Son un ingrediente cosmético de proteína animal, y la principal preocupaci
 t: lowsugar, injsite, headache
 ec: Low blood sugar ; Reactions where it is injected ; Headache
 es: Severe low blood sugar
-eu: It was approved in the US in 2005 and withdrawn in 2007 for commercial reasons, so it is not available as a medicine.
+eu: It was sold in the US only briefly and stopped in 2007 after a patent settlement, and its European application was withdrawn that year, so it is not available as a medicine.
 pc: Niski poziom cukru ; Odczyny w miejscu wstrzyknięcia ; Ból głowy
 ps: Ciężka hipoglikemia
-pu: Został zatwierdzony w USA w 2005 r. i wycofany w 2007 r. z powodów handlowych, więc nie jest dostępny jako lek.
+pu: Był sprzedawany w USA tylko krótko i przestano go sprzedawać w 2007 r. po ugodzie patentowej, a wniosek europejski wycofano w tym samym roku, więc nie jest dostępny jako lek.
 sc: Azúcar bajo en sangre ; Reacciones en el lugar de la inyección ; Dolor de cabeza
 ss: Hipoglucemia grave
-su: Se aprobó en EE. UU. en 2005 y se retiró en 2007 por razones comerciales, así que no está disponible como medicamento.
+su: Se vendió en EE. UU. solo brevemente y se dejó de vender en 2007 tras un acuerdo de patentes, y su solicitud europea se retiró ese año, así que no está disponible como medicamento.
 
 =GLOW
 t: injsite

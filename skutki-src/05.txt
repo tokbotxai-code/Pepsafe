@@ -38,13 +38,13 @@ su: Baja las hormonas sexuales a propósito, así que los efectos se parecen a l
 t: allergy, flushing, injsite, heart
 ec: Hot flushes ; Pain where it is injected
 es: Sudden severe allergic reactions soon after the injection, which led to its withdrawal from the US market ; Heart rhythm changes
-eu: It was approved in the US in 2003 for advanced prostate cancer and withdrawn for the allergy risk, so it is not a medicine in use today.
+eu: It was sold in the US from 2003 for advanced prostate cancer and stopped there in 2005, partly because of severe allergic reactions, so it is not a mainstream medicine today.
 pc: Uderzenia gorąca ; Ból w miejscu wstrzyknięcia
 ps: Nagłe ciężkie reakcje alergiczne wkrótce po wstrzyknięciu, przez które wycofano go z rynku USA ; Zmiany rytmu serca
-pu: Został zatwierdzony w USA w 2003 r. w zaawansowanym raku prostaty i wycofany z powodu ryzyka alergii, więc nie jest dziś stosowanym lekiem.
+pu: Był sprzedawany w USA od 2003 r. w zaawansowanym raku prostaty i przestano go tam sprzedawać w 2005 r., częściowo z powodu ciężkich reakcji alergicznych, więc nie jest dziś powszechnie stosowanym lekiem.
 sc: Sofocos ; Dolor en el lugar de la inyección
 ss: Reacciones alérgicas graves y repentinas poco después de la inyección, que llevaron a su retirada del mercado de EE. UU. ; Cambios del ritmo del corazón
-su: Se aprobó en EE. UU. en 2003 para el cáncer de próstata avanzado y se retiró por el riesgo de alergia, así que hoy no es un medicamento en uso.
+su: Se vendió en EE. UU. desde 2003 para el cáncer de próstata avanzado y allí se dejó de vender en 2005, en parte por reacciones alérgicas graves, así que hoy no es un medicamento de uso general.
 
 =Atosiban
 t: nausea, vomiting, headache, dizziness, flushing, injsite, heart, bp
@@ -134,13 +134,13 @@ su: Es una bebida que se toma una vez para una prueba de déficit de hormona del
 t: nausea, appetite, liver, heart
 ec: Higher blood sugar ; Nausea ; Raised liver tests
 es: Heart rhythm changes, so people with heart conduction problems are excluded
-eu: It is approved in Japan for weight loss from cancer, and not in the US or the EU, where regulators found the benefit too small.
+eu: It was approved in Japan in 2020 for weight loss from cancer, and the EU refused it in 2017 because the benefit was too small.
 pc: Wyższy poziom cukru we krwi ; Nudności ; Podwyższone próby wątrobowe
 ps: Zmiany rytmu serca, dlatego wyklucza się osoby z zaburzeniami przewodzenia w sercu
-pu: Jest zatwierdzona w Japonii w utracie masy ciała z powodu raka, a nie w USA ani UE, gdzie urzędy uznały korzyść za zbyt małą.
+pu: Została zatwierdzona w Japonii w 2020 r. w utracie masy ciała z powodu raka, a UE odmówiła w 2017 r., bo uznała korzyść za zbyt małą.
 sc: Azúcar más alto en sangre ; Náuseas ; Pruebas hepáticas elevadas
 ss: Cambios del ritmo del corazón, por lo que se excluye a personas con problemas de conducción cardíaca
-su: Está aprobada en Japón para la pérdida de peso por cáncer, y no en EE. UU. ni en la UE, donde las autoridades consideraron el beneficio demasiado pequeño.
+su: Se aprobó en Japón en 2020 para la pérdida de peso por cáncer, y la UE la rechazó en 2017 porque consideró el beneficio demasiado pequeño.
 
 =Bortezomib
 t: nausea, diarrhoea, constipation, fatigue, fever, bleeding, infection, dizziness
@@ -230,13 +230,13 @@ su: Es un medicamento con receta para las plaquetas bajas (PTI), y se controla c
 t: allergy, bp, clots
 ec: High blood pressure ; Joint pain
 es: Severe allergic reactions, some fatal, which led to its withdrawal ; Blood clots, heart attack and stroke as with other medicines of its kind
-eu: It was approved in 2012 for anaemia in dialysis and withdrawn in 2013 over fatal allergic reactions, so it is not a medicine in use today.
+eu: It was approved in the US in 2012 for anaemia in dialysis and recalled in February 2013 after fatal allergic reactions, so it is not a medicine in use today.
 pc: Wysokie ciśnienie krwi ; Ból stawów
 ps: Ciężkie reakcje alergiczne, część śmiertelnych, przez które lek wycofano ; Zakrzepy, zawał i udar jak przy innych lekach tego rodzaju
-pu: Został zatwierdzony w 2012 r. przy niedokrwistości u dializowanych i wycofany w 2013 r. z powodu śmiertelnych reakcji alergicznych, więc nie jest dziś stosowanym lekiem.
+pu: Został zatwierdzony w USA w 2012 r. przy niedokrwistości u dializowanych i wycofany z rynku w lutym 2013 r. po śmiertelnych reakcjach alergicznych, więc nie jest dziś stosowanym lekiem.
 sc: Presión arterial alta ; Dolor de articulaciones
 ss: Reacciones alérgicas graves, algunas mortales, que llevaron a su retirada ; Coágulos, infarto e ictus como con otros medicamentos de su tipo
-su: Se aprobó en 2012 para la anemia en diálisis y se retiró en 2013 por reacciones alérgicas mortales, así que hoy no es un medicamento en uso.
+su: Se aprobó en EE. UU. en 2012 para la anemia en diálisis y se retiró del mercado en febrero de 2013 tras reacciones alérgicas mortales, así que hoy no es un medicamento en uso.
 
 =Albiglutyd
 t: nausea, vomiting, diarrhoea, injsite, pancreas, thyroid, allergy
@@ -408,9 +408,9 @@ su: Se administra en una vena cada tres meses para prevenir la migraña, y los d
 
 =Stamulumab
 t:
-eu: It was tested in boys with muscular dystrophy and did not show enough benefit, so development stopped. It is not approved, and published safety data are limited.
-pu: Badano go u chłopców z dystrofią mięśniową i nie wykazał dostatecznej korzyści, więc prace przerwano. Nie jest zatwierdzony, a opublikowane dane o bezpieczeństwie są ograniczone.
-su: Se probó en niños con distrofia muscular y no mostró suficiente beneficio, así que se detuvo su desarrollo. No está aprobado y los datos de seguridad publicados son limitados.
+eu: It was tested in people with muscular dystrophy and did not show enough benefit, so development stopped. It is not approved, and published safety data are limited.
+pu: Badano go u osób z dystrofią mięśniową i nie wykazał dostatecznej korzyści, więc prace przerwano. Nie jest zatwierdzony, a opublikowane dane o bezpieczeństwie są ograniczone.
+su: Se probó en personas con distrofia muscular y no mostró suficiente beneficio, así que se detuvo su desarrollo. No está aprobado y los datos de seguridad publicados son limitados.
 
 =Abatacept
 t: headache, infection, nausea, breathing, allergy

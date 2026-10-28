@@ -328,13 +328,13 @@ su: Es un medicamento con receta para adelgazar en EE. UU., y no está autorizad
 =s-dmaa
 t: bp, heart, headache, clots
 ec: High blood pressure ; Racing heart ; Headache
-es: Heart attack ; Stroke and bleeding in the brain ; A runner died after the 2012 London Marathon, and DMAA was found at the inquest
+es: Heart attack ; Stroke and bleeding in the brain ; A runner died during the 2012 London Marathon, and the inquest found DMAA toxicity contributed
 eu: It is banned in many countries and by anti-doping bodies, and still appears in some supplements.
 pc: Wysokie ciśnienie krwi ; Szybkie bicie serca ; Ból głowy
-ps: Zawał serca ; Udar i krwawienie w mózgu ; Biegaczka zmarła po Maratonie Londyńskim w 2012 r., a na przesłuchaniu stwierdzono obecność DMAA
+ps: Zawał serca ; Udar i krwawienie w mózgu ; Biegaczka zmarła podczas Maratonu Londyńskiego w 2012 r., a dochodzenie wykazało, że do śmierci przyczyniła się toksyczność DMAA
 pu: Jest zakazany w wielu krajach i przez organizacje antydopingowe, a mimo to nadal pojawia się w niektórych suplementach.
 sc: Presión arterial alta ; Latido rápido ; Dolor de cabeza
-ss: Infarto ; Ictus y hemorragia cerebral ; Una corredora murió tras el Maratón de Londres de 2012 y se encontró DMAA en la investigación
+ss: Infarto ; Ictus y hemorragia cerebral ; Una corredora murió durante el Maratón de Londres de 2012 y la investigación concluyó que la toxicidad del DMAA contribuyó
 su: Está prohibido en muchos países y por los organismos antidopaje, y aun así aparece en algunos suplementos.
 
 =s-salbutamol
@@ -403,13 +403,13 @@ su: No hay datos en personas, así que no se sabe nada sobre cantidades seguras,
 =s-finasteride
 t: libido, gynecomastia, mood, fertility
 ec: Lower sex drive ; Erection problems ; Breast tenderness
-es: Low mood and thoughts of suicide, with UK regulator warnings added in 2022 ; Sexual problems that some men say persist after stopping
+es: Low mood and thoughts of suicide, which the UK regulator warned about in 2017 and again in 2024 with a patient alert card ; Sexual problems that some men say persist after stopping
 eu: It is a prescription medicine for hair loss and prostate enlargement.
 pc: Niższe libido ; Zaburzenia wzwodu ; Tkliwość piersi
-ps: Obniżony nastrój i myśli samobójcze, o czym brytyjski urząd dodał ostrzeżenia w 2022 r. ; Problemy seksualne, które część mężczyzn zgłasza jako utrzymujące się po odstawieniu
+ps: Obniżony nastrój i myśli samobójcze, przed czym brytyjski urząd ostrzegał w 2017 r. i ponownie w 2024 r., wprowadzając kartę ostrzegawczą ; Problemy seksualne, które część mężczyzn zgłasza jako utrzymujące się po odstawieniu
 pu: To lek na receptę przy łysieniu i przeroście prostaty.
 sc: Menos deseo sexual ; Problemas de erección ; Sensibilidad en las mamas
-ss: Ánimo bajo e ideas de suicidio, con advertencias del regulador británico añadidas en 2022 ; Problemas sexuales que algunos hombres dicen que persisten al dejarlo
+ss: Ánimo bajo e ideas de suicidio, sobre lo que el regulador británico advirtió en 2017 y de nuevo en 2024 con una tarjeta de alerta ; Problemas sexuales que algunos hombres dicen que persisten al dejarlo
 su: Es un medicamento con receta para la caída del cabello y el aumento de la próstata.
 
 =s-dutasteride

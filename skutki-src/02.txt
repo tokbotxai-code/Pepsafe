@@ -77,13 +77,13 @@ su: Niveles altos en sangre de un subproducto de la carnitina (TMAO) se han vinc
 t: nausea, vomiting, diarrhoea, constipation, abdominal, reflux, appetite, pancreas, gallbladder, kidney, thyroid, lowsugar
 ec: Nausea, vomiting, diarrhoea and constipation, mostly mild to moderate ; Stomach pain, indigestion and heartburn ; Reduced appetite
 es: Severe, lasting stomach pain: possible pancreatitis ; Gallbladder disease ; Dehydration with kidney injury ; Lump in the neck: boxed warning about thyroid tumours as with other GLP-1 drugs ; Low blood sugar with insulin or a sulfonylurea
-eu: Long-term safety over many years is still being collected, and the tablet has strict food and water rules that were part of trials.
+eu: It was approved in the US in April 2026 as a tablet that can be taken with or without food, and long-term safety over many years is still being collected.
 pc: Nudności, wymioty, biegunka i zaparcia, głównie łagodne lub umiarkowane ; Ból brzucha, niestrawność i zgaga ; Zmniejszony apetyt
 ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Choroba pęcherzyka żółciowego ; Odwodnienie z uszkodzeniem nerek ; Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy, jak przy innych lekach GLP-1 ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika
-pu: Bezpieczeństwo przez wiele lat stosowania jest wciąż zbierane, a przy tabletce obowiązują ścisłe zasady dotyczące jedzenia i picia, które były częścią badań.
+pu: Został zatwierdzony w USA w kwietniu 2026 r. jako tabletka, którą można przyjmować z jedzeniem lub bez, a bezpieczeństwo przez wiele lat stosowania jest wciąż zbierane.
 sc: Náuseas, vómitos, diarrea y estreñimiento, sobre todo leves o moderados ; Dolor de estómago, indigestión y acidez ; Menos apetito
 ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Enfermedad de la vesícula ; Deshidratación con daño renal ; Bulto en el cuello: advertencia destacada sobre tumores de tiroides, como con otros fármacos GLP-1 ; Azúcar bajo con insulina o una sulfonilurea
-su: La seguridad a lo largo de muchos años aún se está recopilando, y el comprimido tiene normas estrictas sobre comida y agua que formaron parte de los ensayos.
+su: Se aprobó en EE. UU. en abril de 2026 como comprimido que se puede tomar con o sin comida, y la seguridad a lo largo de muchos años aún se está recopilando.
 
 =Somatropina (HGH)
 t: headache, injsite, musclejoint, swelling, water, vision, bone, lowsugar, allergy
