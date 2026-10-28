@@ -1,0 +1,305 @@
+[
+ {
+  "id": "nandrolone-phenylpropionate",
+  "n": "Nandrolone phenylpropionate",
+  "nm": {
+   "pl": "Fenylopropionian nandrolonu",
+   "es": "Fenilpropionato de nandrolona"
+  },
+  "alt": {
+   "en": "Short-acting nandrolone ester, “NPP”",
+   "pl": "Krótkodziałający ester nandrolonu, „NPP”",
+   "es": "Éster de nandrolona de acción corta, “NPP”"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "nandrolone phenylpropionate",
+  "what": {
+   "en": "Nandrolone phenylpropionate is a short-acting ester of the anabolic steroid nandrolone. It releases faster than the decanoate form, so its effect fades within days.",
+   "pl": "Fenylopropionian nandrolonu to krótkodziałający ester steroidu anabolicznego nandrolonu. Uwalnia się szybciej niż postać dekanianowa, więc jego działanie wygasa po kilku dniach.",
+   "es": "El fenilpropionato de nandrolona es un éster de acción corta del esteroide anabólico nandrolona. Se libera más rápido que la forma decanoato, por lo que su efecto se agota en unos días."
+  },
+  "how": {
+   "en": "Once the ester is removed it is nandrolone, which binds the androgen receptor and promotes protein building in muscle and bone with a weaker androgenic effect than testosterone.",
+   "pl": "Po odcięciu estru to nandrolon, który wiąże się z receptorem androgenowym i sprzyja budowie białka w mięśniach i kościach, z słabszym działaniem androgennym niż testosteron.",
+   "es": "Una vez retirado el éster es nandrolona, que se une al receptor de andrógenos y favorece la formación de proteínas en músculo y hueso con un efecto androgénico más débil que la testosterona."
+  },
+  "med": {
+   "en": "Nandrolone esters were used for anaemia of kidney disease, osteoporosis and muscle wasting in illness. Today this form is rarely used in medicine.",
+   "pl": "Estry nandrolonu stosowano w niedokrwistości w chorobach nerek, osteoporozie i utracie mięśni w chorobie. Dziś ta postać jest rzadko używana w medycynie.",
+   "es": "Los ésteres de nandrolona se usaron para la anemia de la enfermedad renal, la osteoporosis y la pérdida de músculo en enfermedades. Hoy esta forma se usa poco en medicina."
+  },
+  "risk": {
+   "en": "Risks match nandrolone decanoate: lower natural testosterone, sexual dysfunction, raised blood pressure, worse cholesterol and strain on the heart. Because it acts only briefly, it is administered often, which adds to injection-site problems.",
+   "pl": "Ryzyka są takie jak przy dekanianie nandrolonu: niższy naturalny testosteron, zaburzenia seksualne, podwyższone ciśnienie, gorszy cholesterol i obciążenie serca. Ponieważ działa krótko, podaje się go często, co dokłada problemów w miejscu wstrzyknięcia.",
+   "es": "Los riesgos coinciden con los del decanoato de nandrolona: menor testosterona natural, disfunción sexual, presión arterial alta, peor colesterol y sobrecarga del corazón. Como actúa poco tiempo, se administra con frecuencia, lo que suma problemas en el punto de inyección."
+  },
+  "pros": {
+   "en": [
+    "Faster onset than long esters",
+    "Effects clear sooner once it is stopped",
+    "Same family as a drug with real medical history"
+   ],
+   "pl": [
+    "Szybszy początek działania niż estrów długich",
+    "Skutki ustępują szybciej po odstawieniu",
+    "Ta sama rodzina co lek z realną historią medyczną"
+   ],
+   "es": [
+    "Inicio más rápido que los ésteres largos",
+    "Los efectos desaparecen antes al suspenderlo",
+    "Misma familia que un fármaco con historia médica real"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Needs very frequent administration",
+    "Suppresses natural testosterone",
+    "Rarely used in medicine, so little current research"
+   ],
+   "pl": [
+    "Wymaga bardzo częstego podawania",
+    "Hamuje naturalny testosteron",
+    "Rzadko stosowany w medycynie, więc mało bieżących badań"
+   ],
+   "es": [
+    "Requiere administraciones muy frecuentes",
+    "Suprime la testosterona natural",
+    "Se usa poco en medicina, así que hay poca investigación actual"
+   ]
+  }
+ },
+ {
+  "id": "enclomiphene",
+  "n": "Enclomiphene",
+  "nm": {
+   "pl": "Enklomifen",
+   "es": "Enclomifeno"
+  },
+  "alt": {
+   "en": "An isomer of clomiphene, never approved",
+   "pl": "Izomer klomifenu, nigdy niezatwierdzony",
+   "es": "Un isómero del clomifeno, nunca aprobado"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "enclomiphene",
+  "what": {
+   "en": "Enclomiphene is one of the two forms (isomers) that make up clomiphene. It was developed as a treatment for low testosterone in men that keeps fertility, and it has not been approved.",
+   "pl": "Enklomifen to jedna z dwóch form (izomerów) składających się na klomifen. Opracowano go jako leczenie niskiego testosteronu u mężczyzn, które zachowuje płodność, i nie został zatwierdzony.",
+   "es": "El enclomifeno es una de las dos formas (isómeros) que componen el clomifeno. Se desarrolló como tratamiento de la testosterona baja en hombres que conserva la fertilidad, y no ha sido aprobado."
+  },
+  "how": {
+   "en": "It blocks oestrogen receptors in the brain, which makes the pituitary release more of the hormones that tell the testes to make testosterone and sperm.",
+   "pl": "Blokuje receptory estrogenowe w mózgu, przez co przysadka wydziela więcej hormonów każących jądrom produkować testosteron i plemniki.",
+   "es": "Bloquea los receptores de estrógeno del cerebro, lo que hace que la hipófisis libere más de las hormonas que ordenan a los testículos producir testosterona y espermatozoides."
+  },
+  "med": {
+   "en": "Trials in men with low testosterone caused by a pituitary signal problem showed higher testosterone and preserved sperm counts, but regulators have not approved it.",
+   "pl": "Badania u mężczyzn z niskim testosteronem wynikającym z problemu sygnału z przysadki wykazały wyższy testosteron i zachowaną liczbę plemników, ale organy nadzoru go nie zatwierdziły.",
+   "es": "Los ensayos en hombres con testosterona baja por un problema de señal de la hipófisis mostraron testosterona más alta y recuentos de espermatozoides conservados, pero los reguladores no lo han aprobado."
+  },
+  "risk": {
+   "en": "Reported effects include headache, hot flushes and visual disturbances, as with clomiphene. Long-term safety is not established, and products sold as enclomiphene outside approved trials are not licensed medicines.",
+   "pl": "Zgłaszane skutki to bóle głowy, uderzenia gorąca i zaburzenia widzenia, jak przy klomifenie. Bezpieczeństwo długoterminowe nie zostało ustalone, a produkty sprzedawane jako enklomifen poza zatwierdzonymi badaniami nie są zarejestrowanymi lekami.",
+   "es": "Los efectos descritos incluyen dolor de cabeza, sofocos y alteraciones visuales, como con el clomifeno. No se ha establecido la seguridad a largo plazo, y los productos vendidos como enclomifeno fuera de ensayos aprobados no son medicamentos autorizados."
+  },
+  "pros": {
+   "en": [
+    "Raised testosterone in trials without switching off sperm production",
+    "Taken by mouth",
+    "Cleaner single isomer than clomiphene"
+   ],
+   "pl": [
+    "Podniósł testosteron w badaniach bez wyłączania produkcji plemników",
+    "Przyjmowany doustnie",
+    "Czystszy, pojedynczy izomer niż klomifen"
+   ],
+   "es": [
+    "Subió la testosterona en ensayos sin apagar la producción de espermatozoides",
+    "Se toma por vía oral",
+    "Isómero único más limpio que el clomifeno"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Not approved anywhere",
+    "Long-term safety unknown",
+    "Products outside trials are unlicensed and may be mislabelled"
+   ],
+   "pl": [
+    "Nie jest nigdzie zatwierdzony",
+    "Bezpieczeństwo długoterminowe nieznane",
+    "Produkty poza badaniami są niezarejestrowane i mogą być źle oznaczone"
+   ],
+   "es": [
+    "No está aprobado en ningún lugar",
+    "Se desconoce la seguridad a largo plazo",
+    "Los productos fuera de ensayos no tienen licencia y pueden estar mal etiquetados"
+   ]
+  },
+  "status": {
+   "en": "Not approved as a medicine in the UK or the US. It is an investigational drug, and selling it for human use is not legal.",
+   "pl": "Nie jest zatwierdzony jako lek w Wielkiej Brytanii ani USA. To lek badawczy, a sprzedaż do stosowania u ludzi nie jest legalna.",
+   "es": "No está aprobado como medicamento en el Reino Unido ni en EE. UU. Es un fármaco en investigación y venderlo para uso humano no es legal."
+  },
+  "label": false
+ },
+ {
+  "id": "methasterone",
+  "n": "Methasterone",
+  "nm": {
+   "pl": "Metasteron",
+   "es": "Metasterona"
+  },
+  "alt": {
+   "en": "Designer steroid known as “Superdrol”",
+   "pl": "Steroid projektowany znany jako „Superdrol”",
+   "es": "Esteroide de diseño conocido como “Superdrol”"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "methasterone",
+  "what": {
+   "en": "Methasterone is a strong oral steroid derived from dihydrotestosterone. It was never a medicine, and it was sold in the 2000s as a “prohormone” supplement under the name Superdrol.",
+   "pl": "Metasteron to silny doustny steroid pochodzący od dihydrotestosteronu. Nigdy nie był lekiem, a w latach 2000. sprzedawano go jako suplement „prohormon” pod nazwą Superdrol.",
+   "es": "La metasterona es un esteroide oral potente derivado de la dihidrotestosterona. Nunca fue un medicamento y se vendió en la década de 2000 como suplemento “prohormona” con el nombre de Superdrol."
+  },
+  "how": {
+   "en": "It binds the androgen receptor and has a strong anabolic effect. A methyl group at one position lets it survive the liver, and that is also what makes it harmful to it.",
+   "pl": "Wiąże się z receptorem androgenowym i ma silne działanie anaboliczne. Grupa metylowa w jednym miejscu pozwala mu przetrwać przejście przez wątrobę i właśnie to czyni go dla niej szkodliwym.",
+   "es": "Se une al receptor de andrógenos y tiene un fuerte efecto anabólico. Un grupo metilo en una posición le permite sobrevivir al hígado, y eso es también lo que lo hace dañino para este."
+  },
+  "med": {
+   "en": "It has no medical use and was never approved. Its profile comes from case reports and regulators’ actions against supplement products.",
+   "pl": "No ma zastosowania medycznego i nigdy nie został zatwierdzony. Jego obraz pochodzi z opisów przypadków i działań organów nadzoru wobec produktów suplementowych.",
+   "es": "No tiene ningún uso médico y nunca fue aprobada. Su perfil procede de informes de casos y de las actuaciones de los reguladores contra productos suplementarios."
+  },
+  "risk": {
+   "en": "Case reports describe cholestatic jaundice and acute liver injury, sometimes serious, as well as raised blood pressure, strongly lowered HDL cholesterol and suppressed natural testosterone. It is among the more liver-toxic oral steroids.",
+   "pl": "Opisy przypadków dotyczą żółtaczki cholestatycznej i ostrego uszkodzenia wątroby, czasem poważnego, a także podwyższonego ciśnienia, silnie obniżonego cholesterolu HDL i zahamowanego naturalnego testosteronu. To jeden z bardziej toksycznych dla wątroby doustnych steroidów.",
+   "es": "Los informes de casos describen ictericia colestásica y lesión hepática aguda, a veces grave, además de presión arterial alta, colesterol HDL muy bajo y testosterona natural suprimida. Es uno de los esteroides orales más tóxicos para el hígado."
+  },
+  "pros": {
+   "en": [
+    "Strong anabolic effect in reports",
+    "Orally active",
+    "Historical case study of “prohormone” regulation"
+   ],
+   "pl": [
+    "Silne działanie anaboliczne w doniesieniach",
+    "Skuteczny doustnie",
+    "Historyczny przykład regulacji „prohormonów”"
+   ],
+   "es": [
+    "Fuerte efecto anabólico según los informes",
+    "Activa por vía oral",
+    "Caso histórico de la regulación de las “prohormonas”"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Serious liver injury in case reports",
+    "Large fall in HDL cholesterol",
+    "No medical use and not approved"
+   ],
+   "pl": [
+    "Poważne uszkodzenie wątroby w opisach przypadków",
+    "Duży spadek cholesterolu HDL",
+    "Brak zastosowania medycznego i niezatwierdzony"
+   ],
+   "es": [
+    "Lesión hepática grave en informes de casos",
+    "Gran descenso del colesterol HDL",
+    "Sin uso médico y no aprobada"
+   ]
+  },
+  "status": {
+   "en": "Treated as an anabolic steroid under the same controls as other steroids in the UK (Class C) and the US (Schedule III). Supplement versions have been the target of regulators’ action.",
+   "pl": "Traktowany jako steroid anaboliczny, objęty tą samą kontrolą co inne steroidy w Wielkiej Brytanii (klasa C) i USA (lista III). Wersje suplementowe były celem działań organów nadzoru.",
+   "es": "Tratada como esteroide anabólico con los mismos controles que otros esteroides en el Reino Unido (clase C) y en EE. UU. (lista III). Las versiones como suplemento han sido objeto de actuaciones de los reguladores."
+  },
+  "label": false
+ },
+ {
+  "id": "bam15",
+  "n": "BAM15",
+  "nm": {
+   "pl": "BAM15",
+   "es": "BAM15"
+  },
+  "alt": {
+   "en": "A lab “mitochondrial uncoupler”",
+   "pl": "Laboratoryjny „rozprzęgacz mitochondrialny”",
+   "es": "Un “desacoplador mitocondrial” de laboratorio"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "BAM15",
+  "what": {
+   "en": "BAM15 is a lab compound that makes mitochondria, the cell’s energy factories, burn fuel without making as much usable energy. It is in the same broad idea as DNP, but a different molecule.",
+   "pl": "BAM15 to związek laboratoryjny sprawiający, że mitochondria, czyli komórkowe fabryki energii, spalają paliwo bez wytwarzania tyle użytecznej energii. To ta sama ogólna idea co DNP, ale inna cząsteczka.",
+   "es": "El BAM15 es un compuesto de laboratorio que hace que las mitocondrias, las fábricas de energía de la célula, quemen combustible sin producir tanta energía utilizable. Responde a la misma idea general que el DNP, pero es otra molécula."
+  },
+  "how": {
+   "en": "It lets protons leak across the mitochondrial membrane, so the cell burns more fuel to make the same energy. In mice it reduced fat mass without the strong rise in body temperature seen with DNP.",
+   "pl": "Pozwala protonom przeciekać przez błonę mitochondrialną, więc komórka spala więcej paliwa, by wytworzyć tyle samo energii. U myszy zmniejszył masę tłuszczu bez silnego wzrostu temperatury ciała obserwowanego przy DNP.",
+   "es": "Permite que los protones se filtren a través de la membrana mitocondrial, de modo que la célula quema más combustible para producir la misma energía. En ratones redujo la masa grasa sin el fuerte aumento de temperatura corporal que se ve con el DNP."
+  },
+  "med": {
+   "en": "It has no approved use and has not been tested in people. All of the promising results so far come from cells and animals.",
+   "pl": "Nie ma zatwierdzonego zastosowania i nie był badany u ludzi. Wszystkie obiecujące wyniki pochodzą dotąd z komórek i zwierząt.",
+   "es": "No tiene ningún uso aprobado y no se ha probado en personas. Todos los resultados prometedores hasta ahora proceden de células y animales."
+  },
+  "risk": {
+   "en": "With no human data, nothing is known about safe amounts, long-term effects or interactions. Because this class of compound forces cells to waste energy, overheating and organ stress are the obvious concerns, and products sold online are unregulated.",
+   "pl": "Bez danych u ludzi nic nie wiadomo o bezpiecznych ilościach, skutkach długoterminowych ani interakcjach. Ponieważ ta klasa związków zmusza komórki do marnowania energii, oczywiste obawy to przegrzanie i obciążenie narządów, a produkty sprzedawane w internecie nie są regulowane.",
+   "es": "Sin datos en humanos no se sabe nada sobre cantidades seguras, efectos a largo plazo ni interacciones. Como esta clase de compuestos obliga a las células a desperdiciar energía, las preocupaciones evidentes son el sobrecalentamiento y el estrés de los órganos, y los productos vendidos en línea no están regulados."
+  },
+  "pros": {
+   "en": [
+    "Promising fat-loss results in mice",
+    "Did not raise body temperature in mice",
+    "Active area of laboratory research"
+   ],
+   "pl": [
+    "Obiecujące wyniki utraty tłuszczu u myszy",
+    "Nie podnosił temperatury ciała u myszy",
+    "Aktywny obszar badań laboratoryjnych"
+   ],
+   "es": [
+    "Resultados prometedores de pérdida de grasa en ratones",
+    "No subió la temperatura corporal en ratones",
+    "Área activa de investigación de laboratorio"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No human trials at all",
+    "Safety in people completely unknown",
+    "Unregulated products of unknown content"
+   ],
+   "pl": [
+    "Brak jakichkolwiek badań na ludziach",
+    "Bezpieczeństwo u ludzi całkowicie nieznane",
+    "Nieregulowane produkty o nieznanej zawartości"
+   ],
+   "es": [
+    "Sin ningún ensayo en humanos",
+    "Seguridad en personas completamente desconocida",
+    "Productos no regulados de contenido desconocido"
+   ]
+  },
+  "status": {
+   "en": "Not approved for human use anywhere. It is a research compound, and selling it for use in people is not legal.",
+   "pl": "Nie jest nigdzie zatwierdzony do stosowania u ludzi. To związek badawczy, a sprzedaż do stosowania u ludzi nie jest legalna.",
+   "es": "No está aprobado para uso humano en ningún lugar. Es un compuesto de investigación y venderlo para uso en personas no es legal."
+  },
+  "wada": {
+   "en": "Not specifically listed by WADA, but anti-doping bodies treat unapproved metabolic compounds with caution. Check the current list.",
+   "pl": "Nie jest wymieniony przez WADA wprost, ale organizacje antydopingowe podchodzą ostrożnie do niezatwierdzonych związków metabolicznych. Sprawdź aktualną listę.",
+   "es": "No figura expresamente en la lista de la AMA, pero los organismos antidopaje tratan con cautela los compuestos metabólicos no aprobados. Consulta la lista vigente."
+  },
+  "label": false
+ }
+]

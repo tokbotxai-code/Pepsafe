@@ -17,6 +17,8 @@ function load() {
   const dir = path.join(root, 'sterydy');
   const rows = [];
   for (const f of fs.readdirSync(dir).filter(f => /^\d.*\.json$/.test(f)).sort()) rows.push(...JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
+  const mf = path.join(dir, 'mix.json');
+  if (fs.existsSync(mf)) { const m = JSON.parse(fs.readFileSync(mf, 'utf8')); for (const e of rows) if (m[e.id]) e.mix = m[e.id]; }
   return rows;
 }
 
@@ -72,6 +74,16 @@ const NAMES = {
   'Nandrolone decanoate': ['Dekanian nandrolonu', 'Decanoato de nandrolona'], 'Trenbolone': ['Trenbolon', 'Trembolona'], 'Boldenone': ['Boldenon', 'Boldenona'],
   'Drostanolone': ['Drostanolon', 'Drostanolona'], 'Methenolone enanthate': ['Enantan metenolonu', 'Enantato de metenolona']
 };
+// "what not to combine": a class default, replaced by an entry's own text from sterydy/mix.json (keyed by id)
+const CLSMIX = {
+  inj: { en: 'Anabolic steroids have not been tested in combination, and every extra hormone adds its own load on the heart, liver and hormone system. Do not combine them with other androgens, stimulants, or drugs that raise blood pressure or clotting risk, and tell every doctor and pharmacist what you take.', pl: 'Steroidy anaboliczne nie były badane w połączeniach, a każdy dodatkowy hormon dokłada własne obciążenie sercu, wątrobie i układowi hormonalnemu. Nie łącz ich z innymi androgenami, stymulantami ani lekami podnoszącymi ciśnienie lub ryzyko zakrzepów i powiedz każdemu lekarzowi i farmaceucie, co przyjmujesz.', es: 'Los esteroides anabólicos no se han probado en combinación, y cada hormona adicional suma su propia carga sobre el corazón, el hígado y el sistema hormonal. No los combines con otros andrógenos, estimulantes ni fármacos que suban la presión arterial o el riesgo de coágulos, e informa a todo médico y farmacéutico de lo que tomas.' },
+  oral: { en: 'Do not combine with alcohol or with other drugs that strain the liver, including other oral steroids. Oral androgens of this kind can strengthen the effect of the blood thinner warfarin and raise the risk of bleeding, and they can change blood sugar control in people with diabetes.', pl: 'Nie łącz z alkoholem ani innymi lekami obciążającymi wątrobę, w tym innymi steroidami doustnymi. Doustne androgeny tego typu mogą nasilać działanie leku przeciwzakrzepowego warfaryny i zwiększać ryzyko krwawień, a także zmieniać kontrolę cukru we krwi u osób z cukrzycą.', es: 'No combinar con alcohol ni con otros fármacos que sobrecarguen el hígado, incluidos otros esteroides orales. Los andrógenos orales de este tipo pueden potenciar el efecto del anticoagulante warfarina y aumentar el riesgo de sangrado, y pueden alterar el control del azúcar en personas con diabetes.' },
+  pro: { en: 'These products feed the same hormone system as steroids, so avoid stacking them with other hormones or steroids. Tell your doctor about any hormone treatment before starting something new.', pl: 'Te preparaty zasilają ten sam układ hormonalny co steroidy, więc unikaj łączenia ich z innymi hormonami lub steroidami. Przed rozpoczęciem czegoś nowego powiedz lekarzowi o każdej terapii hormonalnej.', es: 'Estos productos alimentan el mismo sistema hormonal que los esteroides, así que evita combinarlos con otras hormonas o esteroides. Informa a tu médico de cualquier tratamiento hormonal antes de empezar algo nuevo.' },
+  sarm: { en: 'No combinations have been tested in people. Because these compounds can strain the liver and suppress testosterone, adding alcohol, steroids or other liver-toxic drugs only stacks the risks.', pl: 'Żadne połączenia nie były badane u ludzi. Ponieważ te związki mogą obciążać wątrobę i hamować testosteron, dodanie alkoholu, steroidów lub innych leków toksycznych dla wątroby tylko sumuje ryzyka.', es: 'No se ha probado ninguna combinación en personas. Como estos compuestos pueden sobrecargar el hígado y suprimir la testosterona, añadir alcohol, esteroides u otros fármacos tóxicos para el hígado solo suma riesgos.' },
+  oth: { en: 'Check the interaction list on the label before combining with any other medicine, and avoid stacking with other stimulants or hormones. Tell a doctor or pharmacist about everything you take.', pl: 'Przed połączeniem z jakimkolwiek innym lekiem sprawdź listę interakcji w ulotce i unikaj łączenia z innymi stymulantami lub hormonami. Powiedz lekarzowi lub farmaceucie o wszystkim, co przyjmujesz.', es: 'Revisa la lista de interacciones del prospecto antes de combinarlo con cualquier otro medicamento y evita combinarlo con otros estimulantes u hormonas. Informa a un médico o farmacéutico de todo lo que tomas.' },
+  mod: { en: 'These are prescription drugs with documented interactions. Do not combine them with oestrogen or other hormone products unless a doctor has prescribed that, and tell your doctor about every medicine and supplement you take.', pl: 'To leki na receptę z udokumentowanymi interakcjami. Nie łącz ich z estrogenami ani innymi preparatami hormonalnymi, jeśli nie zlecił tego lekarz, i powiedz lekarzowi o każdym leku i suplemencie, który przyjmujesz.', es: 'Son medicamentos con receta con interacciones documentadas. No los combines con estrógenos ni otros productos hormonales salvo que un médico lo haya indicado, e informa a tu médico de todo medicamento y suplemento que tomes.' },
+  cort: { en: 'Combining a corticosteroid with anti-inflammatory painkillers such as ibuprofen raises the risk of stomach ulcers and bleeding. It can raise blood sugar and weaken the effect of diabetes medicines, and live vaccines are normally avoided during treatment.', pl: 'Łączenie kortykosteroidu z przeciwzapalnymi lekami przeciwbólowymi, takimi jak ibuprofen, zwiększa ryzyko wrzodów żołądka i krwawień. Może podnosić cukier i osłabiać działanie leków na cukrzycę, a szczepionek żywych zwykle unika się w trakcie leczenia.', es: 'Combinar un corticosteroide con antiinflamatorios como el ibuprofeno aumenta el riesgo de úlceras de estómago y sangrado. Puede subir el azúcar y debilitar el efecto de los medicamentos para la diabetes, y las vacunas vivas se evitan normalmente durante el tratamiento.' }
+};
 const nmL = (e, l) => l === 'en' ? e.n : ((e.nm && e.nm[l]) || (NAMES[e.n] || [])[l === 'pl' ? 0 : 1] || e.n);
 const ORDER = ['inj', 'oral', 'pro', 'sarm', 'oth', 'mod', 'cort'];
 
@@ -96,6 +108,7 @@ const UI = {
   what: ['What it is', 'Czym jest', 'Qué es'],
   how: ['How it works', 'Jak działa', 'Cómo actúa'],
   med: ['Medical use', 'Zastosowanie medyczne', 'Uso médico'],
+  mixH: ['What not to combine', 'Czego nie łączyć', 'Qué no combinar'],
   risk: ['Risks and side effects', 'Ryzyko i skutki uboczne', 'Riesgos y efectos secundarios'],
   legal: ['Legal status', 'Status prawny', 'Situación legal'],
   wadaH: ['Sport and anti-doping', 'Sport i antydoping', 'Deporte y antidopaje'],
@@ -194,7 +207,7 @@ module.exports = function build(ctx) {
       <p class="pills reveal"><span class="pill neutral">${esc(clsName)}</span><span class="pill">${esc(formLab(L, e))}</span></p>
     </div></div>
     <section class="blk note reveal"><p>${esc(u(L, 'note'))}</p></section>
-    ${sec('what', lead)}${sec('how', e.how && tx(L, e.how))}${sec('med', e.med && tx(L, e.med))}${sec('risk', e.risk && tx(L, e.risk))}
+    ${sec('what', lead)}${sec('how', e.how && tx(L, e.how))}${sec('med', e.med && tx(L, e.med))}${sec('risk', e.risk && tx(L, e.risk))}${sec('mixH', tx(L, e.mix || CLSMIX[e.cls]))}
     ${sec('legal', status)}${sec('wadaH', wada)}
     <section class="blk reveal pcgrid"><div class="pc"><h2 class="kick">${esc(u(L, 'pros'))}</h2><ul class="srcs-list">${pros.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
       <div class="pc"><h2 class="kick">${esc(u(L, 'cons'))}</h2><ul class="srcs-list">${cons.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></section>
