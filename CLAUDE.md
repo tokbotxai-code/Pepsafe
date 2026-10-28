@@ -240,10 +240,10 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   Facebook → `/start/fb.html`. Raporty liczą wejścia na te adresy jako „z Instagrama/TikToka/Facebooka”.
 
 ## Zarabianie (od 21.10)
-- Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£5.99).
+- Przewodnik PDF „GLP-1 Weight-Loss Medicines: The Complete Safety Guide” sprzedajemy na Ko-fi: **https://ko-fi.com/s/6d19973042** (£3.99, cena obniżona przez właściciela 29.10).
   Plik PDF NIE trafia do repo (repo jest publiczne). `GUIDE_URL` w `tools/v4.js` daje ramkę „Get the PDF” na kartach leków GLP-1/GIP
   i przycisk na `/start/`.
-- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£9.99), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (limit reklam: sekcja „Reklamy: 2 w tygodniu” niżej; nigdy grafiki przewodnika na TikToku).
+- Drugi produkt: „Protein & Muscle on GLP-1” (PDF + kalkulator + tracker) **https://ko-fi.com/s/424db783e5** (£7.99, od 29.10; na Ko-fi tytuł „GLP-1 Muscle & Protein Guide”), `MUSCLE_URL` w v4.js — ta sama ramka na kartach GLP-1 i przycisk na `/start/`. W postach o białku/mięśniach można wspomnieć ten przewodnik zamiast pierwszego (limit reklam: sekcja „Reklamy: 2 w tygodniu” niżej; nigdy grafiki przewodnika na TikToku).
 - **Lista mailowa (od 21.10):** `/en/free.html` (i `/pl/`) — zapis e-mail + zgoda → FormSubmit na contact@pepsafe.info
   (temat „PepSafe: newsletter signup”), potem `/en/free-thanks.html` z darmową checklistą `free/glp1-muscle-checklist.pdf`
   i poleceniem przewodnika o mięśniach. Polityka prywatności: `/en/privacy.html`, `/pl/privacy.html` (link w stopce).
@@ -257,7 +257,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   podpis imieniem albo inicjałami + kraj, cytat słowo w słowo (skrót do dosłownego fragmentu wolno, przeróbki nie).
   Gdy autor dostał przewodnik za darmo, zawsze krótka notka, np. „Reviewers received free copies of both guides.” (wymóg UK DMCC Act
   i FTC w USA — nie usuwamy jej). Nigdy nie wymyślamy, nie łączymy ani nie „poprawiamy” opinii. Na `/en/guides.html` i w reklamach IG + FB, nigdy na TikToku.
-- Pakiet obu przewodników (ZIP: 2 PDF + kalkulator + tracker) — £11.99; link jeszcze nie podany przez właściciela. Gdy będzie: stała `BUNDLE_URL` w v4.js i przycisk na `/start/` oraz w ramce GLP-1.
+- Pakiet przewodników (ZIP) — dawna cena £11.99 jest nieaktualna po obniżkach z 29.10; link jeszcze nie podany przez właściciela. Gdy będzie: stała `BUNDLE_URL` w v4.js i przycisk na `/start/` oraz w ramce GLP-1.
 - Wpłaty: profil Ko-fi **https://ko-fi.com/pepsafeinfo** (`KOFI` w `tools/v4.js`: stopka każdej strony + przycisk na `/start/`). Płatności przez PayPal właściciela.
 - **Reklamy: 2 w tygodniu (decyzja właściciela 23.10, zastępuje „3 dziennie” z 22.10 i STEP 4(a) w poleceniu autopilota):**
   Dane z 21–22.10: reklamy na IG i FB 0 wyświetleń, na TikToku 1 i 13, a filmy przyrodnicze na TikToku 221–237.
@@ -377,3 +377,4 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - **Skutki uboczne i objawy (od 29.10, decyzja właściciela „solidna baza dla każdego”):** `skutki-src/*.txt` → `python3 tools/skutki-build.py` → `skutki.json` (klucz = nazwa PL z katalogu albo `s-<id>` sterydu; pola: tagi objawów `t:`, częste `ec/pc/sc`, poważne `es/ps/ss`, czego nie wiemy `eu/pu/su`, listy po ` ; `, równe długości w 3 językach). Karta (`tools/skutki.js`) pokazuje 3 bloki, a wyszukiwarka objawów (`src/ruch.js`, tablica `SYM`) łączy tagi z wpisów ze słowami potocznymi. Wszystkie 206 wpisów katalogu i 66 sterydów mają wpis. Nowa substancja = nowy blok w pliku z `skutki-src/` (tylko pewne fakty z ulotek i badań; przy braku danych u ludzi napisz to w `eu/pu/su`, nie zgaduj skutków). Tagi tylko z listy w `SYM`.
 - **Każda zmiana na stronie w trzech językach (od 29.10, decyzja właściciela „jak coś robisz, zrób w każdym języku”):** nowy tekst, przycisk, filtr albo funkcja musi działać i być przetłumaczony na EN, PL i ES (`tools/es-tm.json`, `node tools/es.js --missing` ma dać 0). Po zmianie sprawdź stronę w trzech językach i napisz w podsumowaniu, że to zrobiłeś.
 - **Pomiar sprzedaży (od 29.10):** każdy link „kup” i „wesprzyj” na stronie prowadzi przez `/go/<produkt>-<miejsce>.html` (`goUrl()` w `tools/v4.js`; produkty: guide, muscle, kofi; miejsca: card, home, guides, thanks, footer). Strona liczy kliknięcie w Cloudflare i po 1 s przekierowuje na Ko-fi. `node tools/odwiedziny.js 7` pokazuje sekcję „Przewodniki i Ko-fi”: kliknięcia na miejsce, podgląd przewodników, otwarcia i zapisy checklisty. Nowy link do Ko-fi zawsze przez `goUrl()`, nie wprost. Strona główna ma od 29.10 pasmo „Guides”, a ramka na kartach GLP-1 ma okładkę przewodnika.
+- **Trzeci przewodnik (od 29.10):** „Coming Off a GLP-1: What the Evidence Says”, 16 stron, **£4.99**, **https://ko-fi.com/s/1fa460444b** (`STOP_URL` w `tools/v4.js`, linki przez `goUrl('stop', …)`). Podglądy `guides/stop-1..3.jpg`. PDF nie jest w repo. Ceny przewodników: bezpieczeństwo £3.99, odstawienie £4.99, mięśnie £7.99 (zmieniaj tylko po decyzji właściciela, razem z hiszpańskimi wpisami w `tools/es-tm.json`).
