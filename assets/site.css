@@ -587,3 +587,8 @@ header.bar input { -webkit-user-select: text; user-select: text; }
 .gpromo .gthumb img { width: 170px; }
 .gpromo .actions { display: flex; flex-wrap: wrap; gap: 10px; }
 @media (max-width: 640px) { .gbox, .gpromo { grid-template-columns: 1fr; } .gthumb img { width: 120px; } }
+
+/* the drifting chains stay behind the content, also on pages where the whole page sits in the head section */
+#chains { z-index: 0; }
+.page-head > .wrap, .hero > .wrap { position: relative; z-index: 1; }
+.page-head #chains { height: min(100%, 560px); bottom: auto; }
