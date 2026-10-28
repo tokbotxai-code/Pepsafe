@@ -611,12 +611,15 @@
 
   /* ── lista jezykow: na komputerze otwiera sie po najechaniu (zamkniete <details> nie rysuje listy) ─ */
   if (matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('.lp').forEach(function (d) {
+    document.querySelectorAll('.lp, .nm').forEach(function (d) {
       var t;
       d.addEventListener('mouseenter', function () { clearTimeout(t); d.open = true; });
       d.addEventListener('mouseleave', function () { t = setTimeout(function () { d.open = false; }, 250); });
     });
   }
+
+  // "More" menu closes when the reader clicks elsewhere
+  document.addEventListener('click', function (e) { document.querySelectorAll('.nm[open]').forEach(function (d) { if (!d.contains(e.target)) d.open = false; }); });
 
   /* ── wybor jezyka: zapamietany, zeby strona glowna wiecej nie przestawiala ─ */
   document.addEventListener('click', function (e) {

@@ -214,6 +214,8 @@ const THEME_BOOT = `<script>(function(){try{var t=localStorage.getItem('pep-them
   `if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';` +
   `document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</` + `script>`;
 
+// desktop menu: the main tabs stay visible, the rest sit under "More" (the phone menu lists everything)
+const NAV_MAIN = ['index.html', 'catalog.html', 'steroids.html', 'groups.html', 'compare.html', 'dosing.html', 'symptoms.html'];
 function layout(o) {
   const L = o.lang, t = W[L];
   const other = L === 'en' ? 'pl' : 'en';
@@ -221,10 +223,10 @@ function layout(o) {
   const up = BASE + L + '/';                           // odnosniki do stron tego jezyka
   const twinHref = BASE + (o.depth ? (o.twin || '').replace(/(\.pl)?\.html$/, other === 'pl' ? '.pl.html' : '.html')
     : other + '/' + (o.twin || ''));
-  const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['dosing.html', t.dosingNav],
+  const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['steroids.html', L === 'en' ? 'Steroids' : 'Sterydy'], ['dosing.html', t.dosingNav],
   ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['blog.html', t.blogNav],
-  ['glossary.html', t.glossNav], ['steroids.html', L === 'en' ? 'Steroids' : 'Sterydy'], ['guides.html', L === 'en' ? 'Guides (PDF)' : 'Przewodniki (PDF)'], ['about.html', t.nav.about]];
+  ['glossary.html', t.glossNav], ['guides.html', L === 'en' ? 'Guides (PDF)' : 'Przewodniki (PDF)'], ['about.html', t.nav.about]];
   return `<!doctype html>
 <html lang="${L}" data-theme="light">
 <head>
@@ -267,7 +269,8 @@ ${o.ld ? `<script type="application/ld+json">${o.ld}</${'script'}>\n` : ''}</hea
   <nav class="wrap">
     <a class="brand" href="${up}index.html">${LOGO}PepSafe</a>
     <ul class="links">
-      ${nav.map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('\n      ')}
+      ${nav.filter(([h]) => NAV_MAIN.includes(h)).map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('\n      ')}
+      <li><details class="nm"><summary>${L === 'en' ? 'More' : 'Więcej'}</summary><ul>${nav.filter(([h]) => !NAV_MAIN.includes(h)).map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('')}</ul></details></li>
     </ul>
     <div class="tools">
       <button class="icon" id="find" type="button" aria-label="${esc(t.findLab)}" aria-expanded="false">
@@ -340,7 +343,7 @@ ${o.body}
 const H = {
   en: {
     badge: 'Independent · no ads · no affiliates', h1: [`${D.length} peptides.`, 'Legal status and evidence.', 'No peptides for sale.'],
-    lede: `A reference for ${D.length} peptides and related substances: what each one is, what the research actually shows, whether any regulator approved it, and which groups act on the same receptor. We sell no peptides or medicines and take no affiliate money; the catalog is free and funded by our optional PDF guides. We never publish doses for substances that are not approved medicines.`,
+    lede: `A reference for peptides and related substances: what each one is, what the research shows, whether a regulator approved it, and which ones act on the same receptor. No doses for unapproved substances, nothing for sale.`,
     b1: 'Check an overlap', b2: `Browse all ${D.length}`, railTitle: 'Catalog, by status',
     stats: { approved: 'Approved medicines', unapproved: 'Unapproved', trials: 'In clinical trials', other: 'Other statuses' },
     s1kick: '01 — Overlap checker', s1h: 'Two names, one receptor.',
@@ -362,7 +365,7 @@ const H = {
   },
   pl: {
     badge: 'Niezależnie · bez reklam · bez afiliacji', h1: [`${D.length} peptydów.`, 'Status prawny i dowody.', 'Nie sprzedajemy peptydów.'],
-    lede: `Przewodnik po ${D.length} peptydach i substancjach pokrewnych: czym każda z nich jest, co naprawdę pokazują badania, czy jakikolwiek regulator ją zatwierdził i które grupy działają na ten sam receptor. Nie sprzedajemy peptydów ani leków i nie bierzemy prowizji; katalog jest darmowy, a utrzymują go nasze opcjonalne przewodniki PDF. Dawek dla substancji niezatwierdzonych nie podajemy nigdy.`,
+    lede: `Przewodnik po peptydach i substancjach pokrewnych: czym każda z nich jest, co pokazują badania, czy regulator ją zatwierdził i które działają na ten sam receptor. Bez dawek dla substancji niezatwierdzonych i bez niczego na sprzedaż.`,
     b1: 'Sprawdź dublowanie', b2: `Zobacz wszystkie ${D.length}`, railTitle: 'Katalog według statusu',
     stats: { approved: 'Zatwierdzone leki', unapproved: 'Niezatwierdzone', trials: 'W badaniach klinicznych', other: 'Pozostałe statusy' },
     s1kick: '01 — Sprawdzarka dublowania', s1h: 'Dwie nazwy, jeden receptor.',
@@ -449,11 +452,26 @@ function home(L) {
         <a class="btn big" href="#overlap">${esc(h.b1)}${ARROW}</a>
         <a class="btn ghost big" href="catalog.html">${esc(h.b2)}</a>
       </p>
+      <ul class="trust reveal"><li><b>${D.length}</b> <span>${en ? 'entries' : 'wpisów'}</span></li><li><b>${require('./sterydy.js').finder('en').length}</b> <span>${en ? 'steroids' : 'sterydów'}</span></li><li><b>3</b> <span>${en ? 'languages' : 'języki'}</span></li><li><span>${en ? 'Sources on every page' : 'Źródła przy każdej stronie'}</span></li></ul>
     </div>
     <aside class="rail">
       <p class="kick reveal">${esc(h.railTitle)}</p>
       <dl>${STATS.map(([k, n]) => `<div class="rail-row reveal"><dt>${esc(h.stats[k])}</dt><dd class="num"><span data-count="${n}">${n}</span></dd></div>`).join('')}</dl>
     </aside>
+  </div>
+</section>
+
+<section class="field" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick reveal">${en ? 'Popular' : 'Popularne'}</p>
+    <p class="chips reveal">${[['retatrutide', 0], ['tirzepatide', 0], ['semaglutide', 0], ['bpc-157', 0], ['tb-500', 0], ['testosterone', 1], ['oxandrolone', 1]].map(([k, st]) => {
+      if (st) { const r = require('./sterydy.js').finder(L).find(x => x.s === 's-' + k); return r ? `<a class="chip" href="${BASE}${L}/t/${r.s}.html">${esc(r.n)}</a>` : ''; }
+      const e = D.find(x => key(x) === k); return e ? `<a class="chip" href="${BASE}${cardPath(e, L)}">${esc(nm(e.n, en))}</a>` : '';
+    }).join('')}</p>
+    <a class="promo reveal" href="${BASE}${L}/steroids.html">
+      <span><b>🆕 ${en ? 'Steroids: what they are and what they do to the body' : 'Sterydy: czym są i co robią z organizmem'}</b><br><span class="small ink2">${en ? 'Advantages and disadvantages for each one, a comparison table and plain-language articles on risks and the law' : 'Zalety i wady każdego, tabela porównawcza i artykuły o ryzyku i prawie prostym językiem'}</span></span>
+      <span class="btn">${en ? 'Open the section' : 'Otwórz sekcję'}${ARROW}</span>
+    </a>
   </div>
 </section>
 

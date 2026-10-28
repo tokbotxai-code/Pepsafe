@@ -511,3 +511,26 @@ details.qa p { margin: 8px 0 0; }
 .pcgrid { display: grid; gap: 18px; margin: 22px 0; }
 @media (min-width: 720px) { .pcgrid { grid-template-columns: 1fr 1fr; } }
 .pc ul { margin-top: 6px; }
+
+/* home: smaller hero, calmer background lines, trust bar, popular chips, steroids banner, "More" menu */
+.hero h1.display { font-size: clamp(2.1rem, 5.2vw, 4rem); }
+.hero .lede { margin-top: 22px; }
+.hero #chains { opacity: .35; }
+@media (min-width: 640px) { .hero-grid { padding-block: 64px 72px; } }
+.trust { display: flex; flex-wrap: wrap; gap: 8px 26px; list-style: none; margin: 26px 0 0; padding: 0; font-size: 14px; color: var(--ink2); }
+.trust b { font-size: 20px; color: var(--ink); letter-spacing: -.02em; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 22px; }
+.chip { padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; color: var(--ink); text-decoration: none; background: var(--paper); transition: background .2s; }
+.chip:hover { background: color-mix(in srgb, var(--ink) 7%, transparent); }
+.promo { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; border: 2px solid var(--k2); border-radius: 14px; padding: 16px 20px; text-decoration: none; color: inherit; margin-bottom: 14px; }
+.nm { position: relative; }
+.nm summary { list-style: none; cursor: pointer; color: var(--ink2); white-space: nowrap; }
+.nm summary::-webkit-details-marker { display: none; }
+.nm summary::after { content: " ▾"; }
+.nm summary:hover, .nm[open] summary { color: var(--ink); }
+.nm ul { display: none; position: absolute; left: 0; top: 100%; z-index: 50; border-top: 8px solid transparent; background-clip: padding-box; margin: 0; padding: 6px; list-style: none; min-width: 180px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.nm[open] ul { display: block; }
+.nm ul a { display: block; padding: 10px 12px; border-radius: 10px; color: var(--ink); }
+.nm ul a:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); }
+.nm ul a[aria-current] { font-weight: 700; }
+.nm ul a[aria-current]::after { display: none; }
