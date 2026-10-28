@@ -392,6 +392,16 @@ const H = {
 const FEATURED = ['Semaglutyd', 'Tesamorelina', 'Retatrutyd', 'BPC-157', 'Melanotan II', 'GHK-Cu']
   .map(n => D.find(e => e.n === n)).filter(Boolean);
 
+// two entries that share a name but are different things: a clear callout on both cards
+const NOTSAME = {
+  'GLOW': ['Sekwencja G-L-O-W', 'This is the ready-made blend of three peptides (GHK-Cu, BPC-157 and TB-500). It is not the single four-amino-acid peptide that is also called GLOW.', 'To gotowa mieszanka trzech peptydów (GHK-Cu, BPC-157 i TB-500). Nie jest to pojedynczy tetrapeptyd z czterech aminokwasów, który też bywa nazywany GLOW.'],
+  'Sekwencja G-L-O-W': ['GLOW', 'This is one peptide of four amino acids (Gly-Leu-Orn-Trp). It is not the GLOW blend of three peptides (GHK-Cu, BPC-157 and TB-500) sold under the same name.', 'To pojedynczy peptyd z czterech aminokwasów (Gly-Leu-Orn-Trp). Nie jest to mieszanka GLOW z trzech peptydów (GHK-Cu, BPC-157 i TB-500) sprzedawana pod tą samą nazwą.']
+};
+function notSame(e, en, L) {
+  const x = NOTSAME[e.n]; const o = x && D.find(y => y.n === x[0]);
+  if (!o) return '';
+  return `<aside class="blk reveal notsame"><h2 class="kick">${en ? 'Not the same thing' : 'To nie to samo'}</h2><p>${esc(en ? x[1] : x[2])}</p><p><span>${en ? 'See:' : 'Zobacz:'}</span> <a href="${BASE}${cardPath(o, L)}">${esc(nm(o.n, en))}${ARROW}</a></p></aside>`;
+}
 const cardRow = (e, en, L) => `<a class="card tile reveal" href="${BASE}${cardPath(e, L)}">
       <span><b>${esc(nm(e.n, en))}</b><em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em></span>
       <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span></a>`;
@@ -849,6 +859,7 @@ function card(e, L) {
       </aside>` : ''}
     </div>
 
+    ${notSame(e, en, L)}
     ${sec(t.what, d)}${sec(t.how, m)}${sec(t.use, u)}${sec(t.ev, ev)}${(() => { const o = (OPISY[e.n] || {})[L] || (OPISY[e.n] || {}).en; return o && o.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'In depth' : 'Więcej szczegółów'}</h2>${o.map(x => `<p>${esc(x)}</p>`).join('')}</section>` : ''; })()}${guideBox(e, en, L)}
     ${(() => { const pc = PLUS[e.n]; if (!pc) return ''; const li = a => (a[L] || a.en || []).map(x => `<li>${esc(x)}</li>`).join(''); return `<section class="blk reveal pcgrid"><div class="pc"><h2 class="kick">${en ? 'Advantages' : 'Zalety'}</h2><ul class="srcs-list">${li(pc.pros)}</ul></div><div class="pc"><h2 class="kick">${en ? 'Disadvantages' : 'Wady'}</h2><ul class="srcs-list">${li(pc.cons)}</ul></div></section>`; })()}
     ${SKUTKI.html(e.n, L, esc)}

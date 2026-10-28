@@ -615,3 +615,7 @@ header.bar input { -webkit-user-select: text; user-select: text; }
 .vchips em.more{color:var(--ink3)}
 @media(max-width:559px){.vpair{grid-template-columns:1fr}.vpair i{display:none}}
 .verdict:not(.same) .vhead::before{background:var(--k2)}
+.notsame{border:2px solid var(--k3);border-radius:16px;padding:16px 20px;background:color-mix(in srgb,var(--k3) 7%,transparent)}
+.notsame .kick{color:var(--k3);margin:0 0 6px}
+.notsame p{margin:0 0 6px}
+.notsame a svg{display:inline;vertical-align:-2px}
