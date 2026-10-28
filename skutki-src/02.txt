@@ -1,0 +1,233 @@
+=AOD9604
+t: injsite
+ec: Reactions where it is injected, the only effect that human trial reports mention
+eu: It was tested in obesity trials in a few hundred people and did not cause meaningful weight loss, so development stopped. There are no long-term safety data, and it is not an approved medicine.
+pc: Odczyny w miejscu wstrzyknięcia, jedyny skutek, o którym wspominają doniesienia z badań na ludziach
+pu: Badano go w badaniach nad otyłością na kilkuset osobach i nie dał istotnej utraty masy ciała, więc prace przerwano. Nie ma danych o bezpieczeństwie długoterminowym i nie jest zatwierdzonym lekiem.
+sc: Reacciones en el lugar de la inyección, el único efecto que mencionan los informes de ensayos en personas
+su: Se probó en ensayos de obesidad con unos cientos de personas y no logró una pérdida de peso relevante, así que se detuvo su desarrollo. No hay datos de seguridad a largo plazo y no es un medicamento aprobado.
+
+=HGH Fragment 176–191
+t:
+eu: Almost all the evidence is from animals and a few small studies. It is not an approved medicine, so reliable information on side effects in people is missing, and products sold online are not checked by regulators.
+pu: Prawie wszystkie dowody pochodzą z badań na zwierzętach i kilku małych badań. Nie jest zatwierdzonym lekiem, więc brakuje wiarygodnych informacji o skutkach ubocznych u ludzi, a produkty sprzedawane online nie są kontrolowane przez urzędy.
+su: Casi todas las pruebas proceden de animales y de unos pocos estudios pequeños. No es un medicamento aprobado, así que faltan datos fiables sobre efectos secundarios en personas, y los productos que se venden en línea no los controlan las autoridades.
+
+=Adipotide
+t: kidney
+ec: In monkeys, the main problem was kidney damage and signs of dehydration
+eu: Human safety is not established. The kidney findings in animals were serious enough that this is the main thing to know, and it is not an approved medicine.
+pc: U małp głównym problemem było uszkodzenie nerek i objawy odwodnienia
+pu: Bezpieczeństwo u ludzi nie zostało ustalone. Zmiany w nerkach u zwierząt były na tyle poważne, że to najważniejsza informacja, a lek nie jest zatwierdzony.
+sc: En monos, el principal problema fue el daño renal y signos de deshidratación
+su: No se ha establecido la seguridad en personas. Los hallazgos renales en animales fueron lo bastante graves como para ser lo principal que hay que saber, y no es un medicamento aprobado.
+
+=MIC i Lipo-C
+t:
+eu: No controlled trials show these blends help with weight loss or are safe. What is in the vial varies from seller to seller, and unregulated injectable products can be contaminated, so the real risk depends on what was actually mixed.
+pu: Żadne kontrolowane badania nie pokazują, że te mieszanki pomagają w odchudzaniu ani że są bezpieczne. Skład fiolki bywa różny u różnych sprzedawców, a nieregulowane produkty do wstrzykiwań mogą być zanieczyszczone, więc realne ryzyko zależy od tego, co faktycznie zmieszano.
+su: Ningún ensayo controlado demuestra que estas mezclas ayuden a adelgazar ni que sean seguras. Lo que contiene el vial varía según el vendedor, y los productos inyectables sin regulación pueden estar contaminados, así que el riesgo real depende de lo que se haya mezclado.
+
+=Mieszanki: Reta + Tirzepatyd, Cagri + Sema
+t: nausea, vomiting, diarrhoea
+ec: Nausea, vomiting and diarrhoea, expected because both parts act like GLP-1 medicines
+es: Dehydration from vomiting or diarrhoea
+eu: Nobody has studied these mixes in people. Doubling up on the same receptors can raise side effects without proven benefit, and what is really in the vial is not checked.
+pc: Nudności, wymioty i biegunka, których można się spodziewać, bo obie części działają jak leki GLP-1
+ps: Odwodnienie po wymiotach lub biegunce
+pu: Nikt nie badał takich mieszanek u ludzi. Podwojenie działania na te same receptory może nasilić skutki uboczne bez udowodnionej korzyści, a to, co naprawdę jest w fiolce, nie jest kontrolowane.
+sc: Náuseas, vómitos y diarrea, esperables porque ambas partes actúan como medicamentos GLP-1
+ss: Deshidratación por vómitos o diarrea
+su: Nadie ha estudiado estas mezclas en personas. Duplicar la acción sobre los mismos receptores puede aumentar los efectos secundarios sin un beneficio demostrado, y no se controla lo que hay realmente en el vial.
+
+=5-amino-1MQ
+t:
+eu: It has only been tested in cells and mice. There are no human safety data, it is not a medicine, and there is no information on its side effects in people.
+pu: Badano go tylko na komórkach i myszach. Nie ma danych o bezpieczeństwie u ludzi, nie jest lekiem i nie ma informacji o jego skutkach ubocznych u ludzi.
+su: Solo se ha probado en células y ratones. No hay datos de seguridad en personas, no es un medicamento y no hay información sobre sus efectos secundarios en personas.
+
+=AICAR
+t: kidney, heart
+ec: In human infusion studies it raised lactate and uric acid in the blood
+eu: It is on the WADA prohibited list. It was studied as an infusion in hospital settings, not as something to take in sport, and safety outside that is not established.
+pc: W badaniach z wlewem u ludzi podnosił poziom mleczanów i kwasu moczowego we krwi
+pu: Znajduje się na liście zabronionych WADA. Badano go we wlewach w warunkach szpitalnych, a nie jako środek w sporcie, a bezpieczeństwo poza tym nie jest ustalone.
+sc: En estudios con infusión en personas aumentó el lactato y el ácido úrico en sangre
+su: Figura en la lista de prohibidas de la AMA. Se estudió en infusión en entornos hospitalarios, no como algo para usar en el deporte, y no se ha establecido su seguridad fuera de ello.
+
+=SLU-PP-332
+t:
+eu: It has only been tested in mice. There are no human safety data, it is not a medicine, and nothing reliable is known about its side effects in people.
+pu: Badano go tylko na myszach. Nie ma danych o bezpieczeństwie u ludzi, nie jest lekiem i nie wiadomo nic wiarygodnego o jego skutkach ubocznych u ludzi.
+su: Solo se ha probado en ratones. No hay datos de seguridad en personas, no es un medicamento y no se sabe nada fiable sobre sus efectos secundarios en personas.
+
+=L-karnityna
+t: nausea, vomiting, diarrhoea, abdominal
+ec: Nausea, vomiting, stomach cramps and diarrhoea, more with higher amounts ; A fishy body odour
+es: Seizures in people who already have seizure disorders, reported with carnitine supplements
+eu: Higher blood levels of a by-product of carnitine (TMAO) have been linked to heart disease in studies of association, and it is not known whether carnitine supplements cause harm.
+pc: Nudności, wymioty, skurcze żołądka i biegunka, częstsze przy większych ilościach ; Zapach ryb od ciała
+ps: Drgawki u osób, które już mają zaburzenia drgawkowe, opisywane przy suplementach karnityny
+pu: Wyższy poziom produktu ubocznego karnityny (TMAO) we krwi wiązano z chorobami serca w badaniach obserwacyjnych, a nie wiadomo, czy suplementy karnityny szkodzą.
+sc: Náuseas, vómitos, calambres de estómago y diarrea, más con cantidades altas ; Olor corporal a pescado
+ss: Convulsiones en personas que ya tienen trastornos convulsivos, descritas con suplementos de carnitina
+su: Niveles altos en sangre de un subproducto de la carnitina (TMAO) se han vinculado con enfermedad del corazón en estudios de asociación, y no se sabe si los suplementos de carnitina causan daño.
+
+=Foundayo (orforglipron)
+t: nausea, vomiting, diarrhoea, constipation, abdominal, reflux, appetite, pancreas, gallbladder, kidney, thyroid, lowsugar
+ec: Nausea, vomiting, diarrhoea and constipation, mostly mild to moderate ; Stomach pain, indigestion and heartburn ; Reduced appetite
+es: Severe, lasting stomach pain: possible pancreatitis ; Gallbladder disease ; Dehydration with kidney injury ; Lump in the neck: boxed warning about thyroid tumours as with other GLP-1 drugs ; Low blood sugar with insulin or a sulfonylurea
+eu: Long-term safety over many years is still being collected, and the tablet has strict food and water rules that were part of trials.
+pc: Nudności, wymioty, biegunka i zaparcia, głównie łagodne lub umiarkowane ; Ból brzucha, niestrawność i zgaga ; Zmniejszony apetyt
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Choroba pęcherzyka żółciowego ; Odwodnienie z uszkodzeniem nerek ; Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy, jak przy innych lekach GLP-1 ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika
+pu: Bezpieczeństwo przez wiele lat stosowania jest wciąż zbierane, a przy tabletce obowiązują ścisłe zasady dotyczące jedzenia i picia, które były częścią badań.
+sc: Náuseas, vómitos, diarrea y estreñimiento, sobre todo leves o moderados ; Dolor de estómago, indigestión y acidez ; Menos apetito
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Enfermedad de la vesícula ; Deshidratación con daño renal ; Bulto en el cuello: advertencia destacada sobre tumores de tiroides, como con otros fármacos GLP-1 ; Azúcar bajo con insulina o una sulfonilurea
+su: La seguridad a lo largo de muchos años aún se está recopilando, y el comprimido tiene normas estrictas sobre comida y agua que formaron parte de los ensayos.
+
+=Somatropina (HGH)
+t: headache, injsite, musclejoint, swelling, water, vision, bone, lowsugar, allergy
+ec: Headache ; Joint and muscle pain ; Swelling from fluid retention in the hands, feet or face ; Numbness or tingling in the hands ; Reactions where it is injected
+es: Very high blood sugar or new diabetes ; Severe headache with vision changes, which can mean raised pressure inside the skull ; Hip or knee pain and limping in children ; Allergic reaction
+eu: Too much growth hormone over time causes a condition called acromegaly. Whether healthy adults using it for muscle or ageing reasons are harmed is not well studied.
+pc: Ból głowy ; Ból stawów i mięśni ; Obrzęk z zatrzymania płynów w dłoniach, stopach lub twarzy ; Drętwienie lub mrowienie rąk ; Odczyny w miejscu wstrzyknięcia
+ps: Bardzo wysoki cukier lub nowa cukrzyca ; Silny ból głowy ze zmianami widzenia, co może oznaczać podwyższone ciśnienie wewnątrz czaszki ; Ból biodra lub kolana i utykanie u dzieci ; Reakcja alergiczna
+pu: Zbyt dużo hormonu wzrostu przez długi czas powoduje chorobę zwaną akromegalią. Nie ma dobrych badań, czy szkodzi zdrowym dorosłym stosującym go dla mięśni lub opóźnienia starzenia.
+sc: Dolor de cabeza ; Dolor de articulaciones y músculos ; Hinchazón por retención de líquidos en manos, pies o cara ; Entumecimiento u hormigueo en las manos ; Reacciones en el lugar de la inyección
+ss: Azúcar muy alto en sangre o diabetes nueva ; Dolor de cabeza intenso con cambios de visión, que puede indicar presión elevada dentro del cráneo ; Dolor de cadera o rodilla y cojera en niños ; Reacción alérgica
+su: Demasiada hormona del crecimiento durante mucho tiempo causa una enfermedad llamada acromegalia. No está bien estudiado si perjudica a adultos sanos que la usan por músculo o por envejecimiento.
+
+=Tesamorelina
+t: injsite, musclejoint, swelling, water, lowsugar, allergy, cancer
+ec: Reactions where it is injected: redness, itching, pain ; Joint pain and pain in the arms or legs ; Swelling of the legs or ankles ; Muscle pain
+es: Higher blood sugar or new diabetes ; Allergic reactions, including rash and swelling of the face ; Growth of an existing tumour, because growth hormone effects raise IGF-1
+eu: It is approved only for fat around the organs in adults with HIV, and its safety in healthy people for other purposes is not established.
+pc: Odczyny w miejscu wstrzyknięcia: zaczerwienienie, swędzenie, ból ; Ból stawów oraz ból rąk lub nóg ; Obrzęk nóg lub kostek ; Ból mięśni
+ps: Wyższy cukier lub nowa cukrzyca ; Reakcje alergiczne, także wysypka i obrzęk twarzy ; Wzrost istniejącego nowotworu, bo działanie hormonu wzrostu podnosi IGF-1
+pu: Lek jest zatwierdzony tylko przy tłuszczu wokół narządów u dorosłych z HIV, a bezpieczeństwo u zdrowych osób w innych celach nie jest ustalone.
+sc: Reacciones en el lugar de la inyección: enrojecimiento, picor, dolor ; Dolor de articulaciones y dolor en brazos o piernas ; Hinchazón de piernas o tobillos ; Dolor muscular
+ss: Azúcar más alto o diabetes nueva ; Reacciones alérgicas, con sarpullido e hinchazón de la cara ; Crecimiento de un tumor existente, porque los efectos de la hormona del crecimiento elevan el IGF-1
+su: Solo está aprobado para la grasa alrededor de los órganos en adultos con VIH, y no se ha establecido su seguridad en personas sanas para otros fines.
+
+=Sermorelina
+t: injsite, flushing, headache, dizziness
+ec: Pain, redness or swelling where it is injected ; Flushing of the face ; Headache and dizziness
+eu: The brand medicine was withdrawn from sale by its maker for commercial reasons, not safety reasons, so current products come from compounding or unregulated sellers. Long-term effects are not well studied.
+pc: Ból, zaczerwienienie lub obrzęk w miejscu wstrzyknięcia ; Nagłe zaczerwienienie twarzy ; Ból głowy i zawroty głowy
+pu: Lek markowy został wycofany ze sprzedaży przez producenta z powodów handlowych, a nie bezpieczeństwa, więc obecne produkty pochodzą z aptek recepturowych lub nieregulowanych sprzedawców. Skutki długoterminowe nie są dobrze zbadane.
+sc: Dolor, enrojecimiento o hinchazón en el lugar de la inyección ; Rubor en la cara ; Dolor de cabeza y mareo
+su: El medicamento de marca fue retirado de la venta por su fabricante por razones comerciales, no de seguridad, así que los productos actuales proceden de formulación magistral o de vendedores sin regulación. Los efectos a largo plazo no están bien estudiados.
+
+=CJC-1295
+t: injsite, flushing, headache
+ec: Reactions where it is injected ; Flushing and warmth of the skin ; Headache
+eu: It was studied only in small, short trials, and development stopped. It is not an approved medicine, there are no long-term safety data, and products sold online are not checked by regulators.
+pc: Odczyny w miejscu wstrzyknięcia ; Zaczerwienienie i uczucie ciepła skóry ; Ból głowy
+pu: Badano go tylko w małych, krótkich badaniach i prace przerwano. Nie jest zatwierdzonym lekiem, nie ma danych o bezpieczeństwie długoterminowym, a produkty sprzedawane online nie są kontrolowane przez urzędy.
+sc: Reacciones en el lugar de la inyección ; Rubor y calor en la piel ; Dolor de cabeza
+su: Solo se estudió en ensayos pequeños y breves, y se detuvo su desarrollo. No es un medicamento aprobado, no hay datos de seguridad a largo plazo y los productos que se venden en línea no los controlan las autoridades.
+
+=Ipamorelina
+t:
+eu: In a small trial for bowel recovery after surgery it was generally well tolerated but did not work well enough to continue. It is not an approved medicine, and there are no long-term safety data in healthy people.
+pu: W małym badaniu nad powrotem pracy jelit po operacji był ogólnie dobrze tolerowany, ale nie działał dość dobrze, by kontynuować. Nie jest zatwierdzonym lekiem i nie ma danych o bezpieczeństwie długoterminowym u zdrowych osób.
+su: En un ensayo pequeño sobre la recuperación del intestino tras una cirugía se toleró bien en general, pero no funcionó lo bastante como para continuar. No es un medicamento aprobado y no hay datos de seguridad a largo plazo en personas sanas.
+
+=GHRP-2
+t: appetite, flushing, water, fatigue
+ec: Strong hunger ; Flushing and warmth ; Water retention ; Drowsiness
+eu: It raises the stress hormone cortisol and the hormone prolactin. It is not an approved medicine in most countries, and long-term safety is not established.
+pc: Silny głód ; Zaczerwienienie i uczucie ciepła ; Zatrzymanie wody ; Senność
+pu: Podnosi hormon stresu kortyzol i hormon prolaktynę. W większości krajów nie jest zatwierdzonym lekiem, a bezpieczeństwo długoterminowe nie jest ustalone.
+sc: Hambre intenso ; Rubor y sensación de calor ; Retención de agua ; Somnolencia
+su: Eleva la hormona del estrés (cortisol) y la prolactina. En la mayoría de los países no es un medicamento aprobado, y su seguridad a largo plazo no está establecida.
+
+=GHRP-6
+t: appetite, flushing, water, fatigue
+ec: Strong hunger within minutes of use ; Flushing and warmth ; Water retention ; Drowsiness
+eu: It raises the stress hormone cortisol and the hormone prolactin. It is not an approved medicine, and there are no long-term safety data.
+pc: Silny głód w ciągu kilku minut po zastosowaniu ; Zaczerwienienie i uczucie ciepła ; Zatrzymanie wody ; Senność
+pu: Podnosi hormon stresu kortyzol i hormon prolaktynę. Nie jest zatwierdzonym lekiem i nie ma danych o bezpieczeństwie długoterminowym.
+sc: Hambre intenso a los pocos minutos de usarlo ; Rubor y sensación de calor ; Retención de agua ; Somnolencia
+su: Eleva la hormona del estrés (cortisol) y la prolactina. No es un medicamento aprobado y no hay datos de seguridad a largo plazo.
+
+=Heksarelina
+t: flushing
+ec: Flushing and warmth
+eu: It raises the stress hormone cortisol and the hormone prolactin, and its effect fades with repeated use. It was studied for the heart but never approved, and long-term safety is not established.
+pc: Zaczerwienienie i uczucie ciepła
+pu: Podnosi hormon stresu kortyzol i hormon prolaktynę, a jego działanie słabnie przy powtarzanym stosowaniu. Badano go pod kątem serca, ale nigdy go nie zatwierdzono, a bezpieczeństwo długoterminowe nie jest ustalone.
+sc: Rubor y sensación de calor
+su: Eleva la hormona del estrés (cortisol) y la prolactina, y su efecto disminuye con el uso repetido. Se estudió para el corazón pero nunca se aprobó, y su seguridad a largo plazo no está establecida.
+
+=IGF-1 LR3
+t: lowsugar, dizziness, sweating, tremor, appetite
+ec: Low blood sugar: shakiness, sweating, hunger, dizziness, based on what is known about natural IGF-1 medicines
+es: Severe low blood sugar with confusion, seizures or fainting
+eu: This exact form has not been tested in people as a medicine. Growth factors can also feed existing tumours, and human safety is not established.
+pc: Niski cukier: drżenie, pocenie się, głód, zawroty głowy, na podstawie tego, co wiadomo o lekach z naturalnym IGF-1
+ps: Ciężka hipoglikemia ze splątaniem, drgawkami lub omdleniem
+pu: Ta dokładna forma nie była badana u ludzi jako lek. Czynniki wzrostu mogą też podtrzymywać istniejące nowotwory, a bezpieczeństwo u ludzi nie zostało ustalone.
+sc: Azúcar bajo: temblor, sudoración, hambre, mareo, según lo que se sabe de los medicamentos con IGF-1 natural
+ss: Hipoglucemia grave con confusión, convulsiones o desmayo
+su: Esta forma exacta no se ha probado en personas como medicamento. Los factores de crecimiento también pueden alimentar tumores existentes, y no se ha establecido su seguridad en personas.
+
+=MGF i PEG-MGF
+t:
+eu: There are no proper human trials of these substances. Almost all knowledge comes from cells and animals, so nothing reliable is known about side effects in people.
+pu: Nie ma porządnych badań tych substancji u ludzi. Prawie cała wiedza pochodzi z komórek i zwierząt, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: No hay ensayos adecuados de estas sustancias en personas. Casi todo el conocimiento procede de células y animales, así que no se sabe nada fiable sobre efectos secundarios en personas.
+
+=Follistatyna i FST-344
+t: bleeding
+eu: Follistatin has only been tried as gene therapy in a few patients with a muscle disease. It is not a medicine you can inject safely, and its safety as a product is unknown. It may affect hormones that control fertility.
+pu: Folistatynę próbowano tylko w terapii genowej u kilku pacjentów z chorobą mięśni. Nie jest lekiem, który można bezpiecznie wstrzykiwać, a jej bezpieczeństwo jako produktu jest nieznane. Może wpływać na hormony regulujące płodność.
+su: La folistatina solo se ha probado como terapia génica en unos pocos pacientes con una enfermedad muscular. No es un medicamento que se pueda inyectar con seguridad, y su seguridad como producto se desconoce. Puede afectar a las hormonas que controlan la fertilidad.
+
+=GDF-8 (miostatyna)
+t:
+eu: Myostatin limits muscle growth, so raising it works against muscle. There is no use in people and no human safety data, and nothing reliable is known about side effects.
+pu: Miostatyna ogranicza wzrost mięśni, więc podnoszenie jej poziomu działa przeciwko mięśniom. Nie ma zastosowania u ludzi ani danych o bezpieczeństwie, a o skutkach ubocznych nie wiadomo nic wiarygodnego.
+su: La miostatina limita el crecimiento muscular, así que aumentarla va en contra del músculo. No tiene uso en personas ni datos de seguridad en humanos, y no se sabe nada fiable sobre efectos secundarios.
+
+=ACE-031
+t: bleeding, rash, injsite
+ec: Nosebleeds and bleeding gums in the trial ; Small dilated blood vessels on the skin ; Reactions where it was injected
+es: Bleeding from small blood vessels, which led to the trial in boys with a muscle disease being stopped
+eu: It is not approved, and the trial in children was halted over safety. Human safety is not established.
+pc: Krwawienia z nosa i z dziąseł w badaniu ; Małe rozszerzone naczynia krwionośne na skórze ; Odczyny w miejscu wstrzyknięcia
+ps: Krwawienia z drobnych naczyń, przez które zatrzymano badanie u chłopców z chorobą mięśni
+pu: Nie jest zatwierdzony, a badanie u dzieci wstrzymano z powodu bezpieczeństwa. Bezpieczeństwo u ludzi nie zostało ustalone.
+sc: Hemorragias nasales y sangrado de encías en el ensayo ; Pequeños vasos sanguíneos dilatados en la piel ; Reacciones en el lugar de la inyección
+ss: Sangrado de vasos sanguíneos pequeños, que llevó a detener el ensayo en niños con una enfermedad muscular
+su: No está aprobado, y el ensayo en niños se detuvo por seguridad. No se ha establecido su seguridad en personas.
+
+=BPC-157
+t: cancer
+eu: There are no proper controlled trials of safety in people. Almost all evidence comes from rats, and because it promotes the growth of blood vessels, researchers worry in theory about tumours, which has not been tested.
+pu: Nie ma porządnych kontrolowanych badań bezpieczeństwa u ludzi. Prawie wszystkie dowody pochodzą ze szczurów, a ponieważ sprzyja tworzeniu naczyń krwionośnych, badacze teoretycznie obawiają się nowotworów, czego nie sprawdzono.
+su: No hay ensayos controlados adecuados de seguridad en personas. Casi todas las pruebas proceden de ratas, y como favorece el crecimiento de vasos sanguíneos, los investigadores se preocupan en teoría por los tumores, algo que no se ha comprobado.
+
+=TB-500
+t: cancer
+eu: There are no proper trials of this product in people. The natural protein it is based on has been studied in the lab, and safety of the injected version is unknown, including a theoretical concern about helping tumours spread.
+pu: Nie ma porządnych badań tego produktu u ludzi. Naturalne białko, na którym jest oparty, badano w laboratorium, a bezpieczeństwo wstrzykiwanej wersji jest nieznane, w tym teoretyczna obawa o sprzyjanie rozsiewaniu nowotworów.
+su: No hay ensayos adecuados de este producto en personas. La proteína natural en la que se basa se ha estudiado en laboratorio, y la seguridad de la versión inyectada se desconoce, incluida una preocupación teórica de que ayude a la propagación de tumores.
+
+=BPC-157 + TB-500
+t: cancer
+eu: Neither ingredient has proper human safety data and nobody has tested them together, so side effects are not known.
+pu: Żaden ze składników nie ma porządnych danych o bezpieczeństwie u ludzi i nikt nie badał ich razem, więc skutki uboczne nie są znane.
+su: Ninguno de los ingredientes tiene datos de seguridad en personas adecuados y nadie los ha probado juntos, así que se desconocen los efectos secundarios.
+
+=KPV
+t:
+eu: It has been studied in cells and animals for gut and skin inflammation. No proper human trials exist, so side effects in people are unknown.
+pu: Badano go na komórkach i zwierzętach pod kątem stanów zapalnych jelit i skóry. Nie ma porządnych badań na ludziach, więc skutki uboczne u ludzi są nieznane.
+su: Se ha estudiado en células y animales para la inflamación del intestino y la piel. No existen ensayos adecuados en personas, así que se desconocen los efectos secundarios en personas.
+
+=LL-37
+t: injsite, allergy
+eu: It is part of the body's own defences, and in small trials applied to leg ulcers it was tolerated. Injected products have no proper human safety data, and in theory it could drive inflammation.
+pu: To część naturalnej obrony organizmu, a w małych badaniach, gdy stosowano go na owrzodzenia nóg, był tolerowany. Produkty do wstrzykiwań nie mają porządnych danych o bezpieczeństwie u ludzi, a teoretycznie może nasilać stan zapalny.
+su: Forma parte de las defensas del propio cuerpo, y en ensayos pequeños aplicado en úlceras de la pierna se toleró. Los productos inyectables no tienen datos de seguridad en personas adecuados, y en teoría podría favorecer la inflamación.

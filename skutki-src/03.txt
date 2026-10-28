@@ -1,0 +1,362 @@
+=Tymozyna alfa-1
+t: injsite
+ec: Redness, pain or itching where it is injected
+eu: It is approved only in some Asian countries and was generally well tolerated in trials, which were mostly small. It is not approved in the US or the EU, and long-term data in healthy people are missing.
+pc: Zaczerwienienie, ból lub swędzenie w miejscu wstrzyknięcia
+pu: Jest zatwierdzona tylko w niektórych krajach azjatyckich i w badaniach, głównie małych, była na ogół dobrze tolerowana. Nie jest zatwierdzona w USA ani UE, a brakuje danych długoterminowych u zdrowych osób.
+sc: Enrojecimiento, dolor o picor en el lugar de la inyección
+su: Solo está aprobada en algunos países asiáticos y en los ensayos, mayormente pequeños, se toleró bien en general. No está aprobada en EE. UU. ni en la UE, y faltan datos a largo plazo en personas sanas.
+
+=Tymalina i tymulina
+t:
+eu: These are Russian-made and other thymus preparations with little independent evidence. They are not approved in the US or the EU, and reliable information on side effects is missing.
+pu: To preparaty z grasicy, produkowane głównie w Rosji, z małą liczbą niezależnych dowodów. Nie są zatwierdzone w USA ani UE, a wiarygodnych informacji o skutkach ubocznych brakuje.
+su: Son preparados de timo, fabricados sobre todo en Rusia, con pocas pruebas independientes. No están aprobados en EE. UU. ni en la UE, y faltan datos fiables sobre efectos secundarios.
+
+=VIP
+t: flushing, diarrhoea, bp, heart, headache
+ec: Flushing ; Watery diarrhoea ; Low blood pressure and a faster heartbeat ; Headache
+eu: It is a natural gut and lung hormone that is not approved as a medicine in most countries. Doses and long-term effects in people are poorly studied.
+pc: Nagłe zaczerwienienie ; Wodnista biegunka ; Niskie ciśnienie krwi i szybsze bicie serca ; Ból głowy
+pu: To naturalny hormon jelit i płuc, niezatwierdzony jako lek w większości krajów. Dawki i skutki długoterminowe u ludzi są słabo zbadane.
+sc: Rubor ; Diarrea acuosa ; Presión arterial baja y latido más rápido ; Dolor de cabeza
+su: Es una hormona natural del intestino y los pulmones que no está aprobada como medicamento en la mayoría de los países. Las dosis y los efectos a largo plazo en personas están poco estudiados.
+
+=Humanina
+t:
+eu: It has been studied only in cells, animals and a few small tests in the lab. There are no human safety data, and it is not an approved medicine.
+pu: Badano ją tylko na komórkach, zwierzętach i w kilku małych testach laboratoryjnych. Nie ma danych o bezpieczeństwie u ludzi i nie jest zatwierdzonym lekiem.
+su: Solo se ha estudiado en células, animales y algunas pruebas pequeñas de laboratorio. No hay datos de seguridad en personas y no es un medicamento aprobado.
+
+=MOTS-c
+t:
+eu: Evidence is almost entirely from cells and animals. A related drug candidate has had only early human trials, so side effects in people are not known.
+pu: Dowody pochodzą niemal wyłącznie z komórek i zwierząt. Pokrewny kandydat na lek miał tylko wczesne badania na ludziach, więc skutki uboczne u ludzi nie są znane.
+su: Las pruebas proceden casi por completo de células y animales. Un candidato a fármaco relacionado solo ha tenido ensayos tempranos en personas, así que se desconocen los efectos secundarios en personas.
+
+=SS-31
+t: injsite
+ec: Reactions where it is injected, the most common effect in trials
+eu: It was approved by the FDA only for a rare inherited disease called Barth syndrome, and safety in other conditions or in healthy people is not established.
+pc: Odczyny w miejscu wstrzyknięcia, najczęstszy skutek w badaniach
+pu: Został zatwierdzony przez FDA tylko w rzadkiej chorobie dziedzicznej, zespole Bartha, a bezpieczeństwo w innych chorobach i u zdrowych osób nie jest ustalone.
+sc: Reacciones en el lugar de la inyección, el efecto más frecuente en los ensayos
+su: La FDA solo lo aprobó para una enfermedad hereditaria rara, el síndrome de Barth, y no se ha establecido su seguridad en otras enfermedades ni en personas sanas.
+
+=Epitalon
+t:
+eu: Most studies are small and come from one research group, and there are no large independent trials. It is not approved, so reliable data on side effects are missing.
+pu: Większość badań jest mała i pochodzi z jednego zespołu badawczego, a dużych niezależnych prób nie ma. Nie jest zatwierdzony, więc brakuje wiarygodnych danych o skutkach ubocznych.
+su: La mayoría de los estudios son pequeños y proceden de un único grupo de investigación, y no hay ensayos grandes e independientes. No está aprobado, así que faltan datos fiables sobre efectos secundarios.
+
+=Peptydy bioregulatory
+t:
+eu: These short peptides are sold in some countries as supplements, with evidence mostly from one group of researchers. They are not approved as medicines in the US or the EU, and side effects are not well documented.
+pu: Te krótkie peptydy sprzedaje się w niektórych krajach jako suplementy, a dowody pochodzą głównie z jednego zespołu badaczy. Nie są zatwierdzone jako leki w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.
+su: Estos péptidos cortos se venden en algunos países como suplementos, con pruebas que proceden sobre todo de un único grupo de investigadores. No están aprobados como medicamentos en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados.
+
+=FOXO4-DRI
+t:
+eu: It has been tested in mice and cells only. There are no human trials, so nothing reliable is known about side effects in people.
+pu: Badano go tylko na myszach i komórkach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: Solo se ha probado en ratones y células. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas.
+
+=PNC-27
+t:
+eu: It has been tested in cells and animals as an experiment for cancer. There are no proper human trials, so side effects in people are unknown.
+pu: Badano go na komórkach i zwierzętach jako eksperymentalny środek w raku. Nie ma porządnych badań na ludziach, więc skutki uboczne u ludzi są nieznane.
+su: Se ha probado en células y animales como experimento contra el cáncer. No hay ensayos adecuados en personas, así que se desconocen los efectos secundarios en personas.
+
+=ARA290
+t: injsite
+ec: Mild reactions where it was injected in small trials
+eu: It has only been tested in small trials of nerve pain and sarcoidosis, with daily injections for weeks. It is not approved, and long-term safety is not established.
+pc: Łagodne odczyny w miejscu wstrzyknięcia w małych badaniach
+pu: Badano go tylko w małych próbach przy bólu neuropatycznym i sarkoidozie, w codziennych zastrzykach przez kilka tygodni. Nie jest zatwierdzony, a bezpieczeństwo długoterminowe nie jest ustalone.
+sc: Reacciones leves en el lugar de la inyección en ensayos pequeños
+su: Solo se ha probado en ensayos pequeños de dolor neuropático y sarcoidosis, con inyecciones diarias durante semanas. No está aprobado y no se ha establecido su seguridad a largo plazo.
+
+=B7-33
+t:
+eu: It is a laboratory-stage molecule tested in animals. There are no human data, so nothing is known about side effects in people.
+pu: To cząsteczka na etapie laboratoryjnym, badana na zwierzętach. Nie ma danych u ludzi, więc nic nie wiadomo o skutkach ubocznych u ludzi.
+su: Es una molécula en fase de laboratorio probada en animales. No hay datos en personas, así que no se sabe nada sobre efectos secundarios en personas.
+
+=DSIP
+t:
+eu: It was studied for sleep in small trials in the 1980s with mixed results. It is not approved, and its safety in people is poorly documented.
+pu: Badano go pod kątem snu w małych próbach w latach 80. z niejednoznacznymi wynikami. Nie jest zatwierdzony, a jego bezpieczeństwo u ludzi jest słabo udokumentowane.
+su: Se estudió para el sueño en ensayos pequeños en los años 80 con resultados mixtos. No está aprobado y su seguridad en personas está poco documentada.
+
+=Semax
+t:
+eu: It is registered as a medicine in Russia, but most evidence comes from Russian studies that were not independently repeated elsewhere. It is not approved in the US or the EU, and side effects are not well documented.
+pu: Jest zarejestrowany jako lek w Rosji, ale większość dowodów pochodzi z rosyjskich badań, których nie powtórzono niezależnie gdzie indziej. Nie jest zatwierdzony w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.
+su: Está registrado como medicamento en Rusia, pero la mayoría de las pruebas proceden de estudios rusos que no se han repetido de forma independiente en otros lugares. No está aprobado en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados.
+
+=Dihexa
+t: cancer
+eu: It has only been tested in animals. It acts on a growth pathway linked to tumours, so researchers worry about cancer risk in theory, and there are no human safety data.
+pu: Badano go tylko na zwierzętach. Działa na szlak wzrostu powiązany z nowotworami, więc badacze teoretycznie obawiają się ryzyka raka, a danych o bezpieczeństwie u ludzi nie ma.
+su: Solo se ha probado en animales. Actúa sobre una vía de crecimiento relacionada con los tumores, así que los investigadores se preocupan en teoría por el riesgo de cáncer, y no hay datos de seguridad en personas.
+
+=Adamax
+t:
+eu: It is a modified version of another unapproved peptide with almost no published data. Nothing reliable is known about its safety in people.
+pu: To zmodyfikowana wersja innego niezatwierdzonego peptydu z prawie żadnymi opublikowanymi danymi. Nie wiadomo nic wiarygodnego o jego bezpieczeństwie u ludzi.
+su: Es una versión modificada de otro péptido no aprobado con casi ningún dato publicado. No se sabe nada fiable sobre su seguridad en personas.
+
+=Selank
+t:
+eu: It is registered as a medicine in Russia, but its evidence is limited and mostly from Russian studies. It is not approved in the US or the EU, and side effects are not well documented.
+pu: Jest zarejestrowany jako lek w Rosji, ale dowody są ograniczone i pochodzą głównie z badań rosyjskich. Nie jest zatwierdzony w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.
+su: Está registrado como medicamento en Rusia, pero las pruebas son limitadas y proceden sobre todo de estudios rusos. No está aprobado en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados.
+
+=P21
+t:
+eu: It has been tested in animals only. There are no human trials, so nothing reliable is known about side effects in people.
+pu: Badano go tylko na zwierzętach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: Solo se ha probado en animales. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas.
+
+=PE-22-28
+t:
+eu: It has been tested in animals only. There are no human trials, so nothing reliable is known about side effects in people.
+pu: Badano go tylko na zwierzętach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: Solo se ha probado en animales. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas.
+
+=Oreksyna A i B
+t:
+eu: Orexins are natural brain chemicals, not medicines. Drugs that block them are used for insomnia, but giving orexin itself has not been established as safe or useful in people.
+pu: Oreksyny to naturalne substancje w mózgu, a nie leki. Leki, które je blokują, stosuje się w bezsenności, ale podawanie samej oreksyny nie zostało uznane za bezpieczne ani przydatne u ludzi.
+su: Las orexinas son sustancias naturales del cerebro, no medicamentos. Los fármacos que las bloquean se usan para el insomnio, pero no se ha establecido que administrar orexina sea seguro o útil en personas.
+
+=Cerebrolizyna
+t: dizziness, headache, nausea, sweating, injsite, allergy
+ec: Dizziness and headache ; Nausea ; Sweating and a feeling of heat if injected too quickly ; Pain where it is injected
+es: Allergic reaction, because it is made from pig brain protein ; Seizures in people with epilepsy, for whom it should not be used
+eu: It is approved in some countries only, and large trials of its benefit are mixed. It is not approved in the US.
+pc: Zawroty i ból głowy ; Nudności ; Pocenie się i uczucie gorąca przy zbyt szybkim wstrzyknięciu ; Ból w miejscu wstrzyknięcia
+ps: Reakcja alergiczna, bo lek powstaje z białek mózgu świni ; Napady drgawkowe u osób z padaczką, u których nie należy go stosować
+pu: Jest zatwierdzony tylko w niektórych krajach, a duże badania jego skuteczności dają mieszane wyniki. Nie jest zatwierdzony w USA.
+sc: Mareo y dolor de cabeza ; Náuseas ; Sudoración y sensación de calor si se inyecta demasiado rápido ; Dolor en el lugar de la inyección
+ss: Reacción alérgica, porque se fabrica a partir de proteínas de cerebro de cerdo ; Convulsiones en personas con epilepsia, en quienes no debe usarse
+su: Solo está aprobado en algunos países, y los ensayos grandes sobre su beneficio dan resultados mixtos. No está aprobado en EE. UU.
+
+=Zikonotyd
+t: dizziness, nausea, vomiting, headache, fatigue, mood, anxiety
+ec: Dizziness and unsteadiness ; Nausea and vomiting ; Confusion and memory problems ; Sleepiness ; Headache
+es: Serious mood and thinking changes: depression, hallucinations, thoughts of suicide, in a boxed warning ; Meningitis from the pump or catheter ; Reduced consciousness
+eu: It is given only into the spinal fluid by a pump in hospital for severe long-lasting pain. It is not something to use outside a specialist's care.
+pc: Zawroty głowy i niepewność chodu ; Nudności i wymioty ; Splątanie i problemy z pamięcią ; Senność ; Ból głowy
+ps: Poważne zmiany nastroju i myślenia: depresja, omamy, myśli samobójcze, w ramce ostrzegawczej ; Zapalenie opon mózgowych związane z pompą lub cewnikiem ; Zaburzenia świadomości
+pu: Podaje się go wyłącznie do płynu rdzeniowego za pomocą pompy w szpitalu przy ciężkim, długotrwałym bólu. Nie nadaje się do stosowania poza opieką specjalisty.
+sc: Mareo e inestabilidad al andar ; Náuseas y vómitos ; Confusión y problemas de memoria ; Somnolencia ; Dolor de cabeza
+ss: Cambios graves del ánimo y del pensamiento: depresión, alucinaciones, ideas de suicidio, en una advertencia destacada ; Meningitis por la bomba o el catéter ; Disminución del nivel de conciencia
+su: Solo se administra en el líquido espinal con una bomba en el hospital para dolor intenso y duradero. No es algo para usar fuera de la atención de un especialista.
+
+=Trofinetyd
+t: diarrhoea, vomiting, abdominal, fever
+ec: Diarrhoea, in most people who took it ; Vomiting ; Fever ; Stomach pain
+es: Dehydration and weight loss from severe diarrhoea
+eu: It is approved only for Rett syndrome, and trial participants were children and adults with that condition.
+pc: Biegunka, u większości osób przyjmujących lek ; Wymioty ; Gorączka ; Ból brzucha
+ps: Odwodnienie i utrata masy ciała przy ciężkiej biegunce
+pu: Jest zatwierdzony tylko w zespole Retta, a uczestnikami badań były dzieci i dorośli z tą chorobą.
+sc: Diarrea, en la mayoría de las personas que lo tomaron ; Vómitos ; Fiebre ; Dolor de estómago
+ss: Deshidratación y pérdida de peso por diarrea intensa
+su: Solo está aprobado para el síndrome de Rett, y los participantes de los ensayos fueron niños y adultos con esa enfermedad.
+
+=Difelikefalina
+t: dizziness, fatigue, nausea, headache, diarrhoea, vomiting, itching
+ec: Dizziness and sleepiness ; Nausea, vomiting and diarrhoea ; Headache ; Confusion in some people
+eu: It is given into a vein after dialysis for itching in kidney disease, and it is not for use outside that care.
+pc: Zawroty głowy i senność ; Nudności, wymioty i biegunka ; Ból głowy ; Splątanie u części osób
+pu: Podaje się go dożylnie po dializie przy świądzie w chorobie nerek i nie jest przeznaczony do stosowania poza taką opieką.
+sc: Mareo y somnolencia ; Náuseas, vómitos y diarrea ; Dolor de cabeza ; Confusión en algunas personas
+su: Se administra en una vena después de la diálisis para el picor en la enfermedad renal y no es para usar fuera de esa atención.
+
+=Gonadorelina
+t: headache, nausea, flushing, abdominal, injsite, allergy
+ec: Headache ; Nausea and stomach discomfort ; Flushing ; Pain or redness where it is injected
+es: Allergic reactions, rare
+eu: It is approved only for testing the pituitary gland, and use outside that has little study.
+pc: Ból głowy ; Nudności i dyskomfort w żołądku ; Nagłe zaczerwienienie ; Ból lub zaczerwienienie w miejscu wstrzyknięcia
+ps: Reakcje alergiczne, rzadkie
+pu: Jest zatwierdzona tylko do badania przysadki, a zastosowania poza tym są mało zbadane.
+sc: Dolor de cabeza ; Náuseas y molestias de estómago ; Rubor ; Dolor o enrojecimiento en el lugar de la inyección
+ss: Reacciones alérgicas, raras
+su: Solo está aprobada para evaluar la hipófisis, y los usos fuera de eso están poco estudiados.
+
+=Kisspeptyna-10
+t:
+eu: It has been used in small research studies of fertility and was generally tolerated at the doses tested. It is not an approved medicine, and long-term safety is unknown.
+pu: Stosowano ją w małych badaniach naukowych nad płodnością i na badanych dawkach była na ogół tolerowana. Nie jest zatwierdzonym lekiem, a bezpieczeństwo długoterminowe jest nieznane.
+su: Se ha usado en estudios de investigación pequeños sobre fertilidad y en las dosis probadas se toleró en general. No es un medicamento aprobado y se desconoce su seguridad a largo plazo.
+
+=Triptorelina
+t: flushing, libido, mood, headache, injsite, sweating, musclejoint, bone, fertility
+ec: Hot flushes and sweating ; Lower sex drive and, in men, erection problems ; Mood swings and headache ; Pain where it is injected ; Joint or muscle pain
+es: Bone thinning with long use ; Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer ; Allergic reaction
+eu: It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is a prescription medicine used for prostate cancer, endometriosis and early puberty.
+pc: Uderzenia gorąca i pocenie się ; Niższe libido i u mężczyzn zaburzenia wzwodu ; Wahania nastroju i ból głowy ; Ból w miejscu wstrzyknięcia ; Ból stawów lub mięśni
+ps: Zmniejszenie gęstości kości przy długim stosowaniu ; Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty ; Reakcja alergiczna
+pu: Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. To lek na receptę stosowany w raku prostaty, endometriozie i przedwczesnym dojrzewaniu.
+sc: Sofocos y sudoración ; Menos deseo sexual y, en hombres, problemas de erección ; Cambios de humor y dolor de cabeza ; Dolor en el lugar de la inyección ; Dolor de articulaciones o músculos
+ss: Adelgazamiento de los huesos con el uso prolongado ; Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata ; Reacción alérgica
+su: Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Es un medicamento con receta que se usa en cáncer de próstata, endometriosis y pubertad precoz.
+
+=Leuprorelina
+t: flushing, libido, mood, headache, injsite, sweating, musclejoint, bone, fertility
+ec: Hot flushes and sweating ; Lower sex drive and, in men, erection problems ; Mood swings and headache ; Pain where it is injected ; Joint or muscle pain
+es: Bone thinning with long use ; Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer ; Allergic reaction ; Depression and thoughts of suicide, which need a doctor
+eu: It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is a prescription medicine, and use outside medical care is not studied.
+pc: Uderzenia gorąca i pocenie się ; Niższe libido i u mężczyzn zaburzenia wzwodu ; Wahania nastroju i ból głowy ; Ból w miejscu wstrzyknięcia ; Ból stawów lub mięśni
+ps: Zmniejszenie gęstości kości przy długim stosowaniu ; Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty ; Reakcja alergiczna ; Depresja i myśli samobójcze, które wymagają lekarza
+pu: Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. To lek na receptę, a stosowanie poza opieką medyczną nie jest zbadane.
+sc: Sofocos y sudoración ; Menos deseo sexual y, en hombres, problemas de erección ; Cambios de humor y dolor de cabeza ; Dolor en el lugar de la inyección ; Dolor de articulaciones o músculos
+ss: Adelgazamiento de los huesos con el uso prolongado ; Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata ; Reacción alérgica ; Depresión e ideas de suicidio, que requieren atención médica
+su: Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Es un medicamento con receta y su uso fuera de la atención médica no está estudiado.
+
+=Goserelina
+t: flushing, libido, mood, headache, injsite, sweating, bone, fertility
+ec: Hot flushes and sweating ; Lower sex drive and, in men, erection problems ; Mood swings and headache ; Bruising or pain where the implant goes in
+es: Bone thinning with long use ; Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer ; Allergic reaction
+eu: It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is given as a small implant under the skin by a clinician.
+pc: Uderzenia gorąca i pocenie się ; Niższe libido i u mężczyzn zaburzenia wzwodu ; Wahania nastroju i ból głowy ; Siniak lub ból w miejscu wprowadzenia implantu
+ps: Zmniejszenie gęstości kości przy długim stosowaniu ; Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty ; Reakcja alergiczna
+pu: Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. Podaje go lekarz lub pielęgniarka jako mały implant pod skórę.
+sc: Sofocos y sudoración ; Menos deseo sexual y, en hombres, problemas de erección ; Cambios de humor y dolor de cabeza ; Hematoma o dolor donde se coloca el implante
+ss: Adelgazamiento de los huesos con el uso prolongado ; Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata ; Reacción alérgica
+su: Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Lo administra un profesional como un pequeño implante bajo la piel.
+
+=Degareliks
+t: injsite, flushing, libido, bone, heart
+ec: Pain, redness or swelling where it is injected, very common ; Hot flushes ; Lower sex drive and erection problems ; Weight gain
+es: Abnormal heart rhythm (QT prolongation) ; Bone thinning with long use ; Allergic reaction
+eu: It lowers testosterone on purpose and is used for advanced prostate cancer only. It does not cause the early testosterone surge that other drugs in the class can.
+pc: Ból, zaczerwienienie lub obrzęk w miejscu wstrzyknięcia, bardzo częste ; Uderzenia gorąca ; Niższe libido i zaburzenia wzwodu ; Przyrost masy ciała
+ps: Zaburzenia rytmu serca (wydłużenie odstępu QT) ; Zmniejszenie gęstości kości przy długim stosowaniu ; Reakcja alergiczna
+pu: Celowo obniża testosteron i jest stosowany tylko w zaawansowanym raku prostaty. Nie powoduje początkowego wzrostu testosteronu, który mogą wywołać inne leki tej klasy.
+sc: Dolor, enrojecimiento o hinchazón en el lugar de la inyección, muy frecuentes ; Sofocos ; Menos deseo sexual y problemas de erección ; Aumento de peso
+ss: Ritmo cardíaco anormal (prolongación del QT) ; Adelgazamiento de los huesos con el uso prolongado ; Reacción alérgica
+su: Baja la testosterona a propósito y solo se usa en el cáncer de próstata avanzado. No causa el aumento inicial de testosterona que sí pueden causar otros fármacos de la clase.
+
+=Cetroreliks i Ganireliks
+t: injsite, headache, nausea, abdominal, swelling
+ec: Redness, itching or swelling where it is injected ; Headache ; Nausea ; Stomach pain or bloating, partly from the fertility treatment it is used with
+es: Severe ovarian hyperstimulation: fast weight gain, big belly, breathlessness ; Allergic reaction
+eu: They are used in fertility treatment for a short time, so long-term safety is not the question here.
+pc: Zaczerwienienie, swędzenie lub obrzęk w miejscu wstrzyknięcia ; Ból głowy ; Nudności ; Ból brzucha lub wzdęcie, częściowo z powodu leczenia niepłodności, z którym się go stosuje
+ps: Ciężka hiperstymulacja jajników: szybki przyrost masy ciała, duży brzuch, duszność ; Reakcja alergiczna
+pu: Stosuje się je krótko w leczeniu niepłodności, więc bezpieczeństwo długoterminowe nie jest tu głównym pytaniem.
+sc: Enrojecimiento, picor o hinchazón en el lugar de la inyección ; Dolor de cabeza ; Náuseas ; Dolor de estómago o hinchazón, en parte por el tratamiento de fertilidad con el que se usa
+ss: Hiperestimulación ovárica grave: aumento rápido de peso, abdomen grande, falta de aire ; Reacción alérgica
+su: Se usan durante poco tiempo en tratamientos de fertilidad, así que la seguridad a largo plazo no es la cuestión aquí.
+
+=Oksytocyna
+t: nausea, vomiting, headache, water, heart, bleeding
+ec: Nausea and vomiting ; Headache
+es: Too strong or too frequent uterine contractions during labour ; Low sodium from water retention, which can cause seizures ; Abnormal heart rhythm ; Heavy bleeding after birth
+eu: Injected oxytocin is given in hospital for labour and after birth. Nasal sprays sold online for mood or bonding are not approved, and their effects are not established.
+pc: Nudności i wymioty ; Ból głowy
+ps: Zbyt silne lub zbyt częste skurcze macicy podczas porodu ; Niski poziom sodu z zatrzymania wody, który może powodować drgawki ; Zaburzenia rytmu serca ; Silne krwawienie po porodzie
+pu: Oksytocynę we wstrzyknięciach podaje się w szpitalu podczas porodu i po nim. Spraye do nosa sprzedawane online na nastrój lub więzi nie są zatwierdzone, a ich działanie nie jest ustalone.
+sc: Náuseas y vómitos ; Dolor de cabeza
+ss: Contracciones del útero demasiado fuertes o frecuentes durante el parto ; Sodio bajo por retención de agua, que puede causar convulsiones ; Ritmo cardíaco anormal ; Sangrado abundante tras el parto
+su: La oxitocina inyectada se administra en el hospital durante el parto y después. Los aerosoles nasales que se venden en línea para el ánimo o el vínculo no están aprobados y sus efectos no están establecidos.
+
+=HCG i HMG
+t: headache, injsite, gynecomastia, mood, swelling, water, abdominal, fatigue, fertility
+ec: Headache and tiredness ; Pain or redness where it is injected ; Mood changes and irritability ; In men, breast tenderness or enlargement ; Swelling and bloating
+es: In women, ovarian hyperstimulation: rapid weight gain, big belly, breathlessness ; Blood clots, rare ; Allergic reaction
+eu: In men without a medical reason, it can reduce the body's own testosterone production over time. It is a prescription medicine for fertility problems.
+pc: Ból głowy i zmęczenie ; Ból lub zaczerwienienie w miejscu wstrzyknięcia ; Zmiany nastroju i drażliwość ; U mężczyzn tkliwość lub powiększenie piersi ; Obrzęki i wzdęcia
+ps: U kobiet hiperstymulacja jajników: szybki przyrost masy ciała, duży brzuch, duszność ; Zakrzepy krwi, rzadko ; Reakcja alergiczna
+pu: U mężczyzn bez wskazań medycznych może z czasem obniżać własną produkcję testosteronu. To lek na receptę stosowany w problemach z płodnością.
+sc: Dolor de cabeza y cansancio ; Dolor o enrojecimiento en el lugar de la inyección ; Cambios de humor e irritabilidad ; En hombres, sensibilidad o aumento de las mamas ; Hinchazón y distensión
+ss: En mujeres, hiperestimulación ovárica: aumento rápido de peso, abdomen grande, falta de aire ; Coágulos de sangre, raros ; Reacción alérgica
+su: En hombres sin motivo médico puede reducir con el tiempo la producción propia de testosterona. Es un medicamento con receta para problemas de fertilidad.
+
+=Afamelanotyd
+t: nausea, headache, flushing, fatigue, injsite
+ec: Nausea ; Headache ; Flushing ; Tiredness ; Reactions where the implant goes in
+es: Darkening and change of moles, which need regular skin checks
+eu: It is approved only as a small implant for a rare light-sensitivity disease, given by a specialist.
+pc: Nudności ; Ból głowy ; Nagłe zaczerwienienie ; Zmęczenie ; Odczyny w miejscu wszczepienia implantu
+ps: Ciemnienie i zmiany znamion, które wymagają regularnych kontroli skóry
+pu: Jest zatwierdzony tylko jako mały implant w rzadkiej chorobie nadwrażliwości na światło, podawany przez specjalistę.
+sc: Náuseas ; Dolor de cabeza ; Rubor ; Cansancio ; Reacciones donde se coloca el implante
+ss: Oscurecimiento y cambio de lunares, que requieren revisiones periódicas de la piel
+su: Solo está aprobado como un pequeño implante para una enfermedad rara de sensibilidad a la luz, administrado por un especialista.
+
+=Melanotan II
+t: nausea, flushing, libido, appetite, fatigue, cancer
+ec: Nausea, often strong after the first uses ; Facial flushing ; Spontaneous erections ; Reduced appetite ; Tiredness and yawning
+es: New or changing moles and freckles, with reports of skin cancers in users ; Kidney problems in case reports
+eu: It is not approved anywhere and was never developed into a medicine, and tanning products sold online come without quality control, so its safety is not established.
+pc: Nudności, często silne po pierwszych zastosowaniach ; Zaczerwienienie twarzy ; Samoistne erekcje ; Zmniejszony apetyt ; Zmęczenie i ziewanie
+ps: Nowe lub zmieniające się znamiona i piegi, z doniesieniami o rakach skóry u użytkowników ; Problemy z nerkami w opisach przypadków
+pu: Nie jest zatwierdzony nigdzie na świecie i nigdy nie został rozwinięty w lek, a produkty do opalania sprzedawane online nie mają kontroli jakości, więc jego bezpieczeństwo nie jest ustalone.
+sc: Náuseas, a menudo intensas tras los primeros usos ; Rubor facial ; Erecciones espontáneas ; Menos apetito ; Cansancio y bostezos
+ss: Lunares y pecas nuevos o que cambian, con informes de cánceres de piel en usuarios ; Problemas de riñón en informes de casos
+su: No está aprobado en ningún sitio y nunca se desarrolló como medicamento, y los productos bronceadores que se venden en línea no tienen control de calidad, así que no está establecida su seguridad.
+
+=PT-141
+t: nausea, flushing, headache, injsite, vomiting, bp
+ec: Nausea, in many people ; Flushing ; Headache ; Vomiting ; Reactions where it is injected
+es: A short rise in blood pressure after the injection ; Darkening of the gums or skin that may not fade
+eu: It is approved only for low sexual desire in premenopausal women, and the effect of long use in other people is not established.
+pc: Nudności, u wielu osób ; Nagłe zaczerwienienie ; Ból głowy ; Wymioty ; Odczyny w miejscu wstrzyknięcia
+ps: Krótkotrwały wzrost ciśnienia krwi po wstrzyknięciu ; Ciemnienie dziąseł lub skóry, które może nie ustąpić
+pu: Jest zatwierdzony tylko przy niskim pożądaniu seksualnym u kobiet przed menopauzą, a skutki długiego stosowania u innych osób nie są ustalone.
+sc: Náuseas, en muchas personas ; Rubor ; Dolor de cabeza ; Vómitos ; Reacciones en el lugar de la inyección
+ss: Subida breve de la presión arterial tras la inyección ; Oscurecimiento de encías o piel que puede no desaparecer
+su: Solo está aprobado para el bajo deseo sexual en mujeres antes de la menopausia, y no se ha establecido el efecto de un uso prolongado en otras personas.
+
+=ACTH 1–39
+t: swelling, water, bp, mood, insomnia, acne, infection, bone, appetite
+ec: Fluid retention and swelling ; Higher blood pressure ; Mood swings, trouble sleeping ; Increased appetite and weight gain ; Acne
+es: Higher blood sugar ; Infections that are harder to fight ; Bone thinning with long use ; Stomach ulcers
+eu: Its effects resemble long-term steroid tablets because it makes the body release cortisol. It is a prescription medicine for infant spasms and some inflammatory diseases.
+pc: Zatrzymanie płynów i obrzęki ; Wyższe ciśnienie krwi ; Wahania nastroju, trudności ze snem ; Większy apetyt i przyrost masy ciała ; Trądzik
+ps: Wyższy poziom cukru we krwi ; Infekcje, z którymi trudniej walczyć ; Zmniejszenie gęstości kości przy długim stosowaniu ; Wrzody żołądka
+pu: Jego skutki przypominają długotrwałe stosowanie tabletek steroidowych, bo wywołuje wydzielanie kortyzolu. To lek na receptę stosowany w skurczach niemowlęcych i niektórych chorobach zapalnych.
+sc: Retención de líquidos e hinchazón ; Presión arterial más alta ; Cambios de humor, problemas para dormir ; Más apetito y aumento de peso ; Acné
+ss: Azúcar más alto en sangre ; Infecciones más difíciles de combatir ; Adelgazamiento de los huesos con el uso prolongado ; Úlceras de estómago
+su: Sus efectos se parecen a los de tomar corticoides durante mucho tiempo, porque hace que el cuerpo libere cortisol. Es un medicamento con receta para los espasmos infantiles y algunas enfermedades inflamatorias.
+
+=Melatonina
+t: fatigue, headache, dizziness, nausea
+ec: Daytime sleepiness ; Headache ; Dizziness ; Nausea ; Vivid dreams
+es: Possible interactions with blood thinners, diabetes medicines and some blood pressure medicines
+eu: Strength and purity of supplements vary a lot between brands, and long-term effects of regular use are not well studied.
+pc: Senność w ciągu dnia ; Ból głowy ; Zawroty głowy ; Nudności ; Wyraziste sny
+ps: Możliwe interakcje z lekami przeciwzakrzepowymi, przeciwcukrzycowymi i niektórymi lekami na nadciśnienie
+pu: Moc i czystość suplementów bardzo różnią się między markami, a skutki długotrwałego, regularnego stosowania nie są dobrze zbadane.
+sc: Somnolencia durante el día ; Dolor de cabeza ; Mareo ; Náuseas ; Sueños muy vívidos
+ss: Posibles interacciones con anticoagulantes, medicamentos para la diabetes y algunos para la presión arterial
+su: La concentración y la pureza de los suplementos varían mucho entre marcas, y los efectos de un uso regular a largo plazo no están bien estudiados.
+
+=Erytropoetyna (EPO)
+t: bp, headache, musclejoint, clots, heart
+ec: Higher blood pressure ; Headache ; Joint and muscle aches ; Flu-like feeling after injection
+es: Blood clots, stroke and heart attack, mainly when blood becomes too thick ; Pure red cell aplasia, a rare loss of red blood cell production ; In some cancers, faster tumour growth
+eu: It is on the WADA prohibited list, and healthy people who use it risk thickened blood.
+pc: Wyższe ciśnienie krwi ; Ból głowy ; Bóle stawów i mięśni ; Uczucie jak przy grypie po wstrzyknięciu
+ps: Zakrzepy, udar i zawał, głównie gdy krew robi się zbyt gęsta ; Czysta aplazja czerwonokrwinkowa, rzadka utrata produkcji czerwonych krwinek ; W niektórych nowotworach szybszy wzrost guza
+pu: Znajduje się na liście zabronionych WADA, a zdrowe osoby, które go stosują, ryzykują zagęszczenie krwi.
+sc: Presión arterial más alta ; Dolor de cabeza ; Dolores de articulaciones y músculos ; Sensación de gripe tras la inyección
+ss: Coágulos de sangre, ictus e infarto, sobre todo cuando la sangre se vuelve demasiado espesa ; Aplasia pura de células rojas, una pérdida rara de producción de glóbulos rojos ; En algunos cánceres, crecimiento más rápido del tumor
+su: Figura en la lista de prohibidas de la AMA, y las personas sanas que la usan arriesgan espesar la sangre.
+
+=Toksyna botulinowa
+t: injsite, headache, bleeding, breathing, allergy, vision
+ec: Pain, bruising or swelling where it is injected ; Headache ; A drooping eyelid or weakness of nearby muscles
+es: Spread of the effect: trouble swallowing or breathing, widespread weakness, in a boxed warning ; Allergic reaction
+eu: Results depend greatly on the person who gives it, and counterfeit products are a known problem.
+pc: Ból, siniak lub obrzęk w miejscu wstrzyknięcia ; Ból głowy ; Opadająca powieka lub osłabienie pobliskich mięśni
+ps: Rozprzestrzenienie działania: trudności z połykaniem lub oddychaniem, uogólnione osłabienie, w ramce ostrzegawczej ; Reakcja alergiczna
+pu: Wyniki zależą w dużej mierze od osoby, która go podaje, a podróbki to znany problem.
+sc: Dolor, hematoma o hinchazón en el lugar de la inyección ; Dolor de cabeza ; Párpado caído o debilidad de músculos cercanos
+ss: Extensión del efecto: dificultad para tragar o respirar, debilidad generalizada, en una advertencia destacada ; Reacción alérgica
+su: Los resultados dependen mucho de quien lo aplica, y las falsificaciones son un problema conocido.

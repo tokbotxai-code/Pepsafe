@@ -34,6 +34,12 @@ const missingMode = process.argv.includes('--missing');
     for (const k of ['pros', 'cons']) (o[k].en || []).forEach((t, i) => { if (o[k].es && o[k].es[i]) TM[ESC(t).replace(/\s+/g, ' ').trim()] = ESC(o[k].es[i]); });
 }
 
+// side effects (skutki.json), EN -> ES
+{
+  const ESC = x => String(x).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  for (const [en, es] of Object.entries(require('./skutki.js').pairs())) TM[ESC(en).replace(/\s+/g, ' ').trim()] = ESC(es);
+}
+
 const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-busy', 'data-off', 'data-on', 'data-base', 'data-report', 'value'];
 const META = /<meta (name|property)="(description|og:title|og:description|twitter:title|twitter:description)" content="([^"]*)">/g;
 const norm = s => s.replace(/\s+/g, ' ').trim();

@@ -508,7 +508,7 @@ details.qa p { margin: 8px 0 0; }
 .cmp th, .cmp td { padding: 11px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 .cmp thead th { font-weight: 600; color: var(--ink2); white-space: nowrap; }
 .cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
-.pcgrid { display: grid; gap: 18px; margin: 22px 0; }
+.pcgrid, .skgrid { display: grid; gap: 18px; margin: 22px 0; }
 @media (min-width: 720px) { .pcgrid { grid-template-columns: 1fr 1fr; } }
 .pc ul { margin-top: 6px; }
 

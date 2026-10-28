@@ -4,6 +4,7 @@
 // and /<lang>/t/s-<id>.html for en and pl. Spanish comes from tools/es.js, which reads the EN->ES pairs this module
 // records in tools/sterydy-tm.json (so there is exactly one place for each sentence).
 const fs = require('fs'), path = require('path');
+const SK = require('./skutki.js');
 const root = path.join(__dirname, '..');
 
 // Polish spells it "steryd" (corticosteroids stay "kortykosteroidy"); applied to every Polish string the section produces
@@ -218,6 +219,7 @@ module.exports = function build(ctx) {
     ${sec('legal', status)}${sec('wadaH', wada)}
     <section class="blk reveal pcgrid"><div class="pc"><h2 class="kick">${esc(u(L, 'pros'))}</h2><ul class="srcs-list">${pros.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
       <div class="pc"><h2 class="kick">${esc(u(L, 'cons'))}</h2><ul class="srcs-list">${cons.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></section>
+    ${SK.html('s-' + e.id, L, esc)}
     ${sources(e, L)}
     <p class="small muted reveal"><a href="${url(L, 'about.html')}#corrections">${esc(u(L, 'errp'))}</a></p>
     <p class="actions reveal"><a class="btn big" href="${url(L, 'steroids-compare.html')}">${esc(u(L, 'cmpBtn'))}${ARROW}</a> <a class="btn ghost big" href="${url(L, 'steroids-vs-peptides.html')}">${esc(u(L, 'vsBtn'))}</a> <a class="btn ghost big" href="${url(L, 'steroids-risks.html')}">${esc(u(L, 'riskBtn'))}</a> <a class="btn ghost big" href="${url(L, 'steroids-law.html')}">${esc(u(L, 'lawBtn'))}</a></p>
@@ -353,7 +355,8 @@ module.exports.finder = function (L) {
   const i = { en: 0, pl: 1, es: 2 }[L], low = x => String(x || '').toLowerCase();
   return load().map(e => ({
     ev: fs1(e.med, L), w: fs1(e.risk, L),
-    sy: [e.risk].concat(((e.cons || {}).en || []).map((_, k) => ({ en: e.cons.en[k], pl: e.cons.pl[k], es: e.cons.es[k] }))).map(o => { if (!o) return ''; if (o.en && o.es) EXTRA[norm(ESC(o.en))] = ESC(o.es); return L === 'pl' ? plFix(o.pl) : o[L]; }).join(' '),
+    k: SK.tags('s-' + e.id),
+    sy: [e.risk].concat(((e.cons || {}).en || []).map((_, k) => ({ en: e.cons.en[k], pl: e.cons.pl[k], es: e.cons.es[k] }))).map(o => { if (!o) return ''; if (o.en && o.es) EXTRA[norm(ESC(o.en))] = ESC(o.es); return L === 'pl' ? plFix(o.pl) : o[L]; }).join(' ') + ' ' + SK.text('s-' + e.id, L),
     s: 's-' + e.id, x: 1, n: nmL(e, L), c: L === 'pl' ? plFix(CLS[e.cls].name[L]) : CLS[e.cls].name[L], st: UI.form[e.form || 'inj'][i],
     t: low(['en', 'pl', 'es'].map(l => nmL(e, l) + ' ' + (e.alt ? e.alt[l] : '') + ' ' + e.what[l].split('. ')[0]).join(' ') + ' ' + CLS[e.cls].name.en + ' steroid steryd sterydy esteroides')
   }));

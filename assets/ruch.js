@@ -235,46 +235,56 @@
     var fold = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ł/g, 'l'); };
     // [label en|pl|es, words people type, stems to look for in the page language]
     var SYM = [
-      [['nausea', 'nudności', 'náuseas'], 'nausea nudnosc mdlosc niedobrze mdli', 'nudnosc|nausea'],
-      [['vomiting', 'wymioty', 'vómitos'], 'vomit wymiot wymiotow rzyganie', 'wymiot|vomit'],
-      [['diarrhoea', 'biegunka', 'diarrea'], 'diarr biegunk rozwolnien sraczk luzne stolce', 'biegunk|rozwolnien|diarrh|diarrea'],
-      [['constipation', 'zaparcia', 'estreñimiento'], 'constipat zaparc estrenim', 'zaparc|constipat|estrenim'],
-      [['stomach / abdominal pain', 'ból brzucha', 'dolor abdominal'], 'brzuch zoladek zoladk bol brzucha stomach belly abdominal tummy vientre barriga estomago', 'brzuch|zoladk|abdominal|stomach|estomag|vientre'],
-      [['heartburn / reflux', 'zgaga / refluks', 'acidez / reflujo'], 'zgaga refluks heartburn reflux acidez reflujo', 'zgag|refluks|reflux|heartburn|reflujo|acidez'],
-      [['headache', 'ból głowy', 'dolor de cabeza'], 'glow bol glowy migren headache cabeza cefale', 'bol glowy|bole glowy|glowy|headache|cefalea|dolor de cabeza|migra'],
-      [['dizziness', 'zawroty głowy', 'mareos'], 'zawrot dizz mareo kreci sie w glowie', 'zawrot|dizz|mareo|vertigo'],
-      [['tiredness / drowsiness', 'zmęczenie / senność', 'cansancio / somnolencia'], 'zmeczen sennosc slabosc oslabien tired fatigue drows cansancio fatiga somnolencia', 'zmeczen|sennosc|oslabien|fatigue|tired|drows|cansancio|fatiga|somnolencia|lethargy'],
-      [['insomnia', 'bezsenność', 'insomnio'], 'bezsenn nie moge spac insomnia sleep sen', 'bezsenn|insomnia|insomnio'],
-      [['rash', 'wysypka', 'erupción cutánea'], 'wysypk rash erupcion pokrzywka', 'wysypk|rash|erupcion|pokrzywk|hives'],
-      [['itching', 'świąd', 'picazón'], 'swiad itch picor prurito swedzenie', 'swiad|itch|picor|prurito'],
-      [['swelling', 'obrzęk', 'hinchazón'], 'obrzek puchnie opuch swelling hinchaz edema', 'obrzek|swelling|hinchaz|edema|oedema'],
-      [['palpitations / heart', 'kołatanie / serce', 'palpitaciones / corazón'], 'kolatanie serce tetno palpit heart cardiac corazon arytm', 'kolat|tetno|serc|palpit|heart|cardi|corazon|arytm|arrhythm'],
-      [['blood pressure', 'ciśnienie krwi', 'presión arterial'], 'cisnien blood pressure presion arterial nadcisnien', 'cisnien|blood pressure|presion arterial|hypertens|nadcisnien'],
-      [['heart attack / stroke / clots', 'zawał / udar / zakrzepy', 'infarto / ictus / coágulos'], 'zawal udar zakrzep zator stroke clot thromb infarto ictus coagul', 'zawal|udar|zakrzep|zator|stroke|clot|thromb|infarto|ictus|trombo'],
-      [['flushing', 'zaczerwienienie', 'enrojecimiento'], 'zaczerwien flush enrojec nagle gor', 'zaczerwien|flush|enrojec'],
-      [['fever', 'gorączka', 'fiebre'], 'goraczk fever fiebre temperatura', 'goraczk|fever|fiebre'],
-      [['low blood sugar', 'niski cukier', 'azúcar bajo'], 'hipoglik cukier hypoglyc low blood sugar azucar bajo', 'hipoglik|hypoglyc|hipoglu|niski cukier|low blood sugar'],
-      [['pancreas', 'trzustka', 'páncreas'], 'trzustk pancrea pankreat', 'trzustk|pancrea|pankreat'],
-      [['gallbladder / gallstones', 'woreczek żółciowy', 'vesícula biliar'], 'zolci zolcz kamic gallbladder gallstone vesicula biliar', 'zolciow|zolcz|kamic|gallbladder|gallstone|vesicula|biliar'],
-      [['liver', 'wątroba', 'hígado'], 'watrob liver hepat higado', 'watrob|liver|hepat|higado'],
-      [['kidneys', 'nerki', 'riñones'], 'nerk nerek bol nerek kidney renal rinon', 'nerk|kidney|renal|rinon'],
-      [['thyroid', 'tarczyca', 'tiroides'], 'tarczyc thyroid tiroid', 'tarczyc|thyroid|tiroid'],
-      [['mood / depression', 'nastrój / depresja', 'ánimo / depresión'], 'nastroj depres smutek mood depress animo', 'depres|nastroj|mood|animo'],
-      [['anxiety', 'lęk / niepokój', 'ansiedad'], 'lek niepok anxiety ansiedad nerwow', 'niepok|anxiety|ansiedad|stany lekowe|zaburzenia lekowe'],
-      [['aggression / irritability', 'agresja / drażliwość', 'agresividad / irritabilidad'], 'agresj drazliw aggress irritab agresiv', 'agresj|drazliw|aggress|irritab|agresiv'],
-      [['acne / oily skin', 'trądzik', 'acné'], 'tradzik acne wypryski', 'tradzik|acne'],
-      [['hair loss', 'wypadanie włosów', 'caída del pelo'], 'wlos lysien wypadani hair loss bald pelo calv', 'lysien|wypadani|hair loss|baldness|calvicie|caida del pelo'],
-      [['breast tissue growth (gynecomastia)', 'ginekomastia', 'ginecomastia'], 'ginekomast gynecomast ginecomast piers breast', 'ginekomast|gynecomast|ginecomast'],
-      [['fertility / testicles', 'płodność / jądra', 'fertilidad / testículos'], 'plodnos jadra nasien testic fertil sperm testicul', 'plodnos|jader|jadra|nasien|fertil|testic|sperm|testicul'],
-      [['injection-site reaction', 'reakcja w miejscu wstrzyknięcia', 'reacción en el lugar de inyección'], 'wstrzyknieci miejsce injection site inyeccion', 'miejscu wstrzykni|injection site|lugar de inyeccion|injection-site'],
-      [['muscle / tendon / joint pain', 'ból mięśni / ścięgien / stawów', 'dolor muscular / tendón / articular'], 'miesn sciegn staw muscle tendon joint muscul articul', 'miesn|sciegn|staw|muscle|tendon|joint|muscul|tendin|articul'],
-      [['water retention', 'zatrzymanie wody', 'retención de líquidos'], 'woda wody zatrzymani water fluid retenc liquid', 'zatrzymani wody|zatrzymanie wody|water retention|fluid retention|retencion de liquid'],
-      [['vision / eyes', 'wzrok / oczy', 'visión / ojos'], 'wzrok oczy widzeni vision eye ojo', 'wzrok|widzeni|oczu|oczy|vision|eye|ojo|vista'],
-      [['cholesterol', 'cholesterol', 'colesterol'], 'cholesterol colesterol', 'cholesterol|colesterol'],
-      [['weight / muscle loss', 'utrata masy mięśniowej', 'pérdida muscular'], 'miesni masa muscle loss muscular', 'masy miesniowej|muscle loss|lean mass|masa muscular'],
-      [['sex drive', 'libido', 'libido'], 'libido seks sexual sex drive', 'libido|sex drive|seksual|sexual']
+      ['nausea', ['nausea', 'nudności', 'náuseas'], 'nausea nudnosc mdlosc niedobrze mdli', 'nudnosc|nausea'],
+      ['vomiting', ['vomiting', 'wymioty', 'vómitos'], 'vomit wymiot wymiotow rzyganie', 'wymiot|vomit'],
+      ['diarrhoea', ['diarrhoea', 'biegunka', 'diarrea'], 'diarr biegunk rozwolnien sraczk luzne stolce', 'biegunk|rozwolnien|diarrh|diarrea'],
+      ['constipation', ['constipation', 'zaparcia', 'estreñimiento'], 'constipat zaparc estrenim', 'zaparc|constipat|estrenim'],
+      ['abdominal', ['stomach / abdominal pain', 'ból brzucha', 'dolor abdominal'], 'brzuch zoladek zoladk bol brzucha stomach belly abdominal tummy vientre barriga estomago', 'brzuch|zoladk|abdominal|stomach|estomag|vientre'],
+      ['reflux', ['heartburn / reflux', 'zgaga / refluks', 'acidez / reflujo'], 'zgaga refluks heartburn reflux acidez reflujo', 'zgag|refluks|reflux|heartburn|reflujo|acidez'],
+      ['headache', ['headache', 'ból głowy', 'dolor de cabeza'], 'glow bol glowy migren headache cabeza cefale', 'bol glowy|bole glowy|glowy|headache|cefalea|dolor de cabeza|migra'],
+      ['dizziness', ['dizziness', 'zawroty głowy', 'mareos'], 'zawrot dizz mareo kreci sie w glowie', 'zawrot|dizz|mareo|vertigo'],
+      ['fatigue', ['tiredness / drowsiness', 'zmęczenie / senność', 'cansancio / somnolencia'], 'zmeczen sennosc slabosc oslabien tired fatigue drows cansancio fatiga somnolencia', 'zmeczen|sennosc|oslabien|fatigue|tired|drows|cansancio|fatiga|somnolencia|lethargy'],
+      ['insomnia', ['insomnia', 'bezsenność', 'insomnio'], 'bezsenn nie moge spac insomnia sleep sen', 'bezsenn|insomnia|insomnio'],
+      ['rash', ['rash', 'wysypka', 'erupción cutánea'], 'wysypk rash erupcion pokrzywka', 'wysypk|rash|erupcion|pokrzywk|hives'],
+      ['itching', ['itching', 'świąd', 'picazón'], 'swiad itch picor prurito swedzenie', 'swiad|itch|picor|prurito'],
+      ['swelling', ['swelling', 'obrzęk', 'hinchazón'], 'obrzek puchnie opuch swelling hinchaz edema', 'obrzek|swelling|hinchaz|edema|oedema'],
+      ['heart', ['palpitations / heart', 'kołatanie / serce', 'palpitaciones / corazón'], 'kolatanie serce tetno palpit heart cardiac corazon arytm', 'kolat|tetno|serc|palpit|heart|cardi|corazon|arytm|arrhythm'],
+      ['bp', ['blood pressure', 'ciśnienie krwi', 'presión arterial'], 'cisnien blood pressure presion arterial nadcisnien', 'cisnien|blood pressure|presion arterial|hypertens|nadcisnien'],
+      ['clots', ['heart attack / stroke / clots', 'zawał / udar / zakrzepy', 'infarto / ictus / coágulos'], 'zawal udar zakrzep zator stroke clot thromb infarto ictus coagul', 'zawal|udar|zakrzep|zator|stroke|clot|thromb|infarto|ictus|trombo'],
+      ['flushing', ['flushing', 'zaczerwienienie', 'enrojecimiento'], 'zaczerwien flush enrojec nagle gor', 'zaczerwien|flush|enrojec'],
+      ['fever', ['fever', 'gorączka', 'fiebre'], 'goraczk fever fiebre temperatura', 'goraczk|fever|fiebre'],
+      ['lowsugar', ['low blood sugar', 'niski cukier', 'azúcar bajo'], 'hipoglik cukier hypoglyc low blood sugar azucar bajo', 'hipoglik|hypoglyc|hipoglu|niski cukier|low blood sugar'],
+      ['pancreas', ['pancreas', 'trzustka', 'páncreas'], 'trzustk pancrea pankreat', 'trzustk|pancrea|pankreat'],
+      ['gallbladder', ['gallbladder / gallstones', 'woreczek żółciowy', 'vesícula biliar'], 'zolci zolcz kamic gallbladder gallstone vesicula biliar', 'zolciow|zolcz|kamic|gallbladder|gallstone|vesicula|biliar'],
+      ['liver', ['liver', 'wątroba', 'hígado'], 'watrob liver hepat higado', 'watrob|liver|hepat|higado'],
+      ['kidney', ['kidneys', 'nerki', 'riñones'], 'nerk nerek bol nerek kidney renal rinon', 'nerk|kidney|renal|rinon'],
+      ['thyroid', ['thyroid', 'tarczyca', 'tiroides'], 'tarczyc thyroid tiroid', 'tarczyc|thyroid|tiroid'],
+      ['mood', ['mood / depression', 'nastrój / depresja', 'ánimo / depresión'], 'nastroj depres smutek mood depress animo', 'depres|nastroj|mood|animo'],
+      ['anxiety', ['anxiety', 'lęk / niepokój', 'ansiedad'], 'lek niepok anxiety ansiedad nerwow', 'niepok|anxiety|ansiedad|stany lekowe|zaburzenia lekowe'],
+      ['aggression', ['aggression / irritability', 'agresja / drażliwość', 'agresividad / irritabilidad'], 'agresj drazliw aggress irritab agresiv', 'agresj|drazliw|aggress|irritab|agresiv'],
+      ['acne', ['acne / oily skin', 'trądzik', 'acné'], 'tradzik acne wypryski', 'tradzik|acne'],
+      ['hairloss', ['hair loss', 'wypadanie włosów', 'caída del pelo'], 'wlos lysien wypadani hair loss bald pelo calv', 'lysien|wypadani|hair loss|baldness|calvicie|caida del pelo'],
+      ['gynecomastia', ['breast tissue growth (gynecomastia)', 'ginekomastia', 'ginecomastia'], 'ginekomast gynecomast ginecomast piers breast', 'ginekomast|gynecomast|ginecomast'],
+      ['fertility', ['fertility / testicles', 'płodność / jądra', 'fertilidad / testículos'], 'plodnos jadra nasien testic fertil sperm testicul', 'plodnos|jader|jadra|nasien|fertil|testic|sperm|testicul'],
+      ['injsite', ['injection-site reaction', 'reakcja w miejscu wstrzyknięcia', 'reacción en el lugar de inyección'], 'wstrzyknieci miejsce injection site inyeccion', 'miejscu wstrzykni|injection site|lugar de inyeccion|injection-site'],
+      ['musclejoint', ['muscle / tendon / joint pain', 'ból mięśni / ścięgien / stawów', 'dolor muscular / tendón / articular'], 'miesn sciegn staw muscle tendon joint muscul articul', 'miesn|sciegn|staw|muscle|tendon|joint|muscul|tendin|articul'],
+      ['water', ['water retention', 'zatrzymanie wody', 'retención de líquidos'], 'woda wody zatrzymani water fluid retenc liquid', 'zatrzymani wody|zatrzymanie wody|water retention|fluid retention|retencion de liquid'],
+      ['vision', ['vision / eyes', 'wzrok / oczy', 'visión / ojos'], 'wzrok oczy widzeni vision eye ojo', 'wzrok|widzeni|oczu|oczy|vision|eye|ojo|vista'],
+      ['cholesterol', ['cholesterol', 'cholesterol', 'colesterol'], 'cholesterol colesterol', 'cholesterol|colesterol'],
+      ['musclelossed', ['weight / muscle loss', 'utrata masy mięśniowej', 'pérdida muscular'], 'miesni masa muscle loss muscular', 'masy miesniowej|muscle loss|lean mass|masa muscular'],
+      ['libido', ['sex drive', 'libido', 'libido'], 'libido seks sexual sex drive', 'libido|sex drive|seksual|sexual'],
+      ['allergy', ['allergic reaction', 'reakcja alergiczna', 'reacción alérgica'], 'alerg anafilak allergic anaphyl hipersens nadwrazliw', 'alergi|anafilak|allergic|anaphyl|hypersensitiv|nadwrazliw|alergic'],
+      ['breathing', ['breathing / cough', 'oddychanie / kaszel', 'respiración / tos'], 'oddych dusznosc kaszel breath cough respir disnea tos', 'dusznosc|oddych|kaszel|breath|cough|respir|disnea|dyspnea'],
+      ['sweating', ['sweating', 'pocenie się', 'sudoración'], 'poceni pot sweat sudor', 'poceni|poty|sweat|sudor'],
+      ['appetite', ['appetite change', 'zmiana apetytu', 'cambio de apetito'], 'apetyt glod appetite hunger apetito', 'apetyt|appetite|apetito'],
+      ['mouth', ['dry mouth / taste', 'suchość w ustach / smak', 'boca seca / sabor'], 'sucho usta smak dry mouth taste boca seca', 'suchosc w ustach|dry mouth|taste|smak|boca seca'],
+      ['tremor', ['tremor / restlessness', 'drżenie / niepokój ruchowy', 'temblor / inquietud'], 'drzeni tremor shak temblor', 'drzeni|tremor|shak|temblor'],
+      ['bleeding', ['bleeding / bruising', 'krwawienie / siniaki', 'sangrado / hematomas'], 'krwawien siniak bleed bruis sangrado hematoma', 'krwawien|siniak|bleed|bruis|sangrado|hematoma'],
+      ['infection', ['infections', 'infekcje', 'infecciones'], 'infekcj zakazen infection infeccion', 'infekcj|zakazen|infection|infeccion'],
+      ['cancer', ['tumour growth concern', 'obawy o wzrost nowotworów', 'preocupación por tumores'], 'nowotw rak tumor cancer', 'nowotw|tumor|cancer|rak '],
+      ['bone', ['bone / growth', 'kości / wzrost', 'huesos / crecimiento'], 'kosc wzrost bone growth hueso', 'koscie|kosci|bone|growth plate|hueso|crecimiento']
     ];
-    var SYN = SYM.map(function (c) { return { l: c[0][LG], w: fold(c[1]).split(' '), s: (LG === 2 ? c[2] : c[2]).split('|').map(fold) }; });
+    var SYN = SYM.map(function (c) { return { id: c[0], l: c[1][LG], w: fold(c[2]).split(' '), s: c[3].split('|').map(fold) }; });
     var mode = 'all';
     var tabLabel = { all: html.lang === 'pl' ? 'Wszystko' : es('All', 'Todo'), pep: html.lang === 'pl' ? 'Peptydy i GLP-1' : es('Peptides & GLP-1', 'Péptidos y GLP-1'), ster: html.lang === 'pl' ? 'Sterydy' : es('Steroids', 'Esteroides') };
     stabs.innerHTML = Object.keys(tabLabel).map(function (k) { return '<button type="button" class="chip' + (k === 'all' ? ' on' : '') + '" data-m="' + k + '">' + tabLabel[k] + '</button>'; }).join('');
@@ -290,7 +300,11 @@
       if (v.length < 3) { sout.innerHTML = ''; shint.hidden = false; shint.textContent = html.lang === 'pl' ? 'Wpisz objaw (np. ból brzucha, biegunka, ból nerek) albo kliknij podpowiedź.' : es('Type a symptom (e.g. stomach pain, diarrhoea, kidney pain) or click a suggestion.', 'Escribe un síntoma (p. ej. dolor de estómago, diarrea, dolor de riñón) o pulsa una sugerencia.'); return; }
       var hit = SYN.filter(function (c) { return c.w.some(function (w) { return w.length >= 3 && (w.indexOf(v) > -1 || (w.length >= 4 && v.indexOf(w) > -1)); }) || fold(c.l).indexOf(v) > -1; });
       var stems = hit.length ? [].concat.apply([], hit.map(function (c) { return c.s; })) : [v];
-      var rows = allRows().filter(function (r) { var t = fold(r.t + ' ' + (r.sy || '') + ' ' + (r.w || '') + ' ' + (r.ev || '')); return stems.some(function (s) { return t.indexOf(s) > -1; }); });
+      var ids = hit.map(function (c) { return c.id; });
+      var rows = allRows().filter(function (r) {
+        if (r.k && ids.some(function (i) { return r.k.indexOf(i) > -1; })) return true;
+        var t = fold(r.t + ' ' + (r.sy || '') + ' ' + (r.w || '') + ' ' + (r.ev || '')); return stems.some(function (s) { return t.indexOf(s) > -1; });
+      });
       if (hit.length) snote.textContent = (html.lang === 'pl' ? 'Szukam: ' : es('Looking for: ', 'Buscando: ')) + hit.map(function (c) { return c.l; }).join(', ');
       var np = rows.filter(function (r) { return !r.x; }).length, ns = rows.length - np;
       stabs.querySelectorAll('.chip').forEach(function (b) {

@@ -1,0 +1,2562 @@
+{
+ "Semaglutyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "abdominal",
+   "reflux",
+   "headache",
+   "dizziness",
+   "fatigue",
+   "hairloss",
+   "injsite",
+   "pancreas",
+   "gallbladder",
+   "kidney",
+   "lowsugar",
+   "vision",
+   "thyroid",
+   "heart",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting, diarrhoea or constipation, most often when starting and after each dose increase",
+    "Stomach pain, bloating, burping, indigestion or heartburn",
+    "Headache, tiredness and dizziness",
+    "Hair thinning during fast weight loss",
+    "Redness or itching where it is injected"
+   ],
+   "pl": [
+    "Nudności, wymioty, biegunka lub zaparcia, najczęściej na początku i po zwiększeniu dawki",
+    "Ból brzucha, wzdęcia, odbijanie, niestrawność lub zgaga",
+    "Ból głowy, zmęczenie i zawroty głowy",
+    "Przerzedzenie włosów przy szybkiej utracie masy ciała",
+    "Zaczerwienienie lub swędzenie w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Náuseas, vómitos, diarrea o estreñimiento, sobre todo al empezar y tras cada aumento de dosis",
+    "Dolor de estómago, hinchazón, eructos, indigestión o acidez",
+    "Dolor de cabeza, cansancio y mareo",
+    "Adelgazamiento del cabello durante una pérdida de peso rápida",
+    "Enrojecimiento o picor en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe, lasting stomach pain, sometimes with vomiting: possible pancreatitis",
+    "Pain in the upper right abdomen, fever or yellowing of the skin: possible gallbladder disease",
+    "Dehydration from vomiting or diarrhoea that can harm the kidneys",
+    "Low blood sugar, mainly together with insulin or a sulfonylurea",
+    "Sudden vision changes in people with diabetic eye disease",
+    "Lump or swelling in the neck: the label warns about thyroid tumours seen in rodents",
+    "Swelling of the face or throat and trouble breathing: allergic reaction"
+   ],
+   "pl": [
+    "Silny, długo utrzymujący się ból brzucha, czasem z wymiotami: możliwe zapalenie trzustki",
+    "Ból w prawym górnym brzuchu, gorączka lub zażółcenie skóry: możliwa choroba pęcherzyka żółciowego",
+    "Odwodnienie po wymiotach lub biegunce, które może uszkodzić nerki",
+    "Niski poziom cukru we krwi, głównie razem z insuliną lub pochodną sulfonylomocznika",
+    "Nagła zmiana widzenia u osób z cukrzycową chorobą oczu",
+    "Guzek lub obrzęk na szyi: ulotka ostrzega przed nowotworami tarczycy obserwowanymi u gryzoni",
+    "Obrzęk twarzy lub gardła i duszność: reakcja alergiczna"
+   ],
+   "es": [
+    "Dolor de estómago intenso y persistente, a veces con vómitos: posible pancreatitis",
+    "Dolor en la parte superior derecha del abdomen, fiebre o piel amarillenta: posible enfermedad de la vesícula",
+    "Deshidratación por vómitos o diarrea que puede dañar los riñones",
+    "Azúcar bajo en sangre, sobre todo junto con insulina o una sulfonilurea",
+    "Cambios bruscos de la visión en personas con enfermedad ocular diabética",
+    "Bulto o hinchazón en el cuello: el prospecto advierte de tumores de tiroides observados en roedores",
+    "Hinchazón de cara o garganta y dificultad para respirar: reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "Long-term effects beyond several years of use are still being studied, and it is not known how much of the muscle lost on treatment is regained afterwards.",
+   "pl": "Skutki dłuższego stosowania, trwającego wiele lat, są nadal badane, a nie wiadomo, jak dużo utraconej mięśniowej masy wraca po odstawieniu.",
+   "es": "Los efectos de un uso prolongado durante muchos años aún se están estudiando, y no se sabe cuánta masa muscular perdida se recupera al dejar el tratamiento."
+  }
+ },
+ "Tirzepatyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "abdominal",
+   "reflux",
+   "headache",
+   "dizziness",
+   "fatigue",
+   "hairloss",
+   "injsite",
+   "pancreas",
+   "gallbladder",
+   "kidney",
+   "lowsugar",
+   "thyroid",
+   "heart",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Nausea, diarrhoea, vomiting or constipation, especially when starting and after dose increases",
+    "Stomach pain, indigestion, heartburn, burping and bloating",
+    "Tiredness and dizziness",
+    "Hair thinning during fast weight loss",
+    "Reactions where it is injected"
+   ],
+   "pl": [
+    "Nudności, biegunka, wymioty lub zaparcia, zwłaszcza na początku i po zwiększeniu dawki",
+    "Ból brzucha, niestrawność, zgaga, odbijanie i wzdęcia",
+    "Zmęczenie i zawroty głowy",
+    "Przerzedzenie włosów przy szybkiej utracie masy ciała",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Náuseas, diarrea, vómitos o estreñimiento, sobre todo al empezar y tras subir la dosis",
+    "Dolor de estómago, indigestión, acidez, eructos e hinchazón",
+    "Cansancio y mareo",
+    "Adelgazamiento del cabello durante una pérdida de peso rápida",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe, lasting stomach pain: possible pancreatitis",
+    "Gallbladder problems: pain in the upper right abdomen, fever, yellow skin",
+    "Dehydration with kidney injury after vomiting or diarrhoea",
+    "Low blood sugar with insulin or a sulfonylurea",
+    "Lump or swelling in the neck: boxed warning about thyroid tumours seen in rodents",
+    "Allergic reaction with swelling and trouble breathing"
+   ],
+   "pl": [
+    "Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki",
+    "Problemy z pęcherzykiem żółciowym: ból w prawym górnym brzuchu, gorączka, żółta skóra",
+    "Odwodnienie z uszkodzeniem nerek po wymiotach lub biegunce",
+    "Niski poziom cukru z insuliną lub pochodną sulfonylomocznika",
+    "Guzek lub obrzęk na szyi: ramka ostrzegawcza o nowotworach tarczycy u gryzoni",
+    "Reakcja alergiczna z obrzękiem i dusznością"
+   ],
+   "es": [
+    "Dolor de estómago intenso y persistente: posible pancreatitis",
+    "Problemas de la vesícula: dolor en la parte superior derecha del abdomen, fiebre, piel amarillenta",
+    "Deshidratación con daño renal tras vómitos o diarrea",
+    "Azúcar bajo con insulina o una sulfonilurea",
+    "Bulto o hinchazón en el cuello: advertencia destacada sobre tumores de tiroides en roedores",
+    "Reacción alérgica con hinchazón y dificultad para respirar"
+   ]
+  },
+  "unknown": {
+   "en": "The label says it can make oral contraceptive pills work less well, and long-term effects over many years are still being collected.",
+   "pl": "Według ulotki lek może osłabiać działanie doustnych tabletek antykoncepcyjnych, a skutki wieloletniego stosowania są wciąż zbierane.",
+   "es": "Según el prospecto puede reducir la eficacia de los anticonceptivos orales, y los efectos tras muchos años de uso aún se están recopilando."
+  }
+ },
+ "Liraglutyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "abdominal",
+   "reflux",
+   "headache",
+   "dizziness",
+   "fatigue",
+   "injsite",
+   "pancreas",
+   "gallbladder",
+   "kidney",
+   "lowsugar",
+   "thyroid",
+   "heart",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting, diarrhoea or constipation",
+    "Stomach pain, indigestion and heartburn",
+    "Headache, dizziness and tiredness",
+    "Faster resting heart rate",
+    "Reactions where it is injected"
+   ],
+   "pl": [
+    "Nudności, wymioty, biegunka lub zaparcia",
+    "Ból brzucha, niestrawność i zgaga",
+    "Ból głowy, zawroty głowy i zmęczenie",
+    "Szybsze tętno w spoczynku",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Náuseas, vómitos, diarrea o estreñimiento",
+    "Dolor de estómago, indigestión y acidez",
+    "Dolor de cabeza, mareo y cansancio",
+    "Frecuencia cardíaca en reposo más rápida",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe, lasting stomach pain: possible pancreatitis",
+    "Gallbladder disease: pain in the upper right abdomen, fever, yellow skin",
+    "Dehydration with kidney injury",
+    "Low blood sugar with insulin or a sulfonylurea",
+    "Lump in the neck: boxed warning about thyroid tumours seen in rodents",
+    "Swelling of the face or throat: allergic reaction"
+   ],
+   "pl": [
+    "Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki",
+    "Choroba pęcherzyka żółciowego: ból w prawym górnym brzuchu, gorączka, żółta skóra",
+    "Odwodnienie z uszkodzeniem nerek",
+    "Niski poziom cukru z insuliną lub pochodną sulfonylomocznika",
+    "Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy u gryzoni",
+    "Obrzęk twarzy lub gardła: reakcja alergiczna"
+   ],
+   "es": [
+    "Dolor de estómago intenso y persistente: posible pancreatitis",
+    "Enfermedad de la vesícula: dolor en la parte superior derecha del abdomen, fiebre, piel amarillenta",
+    "Deshidratación con daño renal",
+    "Azúcar bajo con insulina o una sulfonilurea",
+    "Bulto en el cuello: advertencia destacada sobre tumores de tiroides en roedores",
+    "Hinchazón de cara o garganta: reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "It is injected daily, so injection-site reactions matter more than with weekly medicines. Effects over decades of use are not known.",
+   "pl": "Lek wstrzykuje się codziennie, więc odczyny w miejscu wstrzyknięcia mają większe znaczenie niż przy lekach tygodniowych. Skutki stosowania przez dziesięciolecia nie są znane.",
+   "es": "Se inyecta a diario, así que las reacciones en el lugar de la inyección pesan más que con los medicamentos semanales. Se desconocen los efectos tras décadas de uso."
+  }
+ },
+ "Dulaglutyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "abdominal",
+   "reflux",
+   "fatigue",
+   "appetite",
+   "injsite",
+   "pancreas",
+   "gallbladder",
+   "kidney",
+   "lowsugar",
+   "thyroid",
+   "vision",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting and diarrhoea",
+    "Stomach pain, indigestion and heartburn",
+    "Tiredness and reduced appetite",
+    "Reactions where it is injected"
+   ],
+   "pl": [
+    "Nudności, wymioty i biegunka",
+    "Ból brzucha, niestrawność i zgaga",
+    "Zmęczenie i zmniejszony apetyt",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Náuseas, vómitos y diarrea",
+    "Dolor de estómago, indigestión y acidez",
+    "Cansancio y menos apetito",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe, lasting stomach pain: possible pancreatitis",
+    "Gallbladder disease",
+    "Dehydration with kidney injury",
+    "Low blood sugar with insulin or a sulfonylurea",
+    "Lump in the neck: boxed warning about thyroid tumours seen in rodents",
+    "Sudden vision changes in diabetic eye disease",
+    "Allergic reaction with swelling and trouble breathing"
+   ],
+   "pl": [
+    "Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki",
+    "Choroba pęcherzyka żółciowego",
+    "Odwodnienie z uszkodzeniem nerek",
+    "Niski poziom cukru z insuliną lub pochodną sulfonylomocznika",
+    "Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy u gryzoni",
+    "Nagła zmiana widzenia przy cukrzycowej chorobie oczu",
+    "Reakcja alergiczna z obrzękiem i dusznością"
+   ],
+   "es": [
+    "Dolor de estómago intenso y persistente: posible pancreatitis",
+    "Enfermedad de la vesícula",
+    "Deshidratación con daño renal",
+    "Azúcar bajo con insulina o una sulfonilurea",
+    "Bulto en el cuello: advertencia destacada sobre tumores de tiroides en roedores",
+    "Cambios bruscos de la visión en enfermedad ocular diabética",
+    "Reacción alérgica con hinchazón y dificultad para respirar"
+   ]
+  },
+  "unknown": {
+   "en": "It is licensed for type 2 diabetes, not for weight loss, so the weight-loss safety picture comes from other medicines of the same class.",
+   "pl": "Lek jest zarejestrowany w cukrzycy typu 2, nie w odchudzaniu, więc dane o bezpieczeństwie przy odchudzaniu pochodzą z innych leków tej samej klasy.",
+   "es": "Está autorizado para la diabetes tipo 2, no para adelgazar, así que los datos de seguridad para adelgazar proceden de otros medicamentos de la misma clase."
+  }
+ },
+ "Eksenatyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "headache",
+   "dizziness",
+   "appetite",
+   "injsite",
+   "pancreas",
+   "kidney",
+   "lowsugar",
+   "allergy",
+   "bleeding",
+   "thyroid"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting and diarrhoea",
+    "Headache and dizziness",
+    "Reduced appetite",
+    "Redness, itching or small lumps where it is injected, especially with the weekly form"
+   ],
+   "pl": [
+    "Nudności, wymioty i biegunka",
+    "Ból głowy i zawroty głowy",
+    "Zmniejszony apetyt",
+    "Zaczerwienienie, swędzenie lub małe guzki w miejscu wstrzyknięcia, zwłaszcza przy postaci tygodniowej"
+   ],
+   "es": [
+    "Náuseas, vómitos y diarrea",
+    "Dolor de cabeza y mareo",
+    "Menos apetito",
+    "Enrojecimiento, picor o pequeños bultos en el lugar de la inyección, sobre todo con la forma semanal"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe, lasting stomach pain: possible pancreatitis",
+    "Kidney problems, including after dehydration",
+    "Low blood sugar with insulin or a sulfonylurea",
+    "Allergic reactions, including swelling and trouble breathing",
+    "Lump in the neck: the weekly form carries a boxed warning about thyroid tumours seen in rodents"
+   ],
+   "pl": [
+    "Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki",
+    "Problemy z nerkami, także po odwodnieniu",
+    "Niski poziom cukru z insuliną lub pochodną sulfonylomocznika",
+    "Reakcje alergiczne, także z obrzękiem i dusznością",
+    "Guzek na szyi: postać tygodniowa ma ramkę ostrzegawczą o nowotworach tarczycy u gryzoni"
+   ],
+   "es": [
+    "Dolor de estómago intenso y persistente: posible pancreatitis",
+    "Problemas de riñón, también tras una deshidratación",
+    "Azúcar bajo con insulina o una sulfonilurea",
+    "Reacciones alérgicas, también con hinchazón y dificultad para respirar",
+    "Bulto en el cuello: la forma semanal lleva una advertencia destacada sobre tumores de tiroides en roedores"
+   ]
+  },
+  "unknown": {
+   "en": "It was the first medicine of its class, so it has the longest record, but it is used far less now than newer drugs.",
+   "pl": "To pierwszy lek tej klasy, więc ma najdłuższą historię stosowania, ale dziś jest używany znacznie rzadziej niż nowsze leki.",
+   "es": "Fue el primer medicamento de su clase, así que tiene el historial más largo, pero hoy se usa mucho menos que los fármacos más nuevos."
+  }
+ },
+ "Liksysenatyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "headache",
+   "dizziness",
+   "abdominal",
+   "injsite",
+   "pancreas",
+   "lowsugar",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting and diarrhoea",
+    "Headache and dizziness",
+    "Stomach pain",
+    "Reactions where it is injected"
+   ],
+   "pl": [
+    "Nudności, wymioty i biegunka",
+    "Ból głowy i zawroty głowy",
+    "Ból brzucha",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Náuseas, vómitos y diarrea",
+    "Dolor de cabeza y mareo",
+    "Dolor de estómago",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe, lasting stomach pain: possible pancreatitis",
+    "Low blood sugar with insulin or a sulfonylurea",
+    "Allergic reactions with swelling and trouble breathing"
+   ],
+   "pl": [
+    "Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki",
+    "Niski poziom cukru z insuliną lub pochodną sulfonylomocznika",
+    "Reakcje alergiczne z obrzękiem i dusznością"
+   ],
+   "es": [
+    "Dolor de estómago intenso y persistente: posible pancreatitis",
+    "Azúcar bajo con insulina o una sulfonilurea",
+    "Reacciones alérgicas con hinchazón y dificultad para respirar"
+   ]
+  },
+  "unknown": {
+   "en": "It is a daily injection for type 2 diabetes with little use in weight loss, so evidence on that use is thin.",
+   "pl": "To codzienny zastrzyk w cukrzycy typu 2 i prawie nie bada się go w odchudzaniu, więc dowodów na takie zastosowanie jest mało.",
+   "es": "Es una inyección diaria para la diabetes tipo 2 y apenas se estudia para adelgazar, así que las pruebas para ese uso son escasas."
+  }
+ },
+ "Retatrutyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "abdominal",
+   "heart",
+   "appetite",
+   "fatigue"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting, diarrhoea and constipation, mostly mild to moderate and mainly during dose increases",
+    "A faster resting heart rate that rose with the dose in the phase 2 study",
+    "Reduced appetite"
+   ],
+   "pl": [
+    "Nudności, wymioty, biegunka i zaparcia, głównie łagodne lub umiarkowane i głównie przy zwiększaniu dawki",
+    "Szybsze tętno w spoczynku, które w badaniu II fazy rosło wraz z dawką",
+    "Zmniejszony apetyt"
+   ],
+   "es": [
+    "Náuseas, vómitos, diarrea y estreñimiento, sobre todo leves o moderados y sobre todo al subir la dosis",
+    "Frecuencia cardíaca en reposo más rápida, que en el estudio de fase 2 aumentó con la dosis",
+    "Menos apetito"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Dehydration from vomiting or diarrhoea",
+    "Stomach pain that does not go away"
+   ],
+   "pl": [
+    "Odwodnienie po wymiotach lub biegunce",
+    "Ból brzucha, który nie mija"
+   ],
+   "es": [
+    "Deshidratación por vómitos o diarrea",
+    "Dolor de estómago que no desaparece"
+   ]
+  },
+  "unknown": {
+   "en": "It is not approved. Results come from trials in a few thousand people, so rare effects, long-term safety and effects on muscle and the heart are not yet known. Products sold online under this name do not come from the maker, so their contents and effects are unknown.",
+   "pl": "Lek nie jest zatwierdzony. Wyniki pochodzą z badań na kilku tysiącach osób, więc rzadkie skutki, bezpieczeństwo długoterminowe oraz wpływ na mięśnie i serce nie są jeszcze znane. Produkty sprzedawane online pod tą nazwą nie pochodzą od producenta, więc ich skład i działanie są nieznane.",
+   "es": "No está aprobado. Los resultados proceden de ensayos con unos pocos miles de personas, así que los efectos raros, la seguridad a largo plazo y el efecto en músculo y corazón aún no se conocen. Los productos que se venden en línea con este nombre no proceden del fabricante, así que se desconoce su contenido y efecto."
+  }
+ },
+ "Mazdutyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "appetite",
+   "abdominal"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting and diarrhoea, mostly mild to moderate",
+    "Reduced appetite",
+    "Stomach discomfort"
+   ],
+   "pl": [
+    "Nudności, wymioty i biegunka, głównie łagodne lub umiarkowane",
+    "Zmniejszony apetyt",
+    "Dyskomfort w żołądku"
+   ],
+   "es": [
+    "Náuseas, vómitos y diarrea, sobre todo leves o moderados",
+    "Menos apetito",
+    "Molestias de estómago"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Dehydration from vomiting or diarrhoea"
+   ],
+   "pl": [
+    "Odwodnienie po wymiotach lub biegunce"
+   ],
+   "es": [
+    "Deshidratación por vómitos o diarrea"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved only in China, and long-term safety outside Chinese studies is not established. The mix of GLP-1 and glucagon action is newer than GLP-1 alone, so rarer effects may not have shown up yet.",
+   "pl": "Lek jest zatwierdzony tylko w Chinach, a bezpieczeństwo długoterminowe poza badaniami chińskimi nie zostało ustalone. Połączenie działania GLP-1 i glukagonu jest nowsze niż sam GLP-1, więc rzadsze skutki mogły się jeszcze nie ujawnić.",
+   "es": "Solo está aprobado en China y su seguridad a largo plazo fuera de los estudios chinos no está establecida. La combinación de acción GLP-1 y glucagón es más reciente que la de GLP-1 solo, así que puede que aún no hayan aparecido efectos más raros."
+  }
+ },
+ "Survodutyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "appetite"
+  ],
+  "common": {
+   "en": [
+    "Nausea and vomiting, which were common and dose-related in trials",
+    "Diarrhoea or constipation",
+    "Reduced appetite"
+   ],
+   "pl": [
+    "Nudności i wymioty, które w badaniach były częste i zależne od dawki",
+    "Biegunka lub zaparcia",
+    "Zmniejszony apetyt"
+   ],
+   "es": [
+    "Náuseas y vómitos, que fueron frecuentes y dependientes de la dosis en los ensayos",
+    "Diarrea o estreñimiento",
+    "Menos apetito"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Dehydration from vomiting or diarrhoea"
+   ],
+   "pl": [
+    "Odwodnienie po wymiotach lub biegunce"
+   ],
+   "es": [
+    "Deshidratación por vómitos o diarrea"
+   ]
+  },
+  "unknown": {
+   "en": "It is still in phase 3 trials and not approved. Long-term safety, effects on the heart and the liver over time and rare problems are not yet known, and products sold online under this name are not the maker's medicine.",
+   "pl": "Lek jest wciąż w badaniach III fazy i nie jest zatwierdzony. Bezpieczeństwo długoterminowe, wpływ na serce i wątrobę w czasie oraz rzadkie problemy nie są jeszcze znane, a produkty sprzedawane online pod tą nazwą nie są lekiem producenta.",
+   "es": "Sigue en ensayos de fase 3 y no está aprobado. La seguridad a largo plazo, el efecto en corazón e hígado con el tiempo y los problemas raros aún no se conocen, y los productos que se venden en línea con este nombre no son el medicamento del fabricante."
+  }
+ },
+ "Cagrilintyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "injsite",
+   "appetite"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting, constipation and diarrhoea",
+    "Reactions where it is injected",
+    "Reduced appetite"
+   ],
+   "pl": [
+    "Nudności, wymioty, zaparcia i biegunka",
+    "Odczyny w miejscu wstrzyknięcia",
+    "Zmniejszony apetyt"
+   ],
+   "es": [
+    "Náuseas, vómitos, estreñimiento y diarrea",
+    "Reacciones en el lugar de la inyección",
+    "Menos apetito"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Dehydration from vomiting or diarrhoea"
+   ],
+   "pl": [
+    "Odwodnienie po wymiotach lub biegunce"
+   ],
+   "es": [
+    "Deshidratación por vómitos o diarrea"
+   ]
+  },
+  "unknown": {
+   "en": "It is not approved on its own. Most safety data come from trials of its combination with semaglutide, and long-term effects are not known.",
+   "pl": "Lek nie jest zatwierdzony osobno. Większość danych o bezpieczeństwie pochodzi z badań jego połączenia z semaglutydem, a skutki długoterminowe nie są znane.",
+   "es": "No está aprobado por sí solo. La mayoría de los datos de seguridad proceden de ensayos de su combinación con semaglutida, y no se conocen los efectos a largo plazo."
+  }
+ },
+ "Pramlintyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "abdominal",
+   "headache",
+   "lowsugar",
+   "appetite",
+   "injsite",
+   "tremor",
+   "sweating",
+   "dizziness"
+  ],
+  "common": {
+   "en": [
+    "Nausea, which is the most common effect and usually fades",
+    "Vomiting and stomach pain",
+    "Headache and reduced appetite",
+    "Reactions where it is injected"
+   ],
+   "pl": [
+    "Nudności, najczęstszy skutek, który zwykle mija",
+    "Wymioty i ból brzucha",
+    "Ból głowy i zmniejszony apetyt",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Náuseas, el efecto más frecuente, que suele desaparecer",
+    "Vómitos y dolor de estómago",
+    "Dolor de cabeza y menos apetito",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe low blood sugar when used with insulin: shakiness, sweating, confusion, fainting",
+    "Allergic reactions"
+   ],
+   "pl": [
+    "Ciężka hipoglikemia przy stosowaniu z insuliną: drżenie, pocenie się, splątanie, omdlenie",
+    "Reakcje alergiczne"
+   ],
+   "es": [
+    "Hipoglucemia grave cuando se usa con insulina: temblor, sudoración, confusión, desmayo",
+    "Reacciones alérgicas"
+   ]
+  },
+  "unknown": {
+   "en": "It is used only alongside mealtime insulin, and severe low blood sugar usually appears within three hours of the injection.",
+   "pl": "Lek stosuje się wyłącznie razem z insuliną do posiłków, a ciężka hipoglikemia pojawia się zwykle w ciągu trzech godzin od wstrzyknięcia.",
+   "es": "Se usa solo junto con insulina de las comidas, y la hipoglucemia grave suele aparecer en las tres horas siguientes a la inyección."
+  }
+ },
+ "Insuliny i analogi": {
+  "k": [
+   "lowsugar",
+   "sweating",
+   "tremor",
+   "dizziness",
+   "appetite",
+   "injsite",
+   "swelling",
+   "water",
+   "allergy",
+   "heart"
+  ],
+  "common": {
+   "en": [
+    "Low blood sugar: shakiness, sweating, hunger, dizziness, headache",
+    "Weight gain",
+    "Redness, itching or lumps where it is injected, and changes in the fat under the skin if the site is not rotated",
+    "Swelling of the legs or ankles at the start of treatment"
+   ],
+   "pl": [
+    "Niski poziom cukru: drżenie, pocenie się, głód, zawroty i ból głowy",
+    "Przyrost masy ciała",
+    "Zaczerwienienie, swędzenie lub guzki w miejscu wstrzyknięcia oraz zmiany tkanki tłuszczowej, gdy nie zmienia się miejsc",
+    "Obrzęk nóg lub kostek na początku leczenia"
+   ],
+   "es": [
+    "Azúcar bajo: temblor, sudoración, hambre, mareo, dolor de cabeza",
+    "Aumento de peso",
+    "Enrojecimiento, picor o bultos en el lugar de la inyección, y cambios en la grasa bajo la piel si no se rotan los sitios",
+    "Hinchazón de piernas o tobillos al empezar el tratamiento"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe low blood sugar: confusion, seizures, loss of consciousness",
+    "Low potassium in the blood, which can disturb the heart rhythm",
+    "Allergic reaction with rash or trouble breathing"
+   ],
+   "pl": [
+    "Ciężka hipoglikemia: splątanie, drgawki, utrata przytomności",
+    "Niski poziom potasu we krwi, który może zaburzać rytm serca",
+    "Reakcja alergiczna z wysypką lub dusznością"
+   ],
+   "es": [
+    "Hipoglucemia grave: confusión, convulsiones, pérdida de conciencia",
+    "Potasio bajo en sangre, que puede alterar el ritmo del corazón",
+    "Reacción alérgica con sarpullido o dificultad para respirar"
+   ]
+  },
+  "unknown": {
+   "en": "Insulin is an essential medicine for many people. The danger comes from using it without medical supervision, for example for muscle building, where the risk of severe low blood sugar is high.",
+   "pl": "Insulina jest dla wielu osób lekiem niezbędnym. Niebezpieczne jest stosowanie jej bez nadzoru lekarza, na przykład w celu budowy mięśni, gdzie ryzyko ciężkiej hipoglikemii jest wysokie.",
+   "es": "La insulina es un medicamento esencial para mucha gente. El peligro está en usarla sin control médico, por ejemplo para ganar músculo, donde el riesgo de hipoglucemia grave es alto."
+  }
+ },
+ "AOD9604": {
+  "k": [
+   "injsite"
+  ],
+  "common": {
+   "en": [
+    "Reactions where it is injected, the only effect that human trial reports mention"
+   ],
+   "pl": [
+    "Odczyny w miejscu wstrzyknięcia, jedyny skutek, o którym wspominają doniesienia z badań na ludziach"
+   ],
+   "es": [
+    "Reacciones en el lugar de la inyección, el único efecto que mencionan los informes de ensayos en personas"
+   ]
+  },
+  "unknown": {
+   "en": "It was tested in obesity trials in a few hundred people and did not cause meaningful weight loss, so development stopped. There are no long-term safety data, and it is not an approved medicine.",
+   "pl": "Badano go w badaniach nad otyłością na kilkuset osobach i nie dał istotnej utraty masy ciała, więc prace przerwano. Nie ma danych o bezpieczeństwie długoterminowym i nie jest zatwierdzonym lekiem.",
+   "es": "Se probó en ensayos de obesidad con unos cientos de personas y no logró una pérdida de peso relevante, así que se detuvo su desarrollo. No hay datos de seguridad a largo plazo y no es un medicamento aprobado."
+  }
+ },
+ "HGH Fragment 176–191": {
+  "k": [],
+  "unknown": {
+   "en": "Almost all the evidence is from animals and a few small studies. It is not an approved medicine, so reliable information on side effects in people is missing, and products sold online are not checked by regulators.",
+   "pl": "Prawie wszystkie dowody pochodzą z badań na zwierzętach i kilku małych badań. Nie jest zatwierdzonym lekiem, więc brakuje wiarygodnych informacji o skutkach ubocznych u ludzi, a produkty sprzedawane online nie są kontrolowane przez urzędy.",
+   "es": "Casi todas las pruebas proceden de animales y de unos pocos estudios pequeños. No es un medicamento aprobado, así que faltan datos fiables sobre efectos secundarios en personas, y los productos que se venden en línea no los controlan las autoridades."
+  }
+ },
+ "Adipotide": {
+  "k": [
+   "kidney"
+  ],
+  "common": {
+   "en": [
+    "In monkeys, the main problem was kidney damage and signs of dehydration"
+   ],
+   "pl": [
+    "U małp głównym problemem było uszkodzenie nerek i objawy odwodnienia"
+   ],
+   "es": [
+    "En monos, el principal problema fue el daño renal y signos de deshidratación"
+   ]
+  },
+  "unknown": {
+   "en": "Human safety is not established. The kidney findings in animals were serious enough that this is the main thing to know, and it is not an approved medicine.",
+   "pl": "Bezpieczeństwo u ludzi nie zostało ustalone. Zmiany w nerkach u zwierząt były na tyle poważne, że to najważniejsza informacja, a lek nie jest zatwierdzony.",
+   "es": "No se ha establecido la seguridad en personas. Los hallazgos renales en animales fueron lo bastante graves como para ser lo principal que hay que saber, y no es un medicamento aprobado."
+  }
+ },
+ "MIC i Lipo-C": {
+  "k": [],
+  "unknown": {
+   "en": "No controlled trials show these blends help with weight loss or are safe. What is in the vial varies from seller to seller, and unregulated injectable products can be contaminated, so the real risk depends on what was actually mixed.",
+   "pl": "Żadne kontrolowane badania nie pokazują, że te mieszanki pomagają w odchudzaniu ani że są bezpieczne. Skład fiolki bywa różny u różnych sprzedawców, a nieregulowane produkty do wstrzykiwań mogą być zanieczyszczone, więc realne ryzyko zależy od tego, co faktycznie zmieszano.",
+   "es": "Ningún ensayo controlado demuestra que estas mezclas ayuden a adelgazar ni que sean seguras. Lo que contiene el vial varía según el vendedor, y los productos inyectables sin regulación pueden estar contaminados, así que el riesgo real depende de lo que se haya mezclado."
+  }
+ },
+ "Mieszanki: Reta + Tirzepatyd, Cagri + Sema": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting and diarrhoea, expected because both parts act like GLP-1 medicines"
+   ],
+   "pl": [
+    "Nudności, wymioty i biegunka, których można się spodziewać, bo obie części działają jak leki GLP-1"
+   ],
+   "es": [
+    "Náuseas, vómitos y diarrea, esperables porque ambas partes actúan como medicamentos GLP-1"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Dehydration from vomiting or diarrhoea"
+   ],
+   "pl": [
+    "Odwodnienie po wymiotach lub biegunce"
+   ],
+   "es": [
+    "Deshidratación por vómitos o diarrea"
+   ]
+  },
+  "unknown": {
+   "en": "Nobody has studied these mixes in people. Doubling up on the same receptors can raise side effects without proven benefit, and what is really in the vial is not checked.",
+   "pl": "Nikt nie badał takich mieszanek u ludzi. Podwojenie działania na te same receptory może nasilić skutki uboczne bez udowodnionej korzyści, a to, co naprawdę jest w fiolce, nie jest kontrolowane.",
+   "es": "Nadie ha estudiado estas mezclas en personas. Duplicar la acción sobre los mismos receptores puede aumentar los efectos secundarios sin un beneficio demostrado, y no se controla lo que hay realmente en el vial."
+  }
+ },
+ "5-amino-1MQ": {
+  "k": [],
+  "unknown": {
+   "en": "It has only been tested in cells and mice. There are no human safety data, it is not a medicine, and there is no information on its side effects in people.",
+   "pl": "Badano go tylko na komórkach i myszach. Nie ma danych o bezpieczeństwie u ludzi, nie jest lekiem i nie ma informacji o jego skutkach ubocznych u ludzi.",
+   "es": "Solo se ha probado en células y ratones. No hay datos de seguridad en personas, no es un medicamento y no hay información sobre sus efectos secundarios en personas."
+  }
+ },
+ "AICAR": {
+  "k": [
+   "kidney",
+   "heart"
+  ],
+  "common": {
+   "en": [
+    "In human infusion studies it raised lactate and uric acid in the blood"
+   ],
+   "pl": [
+    "W badaniach z wlewem u ludzi podnosił poziom mleczanów i kwasu moczowego we krwi"
+   ],
+   "es": [
+    "En estudios con infusión en personas aumentó el lactato y el ácido úrico en sangre"
+   ]
+  },
+  "unknown": {
+   "en": "It is on the WADA prohibited list. It was studied as an infusion in hospital settings, not as something to take in sport, and safety outside that is not established.",
+   "pl": "Znajduje się na liście zabronionych WADA. Badano go we wlewach w warunkach szpitalnych, a nie jako środek w sporcie, a bezpieczeństwo poza tym nie jest ustalone.",
+   "es": "Figura en la lista de prohibidas de la AMA. Se estudió en infusión en entornos hospitalarios, no como algo para usar en el deporte, y no se ha establecido su seguridad fuera de ello."
+  }
+ },
+ "SLU-PP-332": {
+  "k": [],
+  "unknown": {
+   "en": "It has only been tested in mice. There are no human safety data, it is not a medicine, and nothing reliable is known about its side effects in people.",
+   "pl": "Badano go tylko na myszach. Nie ma danych o bezpieczeństwie u ludzi, nie jest lekiem i nie wiadomo nic wiarygodnego o jego skutkach ubocznych u ludzi.",
+   "es": "Solo se ha probado en ratones. No hay datos de seguridad en personas, no es un medicamento y no se sabe nada fiable sobre sus efectos secundarios en personas."
+  }
+ },
+ "L-karnityna": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "abdominal"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting, stomach cramps and diarrhoea, more with higher amounts",
+    "A fishy body odour"
+   ],
+   "pl": [
+    "Nudności, wymioty, skurcze żołądka i biegunka, częstsze przy większych ilościach",
+    "Zapach ryb od ciała"
+   ],
+   "es": [
+    "Náuseas, vómitos, calambres de estómago y diarrea, más con cantidades altas",
+    "Olor corporal a pescado"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Seizures in people who already have seizure disorders, reported with carnitine supplements"
+   ],
+   "pl": [
+    "Drgawki u osób, które już mają zaburzenia drgawkowe, opisywane przy suplementach karnityny"
+   ],
+   "es": [
+    "Convulsiones en personas que ya tienen trastornos convulsivos, descritas con suplementos de carnitina"
+   ]
+  },
+  "unknown": {
+   "en": "Higher blood levels of a by-product of carnitine (TMAO) have been linked to heart disease in studies of association, and it is not known whether carnitine supplements cause harm.",
+   "pl": "Wyższy poziom produktu ubocznego karnityny (TMAO) we krwi wiązano z chorobami serca w badaniach obserwacyjnych, a nie wiadomo, czy suplementy karnityny szkodzą.",
+   "es": "Niveles altos en sangre de un subproducto de la carnitina (TMAO) se han vinculado con enfermedad del corazón en estudios de asociación, y no se sabe si los suplementos de carnitina causan daño."
+  }
+ },
+ "Foundayo (orforglipron)": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "constipation",
+   "abdominal",
+   "reflux",
+   "appetite",
+   "pancreas",
+   "gallbladder",
+   "kidney",
+   "thyroid",
+   "lowsugar"
+  ],
+  "common": {
+   "en": [
+    "Nausea, vomiting, diarrhoea and constipation, mostly mild to moderate",
+    "Stomach pain, indigestion and heartburn",
+    "Reduced appetite"
+   ],
+   "pl": [
+    "Nudności, wymioty, biegunka i zaparcia, głównie łagodne lub umiarkowane",
+    "Ból brzucha, niestrawność i zgaga",
+    "Zmniejszony apetyt"
+   ],
+   "es": [
+    "Náuseas, vómitos, diarrea y estreñimiento, sobre todo leves o moderados",
+    "Dolor de estómago, indigestión y acidez",
+    "Menos apetito"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe, lasting stomach pain: possible pancreatitis",
+    "Gallbladder disease",
+    "Dehydration with kidney injury",
+    "Lump in the neck: boxed warning about thyroid tumours as with other GLP-1 drugs",
+    "Low blood sugar with insulin or a sulfonylurea"
+   ],
+   "pl": [
+    "Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki",
+    "Choroba pęcherzyka żółciowego",
+    "Odwodnienie z uszkodzeniem nerek",
+    "Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy, jak przy innych lekach GLP-1",
+    "Niski poziom cukru z insuliną lub pochodną sulfonylomocznika"
+   ],
+   "es": [
+    "Dolor de estómago intenso y persistente: posible pancreatitis",
+    "Enfermedad de la vesícula",
+    "Deshidratación con daño renal",
+    "Bulto en el cuello: advertencia destacada sobre tumores de tiroides, como con otros fármacos GLP-1",
+    "Azúcar bajo con insulina o una sulfonilurea"
+   ]
+  },
+  "unknown": {
+   "en": "Long-term safety over many years is still being collected, and the tablet has strict food and water rules that were part of trials.",
+   "pl": "Bezpieczeństwo przez wiele lat stosowania jest wciąż zbierane, a przy tabletce obowiązują ścisłe zasady dotyczące jedzenia i picia, które były częścią badań.",
+   "es": "La seguridad a lo largo de muchos años aún se está recopilando, y el comprimido tiene normas estrictas sobre comida y agua que formaron parte de los ensayos."
+  }
+ },
+ "Somatropina (HGH)": {
+  "k": [
+   "headache",
+   "injsite",
+   "musclejoint",
+   "swelling",
+   "water",
+   "vision",
+   "bone",
+   "lowsugar",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Headache",
+    "Joint and muscle pain",
+    "Swelling from fluid retention in the hands, feet or face",
+    "Numbness or tingling in the hands",
+    "Reactions where it is injected"
+   ],
+   "pl": [
+    "Ból głowy",
+    "Ból stawów i mięśni",
+    "Obrzęk z zatrzymania płynów w dłoniach, stopach lub twarzy",
+    "Drętwienie lub mrowienie rąk",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Dolor de cabeza",
+    "Dolor de articulaciones y músculos",
+    "Hinchazón por retención de líquidos en manos, pies o cara",
+    "Entumecimiento u hormigueo en las manos",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Very high blood sugar or new diabetes",
+    "Severe headache with vision changes, which can mean raised pressure inside the skull",
+    "Hip or knee pain and limping in children",
+    "Allergic reaction"
+   ],
+   "pl": [
+    "Bardzo wysoki cukier lub nowa cukrzyca",
+    "Silny ból głowy ze zmianami widzenia, co może oznaczać podwyższone ciśnienie wewnątrz czaszki",
+    "Ból biodra lub kolana i utykanie u dzieci",
+    "Reakcja alergiczna"
+   ],
+   "es": [
+    "Azúcar muy alto en sangre o diabetes nueva",
+    "Dolor de cabeza intenso con cambios de visión, que puede indicar presión elevada dentro del cráneo",
+    "Dolor de cadera o rodilla y cojera en niños",
+    "Reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "Too much growth hormone over time causes a condition called acromegaly. Whether healthy adults using it for muscle or ageing reasons are harmed is not well studied.",
+   "pl": "Zbyt dużo hormonu wzrostu przez długi czas powoduje chorobę zwaną akromegalią. Nie ma dobrych badań, czy szkodzi zdrowym dorosłym stosującym go dla mięśni lub opóźnienia starzenia.",
+   "es": "Demasiada hormona del crecimiento durante mucho tiempo causa una enfermedad llamada acromegalia. No está bien estudiado si perjudica a adultos sanos que la usan por músculo o por envejecimiento."
+  }
+ },
+ "Tesamorelina": {
+  "k": [
+   "injsite",
+   "musclejoint",
+   "swelling",
+   "water",
+   "lowsugar",
+   "allergy",
+   "cancer"
+  ],
+  "common": {
+   "en": [
+    "Reactions where it is injected: redness, itching, pain",
+    "Joint pain and pain in the arms or legs",
+    "Swelling of the legs or ankles",
+    "Muscle pain"
+   ],
+   "pl": [
+    "Odczyny w miejscu wstrzyknięcia: zaczerwienienie, swędzenie, ból",
+    "Ból stawów oraz ból rąk lub nóg",
+    "Obrzęk nóg lub kostek",
+    "Ból mięśni"
+   ],
+   "es": [
+    "Reacciones en el lugar de la inyección: enrojecimiento, picor, dolor",
+    "Dolor de articulaciones y dolor en brazos o piernas",
+    "Hinchazón de piernas o tobillos",
+    "Dolor muscular"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Higher blood sugar or new diabetes",
+    "Allergic reactions, including rash and swelling of the face",
+    "Growth of an existing tumour, because growth hormone effects raise IGF-1"
+   ],
+   "pl": [
+    "Wyższy cukier lub nowa cukrzyca",
+    "Reakcje alergiczne, także wysypka i obrzęk twarzy",
+    "Wzrost istniejącego nowotworu, bo działanie hormonu wzrostu podnosi IGF-1"
+   ],
+   "es": [
+    "Azúcar más alto o diabetes nueva",
+    "Reacciones alérgicas, con sarpullido e hinchazón de la cara",
+    "Crecimiento de un tumor existente, porque los efectos de la hormona del crecimiento elevan el IGF-1"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved only for fat around the organs in adults with HIV, and its safety in healthy people for other purposes is not established.",
+   "pl": "Lek jest zatwierdzony tylko przy tłuszczu wokół narządów u dorosłych z HIV, a bezpieczeństwo u zdrowych osób w innych celach nie jest ustalone.",
+   "es": "Solo está aprobado para la grasa alrededor de los órganos en adultos con VIH, y no se ha establecido su seguridad en personas sanas para otros fines."
+  }
+ },
+ "Sermorelina": {
+  "k": [
+   "injsite",
+   "flushing",
+   "headache",
+   "dizziness"
+  ],
+  "common": {
+   "en": [
+    "Pain, redness or swelling where it is injected",
+    "Flushing of the face",
+    "Headache and dizziness"
+   ],
+   "pl": [
+    "Ból, zaczerwienienie lub obrzęk w miejscu wstrzyknięcia",
+    "Nagłe zaczerwienienie twarzy",
+    "Ból głowy i zawroty głowy"
+   ],
+   "es": [
+    "Dolor, enrojecimiento o hinchazón en el lugar de la inyección",
+    "Rubor en la cara",
+    "Dolor de cabeza y mareo"
+   ]
+  },
+  "unknown": {
+   "en": "The brand medicine was withdrawn from sale by its maker for commercial reasons, not safety reasons, so current products come from compounding or unregulated sellers. Long-term effects are not well studied.",
+   "pl": "Lek markowy został wycofany ze sprzedaży przez producenta z powodów handlowych, a nie bezpieczeństwa, więc obecne produkty pochodzą z aptek recepturowych lub nieregulowanych sprzedawców. Skutki długoterminowe nie są dobrze zbadane.",
+   "es": "El medicamento de marca fue retirado de la venta por su fabricante por razones comerciales, no de seguridad, así que los productos actuales proceden de formulación magistral o de vendedores sin regulación. Los efectos a largo plazo no están bien estudiados."
+  }
+ },
+ "CJC-1295": {
+  "k": [
+   "injsite",
+   "flushing",
+   "headache"
+  ],
+  "common": {
+   "en": [
+    "Reactions where it is injected",
+    "Flushing and warmth of the skin",
+    "Headache"
+   ],
+   "pl": [
+    "Odczyny w miejscu wstrzyknięcia",
+    "Zaczerwienienie i uczucie ciepła skóry",
+    "Ból głowy"
+   ],
+   "es": [
+    "Reacciones en el lugar de la inyección",
+    "Rubor y calor en la piel",
+    "Dolor de cabeza"
+   ]
+  },
+  "unknown": {
+   "en": "It was studied only in small, short trials, and development stopped. It is not an approved medicine, there are no long-term safety data, and products sold online are not checked by regulators.",
+   "pl": "Badano go tylko w małych, krótkich badaniach i prace przerwano. Nie jest zatwierdzonym lekiem, nie ma danych o bezpieczeństwie długoterminowym, a produkty sprzedawane online nie są kontrolowane przez urzędy.",
+   "es": "Solo se estudió en ensayos pequeños y breves, y se detuvo su desarrollo. No es un medicamento aprobado, no hay datos de seguridad a largo plazo y los productos que se venden en línea no los controlan las autoridades."
+  }
+ },
+ "Ipamorelina": {
+  "k": [],
+  "unknown": {
+   "en": "In a small trial for bowel recovery after surgery it was generally well tolerated but did not work well enough to continue. It is not an approved medicine, and there are no long-term safety data in healthy people.",
+   "pl": "W małym badaniu nad powrotem pracy jelit po operacji był ogólnie dobrze tolerowany, ale nie działał dość dobrze, by kontynuować. Nie jest zatwierdzonym lekiem i nie ma danych o bezpieczeństwie długoterminowym u zdrowych osób.",
+   "es": "En un ensayo pequeño sobre la recuperación del intestino tras una cirugía se toleró bien en general, pero no funcionó lo bastante como para continuar. No es un medicamento aprobado y no hay datos de seguridad a largo plazo en personas sanas."
+  }
+ },
+ "GHRP-2": {
+  "k": [
+   "appetite",
+   "flushing",
+   "water",
+   "fatigue"
+  ],
+  "common": {
+   "en": [
+    "Strong hunger",
+    "Flushing and warmth",
+    "Water retention",
+    "Drowsiness"
+   ],
+   "pl": [
+    "Silny głód",
+    "Zaczerwienienie i uczucie ciepła",
+    "Zatrzymanie wody",
+    "Senność"
+   ],
+   "es": [
+    "Hambre intenso",
+    "Rubor y sensación de calor",
+    "Retención de agua",
+    "Somnolencia"
+   ]
+  },
+  "unknown": {
+   "en": "It raises the stress hormone cortisol and the hormone prolactin. It is not an approved medicine in most countries, and long-term safety is not established.",
+   "pl": "Podnosi hormon stresu kortyzol i hormon prolaktynę. W większości krajów nie jest zatwierdzonym lekiem, a bezpieczeństwo długoterminowe nie jest ustalone.",
+   "es": "Eleva la hormona del estrés (cortisol) y la prolactina. En la mayoría de los países no es un medicamento aprobado, y su seguridad a largo plazo no está establecida."
+  }
+ },
+ "GHRP-6": {
+  "k": [
+   "appetite",
+   "flushing",
+   "water",
+   "fatigue"
+  ],
+  "common": {
+   "en": [
+    "Strong hunger within minutes of use",
+    "Flushing and warmth",
+    "Water retention",
+    "Drowsiness"
+   ],
+   "pl": [
+    "Silny głód w ciągu kilku minut po zastosowaniu",
+    "Zaczerwienienie i uczucie ciepła",
+    "Zatrzymanie wody",
+    "Senność"
+   ],
+   "es": [
+    "Hambre intenso a los pocos minutos de usarlo",
+    "Rubor y sensación de calor",
+    "Retención de agua",
+    "Somnolencia"
+   ]
+  },
+  "unknown": {
+   "en": "It raises the stress hormone cortisol and the hormone prolactin. It is not an approved medicine, and there are no long-term safety data.",
+   "pl": "Podnosi hormon stresu kortyzol i hormon prolaktynę. Nie jest zatwierdzonym lekiem i nie ma danych o bezpieczeństwie długoterminowym.",
+   "es": "Eleva la hormona del estrés (cortisol) y la prolactina. No es un medicamento aprobado y no hay datos de seguridad a largo plazo."
+  }
+ },
+ "Heksarelina": {
+  "k": [
+   "flushing"
+  ],
+  "common": {
+   "en": [
+    "Flushing and warmth"
+   ],
+   "pl": [
+    "Zaczerwienienie i uczucie ciepła"
+   ],
+   "es": [
+    "Rubor y sensación de calor"
+   ]
+  },
+  "unknown": {
+   "en": "It raises the stress hormone cortisol and the hormone prolactin, and its effect fades with repeated use. It was studied for the heart but never approved, and long-term safety is not established.",
+   "pl": "Podnosi hormon stresu kortyzol i hormon prolaktynę, a jego działanie słabnie przy powtarzanym stosowaniu. Badano go pod kątem serca, ale nigdy go nie zatwierdzono, a bezpieczeństwo długoterminowe nie jest ustalone.",
+   "es": "Eleva la hormona del estrés (cortisol) y la prolactina, y su efecto disminuye con el uso repetido. Se estudió para el corazón pero nunca se aprobó, y su seguridad a largo plazo no está establecida."
+  }
+ },
+ "IGF-1 LR3": {
+  "k": [
+   "lowsugar",
+   "dizziness",
+   "sweating",
+   "tremor",
+   "appetite"
+  ],
+  "common": {
+   "en": [
+    "Low blood sugar: shakiness, sweating, hunger, dizziness, based on what is known about natural IGF-1 medicines"
+   ],
+   "pl": [
+    "Niski cukier: drżenie, pocenie się, głód, zawroty głowy, na podstawie tego, co wiadomo o lekach z naturalnym IGF-1"
+   ],
+   "es": [
+    "Azúcar bajo: temblor, sudoración, hambre, mareo, según lo que se sabe de los medicamentos con IGF-1 natural"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe low blood sugar with confusion, seizures or fainting"
+   ],
+   "pl": [
+    "Ciężka hipoglikemia ze splątaniem, drgawkami lub omdleniem"
+   ],
+   "es": [
+    "Hipoglucemia grave con confusión, convulsiones o desmayo"
+   ]
+  },
+  "unknown": {
+   "en": "This exact form has not been tested in people as a medicine. Growth factors can also feed existing tumours, and human safety is not established.",
+   "pl": "Ta dokładna forma nie była badana u ludzi jako lek. Czynniki wzrostu mogą też podtrzymywać istniejące nowotwory, a bezpieczeństwo u ludzi nie zostało ustalone.",
+   "es": "Esta forma exacta no se ha probado en personas como medicamento. Los factores de crecimiento también pueden alimentar tumores existentes, y no se ha establecido su seguridad en personas."
+  }
+ },
+ "MGF i PEG-MGF": {
+  "k": [],
+  "unknown": {
+   "en": "There are no proper human trials of these substances. Almost all knowledge comes from cells and animals, so nothing reliable is known about side effects in people.",
+   "pl": "Nie ma porządnych badań tych substancji u ludzi. Prawie cała wiedza pochodzi z komórek i zwierząt, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.",
+   "es": "No hay ensayos adecuados de estas sustancias en personas. Casi todo el conocimiento procede de células y animales, así que no se sabe nada fiable sobre efectos secundarios en personas."
+  }
+ },
+ "Follistatyna i FST-344": {
+  "k": [
+   "bleeding"
+  ],
+  "unknown": {
+   "en": "Follistatin has only been tried as gene therapy in a few patients with a muscle disease. It is not a medicine you can inject safely, and its safety as a product is unknown. It may affect hormones that control fertility.",
+   "pl": "Folistatynę próbowano tylko w terapii genowej u kilku pacjentów z chorobą mięśni. Nie jest lekiem, który można bezpiecznie wstrzykiwać, a jej bezpieczeństwo jako produktu jest nieznane. Może wpływać na hormony regulujące płodność.",
+   "es": "La folistatina solo se ha probado como terapia génica en unos pocos pacientes con una enfermedad muscular. No es un medicamento que se pueda inyectar con seguridad, y su seguridad como producto se desconoce. Puede afectar a las hormonas que controlan la fertilidad."
+  }
+ },
+ "GDF-8 (miostatyna)": {
+  "k": [],
+  "unknown": {
+   "en": "Myostatin limits muscle growth, so raising it works against muscle. There is no use in people and no human safety data, and nothing reliable is known about side effects.",
+   "pl": "Miostatyna ogranicza wzrost mięśni, więc podnoszenie jej poziomu działa przeciwko mięśniom. Nie ma zastosowania u ludzi ani danych o bezpieczeństwie, a o skutkach ubocznych nie wiadomo nic wiarygodnego.",
+   "es": "La miostatina limita el crecimiento muscular, así que aumentarla va en contra del músculo. No tiene uso en personas ni datos de seguridad en humanos, y no se sabe nada fiable sobre efectos secundarios."
+  }
+ },
+ "ACE-031": {
+  "k": [
+   "bleeding",
+   "rash",
+   "injsite"
+  ],
+  "common": {
+   "en": [
+    "Nosebleeds and bleeding gums in the trial",
+    "Small dilated blood vessels on the skin",
+    "Reactions where it was injected"
+   ],
+   "pl": [
+    "Krwawienia z nosa i z dziąseł w badaniu",
+    "Małe rozszerzone naczynia krwionośne na skórze",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Hemorragias nasales y sangrado de encías en el ensayo",
+    "Pequeños vasos sanguíneos dilatados en la piel",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Bleeding from small blood vessels, which led to the trial in boys with a muscle disease being stopped"
+   ],
+   "pl": [
+    "Krwawienia z drobnych naczyń, przez które zatrzymano badanie u chłopców z chorobą mięśni"
+   ],
+   "es": [
+    "Sangrado de vasos sanguíneos pequeños, que llevó a detener el ensayo en niños con una enfermedad muscular"
+   ]
+  },
+  "unknown": {
+   "en": "It is not approved, and the trial in children was halted over safety. Human safety is not established.",
+   "pl": "Nie jest zatwierdzony, a badanie u dzieci wstrzymano z powodu bezpieczeństwa. Bezpieczeństwo u ludzi nie zostało ustalone.",
+   "es": "No está aprobado, y el ensayo en niños se detuvo por seguridad. No se ha establecido su seguridad en personas."
+  }
+ },
+ "BPC-157": {
+  "k": [
+   "cancer"
+  ],
+  "unknown": {
+   "en": "There are no proper controlled trials of safety in people. Almost all evidence comes from rats, and because it promotes the growth of blood vessels, researchers worry in theory about tumours, which has not been tested.",
+   "pl": "Nie ma porządnych kontrolowanych badań bezpieczeństwa u ludzi. Prawie wszystkie dowody pochodzą ze szczurów, a ponieważ sprzyja tworzeniu naczyń krwionośnych, badacze teoretycznie obawiają się nowotworów, czego nie sprawdzono.",
+   "es": "No hay ensayos controlados adecuados de seguridad en personas. Casi todas las pruebas proceden de ratas, y como favorece el crecimiento de vasos sanguíneos, los investigadores se preocupan en teoría por los tumores, algo que no se ha comprobado."
+  }
+ },
+ "TB-500": {
+  "k": [
+   "cancer"
+  ],
+  "unknown": {
+   "en": "There are no proper trials of this product in people. The natural protein it is based on has been studied in the lab, and safety of the injected version is unknown, including a theoretical concern about helping tumours spread.",
+   "pl": "Nie ma porządnych badań tego produktu u ludzi. Naturalne białko, na którym jest oparty, badano w laboratorium, a bezpieczeństwo wstrzykiwanej wersji jest nieznane, w tym teoretyczna obawa o sprzyjanie rozsiewaniu nowotworów.",
+   "es": "No hay ensayos adecuados de este producto en personas. La proteína natural en la que se basa se ha estudiado en laboratorio, y la seguridad de la versión inyectada se desconoce, incluida una preocupación teórica de que ayude a la propagación de tumores."
+  }
+ },
+ "BPC-157 + TB-500": {
+  "k": [
+   "cancer"
+  ],
+  "unknown": {
+   "en": "Neither ingredient has proper human safety data and nobody has tested them together, so side effects are not known.",
+   "pl": "Żaden ze składników nie ma porządnych danych o bezpieczeństwie u ludzi i nikt nie badał ich razem, więc skutki uboczne nie są znane.",
+   "es": "Ninguno de los ingredientes tiene datos de seguridad en personas adecuados y nadie los ha probado juntos, así que se desconocen los efectos secundarios."
+  }
+ },
+ "KPV": {
+  "k": [],
+  "unknown": {
+   "en": "It has been studied in cells and animals for gut and skin inflammation. No proper human trials exist, so side effects in people are unknown.",
+   "pl": "Badano go na komórkach i zwierzętach pod kątem stanów zapalnych jelit i skóry. Nie ma porządnych badań na ludziach, więc skutki uboczne u ludzi są nieznane.",
+   "es": "Se ha estudiado en células y animales para la inflamación del intestino y la piel. No existen ensayos adecuados en personas, así que se desconocen los efectos secundarios en personas."
+  }
+ },
+ "LL-37": {
+  "k": [
+   "injsite",
+   "allergy"
+  ],
+  "unknown": {
+   "en": "It is part of the body's own defences, and in small trials applied to leg ulcers it was tolerated. Injected products have no proper human safety data, and in theory it could drive inflammation.",
+   "pl": "To część naturalnej obrony organizmu, a w małych badaniach, gdy stosowano go na owrzodzenia nóg, był tolerowany. Produkty do wstrzykiwań nie mają porządnych danych o bezpieczeństwie u ludzi, a teoretycznie może nasilać stan zapalny.",
+   "es": "Forma parte de las defensas del propio cuerpo, y en ensayos pequeños aplicado en úlceras de la pierna se toleró. Los productos inyectables no tienen datos de seguridad en personas adecuados, y en teoría podría favorecer la inflamación."
+  }
+ },
+ "Tymozyna alfa-1": {
+  "k": [
+   "injsite"
+  ],
+  "common": {
+   "en": [
+    "Redness, pain or itching where it is injected"
+   ],
+   "pl": [
+    "Zaczerwienienie, ból lub swędzenie w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Enrojecimiento, dolor o picor en el lugar de la inyección"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved only in some Asian countries and was generally well tolerated in trials, which were mostly small. It is not approved in the US or the EU, and long-term data in healthy people are missing.",
+   "pl": "Jest zatwierdzona tylko w niektórych krajach azjatyckich i w badaniach, głównie małych, była na ogół dobrze tolerowana. Nie jest zatwierdzona w USA ani UE, a brakuje danych długoterminowych u zdrowych osób.",
+   "es": "Solo está aprobada en algunos países asiáticos y en los ensayos, mayormente pequeños, se toleró bien en general. No está aprobada en EE. UU. ni en la UE, y faltan datos a largo plazo en personas sanas."
+  }
+ },
+ "Tymalina i tymulina": {
+  "k": [],
+  "unknown": {
+   "en": "These are Russian-made and other thymus preparations with little independent evidence. They are not approved in the US or the EU, and reliable information on side effects is missing.",
+   "pl": "To preparaty z grasicy, produkowane głównie w Rosji, z małą liczbą niezależnych dowodów. Nie są zatwierdzone w USA ani UE, a wiarygodnych informacji o skutkach ubocznych brakuje.",
+   "es": "Son preparados de timo, fabricados sobre todo en Rusia, con pocas pruebas independientes. No están aprobados en EE. UU. ni en la UE, y faltan datos fiables sobre efectos secundarios."
+  }
+ },
+ "VIP": {
+  "k": [
+   "flushing",
+   "diarrhoea",
+   "bp",
+   "heart",
+   "headache"
+  ],
+  "common": {
+   "en": [
+    "Flushing",
+    "Watery diarrhoea",
+    "Low blood pressure and a faster heartbeat",
+    "Headache"
+   ],
+   "pl": [
+    "Nagłe zaczerwienienie",
+    "Wodnista biegunka",
+    "Niskie ciśnienie krwi i szybsze bicie serca",
+    "Ból głowy"
+   ],
+   "es": [
+    "Rubor",
+    "Diarrea acuosa",
+    "Presión arterial baja y latido más rápido",
+    "Dolor de cabeza"
+   ]
+  },
+  "unknown": {
+   "en": "It is a natural gut and lung hormone that is not approved as a medicine in most countries. Doses and long-term effects in people are poorly studied.",
+   "pl": "To naturalny hormon jelit i płuc, niezatwierdzony jako lek w większości krajów. Dawki i skutki długoterminowe u ludzi są słabo zbadane.",
+   "es": "Es una hormona natural del intestino y los pulmones que no está aprobada como medicamento en la mayoría de los países. Las dosis y los efectos a largo plazo en personas están poco estudiados."
+  }
+ },
+ "Humanina": {
+  "k": [],
+  "unknown": {
+   "en": "It has been studied only in cells, animals and a few small tests in the lab. There are no human safety data, and it is not an approved medicine.",
+   "pl": "Badano ją tylko na komórkach, zwierzętach i w kilku małych testach laboratoryjnych. Nie ma danych o bezpieczeństwie u ludzi i nie jest zatwierdzonym lekiem.",
+   "es": "Solo se ha estudiado en células, animales y algunas pruebas pequeñas de laboratorio. No hay datos de seguridad en personas y no es un medicamento aprobado."
+  }
+ },
+ "MOTS-c": {
+  "k": [],
+  "unknown": {
+   "en": "Evidence is almost entirely from cells and animals. A related drug candidate has had only early human trials, so side effects in people are not known.",
+   "pl": "Dowody pochodzą niemal wyłącznie z komórek i zwierząt. Pokrewny kandydat na lek miał tylko wczesne badania na ludziach, więc skutki uboczne u ludzi nie są znane.",
+   "es": "Las pruebas proceden casi por completo de células y animales. Un candidato a fármaco relacionado solo ha tenido ensayos tempranos en personas, así que se desconocen los efectos secundarios en personas."
+  }
+ },
+ "SS-31": {
+  "k": [
+   "injsite"
+  ],
+  "common": {
+   "en": [
+    "Reactions where it is injected, the most common effect in trials"
+   ],
+   "pl": [
+    "Odczyny w miejscu wstrzyknięcia, najczęstszy skutek w badaniach"
+   ],
+   "es": [
+    "Reacciones en el lugar de la inyección, el efecto más frecuente en los ensayos"
+   ]
+  },
+  "unknown": {
+   "en": "It was approved by the FDA only for a rare inherited disease called Barth syndrome, and safety in other conditions or in healthy people is not established.",
+   "pl": "Został zatwierdzony przez FDA tylko w rzadkiej chorobie dziedzicznej, zespole Bartha, a bezpieczeństwo w innych chorobach i u zdrowych osób nie jest ustalone.",
+   "es": "La FDA solo lo aprobó para una enfermedad hereditaria rara, el síndrome de Barth, y no se ha establecido su seguridad en otras enfermedades ni en personas sanas."
+  }
+ },
+ "Epitalon": {
+  "k": [],
+  "unknown": {
+   "en": "Most studies are small and come from one research group, and there are no large independent trials. It is not approved, so reliable data on side effects are missing.",
+   "pl": "Większość badań jest mała i pochodzi z jednego zespołu badawczego, a dużych niezależnych prób nie ma. Nie jest zatwierdzony, więc brakuje wiarygodnych danych o skutkach ubocznych.",
+   "es": "La mayoría de los estudios son pequeños y proceden de un único grupo de investigación, y no hay ensayos grandes e independientes. No está aprobado, así que faltan datos fiables sobre efectos secundarios."
+  }
+ },
+ "Peptydy bioregulatory": {
+  "k": [],
+  "unknown": {
+   "en": "These short peptides are sold in some countries as supplements, with evidence mostly from one group of researchers. They are not approved as medicines in the US or the EU, and side effects are not well documented.",
+   "pl": "Te krótkie peptydy sprzedaje się w niektórych krajach jako suplementy, a dowody pochodzą głównie z jednego zespołu badaczy. Nie są zatwierdzone jako leki w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.",
+   "es": "Estos péptidos cortos se venden en algunos países como suplementos, con pruebas que proceden sobre todo de un único grupo de investigadores. No están aprobados como medicamentos en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados."
+  }
+ },
+ "FOXO4-DRI": {
+  "k": [],
+  "unknown": {
+   "en": "It has been tested in mice and cells only. There are no human trials, so nothing reliable is known about side effects in people.",
+   "pl": "Badano go tylko na myszach i komórkach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.",
+   "es": "Solo se ha probado en ratones y células. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas."
+  }
+ },
+ "PNC-27": {
+  "k": [],
+  "unknown": {
+   "en": "It has been tested in cells and animals as an experiment for cancer. There are no proper human trials, so side effects in people are unknown.",
+   "pl": "Badano go na komórkach i zwierzętach jako eksperymentalny środek w raku. Nie ma porządnych badań na ludziach, więc skutki uboczne u ludzi są nieznane.",
+   "es": "Se ha probado en células y animales como experimento contra el cáncer. No hay ensayos adecuados en personas, así que se desconocen los efectos secundarios en personas."
+  }
+ },
+ "ARA290": {
+  "k": [
+   "injsite"
+  ],
+  "common": {
+   "en": [
+    "Mild reactions where it was injected in small trials"
+   ],
+   "pl": [
+    "Łagodne odczyny w miejscu wstrzyknięcia w małych badaniach"
+   ],
+   "es": [
+    "Reacciones leves en el lugar de la inyección en ensayos pequeños"
+   ]
+  },
+  "unknown": {
+   "en": "It has only been tested in small trials of nerve pain and sarcoidosis, with daily injections for weeks. It is not approved, and long-term safety is not established.",
+   "pl": "Badano go tylko w małych próbach przy bólu neuropatycznym i sarkoidozie, w codziennych zastrzykach przez kilka tygodni. Nie jest zatwierdzony, a bezpieczeństwo długoterminowe nie jest ustalone.",
+   "es": "Solo se ha probado en ensayos pequeños de dolor neuropático y sarcoidosis, con inyecciones diarias durante semanas. No está aprobado y no se ha establecido su seguridad a largo plazo."
+  }
+ },
+ "B7-33": {
+  "k": [],
+  "unknown": {
+   "en": "It is a laboratory-stage molecule tested in animals. There are no human data, so nothing is known about side effects in people.",
+   "pl": "To cząsteczka na etapie laboratoryjnym, badana na zwierzętach. Nie ma danych u ludzi, więc nic nie wiadomo o skutkach ubocznych u ludzi.",
+   "es": "Es una molécula en fase de laboratorio probada en animales. No hay datos en personas, así que no se sabe nada sobre efectos secundarios en personas."
+  }
+ },
+ "DSIP": {
+  "k": [],
+  "unknown": {
+   "en": "It was studied for sleep in small trials in the 1980s with mixed results. It is not approved, and its safety in people is poorly documented.",
+   "pl": "Badano go pod kątem snu w małych próbach w latach 80. z niejednoznacznymi wynikami. Nie jest zatwierdzony, a jego bezpieczeństwo u ludzi jest słabo udokumentowane.",
+   "es": "Se estudió para el sueño en ensayos pequeños en los años 80 con resultados mixtos. No está aprobado y su seguridad en personas está poco documentada."
+  }
+ },
+ "Semax": {
+  "k": [],
+  "unknown": {
+   "en": "It is registered as a medicine in Russia, but most evidence comes from Russian studies that were not independently repeated elsewhere. It is not approved in the US or the EU, and side effects are not well documented.",
+   "pl": "Jest zarejestrowany jako lek w Rosji, ale większość dowodów pochodzi z rosyjskich badań, których nie powtórzono niezależnie gdzie indziej. Nie jest zatwierdzony w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.",
+   "es": "Está registrado como medicamento en Rusia, pero la mayoría de las pruebas proceden de estudios rusos que no se han repetido de forma independiente en otros lugares. No está aprobado en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados."
+  }
+ },
+ "Dihexa": {
+  "k": [
+   "cancer"
+  ],
+  "unknown": {
+   "en": "It has only been tested in animals. It acts on a growth pathway linked to tumours, so researchers worry about cancer risk in theory, and there are no human safety data.",
+   "pl": "Badano go tylko na zwierzętach. Działa na szlak wzrostu powiązany z nowotworami, więc badacze teoretycznie obawiają się ryzyka raka, a danych o bezpieczeństwie u ludzi nie ma.",
+   "es": "Solo se ha probado en animales. Actúa sobre una vía de crecimiento relacionada con los tumores, así que los investigadores se preocupan en teoría por el riesgo de cáncer, y no hay datos de seguridad en personas."
+  }
+ },
+ "Adamax": {
+  "k": [],
+  "unknown": {
+   "en": "It is a modified version of another unapproved peptide with almost no published data. Nothing reliable is known about its safety in people.",
+   "pl": "To zmodyfikowana wersja innego niezatwierdzonego peptydu z prawie żadnymi opublikowanymi danymi. Nie wiadomo nic wiarygodnego o jego bezpieczeństwie u ludzi.",
+   "es": "Es una versión modificada de otro péptido no aprobado con casi ningún dato publicado. No se sabe nada fiable sobre su seguridad en personas."
+  }
+ },
+ "Selank": {
+  "k": [],
+  "unknown": {
+   "en": "It is registered as a medicine in Russia, but its evidence is limited and mostly from Russian studies. It is not approved in the US or the EU, and side effects are not well documented.",
+   "pl": "Jest zarejestrowany jako lek w Rosji, ale dowody są ograniczone i pochodzą głównie z badań rosyjskich. Nie jest zatwierdzony w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.",
+   "es": "Está registrado como medicamento en Rusia, pero las pruebas son limitadas y proceden sobre todo de estudios rusos. No está aprobado en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados."
+  }
+ },
+ "P21": {
+  "k": [],
+  "unknown": {
+   "en": "It has been tested in animals only. There are no human trials, so nothing reliable is known about side effects in people.",
+   "pl": "Badano go tylko na zwierzętach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.",
+   "es": "Solo se ha probado en animales. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas."
+  }
+ },
+ "PE-22-28": {
+  "k": [],
+  "unknown": {
+   "en": "It has been tested in animals only. There are no human trials, so nothing reliable is known about side effects in people.",
+   "pl": "Badano go tylko na zwierzętach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.",
+   "es": "Solo se ha probado en animales. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas."
+  }
+ },
+ "Oreksyna A i B": {
+  "k": [],
+  "unknown": {
+   "en": "Orexins are natural brain chemicals, not medicines. Drugs that block them are used for insomnia, but giving orexin itself has not been established as safe or useful in people.",
+   "pl": "Oreksyny to naturalne substancje w mózgu, a nie leki. Leki, które je blokują, stosuje się w bezsenności, ale podawanie samej oreksyny nie zostało uznane za bezpieczne ani przydatne u ludzi.",
+   "es": "Las orexinas son sustancias naturales del cerebro, no medicamentos. Los fármacos que las bloquean se usan para el insomnio, pero no se ha establecido que administrar orexina sea seguro o útil en personas."
+  }
+ },
+ "Cerebrolizyna": {
+  "k": [
+   "dizziness",
+   "headache",
+   "nausea",
+   "sweating",
+   "injsite",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Dizziness and headache",
+    "Nausea",
+    "Sweating and a feeling of heat if injected too quickly",
+    "Pain where it is injected"
+   ],
+   "pl": [
+    "Zawroty i ból głowy",
+    "Nudności",
+    "Pocenie się i uczucie gorąca przy zbyt szybkim wstrzyknięciu",
+    "Ból w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Mareo y dolor de cabeza",
+    "Náuseas",
+    "Sudoración y sensación de calor si se inyecta demasiado rápido",
+    "Dolor en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Allergic reaction, because it is made from pig brain protein",
+    "Seizures in people with epilepsy, for whom it should not be used"
+   ],
+   "pl": [
+    "Reakcja alergiczna, bo lek powstaje z białek mózgu świni",
+    "Napady drgawkowe u osób z padaczką, u których nie należy go stosować"
+   ],
+   "es": [
+    "Reacción alérgica, porque se fabrica a partir de proteínas de cerebro de cerdo",
+    "Convulsiones en personas con epilepsia, en quienes no debe usarse"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved in some countries only, and large trials of its benefit are mixed. It is not approved in the US.",
+   "pl": "Jest zatwierdzony tylko w niektórych krajach, a duże badania jego skuteczności dają mieszane wyniki. Nie jest zatwierdzony w USA.",
+   "es": "Solo está aprobado en algunos países, y los ensayos grandes sobre su beneficio dan resultados mixtos. No está aprobado en EE. UU."
+  }
+ },
+ "Zikonotyd": {
+  "k": [
+   "dizziness",
+   "nausea",
+   "vomiting",
+   "headache",
+   "fatigue",
+   "mood",
+   "anxiety"
+  ],
+  "common": {
+   "en": [
+    "Dizziness and unsteadiness",
+    "Nausea and vomiting",
+    "Confusion and memory problems",
+    "Sleepiness",
+    "Headache"
+   ],
+   "pl": [
+    "Zawroty głowy i niepewność chodu",
+    "Nudności i wymioty",
+    "Splątanie i problemy z pamięcią",
+    "Senność",
+    "Ból głowy"
+   ],
+   "es": [
+    "Mareo e inestabilidad al andar",
+    "Náuseas y vómitos",
+    "Confusión y problemas de memoria",
+    "Somnolencia",
+    "Dolor de cabeza"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Serious mood and thinking changes: depression, hallucinations, thoughts of suicide, in a boxed warning",
+    "Meningitis from the pump or catheter",
+    "Reduced consciousness"
+   ],
+   "pl": [
+    "Poważne zmiany nastroju i myślenia: depresja, omamy, myśli samobójcze, w ramce ostrzegawczej",
+    "Zapalenie opon mózgowych związane z pompą lub cewnikiem",
+    "Zaburzenia świadomości"
+   ],
+   "es": [
+    "Cambios graves del ánimo y del pensamiento: depresión, alucinaciones, ideas de suicidio, en una advertencia destacada",
+    "Meningitis por la bomba o el catéter",
+    "Disminución del nivel de conciencia"
+   ]
+  },
+  "unknown": {
+   "en": "It is given only into the spinal fluid by a pump in hospital for severe long-lasting pain. It is not something to use outside a specialist's care.",
+   "pl": "Podaje się go wyłącznie do płynu rdzeniowego za pomocą pompy w szpitalu przy ciężkim, długotrwałym bólu. Nie nadaje się do stosowania poza opieką specjalisty.",
+   "es": "Solo se administra en el líquido espinal con una bomba en el hospital para dolor intenso y duradero. No es algo para usar fuera de la atención de un especialista."
+  }
+ },
+ "Trofinetyd": {
+  "k": [
+   "diarrhoea",
+   "vomiting",
+   "abdominal",
+   "fever"
+  ],
+  "common": {
+   "en": [
+    "Diarrhoea, in most people who took it",
+    "Vomiting",
+    "Fever",
+    "Stomach pain"
+   ],
+   "pl": [
+    "Biegunka, u większości osób przyjmujących lek",
+    "Wymioty",
+    "Gorączka",
+    "Ból brzucha"
+   ],
+   "es": [
+    "Diarrea, en la mayoría de las personas que lo tomaron",
+    "Vómitos",
+    "Fiebre",
+    "Dolor de estómago"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Dehydration and weight loss from severe diarrhoea"
+   ],
+   "pl": [
+    "Odwodnienie i utrata masy ciała przy ciężkiej biegunce"
+   ],
+   "es": [
+    "Deshidratación y pérdida de peso por diarrea intensa"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved only for Rett syndrome, and trial participants were children and adults with that condition.",
+   "pl": "Jest zatwierdzony tylko w zespole Retta, a uczestnikami badań były dzieci i dorośli z tą chorobą.",
+   "es": "Solo está aprobado para el síndrome de Rett, y los participantes de los ensayos fueron niños y adultos con esa enfermedad."
+  }
+ },
+ "Difelikefalina": {
+  "k": [
+   "dizziness",
+   "fatigue",
+   "nausea",
+   "headache",
+   "diarrhoea",
+   "vomiting",
+   "itching"
+  ],
+  "common": {
+   "en": [
+    "Dizziness and sleepiness",
+    "Nausea, vomiting and diarrhoea",
+    "Headache",
+    "Confusion in some people"
+   ],
+   "pl": [
+    "Zawroty głowy i senność",
+    "Nudności, wymioty i biegunka",
+    "Ból głowy",
+    "Splątanie u części osób"
+   ],
+   "es": [
+    "Mareo y somnolencia",
+    "Náuseas, vómitos y diarrea",
+    "Dolor de cabeza",
+    "Confusión en algunas personas"
+   ]
+  },
+  "unknown": {
+   "en": "It is given into a vein after dialysis for itching in kidney disease, and it is not for use outside that care.",
+   "pl": "Podaje się go dożylnie po dializie przy świądzie w chorobie nerek i nie jest przeznaczony do stosowania poza taką opieką.",
+   "es": "Se administra en una vena después de la diálisis para el picor en la enfermedad renal y no es para usar fuera de esa atención."
+  }
+ },
+ "Gonadorelina": {
+  "k": [
+   "headache",
+   "nausea",
+   "flushing",
+   "abdominal",
+   "injsite",
+   "allergy"
+  ],
+  "common": {
+   "en": [
+    "Headache",
+    "Nausea and stomach discomfort",
+    "Flushing",
+    "Pain or redness where it is injected"
+   ],
+   "pl": [
+    "Ból głowy",
+    "Nudności i dyskomfort w żołądku",
+    "Nagłe zaczerwienienie",
+    "Ból lub zaczerwienienie w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Dolor de cabeza",
+    "Náuseas y molestias de estómago",
+    "Rubor",
+    "Dolor o enrojecimiento en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Allergic reactions, rare"
+   ],
+   "pl": [
+    "Reakcje alergiczne, rzadkie"
+   ],
+   "es": [
+    "Reacciones alérgicas, raras"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved only for testing the pituitary gland, and use outside that has little study.",
+   "pl": "Jest zatwierdzona tylko do badania przysadki, a zastosowania poza tym są mało zbadane.",
+   "es": "Solo está aprobada para evaluar la hipófisis, y los usos fuera de eso están poco estudiados."
+  }
+ },
+ "Kisspeptyna-10": {
+  "k": [],
+  "unknown": {
+   "en": "It has been used in small research studies of fertility and was generally tolerated at the doses tested. It is not an approved medicine, and long-term safety is unknown.",
+   "pl": "Stosowano ją w małych badaniach naukowych nad płodnością i na badanych dawkach była na ogół tolerowana. Nie jest zatwierdzonym lekiem, a bezpieczeństwo długoterminowe jest nieznane.",
+   "es": "Se ha usado en estudios de investigación pequeños sobre fertilidad y en las dosis probadas se toleró en general. No es un medicamento aprobado y se desconoce su seguridad a largo plazo."
+  }
+ },
+ "Triptorelina": {
+  "k": [
+   "flushing",
+   "libido",
+   "mood",
+   "headache",
+   "injsite",
+   "sweating",
+   "musclejoint",
+   "bone",
+   "fertility"
+  ],
+  "common": {
+   "en": [
+    "Hot flushes and sweating",
+    "Lower sex drive and, in men, erection problems",
+    "Mood swings and headache",
+    "Pain where it is injected",
+    "Joint or muscle pain"
+   ],
+   "pl": [
+    "Uderzenia gorąca i pocenie się",
+    "Niższe libido i u mężczyzn zaburzenia wzwodu",
+    "Wahania nastroju i ból głowy",
+    "Ból w miejscu wstrzyknięcia",
+    "Ból stawów lub mięśni"
+   ],
+   "es": [
+    "Sofocos y sudoración",
+    "Menos deseo sexual y, en hombres, problemas de erección",
+    "Cambios de humor y dolor de cabeza",
+    "Dolor en el lugar de la inyección",
+    "Dolor de articulaciones o músculos"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Bone thinning with long use",
+    "Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer",
+    "Allergic reaction"
+   ],
+   "pl": [
+    "Zmniejszenie gęstości kości przy długim stosowaniu",
+    "Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty",
+    "Reakcja alergiczna"
+   ],
+   "es": [
+    "Adelgazamiento de los huesos con el uso prolongado",
+    "Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata",
+    "Reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is a prescription medicine used for prostate cancer, endometriosis and early puberty.",
+   "pl": "Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. To lek na receptę stosowany w raku prostaty, endometriozie i przedwczesnym dojrzewaniu.",
+   "es": "Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Es un medicamento con receta que se usa en cáncer de próstata, endometriosis y pubertad precoz."
+  }
+ },
+ "Leuprorelina": {
+  "k": [
+   "flushing",
+   "libido",
+   "mood",
+   "headache",
+   "injsite",
+   "sweating",
+   "musclejoint",
+   "bone",
+   "fertility"
+  ],
+  "common": {
+   "en": [
+    "Hot flushes and sweating",
+    "Lower sex drive and, in men, erection problems",
+    "Mood swings and headache",
+    "Pain where it is injected",
+    "Joint or muscle pain"
+   ],
+   "pl": [
+    "Uderzenia gorąca i pocenie się",
+    "Niższe libido i u mężczyzn zaburzenia wzwodu",
+    "Wahania nastroju i ból głowy",
+    "Ból w miejscu wstrzyknięcia",
+    "Ból stawów lub mięśni"
+   ],
+   "es": [
+    "Sofocos y sudoración",
+    "Menos deseo sexual y, en hombres, problemas de erección",
+    "Cambios de humor y dolor de cabeza",
+    "Dolor en el lugar de la inyección",
+    "Dolor de articulaciones o músculos"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Bone thinning with long use",
+    "Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer",
+    "Allergic reaction",
+    "Depression and thoughts of suicide, which need a doctor"
+   ],
+   "pl": [
+    "Zmniejszenie gęstości kości przy długim stosowaniu",
+    "Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty",
+    "Reakcja alergiczna",
+    "Depresja i myśli samobójcze, które wymagają lekarza"
+   ],
+   "es": [
+    "Adelgazamiento de los huesos con el uso prolongado",
+    "Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata",
+    "Reacción alérgica",
+    "Depresión e ideas de suicidio, que requieren atención médica"
+   ]
+  },
+  "unknown": {
+   "en": "It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is a prescription medicine, and use outside medical care is not studied.",
+   "pl": "Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. To lek na receptę, a stosowanie poza opieką medyczną nie jest zbadane.",
+   "es": "Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Es un medicamento con receta y su uso fuera de la atención médica no está estudiado."
+  }
+ },
+ "Goserelina": {
+  "k": [
+   "flushing",
+   "libido",
+   "mood",
+   "headache",
+   "injsite",
+   "sweating",
+   "bone",
+   "fertility"
+  ],
+  "common": {
+   "en": [
+    "Hot flushes and sweating",
+    "Lower sex drive and, in men, erection problems",
+    "Mood swings and headache",
+    "Bruising or pain where the implant goes in"
+   ],
+   "pl": [
+    "Uderzenia gorąca i pocenie się",
+    "Niższe libido i u mężczyzn zaburzenia wzwodu",
+    "Wahania nastroju i ból głowy",
+    "Siniak lub ból w miejscu wprowadzenia implantu"
+   ],
+   "es": [
+    "Sofocos y sudoración",
+    "Menos deseo sexual y, en hombres, problemas de erección",
+    "Cambios de humor y dolor de cabeza",
+    "Hematoma o dolor donde se coloca el implante"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Bone thinning with long use",
+    "Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer",
+    "Allergic reaction"
+   ],
+   "pl": [
+    "Zmniejszenie gęstości kości przy długim stosowaniu",
+    "Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty",
+    "Reakcja alergiczna"
+   ],
+   "es": [
+    "Adelgazamiento de los huesos con el uso prolongado",
+    "Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata",
+    "Reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is given as a small implant under the skin by a clinician.",
+   "pl": "Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. Podaje go lekarz lub pielęgniarka jako mały implant pod skórę.",
+   "es": "Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Lo administra un profesional como un pequeño implante bajo la piel."
+  }
+ },
+ "Degareliks": {
+  "k": [
+   "injsite",
+   "flushing",
+   "libido",
+   "bone",
+   "heart"
+  ],
+  "common": {
+   "en": [
+    "Pain, redness or swelling where it is injected, very common",
+    "Hot flushes",
+    "Lower sex drive and erection problems",
+    "Weight gain"
+   ],
+   "pl": [
+    "Ból, zaczerwienienie lub obrzęk w miejscu wstrzyknięcia, bardzo częste",
+    "Uderzenia gorąca",
+    "Niższe libido i zaburzenia wzwodu",
+    "Przyrost masy ciała"
+   ],
+   "es": [
+    "Dolor, enrojecimiento o hinchazón en el lugar de la inyección, muy frecuentes",
+    "Sofocos",
+    "Menos deseo sexual y problemas de erección",
+    "Aumento de peso"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Abnormal heart rhythm (QT prolongation)",
+    "Bone thinning with long use",
+    "Allergic reaction"
+   ],
+   "pl": [
+    "Zaburzenia rytmu serca (wydłużenie odstępu QT)",
+    "Zmniejszenie gęstości kości przy długim stosowaniu",
+    "Reakcja alergiczna"
+   ],
+   "es": [
+    "Ritmo cardíaco anormal (prolongación del QT)",
+    "Adelgazamiento de los huesos con el uso prolongado",
+    "Reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "It lowers testosterone on purpose and is used for advanced prostate cancer only. It does not cause the early testosterone surge that other drugs in the class can.",
+   "pl": "Celowo obniża testosteron i jest stosowany tylko w zaawansowanym raku prostaty. Nie powoduje początkowego wzrostu testosteronu, który mogą wywołać inne leki tej klasy.",
+   "es": "Baja la testosterona a propósito y solo se usa en el cáncer de próstata avanzado. No causa el aumento inicial de testosterona que sí pueden causar otros fármacos de la clase."
+  }
+ },
+ "Cetroreliks i Ganireliks": {
+  "k": [
+   "injsite",
+   "headache",
+   "nausea",
+   "abdominal",
+   "swelling"
+  ],
+  "common": {
+   "en": [
+    "Redness, itching or swelling where it is injected",
+    "Headache",
+    "Nausea",
+    "Stomach pain or bloating, partly from the fertility treatment it is used with"
+   ],
+   "pl": [
+    "Zaczerwienienie, swędzenie lub obrzęk w miejscu wstrzyknięcia",
+    "Ból głowy",
+    "Nudności",
+    "Ból brzucha lub wzdęcie, częściowo z powodu leczenia niepłodności, z którym się go stosuje"
+   ],
+   "es": [
+    "Enrojecimiento, picor o hinchazón en el lugar de la inyección",
+    "Dolor de cabeza",
+    "Náuseas",
+    "Dolor de estómago o hinchazón, en parte por el tratamiento de fertilidad con el que se usa"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe ovarian hyperstimulation: fast weight gain, big belly, breathlessness",
+    "Allergic reaction"
+   ],
+   "pl": [
+    "Ciężka hiperstymulacja jajników: szybki przyrost masy ciała, duży brzuch, duszność",
+    "Reakcja alergiczna"
+   ],
+   "es": [
+    "Hiperestimulación ovárica grave: aumento rápido de peso, abdomen grande, falta de aire",
+    "Reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "They are used in fertility treatment for a short time, so long-term safety is not the question here.",
+   "pl": "Stosuje się je krótko w leczeniu niepłodności, więc bezpieczeństwo długoterminowe nie jest tu głównym pytaniem.",
+   "es": "Se usan durante poco tiempo en tratamientos de fertilidad, así que la seguridad a largo plazo no es la cuestión aquí."
+  }
+ },
+ "Oksytocyna": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "headache",
+   "water",
+   "heart",
+   "bleeding"
+  ],
+  "common": {
+   "en": [
+    "Nausea and vomiting",
+    "Headache"
+   ],
+   "pl": [
+    "Nudności i wymioty",
+    "Ból głowy"
+   ],
+   "es": [
+    "Náuseas y vómitos",
+    "Dolor de cabeza"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Too strong or too frequent uterine contractions during labour",
+    "Low sodium from water retention, which can cause seizures",
+    "Abnormal heart rhythm",
+    "Heavy bleeding after birth"
+   ],
+   "pl": [
+    "Zbyt silne lub zbyt częste skurcze macicy podczas porodu",
+    "Niski poziom sodu z zatrzymania wody, który może powodować drgawki",
+    "Zaburzenia rytmu serca",
+    "Silne krwawienie po porodzie"
+   ],
+   "es": [
+    "Contracciones del útero demasiado fuertes o frecuentes durante el parto",
+    "Sodio bajo por retención de agua, que puede causar convulsiones",
+    "Ritmo cardíaco anormal",
+    "Sangrado abundante tras el parto"
+   ]
+  },
+  "unknown": {
+   "en": "Injected oxytocin is given in hospital for labour and after birth. Nasal sprays sold online for mood or bonding are not approved, and their effects are not established.",
+   "pl": "Oksytocynę we wstrzyknięciach podaje się w szpitalu podczas porodu i po nim. Spraye do nosa sprzedawane online na nastrój lub więzi nie są zatwierdzone, a ich działanie nie jest ustalone.",
+   "es": "La oxitocina inyectada se administra en el hospital durante el parto y después. Los aerosoles nasales que se venden en línea para el ánimo o el vínculo no están aprobados y sus efectos no están establecidos."
+  }
+ },
+ "HCG i HMG": {
+  "k": [
+   "headache",
+   "injsite",
+   "gynecomastia",
+   "mood",
+   "swelling",
+   "water",
+   "abdominal",
+   "fatigue",
+   "fertility"
+  ],
+  "common": {
+   "en": [
+    "Headache and tiredness",
+    "Pain or redness where it is injected",
+    "Mood changes and irritability",
+    "In men, breast tenderness or enlargement",
+    "Swelling and bloating"
+   ],
+   "pl": [
+    "Ból głowy i zmęczenie",
+    "Ból lub zaczerwienienie w miejscu wstrzyknięcia",
+    "Zmiany nastroju i drażliwość",
+    "U mężczyzn tkliwość lub powiększenie piersi",
+    "Obrzęki i wzdęcia"
+   ],
+   "es": [
+    "Dolor de cabeza y cansancio",
+    "Dolor o enrojecimiento en el lugar de la inyección",
+    "Cambios de humor e irritabilidad",
+    "En hombres, sensibilidad o aumento de las mamas",
+    "Hinchazón y distensión"
+   ]
+  },
+  "serious": {
+   "en": [
+    "In women, ovarian hyperstimulation: rapid weight gain, big belly, breathlessness",
+    "Blood clots, rare",
+    "Allergic reaction"
+   ],
+   "pl": [
+    "U kobiet hiperstymulacja jajników: szybki przyrost masy ciała, duży brzuch, duszność",
+    "Zakrzepy krwi, rzadko",
+    "Reakcja alergiczna"
+   ],
+   "es": [
+    "En mujeres, hiperestimulación ovárica: aumento rápido de peso, abdomen grande, falta de aire",
+    "Coágulos de sangre, raros",
+    "Reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "In men without a medical reason, it can reduce the body's own testosterone production over time. It is a prescription medicine for fertility problems.",
+   "pl": "U mężczyzn bez wskazań medycznych może z czasem obniżać własną produkcję testosteronu. To lek na receptę stosowany w problemach z płodnością.",
+   "es": "En hombres sin motivo médico puede reducir con el tiempo la producción propia de testosterona. Es un medicamento con receta para problemas de fertilidad."
+  }
+ },
+ "Afamelanotyd": {
+  "k": [
+   "nausea",
+   "headache",
+   "flushing",
+   "fatigue",
+   "injsite"
+  ],
+  "common": {
+   "en": [
+    "Nausea",
+    "Headache",
+    "Flushing",
+    "Tiredness",
+    "Reactions where the implant goes in"
+   ],
+   "pl": [
+    "Nudności",
+    "Ból głowy",
+    "Nagłe zaczerwienienie",
+    "Zmęczenie",
+    "Odczyny w miejscu wszczepienia implantu"
+   ],
+   "es": [
+    "Náuseas",
+    "Dolor de cabeza",
+    "Rubor",
+    "Cansancio",
+    "Reacciones donde se coloca el implante"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Darkening and change of moles, which need regular skin checks"
+   ],
+   "pl": [
+    "Ciemnienie i zmiany znamion, które wymagają regularnych kontroli skóry"
+   ],
+   "es": [
+    "Oscurecimiento y cambio de lunares, que requieren revisiones periódicas de la piel"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved only as a small implant for a rare light-sensitivity disease, given by a specialist.",
+   "pl": "Jest zatwierdzony tylko jako mały implant w rzadkiej chorobie nadwrażliwości na światło, podawany przez specjalistę.",
+   "es": "Solo está aprobado como un pequeño implante para una enfermedad rara de sensibilidad a la luz, administrado por un especialista."
+  }
+ },
+ "Melanotan II": {
+  "k": [
+   "nausea",
+   "flushing",
+   "libido",
+   "appetite",
+   "fatigue",
+   "cancer"
+  ],
+  "common": {
+   "en": [
+    "Nausea, often strong after the first uses",
+    "Facial flushing",
+    "Spontaneous erections",
+    "Reduced appetite",
+    "Tiredness and yawning"
+   ],
+   "pl": [
+    "Nudności, często silne po pierwszych zastosowaniach",
+    "Zaczerwienienie twarzy",
+    "Samoistne erekcje",
+    "Zmniejszony apetyt",
+    "Zmęczenie i ziewanie"
+   ],
+   "es": [
+    "Náuseas, a menudo intensas tras los primeros usos",
+    "Rubor facial",
+    "Erecciones espontáneas",
+    "Menos apetito",
+    "Cansancio y bostezos"
+   ]
+  },
+  "serious": {
+   "en": [
+    "New or changing moles and freckles, with reports of skin cancers in users",
+    "Kidney problems in case reports"
+   ],
+   "pl": [
+    "Nowe lub zmieniające się znamiona i piegi, z doniesieniami o rakach skóry u użytkowników",
+    "Problemy z nerkami w opisach przypadków"
+   ],
+   "es": [
+    "Lunares y pecas nuevos o que cambian, con informes de cánceres de piel en usuarios",
+    "Problemas de riñón en informes de casos"
+   ]
+  },
+  "unknown": {
+   "en": "It is not approved anywhere and was never developed into a medicine, and tanning products sold online come without quality control, so its safety is not established.",
+   "pl": "Nie jest zatwierdzony nigdzie na świecie i nigdy nie został rozwinięty w lek, a produkty do opalania sprzedawane online nie mają kontroli jakości, więc jego bezpieczeństwo nie jest ustalone.",
+   "es": "No está aprobado en ningún sitio y nunca se desarrolló como medicamento, y los productos bronceadores que se venden en línea no tienen control de calidad, así que no está establecida su seguridad."
+  }
+ },
+ "PT-141": {
+  "k": [
+   "nausea",
+   "flushing",
+   "headache",
+   "injsite",
+   "vomiting",
+   "bp"
+  ],
+  "common": {
+   "en": [
+    "Nausea, in many people",
+    "Flushing",
+    "Headache",
+    "Vomiting",
+    "Reactions where it is injected"
+   ],
+   "pl": [
+    "Nudności, u wielu osób",
+    "Nagłe zaczerwienienie",
+    "Ból głowy",
+    "Wymioty",
+    "Odczyny w miejscu wstrzyknięcia"
+   ],
+   "es": [
+    "Náuseas, en muchas personas",
+    "Rubor",
+    "Dolor de cabeza",
+    "Vómitos",
+    "Reacciones en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "A short rise in blood pressure after the injection",
+    "Darkening of the gums or skin that may not fade"
+   ],
+   "pl": [
+    "Krótkotrwały wzrost ciśnienia krwi po wstrzyknięciu",
+    "Ciemnienie dziąseł lub skóry, które może nie ustąpić"
+   ],
+   "es": [
+    "Subida breve de la presión arterial tras la inyección",
+    "Oscurecimiento de encías o piel que puede no desaparecer"
+   ]
+  },
+  "unknown": {
+   "en": "It is approved only for low sexual desire in premenopausal women, and the effect of long use in other people is not established.",
+   "pl": "Jest zatwierdzony tylko przy niskim pożądaniu seksualnym u kobiet przed menopauzą, a skutki długiego stosowania u innych osób nie są ustalone.",
+   "es": "Solo está aprobado para el bajo deseo sexual en mujeres antes de la menopausia, y no se ha establecido el efecto de un uso prolongado en otras personas."
+  }
+ },
+ "ACTH 1–39": {
+  "k": [
+   "swelling",
+   "water",
+   "bp",
+   "mood",
+   "insomnia",
+   "acne",
+   "infection",
+   "bone",
+   "appetite"
+  ],
+  "common": {
+   "en": [
+    "Fluid retention and swelling",
+    "Higher blood pressure",
+    "Mood swings, trouble sleeping",
+    "Increased appetite and weight gain",
+    "Acne"
+   ],
+   "pl": [
+    "Zatrzymanie płynów i obrzęki",
+    "Wyższe ciśnienie krwi",
+    "Wahania nastroju, trudności ze snem",
+    "Większy apetyt i przyrost masy ciała",
+    "Trądzik"
+   ],
+   "es": [
+    "Retención de líquidos e hinchazón",
+    "Presión arterial más alta",
+    "Cambios de humor, problemas para dormir",
+    "Más apetito y aumento de peso",
+    "Acné"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Higher blood sugar",
+    "Infections that are harder to fight",
+    "Bone thinning with long use",
+    "Stomach ulcers"
+   ],
+   "pl": [
+    "Wyższy poziom cukru we krwi",
+    "Infekcje, z którymi trudniej walczyć",
+    "Zmniejszenie gęstości kości przy długim stosowaniu",
+    "Wrzody żołądka"
+   ],
+   "es": [
+    "Azúcar más alto en sangre",
+    "Infecciones más difíciles de combatir",
+    "Adelgazamiento de los huesos con el uso prolongado",
+    "Úlceras de estómago"
+   ]
+  },
+  "unknown": {
+   "en": "Its effects resemble long-term steroid tablets because it makes the body release cortisol. It is a prescription medicine for infant spasms and some inflammatory diseases.",
+   "pl": "Jego skutki przypominają długotrwałe stosowanie tabletek steroidowych, bo wywołuje wydzielanie kortyzolu. To lek na receptę stosowany w skurczach niemowlęcych i niektórych chorobach zapalnych.",
+   "es": "Sus efectos se parecen a los de tomar corticoides durante mucho tiempo, porque hace que el cuerpo libere cortisol. Es un medicamento con receta para los espasmos infantiles y algunas enfermedades inflamatorias."
+  }
+ },
+ "Melatonina": {
+  "k": [
+   "fatigue",
+   "headache",
+   "dizziness",
+   "nausea"
+  ],
+  "common": {
+   "en": [
+    "Daytime sleepiness",
+    "Headache",
+    "Dizziness",
+    "Nausea",
+    "Vivid dreams"
+   ],
+   "pl": [
+    "Senność w ciągu dnia",
+    "Ból głowy",
+    "Zawroty głowy",
+    "Nudności",
+    "Wyraziste sny"
+   ],
+   "es": [
+    "Somnolencia durante el día",
+    "Dolor de cabeza",
+    "Mareo",
+    "Náuseas",
+    "Sueños muy vívidos"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Possible interactions with blood thinners, diabetes medicines and some blood pressure medicines"
+   ],
+   "pl": [
+    "Możliwe interakcje z lekami przeciwzakrzepowymi, przeciwcukrzycowymi i niektórymi lekami na nadciśnienie"
+   ],
+   "es": [
+    "Posibles interacciones con anticoagulantes, medicamentos para la diabetes y algunos para la presión arterial"
+   ]
+  },
+  "unknown": {
+   "en": "Strength and purity of supplements vary a lot between brands, and long-term effects of regular use are not well studied.",
+   "pl": "Moc i czystość suplementów bardzo różnią się między markami, a skutki długotrwałego, regularnego stosowania nie są dobrze zbadane.",
+   "es": "La concentración y la pureza de los suplementos varían mucho entre marcas, y los efectos de un uso regular a largo plazo no están bien estudiados."
+  }
+ },
+ "Erytropoetyna (EPO)": {
+  "k": [
+   "bp",
+   "headache",
+   "musclejoint",
+   "clots",
+   "heart"
+  ],
+  "common": {
+   "en": [
+    "Higher blood pressure",
+    "Headache",
+    "Joint and muscle aches",
+    "Flu-like feeling after injection"
+   ],
+   "pl": [
+    "Wyższe ciśnienie krwi",
+    "Ból głowy",
+    "Bóle stawów i mięśni",
+    "Uczucie jak przy grypie po wstrzyknięciu"
+   ],
+   "es": [
+    "Presión arterial más alta",
+    "Dolor de cabeza",
+    "Dolores de articulaciones y músculos",
+    "Sensación de gripe tras la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Blood clots, stroke and heart attack, mainly when blood becomes too thick",
+    "Pure red cell aplasia, a rare loss of red blood cell production",
+    "In some cancers, faster tumour growth"
+   ],
+   "pl": [
+    "Zakrzepy, udar i zawał, głównie gdy krew robi się zbyt gęsta",
+    "Czysta aplazja czerwonokrwinkowa, rzadka utrata produkcji czerwonych krwinek",
+    "W niektórych nowotworach szybszy wzrost guza"
+   ],
+   "es": [
+    "Coágulos de sangre, ictus e infarto, sobre todo cuando la sangre se vuelve demasiado espesa",
+    "Aplasia pura de células rojas, una pérdida rara de producción de glóbulos rojos",
+    "En algunos cánceres, crecimiento más rápido del tumor"
+   ]
+  },
+  "unknown": {
+   "en": "It is on the WADA prohibited list, and healthy people who use it risk thickened blood.",
+   "pl": "Znajduje się na liście zabronionych WADA, a zdrowe osoby, które go stosują, ryzykują zagęszczenie krwi.",
+   "es": "Figura en la lista de prohibidas de la AMA, y las personas sanas que la usan arriesgan espesar la sangre."
+  }
+ },
+ "Toksyna botulinowa": {
+  "k": [
+   "injsite",
+   "headache",
+   "bleeding",
+   "breathing",
+   "allergy",
+   "vision"
+  ],
+  "common": {
+   "en": [
+    "Pain, bruising or swelling where it is injected",
+    "Headache",
+    "A drooping eyelid or weakness of nearby muscles"
+   ],
+   "pl": [
+    "Ból, siniak lub obrzęk w miejscu wstrzyknięcia",
+    "Ból głowy",
+    "Opadająca powieka lub osłabienie pobliskich mięśni"
+   ],
+   "es": [
+    "Dolor, hematoma o hinchazón en el lugar de la inyección",
+    "Dolor de cabeza",
+    "Párpado caído o debilidad de músculos cercanos"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Spread of the effect: trouble swallowing or breathing, widespread weakness, in a boxed warning",
+    "Allergic reaction"
+   ],
+   "pl": [
+    "Rozprzestrzenienie działania: trudności z połykaniem lub oddychaniem, uogólnione osłabienie, w ramce ostrzegawczej",
+    "Reakcja alergiczna"
+   ],
+   "es": [
+    "Extensión del efecto: dificultad para tragar o respirar, debilidad generalizada, en una advertencia destacada",
+    "Reacción alérgica"
+   ]
+  },
+  "unknown": {
+   "en": "Results depend greatly on the person who gives it, and counterfeit products are a known problem.",
+   "pl": "Wyniki zależą w dużej mierze od osoby, która go podaje, a podróbki to znany problem.",
+   "es": "Los resultados dependen mucho de quien lo aplica, y las falsificaciones son un problema conocido."
+  }
+ }
+}
