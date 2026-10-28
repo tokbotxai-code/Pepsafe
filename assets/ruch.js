@@ -467,10 +467,10 @@
     var co = document.getElementById('coForm'), ef = document.getElementById('efForm');
     var pl = html.lang === 'pl';
     var MSG = pl ? {
-      co: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
+      co: 'Uzupełnij imię, poprawny e-mail i wiadomość.',
       ef: 'Uzupełnij opis objawu i zaznacz zgodę.'
     } : {
-      co: es('Enter your name, a valid email and a message (min. 10 characters) and tick the consent.', 'Escribe tu nombre, un correo válido y un mensaje (mín. 10 caracteres) y marca el consentimiento.'),
+      co: es('Please fill in your name, a valid email and your message.', 'Rellena tu nombre, un correo válido y tu mensaje.'),
       ef: es('Describe the symptom and tick the consent box.', 'Describe el síntoma y marca la casilla de consentimiento.')
     };
     function say(el, text) { el.hidden = false; el.textContent = text; el.classList.add('bad'); }
@@ -506,10 +506,9 @@
       var out = document.getElementById('coMsgOut');
       co.addEventListener('submit', function (e) {
         var n = co.coName.value.trim(), m = co.coEmail.value.trim(), msg = co.coMsg.value.trim();
-        var cons = document.getElementById('coCons').checked;
         var okMail = /^\S+@\S+\.\S+$/.test(m);
-        flag(co.coName, !n); flag(co.coEmail, !okMail); flag(co.coMsg, msg.length < 10);
-        if (!n || !okMail || msg.length < 10 || !cons) { e.preventDefault(); say(out, MSG.co); return; }
+        flag(co.coName, !n); flag(co.coEmail, !okMail); flag(co.coMsg, msg.length < 3);
+        if (!n || !okMail || msg.length < 3) { e.preventDefault(); say(out, MSG.co); return; }
         e.preventDefault();
         var tp = co.querySelector('select[name="topic"]');
         compose(co, out, 'PepSafe: ' + (tp ? tp.value : ''), (pl ? 'Imię: ' : 'Name: ') + n + '\n' + (pl ? 'E-mail: ' : 'Email: ') + m + '\n\n' + msg);

@@ -1131,7 +1131,6 @@ function about(L) {
     </div>
     <p class="frow"><label for="coTopic">${esc(t.coTopic)}</label><select id="coTopic" name="topic">${t.coT.map(x => `<option>${esc(x)}</option>`).join('')}</select></p>
     <p class="frow"><label for="coMsg">${esc(t.coMsg)}</label><textarea id="coMsg" name="message" rows="5" maxlength="2000" required></textarea></p>
-    <p class="check"><label><input type="checkbox" id="coCons"> <span>${esc(t.coCons)}</span></label></p>
     <p class="formfoot"><button class="btn big" type="submit" data-busy="${esc(t.coSending)}">${esc(t.coSend)}</button></p>
     <p class="formmsg" id="coMsgOut" role="status" hidden></p>
   </form>
