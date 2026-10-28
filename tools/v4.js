@@ -100,7 +100,7 @@ const ORG = JSON.stringify({
 
 const W = {
   en: {
-    nav: { home: 'Home', catalog: 'Catalog', groups: 'Groups', faq: 'Questions', alerts: 'Warnings', about: 'About' },
+    nav: { home: 'Home', catalog: 'Substances', groups: 'Groups', faq: 'Questions', alerts: 'Warnings', about: 'About' },
     cta: 'Open catalog', theme: 'Theme', motionOff: 'Stop motion', motionOn: 'Start motion',
     skip: 'Skip to content', srcs: 'Sources', back: 'Catalog',
     foot: 'PepSafe — peptide facts, no sales. Educational content, not medical advice.',
@@ -150,7 +150,7 @@ const W = {
     official: 'Report an adverse reaction to the regulator:'
   },
   pl: {
-    nav: { home: 'Start', catalog: 'Katalog', groups: 'Grupy', faq: 'Pytania', alerts: 'Ostrzeżenia', about: 'O projekcie' },
+    nav: { home: 'Start', catalog: 'Substancje', groups: 'Grupy', faq: 'Pytania', alerts: 'Ostrzeżenia', about: 'O projekcie' },
     cta: 'Otwórz katalog', theme: 'Motyw', motionOff: 'Zatrzymaj ruch', motionOn: 'Włącz ruch',
     skip: 'Przejdź do treści', srcs: 'Źródła', back: 'Katalog',
     foot: 'PepSafe — fakty o peptydach, bez sprzedaży. Treść edukacyjna, nie porada medyczna.',
@@ -585,15 +585,42 @@ ${mostRead(L)}
 // ── catalog ───────────────────────────────────────────────────────────────────
 function catalog(L) {
   const en = L === 'en', t = W[L];
+  const STERR = require('./sterydy.js').finder(L);
   const statuses = [...new Set(D.map(e => e.s))];
+  const isGlp = e => { const f = famOf(e); return !!(f && f.id === 'glp1'); };
   const sorted = D.slice().sort((a, b) => nm(a.n, en).localeCompare(nm(b.n, en), en ? 'en' : 'pl'));
+  const nGlp = D.filter(isGlp).length, nPep = D.length - nGlp, nSt = STERR.length;
+  const star = k => `<button class="star" data-key="${k}" aria-label="${esc(t.save)}" title="${esc(t.save)}">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 2.6l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14l-4.5 2.2.9-4.9L2.8 7.8l5-.7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </button>`;
+  const pepRow = e => `<div class="entry tile" data-t="${isGlp(e) ? 'glp1' : 'pep'}" data-s="${e.s}" data-n="${esc((nm(e.n, en) + ' ' + (e.a || '') + ' ' + e.n).toLowerCase())}">
+        <a class="entry-link" href="${BASE}${cardPath(e, L)}">
+          <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span>
+          <b>${esc(nm(e.n, en))}</b>
+          <em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em>
+        </a>${star(key(e))}
+      </div>`;
+  const stRow = r => `<div class="entry tile" data-t="ster" data-s="ster" data-n="${esc(r.t)}">
+        <a class="entry-link" href="${BASE}${L}/t/${r.s}.html">
+          <span class="pill warn">${esc(r.st)}</span>
+          <b>${esc(r.n)}</b>
+          <em>${esc(r.c)}</em>
+        </a>
+      </div>`;
+  const all = sorted.map(pepRow).concat(STERR.slice().sort((a, b) => a.n.localeCompare(b.n, en ? 'en' : L)).map(stRow));
   const body = `
 <section class="page-head paper">
   <canvas id="chains" aria-hidden="true"></canvas>
   <div class="wrap">
     <p class="kick reveal">${esc(t.nav.catalog)}</p>
-    <h1 class="display reveal">${en ? 'Every entry, with its status.' : 'Każdy wpis, razem ze statusem.'}</h1>
-    <p class="lede reveal">${D.length} ${esc(t.entries)} — ${en ? 'what each one is, what the research shows, and whether any regulator approved it.' : 'czym jest, co pokazują badania i czy jakikolwiek regulator ją zatwierdził.'}</p>
+    <h1 class="display reveal">${en ? 'Every substance, with its status.' : 'Każda substancja, razem ze statusem.'}</h1>
+    <p class="lede reveal">${en ? `${D.length + nSt} substances: GLP-1 drugs, other peptides and steroids. What each one is, what the research shows, side effects and whether any regulator approved it.` : `${D.length + nSt} substancji: leki GLP-1, inne peptydy i sterydy. Czym jest każda, co pokazują badania, jakie ma skutki uboczne i czy jakikolwiek regulator ją zatwierdził.`}</p>
+    <p class="herofind reveal">
+      <button type="button" class="findfake" data-find>
+        <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.3" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M12.9 12.9 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <span>${esc(t.findPh)}</span>
+      </button>
+    </p>
   </div>
 </section>
 
@@ -602,30 +629,27 @@ function catalog(L) {
     <div class="filters reveal">
       <label class="search"><span class="sr">${esc(t.search)}</span>
         <input id="q" type="search" placeholder="${esc(t.search)}" autocomplete="off"></label>
+      <div class="chips" id="tchips">
+        <button class="chip on" data-t="">${esc(t.filterAll)} <span class="num">${D.length + nSt}</span></button>
+        <button class="chip" data-t="glp1">${en ? 'GLP-1 drugs' : 'Leki GLP-1'} <span class="num">${nGlp}</span></button>
+        <button class="chip" data-t="pep">${en ? 'Peptides &amp; others' : 'Peptydy i inne'} <span class="num">${nPep}</span></button>
+        <button class="chip" data-t="ster">${en ? 'Steroids' : 'Sterydy'} <span class="num">${nSt}</span></button>
+      </div>
       <div class="chips" id="chips">
-        <button class="chip on" data-s="">${esc(t.filterAll)} <span class="num">${D.length}</span></button>
+        <button class="chip on" data-s="">${esc(en ? 'Any status' : 'Dowolny status')}</button>
         ${statuses.map(s => `<button class="chip" data-s="${s}">${esc(en ? (ST_EN[s] || s) : (ST[s] || s))} <span class="num">${D.filter(e => e.s === s).length}</span></button>`).join('')}
       </div>
     </div>
     <p id="nohit" class="muted" hidden>${esc(t.noHit)}</p>
     <div class="grid-cards" id="list">
-      ${sorted.map(e => `<div class="entry tile" data-s="${e.s}" data-n="${esc((nm(e.n, en) + ' ' + (e.a || '') + ' ' + e.n).toLowerCase())}">
-        <a class="entry-link" href="${BASE}${cardPath(e, L)}">
-          <span class="pill ${toneOf(e)}">${esc(statusOf(e, en))}</span>
-          <b>${esc(nm(e.n, en))}</b>
-          <em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em>
-        </a>
-        <button class="star" data-key="${key(e)}" aria-label="${esc(t.save)}" title="${esc(t.save)}">
-          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 2.6l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14l-4.5 2.2.9-4.9L2.8 7.8l5-.7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        </button>
-      </div>`).join('')}
+      ${all.join('')}
     </div>
   </div>
 </section>`;
   return layout({
     lang: L, here: 'catalog.html', twin: 'catalog.html', body,
-    title: (en ? `Catalog of ${D.length} peptides` : `Katalog ${D.length} peptydów`) + ' | PepSafe',
-    desc: en ? `All ${D.length} entries with legal status, mechanism and evidence.` : `Wszystkie ${D.length} wpisów ze statusem prawnym, mechanizmem i siłą dowodów.`
+    title: (en ? `Substances: ${D.length} peptides and drugs, ${nSt} steroids` : `Substancje: ${D.length} peptydów i leków, ${nSt} sterydów`) + ' | PepSafe',
+    desc: en ? `All ${D.length + nSt} entries with legal status, mechanism, evidence and side effects.` : `Wszystkie ${D.length + nSt} wpisów ze statusem prawnym, mechanizmem, dowodami i skutkami ubocznymi.`
   });
 }
 

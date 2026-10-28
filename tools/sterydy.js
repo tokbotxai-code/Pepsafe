@@ -249,6 +249,13 @@ module.exports = function build(ctx) {
     <p class="kick reveal">${esc(u(L, 'nav'))}</p>
     <h1 class="display reveal">${esc(u(L, 'hubTitle'))}</h1>
     <p class="lede reveal">${esc(u(L, 'hubLead'))}</p>
+    <p class="herofind reveal">
+      <button type="button" class="findfake" data-find>
+        <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.3" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M12.9 12.9 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <span>${L === 'en' ? 'Type a name, brand or symptom' : L === 'pl' ? 'Wpisz nazwę, markę albo objaw' : 'Escribe un nombre, marca o síntoma'}</span>
+      </button>
+    </p>
+    <p class="chips reveal"><a class="chip" href="${url(L, 'catalog.html')}?t=glp1">${L === 'en' ? 'GLP-1 drugs' : L === 'pl' ? 'Leki GLP-1' : 'Medicamentos GLP-1'}</a> <a class="chip" href="${url(L, 'catalog.html')}?t=pep">${L === 'en' ? 'Peptides &amp; others' : L === 'pl' ? 'Peptydy i inne' : 'Péptidos y otros'}</a> <a class="chip" href="${url(L, 'catalog.html')}">${L === 'en' ? 'All substances' : L === 'pl' ? 'Wszystkie substancje' : 'Todas las sustancias'}</a></p>
     <p class="actions reveal"><a class="btn big" href="${url(L, 'steroids-compare.html')}">${esc(u(L, 'cmpBtn'))}${ARROW}</a> <a class="btn ghost big" href="${url(L, 'steroids-vs-peptides.html')}">${esc(u(L, 'vsBtn'))}</a></p>
   </div>
 </section>

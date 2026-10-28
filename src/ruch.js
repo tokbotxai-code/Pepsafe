@@ -139,15 +139,16 @@
   }
 
   /* ── catalog search and status filter ──────────────── */
-  var q = document.getElementById('q'), chips = document.getElementById('chips'), list = document.getElementById('list');
+  var q = document.getElementById('q'), chips = document.getElementById('chips'), tchips = document.getElementById('tchips'), list = document.getElementById('list');
   if (q && list) {
-    var items = [].slice.call(list.children), nohit = document.getElementById('nohit'), pick = '';
+    var items = [].slice.call(list.children), nohit = document.getElementById('nohit'), pick = '', kind = '';
     // accents, hyphens and spaces ignored, so "bpc157" finds BPC-157
-    var norm = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); };
+    var norm = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ł/g, 'l').replace(/[^a-z0-9]/g, ''); };
     var apply = function () {
       var needle = norm(q.value.trim()), shown = 0;
+      if (chips) chips.hidden = kind === 'ster';   // statuses describe the peptide catalogue only
       items.forEach(function (el) {
-        var ok = (!pick || el.dataset.s === pick) && (!needle || norm(el.dataset.n).indexOf(needle) > -1);
+        var ok = (!kind || el.dataset.t === kind) && (kind === 'ster' || !pick || el.dataset.s === pick) && (!needle || norm(el.dataset.n).indexOf(needle) > -1);
         el.hidden = !ok; if (ok) shown++;
       });
       if (nohit) nohit.hidden = shown > 0;
@@ -158,6 +159,17 @@
       [].slice.call(chips.children).forEach(function (x) { x.classList.toggle('on', x === c); });
       pick = c.dataset.s || ''; apply();
     });
+    var setKind = function (k) {
+      kind = k;
+      if (tchips) [].slice.call(tchips.children).forEach(function (x) { x.classList.toggle('on', (x.dataset.t || '') === k); });
+      apply();
+    };
+    if (tchips) tchips.addEventListener('click', function (e) {
+      var c = e.target.closest('.chip'); if (!c) return;
+      setKind(c.dataset.t || '');
+    });
+    // /catalog.html?t=ster (or glp1, pep) opens with that filter
+    var m = /[?&]t=(glp1|pep|ster)/.exec(location.search); if (m) setKind(m[1]);
   }
 
 
