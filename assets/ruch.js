@@ -482,23 +482,29 @@
     // Contact and symptom forms no longer depend on an outside form service (it stopped answering for our address).
     // The text typed in the form opens the reader's own mail app, addressed to us; a copy button covers computers without one.
     var TO = (function () { var a = document.querySelector('a[href^="mailto:"]'); return a ? a.getAttribute('href').replace(/^mailto:/, '').split('?')[0] : 'contact@pepsafe.info'; })();
-    var OPEN = pl ? 'Otwieram Twój program pocztowy z gotową wiadomością. Wyślij ją tam jednym kliknięciem. Jeśli nic się nie otworzyło, skopiuj tekst i wyślij go na adres '
-      : es('Opening your email app with the message ready. Send it there with one click. If nothing opened, copy the text and send it to ', 'Abriendo tu aplicación de correo con el mensaje listo. Envíalo allí con un clic. Si no se abrió nada, copia el texto y envíalo a ');
+    var OPEN = pl ? 'Otwieram program pocztowy…' : es('Opening your email app…', 'Abriendo tu aplicación de correo…');
+    var FALL = pl ? 'Nic się nie otworzyło? Skopiuj wiadomość i wyślij ją na adres '
+      : es('Nothing opened? Copy the message and send it to ', '¿No se abrió nada? Copia el mensaje y envíalo a ');
     var COPY = pl ? 'Skopiuj wiadomość' : es('Copy the message', 'Copiar el mensaje'), COPIED = pl ? 'Skopiowano' : es('Copied', 'Copiado');
     function compose(form, out, subject, text) {
       var b = form.querySelector('[type="submit"]');
       if (b) { b.disabled = false; if (b.dataset.idle) b.textContent = b.dataset.idle; }
-      var full = TO + '\n' + subject + '\n\n' + text;
+      var full = TO + '\n' + subject + '\n\n' + text, href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text);
       out.hidden = false; out.classList.remove('bad'); out.textContent = OPEN;
-      var a = document.createElement('a'); a.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text); a.textContent = TO; out.appendChild(a);
-      var c = document.createElement('button'); c.type = 'button'; c.className = 'btn ghost'; c.style.marginLeft = '10px'; c.textContent = COPY;
-      c.addEventListener('click', function () {
-        var done = function () { c.textContent = COPIED; };
-        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(full).then(done, function () { fallbackCopy(full); done(); });
-        else { fallbackCopy(full); done(); }
-      });
-      out.appendChild(c);
-      location.href = a.href;
+      location.href = href;
+      // the help appears only if the mail app did not take over (the page keeps the focus)
+      setTimeout(function () {
+        if (document.hidden || !document.hasFocus()) return;
+        out.textContent = FALL;
+        var a = document.createElement('a'); a.href = href; a.textContent = TO; out.appendChild(a);
+        var c = document.createElement('button'); c.type = 'button'; c.className = 'btn ghost'; c.style.marginLeft = '10px'; c.textContent = COPY;
+        c.addEventListener('click', function () {
+          var done = function () { c.textContent = COPIED; };
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(full).then(done, function () { fallbackCopy(full); done(); });
+          else { fallbackCopy(full); done(); }
+        });
+        out.appendChild(c);
+      }, 2000);
     }
     function fallbackCopy(t) { var x = document.createElement('textarea'); x.value = t; x.style.position = 'fixed'; x.style.opacity = '0'; document.body.appendChild(x); x.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(x); }
 
