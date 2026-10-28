@@ -24,6 +24,7 @@ for (const re of [/^var GL=/, /^var CONFUSE=/, /^var POSTS=/, /^var FAMS=/, /^va
 for (const re of [/^var SRC=\{/, /^var WADA=\{/, /^var WADA_URL=/, /^var SY_PL=/, /^var SY_EN=/]) { const i = at(re); if (i >= 0) vm.runInContext(lines[i], box); }
 const { D, EN, ST, ST_EN, FAMS, FAMS_EN, DAILY, FAQ, QA, ALERTS, TRICKS, MYTHS, SRC, WADA, WADA_URL, DOSE, SY_PL, SY_EN, GL, CONFUSE, POSTS } = box;
 // longer write-ups per substance, kept out of dane.html so they can grow: {"<PL name>": {"pl": [paragraphs], "en": [paragraphs]}}
+const PLUS = fs.existsSync(path.join(root, 'plusy.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'plusy.json'), 'utf8')) : {};   // advantages and disadvantages per card (plusy.json: en/pl/es lists)
 const OPISY = fs.existsSync(path.join(root, 'opisy.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'opisy.json'), 'utf8')) : {};
 // "Peptyd dnia": the newest entry dated today or earlier (UK), so entries written ahead show up on their own day
 const TODAY = process.env.PEP_TODAY || new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
@@ -768,6 +769,7 @@ function card(e, L) {
     </div>
 
     ${sec(t.what, d)}${sec(t.how, m)}${sec(t.use, u)}${sec(t.ev, ev)}${(() => { const o = (OPISY[e.n] || {})[L] || (OPISY[e.n] || {}).en; return o && o.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'In depth' : 'Więcej szczegółów'}</h2>${o.map(x => `<p>${esc(x)}</p>`).join('')}</section>` : ''; })()}${guideBox(e, en)}
+    ${(() => { const pc = PLUS[e.n]; if (!pc) return ''; const li = a => (a[L] || a.en || []).map(x => `<li>${esc(x)}</li>`).join(''); return `<section class="blk reveal pcgrid"><div class="pc"><h2 class="kick">${en ? 'Advantages' : 'Zalety'}</h2><ul class="srcs-list">${li(pc.pros)}</ul></div><div class="pc"><h2 class="kick">${en ? 'Disadvantages' : 'Wady'}</h2><ul class="srcs-list">${li(pc.cons)}</ul></div></section>`; })()}
     ${w ? `<section class="blk note reveal"><h2 class="kick">${esc(t.care)}</h2><p>${esc(w)}</p></section>` : ''}
     ${wa ? `<section class="blk reveal"><h2 class="kick">${esc(t.wada)}</h2><p>${en
       ? esc(t.listedWada + ' ' + wa[0] + (wa[1] === 'always' ? t.always : '') + '.')

@@ -26,6 +26,14 @@ const missingMode = process.argv.includes('--missing');
   TM['Steroids'] = TM['Steroids'] || 'Esteroides';
 }
 
+// advantages and disadvantages per card (plusy.json), EN -> ES like the pairs above
+{
+  const f = path.join(root, 'plusy.json');
+  const ESC = x => String(x).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  if (fs.existsSync(f)) for (const o of Object.values(JSON.parse(fs.readFileSync(f, 'utf8'))))
+    for (const k of ['pros', 'cons']) (o[k].en || []).forEach((t, i) => { if (o[k].es && o[k].es[i]) TM[ESC(t).replace(/\s+/g, ' ').trim()] = ESC(o[k].es[i]); });
+}
+
 const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-busy', 'data-off', 'data-on', 'data-base', 'data-report', 'value'];
 const META = /<meta (name|property)="(description|og:title|og:description|twitter:title|twitter:description)" content="([^"]*)">/g;
 const norm = s => s.replace(/\s+/g, ' ').trim();
