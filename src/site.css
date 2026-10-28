@@ -573,3 +573,7 @@ html.still .wm i { animation: none; color: var(--ink); }
 /* wordmark typeface */
 .brand { font-family: "Sora", "Inter Tight", system-ui, sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -.01em; gap: 11px; }
 .wm i { letter-spacing: 0; }
+
+/* the top bar is controls, not text: it cannot be selected (no neon highlight over the menu) */
+header.bar, header.bar * { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+header.bar input { -webkit-user-select: text; user-select: text; }
