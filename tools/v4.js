@@ -268,7 +268,7 @@ ${o.ld ? `<script type="application/ld+json">${o.ld}</${'script'}>\n` : ''}</hea
 
 <header class="bar">
   <nav class="wrap">
-    <a class="brand" href="${up}index.html">${LOGO}PepSafe</a>
+    <a class="brand" href="${up}index.html">${LOGO}<span class="wm">PepSafe</span></a>
     <ul class="links">
       ${nav.filter(([h]) => NAV_MAIN.includes(h)).map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('\n      ')}
       <li><details class="nm"><summary>${L === 'en' ? 'More' : 'Więcej'}</summary><ul>${nav.filter(([h]) => !NAV_MAIN.includes(h)).map(([h, l]) => `<li><a href="${up}${h}"${o.here === h && !o.depth ? ' aria-current="page"' : ''}>${esc(l)}</a></li>`).join('')}</ul></details></li>

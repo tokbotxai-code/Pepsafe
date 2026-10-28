@@ -559,3 +559,15 @@ select option, select optgroup { background-color: var(--paper2); color: var(--i
 .cmpopt:hover,.cmpopt:focus-visible{background:var(--tint);outline:none}
 .cmpopt b{font-weight:600;font-size:16px}
 .cmpopt .fcat{color:var(--ink3);font-size:13px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* wordmark: a soft light sweeps across the name every few seconds */
+.wm { color: var(--ink); }
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .wm { background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 38%, var(--k2) 48%, var(--k1) 52%, var(--ink) 62%, var(--ink) 100%); background-size: 260% 100%; background-position: 100% 0;
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: wmshine 7s ease-in-out infinite; }
+}
+.brand:hover .wm { animation-duration: 1.6s; letter-spacing: -.01em; }
+.wm { transition: letter-spacing .35s cubic-bezier(.2,.8,.2,1); }
+@keyframes wmshine { 0%, 55% { background-position: 100% 0; } 100% { background-position: 0 0; } }
+html.still .wm { animation: none; background: none; -webkit-text-fill-color: currentColor; color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .wm { animation: none; background: none; -webkit-text-fill-color: currentColor; color: var(--ink); } }
