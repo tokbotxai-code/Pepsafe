@@ -232,7 +232,7 @@
     var sout = document.getElementById('syOut'), shint = document.getElementById('syHint'),
         stabs = document.getElementById('syTabs'), snote = document.getElementById('syNote'), sc = document.getElementById('syChips');
     var LG = html.lang === 'pl' ? 1 : ES ? 2 : 0;
-    var fold = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+    var fold = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ł/g, 'l'); };
     // [label en|pl|es, words people type, stems to look for in the page language]
     var SYM = [
       [['nausea', 'nudności', 'náuseas'], 'nausea nudnosc mdlosc niedobrze mdli', 'nudnosc|nausea'],
