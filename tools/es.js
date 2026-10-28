@@ -19,6 +19,13 @@ const missingMode = process.argv.includes('--missing');
   TM['In depth'] = TM['In depth'] || 'En detalle';
 }
 
+// EN->ES pairs of the steroids section, written by tools/sterydy.js during the v4 build
+{
+  const f = path.join(__dirname, 'sterydy-tm.json');
+  if (fs.existsSync(f)) Object.assign(TM, JSON.parse(fs.readFileSync(f, 'utf8')));
+  TM['Steroids'] = TM['Steroids'] || 'Esteroides';
+}
+
 const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-busy', 'data-off', 'data-on', 'data-base', 'data-report', 'value'];
 const META = /<meta (name|property)="(description|og:title|og:description|twitter:title|twitter:description)" content="([^"]*)">/g;
 const norm = s => s.replace(/\s+/g, ' ').trim();

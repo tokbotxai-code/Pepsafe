@@ -1,0 +1,652 @@
+[
+ {
+  "id": "testosterone-gel",
+  "n": "Testosterone gel",
+  "nm": {
+   "pl": "Żel z testosteronem",
+   "es": "Gel de testosterona"
+  },
+  "alt": {
+   "en": "Topical testosterone replacement",
+   "pl": "Miejscowa terapia zastępcza testosteronem",
+   "es": "Reemplazo tópico de testosterona"
+  },
+  "cls": "pro",
+  "form": "top",
+  "q": "testosterone gel",
+  "what": {
+   "en": "Testosterone gel is rubbed onto the skin, usually on the shoulders, arms or abdomen, and absorbed into the blood over the day. It is one of the most common ways to give medical testosterone replacement.",
+   "pl": "Żel z testosteronem wciera się w skórę, zwykle na ramionach, barkach lub brzuchu, a on wchłania się do krwi w ciągu dnia. To jeden z najczęstszych sposobów medycznej terapii zastępczej testosteronem.",
+   "es": "El gel de testosterona se extiende sobre la piel, normalmente en hombros, brazos o abdomen, y se absorbe a la sangre a lo largo del día. Es una de las formas más habituales de reemplazo médico de testosterona."
+  },
+  "how": {
+   "en": "Testosterone passes through the skin and enters the blood, where it acts like the natural hormone. Because it is steady through the day, levels stay more even than with some injections.",
+   "pl": "Testosteron przenika przez skórę do krwi, gdzie działa jak naturalny hormon. Ponieważ uwalnia się równomiernie w ciągu dnia, poziom jest stabilniejszy niż przy niektórych iniekcjach.",
+   "es": "La testosterona atraviesa la piel y pasa a la sangre, donde actúa como la hormona natural. Al liberarse de forma uniforme durante el día, los niveles son más estables que con algunas inyecciones."
+  },
+  "med": {
+   "en": "It is approved for men with low testosterone caused by a medical condition. Doctors check blood levels to adjust treatment.",
+   "pl": "Jest zatwierdzony dla mężczyzn z niskim poziomem testosteronu spowodowanym schorzeniem. Lekarze kontrolują poziom we krwi, by dostosować leczenie.",
+   "es": "Está aprobado para hombres con testosterona baja causada por una enfermedad. Los médicos controlan los niveles en sangre para ajustar el tratamiento."
+  },
+  "risk": {
+   "en": "Its label carries a boxed warning for secondary exposure: testosterone can transfer to a partner or child through skin contact and cause unwanted effects, so the area must be covered or washed. It shares the other risks of testosterone, such as thicker blood and raised blood pressure.",
+   "pl": "Jego ulotka zawiera ostrzeżenie w ramce o narażeniu wtórnym: testosteron może przenieść się przez kontakt skórny na partnera lub dziecko i wywołać niepożądane skutki, dlatego miejsce trzeba zakryć lub umyć. Ma też pozostałe ryzyka testosteronu, jak gęstsza krew i wyższe ciśnienie.",
+   "es": "Su prospecto lleva una advertencia en recuadro por exposición secundaria: la testosterona puede transferirse a una pareja o a un niño por contacto con la piel y causar efectos no deseados, por lo que la zona debe taparse o lavarse. Comparte los demás riesgos de la testosterona, como la sangre más espesa y la presión arterial alta."
+  },
+  "pros": {
+   "en": [
+    "Steady levels through the day",
+    "Needle-free",
+    "Easy for a doctor to adjust"
+   ],
+   "pl": [
+    "Stabilny poziom w ciągu dnia",
+    "Bez igły",
+    "Łatwy do dostosowania przez lekarza"
+   ],
+   "es": [
+    "Niveles estables durante el día",
+    "Sin agujas",
+    "Fácil de ajustar por el médico"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Can transfer to others by skin contact",
+    "Skin irritation in some people",
+    "Daily routine to keep up"
+   ],
+   "pl": [
+    "Może przenieść się na inne osoby przez kontakt skórny",
+    "U niektórych podrażnia skórę",
+    "Wymaga codziennej rutyny"
+   ],
+   "es": [
+    "Puede transferirse a otras personas por contacto con la piel",
+    "Irrita la piel en algunas personas",
+    "Exige una rutina diaria"
+   ]
+  }
+ },
+ {
+  "id": "dhea",
+  "n": "DHEA",
+  "nm": {
+   "pl": "DHEA",
+   "es": "DHEA"
+  },
+  "alt": {
+   "en": "Dehydroepiandrosterone, a hormone precursor",
+   "pl": "Dehydroepiandrosteron, prekursor hormonów",
+   "es": "Dehidroepiandrosterona, un precursor hormonal"
+  },
+  "cls": "pro",
+  "form": "oral",
+  "q": "DHEA dehydroepiandrosterone",
+  "what": {
+   "en": "DHEA is a hormone made by the adrenal glands that the body turns into testosterone and oestrogen. Its natural levels peak in young adulthood and fall with age.",
+   "pl": "DHEA to hormon wytwarzany przez nadnercza, który organizm zamienia w testosteron i estrogen. Jego naturalny poziom osiąga szczyt we wczesnej dorosłości i spada z wiekiem.",
+   "es": "La DHEA es una hormona producida por las glándulas suprarrenales que el cuerpo transforma en testosterona y estrógeno. Sus niveles naturales alcanzan el máximo en la juventud y bajan con la edad."
+  },
+  "how": {
+   "en": "It acts as a precursor, so its effects depend on how much the body converts into sex hormones. Conversion varies between people, and between men and women.",
+   "pl": "Działa jako prekursor, więc jego skutki zależą od tego, ile organizm zamieni na hormony płciowe. Przemiana różni się między ludźmi oraz między mężczyznami i kobietami.",
+   "es": "Actúa como precursor, así que sus efectos dependen de cuánto convierta el cuerpo en hormonas sexuales. La conversión varía entre personas y entre hombres y mujeres."
+  },
+  "med": {
+   "en": "A vaginal form of the related compound prasterone is approved in some countries for menopausal vaginal dryness. Oral DHEA is sold as a supplement in the US and has been studied for ageing, adrenal insufficiency and fertility, with mixed results.",
+   "pl": "Postać dopochwowa pokrewnego związku, prasteronu, jest zatwierdzona w niektórych krajach w suchości pochwy po menopauzie. Doustne DHEA sprzedaje się w USA jako suplement i badano je w starzeniu, niewydolności nadnerczy i płodności, z mieszanymi wynikami.",
+   "es": "Una forma vaginal del compuesto relacionado prasterona está aprobada en algunos países para la sequedad vaginal de la menopausia. La DHEA oral se vende como suplemento en EE. UU. y se ha estudiado en el envejecimiento, la insuficiencia suprarrenal y la fertilidad, con resultados mixtos."
+  },
+  "risk": {
+   "en": "Because it feeds the sex-hormone system, it can cause acne, oily skin, facial hair in women and hormone-sensitive effects in people with hormone-driven cancers. Product strength has been found to vary in tests of supplements.",
+   "pl": "Ponieważ zasila układ hormonów płciowych, może powodować trądzik, tłustą skórę, owłosienie twarzy u kobiet oraz skutki u osób z nowotworami zależnymi od hormonów. W badaniach suplementów stwierdzano zróżnicowaną zawartość substancji.",
+   "es": "Como alimenta el sistema de hormonas sexuales, puede causar acné, piel grasa, vello facial en mujeres y efectos en personas con cánceres dependientes de hormonas. En análisis de suplementos se ha encontrado que la concentración varía."
+  },
+  "status": {
+   "en": "Sold as a dietary supplement in the US, where it is not a controlled drug. It is not licensed as a supplement in the UK or EU, where rules are stricter, and it is prohibited in sport.",
+   "pl": "W USA sprzedawany jako suplement diety, gdzie nie jest substancją kontrolowaną. W Wielkiej Brytanii i UE nie jest dopuszczony jako suplement, a przepisy są ostrzejsze, i jest zabroniony w sporcie.",
+   "es": "Se vende como complemento alimenticio en EE. UU., donde no es una sustancia controlada. No está autorizado como suplemento en el Reino Unido ni en la UE, donde las normas son más estrictas, y está prohibido en el deporte."
+  },
+  "pros": {
+   "en": [
+    "A natural hormone the body already makes",
+    "Studied in several conditions",
+    "Legal as a supplement in the US"
+   ],
+   "pl": [
+    "Naturalny hormon, który organizm już wytwarza",
+    "Badany w kilku schorzeniach",
+    "Legalny jako suplement w USA"
+   ],
+   "es": [
+    "Una hormona natural que el cuerpo ya fabrica",
+    "Estudiada en varias afecciones",
+    "Legal como suplemento en EE. UU."
+   ]
+  },
+  "cons": {
+   "en": [
+    "Evidence of benefit is weak or mixed",
+    "Unpredictable conversion into sex hormones",
+    "Prohibited in sport and unlicensed in the UK and EU"
+   ],
+   "pl": [
+    "Dowody korzyści są słabe lub niejednoznaczne",
+    "Nieprzewidywalna przemiana w hormony płciowe",
+    "Zabroniony w sporcie i niedopuszczony w Wielkiej Brytanii i UE"
+   ],
+   "es": [
+    "La evidencia de beneficio es débil o mixta",
+    "Conversión impredecible en hormonas sexuales",
+    "Prohibida en el deporte y sin licencia en el Reino Unido y la UE"
+   ]
+  }
+ },
+ {
+  "id": "androstenedione",
+  "n": "Androstenedione",
+  "nm": {
+   "pl": "Androstendion",
+   "es": "Androstenediona"
+  },
+  "alt": {
+   "en": "Testosterone precursor, a controlled “prohormone”",
+   "pl": "Prekursor testosteronu, kontrolowany „prohormon”",
+   "es": "Precursor de la testosterona, una “prohormona” controlada"
+  },
+  "cls": "pro",
+  "form": "oral",
+  "q": "androstenedione",
+  "what": {
+   "en": "Androstenedione is a hormone made in the adrenal glands and gonads that is one step away from testosterone and oestrogen. In the 1990s it was sold as a supplement for athletes.",
+   "pl": "Androstendion to hormon wytwarzany w nadnerczach i gonadach, o jeden krok od testosteronu i estrogenu. W latach 90. sprzedawano go jako suplement dla sportowców.",
+   "es": "La androstenediona es una hormona producida en las glándulas suprarrenales y las gónadas, a un paso de la testosterona y del estrógeno. En la década de 1990 se vendía como suplemento para deportistas."
+  },
+  "how": {
+   "en": "The body converts it into testosterone and oestrogen. In studies, it raised oestrogen much more than testosterone, so it did not live up to its marketing as a muscle builder.",
+   "pl": "Organizm zamienia go w testosteron i estrogen. W badaniach podnosił znacznie bardziej estrogen niż testosteron, więc nie spełnił obietnic marketingu jako środek na masę mięśniową.",
+   "es": "El cuerpo lo convierte en testosterona y estrógeno. En los estudios elevó mucho más el estrógeno que la testosterona, así que no cumplió lo que prometía su publicidad como constructor de músculo."
+  },
+  "med": {
+   "en": "It has no approved medical use.",
+   "pl": "Nie ma zatwierdzonego zastosowania medycznego.",
+   "es": "No tiene ningún uso médico aprobado."
+  },
+  "risk": {
+   "en": "Studies found raised oestrogen and falling HDL cholesterol in men, plus acne and, in women, masculinising effects. Since it behaves like a steroid in the body, the US moved it under controls.",
+   "pl": "Badania wykazały podwyższony estrogen i spadek cholesterolu HDL u mężczyzn, a także trądzik i maskulinizację u kobiet. Ponieważ w organizmie zachowuje się jak steroid, w USA objęto go kontrolą.",
+   "es": "Los estudios encontraron estrógeno elevado y descenso del colesterol HDL en hombres, además de acné y, en mujeres, efectos masculinizantes. Como en el cuerpo se comporta como un esteroide, EE. UU. lo sometió a control."
+  },
+  "status": {
+   "en": "Controlled as an anabolic steroid in the US (Schedule III) since 2005, after being sold as a supplement, and prohibited in sport.",
+   "pl": "W USA objęty kontrolą jako steroid anaboliczny (lista III) od 2005 roku, po okresie sprzedaży jako suplement, i zabroniony w sporcie.",
+   "es": "Controlada como esteroide anabólico en EE. UU. (lista III) desde 2005, tras venderse como suplemento, y prohibida en el deporte."
+  },
+  "pros": {
+   "en": [
+    "Naturally made by the body",
+    "Studied in controlled trials",
+    "Useful historical case of a supplement being reclassified"
+   ],
+   "pl": [
+    "Naturalnie wytwarzany przez organizm",
+    "Badany w kontrolowanych badaniach",
+    "Pouczający przykład suplementu przeklasyfikowanego na substancję kontrolowaną"
+   ],
+   "es": [
+    "Fabricada de forma natural por el cuerpo",
+    "Estudiada en ensayos controlados",
+    "Caso histórico útil de un suplemento reclasificado"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Raises oestrogen and lowers HDL cholesterol",
+    "No approved medical use",
+    "Controlled in the US and banned in sport"
+   ],
+   "pl": [
+    "Podnosi estrogen i obniża cholesterol HDL",
+    "Brak zatwierdzonego zastosowania medycznego",
+    "Kontrolowany w USA i zakazany w sporcie"
+   ],
+   "es": [
+    "Eleva el estrógeno y baja el colesterol HDL",
+    "Sin uso médico aprobado",
+    "Controlada en EE. UU. y prohibida en el deporte"
+   ]
+  }
+ },
+ {
+  "id": "tibolone",
+  "n": "Tibolone",
+  "nm": {
+   "pl": "Tibolon",
+   "es": "Tibolona"
+  },
+  "alt": {
+   "en": "Menopause drug with hormonal activity, “Livial”",
+   "pl": "Lek na menopauzę o działaniu hormonalnym, „Livial”",
+   "es": "Fármaco para la menopausia con actividad hormonal, “Livial”"
+  },
+  "cls": "pro",
+  "form": "oral",
+  "q": "tibolone",
+  "what": {
+   "en": "Tibolone is a synthetic steroid used for menopause symptoms. Its metabolites act on oestrogen, progesterone and androgen receptors.",
+   "pl": "Tibolon to syntetyczny steroid stosowany w objawach menopauzy. Jego metabolity działają na receptory estrogenowe, progesteronowe i androgenowe.",
+   "es": "La tibolona es un esteroide sintético que se usa para los síntomas de la menopausia. Sus metabolitos actúan sobre receptores de estrógeno, progesterona y andrógenos."
+  },
+  "how": {
+   "en": "The body breaks it into three active forms with different effects in different tissues. That mix is what gives it a mild androgenic effect on top of its oestrogen-like one.",
+   "pl": "Organizm rozkłada go na trzy aktywne formy o różnym działaniu w różnych tkankach. Ta mieszanka daje mu łagodne działanie androgenne obok działania podobnego do estrogenów.",
+   "es": "El cuerpo lo descompone en tres formas activas con efectos distintos en cada tejido. Esa combinación le da un leve efecto androgénico además del parecido a los estrógenos."
+  },
+  "med": {
+   "en": "It is approved in the UK and many other countries for menopausal symptoms and the prevention of bone loss after menopause. It is not approved in the US.",
+   "pl": "Jest zatwierdzony w Wielkiej Brytanii i wielu innych krajach przy objawach menopauzy i zapobieganiu utracie kości po menopauzie. Nie jest zatwierdzony w USA.",
+   "es": "Está aprobada en el Reino Unido y en muchos otros países para los síntomas de la menopausia y la prevención de la pérdida ósea tras la menopausia. No está aprobada en EE. UU."
+  },
+  "risk": {
+   "en": "Trials linked it to a higher risk of stroke in older women, and in breast cancer survivors it raised the chance of the cancer returning, so it is not used in that group. Like other hormone therapy, it needs a doctor’s judgement of benefits and risks.",
+   "pl": "Badania powiązały go z większym ryzykiem udaru u starszych kobiet, a u kobiet po raku piersi zwiększył szansę nawrotu, dlatego nie stosuje się go w tej grupie. Jak inna terapia hormonalna wymaga oceny korzyści i ryzyka przez lekarza.",
+   "es": "Los ensayos lo vincularon con un mayor riesgo de ictus en mujeres mayores, y en supervivientes de cáncer de mama aumentó la probabilidad de recaída, por lo que no se usa en ese grupo. Como otras terapias hormonales, requiere que un médico valore beneficios y riesgos."
+  },
+  "pros": {
+   "en": [
+    "Treats hot flushes and protects bone",
+    "Mild androgenic effect on mood and libido in some women",
+    "Licensed in many countries"
+   ],
+   "pl": [
+    "Łagodzi uderzenia gorąca i chroni kości",
+    "Łagodne działanie androgenne na nastrój i libido u części kobiet",
+    "Zarejestrowany w wielu krajach"
+   ],
+   "es": [
+    "Alivia los sofocos y protege el hueso",
+    "Leve efecto androgénico sobre el ánimo y la libido en algunas mujeres",
+    "Autorizada en muchos países"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Higher stroke risk in older women",
+    "Not safe after breast cancer",
+    "Not approved in the US"
+   ],
+   "pl": [
+    "Wyższe ryzyko udaru u starszych kobiet",
+    "Niebezpieczny po raku piersi",
+    "Niezatwierdzony w USA"
+   ],
+   "es": [
+    "Mayor riesgo de ictus en mujeres mayores",
+    "No es seguro tras un cáncer de mama",
+    "No está aprobada en EE. UU."
+   ]
+  }
+ },
+ {
+  "id": "ostarine",
+  "n": "Ostarine",
+  "nm": {
+   "pl": "Ostaryna",
+   "es": "Ostarina"
+  },
+  "alt": {
+   "en": "Enobosarm, a SARM that never got approved",
+   "pl": "Enobosarm, SARM, który nigdy nie został zatwierdzony",
+   "es": "Enobosarm, un SARM que nunca fue aprobado"
+  },
+  "cls": "sarm",
+  "form": "oral",
+  "q": "enobosarm ostarine",
+  "label": false,
+  "what": {
+   "en": "Ostarine, also called enobosarm, is the best-known SARM. It was developed as a drug to prevent muscle loss in cancer patients and was never approved.",
+   "pl": "Ostaryna, zwana też enobosarmem, to najbardziej znany SARM. Opracowano ją jako lek zapobiegający utracie mięśni u chorych na raka i nigdy nie została zatwierdzona.",
+   "es": "La ostarina, también llamada enobosarm, es el SARM más conocido. Se desarrolló como fármaco para evitar la pérdida de músculo en pacientes con cáncer y nunca fue aprobada."
+  },
+  "how": {
+   "en": "It binds androgen receptors in muscle and bone more selectively than testosterone. Even so, it lowers the body’s own testosterone and HDL cholesterol in trials.",
+   "pl": "Wiąże się z receptorami androgenowymi w mięśniach i kościach bardziej selektywnie niż testosteron. Mimo to w badaniach obniżała własny testosteron organizmu i cholesterol HDL.",
+   "es": "Se une a los receptores de andrógenos del músculo y el hueso de forma más selectiva que la testosterona. Aun así, en los ensayos redujo la testosterona del propio cuerpo y el colesterol HDL."
+  },
+  "med": {
+   "en": "Phase 3 trials in cancer-related muscle loss did not meet their goals, and the company stopped development. It has no approved use anywhere.",
+   "pl": "Badania III fazy przy utracie mięśni związanej z rakiem nie osiągnęły celów, a firma przerwała prace. Nie ma zatwierdzonego zastosowania nigdzie.",
+   "es": "Los ensayos de fase 3 en la pérdida de músculo asociada al cáncer no alcanzaron sus objetivos y la empresa detuvo el desarrollo. No tiene ningún uso aprobado en ningún lugar."
+  },
+  "risk": {
+   "en": "Besides suppressed testosterone and lower HDL, there are reports of liver injury linked to products sold as SARMs. Products sold online have also been found to contain a different dose than labelled, or other compounds.",
+   "pl": "Oprócz obniżonego testosteronu i niższego HDL są doniesienia o uszkodzeniu wątroby związanym z produktami sprzedawanymi jako SARM-y. Produkty sprzedawane w internecie zawierały też inną dawkę, niż deklarowano, albo inne związki.",
+   "es": "Además de la testosterona suprimida y el HDL más bajo, hay informes de lesión hepática asociada a productos vendidos como SARM. Los productos vendidos en línea también han contenido una cantidad distinta de la etiquetada u otros compuestos."
+  },
+  "pros": {
+   "en": [
+    "Studied in human trials",
+    "More selective than a steroid in design",
+    "Taken by mouth"
+   ],
+   "pl": [
+    "Badana w badaniach klinicznych na ludziach",
+    "W założeniu bardziej selektywna niż steroid",
+    "Przyjmowana doustnie"
+   ],
+   "es": [
+    "Estudiada en ensayos en humanos",
+    "En su diseño, más selectiva que un esteroide",
+    "Se toma por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Never approved, and the trials missed their goals",
+    "Still lowers natural testosterone and HDL",
+    "Online products are unregulated and may be mislabelled"
+   ],
+   "pl": [
+    "Nigdy nie zatwierdzona, a badania nie osiągnęły celów",
+    "Nadal obniża naturalny testosteron i HDL",
+    "Produkty z internetu nie są regulowane i mogą być źle oznaczone"
+   ],
+   "es": [
+    "Nunca aprobada y los ensayos no alcanzaron sus objetivos",
+    "Aun así baja la testosterona natural y el HDL",
+    "Los productos en línea no están regulados y pueden estar mal etiquetados"
+   ]
+  }
+ },
+ {
+  "id": "ligandrol",
+  "n": "Ligandrol",
+  "nm": {
+   "pl": "Ligandrol",
+   "es": "Ligandrol"
+  },
+  "alt": {
+   "en": "LGD-4033, an experimental SARM",
+   "pl": "LGD-4033, eksperymentalny SARM",
+   "es": "LGD-4033, un SARM experimental"
+  },
+  "cls": "sarm",
+  "form": "oral",
+  "q": "LGD-4033 ligandrol",
+  "label": false,
+  "what": {
+   "en": "Ligandrol, or LGD-4033, is an experimental SARM that was tested in early human trials and never approved.",
+   "pl": "Ligandrol, czyli LGD-4033, to eksperymentalny SARM badany we wczesnych badaniach na ludziach i nigdy niezatwierdzony.",
+   "es": "El ligandrol, o LGD-4033, es un SARM experimental que se probó en ensayos tempranos en humanos y nunca fue aprobado."
+  },
+  "how": {
+   "en": "It binds androgen receptors with a stronger pull in muscle than in some other tissues. A small trial in healthy men found more lean mass, but also a fall in HDL cholesterol and in the body’s own testosterone.",
+   "pl": "Wiąże się z receptorami androgenowymi, silniej w mięśniach niż w niektórych innych tkankach. W małym badaniu u zdrowych mężczyzn stwierdzono większą masę beztłuszczową, ale też spadek cholesterolu HDL i własnego testosteronu.",
+   "es": "Se une a los receptores de andrógenos con más fuerza en el músculo que en otros tejidos. Un ensayo pequeño en hombres sanos encontró más masa magra, pero también un descenso del colesterol HDL y de la testosterona propia."
+  },
+  "med": {
+   "en": "It has no approved use. Research did not go beyond early-stage trials.",
+   "pl": "Nie ma zatwierdzonego zastosowania. Badania nie wyszły poza wczesne fazy.",
+   "es": "No tiene ningún uso aprobado. La investigación no pasó de las fases tempranas."
+  },
+  "risk": {
+   "en": "Case reports describe serious liver injury in people who took products sold as ligandrol, as well as long suppression of natural testosterone. Because the products are unregulated, their content is uncertain.",
+   "pl": "Opisy przypadków dotyczą poważnego uszkodzenia wątroby u osób, które przyjmowały produkty sprzedawane jako ligandrol, oraz długiego hamowania naturalnego testosteronu. Ponieważ produkty nie są regulowane, ich zawartość jest niepewna.",
+   "es": "Los informes de casos describen lesión hepática grave en personas que tomaron productos vendidos como ligandrol, además de una supresión prolongada de la testosterona natural. Al no estar regulados, el contenido de los productos es incierto."
+  },
+  "pros": {
+   "en": [
+    "Early trial showed a rise in lean mass",
+    "Designed to be more selective than a steroid",
+    "Has some human data"
+   ],
+   "pl": [
+    "Wczesne badanie wykazało wzrost masy beztłuszczowej",
+    "Zaprojektowany jako bardziej selektywny niż steroid",
+    "Ma pewne dane z badań na ludziach"
+   ],
+   "es": [
+    "Un ensayo temprano mostró aumento de masa magra",
+    "Diseñado para ser más selectivo que un esteroide",
+    "Cuenta con algunos datos en humanos"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Not approved and no long-term safety data",
+    "Liver injury in case reports",
+    "Strong suppression of natural testosterone"
+   ],
+   "pl": [
+    "Niezatwierdzony i brak danych o długoterminowym bezpieczeństwie",
+    "Uszkodzenie wątroby w opisach przypadków",
+    "Silne hamowanie naturalnego testosteronu"
+   ],
+   "es": [
+    "No aprobado y sin datos de seguridad a largo plazo",
+    "Lesión hepática en informes de casos",
+    "Fuerte supresión de la testosterona natural"
+   ]
+  }
+ },
+ {
+  "id": "rad140",
+  "n": "RAD140",
+  "nm": {
+   "pl": "RAD140",
+   "es": "RAD140"
+  },
+  "alt": {
+   "en": "Testolone, a SARM from early research",
+   "pl": "Testolon, SARM z wczesnych badań",
+   "es": "Testolona, un SARM de investigación temprana"
+  },
+  "cls": "sarm",
+  "form": "oral",
+  "q": "RAD140 testolone",
+  "label": false,
+  "what": {
+   "en": "RAD140, also called testolone, is an experimental SARM that has only been studied in animals and lab work.",
+   "pl": "RAD140, zwany też testolonem, to eksperymentalny SARM badany wyłącznie na zwierzętach i w laboratorium.",
+   "es": "El RAD140, también llamado testolona, es un SARM experimental que solo se ha estudiado en animales y en el laboratorio."
+  },
+  "how": {
+   "en": "It binds androgen receptors and in animal studies increased muscle and bone. No full human trials of safety or benefit have been published.",
+   "pl": "Wiąże się z receptorami androgenowymi, a w badaniach na zwierzętach zwiększał mięśnie i kości. Nie opublikowano pełnych badań na ludziach dotyczących bezpieczeństwa czy korzyści.",
+   "es": "Se une a los receptores de andrógenos y en estudios con animales aumentó el músculo y el hueso. No se han publicado ensayos humanos completos de seguridad o beneficio."
+  },
+  "med": {
+   "en": "It has no approved use and no completed human trials, so any claim about benefits in people goes beyond the evidence.",
+   "pl": "Nie ma zatwierdzonego zastosowania ani zakończonych badań na ludziach, więc każde twierdzenie o korzyściach u ludzi wykracza poza dowody.",
+   "es": "No tiene ningún uso aprobado ni ensayos humanos terminados, por lo que cualquier afirmación sobre beneficios en personas va más allá de la evidencia."
+  },
+  "risk": {
+   "en": "A published case report described serious liver injury in a man who took a product containing it. With no human safety data, the full list of harms is simply not known.",
+   "pl": "Opublikowany opis przypadku dotyczył ciężkiego uszkodzenia wątroby u mężczyzny, który przyjmował produkt zawierający tę substancję. Bez danych o bezpieczeństwie u ludzi pełna lista szkód po prostu nie jest znana.",
+   "es": "Un informe de caso publicado describió una lesión hepática grave en un hombre que tomó un producto que la contenía. Sin datos de seguridad en humanos, la lista completa de daños sencillamente se desconoce."
+  },
+  "pros": {
+   "en": [
+    "Muscle and bone effects in animal studies",
+    "Designed to be selective",
+    "Active area of laboratory research"
+   ],
+   "pl": [
+    "Wpływ na mięśnie i kości w badaniach na zwierzętach",
+    "Zaprojektowany jako selektywny",
+    "Aktywny obszar badań laboratoryjnych"
+   ],
+   "es": [
+    "Efectos sobre músculo y hueso en estudios con animales",
+    "Diseñado para ser selectivo",
+    "Área activa de investigación de laboratorio"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No human trials",
+    "A published liver injury case",
+    "Sold unregulated with unknown content"
+   ],
+   "pl": [
+    "Brak badań na ludziach",
+    "Opublikowany przypadek uszkodzenia wątroby",
+    "Sprzedawany bez regulacji, o nieznanej zawartości"
+   ],
+   "es": [
+    "Sin ensayos en humanos",
+    "Un caso publicado de lesión hepática",
+    "Se vende sin regulación y con contenido desconocido"
+   ]
+  }
+ },
+ {
+  "id": "andarine",
+  "n": "Andarine",
+  "nm": {
+   "pl": "Andaryna",
+   "es": "Andarina"
+  },
+  "alt": {
+   "en": "S-4, a SARM with visual side effects",
+   "pl": "S-4, SARM ze skutkami ubocznymi dotyczącymi wzroku",
+   "es": "S-4, un SARM con efectos secundarios visuales"
+  },
+  "cls": "sarm",
+  "form": "oral",
+  "q": "andarine S-4",
+  "label": false,
+  "what": {
+   "en": "Andarine, also called S-4, is an early experimental SARM that was never developed into a medicine.",
+   "pl": "Andaryna, zwana też S-4, to wczesny eksperymentalny SARM, który nigdy nie został rozwinięty w lek.",
+   "es": "La andarina, también llamada S-4, es un SARM experimental temprano que nunca se desarrolló como medicamento."
+  },
+  "how": {
+   "en": "It binds androgen receptors and in animals increased muscle and bone mass. Its development stopped, and human data are almost entirely missing.",
+   "pl": "Wiąże się z receptorami androgenowymi, a u zwierząt zwiększała masę mięśni i kości. Prace nad nią zatrzymano, a dane u ludzi praktycznie nie istnieją.",
+   "es": "Se une a los receptores de andrógenos y en animales aumentó la masa de músculo y hueso. Su desarrollo se detuvo y los datos en humanos casi no existen."
+  },
+  "med": {
+   "en": "It has no approved use.",
+   "pl": "Nie ma zatwierdzonego zastosowania.",
+   "es": "No tiene ningún uso aprobado."
+  },
+  "risk": {
+   "en": "People who used products sold as andarine report visual problems such as altered colour vision and trouble seeing in the dark, along with the same suppression of natural testosterone seen with other SARMs.",
+   "pl": "Osoby stosujące produkty sprzedawane jako andaryna zgłaszają problemy ze wzrokiem, takie jak zmieniony odbiór kolorów i trudności z widzeniem po ciemku, oraz takie samo hamowanie naturalnego testosteronu jak przy innych SARM-ach.",
+   "es": "Quienes usaron productos vendidos como andarina refieren problemas visuales, como alteración de la visión del color y dificultad para ver en la oscuridad, además de la misma supresión de la testosterona natural que se ve con otros SARM."
+  },
+  "pros": {
+   "en": [
+    "Muscle and bone effects in animals",
+    "Designed to be selective",
+    "Documented as an early SARM lead"
+   ],
+   "pl": [
+    "Wpływ na mięśnie i kości u zwierząt",
+    "Zaprojektowana jako selektywna",
+    "Udokumentowana jako wczesny kandydat na SARM"
+   ],
+   "es": [
+    "Efectos sobre músculo y hueso en animales",
+    "Diseñada para ser selectiva",
+    "Documentada como una de las primeras candidatas a SARM"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Visual side effects",
+    "No human safety data",
+    "Unregulated products of unknown content"
+   ],
+   "pl": [
+    "Skutki uboczne dotyczące wzroku",
+    "Brak danych o bezpieczeństwie u ludzi",
+    "Nieregulowane produkty o nieznanej zawartości"
+   ],
+   "es": [
+    "Efectos secundarios visuales",
+    "Sin datos de seguridad en humanos",
+    "Productos no regulados de contenido desconocido"
+   ]
+  }
+ },
+ {
+  "id": "cardarine",
+  "n": "Cardarine",
+  "nm": {
+   "pl": "Kardaryna",
+   "es": "Cardarina"
+  },
+  "alt": {
+   "en": "GW501516, not a SARM and not a steroid",
+   "pl": "GW501516, to nie SARM i nie steroid",
+   "es": "GW501516, ni SARM ni esteroide"
+  },
+  "cls": "sarm",
+  "form": "oral",
+  "q": "GW501516 cardarine",
+  "label": false,
+  "what": {
+   "en": "Cardarine, or GW501516, is often grouped with SARMs but is a different kind of compound, a PPAR-delta agonist. It was developed for metabolic disease and abandoned.",
+   "pl": "Kardaryna, czyli GW501516, jest często wrzucana do jednego worka z SARM-ami, ale to inny rodzaj związku, agonista PPAR-delta. Opracowano ją w chorobach metabolicznych i porzucono.",
+   "es": "La cardarina, o GW501516, suele agruparse con los SARM, pero es un tipo de compuesto distinto, un agonista de PPAR-delta. Se desarrolló para enfermedades metabólicas y se abandonó."
+  },
+  "how": {
+   "en": "It switches on a cell-energy switch that makes muscle burn more fat, and in animals it raised endurance. It does not act on androgen receptors.",
+   "pl": "Włącza przełącznik energetyczny komórek, przez który mięśnie spalają więcej tłuszczu, a u zwierząt zwiększała wytrzymałość. Nie działa na receptory androgenowe.",
+   "es": "Activa un interruptor de energía celular que hace que el músculo queme más grasa y, en animales, aumentó la resistencia. No actúa sobre los receptores de andrógenos."
+  },
+  "med": {
+   "en": "GlaxoSmithKline stopped development in 2007 because long animal studies found cancers in several organs. It has no approved use.",
+   "pl": "GlaxoSmithKline przerwało prace w 2007 roku, bo długie badania na zwierzętach wykazały nowotwory w kilku narządach. Nie ma zatwierdzonego zastosowania.",
+   "es": "GlaxoSmithKline detuvo el desarrollo en 2007 porque estudios largos en animales encontraron cánceres en varios órganos. No tiene ningún uso aprobado."
+  },
+  "risk": {
+   "en": "The animal cancer findings are the central concern, and nobody has shown that the risk does not apply to people. Anti-doping bodies have issued warnings and it is on the WADA list.",
+   "pl": "Wyniki dotyczące raka u zwierząt są głównym powodem obaw i nikt nie wykazał, że ryzyko nie dotyczy ludzi. Organizacje antydopingowe wydały ostrzeżenia, a substancja jest na liście WADA.",
+   "es": "Los hallazgos de cáncer en animales son la principal preocupación y nadie ha demostrado que el riesgo no se aplique a las personas. Los organismos antidopaje han emitido advertencias y figura en la lista de la AMA."
+  },
+  "wada": {
+   "en": "WADA prohibits it at all times as a metabolic modulator (category S4) and has warned athletes against it.",
+   "pl": "WADA zakazuje jej przez cały czas jako modulatora metabolizmu (kategoria S4) i ostrzegała przed nią sportowców.",
+   "es": "La AMA la prohíbe en todo momento como modulador metabólico (categoría S4) y ha advertido a los deportistas contra ella."
+  },
+  "pros": {
+   "en": [
+    "Raised endurance in animal studies",
+    "Not a hormone and not a steroid",
+    "Studied in early human trials for metabolic disease"
+   ],
+   "pl": [
+    "Zwiększała wytrzymałość w badaniach na zwierzętach",
+    "To nie hormon i nie steroid",
+    "Badana we wczesnych badaniach na ludziach w chorobach metabolicznych"
+   ],
+   "es": [
+    "Aumentó la resistencia en estudios con animales",
+    "No es una hormona ni un esteroide",
+    "Estudiada en ensayos humanos tempranos de enfermedad metabólica"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Cancers in several organs in animal studies",
+    "Development stopped for safety",
+    "Prohibited in sport"
+   ],
+   "pl": [
+    "Nowotwory w kilku narządach w badaniach na zwierzętach",
+    "Prace przerwano z powodów bezpieczeństwa",
+    "Zabroniona w sporcie"
+   ],
+   "es": [
+    "Cánceres en varios órganos en estudios con animales",
+    "El desarrollo se detuvo por seguridad",
+    "Prohibida en el deporte"
+   ]
+  }
+ }
+]

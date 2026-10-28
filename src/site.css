@@ -501,3 +501,13 @@ details.qa p { margin: 8px 0 0; }
 .sres a { color: var(--ink); text-decoration: none; font-size: 1.05rem; }
 .sres a:hover { text-decoration: underline; }
 .sres p { margin: 6px 0 0; }
+
+/* steroids section: comparison tables and pros/cons columns */
+.tablewrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--line); border-radius: 14px; }
+.cmp { border-collapse: collapse; width: 100%; min-width: 640px; font-size: .92rem; }
+.cmp th, .cmp td { padding: 11px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.cmp thead th { font-weight: 600; color: var(--ink2); white-space: nowrap; }
+.cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
+.pcgrid { display: grid; gap: 18px; margin: 22px 0; }
+@media (min-width: 720px) { .pcgrid { grid-template-columns: 1fr 1fr; } }
+.pc ul { margin-top: 6px; }

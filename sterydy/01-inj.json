@@ -1,0 +1,674 @@
+[
+ {
+  "id": "testosterone",
+  "n": "Testosterone",
+  "alt": {
+   "en": "The main male sex hormone",
+   "pl": "Główny męski hormon płciowy",
+   "es": "La principal hormona sexual masculina"
+  },
+  "cls": "inj",
+  "form": "mix",
+  "q": "testosterone",
+  "what": {
+   "en": "Testosterone is the body’s main androgen, made mostly in the testes in men and in small amounts in the ovaries and adrenal glands in women. As a medicine it is made in several forms: injections, gels, patches and tablets.",
+   "pl": "Testosteron to główny androgen organizmu, wytwarzany głównie w jądrach u mężczyzn, a w małych ilościach w jajnikach i nadnerczach u kobiet. Jako lek występuje w kilku postaciach: iniekcje, żele, plastry i tabletki.",
+   "es": "La testosterona es el principal andrógeno del cuerpo, producido sobre todo en los testículos en los hombres y en pequeñas cantidades en los ovarios y las glándulas suprarrenales en las mujeres. Como medicamento existe en varias formas: inyecciones, geles, parches y comprimidos."
+  },
+  "how": {
+   "en": "It binds androgen receptors inside cells and switches on genes for muscle protein, bone, red blood cells and sexual development. Extra testosterone also tells the brain to make less of its own, so natural production falls.",
+   "pl": "Wiąże się z receptorami androgenowymi wewnątrz komórek i włącza geny odpowiedzialne za białka mięśni, kości, czerwone krwinki i rozwój płciowy. Dodatkowy testosteron mówi też mózgowi, żeby produkował mniej własnego, więc naturalna produkcja spada.",
+   "es": "Se une a los receptores de andrógenos dentro de las células y activa genes del músculo, el hueso, los glóbulos rojos y el desarrollo sexual. La testosterona adicional también le indica al cerebro que produzca menos de la propia, así que la producción natural baja."
+  },
+  "med": {
+   "en": "Doctors prescribe it to treat a proven deficiency, such as hypogonadism, where the body does not make enough, and to start puberty when it is delayed. The aim is to bring levels back into the normal range, not above it.",
+   "pl": "Lekarze przepisują go przy udokumentowanym niedoborze, na przykład w hipogonadyzmie, gdy organizm nie wytwarza go dość, oraz do wywołania dojrzewania, gdy jest opóźnione. Celem jest przywrócenie poziomu do normy, nie ponad nią.",
+   "es": "Los médicos lo recetan para tratar una deficiencia demostrada, como el hipogonadismo, en el que el cuerpo no produce lo suficiente, y para iniciar la pubertad cuando se retrasa. El objetivo es devolver los niveles al rango normal, no por encima."
+  },
+  "risk": {
+   "en": "Excess or unsupervised use is linked to a higher red blood cell count and thicker blood, raised blood pressure, worse cholesterol, acne, fluid retention, breast tissue growth in men, mood swings and a drop in sperm count that can last. In women it can deepen the voice and cause hair growth, and some of those changes do not reverse.",
+   "pl": "Nadmiar lub stosowanie bez nadzoru wiąże się z większą liczbą czerwonych krwinek i gęstszą krwią, wyższym ciśnieniem, gorszym cholesterolem, trądzikiem, zatrzymywaniem wody, rozrostem tkanki piersi u mężczyzn, wahaniami nastroju i spadkiem liczby plemników, który może się utrzymywać. U kobiet może pogłębić głos i wywołać owłosienie, a część zmian nie cofa się.",
+   "es": "El exceso o el uso sin supervisión se asocia con más glóbulos rojos y sangre más espesa, presión arterial alta, peor colesterol, acné, retención de líquidos, crecimiento de tejido mamario en hombres, cambios de humor y un descenso del recuento de espermatozoides que puede persistir. En las mujeres puede agravar la voz y provocar vello, y algunos de esos cambios no se revierten."
+  },
+  "pros": {
+   "en": [
+    "Proven medicine for a diagnosed deficiency, with decades of data",
+    "Effects on muscle, bone and energy are well documented",
+    "Several forms, so a doctor can match the form to the patient"
+   ],
+   "pl": [
+    "Sprawdzony lek przy rozpoznanym niedoborze, z dziesięcioleciami danych",
+    "Wpływ na mięśnie, kości i energię jest dobrze udokumentowany",
+    "Kilka postaci, więc lekarz może dopasować ją do pacjenta"
+   ],
+   "es": [
+    "Medicamento probado para una deficiencia diagnosticada, con décadas de datos",
+    "Los efectos sobre músculo, hueso y energía están bien documentados",
+    "Existen varias formas, así que el médico puede ajustarla al paciente"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Shuts down the body’s own production, and recovery can be slow",
+    "Raises red blood cell count and blood pressure in some people",
+    "Misuse brings the widest list of side effects of any steroid"
+   ],
+   "pl": [
+    "Wyłącza własną produkcję organizmu, a powrót może być wolny",
+    "U części osób podnosi liczbę czerwonych krwinek i ciśnienie",
+    "Nadużywanie daje najdłuższą listę skutków ubocznych spośród steroidów"
+   ],
+   "es": [
+    "Apaga la producción propia del cuerpo y la recuperación puede ser lenta",
+    "En algunas personas aumenta los glóbulos rojos y la presión arterial",
+    "Su mal uso trae la lista más larga de efectos secundarios entre los esteroides"
+   ]
+  }
+ },
+ {
+  "id": "testosterone-cypionate",
+  "n": "Testosterone cypionate",
+  "alt": {
+   "en": "Long-acting testosterone ester",
+   "pl": "Długodziałający ester testosteronu",
+   "es": "Éster de testosterona de acción prolongada"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "testosterone cypionate",
+  "what": {
+   "en": "Testosterone cypionate is testosterone joined to a fatty acid chain, called an ester, which makes it release slowly from the injection site. It is one of the two long-acting testosterone esters most used in the US.",
+   "pl": "Cypionian testosteronu to testosteron połączony z łańcuchem kwasu tłuszczowego, zwanym estrem, przez co uwalnia się powoli z miejsca wstrzyknięcia. To jeden z dwóch długodziałających estrów testosteronu najczęściej używanych w USA.",
+   "es": "El cipionato de testosterona es testosterona unida a una cadena de ácido graso, llamada éster, que hace que se libere lentamente desde el punto de inyección. Es uno de los dos ésteres de testosterona de acción prolongada más usados en EE. UU."
+  },
+  "how": {
+   "en": "The body strips the ester off and the free testosterone then acts like the natural hormone. The ester only changes how fast it enters the blood.",
+   "pl": "Organizm odcina ester, a wolny testosteron działa wtedy jak naturalny hormon. Ester zmienia tylko tempo, w jakim trafia do krwi.",
+   "es": "El cuerpo separa el éster y la testosterona libre actúa entonces como la hormona natural. El éster solo cambia la rapidez con la que llega a la sangre."
+  },
+  "med": {
+   "en": "It is an approved prescription medicine for testosterone replacement in men with low testosterone caused by a medical condition.",
+   "pl": "To zatwierdzony lek na receptę stosowany w terapii zastępczej testosteronem u mężczyzn z niskim poziomem hormonu wynikającym ze schorzenia.",
+   "es": "Es un medicamento con receta aprobado para la terapia de reemplazo de testosterona en hombres con testosterona baja debida a una enfermedad."
+  },
+  "risk": {
+   "en": "The label warns of thicker blood and blood clots, higher blood pressure, swelling, sleep apnoea getting worse and lower fertility. A rising red blood cell count is checked with blood tests during medical treatment.",
+   "pl": "Ulotka ostrzega przed gęstszą krwią i zakrzepami, wyższym ciśnieniem, obrzękami, nasileniem bezdechu sennego i obniżoną płodnością. Rosnąca liczba czerwonych krwinek jest kontrolowana badaniami krwi w trakcie leczenia.",
+   "es": "El prospecto advierte de sangre más espesa y coágulos, presión arterial más alta, hinchazón, empeoramiento de la apnea del sueño y menor fertilidad. El aumento de glóbulos rojos se controla con análisis de sangre durante el tratamiento médico."
+  },
+  "pros": {
+   "en": [
+    "Approved and well studied as a replacement therapy",
+    "Long action means fewer visits than short-acting forms",
+    "Predictable, because it is the same molecule the body makes"
+   ],
+   "pl": [
+    "Zatwierdzony i dobrze zbadany jako terapia zastępcza",
+    "Długie działanie oznacza mniej wizyt niż w przypadku form krótko działających",
+    "Przewidywalny, bo to ta sama cząsteczka, którą wytwarza organizm"
+   ],
+   "es": [
+    "Aprobado y bien estudiado como terapia de reemplazo",
+    "Su acción prolongada exige menos visitas que las formas de acción corta",
+    "Predecible, porque es la misma molécula que fabrica el cuerpo"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Needs a doctor and regular blood tests",
+    "Levels can swing between doses in some patients",
+    "Same suppression of natural production as other testosterone forms"
+   ],
+   "pl": [
+    "Wymaga lekarza i regularnych badań krwi",
+    "U części pacjentów poziomy wahają się między dawkami",
+    "Takie samo hamowanie naturalnej produkcji jak inne postacie testosteronu"
+   ],
+   "es": [
+    "Necesita médico y análisis de sangre periódicos",
+    "En algunos pacientes los niveles oscilan entre administraciones",
+    "Misma supresión de la producción natural que otras formas de testosterona"
+   ]
+  }
+ },
+ {
+  "id": "testosterone-enanthate",
+  "n": "Testosterone enanthate",
+  "alt": {
+   "en": "Long-acting testosterone ester",
+   "pl": "Długodziałający ester testosteronu",
+   "es": "Éster de testosterona de acción prolongada"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "testosterone enanthate",
+  "what": {
+   "en": "Testosterone enanthate is another long-acting ester of testosterone and behaves very much like cypionate. It is widely used in medical testosterone replacement.",
+   "pl": "Enantan testosteronu to kolejny długodziałający ester testosteronu, który zachowuje się bardzo podobnie do cypionianu. Jest powszechnie stosowany w medycznej terapii zastępczej testosteronem.",
+   "es": "El enantato de testosterona es otro éster de testosterona de acción prolongada que se comporta de forma muy parecida al cipionato. Se usa mucho en la terapia médica de reemplazo de testosterona."
+  },
+  "how": {
+   "en": "Like other esters it is a store of testosterone that releases slowly after injection. Once the ester is removed it acts as natural testosterone does.",
+   "pl": "Jak inne estry jest magazynem testosteronu uwalnianego powoli po wstrzyknięciu. Po odcięciu estru działa tak jak naturalny testosteron.",
+   "es": "Como otros ésteres, es un depósito de testosterona que se libera despacio tras la inyección. Una vez retirado el éster actúa como la testosterona natural."
+  },
+  "med": {
+   "en": "It is approved for hypogonadism in men and for delayed puberty in boys, and its label also lists use in some women with advanced breast cancer.",
+   "pl": "Jest zatwierdzony w hipogonadyzmie u mężczyzn i w opóźnionym dojrzewaniu u chłopców, a jego ulotka wymienia też zastosowanie u niektórych kobiet z zaawansowanym rakiem piersi.",
+   "es": "Está aprobado para el hipogonadismo en hombres y la pubertad retrasada en niños, y su prospecto también recoge el uso en algunas mujeres con cáncer de mama avanzado."
+  },
+  "risk": {
+   "en": "Risks match other testosterone forms: thicker blood, higher blood pressure, acne, swelling, breast tissue growth and lower sperm count. Doses well above medical levels add heart, liver and mood problems that are far better documented in studies of misuse.",
+   "pl": "Ryzyko jest takie jak przy innych postaciach testosteronu: gęstsza krew, wyższe ciśnienie, trądzik, obrzęki, rozrost tkanki piersi i mniejsza liczba plemników. Dawki dalece przekraczające medyczne dokładają problemy z sercem, wątrobą i nastrojem, które znacznie lepiej opisano w badaniach nadużywania.",
+   "es": "Los riesgos coinciden con los de otras formas de testosterona: sangre más espesa, presión arterial más alta, acné, hinchazón, crecimiento de tejido mamario y menor recuento de espermatozoides. Las dosis muy superiores a las médicas añaden problemas cardíacos, hepáticos y de ánimo mucho mejor documentados en los estudios sobre mal uso."
+  },
+  "pros": {
+   "en": [
+    "Approved for several medical uses",
+    "Long action keeps blood levels fairly steady",
+    "Long track record in clinical practice"
+   ],
+   "pl": [
+    "Zatwierdzony do kilku zastosowań medycznych",
+    "Długie działanie utrzymuje poziom we krwi dość stabilnie",
+    "Długa historia w praktyce klinicznej"
+   ],
+   "es": [
+    "Aprobado para varios usos médicos",
+    "Su acción prolongada mantiene los niveles en sangre bastante estables",
+    "Largo historial en la práctica clínica"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Needs medical supervision and blood monitoring",
+    "Can raise red blood cell count and blood pressure",
+    "Misuse at high levels is where most of the harm is seen"
+   ],
+   "pl": [
+    "Wymaga nadzoru lekarskiego i kontroli krwi",
+    "Może podnosić liczbę czerwonych krwinek i ciśnienie",
+    "Nadużywanie w wysokich dawkach to źródło większości obserwowanych szkód"
+   ],
+   "es": [
+    "Requiere supervisión médica y control de la sangre",
+    "Puede aumentar los glóbulos rojos y la presión arterial",
+    "El mal uso en niveles altos es donde se ve la mayor parte del daño"
+   ]
+  }
+ },
+ {
+  "id": "testosterone-undecanoate",
+  "n": "Testosterone undecanoate",
+  "alt": {
+   "en": "Very long-acting ester, oral and injectable forms",
+   "pl": "Ester o bardzo długim działaniu, postać doustna i iniekcyjna",
+   "es": "Éster de acción muy prolongada, formas oral e inyectable"
+  },
+  "cls": "inj",
+  "form": "mix",
+  "q": "testosterone undecanoate",
+  "what": {
+   "en": "Testosterone undecanoate is an ester with an unusually long action. It exists as an oil injection given at long intervals and as an oral capsule that is absorbed through the lymph system rather than the liver.",
+   "pl": "Undekanian testosteronu to ester o wyjątkowo długim działaniu. Występuje jako iniekcja olejowa podawana w długich odstępach oraz jako kapsułka doustna, wchłaniana przez układ chłonny, a nie przez wątrobę.",
+   "es": "El undecanoato de testosterona es un éster de acción especialmente prolongada. Existe como inyección oleosa que se administra con intervalos largos y como cápsula oral que se absorbe por el sistema linfático y no por el hígado."
+  },
+  "how": {
+   "en": "It releases testosterone slowly from fat tissue and then acts like the natural hormone. The oral form must be taken with food that contains fat so that it absorbs.",
+   "pl": "Powoli uwalnia testosteron z tkanki tłuszczowej, a potem działa jak naturalny hormon. Postać doustną trzeba przyjmować z posiłkiem zawierającym tłuszcz, żeby się wchłonęła.",
+   "es": "Libera testosterona despacio desde el tejido graso y después actúa como la hormona natural. La forma oral debe tomarse con comida que contenga grasa para que se absorba."
+  },
+  "med": {
+   "en": "Both forms are approved prescription treatments for testosterone replacement in men with a medical cause of low testosterone.",
+   "pl": "Obie postacie są zatwierdzonymi lekami na receptę w terapii zastępczej testosteronem u mężczyzn z medyczną przyczyną niskiego poziomu hormonu.",
+   "es": "Ambas formas son tratamientos con receta aprobados para el reemplazo de testosterona en hombres con una causa médica de testosterona baja."
+  },
+  "risk": {
+   "en": "The injectable form carries a boxed warning in the US for rare lung oil micro-embolism and serious allergic reactions, so it is given in a clinic and the patient is watched afterwards. The oral forms carry a boxed warning for raised blood pressure, which can increase the risk of heart attack and stroke.",
+   "pl": "Postać do iniekcji ma w USA ostrzeżenie w ramce dotyczące rzadkiej mikroembolii olejowej płuc i ciężkich reakcji alergicznych, dlatego podaje się ją w placówce, a pacjent jest potem obserwowany. Postacie doustne mają ostrzeżenie w ramce o podwyższeniu ciśnienia, które może zwiększać ryzyko zawału i udaru.",
+   "es": "La forma inyectable lleva en EE. UU. una advertencia en recuadro por la rara microembolia pulmonar oleosa y reacciones alérgicas graves, por eso se administra en una clínica y el paciente queda en observación. Las formas orales llevan una advertencia en recuadro por aumento de la presión arterial, que puede elevar el riesgo de infarto y de ictus."
+  },
+  "pros": {
+   "en": [
+    "Very long action means few doses",
+    "Oral form avoids the liver damage seen with older oral steroids",
+    "Approved and monitored in clinics"
+   ],
+   "pl": [
+    "Bardzo długie działanie oznacza mało dawek",
+    "Postać doustna omija uszkodzenie wątroby znane ze starszych doustnych steroidów",
+    "Zatwierdzony i kontrolowany w placówkach"
+   ],
+   "es": [
+    "Su acción muy prolongada implica pocas administraciones",
+    "La forma oral evita el daño hepático de los esteroides orales antiguos",
+    "Aprobado y vigilado en clínica"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Injectable form needs a clinic visit because of the warning",
+    "Oral forms can raise blood pressure",
+    "Once given, the effect cannot be switched off quickly"
+   ],
+   "pl": [
+    "Postać do iniekcji wymaga wizyty w placówce z powodu ostrzeżenia",
+    "Postacie doustne mogą podnosić ciśnienie",
+    "Po podaniu nie da się szybko wyłączyć działania"
+   ],
+   "es": [
+    "La forma inyectable exige acudir a una clínica por la advertencia",
+    "Las formas orales pueden elevar la presión arterial",
+    "Una vez administrado, el efecto no se puede detener rápido"
+   ]
+  }
+ },
+ {
+  "id": "sustanon",
+  "n": "Sustanon",
+  "alt": {
+   "en": "Mixture of four testosterone esters",
+   "pl": "Mieszanka czterech estrów testosteronu",
+   "es": "Mezcla de cuatro ésteres de testosterona"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "Sustanon testosterone",
+  "what": {
+   "en": "Sustanon is a brand-name blend of four different testosterone esters, from short to long acting, in one oil injection. It is used in medical testosterone replacement in the UK and parts of Europe.",
+   "pl": "Sustanon to markowa mieszanka czterech różnych estrów testosteronu, od krótko do długo działających, w jednej iniekcji olejowej. Stosuje się go w medycznej terapii zastępczej testosteronem w Wielkiej Brytanii i części Europy.",
+   "es": "Sustanon es una mezcla de marca de cuatro ésteres de testosterona distintos, de acción corta a larga, en una sola inyección oleosa. Se usa en el reemplazo médico de testosterona en el Reino Unido y en partes de Europa."
+  },
+  "how": {
+   "en": "The mix of esters is meant to release testosterone over a spread of time, so levels start up fast and then carry on. After the esters are removed the hormone acts as natural testosterone.",
+   "pl": "Mieszanka estrów ma uwalniać testosteron w rozłożonym czasie, tak by poziom rósł szybko, a potem się utrzymywał. Po odcięciu estrów hormon działa jak naturalny testosteron.",
+   "es": "La mezcla de ésteres busca liberar testosterona a lo largo del tiempo, de modo que los niveles suban rápido y luego se mantengan. Tras retirar los ésteres, la hormona actúa como la testosterona natural."
+  },
+  "med": {
+   "en": "It is prescribed to men with a diagnosed testosterone deficiency. It is not a treatment for ageing in itself.",
+   "pl": "Przepisuje się go mężczyznom z rozpoznanym niedoborem testosteronu. Sam w sobie nie jest leczeniem starzenia.",
+   "es": "Se receta a hombres con una deficiencia de testosterona diagnosticada. No es por sí mismo un tratamiento del envejecimiento."
+  },
+  "risk": {
+   "en": "The risks are those of testosterone: thicker blood, higher blood pressure, acne, swelling and lower fertility. Blends are also a common target for counterfeits, and fake products have been found containing the wrong strength or other drugs.",
+   "pl": "Ryzyka są takie jak przy testosteronie: gęstsza krew, wyższe ciśnienie, trądzik, obrzęki i niższa płodność. Mieszanki są też częstym celem fałszerstw, a podrabiane produkty miały nieprawidłową zawartość albo inne leki.",
+   "es": "Los riesgos son los de la testosterona: sangre más espesa, presión arterial más alta, acné, hinchazón y menor fertilidad. Las mezclas son además un blanco habitual de falsificaciones, y se han encontrado productos falsos con una concentración equivocada u otros fármacos."
+  },
+  "pros": {
+   "en": [
+    "Combines quick and slow release in one product",
+    "Established medicine in some countries",
+    "Fewer injections than a short ester alone"
+   ],
+   "pl": [
+    "Łączy szybkie i wolne uwalnianie w jednym preparacie",
+    "Uznany lek w niektórych krajach",
+    "Mniej iniekcji niż sam krótki ester"
+   ],
+   "es": [
+    "Combina liberación rápida y lenta en un solo producto",
+    "Medicamento consolidado en algunos países",
+    "Menos inyecciones que un éster corto por sí solo"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Hard to fine-tune because it is a fixed mix",
+    "Often counterfeited outside the legal supply",
+    "Same hormonal suppression as plain testosterone"
+   ],
+   "pl": [
+    "Trudno precyzyjnie dostosować, bo to stała mieszanka",
+    "Często podrabiany poza legalnym obiegiem",
+    "Takie samo hamowanie hormonalne jak czysty testosteron"
+   ],
+   "es": [
+    "Difícil de ajustar con precisión por ser una mezcla fija",
+    "A menudo falsificado fuera del suministro legal",
+    "La misma supresión hormonal que la testosterona sola"
+   ]
+  }
+ },
+ {
+  "id": "nandrolone-decanoate",
+  "n": "Nandrolone decanoate",
+  "alt": {
+   "en": "Anabolic steroid, “Deca”",
+   "pl": "Steroid anaboliczny, „Deca”",
+   "es": "Esteroide anabólico, “Deca”"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "nandrolone decanoate",
+  "what": {
+   "en": "Nandrolone decanoate is a long-acting anabolic steroid made from a testosterone-like molecule with one methyl group removed. It has a strong effect on muscle and bone and a weaker androgenic effect.",
+   "pl": "Dekanian nandrolonu to długodziałający steroid anaboliczny zbudowany na bazie cząsteczki podobnej do testosteronu, z usuniętą jedną grupą metylową. Silnie wpływa na mięśnie i kości, a słabiej androgennie.",
+   "es": "El decanoato de nandrolona es un esteroide anabólico de acción prolongada basado en una molécula parecida a la testosterona a la que falta un grupo metilo. Tiene un efecto marcado sobre el músculo y el hueso y uno androgénico más débil."
+  },
+  "how": {
+   "en": "It binds the androgen receptor and promotes protein building in muscle and bone. It does not turn into the strong androgen DHT the way testosterone does.",
+   "pl": "Wiąże się z receptorem androgenowym i sprzyja budowie białka w mięśniach i kościach. Nie zamienia się w silny androgen DHT tak jak testosteron.",
+   "es": "Se une al receptor de andrógenos y favorece la formación de proteínas en músculo y hueso. No se transforma en el potente andrógeno DHT como lo hace la testosterona."
+  },
+  "med": {
+   "en": "It has been used for anaemia caused by kidney disease and, in some countries, for osteoporosis and muscle wasting in illness. Medical use has become rare.",
+   "pl": "Stosowano go w niedokrwistości w chorobach nerek, a w niektórych krajach w osteoporozie i utracie mięśni w chorobie. Zastosowanie medyczne stało się rzadkie.",
+   "es": "Se ha usado para la anemia por enfermedad renal y, en algunos países, para la osteoporosis y la pérdida de músculo en enfermedades. Su uso médico se ha vuelto poco frecuente."
+  },
+  "risk": {
+   "en": "Known risks include lower natural testosterone, sexual dysfunction, raised blood pressure, worse cholesterol and heart strain. Its breakdown products stay detectable for a long time, and athletes have tested positive after contaminated supplements.",
+   "pl": "Znane ryzyka to niższy naturalny testosteron, zaburzenia seksualne, podwyższone ciśnienie, gorszy cholesterol i obciążenie serca. Produkty jego rozpadu są wykrywalne bardzo długo, a sportowcy wpadali na testach po zanieczyszczonych suplementach.",
+   "es": "Los riesgos conocidos incluyen menor testosterona natural, disfunción sexual, presión arterial alta, peor colesterol y sobrecarga del corazón. Sus productos de degradación son detectables durante mucho tiempo y deportistas han dado positivo tras consumir suplementos contaminados."
+  },
+  "pros": {
+   "en": [
+    "Strong effect on muscle and bone in research",
+    "Lower androgenic activity than testosterone",
+    "Used medically for some anaemias"
+   ],
+   "pl": [
+    "Silny wpływ na mięśnie i kości w badaniach",
+    "Niższa aktywność androgenna niż testosteron",
+    "Stosowany medycznie w niektórych niedokrwistościach"
+   ],
+   "es": [
+    "Efecto marcado sobre músculo y hueso en la investigación",
+    "Menor actividad androgénica que la testosterona",
+    "Se ha usado médicamente en algunas anemias"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Suppresses natural testosterone strongly and for a long time",
+    "Detectable in anti-doping tests for a long period",
+    "Few modern medical uses, so little ongoing research"
+   ],
+   "pl": [
+    "Silnie i długo hamuje naturalny testosteron",
+    "Długo wykrywalny w testach antydopingowych",
+    "Mało współczesnych zastosowań medycznych, więc mało bieżących badań"
+   ],
+   "es": [
+    "Suprime con fuerza y durante mucho tiempo la testosterona natural",
+    "Detectable en los controles antidopaje durante mucho tiempo",
+    "Pocos usos médicos actuales, así que hay poca investigación nueva"
+   ]
+  }
+ },
+ {
+  "id": "trenbolone",
+  "n": "Trenbolone",
+  "alt": {
+   "en": "Veterinary anabolic steroid",
+   "pl": "Weterynaryjny steroid anaboliczny",
+   "es": "Esteroide anabólico veterinario"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "trenbolone",
+  "label": false,
+  "what": {
+   "en": "Trenbolone is a very potent anabolic steroid made for cattle, where it is used as a growth implant. It has never been approved as a medicine for people.",
+   "pl": "Trenbolon to bardzo silny steroid anaboliczny stworzony dla bydła, gdzie stosuje się go jako implant wzrostowy. Nigdy nie został zatwierdzony jako lek dla ludzi.",
+   "es": "La trembolona es un esteroide anabólico muy potente creado para el ganado, donde se usa como implante de crecimiento. Nunca se ha aprobado como medicamento para personas."
+  },
+  "how": {
+   "en": "It binds the androgen receptor much more strongly than testosterone. It is not converted into oestrogen the way testosterone is, which is why its effects and side effects differ from other steroids.",
+   "pl": "Wiąże się z receptorem androgenowym znacznie silniej niż testosteron. Nie zamienia się w estrogen tak jak testosteron, dlatego jego działanie i skutki uboczne różnią się od innych steroidów.",
+   "es": "Se une al receptor de andrógenos con mucha más fuerza que la testosterona. No se convierte en estrógeno como esta, por lo que sus efectos y efectos secundarios difieren de los de otros esteroides."
+  },
+  "med": {
+   "en": "There is no approved human use. Because it was never developed as a human drug, its effects in people are known mostly from case reports and reports of misuse.",
+   "pl": "Nie ma zatwierdzonego zastosowania u ludzi. Skoro nigdy nie powstał jako lek dla ludzi, jego działanie u człowieka znane jest głównie z opisów przypadków i doniesień o nadużywaniu.",
+   "es": "No tiene ningún uso humano aprobado. Como nunca se desarrolló como fármaco para personas, sus efectos en humanos se conocen sobre todo por informes de casos y por informes de mal uso."
+  },
+  "risk": {
+   "en": "Reports describe night sweats, sleep disturbance, aggression and anxiety, raised blood pressure, strain on the kidneys and heart, and a deep fall in natural testosterone. Because the products are made for animals, there is no human quality control.",
+   "pl": "Doniesienia opisują nocne poty, zaburzenia snu, agresję i lęk, podwyższone ciśnienie, obciążenie nerek i serca oraz głęboki spadek naturalnego testosteronu. Skoro produkty są robione dla zwierząt, nie ma kontroli jakości pod kątem ludzi.",
+   "es": "Los informes describen sudores nocturnos, alteraciones del sueño, agresividad y ansiedad, presión arterial alta, sobrecarga de riñones y corazón, y una fuerte caída de la testosterona natural. Como los productos están hechos para animales, no hay control de calidad pensado para humanos."
+  },
+  "status": {
+   "en": "Not approved for human use anywhere. It is a controlled anabolic steroid in the UK (Class C) and the US (Schedule III), and veterinary products are not legal for people to use.",
+   "pl": "Nie jest zatwierdzony do stosowania u ludzi nigdzie. To kontrolowany steroid anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III), a preparatów weterynaryjnych ludziom nie wolno stosować.",
+   "es": "No está aprobado para uso humano en ningún lugar. Es un esteroide anabólico controlado en el Reino Unido (clase C) y en EE. UU. (lista III), y los productos veterinarios no son legales para uso en personas."
+  },
+  "pros": {
+   "en": [
+    "Very strong effect on muscle in animals",
+    "Does not convert to oestrogen",
+    "Well studied in livestock"
+   ],
+   "pl": [
+    "Bardzo silne działanie na mięśnie u zwierząt",
+    "Nie zamienia się w estrogen",
+    "Dobrze zbadany u zwierząt hodowlanych"
+   ],
+   "es": [
+    "Efecto muy marcado sobre el músculo en animales",
+    "No se convierte en estrógeno",
+    "Bien estudiado en ganado"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No approved human use and no human trials",
+    "Reports of mood, sleep, heart and kidney problems",
+    "Products come from the veterinary or illegal market with no quality control"
+   ],
+   "pl": [
+    "Brak zatwierdzonego zastosowania u ludzi i brak badań na ludziach",
+    "Doniesienia o problemach z nastrojem, snem, sercem i nerkami",
+    "Produkty pochodzą z rynku weterynaryjnego lub nielegalnego, bez kontroli jakości"
+   ],
+   "es": [
+    "Sin uso humano aprobado ni ensayos en humanos",
+    "Informes de problemas de ánimo, sueño, corazón y riñón",
+    "Los productos proceden del mercado veterinario o ilegal, sin control de calidad"
+   ]
+  }
+ },
+ {
+  "id": "boldenone",
+  "n": "Boldenone",
+  "alt": {
+   "en": "Veterinary anabolic steroid, mainly used in horses",
+   "pl": "Weterynaryjny steroid anaboliczny, głównie u koni",
+   "es": "Esteroide anabólico veterinario, sobre todo en caballos"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "boldenone",
+  "label": false,
+  "what": {
+   "en": "Boldenone is an anabolic steroid related to testosterone, developed for veterinary use, mainly in horses. It has no approved use in human medicine.",
+   "pl": "Boldenon to steroid anaboliczny spokrewniony z testosteronem, opracowany do użytku weterynaryjnego, głównie u koni. Nie ma zatwierdzonego zastosowania w medycynie ludzkiej.",
+   "es": "La boldenona es un esteroide anabólico emparentado con la testosterona, desarrollado para uso veterinario, sobre todo en caballos. No tiene ningún uso aprobado en medicina humana."
+  },
+  "how": {
+   "en": "It binds the androgen receptor and promotes muscle building, with a longer half-life from its ester. It is partly converted to oestrogen.",
+   "pl": "Wiąże się z receptorem androgenowym i sprzyja budowie mięśni, a jego ester wydłuża czas działania. Częściowo zamienia się w estrogen.",
+   "es": "Se une al receptor de andrógenos y favorece la formación de músculo; su éster prolonga el tiempo de acción. Se convierte en parte en estrógeno."
+  },
+  "med": {
+   "en": "In animals it has been used to improve appetite and weight gain. There is no approved human use, so almost all human information comes from misuse reports.",
+   "pl": "U zwierząt stosowano go dla poprawy apetytu i przyrostu masy. Nie ma zatwierdzonego zastosowania u ludzi, więc niemal cała wiedza o jego działaniu u człowieka pochodzi z doniesień o nadużywaniu.",
+   "es": "En animales se ha usado para mejorar el apetito y el aumento de peso. No hay uso humano aprobado, así que casi toda la información humana procede de informes de mal uso."
+  },
+  "risk": {
+   "en": "Reported effects include raised red blood cell count and blood pressure, acne, fluid retention and lower natural testosterone. It is also found as a natural trace in some animals, which complicates doping tests.",
+   "pl": "Opisywane skutki to zwiększona liczba czerwonych krwinek i ciśnienie, trądzik, zatrzymywanie wody oraz niższy naturalny testosteron. Śladowe ilości występują też naturalnie u niektórych zwierząt, co komplikuje testy antydopingowe.",
+   "es": "Los efectos descritos incluyen aumento de glóbulos rojos y de la presión arterial, acné, retención de líquidos y menor testosterona natural. También se encuentra como traza natural en algunos animales, lo que complica los controles antidopaje."
+  },
+  "status": {
+   "en": "Not approved for human use. It is a controlled anabolic steroid in the UK (Class C) and the US (Schedule III).",
+   "pl": "Nie jest zatwierdzony do stosowania u ludzi. To kontrolowany steroid anaboliczny w Wielkiej Brytanii (klasa C) i USA (lista III).",
+   "es": "No está aprobado para uso humano. Es un esteroide anabólico controlado en el Reino Unido (clase C) y en EE. UU. (lista III)."
+  },
+  "pros": {
+   "en": [
+    "Established veterinary product",
+    "Milder androgenic profile than some steroids",
+    "Long action from the ester"
+   ],
+   "pl": [
+    "Uznany preparat weterynaryjny",
+    "Łagodniejszy profil androgenny niż u niektórych steroidów",
+    "Długie działanie dzięki estrowi"
+   ],
+   "es": [
+    "Producto veterinario consolidado",
+    "Perfil androgénico más suave que el de algunos esteroides",
+    "Acción prolongada gracias al éster"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No human trials or approval",
+    "Higher red blood cell count and blood pressure reported",
+    "Veterinary products are unfit and illegal for human use"
+   ],
+   "pl": [
+    "Brak badań i zatwierdzenia dla ludzi",
+    "Opisywano wyższą liczbę czerwonych krwinek i ciśnienie",
+    "Preparaty weterynaryjne nie nadają się i są nielegalne do stosowania u ludzi"
+   ],
+   "es": [
+    "Sin ensayos ni aprobación en humanos",
+    "Se han descrito más glóbulos rojos y presión arterial más alta",
+    "Los productos veterinarios no son aptos ni legales para uso humano"
+   ]
+  }
+ },
+ {
+  "id": "drostanolone",
+  "n": "Drostanolone",
+  "alt": {
+   "en": "Former breast cancer drug",
+   "pl": "Dawny lek na raka piersi",
+   "es": "Antiguo fármaco contra el cáncer de mama"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "drostanolone",
+  "what": {
+   "en": "Drostanolone is a derivative of dihydrotestosterone, the potent androgen made from testosterone. It was once sold as a medicine and is no longer marketed.",
+   "pl": "Drostanolon to pochodna dihydrotestosteronu, silnego androgenu powstającego z testosteronu. Dawniej sprzedawano go jako lek, a dziś nie jest już w obrocie.",
+   "es": "La drostanolona es un derivado de la dihidrotestosterona, el potente andrógeno que se forma a partir de la testosterona. Antes se vendía como medicamento y ya no se comercializa."
+  },
+  "how": {
+   "en": "It acts on the androgen receptor and also blocks some oestrogen activity in tissue. Because it is not converted into oestrogen, it does not cause the same water retention as testosterone.",
+   "pl": "Działa na receptor androgenowy, a także blokuje część aktywności estrogenów w tkankach. Ponieważ nie zamienia się w estrogen, nie powoduje takiego zatrzymywania wody jak testosteron.",
+   "es": "Actúa sobre el receptor de andrógenos y bloquea además parte de la actividad estrogénica en los tejidos. Como no se convierte en estrógeno, no provoca la misma retención de agua que la testosterona."
+  },
+  "med": {
+   "en": "It was used to treat advanced breast cancer in women in the 20th century. Modern cancer treatments replaced it.",
+   "pl": "W XX wieku stosowano go w leczeniu zaawansowanego raka piersi u kobiet. Zastąpiły go nowoczesne terapie przeciwnowotworowe.",
+   "es": "Se usó en el siglo XX para tratar el cáncer de mama avanzado en mujeres. Los tratamientos oncológicos modernos lo sustituyeron."
+  },
+  "risk": {
+   "en": "In women it caused masculinising effects, including a deeper voice and body hair, some of which are permanent. In men, it lowers natural testosterone and can worsen cholesterol, and it is often hard to know what a street product really contains.",
+   "pl": "U kobiet powodował skutki maskulinizujące, w tym pogłębienie głosu i owłosienie, a część z nich jest trwała. U mężczyzn obniża naturalny testosteron i może pogarszać cholesterol, a w produktach z nielegalnego obrotu często trudno ustalić, co naprawdę zawierają.",
+   "es": "En mujeres provocaba efectos masculinizantes, entre ellos voz más grave y vello corporal, y algunos son permanentes. En hombres reduce la testosterona natural y puede empeorar el colesterol, y en los productos del mercado ilegal suele ser difícil saber qué contienen realmente."
+  },
+  "pros": {
+   "en": [
+    "Historic use in cancer care",
+    "No oestrogen conversion",
+    "Lower water retention than testosterone"
+   ],
+   "pl": [
+    "Historyczne zastosowanie w leczeniu raka",
+    "Brak przemiany w estrogen",
+    "Mniej zatrzymywania wody niż przy testosteronie"
+   ],
+   "es": [
+    "Uso histórico en el tratamiento del cáncer",
+    "No se convierte en estrógeno",
+    "Menos retención de agua que la testosterona"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No longer an approved medicine",
+    "Masculinising effects in women can be permanent",
+    "Suppresses natural testosterone in men"
+   ],
+   "pl": [
+    "Nie jest już zatwierdzonym lekiem",
+    "Maskulinizacja u kobiet może być trwała",
+    "U mężczyzn hamuje naturalny testosteron"
+   ],
+   "es": [
+    "Ya no es un medicamento aprobado",
+    "Los efectos masculinizantes en mujeres pueden ser permanentes",
+    "Suprime la testosterona natural en hombres"
+   ]
+  }
+ },
+ {
+  "id": "methenolone-enanthate",
+  "n": "Methenolone enanthate",
+  "alt": {
+   "en": "Brand name Primobolan Depot",
+   "pl": "Nazwa handlowa Primobolan Depot",
+   "es": "Nombre comercial Primobolan Depot"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "methenolone enanthate",
+  "what": {
+   "en": "Methenolone enanthate is a long-acting injectable form of a mild anabolic steroid derived from dihydrotestosterone. It was sold in Europe under the brand Primobolan Depot.",
+   "pl": "Enantan metenolonu to długodziałająca postać iniekcyjna łagodnego steroidu anabolicznego pochodzącego od dihydrotestosteronu. Sprzedawano go w Europie pod marką Primobolan Depot.",
+   "es": "El enantato de metenolona es una forma inyectable de acción prolongada de un esteroide anabólico suave derivado de la dihidrotestosterona. Se vendía en Europa con la marca Primobolan Depot."
+  },
+  "how": {
+   "en": "It acts on the androgen receptor with relatively low androgenic activity and does not turn into oestrogen. Its effect on muscle is modest next to stronger steroids.",
+   "pl": "Działa na receptor androgenowy ze stosunkowo niską aktywnością androgenną i nie zamienia się w estrogen. Jego wpływ na mięśnie jest umiarkowany w porównaniu z silniejszymi steroidami.",
+   "es": "Actúa sobre el receptor de andrógenos con una actividad androgénica relativamente baja y no se convierte en estrógeno. Su efecto sobre el músculo es modesto frente a esteroides más fuertes."
+  },
+  "med": {
+   "en": "It was used for anaemia and for muscle wasting in illness. It is no longer widely available as a licensed medicine.",
+   "pl": "Stosowano go w niedokrwistości i w utracie mięśni w chorobie. Nie jest już szeroko dostępny jako lek zarejestrowany.",
+   "es": "Se usó para la anemia y la pérdida de músculo en enfermedades. Ya no está ampliamente disponible como medicamento autorizado."
+  },
+  "risk": {
+   "en": "It suppresses natural testosterone, and in women it can cause masculinising effects. It is one of the most counterfeited steroids, so products sold under this name often contain something else.",
+   "pl": "Hamuje naturalny testosteron, a u kobiet może powodować maskulinizację. To jeden z najczęściej podrabianych steroidów, więc produkty sprzedawane pod tą nazwą często zawierają coś innego.",
+   "es": "Suprime la testosterona natural y en las mujeres puede causar efectos masculinizantes. Es uno de los esteroides más falsificados, así que los productos vendidos con este nombre a menudo contienen otra cosa."
+  },
+  "pros": {
+   "en": [
+    "Mild androgenic profile",
+    "Does not convert to oestrogen",
+    "Had a past medical use"
+   ],
+   "pl": [
+    "Łagodny profil androgenny",
+    "Nie zamienia się w estrogen",
+    "Miał dawniej zastosowanie medyczne"
+   ],
+   "es": [
+    "Perfil androgénico suave",
+    "No se convierte en estrógeno",
+    "Tuvo un uso médico en el pasado"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Not widely available as a licensed medicine",
+    "Heavily counterfeited",
+    "Still suppresses natural hormone production"
+   ],
+   "pl": [
+    "Niedostępny powszechnie jako lek zarejestrowany",
+    "Bardzo często podrabiany",
+    "Nadal hamuje naturalną produkcję hormonów"
+   ],
+   "es": [
+    "No está ampliamente disponible como medicamento autorizado",
+    "Muy falsificado",
+    "Sigue suprimiendo la producción hormonal natural"
+   ]
+  }
+ }
+]

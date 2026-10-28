@@ -223,7 +223,7 @@ function layout(o) {
   const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['dosing.html', t.dosingNav],
   ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['blog.html', t.blogNav],
-  ['glossary.html', t.glossNav], ['guides.html', L === 'en' ? 'Guides (PDF)' : 'Przewodniki (PDF)'], ['about.html', t.nav.about]];
+  ['glossary.html', t.glossNav], ['steroids.html', L === 'en' ? 'Steroids' : 'Sterydy'], ['guides.html', L === 'en' ? 'Guides (PDF)' : 'Przewodniki (PDF)'], ['about.html', t.nav.about]];
   return `<!doctype html>
 <html lang="${L}" data-theme="light">
 <head>
@@ -1416,6 +1416,9 @@ fs.writeFileSync(path.join(out, 'p', 'faq.html'), retarget(faqPage('en'), 'en/fa
 fs.writeFileSync(path.join(out, 'p', 'faq.pl.html'), retarget(faqPage('pl'), 'pl/faq.html'));
 n += 5;
 
+// steroids section (data in sterydy/*.json, code in tools/sterydy.js)
+const STER = require('./sterydy.js')({ layout, esc, BASE, ARROW, clip, out, LANGS, SITE });
+
 // sitemapa: tylko adresy kanoniczne
 const when = new Date().toISOString().slice(0, 10);
 const urls = [''].concat(
@@ -1423,7 +1426,8 @@ const urls = [''].concat(
     'symptoms.html', 'faq.html', 'alerts.html', 'about.html', 'blog.html', 'glossary.html', 'free.html', 'guides.html', 'privacy.html', 'methods.html'].map(f => L + '/' + f)),
   LANGS.flatMap(L => (POSTS || []).map(x => L + '/t/' + postSlug(x) + '.html')),
   LANGS.flatMap(L => VS.map(v => L + '/' + vsFile(v))),
-  LANGS.flatMap(L => D.map(e => cardPath(e, L))));
+  LANGS.flatMap(L => D.map(e => cardPath(e, L))),
+  STER);
 fs.writeFileSync(path.join(out, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   urls.map(u => { const k = (/^p\/([^.]+)(\.pl)?\.html$/.exec(u) || [])[1]; const d = (k && ZM[k] && ZM[k].d) || when;   // cards: real date of the last content change
