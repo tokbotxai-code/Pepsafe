@@ -9,6 +9,10 @@ const root = path.join(__dirname, '..');
 const norm = s => s.replace(/\s+/g, ' ').trim();
 const ESC = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+function loadArticles() {
+  const f = path.join(root, 'sterydy', 'articles.json');
+  return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : [];
+}
 function load() {
   const dir = path.join(root, 'sterydy');
   const rows = [];
@@ -42,6 +46,12 @@ const CLS = {
     status: { en: 'Not approved as a medicine in the UK, the US or the EU. Being sold as a “research chemical” does not make it legal for human use, and regulators have warned about products that were mislabelled or contained something else.', pl: 'Nie jest zatwierdzony jako lek w Wielkiej Brytanii, USA ani UE. Sprzedaż jako „research chemical” nie czyni go legalnym do stosowania u ludzi, a organy nadzoru ostrzegały przed źle oznaczonymi produktami i takimi, które zawierały co innego.', es: 'No está aprobado como medicamento en el Reino Unido, EE. UU. ni la UE. Que se venda como “producto de investigación” no lo hace legal para uso humano, y los reguladores han advertido sobre productos mal etiquetados o que contenían otra sustancia.' },
     wada: { en: 'WADA prohibits SARMs (category S1, other anabolic agents) at all times.', pl: 'WADA zakazuje SARM-ów (kategoria S1, inne środki anaboliczne) przez cały czas.', es: 'La AMA prohíbe los SARM (categoría S1, otros agentes anabólicos) en todo momento.' }
   },
+  oth: {
+    name: { en: 'Other drugs sold alongside steroids', pl: 'Inne substancje sprzedawane obok steroidów', es: 'Otras sustancias que se venden junto a los esteroides' },
+    desc: { en: 'Growth hormone, stimulants, fat burners and lab compounds that show up in the same circles. They are not steroids, and some of them are far more dangerous than the steroids themselves.', pl: 'Hormon wzrostu, stymulanty, spalacze tłuszczu i związki laboratoryjne, które pojawiają się w tych samych kręgach. To nie steroidy, a niektóre z nich są znacznie groźniejsze niż same steroidy.', es: 'Hormona del crecimiento, estimulantes, quemagrasas y compuestos de laboratorio que aparecen en los mismos círculos. No son esteroides, y algunos son mucho más peligrosos que los propios esteroides.' },
+    status: { en: 'Status differs by substance: some are prescription medicines, some are unapproved, and at least one is banned for human consumption. Read the entry.', pl: 'Status zależy od substancji: część to leki na receptę, część nie jest zatwierdzona, a co najmniej jedna jest zakazana do spożycia przez ludzi. Przeczytaj wpis.', es: 'El estatus depende de la sustancia: algunas son medicamentos con receta, otras no están aprobadas y al menos una está prohibida para consumo humano. Lee la ficha.' },
+    wada: { en: 'Most are prohibited in sport at all times, under categories such as S2, S3 and S4. Check the entry.', pl: 'Większość jest zakazana w sporcie przez cały czas, w kategoriach takich jak S2, S3 i S4. Sprawdź wpis.', es: 'La mayoría están prohibidas en el deporte en todo momento, en categorías como S2, S3 y S4. Consulta la ficha.' }
+  },
   mod: {
     name: { en: 'Hormone-modulating medicines', pl: 'Leki modulujące gospodarkę hormonalną', es: 'Medicamentos moduladores hormonales' },
     desc: { en: 'Real prescription drugs for breast cancer, fertility and hormone disorders. They show up in the steroid world because they change oestrogen or the signals that drive testosterone, but they are not steroids.', pl: 'Prawdziwe leki na receptę stosowane w raku piersi, niepłodności i zaburzeniach hormonalnych. Pojawiają się w świecie steroidów, bo zmieniają poziom estrogenów albo sygnały sterujące testosteronem, ale steroidami nie są.', es: 'Medicamentos reales con receta para el cáncer de mama, la fertilidad y los trastornos hormonales. Aparecen en el mundo de los esteroides porque modifican los estrógenos o las señales que regulan la testosterona, pero no son esteroides.' },
@@ -63,7 +73,7 @@ const NAMES = {
   'Drostanolone': ['Drostanolon', 'Drostanolona'], 'Methenolone enanthate': ['Enantan metenolonu', 'Enantato de metenolona']
 };
 const nmL = (e, l) => l === 'en' ? e.n : ((e.nm && e.nm[l]) || (NAMES[e.n] || [])[l === 'pl' ? 0 : 1] || e.n);
-const ORDER = ['inj', 'oral', 'pro', 'sarm', 'mod', 'cort'];
+const ORDER = ['inj', 'oral', 'pro', 'sarm', 'oth', 'mod', 'cort'];
 
 // interface strings: [en, pl, es]
 const UI = {
@@ -78,6 +88,8 @@ const UI = {
   q3h: ['Why the risks are real', 'Dlaczego ryzyko jest realne', 'Por qué los riesgos son reales'],
   q3: ['High, repeated use of anabolic steroids is linked to heart, liver, hormonal and mental-health problems. Medical doses given for a diagnosis are a different situation from doses taken for looks or sport.', 'Duże, powtarzane stosowanie steroidów anabolicznych wiąże się z problemami z sercem, wątrobą, hormonami i zdrowiem psychicznym. Dawki medyczne podawane przy rozpoznanej chorobie to inna sytuacja niż stosowanie dla wyglądu lub sportu.', 'El uso elevado y repetido de esteroides anabólicos se asocia con problemas cardíacos, hepáticos, hormonales y de salud mental. Las dosis médicas indicadas para un diagnóstico son una situación distinta de las que se toman por estética o deporte.'],
   cmpBtn: ['Compare all steroids', 'Porównaj wszystkie steroidy', 'Comparar todos los esteroides'],
+  riskBtn: ['What steroids do to the body', 'Co steroidy robią z organizmem', 'Qué hacen los esteroides al cuerpo'],
+  lawBtn: ['Steroids and the law', 'Steroidy a prawo', 'Los esteroides y la ley'],
   vsBtn: ['Steroids vs peptides', 'Steroidy a peptydy', 'Esteroides y péptidos'],
   allH: ['All entries', 'Wszystkie wpisy', 'Todas las fichas'],
   back: ['Steroids', 'Sterydy', 'Esteroides'],
@@ -140,6 +152,7 @@ const VS = {
 module.exports = function build(ctx) {
   const { layout, esc, BASE, ARROW, clip, out, LANGS, SITE } = ctx;
   const data = load();
+  const ARTS = loadArticles();
   const PAIRS = {};
   // fn(l) -> the text in language l; records EN->ES for tools/es.js and returns the text for the page being built
   const S = (L, fn) => { const en = fn('en'), es = fn('es'); if (en && es) PAIRS[norm(ESC(en))] = ESC(es); return fn(L); };
@@ -187,7 +200,7 @@ module.exports = function build(ctx) {
       <div class="pc"><h2 class="kick">${esc(u(L, 'cons'))}</h2><ul class="srcs-list">${cons.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></section>
     ${sources(e, L)}
     <p class="small muted reveal"><a href="${url(L, 'about.html')}#corrections">${esc(u(L, 'errp'))}</a></p>
-    <p class="actions reveal"><a class="btn big" href="${url(L, 'steroids-compare.html')}">${esc(u(L, 'cmpBtn'))}${ARROW}</a> <a class="btn ghost big" href="${url(L, 'steroids-vs-peptides.html')}">${esc(u(L, 'vsBtn'))}</a></p>
+    <p class="actions reveal"><a class="btn big" href="${url(L, 'steroids-compare.html')}">${esc(u(L, 'cmpBtn'))}${ARROW}</a> <a class="btn ghost big" href="${url(L, 'steroids-vs-peptides.html')}">${esc(u(L, 'vsBtn'))}</a> <a class="btn ghost big" href="${url(L, 'steroids-risks.html')}">${esc(u(L, 'riskBtn'))}</a> <a class="btn ghost big" href="${url(L, 'steroids-law.html')}">${esc(u(L, 'lawBtn'))}</a></p>
     ${sibs.length ? `<section class="blk reveal"><h2 class="kick">${esc(u(L, 'related'))}</h2><div class="grid-cards">${sibs.map(s => tile(s, L)).join('')}</div></section>` : ''}
   </div>
 </article>`;
@@ -220,6 +233,10 @@ module.exports = function build(ctx) {
 <section><div class="wrap">
   <section class="blk note reveal"><p>${esc(u(L, 'note'))}</p></section>
   <div class="grid-cards">${fact('q1h', 'q1')}${fact('q2h', 'q2')}${fact('q3h', 'q3')}</div>
+  ${ARTS.length ? `<div class="grid-cards" style="margin-top:22px">${ARTS.map(a => `
+    <a class="card tile reveal piece" href="${url(L, 'steroids-' + a.id + '.html')}">
+      <span><em class="kick">${esc(u(L, 'vsKick'))}</em><b>${esc(tx(L, a.title))}</b>
+      <em>${esc(S(L, l => first(a.lead[l])))}</em></span>${ARROW}</a>`).join('')}</div>` : ''}
 </div></section>
 ${ORDER.map(k => { const rows = data.filter(e => e.cls === k); if (!rows.length) return ''; return `
 <section class="band" id="${k}"><div class="wrap">
@@ -274,11 +291,30 @@ ${ORDER.map(k => { const rows = data.filter(e => e.cls === k); if (!rows.length)
     return layout({ lang: L, here: 'steroids-vs-peptides.html', twin: 'steroids-vs-peptides.html', body, title: S(L, l => U('vsTitle', l) + ' | PepSafe'), desc: S(L, l => clip(VS.intro[0][{ en: 0, pl: 1, es: 2 }[l]], 155)) });
   }
 
+  function article(a, L) {
+    const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <p class="kick reveal">${esc(u(L, 'vsKick'))}</p>
+    <h1 class="display reveal">${esc(tx(L, a.title))}</h1>
+  </div>
+</section>
+<section><div class="wrap narrow">
+  <p class="lead reveal">${esc(tx(L, a.lead))}</p>
+  ${a.sections.map(sc => `<section class="blk reveal"><h2 class="kick">${esc(tx(L, sc.h))}</h2>${(sc.p.en || []).map((_, i) => `<p>${esc(S(L, l => sc.p[l][i]))}</p>`).join('')}</section>`).join('\n  ')}
+  <section class="blk note reveal"><p>${esc(u(L, 'note'))}</p></section>
+  <p class="actions reveal"><a class="btn big" href="${url(L, 'steroids.html')}">${esc(u(L, 'back'))}${ARROW}</a> <a class="btn ghost big" href="${url(L, 'steroids-compare.html')}">${esc(u(L, 'cmpBtn'))}</a></p>
+</div></section>`;
+    return layout({ lang: L, here: 'steroids-' + a.id + '.html', twin: 'steroids-' + a.id + '.html', body, title: S(L, l => a.title[l] + ' | PepSafe'), desc: S(L, l => clip(a.lead[l], 155)) });
+  }
+
   const pages = [];
   for (const L of LANGS) {
     const dir = path.join(out, L);
     fs.mkdirSync(path.join(dir, 't'), { recursive: true });
     const put = (f, h) => { fs.writeFileSync(path.join(dir, f), h); pages.push(L + '/' + f); };
+    for (const a of ARTS) put('steroids-' + a.id + '.html', article(a, L));
     put('steroids.html', hub(L)); put('steroids-compare.html', compare(L)); put('steroids-vs-peptides.html', vs(L));
     for (const e of data) put('t/' + sid(e) + '.html', cardPage(e, L));
   }

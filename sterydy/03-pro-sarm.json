@@ -585,7 +585,7 @@
    "pl": "GW501516, to nie SARM i nie steroid",
    "es": "GW501516, ni SARM ni esteroide"
   },
-  "cls": "sarm",
+  "cls": "oth",
   "form": "oral",
   "q": "GW501516 cardarine",
   "label": false,

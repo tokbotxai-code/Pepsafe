@@ -1,0 +1,822 @@
+[
+ {
+  "id": "testosterone-propionate",
+  "n": "Testosterone propionate",
+  "nm": {
+   "pl": "Propionian testosteronu",
+   "es": "Propionato de testosterona"
+  },
+  "alt": {
+   "en": "Short-acting testosterone ester",
+   "pl": "Krótkodziałający ester testosteronu",
+   "es": "Éster de testosterona de acción corta"
+  },
+  "cls": "inj",
+  "form": "inj",
+  "q": "testosterone propionate",
+  "what": {
+   "en": "Testosterone propionate is a short-acting ester of testosterone. The body releases it from the injection site quickly, so its effect fades within days rather than weeks.",
+   "pl": "Propionian testosteronu to krótkodziałający ester testosteronu. Organizm uwalnia go z miejsca wstrzyknięcia szybko, więc działanie wygasa po kilku dniach, a nie tygodniach.",
+   "es": "El propionato de testosterona es un éster de testosterona de acción corta. El cuerpo lo libera rápido desde el punto de inyección, así que su efecto se agota en días y no en semanas."
+  },
+  "how": {
+   "en": "Once the short ester is removed, it is simply testosterone and acts at the androgen receptor like the natural hormone. The ester only decides the speed of release.",
+   "pl": "Po odcięciu krótkiego estru to po prostu testosteron, który działa na receptor androgenowy jak naturalny hormon. Ester decyduje tylko o tempie uwalniania.",
+   "es": "Una vez retirado el éster corto es simplemente testosterona y actúa sobre el receptor de andrógenos como la hormona natural. El éster solo determina la velocidad de liberación."
+  },
+  "med": {
+   "en": "It was used for testosterone replacement and for some hormone-related cancers in women. Long-acting esters and gels have largely replaced it in routine care.",
+   "pl": "Stosowano go w terapii zastępczej testosteronem i w niektórych nowotworach zależnych od hormonów u kobiet. W rutynowej opiece zastąpiły go w dużej mierze estry długodziałające i żele.",
+   "es": "Se usó para el reemplazo de testosterona y para algunos cánceres hormonodependientes en mujeres. Los ésteres de acción prolongada y los geles lo han sustituido en gran parte en la práctica habitual."
+  },
+  "risk": {
+   "en": "Risks are the same as for other testosterone forms, including thicker blood, higher blood pressure, acne and lower fertility. Because it acts briefly, blood levels swing more between doses.",
+   "pl": "Ryzyka są takie jak przy innych postaciach testosteronu, w tym gęstsza krew, wyższe ciśnienie, trądzik i niższa płodność. Ponieważ działa krótko, poziom we krwi waha się bardziej między dawkami.",
+   "es": "Los riesgos son los mismos que con otras formas de testosterona, incluidos sangre más espesa, presión arterial más alta, acné y menor fertilidad. Como actúa poco tiempo, los niveles en sangre oscilan más entre administraciones."
+  },
+  "pros": {
+   "en": [
+    "Fast onset, so effects start and stop quickly",
+    "A component of some blended products",
+    "Well understood molecule"
+   ],
+   "pl": [
+    "Szybki początek działania, więc skutki szybko się zaczynają i kończą",
+    "Składnik niektórych mieszanek",
+    "Dobrze poznana cząsteczka"
+   ],
+   "es": [
+    "Inicio rápido, por lo que sus efectos empiezan y terminan pronto",
+    "Componente de algunos productos combinados",
+    "Molécula bien conocida"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Needs frequent administration",
+    "Larger swings in blood levels",
+    "Same suppression of natural testosterone"
+   ],
+   "pl": [
+    "Wymaga częstego podawania",
+    "Większe wahania poziomu we krwi",
+    "Takie samo hamowanie naturalnego testosteronu"
+   ],
+   "es": [
+    "Requiere administraciones frecuentes",
+    "Mayores oscilaciones de los niveles en sangre",
+    "La misma supresión de la testosterona natural"
+   ]
+  }
+ },
+ {
+  "id": "danazol",
+  "n": "Danazol",
+  "nm": {
+   "pl": "Danazol",
+   "es": "Danazol"
+  },
+  "alt": {
+   "en": "Synthetic steroid for endometriosis and angioedema",
+   "pl": "Syntetyczny steroid stosowany w endometriozie i obrzęku naczynioruchowym",
+   "es": "Esteroide sintético para la endometriosis y el angioedema"
+  },
+  "cls": "oral",
+  "form": "oral",
+  "q": "danazol",
+  "what": {
+   "en": "Danazol is a synthetic steroid with weak androgen activity. It is a real medicine, taken as capsules, and is not designed for muscle building.",
+   "pl": "Danazol to syntetyczny steroid o słabym działaniu androgennym. To prawdziwy lek przyjmowany w kapsułkach, nieprzeznaczony do budowy mięśni.",
+   "es": "El danazol es un esteroide sintético con actividad androgénica débil. Es un medicamento real, en cápsulas, y no está pensado para ganar músculo."
+  },
+  "how": {
+   "en": "It lowers the release of the pituitary hormones that drive the ovaries, which reduces oestrogen and thins the lining of the womb. It also acts weakly on androgen receptors.",
+   "pl": "Obniża wydzielanie hormonów przysadki pobudzających jajniki, co zmniejsza estrogen i ścieńcza błonę śluzową macicy. Działa też słabo na receptory androgenowe.",
+   "es": "Reduce la liberación de las hormonas de la hipófisis que estimulan los ovarios, lo que baja el estrógeno y adelgaza el revestimiento del útero. También actúa débilmente sobre los receptores de andrógenos."
+  },
+  "med": {
+   "en": "It is licensed for endometriosis, for hereditary angioedema and for some cases of fibrocystic breast disease. Doctors also use it in certain rare blood disorders.",
+   "pl": "Jest zarejestrowany w endometriozie, dziedzicznym obrzęku naczynioruchowym i niektórych przypadkach mastopatii włóknisto-torbielowatej. Lekarze stosują go też w niektórych rzadkich chorobach krwi.",
+   "es": "Está autorizado para la endometriosis, el angioedema hereditario y algunos casos de enfermedad fibroquística de la mama. Los médicos también lo usan en ciertos trastornos raros de la sangre."
+  },
+  "risk": {
+   "en": "Its label warns of blood clots, liver problems including benign liver tumours and peliosis hepatis, raised pressure around the brain, and harm to a pregnancy, because it can masculinise a female baby. In women it can also cause acne, extra hair and a deeper voice, and the voice change can be permanent.",
+   "pl": "Jego ulotka ostrzega przed zakrzepami, problemami z wątrobą, w tym łagodnymi guzami wątroby i peliosis hepatis, podwyższonym ciśnieniem wokół mózgu oraz szkodą dla ciąży, bo może zmaskulinizować dziewczynkę. U kobiet może też powodować trądzik, nadmierne owłosienie i niższy głos, a zmiana głosu może być trwała.",
+   "es": "Su prospecto advierte de coágulos, problemas hepáticos, incluidos tumores hepáticos benignos y peliosis hepática, aumento de la presión alrededor del cerebro y daño en el embarazo, porque puede masculinizar a una niña. En mujeres también puede causar acné, vello excesivo y voz más grave, y el cambio de voz puede ser permanente."
+  },
+  "wada": {
+   "en": "Anti-doping rules for danazol are not simple. An athlete should check the current WADA list and ask a sports doctor before any use.",
+   "pl": "Przepisy antydopingowe dotyczące danazolu nie są proste. Sportowiec powinien sprawdzić aktualną listę WADA i zapytać lekarza sportowego przed jakimkolwiek zastosowaniem.",
+   "es": "Las normas antidopaje sobre el danazol no son sencillas. Un deportista debe consultar la lista vigente de la AMA y preguntar a un médico deportivo antes de cualquier uso."
+  },
+  "pros": {
+   "en": [
+    "Real licensed medicine with clear uses",
+    "Helps in hereditary angioedema and endometriosis",
+    "Weak androgenic activity"
+   ],
+   "pl": [
+    "Prawdziwy zarejestrowany lek o jasnych wskazaniach",
+    "Pomaga w dziedzicznym obrzęku naczynioruchowym i endometriozie",
+    "Słabe działanie androgenne"
+   ],
+   "es": [
+    "Medicamento real y autorizado con usos claros",
+    "Ayuda en el angioedema hereditario y la endometriosis",
+    "Actividad androgénica débil"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Boxed warnings for clots, liver problems and pregnancy",
+    "Masculinising effects in women, some permanent",
+    "Needs specialist supervision"
+   ],
+   "pl": [
+    "Ostrzeżenia w ramce o zakrzepach, problemach z wątrobą i ciąży",
+    "Maskulinizacja u kobiet, częściowo trwała",
+    "Wymaga nadzoru specjalisty"
+   ],
+   "es": [
+    "Advertencias en recuadro por coágulos, problemas hepáticos y embarazo",
+    "Efectos masculinizantes en mujeres, algunos permanentes",
+    "Requiere supervisión especializada"
+   ]
+  }
+ },
+ {
+  "id": "yk-11",
+  "n": "YK-11",
+  "nm": {
+   "pl": "YK-11",
+   "es": "YK-11"
+  },
+  "alt": {
+   "en": "A steroid-based lab compound, SARM-like",
+   "pl": "Laboratoryjny związek na bazie steroidu, podobny do SARM",
+   "es": "Compuesto de laboratorio de base esteroidea, similar a un SARM"
+  },
+  "cls": "sarm",
+  "form": "oral",
+  "q": "YK-11",
+  "label": false,
+  "what": {
+   "en": "YK-11 is a lab compound built on a steroid backbone that acts on the androgen receptor. It is often sold as a SARM, but its structure is a steroid’s.",
+   "pl": "YK-11 to związek laboratoryjny zbudowany na szkielecie steroidu, który działa na receptor androgenowy. Często sprzedaje się go jako SARM, ale jego budowa jest budową steroidu.",
+   "es": "El YK-11 es un compuesto de laboratorio con un esqueleto de esteroide que actúa sobre el receptor de andrógenos. A menudo se vende como SARM, pero su estructura es la de un esteroide."
+  },
+  "how": {
+   "en": "In cell experiments it partly activates the androgen receptor and increases a muscle-related protein called follistatin. This has only been seen in the lab, not in people.",
+   "pl": "W doświadczeniach na komórkach częściowo aktywuje receptor androgenowy i zwiększa białko związane z mięśniami zwane folistatyną. Widziano to tylko w laboratorium, nie u ludzi.",
+   "es": "En experimentos con células activa parcialmente el receptor de andrógenos y aumenta una proteína relacionada con el músculo llamada folistatina. Esto solo se ha visto en el laboratorio, no en personas."
+  },
+  "med": {
+   "en": "It has no approved use and no published human trials.",
+   "pl": "Nie ma zatwierdzonego zastosowania ani opublikowanych badań na ludziach.",
+   "es": "No tiene ningún uso aprobado ni ensayos en humanos publicados."
+  },
+  "risk": {
+   "en": "Because there are no human studies, its risks are unknown. Compounds in this family can suppress natural testosterone and strain the liver, and products sold online have been found to contain something other than what the label says.",
+   "pl": "Ponieważ nie ma badań na ludziach, jego ryzyka są nieznane. Związki z tej rodziny mogą hamować naturalny testosteron i obciążać wątrobę, a produkty sprzedawane w internecie zawierały coś innego niż deklarowano.",
+   "es": "Al no haber estudios en humanos, sus riesgos se desconocen. Los compuestos de esta familia pueden suprimir la testosterona natural y sobrecargar el hígado, y los productos vendidos en línea han contenido algo distinto de lo que indica la etiqueta."
+  },
+  "pros": {
+   "en": [
+    "Interesting lab findings on muscle signalling",
+    "Active research chemical in laboratories",
+    "Not a classic steroid in how it acts on the receptor"
+   ],
+   "pl": [
+    "Ciekawe wyniki laboratoryjne dotyczące sygnałów w mięśniach",
+    "Aktywny związek badawczy w laboratoriach",
+    "Nie jest klasycznym steroidem w sposobie działania na receptor"
+   ],
+   "es": [
+    "Resultados de laboratorio interesantes sobre la señalización muscular",
+    "Compuesto de investigación activo en laboratorios",
+    "No es un esteroide clásico en cómo actúa sobre el receptor"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No human data at all",
+    "Unregulated and often mislabelled",
+    "Prohibited in sport"
+   ],
+   "pl": [
+    "Brak jakichkolwiek danych u ludzi",
+    "Nieregulowany i często źle oznaczony",
+    "Zabroniony w sporcie"
+   ],
+   "es": [
+    "Sin ningún dato en humanos",
+    "No regulado y a menudo mal etiquetado",
+    "Prohibido en el deporte"
+   ]
+  }
+ },
+ {
+  "id": "mk-677",
+  "n": "MK-677",
+  "nm": {
+   "pl": "MK-677",
+   "es": "MK-677"
+  },
+  "alt": {
+   "en": "Ibutamoren, an oral growth hormone booster",
+   "pl": "Ibutamoren, doustny środek podnoszący hormon wzrostu",
+   "es": "Ibutamoren, un estimulante oral de la hormona del crecimiento"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "ibutamoren MK-677",
+  "label": false,
+  "what": {
+   "en": "MK-677, or ibutamoren, is an oral drug that raises growth hormone and IGF-1 by acting on the ghrelin receptor. It is not a steroid and not a peptide, and it was never approved.",
+   "pl": "MK-677, czyli ibutamoren, to doustny lek podnoszący hormon wzrostu i IGF-1 przez działanie na receptor greliny. To nie steroid i nie peptyd, i nigdy nie został zatwierdzony.",
+   "es": "El MK-677, o ibutamoren, es un fármaco oral que eleva la hormona del crecimiento y el IGF-1 actuando sobre el receptor de la grelina. No es un esteroide ni un péptido, y nunca fue aprobado."
+  },
+  "how": {
+   "en": "It mimics ghrelin, the hunger hormone, which tells the pituitary to release more growth hormone. Levels stay raised for as long as the drug is taken.",
+   "pl": "Naśladuje grelinę, hormon głodu, która każe przysadce wydzielać więcej hormonu wzrostu. Poziom pozostaje podniesiony tak długo, jak lek jest przyjmowany.",
+   "es": "Imita a la grelina, la hormona del hambre, que ordena a la hipófisis liberar más hormona del crecimiento. Los niveles permanecen elevados mientras se toma el fármaco."
+  },
+  "med": {
+   "en": "It was tested by its developer for muscle loss in older adults and for growth disorders. A trial in older adults raised lean mass but did not improve strength or function, and development stopped.",
+   "pl": "Producent badał go w utracie mięśni u starszych osób i zaburzeniach wzrastania. W badaniu u starszych osób zwiększył masę beztłuszczową, ale nie poprawił siły ani sprawności, i prace zatrzymano.",
+   "es": "Su desarrollador lo probó para la pérdida de músculo en mayores y para trastornos del crecimiento. Un ensayo en adultos mayores aumentó la masa magra pero no mejoró la fuerza ni la función, y el desarrollo se detuvo."
+  },
+  "risk": {
+   "en": "Trials found higher fasting blood sugar, reduced insulin sensitivity, fluid retention and swelling, and increased appetite. The effects of keeping growth hormone raised for years in people without a deficiency are not known.",
+   "pl": "Badania wykazały wyższy cukier na czczo, obniżoną wrażliwość na insulinę, zatrzymywanie wody i obrzęki oraz zwiększony apetyt. Skutki utrzymywania podwyższonego hormonu wzrostu przez lata u osób bez niedoboru nie są znane.",
+   "es": "Los ensayos encontraron azúcar en ayunas más alto, menor sensibilidad a la insulina, retención de líquidos e hinchazón y mayor apetito. Se desconocen los efectos de mantener elevada la hormona del crecimiento durante años en personas sin déficit."
+  },
+  "status": {
+   "en": "Not approved as a medicine in the UK or the US. Selling it for human use as a supplement or a “research chemical” is not legal.",
+   "pl": "Nie jest zatwierdzony jako lek w Wielkiej Brytanii ani USA. Sprzedaż do stosowania u ludzi jako suplement lub „research chemical” nie jest legalna.",
+   "es": "No está aprobado como medicamento en el Reino Unido ni en EE. UU. Venderlo para uso humano como suplemento o como “producto de investigación” no es legal."
+  },
+  "wada": {
+   "en": "WADA prohibits growth hormone secretagogues, including MK-677, at all times (category S2).",
+   "pl": "WADA zakazuje środków pobudzających wydzielanie hormonu wzrostu, w tym MK-677, przez cały czas (kategoria S2).",
+   "es": "La AMA prohíbe los secretagogos de la hormona del crecimiento, incluido el MK-677, en todo momento (categoría S2)."
+  },
+  "pros": {
+   "en": [
+    "Raises growth hormone and IGF-1 in trials",
+    "Increased lean mass in some trials",
+    "Taken by mouth"
+   ],
+   "pl": [
+    "Podnosi hormon wzrostu i IGF-1 w badaniach",
+    "W niektórych badaniach zwiększył masę beztłuszczową",
+    "Przyjmowany doustnie"
+   ],
+   "es": [
+    "Eleva la hormona del crecimiento y el IGF-1 en los ensayos",
+    "Aumentó la masa magra en algunos ensayos",
+    "Se toma por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Raises blood sugar and lowers insulin sensitivity",
+    "Fluid retention and swelling",
+    "Never approved and no long-term safety data"
+   ],
+   "pl": [
+    "Podnosi cukier i obniża wrażliwość na insulinę",
+    "Zatrzymywanie wody i obrzęki",
+    "Nigdy niezatwierdzony i brak danych o długoterminowym bezpieczeństwie"
+   ],
+   "es": [
+    "Sube el azúcar y reduce la sensibilidad a la insulina",
+    "Retención de líquidos e hinchazón",
+    "Nunca aprobado y sin datos de seguridad a largo plazo"
+   ]
+  }
+ },
+ {
+  "id": "sr9009",
+  "n": "SR9009",
+  "nm": {
+   "pl": "SR9009",
+   "es": "SR9009"
+  },
+  "alt": {
+   "en": "“Stenabolic”, a lab compound tested in mice",
+   "pl": "„Stenabolic”, związek laboratoryjny badany na myszach",
+   "es": "“Stenabolic”, un compuesto de laboratorio probado en ratones"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "SR9009",
+  "label": false,
+  "what": {
+   "en": "SR9009 is a lab compound that acts on Rev-Erb, a protein that helps run the body clock and energy use. It has only been studied in animals and cells.",
+   "pl": "SR9009 to związek laboratoryjny działający na Rev-Erb, białko pomagające regulować zegar biologiczny i zużycie energii. Badano go wyłącznie na zwierzętach i komórkach.",
+   "es": "El SR9009 es un compuesto de laboratorio que actúa sobre Rev-Erb, una proteína que ayuda a regular el reloj biológico y el uso de energía. Solo se ha estudiado en animales y células."
+  },
+  "how": {
+   "en": "In a well-known mouse study it increased running endurance and changed fat and sugar use. The effects in mice have not been shown in people.",
+   "pl": "W znanym badaniu na myszach zwiększył wytrzymałość biegową i zmienił zużycie tłuszczu i cukru. Efektów obserwowanych u myszy nie wykazano u ludzi.",
+   "es": "En un conocido estudio en ratones aumentó la resistencia al correr y cambió el uso de grasa y azúcar. Los efectos en ratones no se han demostrado en personas."
+  },
+  "med": {
+   "en": "It has no approved use and no completed human trials.",
+   "pl": "Nie ma zatwierdzonego zastosowania ani zakończonych badań na ludziach.",
+   "es": "No tiene ningún uso aprobado ni ensayos en humanos terminados."
+  },
+  "risk": {
+   "en": "With no human safety data the risks are unknown. The compound is also short-lived in the body, so many claims made for products are not backed by data.",
+   "pl": "Bez danych o bezpieczeństwie u ludzi ryzyka są nieznane. Związek jest też krótko obecny w organizmie, więc wiele twierdzeń na temat produktów nie ma pokrycia w danych.",
+   "es": "Sin datos de seguridad en humanos, los riesgos se desconocen. Además el compuesto dura poco en el cuerpo, así que muchas afirmaciones sobre los productos no tienen respaldo en datos."
+  },
+  "wada": {
+   "en": "Anti-doping bodies have warned athletes about it. Check the current WADA list.",
+   "pl": "Organizacje antydopingowe ostrzegały przed nim sportowców. Sprawdź aktualną listę WADA.",
+   "es": "Los organismos antidopaje han advertido a los deportistas sobre ella. Consulta la lista vigente de la AMA."
+  },
+  "pros": {
+   "en": [
+    "Interesting mouse results on endurance",
+    "Helped researchers study the body clock",
+    "Active laboratory research"
+   ],
+   "pl": [
+    "Ciekawe wyniki na myszach dotyczące wytrzymałości",
+    "Pomogło badaczom poznawać zegar biologiczny",
+    "Aktywne badania laboratoryjne"
+   ],
+   "es": [
+    "Resultados interesantes en ratones sobre la resistencia",
+    "Ayudó a investigar el reloj biológico",
+    "Investigación de laboratorio activa"
+   ]
+  },
+  "cons": {
+   "en": [
+    "No human trials",
+    "Sold with claims the data do not support",
+    "Unregulated products of unknown content"
+   ],
+   "pl": [
+    "Brak badań na ludziach",
+    "Sprzedawany z twierdzeniami, których dane nie potwierdzają",
+    "Nieregulowane produkty o nieznanej zawartości"
+   ],
+   "es": [
+    "Sin ensayos en humanos",
+    "Se vende con afirmaciones que los datos no respaldan",
+    "Productos no regulados de contenido desconocido"
+   ]
+  }
+ },
+ {
+  "id": "somatropin",
+  "n": "Somatropin",
+  "nm": {
+   "pl": "Somatropina",
+   "es": "Somatropina"
+  },
+  "alt": {
+   "en": "Human growth hormone",
+   "pl": "Ludzki hormon wzrostu",
+   "es": "Hormona del crecimiento humana"
+  },
+  "cls": "oth",
+  "form": "inj",
+  "q": "somatropin",
+  "status": {
+   "en": "A prescription-only medicine in the UK and the US. Supplying it without a prescription is illegal, and it is not a steroid: growth hormone is a protein hormone.",
+   "pl": "Lek wydawany wyłącznie na receptę w Wielkiej Brytanii i USA. Dostarczanie go bez recepty jest nielegalne, i nie jest steroidem: hormon wzrostu to hormon białkowy.",
+   "es": "Un medicamento solo con receta en el Reino Unido y EE. UU. Suministrarlo sin receta es ilegal, y no es un esteroide: la hormona del crecimiento es una hormona proteica."
+  },
+  "what": {
+   "en": "Somatropin is lab-made human growth hormone, a protein of 191 amino acids. It is a peptide-family hormone, not a steroid.",
+   "pl": "Somatropina to produkowany w laboratorium ludzki hormon wzrostu, białko z 191 aminokwasów. To hormon z rodziny peptydowej, a nie steroid.",
+   "es": "La somatropina es hormona del crecimiento humana fabricada en laboratorio, una proteína de 191 aminoácidos. Es una hormona de la familia de los péptidos, no un esteroide."
+  },
+  "how": {
+   "en": "It acts on receptors in the liver and other tissues, prompting the release of IGF-1, which drives growth in children and affects fat and muscle in adults.",
+   "pl": "Działa na receptory w wątrobie i innych tkankach, pobudzając wydzielanie IGF-1, który napędza wzrost u dzieci, a u dorosłych wpływa na tłuszcz i mięśnie.",
+   "es": "Actúa sobre receptores del hígado y otros tejidos y estimula la liberación de IGF-1, que impulsa el crecimiento en niños y afecta a la grasa y al músculo en adultos."
+  },
+  "med": {
+   "en": "It is approved for growth hormone deficiency in children and adults, Turner syndrome, Prader-Willi syndrome and some other conditions that stunt growth or waste the body.",
+   "pl": "Jest zatwierdzony w niedoborze hormonu wzrostu u dzieci i dorosłych, zespole Turnera, zespole Pradera-Williego i innych stanach hamujących wzrost lub wyniszczających organizm.",
+   "es": "Está aprobada para el déficit de hormona del crecimiento en niños y adultos, el síndrome de Turner, el síndrome de Prader-Willi y otras afecciones que frenan el crecimiento o consumen el cuerpo."
+  },
+  "risk": {
+   "en": "Possible effects include fluid retention, joint pain, carpal tunnel syndrome and higher blood sugar, and in people without a deficiency a review found it added lean mass but did not clearly improve strength. It is monitored closely in medical use.",
+   "pl": "Możliwe skutki to zatrzymywanie wody, bóle stawów, zespół cieśni nadgarstka i wyższy cukier, a u osób bez niedoboru przegląd badań wykazał, że zwiększa masę beztłuszczową, ale wyraźnie nie poprawia siły. W użyciu medycznym jest ściśle monitorowany.",
+   "es": "Los efectos posibles incluyen retención de líquidos, dolor articular, síndrome del túnel carpiano y azúcar más alto, y en personas sin déficit una revisión encontró que aumenta la masa magra pero no mejora claramente la fuerza. En el uso médico se vigila de cerca."
+  },
+  "wada": {
+   "en": "WADA prohibits growth hormone at all times (category S2).",
+   "pl": "WADA zakazuje hormonu wzrostu przez cały czas (kategoria S2).",
+   "es": "La AMA prohíbe la hormona del crecimiento en todo momento (categoría S2)."
+  },
+  "pros": {
+   "en": [
+    "Proven treatment for growth hormone deficiency",
+    "Decades of safety monitoring in medical use",
+    "Helps children with growth disorders"
+   ],
+   "pl": [
+    "Sprawdzone leczenie niedoboru hormonu wzrostu",
+    "Dziesięciolecia nadzoru nad bezpieczeństwem w użyciu medycznym",
+    "Pomaga dzieciom z zaburzeniami wzrastania"
+   ],
+   "es": [
+    "Tratamiento probado del déficit de hormona del crecimiento",
+    "Décadas de vigilancia de seguridad en uso médico",
+    "Ayuda a niños con trastornos del crecimiento"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Expensive and given by injection",
+    "Little proof of strength gains in healthy people",
+    "Fluid retention, joint pain and raised blood sugar"
+   ],
+   "pl": [
+    "Drogi i podawany w iniekcji",
+    "Mało dowodów na wzrost siły u zdrowych osób",
+    "Zatrzymywanie wody, bóle stawów i podwyższony cukier"
+   ],
+   "es": [
+    "Caro y administrado por inyección",
+    "Poca prueba de ganancias de fuerza en personas sanas",
+    "Retención de líquidos, dolor articular y azúcar elevado"
+   ]
+  }
+ },
+ {
+  "id": "clenbuterol",
+  "n": "Clenbuterol",
+  "nm": {
+   "pl": "Klenbuterol",
+   "es": "Clembuterol"
+  },
+  "alt": {
+   "en": "A beta-2 agonist, not a steroid",
+   "pl": "Agonista receptorów beta-2, nie steroid",
+   "es": "Un agonista beta-2, no un esteroide"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "clenbuterol",
+  "label": false,
+  "what": {
+   "en": "Clenbuterol is a stimulant that opens the airways. It is a bronchodilator licensed for horses, and in some countries it has been used for asthma in people.",
+   "pl": "Klenbuterol to stymulant rozszerzający drogi oddechowe. To lek rozszerzający oskrzela zarejestrowany dla koni, a w niektórych krajach stosowano go w astmie u ludzi.",
+   "es": "El clembuterol es un estimulante que abre las vías respiratorias. Es un broncodilatador autorizado para caballos y en algunos países se ha usado para el asma en personas."
+  },
+  "how": {
+   "en": "It stimulates beta-2 receptors, which relax airway muscle and speed the heart. In animals it also shifts energy use, and that effect is why it became a “fat burner” in some circles.",
+   "pl": "Pobudza receptory beta-2, które rozluźniają mięśnie dróg oddechowych i przyspieszają serce. U zwierząt zmienia też wykorzystanie energii i dlatego w niektórych kręgach stał się „spalaczem tłuszczu”.",
+   "es": "Estimula los receptores beta-2, que relajan el músculo de las vías respiratorias y aceleran el corazón. En animales también cambia el uso de energía, y por eso se convirtió en un “quemagrasas” en algunos círculos."
+  },
+  "med": {
+   "en": "It is not approved for people in the US or the UK. It is a veterinary medicine for breathing problems in horses.",
+   "pl": "Nie jest zatwierdzony dla ludzi w USA ani Wielkiej Brytanii. To lek weterynaryjny na problemy z oddychaniem u koni.",
+   "es": "No está aprobado para personas en EE. UU. ni en el Reino Unido. Es un medicamento veterinario para problemas respiratorios en caballos."
+  },
+  "risk": {
+   "en": "It can cause a racing heart, tremor, anxiety, low potassium and palpitations, and heart damage and deaths have been reported after misuse. Eating meat from animals treated with it has also caused outbreaks of poisoning and positive doping tests.",
+   "pl": "Może powodować przyspieszone bicie serca, drżenie, lęk, niski potas i kołatanie serca, a po nadużyciu opisywano uszkodzenie serca i zgony. Spożywanie mięsa zwierząt leczonych nim powodowało też zatrucia i pozytywne testy antydopingowe.",
+   "es": "Puede causar taquicardia, temblor, ansiedad, potasio bajo y palpitaciones, y se han descrito daño cardíaco y muertes tras su mal uso. Comer carne de animales tratados con él también ha causado intoxicaciones y positivos en controles antidopaje."
+  },
+  "wada": {
+   "en": "WADA prohibits clenbuterol at all times as a beta-2 agonist (category S3).",
+   "pl": "WADA zakazuje klenbuterolu przez cały czas jako agonisty beta-2 (kategoria S3).",
+   "es": "La AMA prohíbe el clembuterol en todo momento como agonista beta-2 (categoría S3)."
+  },
+  "pros": {
+   "en": [
+    "Effective bronchodilator in animals",
+    "Licensed for veterinary use",
+    "Well characterised pharmacology"
+   ],
+   "pl": [
+    "Skuteczny lek rozszerzający oskrzela u zwierząt",
+    "Zarejestrowany do użytku weterynaryjnego",
+    "Dobrze poznana farmakologia"
+   ],
+   "es": [
+    "Broncodilatador eficaz en animales",
+    "Autorizado para uso veterinario",
+    "Farmacología bien caracterizada"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Heart strain, tremor and low potassium",
+    "Deaths reported after misuse",
+    "Not approved for people in the UK or the US"
+   ],
+   "pl": [
+    "Obciążenie serca, drżenie i niski potas",
+    "Opisywano zgony po nadużyciu",
+    "Niezatwierdzony dla ludzi w Wielkiej Brytanii i USA"
+   ],
+   "es": [
+    "Sobrecarga del corazón, temblor y potasio bajo",
+    "Se han descrito muertes tras su mal uso",
+    "No aprobado para personas en el Reino Unido ni en EE. UU."
+   ]
+  }
+ },
+ {
+  "id": "dnp",
+  "n": "DNP",
+  "nm": {
+   "pl": "DNP",
+   "es": "DNP"
+  },
+  "alt": {
+   "en": "2,4-dinitrophenol, an industrial chemical that has killed people",
+   "pl": "2,4-dinitrofenol, chemikalia przemysłowa, która zabiła ludzi",
+   "es": "2,4-dinitrofenol, un producto químico industrial que ha matado a personas"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "2,4-dinitrophenol",
+  "label": false,
+  "what": {
+   "en": "DNP, or 2,4-dinitrophenol, is an industrial chemical used in dyes and explosives. It is not a medicine, and in the 1930s it was sold as a weight-loss pill until it was found to be too dangerous.",
+   "pl": "DNP, czyli 2,4-dinitrofenol, to chemikalia przemysłowa używana w barwnikach i materiałach wybuchowych. To nie lek, a w latach 30. sprzedawano go jako tabletkę na odchudzanie, aż uznano go za zbyt niebezpieczny.",
+   "es": "El DNP, o 2,4-dinitrofenol, es un producto químico industrial usado en tintes y explosivos. No es un medicamento, y en la década de 1930 se vendió como pastilla para adelgazar hasta que se comprobó que era demasiado peligroso."
+  },
+  "how": {
+   "en": "It makes cells waste the energy from food as heat instead of storing it. That can push body temperature up without any way to cool down.",
+   "pl": "Sprawia, że komórki marnują energię z jedzenia w postaci ciepła zamiast ją magazynować. To może podnieść temperaturę ciała bez możliwości schłodzenia.",
+   "es": "Hace que las células desperdicien como calor la energía de los alimentos en lugar de almacenarla. Eso puede elevar la temperatura corporal sin forma de enfriarse."
+  },
+  "med": {
+   "en": "It has no medical use. The US declared it unsafe for human use in 1938.",
+   "pl": "Nie ma zastosowania medycznego. USA uznały go za niebezpieczny dla ludzi w 1938 roku.",
+   "es": "No tiene ningún uso médico. EE. UU. lo declaró inseguro para uso humano en 1938."
+  },
+  "risk": {
+   "en": "DNP can cause fatal overheating, fast heart rate, sweating, cataracts and organ failure, and there is no antidote. Deaths have been reported in the UK and the US, including in young people, and the gap between a harmful and a deadly amount is small.",
+   "pl": "DNP może powodować śmiertelne przegrzanie, przyspieszone bicie serca, pocenie się, zaćmę i niewydolność narządów, a nie ma odtrutki. Zgony notowano w Wielkiej Brytanii i USA, także u młodych osób, a różnica między ilością szkodliwą a śmiertelną jest niewielka.",
+   "es": "El DNP puede causar un sobrecalentamiento mortal, taquicardia, sudoración, cataratas y fallo de órganos, y no existe antídoto. Se han notificado muertes en el Reino Unido y EE. UU., incluso en jóvenes, y la diferencia entre una cantidad dañina y una mortal es pequeña."
+  },
+  "status": {
+   "en": "Not approved for human consumption anywhere. In the UK the Food Standards Agency treats it as unfit for people, and selling it for use as a diet pill is illegal.",
+   "pl": "Nie jest nigdzie zatwierdzony do spożycia przez ludzi. W Wielkiej Brytanii Agencja Standardów Żywności uznaje go za nienadający się dla ludzi, a sprzedaż jako tabletki na odchudzanie jest nielegalna.",
+   "es": "No está aprobado para consumo humano en ningún lugar. En el Reino Unido la Agencia de Normas Alimentarias lo considera no apto para personas y venderlo como pastilla para adelgazar es ilegal."
+  },
+  "wada": {
+   "en": "This is not mainly a doping issue. The danger is to life itself.",
+   "pl": "To nie jest przede wszystkim sprawa dopingu. Zagrożone jest samo życie.",
+   "es": "No es principalmente una cuestión de dopaje. El peligro es para la vida misma."
+  },
+  "pros": {
+   "en": [
+    "None that outweigh the risk",
+    "Useful only as a historical warning",
+    "Studied for its biochemistry"
+   ],
+   "pl": [
+    "Żadnych, które przeważałyby ryzyko",
+    "Użyteczny jedynie jako przestroga historyczna",
+    "Badany ze względu na biochemię"
+   ],
+   "es": [
+    "Ninguna que supere el riesgo",
+    "Solo sirve como advertencia histórica",
+    "Se ha estudiado por su bioquímica"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Can kill, with no antidote",
+    "Tiny margin between harm and a fatal amount",
+    "Banned for human consumption"
+   ],
+   "pl": [
+    "Może zabić, nie ma odtrutki",
+    "Minimalny margines między szkodą a ilością śmiertelną",
+    "Zakazany do spożycia przez ludzi"
+   ],
+   "es": [
+    "Puede matar y no tiene antídoto",
+    "Margen mínimo entre el daño y una cantidad mortal",
+    "Prohibido para consumo humano"
+   ]
+  }
+ },
+ {
+  "id": "raloxifene",
+  "n": "Raloxifene",
+  "nm": {
+   "pl": "Raloksyfen",
+   "es": "Raloxifeno"
+  },
+  "alt": {
+   "en": "SERM for bone and breast cancer risk",
+   "pl": "SERM stosowany w chorobach kości i ryzyku raka piersi",
+   "es": "SERM para el hueso y el riesgo de cáncer de mama"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "raloxifene",
+  "what": {
+   "en": "Raloxifene is a SERM that acts like oestrogen on bone and blocks it in breast and womb tissue. It is taken by mouth by women after menopause.",
+   "pl": "Raloksyfen to SERM działający jak estrogen na kości, a blokujący go w tkance piersi i macicy. Przyjmują go doustnie kobiety po menopauzie.",
+   "es": "El raloxifeno es un SERM que actúa como el estrógeno sobre el hueso y lo bloquea en el tejido mamario y uterino. Lo toman por vía oral mujeres tras la menopausia."
+  },
+  "how": {
+   "en": "It binds oestrogen receptors and switches them on in bone, where it slows bone loss, and off in breast tissue, where it lowers cancer risk.",
+   "pl": "Wiąże się z receptorami estrogenowymi i włącza je w kościach, gdzie spowalnia ich utratę, a wyłącza w tkance piersi, gdzie zmniejsza ryzyko raka.",
+   "es": "Se une a los receptores de estrógeno y los activa en el hueso, donde frena la pérdida ósea, y los desactiva en el tejido mamario, donde reduce el riesgo de cáncer."
+  },
+  "med": {
+   "en": "It is approved for the treatment and prevention of osteoporosis after menopause and to lower the risk of invasive breast cancer in some women.",
+   "pl": "Jest zatwierdzony w leczeniu i zapobieganiu osteoporozie po menopauzie oraz w zmniejszaniu ryzyka inwazyjnego raka piersi u niektórych kobiet.",
+   "es": "Está aprobado para el tratamiento y la prevención de la osteoporosis tras la menopausia y para reducir el riesgo de cáncer de mama invasivo en algunas mujeres."
+  },
+  "risk": {
+   "en": "It raises the risk of blood clots in the legs and lungs, and of death from stroke in women with heart disease. Hot flushes and leg cramps are common.",
+   "pl": "Zwiększa ryzyko zakrzepów w nogach i płucach oraz zgonu z powodu udaru u kobiet z chorobą serca. Częste są uderzenia gorąca i skurcze łydek.",
+   "es": "Aumenta el riesgo de coágulos en las piernas y los pulmones y de muerte por ictus en mujeres con enfermedad cardíaca. Los sofocos y los calambres en las piernas son frecuentes."
+  },
+  "pros": {
+   "en": [
+    "Slows bone loss after menopause",
+    "Lowers risk of some breast cancers",
+    "Taken by mouth"
+   ],
+   "pl": [
+    "Spowalnia utratę kości po menopauzie",
+    "Zmniejsza ryzyko niektórych raków piersi",
+    "Przyjmowany doustnie"
+   ],
+   "es": [
+    "Frena la pérdida ósea tras la menopausia",
+    "Reduce el riesgo de algunos cánceres de mama",
+    "Se toma por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Blood clot risk",
+    "Stroke risk in women with heart disease",
+    "Hot flushes and leg cramps"
+   ],
+   "pl": [
+    "Ryzyko zakrzepów",
+    "Ryzyko udaru u kobiet z chorobą serca",
+    "Uderzenia gorąca i skurcze łydek"
+   ],
+   "es": [
+    "Riesgo de coágulos",
+    "Riesgo de ictus en mujeres con enfermedad cardíaca",
+    "Sofocos y calambres en las piernas"
+   ]
+  }
+ },
+ {
+  "id": "exemestane",
+  "n": "Exemestane",
+  "nm": {
+   "pl": "Eksemestan",
+   "es": "Exemestano"
+  },
+  "alt": {
+   "en": "Steroid-based aromatase inactivator",
+   "pl": "Inaktywator aromatazy oparty na steroidzie",
+   "es": "Inactivador de la aromatasa de base esteroidea"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "exemestane",
+  "what": {
+   "en": "Exemestane is a breast cancer drug that is itself built on a steroid backbone. It permanently shuts down the enzyme aromatase.",
+   "pl": "Eksemestan to lek na raka piersi zbudowany na szkielecie steroidu. Trwale wyłącza enzym aromatazę.",
+   "es": "El exemestano es un fármaco contra el cáncer de mama que tiene un esqueleto de esteroide. Desactiva de forma permanente la enzima aromatasa."
+  },
+  "how": {
+   "en": "By locking onto aromatase, it stops the conversion of androgens into oestrogen, so oestrogen levels fall. The enzyme has to be rebuilt by the body before oestrogen production recovers.",
+   "pl": "Wiążąc się z aromatazą na stałe, zatrzymuje przemianę androgenów w estrogen, więc poziom estrogenu spada. Organizm musi odbudować enzym, zanim produkcja estrogenu wróci.",
+   "es": "Al unirse a la aromatasa, detiene la conversión de andrógenos en estrógeno y los niveles de estrógeno bajan. El cuerpo debe reconstruir la enzima antes de que se recupere la producción de estrógeno."
+  },
+  "med": {
+   "en": "It is approved for hormone-receptor-positive breast cancer in postmenopausal women, often after other treatment.",
+   "pl": "Jest zatwierdzony w raku piersi z receptorami hormonalnymi u kobiet po menopauzie, często po innym leczeniu.",
+   "es": "Está aprobado para el cáncer de mama con receptores hormonales en mujeres posmenopáusicas, a menudo tras otro tratamiento."
+  },
+  "risk": {
+   "en": "Common effects are hot flushes, joint pain, tiredness and bone thinning. Using it without medical need risks lowering oestrogen too far.",
+   "pl": "Częste skutki to uderzenia gorąca, bóle stawów, zmęczenie i ścieńczenie kości. Stosowanie bez wskazań medycznych grozi zbyt dużym obniżeniem estrogenu.",
+   "es": "Los efectos frecuentes son sofocos, dolor articular, cansancio y adelgazamiento óseo. Usarlo sin necesidad médica arriesga bajar demasiado el estrógeno."
+  },
+  "pros": {
+   "en": [
+    "Proven option in postmenopausal breast cancer",
+    "Works in people who stopped responding to other drugs",
+    "Taken by mouth"
+   ],
+   "pl": [
+    "Sprawdzona opcja w raku piersi po menopauzie",
+    "Działa u osób, które przestały reagować na inne leki",
+    "Przyjmowany doustnie"
+   ],
+   "es": [
+    "Opción probada en el cáncer de mama posmenopáusico",
+    "Funciona en personas que dejaron de responder a otros fármacos",
+    "Se toma por vía oral"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Bone thinning and joint pain",
+    "Can push oestrogen too low",
+    "Prohibited in sport"
+   ],
+   "pl": [
+    "Ścieńczenie kości i bóle stawów",
+    "Może obniżyć estrogen zbyt mocno",
+    "Zabroniony w sporcie"
+   ],
+   "es": [
+    "Adelgazamiento óseo y dolor articular",
+    "Puede bajar demasiado el estrógeno",
+    "Prohibido en el deporte"
+   ]
+  }
+ },
+ {
+  "id": "prednisolone",
+  "n": "Prednisolone",
+  "nm": {
+   "pl": "Prednizolon",
+   "es": "Prednisolona"
+  },
+  "alt": {
+   "en": "Active form of prednisone",
+   "pl": "Aktywna postać prednizonu",
+   "es": "Forma activa de la prednisona"
+  },
+  "cls": "cort",
+  "form": "mix",
+  "q": "prednisolone",
+  "what": {
+   "en": "Prednisolone is the active form of prednisone and is widely prescribed as tablets, liquid for children, eye drops and injections.",
+   "pl": "Prednizolon to aktywna postać prednizonu, powszechnie przepisywana jako tabletki, płyn dla dzieci, krople do oczu i iniekcje.",
+   "es": "La prednisolona es la forma activa de la prednisona y se receta mucho en comprimidos, líquido para niños, colirios e inyecciones."
+  },
+  "how": {
+   "en": "It acts on glucocorticoid receptors to calm inflammation and slow the immune system. Because it needs no conversion in the liver, doctors choose it for people with liver disease.",
+   "pl": "Działa na receptory glikokortykosteroidowe, hamując zapalenie i spowalniając układ odpornościowy. Ponieważ nie wymaga przemiany w wątrobie, lekarze wybierają go u osób z chorobą wątroby.",
+   "es": "Actúa sobre los receptores de glucocorticoides para calmar la inflamación y frenar el sistema inmunitario. Como no necesita conversión en el hígado, los médicos la eligen para personas con enfermedad hepática."
+  },
+  "med": {
+   "en": "It is used for asthma flares in children and adults, croup, allergic and autoimmune conditions, eye inflammation and many other inflammatory diseases.",
+   "pl": "Stosuje się go w zaostrzeniach astmy u dzieci i dorosłych, krupie, chorobach alergicznych i autoimmunologicznych, zapaleniach oka i wielu innych chorobach zapalnych.",
+   "es": "Se usa en crisis de asma en niños y adultos, crup, enfermedades alérgicas y autoinmunes, inflamación ocular y muchas otras enfermedades inflamatorias."
+  },
+  "risk": {
+   "en": "Short courses are usually well tolerated, with trouble sleeping, mood changes and a bigger appetite. Long courses carry the usual steroid risks, and treatment given for a long time must be reduced slowly rather than stopped suddenly.",
+   "pl": "Krótkie kuracje są zwykle dobrze tolerowane, z kłopotami ze snem, zmianami nastroju i większym apetytem. Długie kuracje niosą zwykłe ryzyka steroidów, a leczenie stosowane długo trzeba zmniejszać stopniowo, a nie przerywać nagle.",
+   "es": "Los tratamientos cortos suelen tolerarse bien, con problemas para dormir, cambios de humor y más apetito. Los largos conllevan los riesgos habituales de los esteroides, y el tratamiento prolongado debe reducirse poco a poco y no suspenderse de golpe."
+  },
+  "pros": {
+   "en": [
+    "Fast anti-inflammatory effect",
+    "Available as liquid and drops",
+    "Long record of use in children and adults"
+   ],
+   "pl": [
+    "Szybkie działanie przeciwzapalne",
+    "Dostępny w postaci płynu i kropli",
+    "Długa historia stosowania u dzieci i dorosłych"
+   ],
+   "es": [
+    "Efecto antiinflamatorio rápido",
+    "Disponible en líquido y en gotas",
+    "Largo historial de uso en niños y adultos"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Weakens bones and the immune system with long use",
+    "Raises blood sugar and blood pressure",
+    "Must be tapered after long use"
+   ],
+   "pl": [
+    "Osłabia kości i układ odpornościowy przy długim stosowaniu",
+    "Podnosi cukier i ciśnienie",
+    "Po długim stosowaniu trzeba odstawiać stopniowo"
+   ],
+   "es": [
+    "Debilita huesos y sistema inmunitario con el uso prolongado",
+    "Sube el azúcar y la presión arterial",
+    "Debe retirarse gradualmente tras un uso prolongado"
+   ]
+  }
+ }
+]
