@@ -1,0 +1,942 @@
+[
+ {
+  "id": "cabergoline",
+  "n": "Cabergoline",
+  "nm": {
+   "pl": "Kabergolina",
+   "es": "Cabergolina"
+  },
+  "alt": {
+   "en": "Dopamine agonist that lowers prolactin",
+   "pl": "Agonista dopaminy obniżający prolaktynę",
+   "es": "Agonista de la dopamina que reduce la prolactina"
+  },
+  "cls": "mod",
+  "form": "oral",
+  "q": "cabergoline",
+  "what": {
+   "en": "Cabergoline is a dopamine agonist that lowers the hormone prolactin. It is a prescription medicine, not a steroid.",
+   "pl": "Kabergolina to agonista dopaminy obniżający hormon prolaktynę. To lek na receptę, a nie steroid.",
+   "es": "La cabergolina es un agonista de la dopamina que reduce la hormona prolactina. Es un medicamento con receta, no un esteroide."
+  },
+  "how": {
+   "en": "It switches on dopamine receptors in the pituitary, which tells the gland to make less prolactin.",
+   "pl": "Pobudza receptory dopaminowe w przysadce, co każe gruczołowi wytwarzać mniej prolaktyny.",
+   "es": "Activa los receptores de dopamina de la hipófisis, lo que indica a la glándula que produzca menos prolactina."
+  },
+  "med": {
+   "en": "It is approved for conditions with too much prolactin, such as prolactin-secreting pituitary tumours, and in some countries as an add-on in Parkinson’s disease.",
+   "pl": "Jest zatwierdzona w stanach nadmiaru prolaktyny, takich jak guzy przysadki wydzielające prolaktynę, a w niektórych krajach jako dodatek w chorobie Parkinsona.",
+   "es": "Está aprobada para afecciones con exceso de prolactina, como los tumores hipofisarios que la secretan, y en algunos países como complemento en la enfermedad de Parkinson."
+  },
+  "risk": {
+   "en": "Nausea, dizziness, low blood pressure and headache are common. At the higher doses used in Parkinson’s disease it has been linked to damage to heart valves, and some people develop compulsive behaviours such as gambling.",
+   "pl": "Częste są nudności, zawroty głowy, niskie ciśnienie i bóle głowy. Przy wyższych dawkach stosowanych w chorobie Parkinsona wiązano ją z uszkodzeniem zastawek serca, a u części osób pojawiają się zachowania kompulsywne, jak hazard.",
+   "es": "Son frecuentes las náuseas, los mareos, la presión baja y el dolor de cabeza. Con las dosis más altas usadas en el Parkinson se ha vinculado con daño en las válvulas del corazón, y algunas personas desarrollan conductas compulsivas como el juego."
+  },
+  "pros": {
+   "en": [
+    "Effective for high prolactin",
+    "Taken by mouth, with a long action",
+    "Well studied for its approved uses"
+   ],
+   "pl": [
+    "Skuteczna przy wysokiej prolaktynie",
+    "Przyjmowana doustnie, o długim działaniu",
+    "Dobrze zbadana w zatwierdzonych wskazaniach"
+   ],
+   "es": [
+    "Eficaz contra la prolactina alta",
+    "Se toma por vía oral y tiene acción prolongada",
+    "Bien estudiada en sus usos aprobados"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Heart valve risk at high doses",
+    "Impulse-control problems in some people",
+    "Needs a doctor to prescribe and monitor"
+   ],
+   "pl": [
+    "Ryzyko dla zastawek serca przy wysokich dawkach",
+    "Problemy z kontrolą impulsów u części osób",
+    "Wymaga lekarza, który ją przepisze i będzie kontrolował"
+   ],
+   "es": [
+    "Riesgo para las válvulas cardíacas con dosis altas",
+    "Problemas de control de impulsos en algunas personas",
+    "Requiere un médico que la recete y la vigile"
+   ]
+  },
+  "wada": {
+   "en": "Cabergoline is not listed by WADA as prohibited in its own right, but athletes should check the current list with a sports doctor.",
+   "pl": "Kabergolina nie jest sama w sobie wymieniona przez WADA jako zabroniona, ale sportowcy powinni sprawdzić aktualną listę z lekarzem sportowym.",
+   "es": "La cabergolina no figura por sí sola como prohibida por la AMA, pero los deportistas deben consultar la lista vigente con un médico deportivo."
+  }
+ },
+ {
+  "id": "tadalafil",
+  "n": "Tadalafil",
+  "nm": {
+   "pl": "Tadalafil",
+   "es": "Tadalafilo"
+  },
+  "alt": {
+   "en": "PDE5 inhibitor, “Cialis”",
+   "pl": "Inhibitor PDE5, „Cialis”",
+   "es": "Inhibidor de la PDE5, “Cialis”"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "tadalafil",
+  "what": {
+   "en": "Tadalafil is a PDE5 inhibitor taken by mouth. It relaxes blood vessels and is one of the best-known medicines for erectile dysfunction.",
+   "pl": "Tadalafil to inhibitor PDE5 przyjmowany doustnie. Rozluźnia naczynia krwionośne i jest jednym z najlepiej znanych leków na zaburzenia erekcji.",
+   "es": "El tadalafilo es un inhibidor de la PDE5 que se toma por vía oral. Relaja los vasos sanguíneos y es uno de los medicamentos más conocidos para la disfunción eréctil."
+  },
+  "how": {
+   "en": "It blocks the enzyme PDE5, which lets blood-vessel muscle relax and blood flow increase. It works only with sexual stimulation and does not raise testosterone.",
+   "pl": "Blokuje enzym PDE5, dzięki czemu mięśnie naczyń rozluźniają się, a przepływ krwi rośnie. Działa tylko przy pobudzeniu seksualnym i nie podnosi testosteronu.",
+   "es": "Bloquea la enzima PDE5, lo que permite relajar el músculo de los vasos y aumentar el flujo de sangre. Solo actúa con estimulación sexual y no sube la testosterona."
+  },
+  "med": {
+   "en": "It is approved for erectile dysfunction, for urinary symptoms of an enlarged prostate and, under another brand, for pulmonary arterial hypertension.",
+   "pl": "Jest zatwierdzony w zaburzeniach erekcji, objawach ze strony dróg moczowych przy powiększonej prostacie oraz, pod inną marką, w tętniczym nadciśnieniu płucnym.",
+   "es": "Está aprobado para la disfunción eréctil, para los síntomas urinarios de la próstata agrandada y, con otra marca, para la hipertensión arterial pulmonar."
+  },
+  "risk": {
+   "en": "Headache, flushing, indigestion and back pain are common. It must never be combined with nitrate medicines for chest pain, because the blood pressure can fall dangerously, and rare cases of sudden vision or hearing loss have been reported. Pills sold outside pharmacies have been found to contain the wrong strength or other drugs.",
+   "pl": "Częste są bóle głowy, nagła zaczerwienienie twarzy, niestrawność i bóle pleców. Nie wolno go łączyć z azotanami stosowanymi w bólu w klatce piersiowej, bo ciśnienie może niebezpiecznie spaść, a opisywano rzadkie przypadki nagłej utraty wzroku lub słuchu. Tabletki sprzedawane poza aptekami zawierały inną ilość substancji lub inne leki.",
+   "es": "Son frecuentes el dolor de cabeza, el enrojecimiento, la indigestión y el dolor de espalda. Nunca debe combinarse con nitratos para el dolor torácico, porque la presión arterial puede caer de forma peligrosa, y se han descrito casos raros de pérdida súbita de visión o de audición. Las pastillas vendidas fuera de las farmacias han contenido una cantidad errónea u otros fármacos."
+  },
+  "pros": {
+   "en": [
+    "Well studied and widely used",
+    "Long action compared with similar drugs",
+    "Approved for several conditions"
+   ],
+   "pl": [
+    "Dobrze zbadany i szeroko stosowany",
+    "Długie działanie w porównaniu z podobnymi lekami",
+    "Zatwierdzony w kilku wskazaniach"
+   ],
+   "es": [
+    "Bien estudiado y ampliamente usado",
+    "Acción prolongada frente a fármacos similares",
+    "Aprobado para varias afecciones"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Dangerous with nitrate medicines",
+    "Counterfeit products are common outside pharmacies",
+    "Side effects such as headache and flushing"
+   ],
+   "pl": [
+    "Niebezpieczny w połączeniu z azotanami",
+    "Podróbki są częste poza aptekami",
+    "Skutki uboczne, takie jak bóle głowy i zaczerwienienie twarzy"
+   ],
+   "es": [
+    "Peligroso con los nitratos",
+    "Las falsificaciones son frecuentes fuera de las farmacias",
+    "Efectos secundarios como dolor de cabeza y enrojecimiento"
+   ]
+  },
+  "status": {
+   "en": "Prescription medicine in the UK and the US. Selling it without authority is illegal, and the “jelly” and “black” versions sold online are not licensed products.",
+   "pl": "Lek na receptę w Wielkiej Brytanii i USA. Sprzedaż bez uprawnień jest nielegalna, a wersje „jelly” i „black” sprzedawane w internecie nie są produktami zarejestrowanymi.",
+   "es": "Medicamento con receta en el Reino Unido y EE. UU. Venderlo sin autorización es ilegal, y las versiones “jelly” y “black” que se venden en línea no son productos autorizados."
+  },
+  "wada": {
+   "en": "Not on the WADA list.",
+   "pl": "Nie ma go na liście WADA.",
+   "es": "No figura en la lista de la AMA."
+  }
+ },
+ {
+  "id": "sildenafil",
+  "n": "Sildenafil",
+  "nm": {
+   "pl": "Sildenafil",
+   "es": "Sildenafilo"
+  },
+  "alt": {
+   "en": "PDE5 inhibitor, “Viagra”",
+   "pl": "Inhibitor PDE5, „Viagra”",
+   "es": "Inhibidor de la PDE5, “Viagra”"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "sildenafil",
+  "what": {
+   "en": "Sildenafil is the first PDE5 inhibitor, launched as Viagra in 1998. It is taken by mouth and acts for a few hours.",
+   "pl": "Sildenafil to pierwszy inhibitor PDE5, wprowadzony jako Viagra w 1998 roku. Przyjmuje się go doustnie, a działa kilka godzin.",
+   "es": "El sildenafilo es el primer inhibidor de la PDE5, lanzado como Viagra en 1998. Se toma por vía oral y actúa durante unas horas."
+  },
+  "how": {
+   "en": "Like tadalafil it blocks the enzyme PDE5 and lets blood vessels relax. It needs sexual stimulation to have an effect and does not change hormone levels.",
+   "pl": "Podobnie jak tadalafil blokuje enzym PDE5 i pozwala naczyniom się rozluźnić. Do działania potrzebuje pobudzenia seksualnego i nie zmienia poziomu hormonów.",
+   "es": "Como el tadalafilo, bloquea la enzima PDE5 y permite que los vasos se relajen. Necesita estimulación sexual para hacer efecto y no cambia los niveles hormonales."
+  },
+  "med": {
+   "en": "It is approved for erectile dysfunction and, under another brand and strength, for pulmonary arterial hypertension.",
+   "pl": "Jest zatwierdzony w zaburzeniach erekcji oraz, pod inną marką i w innej mocy, w tętniczym nadciśnieniu płucnym.",
+   "es": "Está aprobado para la disfunción eréctil y, con otra marca y concentración, para la hipertensión arterial pulmonar."
+  },
+  "risk": {
+   "en": "Headache, flushing, blocked nose and indigestion are common, and some people notice a blue tinge to their vision. As with tadalafil it must not be combined with nitrates, and counterfeit pills and “jelly” sachets have been found with undeclared ingredients.",
+   "pl": "Częste są bóle głowy, zaczerwienienie twarzy, zatkany nos i niestrawność, a niektórzy zauważają niebieskawy odcień widzenia. Tak jak tadalafilu nie wolno go łączyć z azotanami, a podrabiane tabletki i saszetki „jelly” zawierały niedeklarowane składniki.",
+   "es": "Son frecuentes el dolor de cabeza, el enrojecimiento, la congestión nasal y la indigestión, y algunas personas notan un tinte azulado en la visión. Como con el tadalafilo, no debe combinarse con nitratos, y se han encontrado pastillas falsificadas y sobres “jelly” con ingredientes no declarados."
+  },
+  "pros": {
+   "en": [
+    "Decades of safety data",
+    "Available in the UK through a pharmacist for some men",
+    "Effective for most men with erectile dysfunction"
+   ],
+   "pl": [
+    "Dziesięciolecia danych o bezpieczeństwie",
+    "W Wielkiej Brytanii dostępny u farmaceuty dla części mężczyzn",
+    "Skuteczny u większości mężczyzn z zaburzeniami erekcji"
+   ],
+   "es": [
+    "Décadas de datos de seguridad",
+    "En el Reino Unido se obtiene en farmacia para algunos hombres",
+    "Eficaz en la mayoría de los hombres con disfunción eréctil"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Dangerous with nitrate medicines",
+    "Counterfeits and unlicensed “jelly” products",
+    "Shorter action than tadalafil"
+   ],
+   "pl": [
+    "Niebezpieczny w połączeniu z azotanami",
+    "Podróbki i niezarejestrowane produkty „jelly”",
+    "Krótsze działanie niż tadalafil"
+   ],
+   "es": [
+    "Peligroso con los nitratos",
+    "Falsificaciones y productos “jelly” sin licencia",
+    "Acción más corta que el tadalafilo"
+   ]
+  },
+  "status": {
+   "en": "Prescription medicine in the UK and the US, with a pharmacist-supervised version in the UK for some men. Unlicensed copies sold online are illegal.",
+   "pl": "Lek na receptę w Wielkiej Brytanii i USA, z wersją sprzedawaną pod nadzorem farmaceuty w Wielkiej Brytanii dla części mężczyzn. Niezarejestrowane kopie sprzedawane w internecie są nielegalne.",
+   "es": "Medicamento con receta en el Reino Unido y EE. UU., con una versión supervisada por el farmacéutico en el Reino Unido para algunos hombres. Las copias sin licencia vendidas en línea son ilegales."
+  },
+  "wada": {
+   "en": "Not on the WADA list.",
+   "pl": "Nie ma go na liście WADA.",
+   "es": "No figura en la lista de la AMA."
+  }
+ },
+ {
+  "id": "dapoxetine",
+  "n": "Dapoxetine",
+  "nm": {
+   "pl": "Dapoksetyna",
+   "es": "Dapoxetina"
+  },
+  "alt": {
+   "en": "Short-acting SSRI for premature ejaculation",
+   "pl": "Krótkodziałający SSRI na przedwczesny wytrysk",
+   "es": "ISRS de acción corta para la eyaculación precoz"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "dapoxetine",
+  "what": {
+   "en": "Dapoxetine is a short-acting antidepressant-type drug (an SSRI) made for premature ejaculation. It is not used as an antidepressant.",
+   "pl": "Dapoksetyna to krótkodziałający lek z grupy antydepresantów (SSRI) stworzony na przedwczesny wytrysk. Nie stosuje się go jako antydepresantu.",
+   "es": "La dapoxetina es un fármaco de tipo antidepresivo (un ISRS) de acción corta creado para la eyaculación precoz. No se usa como antidepresivo."
+  },
+  "how": {
+   "en": "It blocks the reuptake of serotonin, which raises serotonin in the nerve pathways that control ejaculation and delays the reflex.",
+   "pl": "Blokuje wychwyt zwrotny serotoniny, co podnosi jej poziom w szlakach nerwowych sterujących wytryskiem i opóźnia odruch.",
+   "es": "Bloquea la recaptación de serotonina, lo que eleva la serotonina en las vías nerviosas que controlan la eyaculación y retrasa el reflejo."
+  },
+  "med": {
+   "en": "It is licensed in the UK and several other countries for premature ejaculation in men and is not approved in the US.",
+   "pl": "Jest zarejestrowana w Wielkiej Brytanii i kilku innych krajach w przedwczesnym wytrysku u mężczyzn i nie jest zatwierdzona w USA.",
+   "es": "Está autorizada en el Reino Unido y en varios otros países para la eyaculación precoz en hombres y no está aprobada en EE. UU."
+  },
+  "risk": {
+   "en": "Nausea, dizziness, headache and fainting are the main effects. It can interact dangerously with other serotonin-raising drugs, including antidepressants and some pain medicines, and mixing it with some recreational drugs can be hazardous.",
+   "pl": "Główne skutki to nudności, zawroty głowy, bóle głowy i omdlenia. Może niebezpiecznie wchodzić w interakcje z innymi lekami podnoszącymi serotoninę, w tym antydepresantami i niektórymi lekami przeciwbólowymi, a łączenie z niektórymi narkotykami rekreacyjnymi bywa groźne.",
+   "es": "Los principales efectos son náuseas, mareos, dolor de cabeza y desmayos. Puede interactuar de forma peligrosa con otros fármacos que elevan la serotonina, incluidos antidepresivos y algunos analgésicos, y mezclarla con ciertas drogas recreativas puede ser peligroso."
+  },
+  "pros": {
+   "en": [
+    "Licensed treatment for a real condition",
+    "Short action, so it does not build up",
+    "Studied in large trials"
+   ],
+   "pl": [
+    "Zarejestrowane leczenie realnego schorzenia",
+    "Krótkie działanie, więc się nie kumuluje",
+    "Badana w dużych badaniach"
+   ],
+   "es": [
+    "Tratamiento autorizado para una afección real",
+    "Acción corta, por lo que no se acumula",
+    "Estudiada en grandes ensayos"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Dangerous interactions with serotonin-raising drugs",
+    "Fainting and dizziness",
+    "Not approved in the US"
+   ],
+   "pl": [
+    "Niebezpieczne interakcje z lekami podnoszącymi serotoninę",
+    "Omdlenia i zawroty głowy",
+    "Niezatwierdzona w USA"
+   ],
+   "es": [
+    "Interacciones peligrosas con fármacos que elevan la serotonina",
+    "Desmayos y mareos",
+    "No aprobada en EE. UU."
+   ]
+  },
+  "wada": {
+   "en": "Not on the WADA list.",
+   "pl": "Nie ma jej na liście WADA.",
+   "es": "No figura en la lista de la AMA."
+  }
+ },
+ {
+  "id": "yohimbine",
+  "n": "Yohimbine",
+  "nm": {
+   "pl": "Johimbina",
+   "es": "Yohimbina"
+  },
+  "alt": {
+   "en": "Plant alkaloid sold as a stimulant and “fat burner”",
+   "pl": "Alkaloid roślinny sprzedawany jako stymulant i „spalacz tłuszczu”",
+   "es": "Alcaloide vegetal que se vende como estimulante y “quemagrasas”"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "yohimbine",
+  "what": {
+   "en": "Yohimbine is an alkaloid from the bark of an African tree. It is sold as a supplement and appears in some “fat burner” mixes.",
+   "pl": "Johimbina to alkaloid z kory afrykańskiego drzewa. Sprzedaje się ją jako suplement i występuje w niektórych mieszankach „spalaczy tłuszczu”.",
+   "es": "La yohimbina es un alcaloide de la corteza de un árbol africano. Se vende como suplemento y aparece en algunas mezclas “quemagrasas”."
+  },
+  "how": {
+   "en": "It blocks alpha-2 receptors, which raises adrenaline-type signalling. That speeds the heart and raises blood pressure.",
+   "pl": "Blokuje receptory alfa-2, co nasila sygnały typu adrenaliny. Przyspiesza to serce i podnosi ciśnienie.",
+   "es": "Bloquea los receptores alfa-2, lo que intensifica la señalización de tipo adrenalina. Eso acelera el corazón y sube la presión arterial."
+  },
+  "med": {
+   "en": "It has been used as a prescription drug for erectile dysfunction, but the evidence is weak and better medicines have replaced it. Claims that it burns fat in people are not well supported.",
+   "pl": "Stosowano ją jako lek na receptę w zaburzeniach erekcji, ale dowody są słabe, a zastąpiły ją lepsze leki. Twierdzenia, że spala tłuszcz u ludzi, nie mają dobrego poparcia.",
+   "es": "Se ha usado como medicamento con receta para la disfunción eréctil, pero la evidencia es débil y la han sustituido mejores fármacos. Las afirmaciones de que quema grasa en personas no están bien respaldadas."
+  },
+  "risk": {
+   "en": "Anxiety, panic, tremor, racing heart and high blood pressure are well-known effects, and serious cases, including seizures and heart problems, have been reported. Combining it with other stimulants raises the danger.",
+   "pl": "Lęk, panika, drżenie, przyspieszone bicie serca i wysokie ciśnienie to dobrze znane skutki, a opisywano też poważne przypadki, w tym napady drgawek i problemy z sercem. Łączenie z innymi stymulantami zwiększa niebezpieczeństwo.",
+   "es": "La ansiedad, el pánico, el temblor, la taquicardia y la presión arterial alta son efectos bien conocidos, y se han descrito casos graves, incluidas convulsiones y problemas cardíacos. Combinarla con otros estimulantes aumenta el peligro."
+  },
+  "pros": {
+   "en": [
+    "Natural compound with long traditional use",
+    "Studied for decades",
+    "Strong, quick stimulant effect"
+   ],
+   "pl": [
+    "Naturalny związek o długim tradycyjnym użyciu",
+    "Badana od dziesięcioleci",
+    "Silne, szybkie działanie pobudzające"
+   ],
+   "es": [
+    "Compuesto natural de largo uso tradicional",
+    "Estudiada durante décadas",
+    "Efecto estimulante intenso y rápido"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Anxiety, panic and high blood pressure",
+    "Weak evidence for the claimed uses",
+    "Variable strength in supplements"
+   ],
+   "pl": [
+    "Lęk, panika i wysokie ciśnienie",
+    "Słabe dowody dla deklarowanych zastosowań",
+    "Zmienna zawartość w suplementach"
+   ],
+   "es": [
+    "Ansiedad, pánico y presión arterial alta",
+    "Evidencia débil para los usos que se le atribuyen",
+    "Concentración variable en los suplementos"
+   ]
+  },
+  "status": {
+   "en": "In the UK it is a prescription-only medicine. In the US yohimbe bark is sold as a supplement and purified yohimbine has been sold as an unapproved drug.",
+   "pl": "W Wielkiej Brytanii to lek wydawany wyłącznie na receptę. W USA kora johimbe jest sprzedawana jako suplement, a oczyszczona johimbina była sprzedawana jako niezatwierdzony lek.",
+   "es": "En el Reino Unido es un medicamento solo con receta. En EE. UU. la corteza de yohimbe se vende como suplemento y la yohimbina purificada se ha vendido como fármaco no aprobado."
+  },
+  "wada": {
+   "en": "Not listed by WADA as prohibited on its own, but supplements containing it often carry other banned stimulants. Check the current list.",
+   "pl": "Nie jest sama w sobie wymieniona przez WADA jako zabroniona, ale suplementy z nią często zawierają inne zakazane stymulanty. Sprawdź aktualną listę.",
+   "es": "No figura por sí sola como prohibida por la AMA, pero los suplementos que la contienen suelen llevar otros estimulantes prohibidos. Consulta la lista vigente."
+  },
+  "label": false
+ },
+ {
+  "id": "liothyronine",
+  "n": "Liothyronine",
+  "nm": {
+   "pl": "Liotyronina (T3)",
+   "es": "Liotironina (T3)"
+  },
+  "alt": {
+   "en": "Active thyroid hormone, “T3”",
+   "pl": "Aktywny hormon tarczycy, „T3”",
+   "es": "Hormona tiroidea activa, “T3”"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "liothyronine",
+  "what": {
+   "en": "Liothyronine is the active form of thyroid hormone, known as T3. It is a prescription medicine for thyroid disease.",
+   "pl": "Liotyronina to aktywna postać hormonu tarczycy, znana jako T3. To lek na receptę stosowany w chorobach tarczycy.",
+   "es": "La liotironina es la forma activa de la hormona tiroidea, conocida como T3. Es un medicamento con receta para enfermedades de la tiroides."
+  },
+  "how": {
+   "en": "It raises the body’s metabolic rate and affects the heart, bones and muscles. The body tightly controls its own T3, so an outside supply can overwhelm that control.",
+   "pl": "Podnosi tempo przemiany materii i wpływa na serce, kości i mięśnie. Organizm ściśle kontroluje własne T3, więc dostarczenie go z zewnątrz może to przytłoczyć.",
+   "es": "Eleva el ritmo metabólico y afecta al corazón, los huesos y los músculos. El cuerpo controla de cerca su propia T3, así que un aporte externo puede desbordar ese control."
+  },
+  "med": {
+   "en": "It is used for hypothyroidism in specific cases, for severe forms such as myxoedema coma, and in some thyroid cancer tests. Doctors choose the amount by blood tests.",
+   "pl": "Stosuje się ją w niedoczynności tarczycy w określonych przypadkach, w ciężkich postaciach, takich jak śpiączka z obrzęku śluzowatego, i w niektórych badaniach w raku tarczycy. Lekarze dobierają ilość na podstawie badań krwi.",
+   "es": "Se usa en el hipotiroidismo en casos concretos, en formas graves como el coma mixedematoso y en algunas pruebas del cáncer de tiroides. Los médicos ajustan la cantidad con análisis de sangre."
+  },
+  "risk": {
+   "en": "Taken without a thyroid condition it can cause a racing or irregular heartbeat, anxiety, tremor, bone loss and loss of muscle, because the body burns protein as well as fat. It is not a safe way to lose weight.",
+   "pl": "Przyjmowana bez choroby tarczycy może powodować przyspieszone lub nieregularne bicie serca, lęk, drżenie, utratę kości i mięśni, bo organizm spala białko, a nie tylko tłuszcz. To nie jest bezpieczny sposób na odchudzanie.",
+   "es": "Tomada sin enfermedad tiroidea puede causar latidos acelerados o irregulares, ansiedad, temblor, pérdida de hueso y de músculo, porque el cuerpo quema proteína además de grasa. No es una forma segura de adelgazar."
+  },
+  "pros": {
+   "en": [
+    "Essential medicine for real thyroid disease",
+    "Fast-acting form of thyroid hormone",
+    "Decades of clinical use"
+   ],
+   "pl": [
+    "Niezbędny lek w prawdziwej chorobie tarczycy",
+    "Szybko działająca postać hormonu tarczycy",
+    "Dziesięciolecia stosowania klinicznego"
+   ],
+   "es": [
+    "Medicamento esencial en la enfermedad tiroidea real",
+    "Forma de acción rápida de la hormona tiroidea",
+    "Décadas de uso clínico"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Heart rhythm problems if taken without need",
+    "Loss of muscle and bone",
+    "Not an effective or safe weight-loss tool"
+   ],
+   "pl": [
+    "Zaburzenia rytmu serca, gdy przyjmuje się ją bez potrzeby",
+    "Utrata mięśni i kości",
+    "Nieskuteczne i niebezpieczne narzędzie odchudzania"
+   ],
+   "es": [
+    "Problemas del ritmo cardíaco si se toma sin necesidad",
+    "Pérdida de músculo y de hueso",
+    "No es una herramienta de adelgazamiento eficaz ni segura"
+   ]
+  },
+  "wada": {
+   "en": "Not on the WADA list, but taking it without a medical reason is unsafe.",
+   "pl": "Nie ma jej na liście WADA, ale przyjmowanie bez wskazań medycznych jest niebezpieczne.",
+   "es": "No figura en la lista de la AMA, pero tomarla sin motivo médico no es seguro."
+  }
+ },
+ {
+  "id": "phentermine",
+  "n": "Phentermine",
+  "nm": {
+   "pl": "Fentermina",
+   "es": "Fentermina"
+  },
+  "alt": {
+   "en": "Appetite-suppressing stimulant, “Adipex”",
+   "pl": "Stymulant hamujący apetyt, „Adipex”",
+   "es": "Estimulante supresor del apetito, “Adipex”"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "phentermine",
+  "what": {
+   "en": "Phentermine is a stimulant related to amphetamine that reduces appetite. It is approved in the US for short-term use in obesity.",
+   "pl": "Fentermina to stymulant spokrewniony z amfetaminą, który zmniejsza apetyt. W USA jest zatwierdzona do krótkotrwałego stosowania w otyłości.",
+   "es": "La fentermina es un estimulante emparentado con la anfetamina que reduce el apetito. Está aprobada en EE. UU. para el uso a corto plazo en la obesidad."
+  },
+  "how": {
+   "en": "It raises noradrenaline in the brain, which dampens hunger and raises heart rate and blood pressure.",
+   "pl": "Podnosi noradrenalinę w mózgu, co tłumi głód i podnosi tętno oraz ciśnienie.",
+   "es": "Eleva la noradrenalina en el cerebro, lo que reduce el hambre y sube la frecuencia cardíaca y la presión arterial."
+  },
+  "med": {
+   "en": "It is licensed in the US as a short-term add-on to diet and exercise for people with obesity. It is not licensed for weight loss in the UK.",
+   "pl": "W USA jest zarejestrowana jako krótkotrwały dodatek do diety i ćwiczeń u osób z otyłością. W Wielkiej Brytanii nie jest zarejestrowana do odchudzania.",
+   "es": "En EE. UU. está autorizada como complemento a corto plazo de la dieta y el ejercicio en personas con obesidad. En el Reino Unido no está autorizada para adelgazar."
+  },
+  "risk": {
+   "en": "Common effects are a fast heart rate, raised blood pressure, dry mouth, trouble sleeping and nervousness. It has some potential for dependence, and it should not be combined with other stimulants.",
+   "pl": "Częste skutki to przyspieszone tętno, podwyższone ciśnienie, suchość w ustach, kłopoty ze snem i nerwowość. Ma pewien potencjał uzależniający i nie wolno jej łączyć z innymi stymulantami.",
+   "es": "Los efectos frecuentes son frecuencia cardíaca alta, presión arterial elevada, boca seca, problemas para dormir y nerviosismo. Tiene cierto potencial de dependencia y no debe combinarse con otros estimulantes."
+  },
+  "pros": {
+   "en": [
+    "Approved short-term tool for obesity in the US",
+    "Reduces appetite quickly",
+    "Decades of use"
+   ],
+   "pl": [
+    "Zatwierdzone krótkotrwałe narzędzie w otyłości w USA",
+    "Szybko zmniejsza apetyt",
+    "Dziesięciolecia stosowania"
+   ],
+   "es": [
+    "Herramienta aprobada a corto plazo para la obesidad en EE. UU.",
+    "Reduce el apetito rápidamente",
+    "Décadas de uso"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Raises heart rate and blood pressure",
+    "Potential for dependence",
+    "Weight regained when stopped, and not licensed in the UK"
+   ],
+   "pl": [
+    "Podnosi tętno i ciśnienie",
+    "Potencjał uzależniający",
+    "Waga wraca po odstawieniu, a w Wielkiej Brytanii nie jest zarejestrowana"
+   ],
+   "es": [
+    "Sube la frecuencia cardíaca y la presión arterial",
+    "Potencial de dependencia",
+    "El peso se recupera al suspenderla y no está autorizada en el Reino Unido"
+   ]
+  },
+  "status": {
+   "en": "A controlled substance in the US (Schedule IV) and a prescription-only drug there. In the UK it is not licensed for weight loss, and supply without authority is illegal.",
+   "pl": "W USA substancja kontrolowana (lista IV) i lek na receptę. W Wielkiej Brytanii nie jest zarejestrowana do odchudzania, a dostarczanie bez uprawnień jest nielegalne.",
+   "es": "Sustancia controlada en EE. UU. (lista IV) y medicamento con receta allí. En el Reino Unido no está autorizada para adelgazar y suministrarla sin autorización es ilegal."
+  },
+  "wada": {
+   "en": "WADA prohibits phentermine in competition as a stimulant (category S6).",
+   "pl": "WADA zakazuje fentermin w zawodach jako stymulantu (kategoria S6).",
+   "es": "La AMA prohíbe la fentermina en competición como estimulante (categoría S6)."
+  },
+  "label": false
+ },
+ {
+  "id": "dmaa",
+  "n": "DMAA",
+  "nm": {
+   "pl": "DMAA",
+   "es": "DMAA"
+  },
+  "alt": {
+   "en": "1,3-dimethylamylamine, a banned stimulant",
+   "pl": "1,3-dimetyloamylamina, zakazany stymulant",
+   "es": "1,3-dimetilamilamina, un estimulante prohibido"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "1,3-dimethylamylamine",
+  "what": {
+   "en": "DMAA, or 1,3-dimethylamylamine, is a strong stimulant that was sold in pre-workout and “fat burner” supplements. Regulators in several countries have acted against it.",
+   "pl": "DMAA, czyli 1,3-dimetyloamylamina, to silny stymulant, który sprzedawano w suplementach przedtreningowych i „spalaczach tłuszczu”. Organy nadzoru w kilku krajach podjęły przeciw niemu działania.",
+   "es": "El DMAA, o 1,3-dimetilamilamina, es un estimulante potente que se vendía en suplementos preentrenamiento y “quemagrasas”. Los reguladores de varios países han actuado contra él."
+  },
+  "how": {
+   "en": "It narrows blood vessels and stimulates the nervous system, which raises blood pressure and heart rate.",
+   "pl": "Zwęża naczynia krwionośne i pobudza układ nerwowy, co podnosi ciśnienie i tętno.",
+   "es": "Estrecha los vasos sanguíneos y estimula el sistema nervioso, lo que sube la presión arterial y la frecuencia cardíaca."
+  },
+  "med": {
+   "en": "It has no approved medical use. It was once studied as a nasal decongestant and dropped.",
+   "pl": "Nie ma zatwierdzonego zastosowania medycznego. Dawniej badano go jako lek zmniejszający obrzęk błony śluzowej nosa i porzucono.",
+   "es": "No tiene ningún uso médico aprobado. En su día se estudió como descongestivo nasal y se abandonó."
+  },
+  "risk": {
+   "en": "It has been linked to high blood pressure, heart attack, stroke and brain haemorrhage. A runner died after the 2012 London Marathon, and DMAA was found in the inquest, which brought major attention to it.",
+   "pl": "Wiązano go z wysokim ciśnieniem, zawałem, udarem i krwotokiem mózgowym. Biegaczka zmarła po Maratonie Londyńskim w 2012 roku, a podczas dochodzenia znaleziono DMAA, co mocno zwróciło na niego uwagę.",
+   "es": "Se ha vinculado con presión arterial alta, infarto, ictus y hemorragia cerebral. Una corredora murió tras el Maratón de Londres de 2012 y se encontró DMAA en la investigación, lo que atrajo mucha atención sobre él."
+  },
+  "pros": {
+   "en": [
+    "Strong, fast stimulant effect",
+    "Widely studied after the safety scare",
+    "Clear regulatory picture"
+   ],
+   "pl": [
+    "Silne, szybkie działanie pobudzające",
+    "Dobrze zbadany po alarmie bezpieczeństwa",
+    "Jasna sytuacja regulacyjna"
+   ],
+   "es": [
+    "Efecto estimulante intenso y rápido",
+    "Muy estudiado tras la alerta de seguridad",
+    "Panorama regulatorio claro"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Serious heart and brain risks",
+    "Linked to deaths",
+    "Banned in supplements and in sport"
+   ],
+   "pl": [
+    "Poważne ryzyko dla serca i mózgu",
+    "Wiązany ze zgonami",
+    "Zakazany w suplementach i w sporcie"
+   ],
+   "es": [
+    "Riesgos graves para el corazón y el cerebro",
+    "Vinculado con muertes",
+    "Prohibido en suplementos y en el deporte"
+   ]
+  },
+  "status": {
+   "en": "The US FDA treats it as unsafe in dietary supplements, and in the UK it is not a lawful food supplement. Products that still contain it are illegal.",
+   "pl": "Amerykańska FDA uznaje go za niebezpieczny w suplementach diety, a w Wielkiej Brytanii nie jest dozwolonym składnikiem suplementów. Produkty, które nadal go zawierają, są nielegalne.",
+   "es": "La FDA de EE. UU. lo considera inseguro en los suplementos alimenticios y en el Reino Unido no es un complemento alimenticio lícito. Los productos que aún lo contienen son ilegales."
+  },
+  "wada": {
+   "en": "WADA prohibits it in competition as a stimulant (category S6).",
+   "pl": "WADA zakazuje go w zawodach jako stymulant (kategoria S6).",
+   "es": "La AMA lo prohíbe en competición como estimulante (categoría S6)."
+  },
+  "label": false
+ },
+ {
+  "id": "salbutamol",
+  "n": "Salbutamol",
+  "nm": {
+   "pl": "Salbutamol",
+   "es": "Salbutamol"
+  },
+  "alt": {
+   "en": "Asthma reliever, “Ventolin”",
+   "pl": "Lek rozszerzający oskrzela, „Ventolin”",
+   "es": "Broncodilatador de rescate, “Ventolin”"
+  },
+  "cls": "oth",
+  "form": "mix",
+  "q": "salbutamol albuterol",
+  "what": {
+   "en": "Salbutamol, called albuterol in the US, is the common reliever inhaler for asthma. It is a beta-2 agonist, in the same family as clenbuterol, but far better studied.",
+   "pl": "Salbutamol, w USA zwany albuterolem, to powszechny wziewny lek doraźny w astmie. To agonista beta-2, z tej samej rodziny co klenbuterol, ale znacznie lepiej zbadany.",
+   "es": "El salbutamol, llamado albuterol en EE. UU., es el inhalador de rescate habitual del asma. Es un agonista beta-2, de la misma familia que el clembuterol, pero mucho mejor estudiado."
+  },
+  "how": {
+   "en": "It relaxes the muscle around the airways within minutes, which opens them. Taken by mouth in large amounts it can also affect the heart and potassium levels.",
+   "pl": "Rozluźnia mięśnie wokół dróg oddechowych w ciągu minut, co je otwiera. Przyjmowany doustnie w dużych ilościach może też wpływać na serce i poziom potasu.",
+   "es": "Relaja el músculo alrededor de las vías respiratorias en minutos, lo que las abre. Tomado por vía oral en cantidades grandes también puede afectar al corazón y al potasio."
+  },
+  "med": {
+   "en": "It is approved for asthma and COPD, as an inhaler, tablets, liquid and nebuliser solution. Using tablets as a “fat burner” is not an approved use and is not supported by good evidence.",
+   "pl": "Jest zatwierdzony w astmie i POChP, jako inhalator, tabletki, płyn i roztwór do nebulizacji. Stosowanie tabletek jako „spalacza tłuszczu” nie jest zatwierdzonym zastosowaniem i nie ma dobrego poparcia w dowodach.",
+   "es": "Está aprobado para el asma y la EPOC, como inhalador, comprimidos, líquido y solución para nebulizador. Usar los comprimidos como “quemagrasas” no es un uso aprobado y no tiene buen respaldo en la evidencia."
+  },
+  "risk": {
+   "en": "Tremor, a fast heart rate and headache are common, and larger amounts can lower potassium and disturb heart rhythm. Needing a reliever more often than usual is a sign that asthma needs a review, not more of the drug.",
+   "pl": "Częste są drżenie, przyspieszone tętno i bóle głowy, a większe ilości mogą obniżać potas i zaburzać rytm serca. Potrzeba częstszego sięgania po lek doraźny to sygnał, że astma wymaga przeglądu, a nie większej ilości leku.",
+   "es": "Son frecuentes el temblor, la taquicardia y el dolor de cabeza, y cantidades mayores pueden bajar el potasio y alterar el ritmo cardíaco. Necesitar el inhalador de rescate con más frecuencia de lo habitual es señal de que el asma requiere una revisión, no más fármaco."
+  },
+  "pros": {
+   "en": [
+    "Fast, effective relief in an asthma attack",
+    "Very well studied and widely available on prescription",
+    "Safe when used as directed"
+   ],
+   "pl": [
+    "Szybka, skuteczna ulga w ataku astmy",
+    "Bardzo dobrze zbadany i szeroko dostępny na receptę",
+    "Bezpieczny, gdy stosuje się go zgodnie z zaleceniami"
+   ],
+   "es": [
+    "Alivio rápido y eficaz en una crisis de asma",
+    "Muy bien estudiado y ampliamente disponible con receta",
+    "Seguro cuando se usa según las indicaciones"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Tremor and fast heart rate",
+    "Tablets taken for weight loss strain the heart",
+    "Oral use is prohibited in sport"
+   ],
+   "pl": [
+    "Drżenie i przyspieszone tętno",
+    "Tabletki przyjmowane na odchudzanie obciążają serce",
+    "Stosowanie doustne jest zabronione w sporcie"
+   ],
+   "es": [
+    "Temblor y taquicardia",
+    "Los comprimidos tomados para adelgazar sobrecargan el corazón",
+    "El uso oral está prohibido en el deporte"
+   ]
+  },
+  "wada": {
+   "en": "WADA allows inhaled salbutamol up to a set limit but prohibits it by mouth or injection (category S3).",
+   "pl": "WADA dopuszcza wziewny salbutamol do określonego limitu, ale zakazuje go doustnie i we wstrzyknięciu (kategoria S3).",
+   "es": "La AMA permite el salbutamol inhalado hasta un límite establecido, pero lo prohíbe por vía oral o inyectable (categoría S3)."
+  }
+ },
+ {
+  "id": "meldonium",
+  "n": "Meldonium",
+  "nm": {
+   "pl": "Meldonium",
+   "es": "Meldonio"
+  },
+  "alt": {
+   "en": "Heart drug that became a doping case",
+   "pl": "Lek kardiologiczny, który stał się sprawą dopingową",
+   "es": "Fármaco cardíaco que se convirtió en un caso de dopaje"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "meldonium",
+  "what": {
+   "en": "Meldonium is a drug made in Latvia, sold in Eastern Europe as Mildronate. It is not approved in the UK, the US or the EU centrally.",
+   "pl": "Meldonium to lek wytwarzany na Łotwie, sprzedawany w Europie Wschodniej jako Mildronate. Nie jest zatwierdzony w Wielkiej Brytanii, USA ani centralnie w UE.",
+   "es": "El meldonio es un fármaco fabricado en Letonia y vendido en Europa del Este como Mildronate. No está aprobado en el Reino Unido, EE. UU. ni de forma central en la UE."
+  },
+  "how": {
+   "en": "It changes how the heart and muscle use fat and sugar for energy. The idea was to help tissue cope when oxygen is short.",
+   "pl": "Zmienia sposób, w jaki serce i mięśnie wykorzystują tłuszcz i cukier do produkcji energii. Chodziło o pomoc tkankom w sytuacji niedoboru tlenu.",
+   "es": "Cambia cómo el corazón y el músculo usan la grasa y el azúcar para obtener energía. La idea era ayudar al tejido cuando falta oxígeno."
+  },
+  "med": {
+   "en": "Where it is licensed it is used for heart conditions such as angina. Large trials to show a clear benefit are lacking.",
+   "pl": "Tam, gdzie jest zarejestrowany, stosuje się go w chorobach serca, takich jak dławica piersiowa. Brakuje dużych badań wykazujących jednoznaczną korzyść.",
+   "es": "Donde está autorizado se usa en afecciones cardíacas como la angina. Faltan grandes ensayos que demuestren un beneficio claro."
+  },
+  "risk": {
+   "en": "Side effects reported are usually mild, such as stomach upset and trouble sleeping. It became famous in 2016 when tennis player Maria Sharapova tested positive after WADA added it to its list.",
+   "pl": "Zgłaszane skutki uboczne są zwykle łagodne, jak dolegliwości żołądkowe i kłopoty ze snem. Zasłynął w 2016 roku, gdy tenisistka Maria Szarapowa dała pozytywny wynik po tym, jak WADA dodała go do swojej listy.",
+   "es": "Los efectos secundarios descritos suelen ser leves, como molestias de estómago y problemas para dormir. Se hizo famoso en 2016, cuando la tenista Maria Sharápova dio positivo tras incluirlo la AMA en su lista."
+  },
+  "pros": {
+   "en": [
+    "Licensed in some countries for heart conditions",
+    "Few reported serious side effects",
+    "Studied for decades in Eastern Europe"
+   ],
+   "pl": [
+    "Zarejestrowany w niektórych krajach w chorobach serca",
+    "Niewiele zgłoszonych poważnych skutków ubocznych",
+    "Badany od dziesięcioleci w Europie Wschodniej"
+   ],
+   "es": [
+    "Autorizado en algunos países para afecciones cardíacas",
+    "Pocos efectos secundarios graves descritos",
+    "Estudiado durante décadas en Europa del Este"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Evidence of benefit is limited",
+    "Not approved in the UK or the US",
+    "Prohibited in sport since 2016"
+   ],
+   "pl": [
+    "Dowody korzyści są ograniczone",
+    "Niezatwierdzony w Wielkiej Brytanii i USA",
+    "Zabroniony w sporcie od 2016 roku"
+   ],
+   "es": [
+    "La evidencia de beneficio es limitada",
+    "No aprobado en el Reino Unido ni en EE. UU.",
+    "Prohibido en el deporte desde 2016"
+   ]
+  },
+  "wada": {
+   "en": "WADA has prohibited it at all times as a metabolic modulator (category S4) since 1 January 2016.",
+   "pl": "WADA zakazuje go przez cały czas jako modulatora metabolizmu (kategoria S4) od 1 stycznia 2016 roku.",
+   "es": "La AMA lo prohíbe en todo momento como modulador metabólico (categoría S4) desde el 1 de enero de 2016."
+  },
+  "label": false
+ },
+ {
+  "id": "modafinil",
+  "n": "Modafinil",
+  "nm": {
+   "pl": "Modafinil",
+   "es": "Modafinilo"
+  },
+  "alt": {
+   "en": "Wakefulness drug sold as a “smart pill”",
+   "pl": "Lek poprawiający czuwanie sprzedawany jako „smart pill”",
+   "es": "Fármaco para la vigilia vendido como “pastilla inteligente”"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "modafinil",
+  "what": {
+   "en": "Modafinil is a prescription drug that promotes wakefulness. It is often sold online as a “smart drug”.",
+   "pl": "Modafinil to lek na receptę wspierający czuwanie. Często sprzedaje się go w internecie jako „smart drug”.",
+   "es": "El modafinilo es un medicamento con receta que favorece la vigilia. A menudo se vende en línea como “droga inteligente”."
+  },
+  "how": {
+   "en": "It affects dopamine and other brain signals that govern alertness. Its exact mechanism is still not fully understood.",
+   "pl": "Wpływa na dopaminę i inne sygnały w mózgu odpowiadające za czujność. Jego dokładny mechanizm nadal nie jest w pełni poznany.",
+   "es": "Actúa sobre la dopamina y otras señales cerebrales que regulan el estado de alerta. Su mecanismo exacto sigue sin comprenderse del todo."
+  },
+  "med": {
+   "en": "It is approved for excessive sleepiness in narcolepsy, obstructive sleep apnoea and shift work sleep disorder. Benefits in healthy, rested people are small and not well established.",
+   "pl": "Jest zatwierdzony w nadmiernej senności w narkolepsji, obturacyjnym bezdechu sennym i zaburzeniach snu u pracowników zmianowych. Korzyści u zdrowych, wypoczętych osób są niewielkie i niepotwierdzone.",
+   "es": "Está aprobado para la somnolencia excesiva en la narcolepsia, la apnea obstructiva del sueño y el trastorno del sueño por turnos. Los beneficios en personas sanas y descansadas son pequeños y no están bien establecidos."
+  },
+  "risk": {
+   "en": "Headache, nausea, anxiety and trouble sleeping are common. Rare but serious skin reactions, such as Stevens-Johnson syndrome, have been reported, and it can make some hormonal contraceptives work less well.",
+   "pl": "Częste są bóle głowy, nudności, lęk i kłopoty ze snem. Opisywano rzadkie, ale poważne reakcje skórne, takie jak zespół Stevensa-Johnsona, a lek może osłabiać działanie niektórych hormonalnych środków antykoncepcyjnych.",
+   "es": "Son frecuentes el dolor de cabeza, las náuseas, la ansiedad y los problemas para dormir. Se han descrito reacciones cutáneas raras pero graves, como el síndrome de Stevens-Johnson, y puede hacer que algunos anticonceptivos hormonales funcionen peor."
+  },
+  "pros": {
+   "en": [
+    "Proven for narcolepsy and sleep apnoea sleepiness",
+    "Fewer stimulant effects than amphetamines",
+    "Long clinical use"
+   ],
+   "pl": [
+    "Sprawdzony w senności w narkolepsji i bezdechu sennym",
+    "Mniej działań pobudzających niż amfetaminy",
+    "Długie stosowanie kliniczne"
+   ],
+   "es": [
+    "Probado en la somnolencia de la narcolepsia y la apnea del sueño",
+    "Menos efectos estimulantes que las anfetaminas",
+    "Largo uso clínico"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Rare serious skin reactions",
+    "Little proof of benefit in healthy people",
+    "Needs a prescription and is prohibited in competition"
+   ],
+   "pl": [
+    "Rzadkie poważne reakcje skórne",
+    "Mało dowodów korzyści u zdrowych osób",
+    "Wymaga recepty i jest zabroniony w zawodach"
+   ],
+   "es": [
+    "Reacciones cutáneas graves poco frecuentes",
+    "Poca prueba de beneficio en personas sanas",
+    "Requiere receta y está prohibido en competición"
+   ]
+  },
+  "status": {
+   "en": "A prescription-only medicine in the UK and a Schedule IV controlled substance in the US. Buying it without a prescription from online sellers is illegal in both.",
+   "pl": "Lek wydawany wyłącznie na receptę w Wielkiej Brytanii i substancja kontrolowana z listy IV w USA. Kupowanie go bez recepty od sprzedawców internetowych jest nielegalne w obu krajach.",
+   "es": "Medicamento solo con receta en el Reino Unido y sustancia controlada de la lista IV en EE. UU. Comprarlo sin receta a vendedores en línea es ilegal en ambos."
+  },
+  "wada": {
+   "en": "WADA prohibits modafinil in competition as a stimulant (category S6).",
+   "pl": "WADA zakazuje modafinilu w zawodach jako stymulantu (kategoria S6).",
+   "es": "La AMA prohíbe el modafinilo en competición como estimulante (categoría S6)."
+  }
+ },
+ {
+  "id": "piracetam",
+  "n": "Piracetam",
+  "nm": {
+   "pl": "Piracetam",
+   "es": "Piracetam"
+  },
+  "alt": {
+   "en": "Original “nootropic”",
+   "pl": "Pierwszy „nootrop”",
+   "es": "El primer “nootrópico”"
+  },
+  "cls": "oth",
+  "form": "oral",
+  "q": "piracetam",
+  "what": {
+   "en": "Piracetam is the first of a family of compounds called racetams, and the drug that gave the word “nootropic” to the world. It dates from the 1960s.",
+   "pl": "Piracetam to pierwszy z rodziny związków zwanych racetamami i lek, który dał światu słowo „nootrop”. Pochodzi z lat 60.",
+   "es": "El piracetam es el primero de una familia de compuestos llamados racetamas y el fármaco que dio al mundo la palabra “nootrópico”. Data de la década de 1960."
+  },
+  "how": {
+   "en": "Its effect on the brain is not clearly understood. It appears to change how nerve cells communicate and the fluidity of cell membranes.",
+   "pl": "Jego wpływ na mózg nie jest jednoznacznie poznany. Wydaje się zmieniać sposób komunikacji komórek nerwowych i płynność błon komórkowych.",
+   "es": "Su efecto sobre el cerebro no se conoce con claridad. Parece cambiar cómo se comunican las células nerviosas y la fluidez de las membranas celulares."
+  },
+  "med": {
+   "en": "It is licensed in some countries for myoclonus, a type of muscle jerking, and was formerly used for dyslexia and dementia. Evidence that it improves memory or thinking in healthy people is weak.",
+   "pl": "Jest zarejestrowany w niektórych krajach w mioklonii, rodzaju szarpnięć mięśni, a dawniej stosowano go w dysleksji i otępieniu. Dowody, że poprawia pamięć lub myślenie u zdrowych osób, są słabe.",
+   "es": "Está autorizado en algunos países para la mioclonía, un tipo de sacudidas musculares, y antes se usó en la dislexia y la demencia. La evidencia de que mejore la memoria o el pensamiento en personas sanas es débil."
+  },
+  "risk": {
+   "en": "Common effects include restlessness, nervousness, trouble sleeping and weight gain, and it should be avoided in severe kidney disease. It has an overall low toxicity, but many online products are unlicensed.",
+   "pl": "Częste skutki to niepokój, nerwowość, kłopoty ze snem i przyrost wagi, a w ciężkiej chorobie nerek należy go unikać. Ma ogólnie niską toksyczność, ale wiele produktów w internecie jest niezarejestrowanych.",
+   "es": "Los efectos frecuentes incluyen inquietud, nerviosismo, problemas para dormir y aumento de peso, y debe evitarse en la enfermedad renal grave. Su toxicidad global es baja, pero muchos productos en línea no tienen licencia."
+  },
+  "pros": {
+   "en": [
+    "Low toxicity in most studies",
+    "Licensed in some countries for a real condition",
+    "Decades of use"
+   ],
+   "pl": [
+    "Niska toksyczność w większości badań",
+    "Zarejestrowany w niektórych krajach w realnym schorzeniu",
+    "Dziesięciolecia stosowania"
+   ],
+   "es": [
+    "Baja toxicidad en la mayoría de los estudios",
+    "Autorizado en algunos países para una afección real",
+    "Décadas de uso"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Little proof of benefit in healthy people",
+    "Not an approved medicine in the US",
+    "Unlicensed online products of unknown quality"
+   ],
+   "pl": [
+    "Mało dowodów korzyści u zdrowych osób",
+    "Nie jest zatwierdzonym lekiem w USA",
+    "Niezarejestrowane produkty internetowe o nieznanej jakości"
+   ],
+   "es": [
+    "Poca prueba de beneficio en personas sanas",
+    "No es un medicamento aprobado en EE. UU.",
+    "Productos en línea sin licencia y de calidad desconocida"
+   ]
+  },
+  "status": {
+   "en": "Licensed in some countries for specific conditions, but not approved as a drug in the US, where it is not a lawful dietary supplement either.",
+   "pl": "Zarejestrowany w niektórych krajach w określonych schorzeniach, ale niezatwierdzony jako lek w USA, gdzie nie jest też legalnym suplementem diety.",
+   "es": "Autorizado en algunos países para afecciones concretas, pero no aprobado como fármaco en EE. UU., donde tampoco es un complemento alimenticio lícito."
+  },
+  "wada": {
+   "en": "Not on the WADA list.",
+   "pl": "Nie ma go na liście WADA.",
+   "es": "No figura en la lista de la AMA."
+  },
+  "label": false
+ }
+]
