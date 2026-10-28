@@ -11,6 +11,9 @@
   // card address in the page's own language, absolute so it works from /en/, /pl/, /es/ and /p/
   function searchUrl(q) { return '/' + (html.lang === 'pl' ? 'pl' : ES ? 'es' : 'en') + '/search.html?q=' + encodeURIComponent(q.trim()); }
   function card(s) { return '/p/' + s + (html.lang === 'pl' ? '.pl' : ES ? '.es' : '') + '.html'; }
+  // steroid rows (window.PEP.extra) live under /<lang>/t/ instead of /p/
+  function rowUrl(r) { return r.x ? '/' + (html.lang === 'pl' ? 'pl' : ES ? 'es' : 'en') + '/t/' + r.s + '.html' : card(r.s); }
+  function allRows() { return window.PEP.rows.concat(window.PEP.extra || []); }
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var stored = null;
   try { stored = localStorage.getItem('pep-motion'); } catch (e) {}
@@ -376,12 +379,12 @@
       var n = norm(v.trim());
       if (!n.length || !window.PEP) return [];
       if (n.length === 1) {   // one letter: names starting with it, A–Z
-        return window.PEP.rows.filter(function (r) { return norm(r.n).indexOf(n) === 0; })
+        return allRows().filter(function (r) { return norm(r.n).indexOf(n) === 0; })
           .sort(function (a, b) { return a.n.localeCompare(b.n); });
       }
       var pre = [], mid = [], deep = [];
       var sq = n.replace(/[^a-z0-9]/g, ''); // "bpc157" also finds BPC-157
-      window.PEP.rows.forEach(function (r) {
+      allRows().forEach(function (r) {
         var nn = norm(r.n);
         if (nn.indexOf(n) === 0) pre.push(r);
         else if (nn.indexOf(n) > -1) mid.push(r);
@@ -402,7 +405,7 @@
       hint.hidden = true;
       hits.slice(0, 40).forEach(function (r) {
         var li = document.createElement('li');
-        li.innerHTML = '<a href="' + card(r.s) + '"><b>' + mark(r.n, n) + '</b>' +
+        li.innerHTML = '<a href="' + rowUrl(r) + '"><b>' + mark(r.n, n) + '</b>' +
           '<span class="fcat">' + esc(r.c || '') + '</span><small>' + esc(r.st || '') + '</small></a>';
         listEl.appendChild(li);
       });

@@ -11,7 +11,7 @@ const fail = (what, why) => bad.push(`${what}: ${why}`);
 (async () => {
   const b = await chromium.launch();
   const devices = { phone: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true }, pc: { viewport: { width: 1300, height: 800 } } };
-  for (const [dev, opt] of Object.entries(devices)) for (const [L, q, card] of [['en', 'glp1', 'semaglutide'], ['pl', 'reta', 'retatrutide'], ['es', 'tirzepatida', 'tirzepatide']]) {
+  for (const [dev, opt] of Object.entries(devices)) for (const [L, q, card, ster] of [['en', 'glp1', 'semaglutide', 'oxandrolone'], ['pl', 'reta', 'retatrutide', 'oksandrolon'], ['es', 'tirzepatida', 'tirzepatide', 'oxandrolona']]) {
     const c = await b.newContext(opt), p = await c.newPage(), tag = `${dev} ${L}`;
     const errs = []; p.on('pageerror', e => errs.push(e.message));
     const go = async u => { const r = await p.goto(BASE + u + (u.includes('?') ? '&' : '?') + 't=' + Date.now()); if (!r || r.status() >= 400) fail(`${tag} ${u}`, 'HTTP ' + (r && r.status())); await p.waitForTimeout(700); };
@@ -27,6 +27,11 @@ const fail = (what, why) => bad.push(`${what}: ${why}`);
       if (n < 2) fail(`${tag} lupa "${q}"`, 'brak podpowiedzi');
       await p.click('.findlist li a'); await p.waitForTimeout(800);
       if (/404|not found|nie znaleziono|no encontrada/i.test(await p.title())) fail(`${tag} lupa "${q}" → klik`, '404 ' + p.url());
+      // steroids are in the magnifier list too, in every language, and open their own card
+      await go(`/${L}/`);
+      await p.click('#find'); await p.waitForTimeout(400); await p.keyboard.type(ster, { delay: 40 }); await p.waitForTimeout(400);
+      if (!(await p.$$eval('.findlist li a[href*="/t/s-"]', l => l.length))) fail(`${tag} lupa "${ster}"`, 'brak sterydu na liście');
+      else { await p.click('.findlist li a[href*="/t/s-"]'); await p.waitForTimeout(800); if (!(await p.$('h1')) || /404|not found|nie znaleziono|no encontrada/i.test(await p.title())) fail(`${tag} lupa "${ster}" → klik`, 'zła strona ' + p.url()); }
       // Enter opens the whole-site results
       await go(`/${L}/catalog.html`);
       await p.click('#find'); await p.waitForTimeout(400); await p.keyboard.type(q, { delay: 40 }); await p.keyboard.press('Enter'); await p.waitForTimeout(1500);

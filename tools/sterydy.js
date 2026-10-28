@@ -338,3 +338,11 @@ ${ORDER.map(k => { const rows = data.filter(e => e.cls === k); if (!rows.length)
   return pages;
 };
 module.exports.navLabel = UI.nav;
+// rows for the magnifier list (window.PEP.extra): steroids searchable by their English, Polish and Spanish names
+module.exports.finder = function (L) {
+  const i = { en: 0, pl: 1, es: 2 }[L], low = x => String(x || '').toLowerCase();
+  return load().map(e => ({
+    s: 's-' + e.id, x: 1, n: nmL(e, L), c: CLS[e.cls].name[L], st: UI.form[e.form || 'inj'][i],
+    t: low(['en', 'pl', 'es'].map(l => nmL(e, l) + ' ' + (e.alt ? e.alt[l] : '') + ' ' + e.what[l].split('. ')[0]).join(' ') + ' ' + CLS[e.cls].name.en + ' steroid steroidy esteroides')
+  }));
+};

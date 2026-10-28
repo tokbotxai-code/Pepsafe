@@ -1365,7 +1365,7 @@ function dataFile(L) {
       t: searchText(e, en)
     };
   });
-  return 'window.PEP = ' + JSON.stringify({ lang: L, rows }) + ';\n';
+  return 'window.PEP = ' + JSON.stringify({ lang: L, rows, extra: require('./sterydy.js').finder(L) }) + ';\n';
 }
 
 // ── write ─────────────────────────────────────────────────────────────────────
