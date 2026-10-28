@@ -226,26 +226,90 @@
     drawCmp();
   }
 
-  /* ── symptom search ────────────────────────────────── */
+  /* ── symptom search: everyday words -> concepts -> stems found in the entries ─ */
   var sq = document.getElementById('syQ');
   if (sq && window.PEP) {
-    var sout = document.getElementById('syOut'), shint = document.getElementById('syHint');
+    var sout = document.getElementById('syOut'), shint = document.getElementById('syHint'),
+        stabs = document.getElementById('syTabs'), snote = document.getElementById('syNote'), sc = document.getElementById('syChips');
+    var LG = html.lang === 'pl' ? 1 : ES ? 2 : 0;
+    var fold = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+    // [label en|pl|es, words people type, stems to look for in the page language]
+    var SYM = [
+      [['nausea', 'nudności', 'náuseas'], 'nausea nudnosc mdlosc niedobrze mdli', 'nudnosc|nausea'],
+      [['vomiting', 'wymioty', 'vómitos'], 'vomit wymiot wymiotow rzyganie', 'wymiot|vomit'],
+      [['diarrhoea', 'biegunka', 'diarrea'], 'diarr biegunk rozwolnien sraczk luzne stolce', 'biegunk|rozwolnien|diarrh|diarrea'],
+      [['constipation', 'zaparcia', 'estreñimiento'], 'constipat zaparc estrenim', 'zaparc|constipat|estrenim'],
+      [['stomach / abdominal pain', 'ból brzucha', 'dolor abdominal'], 'brzuch zoladek zoladk bol brzucha stomach belly abdominal tummy vientre barriga estomago', 'brzuch|zoladk|abdominal|stomach|estomag|vientre'],
+      [['heartburn / reflux', 'zgaga / refluks', 'acidez / reflujo'], 'zgaga refluks heartburn reflux acidez reflujo', 'zgag|refluks|reflux|heartburn|reflujo|acidez'],
+      [['headache', 'ból głowy', 'dolor de cabeza'], 'glow bol glowy migren headache cabeza cefale', 'bol glowy|bole glowy|glowy|headache|cefalea|dolor de cabeza|migra'],
+      [['dizziness', 'zawroty głowy', 'mareos'], 'zawrot dizz mareo kreci sie w glowie', 'zawrot|dizz|mareo|vertigo'],
+      [['tiredness / drowsiness', 'zmęczenie / senność', 'cansancio / somnolencia'], 'zmeczen sennosc slabosc oslabien tired fatigue drows cansancio fatiga somnolencia', 'zmeczen|sennosc|oslabien|fatigue|tired|drows|cansancio|fatiga|somnolencia|lethargy'],
+      [['insomnia', 'bezsenność', 'insomnio'], 'bezsenn nie moge spac insomnia sleep sen', 'bezsenn|insomnia|insomnio'],
+      [['rash', 'wysypka', 'erupción cutánea'], 'wysypk rash erupcion pokrzywka', 'wysypk|rash|erupcion|pokrzywk|hives'],
+      [['itching', 'świąd', 'picazón'], 'swiad itch picor prurito swedzenie', 'swiad|itch|picor|prurito'],
+      [['swelling', 'obrzęk', 'hinchazón'], 'obrzek puchnie opuch swelling hinchaz edema', 'obrzek|swelling|hinchaz|edema|oedema'],
+      [['palpitations / heart', 'kołatanie / serce', 'palpitaciones / corazón'], 'kolatanie serce tetno palpit heart cardiac corazon arytm', 'kolat|tetno|serc|palpit|heart|cardi|corazon|arytm|arrhythm'],
+      [['blood pressure', 'ciśnienie krwi', 'presión arterial'], 'cisnien blood pressure presion arterial nadcisnien', 'cisnien|blood pressure|presion arterial|hypertens|nadcisnien'],
+      [['heart attack / stroke / clots', 'zawał / udar / zakrzepy', 'infarto / ictus / coágulos'], 'zawal udar zakrzep zator stroke clot thromb infarto ictus coagul', 'zawal|udar|zakrzep|zator|stroke|clot|thromb|infarto|ictus|trombo'],
+      [['flushing', 'zaczerwienienie', 'enrojecimiento'], 'zaczerwien flush enrojec nagle gor', 'zaczerwien|flush|enrojec'],
+      [['fever', 'gorączka', 'fiebre'], 'goraczk fever fiebre temperatura', 'goraczk|fever|fiebre'],
+      [['low blood sugar', 'niski cukier', 'azúcar bajo'], 'hipoglik cukier hypoglyc low blood sugar azucar bajo', 'hipoglik|hypoglyc|hipoglu|niski cukier|low blood sugar'],
+      [['pancreas', 'trzustka', 'páncreas'], 'trzustk pancrea pankreat', 'trzustk|pancrea|pankreat'],
+      [['gallbladder / gallstones', 'woreczek żółciowy', 'vesícula biliar'], 'zolci zolcz kamic gallbladder gallstone vesicula biliar', 'zolciow|zolcz|kamic|gallbladder|gallstone|vesicula|biliar'],
+      [['liver', 'wątroba', 'hígado'], 'watrob liver hepat higado', 'watrob|liver|hepat|higado'],
+      [['kidneys', 'nerki', 'riñones'], 'nerk nerek bol nerek kidney renal rinon', 'nerk|kidney|renal|rinon'],
+      [['thyroid', 'tarczyca', 'tiroides'], 'tarczyc thyroid tiroid', 'tarczyc|thyroid|tiroid'],
+      [['mood / depression', 'nastrój / depresja', 'ánimo / depresión'], 'nastroj depres smutek mood depress animo', 'depres|nastroj|mood|animo'],
+      [['anxiety', 'lęk / niepokój', 'ansiedad'], 'lek niepok anxiety ansiedad nerwow', 'niepok|anxiety|ansiedad|stany lekowe|zaburzenia lekowe'],
+      [['aggression / irritability', 'agresja / drażliwość', 'agresividad / irritabilidad'], 'agresj drazliw aggress irritab agresiv', 'agresj|drazliw|aggress|irritab|agresiv'],
+      [['acne / oily skin', 'trądzik', 'acné'], 'tradzik acne wypryski', 'tradzik|acne'],
+      [['hair loss', 'wypadanie włosów', 'caída del pelo'], 'wlos lysien wypadani hair loss bald pelo calv', 'lysien|wypadani|hair loss|baldness|calvicie|caida del pelo'],
+      [['breast tissue growth (gynecomastia)', 'ginekomastia', 'ginecomastia'], 'ginekomast gynecomast ginecomast piers breast', 'ginekomast|gynecomast|ginecomast'],
+      [['fertility / testicles', 'płodność / jądra', 'fertilidad / testículos'], 'plodnos jadra nasien testic fertil sperm testicul', 'plodnos|jader|jadra|nasien|fertil|testic|sperm|testicul'],
+      [['injection-site reaction', 'reakcja w miejscu wstrzyknięcia', 'reacción en el lugar de inyección'], 'wstrzyknieci miejsce injection site inyeccion', 'miejscu wstrzykni|injection site|lugar de inyeccion|injection-site'],
+      [['muscle / tendon / joint pain', 'ból mięśni / ścięgien / stawów', 'dolor muscular / tendón / articular'], 'miesn sciegn staw muscle tendon joint muscul articul', 'miesn|sciegn|staw|muscle|tendon|joint|muscul|tendin|articul'],
+      [['water retention', 'zatrzymanie wody', 'retención de líquidos'], 'woda wody zatrzymani water fluid retenc liquid', 'zatrzymani wody|zatrzymanie wody|water retention|fluid retention|retencion de liquid'],
+      [['vision / eyes', 'wzrok / oczy', 'visión / ojos'], 'wzrok oczy widzeni vision eye ojo', 'wzrok|widzeni|oczu|oczy|vision|eye|ojo|vista'],
+      [['cholesterol', 'cholesterol', 'colesterol'], 'cholesterol colesterol', 'cholesterol|colesterol'],
+      [['weight / muscle loss', 'utrata masy mięśniowej', 'pérdida muscular'], 'miesni masa muscle loss muscular', 'masy miesniowej|muscle loss|lean mass|masa muscular'],
+      [['sex drive', 'libido', 'libido'], 'libido seks sexual sex drive', 'libido|sex drive|seksual|sexual']
+    ];
+    var SYN = SYM.map(function (c) { return { l: c[0][LG], w: fold(c[1]).split(' '), s: (LG === 2 ? c[2] : c[2]).split('|').map(fold) }; });
+    var mode = 'all';
+    var tabLabel = { all: html.lang === 'pl' ? 'Wszystko' : es('All', 'Todo'), pep: html.lang === 'pl' ? 'Peptydy i GLP-1' : es('Peptides & GLP-1', 'Péptidos y GLP-1'), ster: html.lang === 'pl' ? 'Sterydy' : es('Steroids', 'Esteroides') };
+    stabs.innerHTML = Object.keys(tabLabel).map(function (k) { return '<button type="button" class="chip' + (k === 'all' ? ' on' : '') + '" data-m="' + k + '">' + tabLabel[k] + '</button>'; }).join('');
+    sc.innerHTML = SYN.map(function (c) { return '<button class="chip" data-sy="' + c.l + '">' + c.l + '</button>'; }).join('');
+    var cardFor = function (r) {
+      return '<div class="entry tile"><a class="entry-link" href="' + rowUrl(r) + '">' +
+        '<span class="pill ' + (r.x ? 'warn' : (r.tone || '')) + '">' + r.st + '</span><b>' + r.n + '</b><em>' + r.c + '</em></a>' +
+        '<button class="star' + (readSaved().indexOf(r.s) > -1 ? ' on' : '') + '" data-key="' + r.s + '" aria-label="x"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 2.6l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14l-4.5 2.2.9-4.9L2.8 7.8l5-.7z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button></div>';
+    };
     var runSy = function () {
-      var fold = function (s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
-      var v = fold(sq.value.trim());
-      if (v.length < 3) { sout.innerHTML = ''; shint.hidden = false; return; }
-      var hits = window.PEP.rows.filter(function (r) { return fold(r.t).indexOf(v) > -1; });
-      shint.hidden = hits.length > 0;
-      if (!hits.length) { shint.hidden = false; shint.textContent = html.lang === 'pl' ? 'Nic nie pasuje.' : es('Nothing matches that.', 'No hay coincidencias.'); }
-      sout.innerHTML = hits.slice(0, 60).map(rowCard).join('');
+      var raw = sq.value.trim(), v = fold(raw);
+      snote.textContent = '';
+      if (v.length < 3) { sout.innerHTML = ''; shint.hidden = false; shint.textContent = html.lang === 'pl' ? 'Wpisz objaw (np. ból brzucha, biegunka, ból nerek) albo kliknij podpowiedź.' : es('Type a symptom (e.g. stomach pain, diarrhoea, kidney pain) or click a suggestion.', 'Escribe un síntoma (p. ej. dolor de estómago, diarrea, dolor de riñón) o pulsa una sugerencia.'); return; }
+      var hit = SYN.filter(function (c) { return c.w.some(function (w) { return w.length >= 3 && (w.indexOf(v) > -1 || (w.length >= 4 && v.indexOf(w) > -1)); }) || fold(c.l).indexOf(v) > -1; });
+      var stems = hit.length ? [].concat.apply([], hit.map(function (c) { return c.s; })) : [v];
+      var rows = allRows().filter(function (r) { var t = fold(r.t + ' ' + (r.sy || '') + ' ' + (r.w || '') + ' ' + (r.ev || '')); return stems.some(function (s) { return t.indexOf(s) > -1; }); });
+      if (hit.length) snote.textContent = (html.lang === 'pl' ? 'Szukam: ' : es('Looking for: ', 'Buscando: ')) + hit.map(function (c) { return c.l; }).join(', ');
+      var np = rows.filter(function (r) { return !r.x; }).length, ns = rows.length - np;
+      stabs.querySelectorAll('.chip').forEach(function (b) {
+        var k = b.dataset.m; b.classList.toggle('on', k === mode);
+        b.textContent = tabLabel[k] + ' ' + (k === 'all' ? rows.length : k === 'pep' ? np : ns);
+      });
+      var shown = rows.filter(function (r) { return mode === 'all' || (mode === 'ster') === !!r.x; });
+      shint.hidden = shown.length > 0;
+      if (!shown.length) shint.textContent = html.lang === 'pl' ? 'Nic nie pasuje.' : es('Nothing matches that.', 'No hay coincidencias.');
+      sout.innerHTML = shown.slice(0, 80).map(cardFor).join('');
       markStars();
     };
     sq.addEventListener('input', runSy);
-    var sc = document.getElementById('syChips');
-    if (sc) sc.addEventListener('click', function (e) {
+    stabs.addEventListener('click', function (e) { var b = e.target.closest('.chip'); if (!b) return; mode = b.dataset.m; runSy(); });
+    sc.addEventListener('click', function (e) {
       var c = e.target.closest('.chip'); if (!c) return;
       sq.value = c.dataset.sy; runSy();
     });
+    runSy();
   }
 
   renderSaved();

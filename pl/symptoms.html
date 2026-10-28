@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=66f7f59a">
+<link rel="stylesheet" href="/assets/site.css?v=98f0a9e8">
 <link rel="canonical" href="https://pepsafe.info/pl/symptoms.html">
 <link rel="alternate" hreflang="en" href="https://pepsafe.info/en/symptoms.html">
 <link rel="alternate" hreflang="pl" href="https://pepsafe.info/pl/symptoms.html">
@@ -116,9 +116,11 @@
   <div class="filters reveal">
     <label class="search"><span class="sr">Objaw</span>
       <input id="syQ" type="search" placeholder="Objaw" autocomplete="off"></label>
-    <div class="chips" id="syChips"><button class="chip" data-sy="nudności">nudności <span class="num">26</span></button><button class="chip" data-sy="hipoglikemia">hipoglikemia <span class="num">19</span></button><button class="chip" data-sy="obrzęk">obrzęk <span class="num">18</span></button><button class="chip" data-sy="wymioty">wymioty <span class="num">16</span></button><button class="chip" data-sy="biegunka">biegunka <span class="num">7</span></button><button class="chip" data-sy="ciśnienie">ciśnienie <span class="num">7</span></button><button class="chip" data-sy="nerki">nerki <span class="num">4</span></button><button class="chip" data-sy="zaczerwienienie">zaczerwienienie <span class="num">2</span></button><button class="chip" data-sy="senność">senność <span class="num">1</span></button><button class="chip" data-sy="wysypka">wysypka <span class="num">1</span></button><button class="chip" data-sy="świąd">świąd <span class="num">1</span></button><button class="chip" data-sy="znamiona">znamiona <span class="num">1</span></button></div>
+    <div class="chips" id="syChips"></div>
   </div>
-  <p class="muted" id="syHint">Wpisz co najmniej 3 znaki albo kliknij podpowiedź.</p>
+  <div class="chips" id="syTabs"></div>
+  <p class="muted" id="syNote"></p>
+  <p class="muted" id="syHint"></p>
   <div class="grid-cards" id="syOut"></div>
 </div></section>
 
@@ -151,7 +153,7 @@
 </footer>
 
 <script src="/assets/dane-pl.js" defer></script>
-<script src="/assets/ruch.js?v=66f7f59a" defer></script>
+<script src="/assets/ruch.js?v=98f0a9e8" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "68889a9fe6604022bd3fa7d786e5d79f"}'></script>
 </body>
 </html>

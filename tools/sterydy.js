@@ -353,6 +353,7 @@ module.exports.finder = function (L) {
   const i = { en: 0, pl: 1, es: 2 }[L], low = x => String(x || '').toLowerCase();
   return load().map(e => ({
     ev: fs1(e.med, L), w: fs1(e.risk, L),
+    sy: [e.risk].concat(((e.cons || {}).en || []).map((_, k) => ({ en: e.cons.en[k], pl: e.cons.pl[k], es: e.cons.es[k] }))).map(o => { if (!o) return ''; if (o.en && o.es) EXTRA[norm(ESC(o.en))] = ESC(o.es); return L === 'pl' ? plFix(o.pl) : o[L]; }).join(' '),
     s: 's-' + e.id, x: 1, n: nmL(e, L), c: L === 'pl' ? plFix(CLS[e.cls].name[L]) : CLS[e.cls].name[L], st: UI.form[e.form || 'inj'][i],
     t: low(['en', 'pl', 'es'].map(l => nmL(e, l) + ' ' + (e.alt ? e.alt[l] : '') + ' ' + e.what[l].split('. ')[0]).join(' ') + ' ' + CLS[e.cls].name.en + ' steroid steryd sterydy esteroides')
   }));

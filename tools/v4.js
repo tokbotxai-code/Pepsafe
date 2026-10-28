@@ -1296,10 +1296,6 @@ function compare(L) {
 
 function symptoms(L) {
   const en = L === 'en', t = W[L];
-  const texts = D.map(e => searchText(e, en));
-  const words = ((en ? SY_EN : SY_PL) || [])
-    .map(w => ({ w, n: texts.filter(x => x.indexOf(w.toLowerCase()) > -1).length }))
-    .filter(x => x.n > 0).sort((a, b) => b.n - a.n);
   const body = `
 <section class="page-head paper">
   <canvas id="chains" aria-hidden="true"></canvas>
@@ -1313,9 +1309,11 @@ function symptoms(L) {
   <div class="filters reveal">
     <label class="search"><span class="sr">${en ? 'Symptom' : 'Objaw'}</span>
       <input id="syQ" type="search" placeholder="${en ? 'Symptom' : 'Objaw'}" autocomplete="off"></label>
-    <div class="chips" id="syChips">${words.slice(0, 12).map(x => `<button class="chip" data-sy="${esc(x.w)}">${esc(x.w)} <span class="num">${x.n}</span></button>`).join('')}</div>
+    <div class="chips" id="syChips"></div>
   </div>
-  <p class="muted" id="syHint">${en ? 'Type at least 3 characters or click a suggestion.' : 'Wpisz co najmniej 3 znaki albo kliknij podpowiedź.'}</p>
+  <div class="chips" id="syTabs"></div>
+  <p class="muted" id="syNote"></p>
+  <p class="muted" id="syHint"></p>
   <div class="grid-cards" id="syOut"></div>
 </div></section>
 
