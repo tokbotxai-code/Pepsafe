@@ -489,7 +489,7 @@ function home(L) {
 <section class="field" style="padding-top:0">
   <div class="wrap">
     <a class="reveal" href="${BASE}${L}/guides.html" style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border:2px solid #3CCFA9;border-radius:14px;padding:16px 20px;text-decoration:none;color:inherit">
-      <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Na lekach GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £5.99 · Protein &amp; Muscle £9.99 · sources on every page' : 'Bezpieczeństwo £5.99 · Białko i mięśnie £9.99 · źródła na każdej stronie'}</span></span>
+      <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Przyjmujesz lek GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £5.99 · Protein &amp; Muscle £9.99 · sources on every page' : 'Bezpieczeństwo £5.99 · Białko i mięśnie £9.99 · źródła na każdej stronie'}</span></span>
       <span class="btn">${en ? 'See inside' : 'Zobacz podgląd'}${ARROW}</span>
     </a>
     <p class="small ink2 reveal" style="margin-top:10px">${en ? 'The catalog stays free and ad-free.' : 'Katalog zostaje darmowy i bez reklam.'} <a href="${KOFI}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
@@ -637,7 +637,7 @@ function guideBox(e, en) {
   if (!/GLP-1|GIP/.test((EN[e.n] || [])[1] || '')) return '';
   return `<section class="blk reveal" style="border:2px solid #3CCFA9;border-radius:14px;padding:18px 20px">
   <h2 class="kick">${en ? 'The GLP-1 Safety Guide' : 'Przewodnik bezpieczeństwa GLP-1 (po angielsku)'}</h2>
-  <p>${en ? '23 pages in plain English: side effects and how often they happen, label warnings, surgery, pregnancy, protein and muscle, stopping, spotting fakes — with sources from MHRA, EMA and FDA.' : '23 strony prostym językiem: skutki uboczne i ich częstość, ostrzeżenia z etykiet, zabiegi, ciąża, białko i mięśnie, odstawienie, podróbki — ze źródłami MHRA, EMA i FDA.'}</p>
+  <p>${en ? '23 pages in plain English: side effects and how often they happen, label warnings, surgery, pregnancy, protein and muscle, stopping, spotting fakes — with sources from MHRA, EMA and FDA.' : '23 strony napisane zrozumiale: skutki uboczne i ich częstość, ostrzeżenia z etykiet, zabiegi, ciąża, białko i mięśnie, odstawienie, podróbki — ze źródłami MHRA, EMA i FDA.'}</p>
   <p><a class="btn" href="${GUIDE_URL}" rel="noopener">${en ? 'Get the PDF — £5.99' : 'Pobierz PDF — £5.99'}${ARROW}</a></p>
   <p style="margin-top:14px"><b>${en ? 'Protein &amp; Muscle on GLP-1' : 'Białko i mięśnie przy GLP-1 (po angielsku)'}</b> — ${en ? 'keep your strength while you lose weight: protein calculator, 7-day meal plan, 20-minute home workouts, printable tracker.' : 'jak zachować siłę podczas chudnięcia: kalkulator białka, 7-dniowy plan posiłków, 20-minutowy trening w domu, dzienniczek.'}</p>
   <p><a class="btn ghost" href="${MUSCLE_URL}" rel="noopener">${en ? 'Get the muscle guide — £9.99' : 'Pobierz przewodnik — £9.99'}${ARROW}</a></p>
@@ -708,7 +708,7 @@ function guidesPage(L) {
   <canvas id="chains" aria-hidden="true"></canvas>
   <div class="wrap narrow">
     <p class="kick reveal">${en ? 'PepSafe guides' : 'Przewodniki PepSafe (po angielsku)'}</p>
-    <h1 class="display reveal">${en ? 'Plain-English guides for people on GLP-1 medicines' : 'Przewodniki prostym językiem dla osób na lekach GLP-1'}</h1>
+    <h1 class="display reveal">${en ? 'Plain-English guides for people on GLP-1 medicines' : 'Przystępne przewodniki dla osób przyjmujących leki GLP-1'}</h1>
     <p class="lede reveal">${en ? 'Built from official labels, regulators and the major clinical trials — with sources on every page. Instant PDF download.' : 'Oparte na etykietach, zaleceniach regulatorów i dużych badaniach klinicznych — ze źródłami na każdej stronie. PDF do pobrania od razu.'}</p>
     <ul class="reveal small">
       <li>${en ? 'Sources: MHRA, EMA, FDA labels, STEP and SURMOUNT trials, WHO and NHS guidance' : 'Źródła: MHRA, EMA, etykiety FDA, badania STEP i SURMOUNT, zalecenia WHO i NHS'}</li>
@@ -721,7 +721,7 @@ function guidesPage(L) {
     ${card(MUSCLE_URL, '£9.99', 'Protein &amp; Muscle on GLP-1', en ? '21-page guide + protein calculator + printable weekly tracker.' : '21 stron + kalkulator białka + dzienniczek do druku.',
       en ? ['Your personal protein target in 2 minutes', '7-day meal plan with vegetarian swaps', '20-minute home strength routine, no gym', '12-week progression plan', 'Older adults, bones and balance']
          : ['Twój cel białkowy w 2 minuty', '7-dniowy plan posiłków z wersją wegetariańską', '20-minutowy trening siłowy w domu', '12-tygodniowy plan postępów', 'Starsi dorośli, kości i równowaga'], ['muscle-1', 'muscle-2', 'muscle-3'])}
-    <p class="small ink2 reveal" style="margin-top:22px">${en ? 'Educational information only — not medical advice and no dosing instructions. Bought a guide? Tell us what you think at ' + FORM_TO + '.' : 'Informacje edukacyjne — nie porada medyczna i bez instrukcji dawkowania. Masz przewodnik? Napisz, co sądzisz: ' + FORM_TO + '.'}</p>
+    <p class="small ink2 reveal" style="margin-top:22px">${en ? 'Educational information only — not medical advice and no dosing instructions. Bought a guide? Tell us what you think at ' + FORM_TO + '.' : 'Informacje edukacyjne — nie porada medyczna i bez instrukcji dawkowania. Masz już przewodnik? Napisz nam, co o nim sądzisz: ' + FORM_TO + '.'}</p>
     <p class="reveal"><a href="free.html">${en ? 'Not ready? Get the free one-page checklist first' : 'Nie teraz? Weź najpierw darmową checklistę'}${ARROW}</a></p>
   </div>
 </section>`;
@@ -732,7 +732,7 @@ function guidesPage(L) {
 function privacy(L) {
   const en = L === 'en';
   const S = en ? [
-    ['Who we are', 'PepSafe (pepsafe.info) is an independent educational website about peptides and GLP-1 medicines. Contact: ' + FORM_TO + '.'],
+    ['Who we are', 'PepSafe (pepsafe.info) is an independent educational website about peptides, GLP-1 medicines and related hormonal and anabolic drugs. Contact: ' + FORM_TO + '.'],
     ['What we collect', 'If you join our email list, we collect your email address and the date of your consent. If you use the contact or side-effect form, we collect what you type into it. We do not ask for health records and you should not send them.'],
     ['Why', 'To send you the weekly PepSafe email and the free checklist (legal basis: your consent), and to answer messages you send us.'],
     ['Who processes it', 'Forms are delivered to our inbox by FormSubmit (formsubmit.co). Our email list is hosted by MailerLite (UAB MailerLite, Lithuania, EU), which stores your email address and consent date and sends our emails on our behalf. Purchases on Ko-fi are handled by Ko-fi and PayPal/Stripe under their own privacy policies; we receive only what they share with sellers.'],
@@ -742,7 +742,7 @@ function privacy(L) {
     ['Your rights', 'You can unsubscribe at any time with the link in every email, or ask us to see, correct or delete your data by writing to ' + FORM_TO + '. UK residents can complain to the Information Commissioner\'s Office (ico.org.uk).'],
     ['No sales of data', 'We never sell or rent your data, and we do not sell medicines or peptides.']
   ] : [
-    ['Kim jesteśmy', 'PepSafe (pepsafe.info) to niezależna strona edukacyjna o peptydach i lekach GLP-1. Kontakt: ' + FORM_TO + '.'],
+    ['Kim jesteśmy', 'PepSafe (pepsafe.info) to niezależna strona edukacyjna o peptydach, lekach GLP-1 oraz pokrewnych lekach hormonalnych i anabolicznych. Kontakt: ' + FORM_TO + '.'],
     ['Co zbieramy', 'Jeśli zapiszesz się na listę mailową — Twój adres e-mail i datę zgody. Jeśli użyjesz formularza kontaktowego lub zgłoszenia objawu — to, co w nim wpiszesz. Nie prosimy o dokumentację medyczną i nie wysyłaj jej.'],
     ['Po co', 'Żeby wysyłać cotygodniowy e-mail PepSafe i darmową checklistę (podstawa: Twoja zgoda) oraz odpowiadać na wiadomości.'],
     ['Kto przetwarza', 'Formularze trafiają do naszej skrzynki przez FormSubmit (formsubmit.co). Listę mailową prowadzi MailerLite (UAB MailerLite, Litwa, UE): przechowuje Twój adres i datę zgody i wysyła w naszym imieniu e-maile. Zakupy na Ko-fi obsługują Ko-fi i PayPal/Stripe według własnych zasad prywatności.'],
@@ -1028,19 +1028,21 @@ function faqPage(L) {
   const en = L === 'en', t = W[L];
   const faq = FAQ.filter(x => Array.isArray(x) && x[0] && x[1]);
   const qa = (QA || []).filter(x => x && x.q && x.a);
+  const st = require('./sterydy.js').faqItems(L);
   const body = `
 <section class="page-head paper">
   <canvas id="chains" aria-hidden="true"></canvas>
   <div class="wrap">
     <p class="kick reveal">${esc(t.nav.faq)}</p>
     <h1 class="display reveal">${en ? 'Questions, answered plainly.' : 'Pytania i proste odpowiedzi.'}</h1>
-    <p class="lede reveal">${faq.length + qa.length} ${en ? 'questions about peptides, answered from the research — and about what we will not answer.' : 'pytań o peptydy, z odpowiedziami opartymi na badaniach — i o tym, na co nie odpowiadamy.'}</p>
+    <p class="lede reveal"><b>${faq.length + qa.length + st.length}</b> ${en ? 'questions about peptides, hormones and anabolic drugs, answered from the research — and about what we will not answer.' : 'pytań o peptydy, hormony i środki anaboliczne, z odpowiedziami opartymi na badaniach — i o tym, na co nie odpowiadamy.'}</p>
   </div>
 </section>
 <section><div class="wrap">
   <div class="faq wide">
     ${faq.map(q => `<details class="reveal"><summary>${esc(en ? q[0].en : q[0].pl)}</summary><p>${esc(en ? q[1].en : q[1].pl)}</p></details>`).join('')}
     ${qa.map(q => `<details class="reveal"><summary>${esc(q.q[en ? 1 : 0])}</summary><p>${esc(q.a[en ? 1 : 0])}</p></details>`).join('')}
+    ${st.map(q => `<details class="reveal"><summary>${esc(q[0])}</summary><p>${esc(q[1])}</p></details>`).join('')}
   </div>
 </div></section>`;
   return layout({
@@ -1294,7 +1296,7 @@ function compare(L) {
   return layout({
     lang: L, here: 'compare.html', twin: 'compare.html', body,
     title: (en ? 'Compare substances' : 'Porównaj substancje') + ' | PepSafe',
-    desc: en ? 'Put up to three peptides side by side: status, group, evidence and warnings.' : 'Zestaw do trzech peptydów obok siebie: status, grupa, dowody i ostrzeżenia.'
+    desc: en ? 'Put up to three substances, peptides or steroids, side by side: status, group, evidence and warnings.' : 'Zestaw do trzech substancji, peptydów lub sterydów, obok siebie: status, grupa, dowody i ostrzeżenia.'
   });
 }
 

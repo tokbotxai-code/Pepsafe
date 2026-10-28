@@ -199,14 +199,14 @@
     var picked = [], dl = document.getElementById('cmpList'),
         cout = document.getElementById('cmpOut'), cempty = document.getElementById('cmpEmpty'),
         cwarn = document.getElementById('cmpWarn');
-    dl.innerHTML = window.PEP.rows.map(function (r) { return '<option value="' + r.n + '">'; }).join('');
+    dl.innerHTML = allRows().map(function (r) { return '<option value="' + r.n + '">'; }).join('');
     var drawCmp = function () {
       cout.innerHTML = picked.map(function (r) {
         return '<article class="tile glass cmp"><p class="kick">' + r.st + '</p><h2 class="gtitle sm">' + r.n + '</h2>' +
           '<p class="small ink2">' + r.c + (r.gl ? ' · ' + r.gl : '') + '</p>' +
           (r.ev ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Dowody' : es('Evidence', 'Evidencia')) + '</p><p class="small">' + r.ev + '</p>' : '') +
           (r.w ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Uwaga' : es('Watch for', 'Atención')) + '</p><p class="small">' + r.w + '</p>' : '') +
-          '<p><a class="more" href="' + card(r.s) + '">' + r.n + '</a></p></article>';
+          '<p><a class="more" href="' + rowUrl(r) + '">' + r.n + '</a></p></article>';
       }).join('');
       cempty.hidden = picked.length > 0;
       var groups = picked.filter(function (r) { return r.g; }).map(function (r) { return r.g; });
@@ -217,7 +217,7 @@
         : '';
     };
     cq.addEventListener('change', function () {
-      var r = window.PEP.rows.filter(function (x) { return x.n.toLowerCase() === cq.value.trim().toLowerCase(); })[0];
+      var r = allRows().filter(function (x) { return x.n.toLowerCase() === cq.value.trim().toLowerCase(); })[0];
       if (r && picked.indexOf(r) < 0) { picked.push(r); if (picked.length > 3) picked.shift(); }
       cq.value = ''; drawCmp();
     });
@@ -479,6 +479,27 @@
       var b = form.querySelector('[type="submit"]');
       if (b && b.dataset.busy) { b.disabled = true; b.textContent = b.dataset.busy; }
     }
+    // The form service answers from another server. If it hangs or refuses, the reader must not be stuck on a dead page:
+    // we send in the background (12 s limit) and, on failure, keep the typed text and offer a ready e-mail instead.
+    var TO = (form_to()), FAIL = pl
+      ? 'Nie udało się wysłać wiadomości przez formularz (serwer formularza nie odpowiada). Twój tekst został na stronie. Możesz go wysłać zwykłym e-mailem:'
+      : es('The form could not be sent (the form server did not answer). Your text is still on the page. You can send it as a normal email:', 'No se pudo enviar el formulario (el servidor no respondió). Tu texto sigue en la página. Puedes enviarlo como un correo normal:');
+    function form_to() { var a = document.querySelector('a[href^="mailto:"]'); return a ? a.getAttribute('href').replace(/^mailto:/, '').split('?')[0] : 'contact@pepsafe.info'; }
+    function deliver(form, out, text) {
+      var next = form.querySelector('input[name="_next"]'), b = form.querySelector('[type="submit"]'), idle = b ? b.textContent : '';
+      var ctl = window.AbortController ? new AbortController() : null, timer = setTimeout(function () { if (ctl) ctl.abort(); fail(); }, 12000), done = false;
+      function fail() {
+        if (done) return; done = true; clearTimeout(timer);
+        if (b) { b.disabled = false; b.textContent = b.dataset.idle || idle; }
+        out.hidden = false; out.classList.add('bad'); out.textContent = FAIL + ' ';
+        var a = document.createElement('a'); a.href = 'mailto:' + TO + '?subject=' + encodeURIComponent('PepSafe') + '&body=' + encodeURIComponent(text);
+        a.textContent = TO; out.appendChild(a);
+      }
+      fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form), signal: ctl ? ctl.signal : undefined })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return r.ok && j && String(j.success) !== 'false'; }); })
+        .then(function (ok) { if (done) return; if (!ok) return fail(); done = true; clearTimeout(timer); location.href = next ? next.value : '/'; })
+        .catch(fail);
+    }
 
     if (co) {
       var out = document.getElementById('coMsgOut');
@@ -488,7 +509,8 @@
         var okMail = /^\S+@\S+\.\S+$/.test(m);
         flag(co.coName, !n); flag(co.coEmail, !okMail); flag(co.coMsg, msg.length < 10);
         if (!n || !okMail || msg.length < 10 || !cons) { e.preventDefault(); say(out, MSG.co); return; }
-        out.hidden = true; busy(co);
+        e.preventDefault(); out.hidden = true; var bb = co.querySelector('[type="submit"]'); if (bb) bb.dataset.idle = bb.textContent; busy(co);
+        deliver(co, out, n + ' <' + m + '>\n\n' + msg);
       });
     }
 
@@ -503,7 +525,8 @@
         var sym = ef.efSym.value.trim(), cons = document.getElementById('efCons').checked;
         flag(ef.efSym, !sym);
         if (!sym || !cons) { e.preventDefault(); say(eout, MSG.ef); return; }
-        eout.hidden = true; busy(ef);
+        e.preventDefault(); eout.hidden = true; var bf = ef.querySelector('[type="submit"]'); if (bf) bf.dataset.idle = bf.textContent; busy(ef);
+        deliver(ef, eout, ef.efSym.value.trim());
       });
     }
   })();

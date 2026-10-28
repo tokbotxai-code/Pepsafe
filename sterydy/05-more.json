@@ -86,7 +86,7 @@
   "q": "danazol",
   "what": {
    "en": "Danazol is a synthetic steroid with weak androgen activity. It is a real medicine, taken as capsules, and is not designed for muscle building.",
-   "pl": "Danazol to syntetyczny steryd o słabym działaniu androgennym. To prawdziwy lek przyjmowany w kapsułkach, nieprzeznaczony do budowy mięśni.",
+   "pl": "Danazol to syntetyczny steryd o słabym działaniu androgennym. To prawdziwy lek przyjmowany w kapsułkach, który nie służy do budowy mięśni.",
    "es": "El danazol es un esteroide sintético con actividad androgénica débil. Es un medicamento real, en cápsulas, y no está pensado para ganar músculo."
   },
   "how": {
@@ -389,7 +389,7 @@
   "q": "somatropin",
   "status": {
    "en": "A prescription-only medicine in the UK and the US. Supplying it without a prescription is illegal, and it is not a steroid: growth hormone is a protein hormone.",
-   "pl": "Lek wydawany wyłącznie na receptę w Wielkiej Brytanii i USA. Dostarczanie go bez recepty jest nielegalne, i nie jest sterydem: hormon wzrostu to hormon białkowy.",
+   "pl": "Lek wydawany wyłącznie na receptę w Wielkiej Brytanii i USA. Dostarczanie go bez recepty jest nielegalne. To nie steryd: hormon wzrostu jest hormonem białkowym.",
    "es": "Un medicamento solo con receta en el Reino Unido y EE. UU. Suministrarlo sin receta es ilegal, y no es un esteroide: la hormona del crecimiento es una hormona proteica."
   },
   "what": {
@@ -537,7 +537,7 @@
   },
   "alt": {
    "en": "2,4-dinitrophenol, an industrial chemical that has killed people",
-   "pl": "2,4-dinitrofenol, chemikalia przemysłowa, która zabiła ludzi",
+   "pl": "2,4-dinitrofenol, substancja chemiczna z przemysłu, która zabiła ludzi",
    "es": "2,4-dinitrofenol, un producto químico industrial que ha matado a personas"
   },
   "cls": "oth",
@@ -546,7 +546,7 @@
   "label": false,
   "what": {
    "en": "DNP, or 2,4-dinitrophenol, is an industrial chemical used in dyes and explosives. It is not a medicine, and in the 1930s it was sold as a weight-loss pill until it was found to be too dangerous.",
-   "pl": "DNP, czyli 2,4-dinitrofenol, to chemikalia przemysłowa używana w barwnikach i materiałach wybuchowych. To nie lek, a w latach 30. sprzedawano go jako tabletkę na odchudzanie, aż uznano go za zbyt niebezpieczny.",
+   "pl": "DNP, czyli 2,4-dinitrofenol, to substancja chemiczna używana w przemyśle do produkcji barwników i materiałów wybuchowych. To nie lek, a w latach 30. sprzedawano go jako tabletkę na odchudzanie, aż uznano go za zbyt niebezpieczny.",
    "es": "El DNP, o 2,4-dinitrofenol, es un producto químico industrial usado en tintes y explosivos. No es un medicamento, y en la década de 1930 se vendió como pastilla para adelgazar hasta que se comprobó que era demasiado peligroso."
   },
   "how": {
@@ -566,7 +566,7 @@
   },
   "status": {
    "en": "Not approved for human consumption anywhere. In the UK the Food Standards Agency treats it as unfit for people, and selling it for use as a diet pill is illegal.",
-   "pl": "Nie jest nigdzie zatwierdzony do spożycia przez ludzi. W Wielkiej Brytanii Agencja Standardów Żywności uznaje go za nienadający się dla ludzi, a sprzedaż jako tabletki na odchudzanie jest nielegalna.",
+   "pl": "Nie jest nigdzie zatwierdzony do spożycia przez ludzi. W Wielkiej Brytanii Agencja Standardów Żywności uznaje, że nie nadaje się do spożycia przez ludzi, a sprzedaż jako tabletki na odchudzanie jest nielegalna.",
    "es": "No está aprobado para consumo humano en ningún lugar. En el Reino Unido la Agencia de Normas Alimentarias lo considera no apto para personas y venderlo como pastilla para adelgazar es ilegal."
   },
   "wada": {

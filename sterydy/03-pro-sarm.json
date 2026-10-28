@@ -106,7 +106,7 @@
   },
   "status": {
    "en": "Sold as a dietary supplement in the US, where it is not a controlled drug. It is not licensed as a supplement in the UK or EU, where rules are stricter, and it is prohibited in sport.",
-   "pl": "W USA sprzedawany jako suplement diety, gdzie nie jest substancją kontrolowaną. W Wielkiej Brytanii i UE nie jest dopuszczony jako suplement, a przepisy są ostrzejsze, i jest zabroniony w sporcie.",
+   "pl": "W USA sprzedawany jako suplement diety, gdzie nie jest substancją kontrolowaną. W Wielkiej Brytanii i UE nie jest dopuszczony jako suplement, a przepisy są ostrzejsze, a w sporcie jest zabroniony.",
    "es": "Se vende como complemento alimenticio en EE. UU., donde no es una sustancia controlada. No está autorizado como suplemento en el Reino Unido ni en la UE, donde las normas son más estrictas, y está prohibido en el deporte."
   },
   "pros": {
@@ -378,7 +378,7 @@
   "label": false,
   "what": {
    "en": "Ligandrol, or LGD-4033, is an experimental SARM that was tested in early human trials and never approved.",
-   "pl": "Ligandrol, czyli LGD-4033, to eksperymentalny SARM badany we wczesnych badaniach na ludziach i nigdy niezatwierdzony.",
+   "pl": "Ligandrol, czyli LGD-4033, to eksperymentalny SARM badany we wczesnych próbach u ludzi i nigdy niezatwierdzony.",
    "es": "El ligandrol, o LGD-4033, es un SARM experimental que se probó en ensayos tempranos en humanos y nunca fue aprobado."
   },
   "how": {
@@ -601,7 +601,7 @@
   },
   "med": {
    "en": "GlaxoSmithKline stopped development in 2007 because long animal studies found cancers in several organs. It has no approved use.",
-   "pl": "GlaxoSmithKline przerwało prace w 2007 roku, bo długie badania na zwierzętach wykazały nowotwory w kilku narządach. Nie ma zatwierdzonego zastosowania.",
+   "pl": "Firma GlaxoSmithKline przerwała prace w 2007 roku, bo długie badania na zwierzętach wykazały nowotwory w kilku narządach. Nie ma zatwierdzonego zastosowania.",
    "es": "GlaxoSmithKline detuvo el desarrollo en 2007 porque estudios largos en animales encontraron cánceres en varios órganos. No tiene ningún uso aprobado."
   },
   "risk": {

@@ -106,7 +106,7 @@
   },
   "risk": {
    "en": "Headache, flushing, indigestion and back pain are common. It must never be combined with nitrate medicines for chest pain, because the blood pressure can fall dangerously, and rare cases of sudden vision or hearing loss have been reported. Pills sold outside pharmacies have been found to contain the wrong strength or other drugs.",
-   "pl": "Częste są bóle głowy, nagła zaczerwienienie twarzy, niestrawność i bóle pleców. Nie wolno go łączyć z azotanami stosowanymi w bólu w klatce piersiowej, bo ciśnienie może niebezpiecznie spaść, a opisywano rzadkie przypadki nagłej utraty wzroku lub słuchu. Tabletki sprzedawane poza aptekami zawierały inną ilość substancji lub inne leki.",
+   "pl": "Częste są bóle głowy, nagłe zaczerwienienie twarzy, niestrawność i bóle pleców. Nie wolno go łączyć z azotanami stosowanymi w bólu w klatce piersiowej, bo ciśnienie może niebezpiecznie spaść, a opisywano rzadkie przypadki nagłej utraty wzroku lub słuchu. Tabletki sprzedawane poza aptekami zawierały inną ilość substancji lub inne leki.",
    "es": "Son frecuentes el dolor de cabeza, el enrojecimiento, la indigestión y el dolor de espalda. Nunca debe combinarse con nitratos para el dolor torácico, porque la presión arterial puede caer de forma peligrosa, y se han descrito casos raros de pérdida súbita de visión o de audición. Las pastillas vendidas fuera de las farmacias han contenido una cantidad errónea u otros fármacos."
   },
   "pros": {
@@ -251,7 +251,7 @@
   "q": "dapoxetine",
   "what": {
    "en": "Dapoxetine is a short-acting antidepressant-type drug (an SSRI) made for premature ejaculation. It is not used as an antidepressant.",
-   "pl": "Dapoksetyna to krótkodziałający lek z grupy antydepresantów (SSRI) stworzony na przedwczesny wytrysk. Nie stosuje się go jako antydepresantu.",
+   "pl": "Dapoksetyna to krótkodziałający lek z grupy antydepresantów (SSRI) stworzony do leczenia przedwczesnego wytrysku. Nie stosuje się go jako antydepresantu.",
    "es": "La dapoxetina es un fármaco de tipo antidepresivo (un ISRS) de acción corta creado para la eyaculación precoz. No se usa como antidepresivo."
   },
   "how": {
@@ -541,7 +541,7 @@
   },
   "wada": {
    "en": "WADA prohibits phentermine in competition as a stimulant (category S6).",
-   "pl": "WADA zakazuje fentermin w zawodach jako stymulantu (kategoria S6).",
+   "pl": "WADA zakazuje fenterminy w zawodach jako stymulantu (kategoria S6).",
    "es": "La AMA prohíbe la fentermina en competición como estimulante (categoría S6)."
   },
   "label": false

@@ -11,6 +11,8 @@ const plFix = s => typeof s === 'string' ? s.replace(/(?<!kortyko)([Ss])teroid/g
 const norm = s => s.replace(/\s+/g, ' ').trim();
 const ESC = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+// Q&A about steroids appended to the FAQ page (sterydy/faq.json); EN->ES pairs go to the same memory file as the rest
+const EXTRA = {};
 function loadArticles() {
   const f = path.join(root, 'sterydy', 'articles.json');
   return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : [];
@@ -338,16 +340,25 @@ ${ORDER.map(k => { const rows = data.filter(e => e.cls === k); if (!rows.length)
   }
   // Spanish needs the catalogue link label too
   PAIRS[norm('Peptide catalogue')] = 'Catálogo de péptidos';
+  Object.assign(PAIRS, EXTRA);
   fs.writeFileSync(path.join(__dirname, 'sterydy-tm.json'), JSON.stringify(PAIRS));
   console.log(`sterydy: ${data.length} wpisow, ${pages.length} stron`);
   return pages;
 };
 module.exports.navLabel = UI.nav;
 // rows for the magnifier list (window.PEP.extra): steroids searchable by their English, Polish and Spanish names
+// first sentence of a field, with its EN->ES pair noted for the Spanish data file
+const fs1 = (o, L) => { if (!o) return ''; const f = x => { const m = /^(.+?[.!?])(\s|$)/.exec(x); return m ? m[1] : x; }; const en = f(o.en), es = f(o.es); EXTRA[norm(ESC(en))] = ESC(es); return L === 'pl' ? plFix(f(o.pl)) : f(o[L]); };
 module.exports.finder = function (L) {
   const i = { en: 0, pl: 1, es: 2 }[L], low = x => String(x || '').toLowerCase();
   return load().map(e => ({
+    ev: fs1(e.med, L), w: fs1(e.risk, L),
     s: 's-' + e.id, x: 1, n: nmL(e, L), c: L === 'pl' ? plFix(CLS[e.cls].name[L]) : CLS[e.cls].name[L], st: UI.form[e.form || 'inj'][i],
     t: low(['en', 'pl', 'es'].map(l => nmL(e, l) + ' ' + (e.alt ? e.alt[l] : '') + ' ' + e.what[l].split('. ')[0]).join(' ') + ' ' + CLS[e.cls].name.en + ' steroid steryd sterydy esteroides')
   }));
+};
+module.exports.faqItems = function (L) {
+  const f = path.join(root, 'sterydy', 'faq.json'); if (!fs.existsSync(f)) return [];
+  const pair = (o) => { if (o.en && o.es) EXTRA[norm(ESC(o.en))] = ESC(o.es); return L === 'pl' ? plFix(o.pl) : o[L]; };
+  return JSON.parse(fs.readFileSync(f, 'utf8')).map(x => [pair(x.q), pair(x.a)]);
 };

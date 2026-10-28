@@ -539,3 +539,7 @@ details.qa p { margin: 8px 0 0; }
 .mol { margin: 0; text-align: center; }
 .mol img { max-width: 240px; width: 100%; height: auto; border-radius: 14px; background: #f4f4f2; border: 1px solid var(--line); }
 .mol p { margin: 6px 0 0; }
+
+/* dropdown lists: readable in the dark theme (the open list used to inherit a transparent background) */
+select, .frow select { background-color: var(--paper2); color: var(--ink); }
+select option, select optgroup { background-color: var(--paper2); color: var(--ink); }
