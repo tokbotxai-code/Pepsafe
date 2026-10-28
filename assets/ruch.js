@@ -202,7 +202,7 @@
     dl.innerHTML = allRows().map(function (r) { return '<option value="' + r.n + '">'; }).join('');
     var drawCmp = function () {
       cout.innerHTML = picked.map(function (r) {
-        return '<article class="tile glass cmp"><p class="kick">' + r.st + '</p><h2 class="gtitle sm">' + r.n + '</h2>' +
+        return '<article class="tile glass cmpcard"><p class="kick">' + r.st + '</p><h2 class="gtitle sm">' + r.n + '</h2>' +
           '<p class="small ink2">' + r.c + (r.gl ? ' · ' + r.gl : '') + '</p>' +
           (r.ev ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Dowody' : es('Evidence', 'Evidencia')) + '</p><p class="small">' + r.ev + '</p>' : '') +
           (r.w ? '<p class="kick mt">' + (html.lang === 'pl' ? 'Uwaga' : es('Watch for', 'Atención')) + '</p><p class="small">' + r.w + '</p>' : '') +
@@ -218,7 +218,7 @@
     };
     cq.addEventListener('change', function () {
       var r = allRows().filter(function (x) { return x.n.toLowerCase() === cq.value.trim().toLowerCase(); })[0];
-      if (r && picked.indexOf(r) < 0) { picked.push(r); if (picked.length > 3) picked.shift(); }
+      if (r && picked.indexOf(r) < 0) { picked.push(r); if (picked.length > 6) picked.shift(); }
       cq.value = ''; drawCmp();
     });
     var cc = document.getElementById('cmpClear');

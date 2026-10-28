@@ -358,9 +358,9 @@ html.still .bento .tile, html.still .field::before, html.still .dot { animation:
 }
 
 /* ── compare ──────────────────────────────────────────── */
-.cmp .mt { margin-top: 16px; }
-.cmp .small { margin: 6px 0 0; color: var(--ink2); }
-.cmp .more { margin-top: 18px; }
+.cmpcard .mt { margin-top: 16px; }
+.cmpcard .small { margin: 6px 0 0; color: var(--ink2); }
+.cmpcard .more { margin-top: 18px; }
 #cmpWarn:not(:empty) { margin-bottom: 22px; }
 
 /* ── szukanie: lupka w belce + nakładka ───────────────────────────── */
