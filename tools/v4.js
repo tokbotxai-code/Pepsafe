@@ -133,7 +133,7 @@ const W = {
     coErr: 'Enter your name, a valid email and a message (min. 10 characters) and tick the consent.',
     coOk: 'Sent. Thank you, we will reply to the address you gave.',
     coFail: 'Could not send. Check your connection and try again.',
-    coHowH: 'How it works', coHow: 'We do not publish messages. Your e-mail address is used only to reply.',
+    coHowH: 'How it works', coHow: 'The message goes straight to our inbox. We do not publish it. Your e-mail address is used only to reply.',
     coMed: 'We do not give medical advice or personal dosing recommendations. For health matters, contact your doctor.',
     efH: 'Report a side effect', efLab: 'Report',
     efLead: 'Noticed a worrying symptom after a medicine? Report it to the official system below. This is not medical help.',
@@ -183,7 +183,7 @@ const W = {
     coErr: 'Uzupełnij imię, poprawny e-mail i wiadomość (min. 10 znaków) oraz zaznacz zgodę.',
     coOk: 'Wysłano. Dziękujemy, odpowiemy na podany adres.',
     coFail: 'Nie udało się wysłać. Sprawdź połączenie i spróbuj ponownie.',
-    coHowH: 'Jak to działa', coHow: 'Wiadomości nie publikujemy. Twój adres e-mail służy tylko do odpowiedzi.',
+    coHowH: 'Jak to działa', coHow: 'Wiadomość trafia prosto do naszej skrzynki. Nie publikujemy jej. Twój adres e-mail służy tylko do odpowiedzi.',
     coMed: 'Nie udzielamy porad medycznych ani indywidualnych zaleceń dawkowania. W sprawach zdrowia skontaktuj się z lekarzem.',
     efH: 'Zgłoś skutek uboczny', efLab: 'Zgłoszenie',
     efLead: 'Niepokojący objaw po leku? Zgłoś go w oficjalnym systemie poniżej. To nie jest pomoc medyczna.',
@@ -733,18 +733,18 @@ function privacy(L) {
   const en = L === 'en';
   const S = en ? [
     ['Who we are', 'PepSafe (pepsafe.info) is an independent educational website about peptides, GLP-1 medicines and related hormonal and anabolic drugs. Contact: ' + FORM_TO + '.'],
-    ['What we collect', 'If you join our email list, we collect your email address and the date of your consent. If you email us or message us, we keep what you send. We do not ask for health records and you should not send them.'],
+    ['What we collect', 'If you join our email list, we collect your email address and the date of your consent. If you use the contact form, email us or message us, we keep what you send. We do not ask for health records and you should not send them.'],
     ['Why', 'To send you the weekly PepSafe email and the free checklist (legal basis: your consent), and to answer messages you send us.'],
-    ['Who processes it', 'Emails reach our inbox directly. Our email list is hosted by MailerLite (UAB MailerLite, Lithuania, EU), which stores your email address and consent date and sends our emails on our behalf. Purchases on Ko-fi are handled by Ko-fi and PayPal/Stripe under their own privacy policies; we receive only what they share with sellers.'],
+    ['Who processes it', 'Messages from the contact form are passed to our inbox by the form service Web3Forms. Our email list is hosted by MailerLite (UAB MailerLite, Lithuania, EU), which stores your email address and consent date and sends our emails on our behalf. Purchases on Ko-fi are handled by Ko-fi and PayPal/Stripe under their own privacy policies; we receive only what they share with sellers.'],
     ['Analytics', 'We count visits with Cloudflare Web Analytics, which does not use cookies and does not track you across websites.'],
     ['How long', 'We keep your email until you unsubscribe or ask us to delete it. Messages are kept only as long as needed to reply.'],
     ['Your rights', 'You can unsubscribe at any time with the link in every email, or ask us to see, correct or delete your data by writing to ' + FORM_TO + '.'],
     ['No sales of data', 'We never sell or rent your data, and we do not sell medicines or peptides.']
   ] : [
     ['Kim jesteśmy', 'PepSafe (pepsafe.info) to niezależna strona edukacyjna o peptydach, lekach GLP-1 oraz pokrewnych lekach hormonalnych i anabolicznych. Kontakt: ' + FORM_TO + '.'],
-    ['Co zbieramy', 'Jeśli zapiszesz się na listę mailową — Twój adres e-mail i datę zgody. Jeśli napiszesz do nas mailem lub wiadomością — to, co wyślesz. Nie prosimy o dokumentację medyczną i nie wysyłaj jej.'],
+    ['Co zbieramy', 'Jeśli zapiszesz się na listę mailową — Twój adres e-mail i datę zgody. Jeśli użyjesz formularza kontaktowego, napiszesz mailem lub wiadomością — to, co wyślesz. Nie prosimy o dokumentację medyczną i nie wysyłaj jej.'],
     ['Po co', 'Żeby wysyłać cotygodniowy e-mail PepSafe i darmową checklistę (podstawa: Twoja zgoda) oraz odpowiadać na wiadomości.'],
-    ['Kto przetwarza', 'Maile trafiają bezpośrednio na naszą skrzynkę. Listę mailową prowadzi MailerLite (UAB MailerLite, Litwa, UE): przechowuje Twój adres i datę zgody i wysyła w naszym imieniu e-maile. Zakupy na Ko-fi obsługują Ko-fi i PayPal/Stripe według własnych zasad prywatności.'],
+    ['Kto przetwarza', 'Wiadomości z formularza kontaktowego przekazuje do naszej skrzynki usługa formularzy Web3Forms. Listę mailową prowadzi MailerLite (UAB MailerLite, Litwa, UE): przechowuje Twój adres i datę zgody i wysyła w naszym imieniu e-maile. Zakupy na Ko-fi obsługują Ko-fi i PayPal/Stripe według własnych zasad prywatności.'],
     ['Statystyki', 'Odwiedziny liczymy przez Cloudflare Web Analytics, bez ciasteczek i bez śledzenia między stronami.'],
     ['Jak długo', 'Adres trzymamy, dopóki się nie wypiszesz albo nie poprosisz o usunięcie. Wiadomości tylko tak długo, jak trzeba, by odpowiedzieć.'],
     ['Twoje prawa', 'Możesz wypisać się w każdej chwili linkiem w każdym e-mailu albo poprosić o wgląd, poprawienie lub usunięcie danych pod adresem ' + FORM_TO + '.'],
@@ -1107,7 +1107,7 @@ function about(L) {
     <article class="tile glass reveal"><h2 class="gtitle sm">${en ? 'No doses from strangers' : 'Bez dawek od obcych'}</h2>
       <p class="small ink2">${en ? 'Doses appear only for approved medicines, copied from the label, as information rather than advice.' : 'Dawki pojawiają się tylko przy zatwierdzonych lekach, przepisane z etykiety, jako informacja, nie porada.'}</p></article>
     <article class="tile glass reveal" id="corrections"><h2 class="gtitle sm">${en ? 'Corrections' : 'Poprawki'}</h2>
-      <p class="small ink2">${en ? 'Found an error or a newer source? Write to us using the options below. We check every report against the source, fix confirmed errors and update the date on the entry. Every entry shows when it last changed. <a href="methods.html">Sources &amp; methods</a>.' : 'Widzisz błąd albo nowsze źródło? Napisz do nas, korzystając z opcji niżej. Każde zgłoszenie sprawdzamy w źródle, potwierdzone błędy poprawiamy i aktualizujemy datę wpisu. Każdy wpis pokazuje, kiedy ostatnio się zmienił. <a href="methods.html">Źródła i metoda</a>.'}</p></article>
+      <p class="small ink2">${en ? 'Found an error or a newer source? Write to us using the form below. We check every report against the source, fix confirmed errors and update the date on the entry. Every entry shows when it last changed. <a href="methods.html">Sources &amp; methods</a>.' : 'Widzisz błąd albo nowsze źródło? Napisz do nas przez formularz niżej. Każde zgłoszenie sprawdzamy w źródle, potwierdzone błędy poprawiamy i aktualizujemy datę wpisu. Każdy wpis pokazuje, kiedy ostatnio się zmienił. <a href="methods.html">Źródła i metoda</a>.'}</p></article>
   </div>
 </div></section>
 
@@ -1115,6 +1115,20 @@ function about(L) {
   <p class="kick reveal">${esc(t.contact)}</p>
   <h2 class="display sm reveal">${esc(t.writeUs)}</h2>
   <p class="lede reveal">${esc(t.contactP)}</p>
+  <form class="sheet reveal" id="coForm" method="POST" action="https://api.web3forms.com/submit" novalidate>
+    <input type="hidden" name="access_key" value="fad7f9a3-408f-447d-9e48-592fc5d30c02">
+    <input type="hidden" name="subject" value="PepSafe: ${L === 'pl' ? 'wiadomość ze strony' : 'message from the site'}">
+    <input type="hidden" name="from_name" value="pepsafe.info">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="f2">
+      <p class="frow"><label for="coName">${esc(t.coName)}</label><input type="text" id="coName" name="name" autocomplete="name" maxlength="80" required></p>
+      <p class="frow"><label for="coEmail">${esc(t.coMail)}</label><input type="email" id="coEmail" name="email" autocomplete="email" maxlength="120" required></p>
+    </div>
+    <p class="frow"><label for="coTopic">${esc(t.coTopic)}</label><select id="coTopic" name="topic">${t.coT.map(x => `<option>${esc(x)}</option>`).join('')}</select></p>
+    <p class="frow"><label for="coMsg">${esc(t.coMsg)}</label><textarea id="coMsg" name="message" rows="5" maxlength="2000" required></textarea></p>
+    <p class="formfoot"><button class="btn big" type="submit" data-busy="${esc(t.coSending)}">${esc(t.coSend)}</button></p>
+    <p class="formmsg" id="coMsgOut" role="status" hidden></p>
+  </form>
   <div class="stack">
     <article class="tile glass reveal"><h3 class="gtitle sm">${esc(t.coHowH)}</h3><p class="small ink2">${esc(t.coHow)}</p></article>
     <article class="tile glass reveal"><h3 class="gtitle sm">TikTok · Instagram</h3>
@@ -1123,7 +1137,7 @@ function about(L) {
       <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>${esc(t.dmIG)}</span></a>
       <a class="soc" href="${FB}" rel="me noopener" target="_blank">${ICO_FB}<span>Facebook</span></a></p></article>
     <article class="tile glass reveal"><h3 class="gtitle sm">${en ? 'By email' : 'Mailem'}</h3>
-      <p class="small ink2">${en ? 'Write to us directly. We read every message.' : 'Napisz do nas wprost. Czytamy każdą wiadomość.'}</p>
+      <p class="small ink2">${en ? 'Prefer your own email app? Write to us directly.' : 'Wolisz własną pocztę? Napisz do nas wprost.'}</p>
       <p class="social"><a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a></p></article>
   </div>
   <p class="notice reveal">${esc(t.coMed)}</p>

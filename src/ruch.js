@@ -462,6 +462,34 @@
   })();
 
 
+  /* ── formularz kontaktowy: wysylka w tle (Web3Forms), komunikat na stronie ─ */
+  (function () {
+    var co = document.getElementById('coForm');
+    if (!co || !window.fetch) return;
+    var pl = html.lang === 'pl', out = document.getElementById('coMsgOut'), btn = co.querySelector('[type="submit"]');
+    var T = {
+      need: pl ? 'Uzupełnij imię, poprawny e-mail i wiadomość.' : es('Please fill in your name, a valid email and your message.', 'Rellena tu nombre, un correo válido y tu mensaje.'),
+      ok: pl ? 'Wysłano. Dziękujemy, odpowiemy na podany e-mail.' : es('Sent. Thank you, we will reply to the email you gave.', 'Enviado. Gracias, responderemos al correo que indicaste.'),
+      bad: pl ? 'Nie udało się wysłać. Napisz wprost na contact@pepsafe.info.' : es('Could not send. Please write to contact@pepsafe.info.', 'No se pudo enviar. Escribe a contact@pepsafe.info.')
+    };
+    function say(text, bad) { out.hidden = false; out.textContent = text; out.classList.toggle('bad', !!bad); }
+    co.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var n = co.coName.value.trim(), m = co.coEmail.value.trim(), msg = co.coMsg.value.trim();
+      var okMail = /^\S+@\S+\.\S+$/.test(m);
+      co.coName.setAttribute('aria-invalid', n ? 'false' : 'true'); co.coEmail.setAttribute('aria-invalid', okMail ? 'false' : 'true'); co.coMsg.setAttribute('aria-invalid', msg.length < 3 ? 'true' : 'false');
+      if (!n || !okMail || msg.length < 3) { say(T.need, true); return; }
+      var data = {}; new FormData(co).forEach(function (v, k) { data[k] = v; });
+      var idle = btn.textContent; btn.disabled = true; btn.textContent = btn.dataset.busy || idle;
+      var ctl = window.AbortController ? new AbortController() : null, tm = setTimeout(function () { if (ctl) ctl.abort(); }, 15000);
+      fetch(co.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data), signal: ctl ? ctl.signal : undefined })
+        .then(function (r) { return r.json(); })
+        .then(function (j) { if (j && j.success) { say(T.ok, false); co.reset(); } else say(T.bad, true); })
+        .catch(function () { say(T.bad, true); })
+        .then(function () { clearTimeout(tm); btn.disabled = false; btn.textContent = idle; });
+    });
+  })();
+
   /* ── zapis na liste: wysylka w tle (FormSubmit ajax), potem strona z checklista ─ */
   (function () {
     var f = document.getElementById('nlForm');
