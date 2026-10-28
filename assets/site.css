@@ -96,8 +96,16 @@ h1.display .dim { color: var(--ink3); }
 .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -.02em; text-decoration: none; }
 .logo { width: 30px; height: 30px; flex: none; }
-.brand:hover .logo circle { transition: transform .4s cubic-bezier(.2,.8,.2,1); transform-box: fill-box; transform-origin: center; }
-.brand:hover .logo circle:nth-of-type(2), .brand:hover .logo circle:nth-of-type(4) { transform: translateY(-2px); }
+.logo circle { transform-box: fill-box; transform-origin: center; animation: lgbob 3.4s ease-in-out infinite; }
+.logo circle:nth-of-type(2) { animation-delay: .45s; }
+.logo circle:nth-of-type(3) { animation-delay: .9s; }
+.logo circle:nth-of-type(4) { animation-delay: 1.35s; }
+.logo path { stroke-dasharray: 60; animation: lgline 3.4s ease-in-out infinite; }
+.brand:hover .logo circle, .brand:hover .logo path { animation-duration: 1s; }
+@keyframes lgbob { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-2.4px) scale(1.14); } }
+@keyframes lgline { 0%, 100% { stroke-dashoffset: 0; opacity: 1; } 50% { stroke-dashoffset: 6; opacity: .65; } }
+html.still .logo circle, html.still .logo path { animation: none; }
+@media (prefers-reduced-motion: reduce) { .logo circle, .logo path { animation: none; } }
 .links { display: none; gap: clamp(12px, 1.4vw, 24px); list-style: none; margin: 0; padding: 0; font-size: 13.5px; }
 .links a { white-space: nowrap; color: var(--ink2); text-decoration: none; transition: color .2s; position: relative; }
 .links a:hover, .links a[aria-current] { color: var(--ink); }

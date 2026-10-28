@@ -340,12 +340,13 @@ ${o.body}
 `;
 }
 
+const NST = require('./sterydy.js').finder('en').length;   // steroid entries, counted into the substance totals
 // ── homepage copy ─────────────────────────────────────────────────────────────
 const H = {
   en: {
-    badge: 'Independent · no ads · no affiliates', h1: [`${D.length} peptides.`, 'Legal status and evidence.', 'No peptides for sale.'],
-    lede: `A reference for peptides and related substances: what each one is, what the research shows, whether a regulator approved it, and which ones act on the same receptor. No doses for unapproved substances, nothing for sale.`,
-    b1: 'Check an overlap', b2: `Browse all ${D.length}`, railTitle: 'Catalog, by status',
+    badge: 'Independent · no ads · no affiliates', h1: [`${D.length + NST} substances.`, 'Legal status and evidence.', 'Nothing for sale.'],
+    lede: `A reference for peptides, GLP-1 drugs and steroids: what each one is, what the research shows, whether a regulator approved it, and which ones act on the same receptor. No doses for unapproved substances, nothing for sale.`,
+    b1: 'Check an overlap', b2: `Browse all ${D.length + NST}`, railTitle: 'Peptide catalog, by status',
     stats: { approved: 'Approved medicines', unapproved: 'Unapproved', trials: 'In clinical trials', other: 'Other statuses' },
     s1kick: '01 — Overlap checker', s1h: 'Two names, one receptor.',
     s1p: 'The most common mistake online is stacking substances that act on the same target. Pick two groups and see whether they collide — with the reason, not just a red light.',
@@ -356,18 +357,18 @@ const H = {
     hs: 'Human studies', hsP: 'participants in total, across the three human studies of the most-discussed “research” peptide — none with a control group.',
     ladderKick: 'What “studied” can mean',
     ladder: [['Cells', 'A dish is not a body.'], ['Animals', 'Most results never carry over to people.'], ['A few people', 'Often with no control group.'], ['Real trials', 'Where approval starts.']],
-    s2kick: '02 — Peptide of the day', s3kick: '03 — Catalog', s3h: 'Status before story.',
+    s2kick: '02 — Peptide of the day', s3kick: '03 — Substances', s3h: 'Status before story.',
     s3p: 'Every entry opens with its legal status, then what the research shows, then what to watch for. Sources are linked. Where the evidence is thin, we say so plainly instead of filling the gap with adjectives.',
-    all: `All ${D.length} entries`, s4kick: '04 — Questions', s5kick: '05 — What this is not',
+    all: `All ${D.length + NST} entries`, s4kick: '04 — Questions', s5kick: '05 — What this is not',
     s5h: 'No shop. No doses from strangers. No promises.',
     not: ['We publish doses only for approved medicines, straight from the label, and only as information — never as a recommendation.',
       'For unapproved substances there is no dose to give. Where human safety is unestablished, that is the finding, not a gap to fill.',
       'Educational content, not medical advice. Decisions about treatment belong with a doctor who knows your case.']
   },
   pl: {
-    badge: 'Niezależnie · bez reklam · bez afiliacji', h1: [`${D.length} peptydów.`, 'Status prawny i dowody.', 'Nie sprzedajemy peptydów.'],
-    lede: `Przewodnik po peptydach i substancjach pokrewnych: czym każda z nich jest, co pokazują badania, czy regulator ją zatwierdził i które działają na ten sam receptor. Bez dawek dla substancji niezatwierdzonych i bez niczego na sprzedaż.`,
-    b1: 'Sprawdź dublowanie', b2: `Zobacz wszystkie ${D.length}`, railTitle: 'Katalog według statusu',
+    badge: 'Niezależnie · bez reklam · bez afiliacji', h1: [`${D.length + NST} substancji.`, 'Status prawny i dowody.', 'Niczego nie sprzedajemy.'],
+    lede: `Przewodnik po peptydach, lekach GLP-1 i sterydach: czym każda z nich jest, co pokazują badania, czy regulator ją zatwierdził i które działają na ten sam receptor. Bez dawek dla substancji niezatwierdzonych i bez niczego na sprzedaż.`,
+    b1: 'Sprawdź dublowanie', b2: `Zobacz wszystkie ${D.length + NST}`, railTitle: 'Katalog peptydów według statusu',
     stats: { approved: 'Zatwierdzone leki', unapproved: 'Niezatwierdzone', trials: 'W badaniach klinicznych', other: 'Pozostałe statusy' },
     s1kick: '01 — Sprawdzarka dublowania', s1h: 'Dwie nazwy, jeden receptor.',
     s1p: 'Najczęstszy błąd w internecie to łączenie substancji działających na ten sam cel. Wybierz dwie grupy i zobacz, czy się pokrywają — razem z powodem, nie samym czerwonym światłem.',
@@ -378,9 +379,9 @@ const H = {
     hs: 'Badania u ludzi', hsP: 'uczestników łącznie w trzech badaniach u ludzi najgłośniejszego peptydu „badawczego” — żadne bez grupy kontrolnej.',
     ladderKick: 'Co może znaczyć „przebadany”',
     ladder: [['Komórki', 'Szalka to nie organizm.'], ['Zwierzęta', 'Większość wyników nie przenosi się na ludzi.'], ['Kilka osób', 'Często bez grupy kontrolnej.'], ['Prawdziwe badania', 'Tu zaczyna się rejestracja.']],
-    s2kick: '02 — Peptyd dnia', s3kick: '03 — Katalog', s3h: 'Najpierw status, potem historia.',
+    s2kick: '02 — Peptyd dnia', s3kick: '03 — Substancje', s3h: 'Najpierw status, potem historia.',
     s3p: 'Każdy wpis zaczyna się od statusu prawnego, potem mówi, co pokazują badania, a na końcu na co uważać. Źródła są podlinkowane. Gdzie dowodów jest mało, piszemy to wprost, zamiast zasypywać lukę przymiotnikami.',
-    all: `Wszystkie ${D.length} wpisów`, s4kick: '04 — Pytania', s5kick: '05 — Czym to nie jest',
+    all: `Wszystkie ${D.length + NST} wpisów`, s4kick: '04 — Pytania', s5kick: '05 — Czym to nie jest',
     s5h: 'Bez sklepu. Bez dawek od obcych. Bez obietnic.',
     not: ['Dawki podajemy wyłącznie dla zatwierdzonych leków, prosto z etykiety, i tylko jako informację — nigdy jako zalecenie.',
       'Dla substancji niezatwierdzonych nie ma dawki do podania. Jeśli bezpieczeństwo u ludzi jest nieustalone, to jest wynik, a nie luka do wypełnienia.',
