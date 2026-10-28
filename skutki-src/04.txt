@@ -1,0 +1,485 @@
+=NAD+
+t: nausea, flushing, abdominal
+ec: Nausea, flushing and chest pressure reported when given by drip too fast ; Stomach cramps
+eu: There are few controlled trials of injections or drips, and the quality of products sold for this varies. Long-term safety is not established, and the claims about ageing are not proven.
+pc: Nudności, nagłe zaczerwienienie i ucisk w klatce piersiowej opisywane przy zbyt szybkim wlewie ; Skurcze brzucha
+pu: Jest mało kontrolowanych badań zastrzyków lub kroplówek, a jakość sprzedawanych produktów bywa różna. Bezpieczeństwo długoterminowe nie jest ustalone, a twierdzenia o starzeniu nie są udowodnione.
+sc: Náuseas, rubor y presión en el pecho descritos cuando se administra demasiado rápido por goteo ; Calambres de estómago
+su: Hay pocos ensayos controlados de inyecciones o goteos, y la calidad de los productos que se venden para esto varía. No se ha establecido su seguridad a largo plazo, y lo que se dice sobre el envejecimiento no está demostrado.
+
+=Teryparatyd
+t: nausea, musclejoint, dizziness, headache, bone
+ec: Nausea ; Joint pain and leg cramps ; Dizziness, including on standing up ; Headache
+es: High calcium in the blood: thirst, constipation, confusion ; Fast heartbeat after the injection
+eu: In rat studies it caused bone cancer, so earlier labels carried a boxed warning that was removed in 2020 after human data did not confirm a risk. Treatment is limited to two years.
+pc: Nudności ; Ból stawów i skurcze nóg ; Zawroty głowy, także przy wstawaniu ; Ból głowy
+ps: Wysoki poziom wapnia we krwi: pragnienie, zaparcia, splątanie ; Szybkie bicie serca po wstrzyknięciu
+pu: W badaniach na szczurach powodował raka kości, więc wcześniejsze ulotki miały ramkę ostrzegawczą, którą usunięto w 2020 r., gdy dane z ludzi nie potwierdziły ryzyka. Leczenie ogranicza się do dwóch lat.
+sc: Náuseas ; Dolor de articulaciones y calambres en las piernas ; Mareo, también al ponerse de pie ; Dolor de cabeza
+ss: Calcio alto en sangre: sed, estreñimiento, confusión ; Latido rápido tras la inyección
+su: En estudios con ratas causó cáncer de hueso, por lo que etiquetas anteriores llevaban una advertencia destacada que se retiró en 2020 al no confirmar los datos en personas un riesgo. El tratamiento se limita a dos años.
+
+=Abaloparatyd
+t: heart, dizziness, nausea, headache, fatigue, abdominal
+ec: Dizziness ; Nausea ; Headache ; Fast heartbeat or palpitations ; Tiredness and upper stomach pain
+es: A drop in blood pressure on standing, with fainting ; High calcium in the blood
+eu: In rats it caused bone cancer, and human data have not confirmed that risk. Treatment is limited to two years.
+pc: Zawroty głowy ; Nudności ; Ból głowy ; Szybkie bicie serca lub kołatanie ; Zmęczenie i ból w nadbrzuszu
+ps: Spadek ciśnienia przy wstawaniu, z omdleniem ; Wysoki poziom wapnia we krwi
+pu: U szczurów powodował raka kości, a dane z ludzi nie potwierdziły takiego ryzyka. Leczenie ogranicza się do dwóch lat.
+sc: Mareo ; Náuseas ; Dolor de cabeza ; Latido rápido o palpitaciones ; Cansancio y dolor en la parte alta del estómago
+ss: Bajada de la presión al ponerse de pie, con desmayo ; Calcio alto en sangre
+su: En ratas causó cáncer de hueso, y los datos en personas no han confirmado ese riesgo. El tratamiento se limita a dos años.
+
+=Kalcytonina łososiowa
+t: nausea, flushing, injsite, allergy, cancer
+ec: Nausea ; Flushing of the face ; Pain or redness where it is injected ; Nose irritation with the spray
+es: Allergic reaction, rare ; Low calcium in the blood
+eu: European regulators found a small increase in cancer risk with long-term use, so use is now limited to short periods.
+pc: Nudności ; Nagłe zaczerwienienie twarzy ; Ból lub zaczerwienienie w miejscu wstrzyknięcia ; Podrażnienie nosa przy sprayu
+ps: Reakcja alergiczna, rzadka ; Niski poziom wapnia we krwi
+pu: Europejskie urzędy stwierdziły niewielki wzrost ryzyka raka przy długim stosowaniu, więc lek stosuje się teraz krótko.
+sc: Náuseas ; Rubor facial ; Dolor o enrojecimiento en el lugar de la inyección ; Irritación nasal con el aerosol
+ss: Reacción alérgica, rara ; Calcio bajo en sangre
+su: Las autoridades europeas observaron un pequeño aumento del riesgo de cáncer con el uso prolongado, así que ahora se limita a periodos cortos.
+
+=Wosorytyd
+t: injsite, vomiting, bp, dizziness, fatigue, musclejoint
+ec: Reactions where it is injected ; Vomiting ; Low blood pressure and dizziness ; Tiredness ; Joint pain
+eu: It is approved only for children with achondroplasia, and its long-term effects on growth and health are still being followed.
+pc: Odczyny w miejscu wstrzyknięcia ; Wymioty ; Niskie ciśnienie krwi i zawroty głowy ; Zmęczenie ; Ból stawów
+pu: Jest zatwierdzony tylko dla dzieci z achondroplazją, a jego długoterminowy wpływ na wzrost i zdrowie jest nadal obserwowany.
+sc: Reacciones en el lugar de la inyección ; Vómitos ; Presión arterial baja y mareo ; Cansancio ; Dolor de articulaciones
+su: Solo está aprobado para niños con acondroplasia, y sus efectos a largo plazo sobre el crecimiento y la salud todavía se están siguiendo.
+
+=Wazopresyna
+t: heart, bp, water
+es: Reduced blood flow to fingers, toes and the gut ; Abnormal heart rhythm ; Low sodium in the blood
+eu: It is a hospital drip for very low blood pressure and is not a medicine to take outside intensive care.
+ps: Zmniejszony przepływ krwi do palców rąk i nóg oraz jelit ; Zaburzenia rytmu serca ; Niski poziom sodu we krwi
+pu: To kroplówka szpitalna przy bardzo niskim ciśnieniu i nie jest lekiem do stosowania poza intensywną terapią.
+ss: Reducción del flujo de sangre a dedos de manos y pies y al intestino ; Ritmo cardíaco anormal ; Sodio bajo en sangre
+su: Es un goteo hospitalario para la presión arterial muy baja y no es un medicamento para usar fuera de cuidados intensivos.
+
+=Desmopresyna
+t: headache, nausea, abdominal, flushing, water
+ec: Headache ; Nausea and stomach pain ; Flushing ; Blocked nose with the nasal spray
+es: Low sodium from water retention: confusion, seizures, especially if you drink too much ; Allergic reaction, rare
+eu: The danger is drinking too much fluid while taking it, which is why people are told to limit drinks.
+pc: Ból głowy ; Nudności i ból brzucha ; Nagłe zaczerwienienie ; Zatkany nos przy sprayu do nosa
+ps: Niski poziom sodu z zatrzymania wody: splątanie, drgawki, zwłaszcza gdy pije się za dużo ; Reakcja alergiczna, rzadka
+pu: Niebezpieczne jest picie zbyt dużej ilości płynów w czasie leczenia, dlatego zaleca się ograniczenie picia.
+sc: Dolor de cabeza ; Náuseas y dolor de estómago ; Rubor ; Congestión nasal con el aerosol
+ss: Sodio bajo por retención de agua: confusión, convulsiones, sobre todo si se bebe demasiado ; Reacción alérgica, rara
+su: El peligro está en beber demasiado líquido mientras se toma, por eso se indica limitar la bebida.
+
+=Terlipresyna
+t: abdominal, nausea, diarrhoea, breathing, heart
+ec: Stomach pain ; Nausea and diarrhoea
+es: Respiratory failure: breathlessness, in a boxed warning ; Reduced blood flow to fingers, toes, skin or gut ; Abnormal heart rhythm
+eu: It is a hospital drip for a specific kidney complication of liver disease and is used only under close monitoring.
+pc: Ból brzucha ; Nudności i biegunka
+ps: Niewydolność oddechowa: duszność, w ramce ostrzegawczej ; Zmniejszony przepływ krwi do palców, skóry lub jelit ; Zaburzenia rytmu serca
+pu: To kroplówka szpitalna przy określonym powikłaniu nerkowym choroby wątroby i stosuje się ją tylko pod ścisłym nadzorem.
+sc: Dolor de estómago ; Náuseas y diarrea
+ss: Insuficiencia respiratoria: falta de aire, en una advertencia destacada ; Reducción del flujo de sangre a dedos, piel o intestino ; Ritmo cardíaco anormal
+su: Es un goteo hospitalario para una complicación renal concreta de la enfermedad hepática y solo se usa con vigilancia estrecha.
+
+=Biwalirudyna
+t: bleeding, nausea, headache, bp
+ec: Bleeding, including at the site where a catheter went in ; Back pain ; Nausea and headache ; Low blood pressure
+es: Serious or internal bleeding ; Blood clot formation in the stent
+eu: It is a hospital drip used during heart procedures and is not for use outside hospital.
+pc: Krwawienie, także w miejscu wprowadzenia cewnika ; Ból pleców ; Nudności i ból głowy ; Niskie ciśnienie krwi
+ps: Poważne lub wewnętrzne krwawienie ; Powstawanie zakrzepu w stencie
+pu: To kroplówka szpitalna stosowana podczas zabiegów na sercu i nie jest przeznaczona do stosowania poza szpitalem.
+sc: Sangrado, también en el sitio por donde entró el catéter ; Dolor de espalda ; Náuseas y dolor de cabeza ; Presión arterial baja
+ss: Sangrado grave o interno ; Formación de coágulos en el stent
+su: Es un goteo hospitalario que se usa durante procedimientos del corazón y no es para usar fuera del hospital.
+
+=Eptyfibatyd
+t: bleeding, bp
+ec: Bleeding, including at the site where a catheter went in ; Low blood pressure
+es: Serious or internal bleeding ; A drop in the number of platelets
+eu: It is a hospital drip used during heart attacks and procedures, and it is not for use outside hospital.
+pc: Krwawienie, także w miejscu wprowadzenia cewnika ; Niskie ciśnienie krwi
+ps: Poważne lub wewnętrzne krwawienie ; Spadek liczby płytek krwi
+pu: To kroplówka szpitalna stosowana podczas zawałów i zabiegów na sercu i nie jest przeznaczona do stosowania poza szpitalem.
+sc: Sangrado, también en el sitio por donde entró el catéter ; Presión arterial baja
+ss: Sangrado grave o interno ; Descenso del número de plaquetas
+su: Es un goteo hospitalario que se usa durante infartos y procedimientos y no es para usar fuera del hospital.
+
+=Nesirytyd
+t: bp, headache, dizziness, nausea, kidney, heart
+ec: Low blood pressure ; Headache and dizziness ; Nausea
+es: Worsening kidney function ; Abnormal heart rhythm
+eu: It is a hospital drip for severe heart failure, and it is rarely used now because of limited benefit.
+pc: Niskie ciśnienie krwi ; Ból głowy i zawroty głowy ; Nudności
+ps: Pogorszenie czynności nerek ; Zaburzenia rytmu serca
+pu: To kroplówka szpitalna przy ciężkiej niewydolności serca i dziś rzadko się go stosuje z powodu ograniczonej korzyści.
+sc: Presión arterial baja ; Dolor de cabeza y mareo ; Náuseas
+ss: Empeoramiento de la función renal ; Ritmo cardíaco anormal
+su: Es un goteo hospitalario para la insuficiencia cardíaca grave y hoy se usa poco por su beneficio limitado.
+
+=Linaklotyd
+t: diarrhoea, abdominal
+ec: Diarrhoea, the most common effect ; Stomach pain ; Gas and bloating
+es: Severe diarrhoea with dehydration ; Dangerous dehydration in young children, which is why it must not be used in them
+eu: It acts in the gut and little is absorbed, but it is a prescription medicine for irritable bowel with constipation.
+pc: Biegunka, najczęstszy skutek ; Ból brzucha ; Gazy i wzdęcia
+ps: Ciężka biegunka z odwodnieniem ; Niebezpieczne odwodnienie u małych dzieci, dlatego nie wolno go im podawać
+pu: Działa w jelitach i prawie się nie wchłania, ale to lek na receptę przy zespole jelita drażliwego z zaparciami.
+sc: Diarrea, el efecto más frecuente ; Dolor de estómago ; Gases e hinchazón
+ss: Diarrea intensa con deshidratación ; Deshidratación peligrosa en niños pequeños, por lo que no debe usarse en ellos
+su: Actúa en el intestino y casi no se absorbe, pero es un medicamento con receta para el intestino irritable con estreñimiento.
+
+=Plekanatyd
+t: diarrhoea, abdominal
+ec: Diarrhoea, the most common effect ; Stomach pain ; Gas and bloating
+es: Severe diarrhoea with dehydration ; Dangerous dehydration in young children, which is why it must not be used in them
+eu: It acts in the gut and little is absorbed, but it is a prescription medicine for constipation and irritable bowel.
+pc: Biegunka, najczęstszy skutek ; Ból brzucha ; Gazy i wzdęcia
+ps: Ciężka biegunka z odwodnieniem ; Niebezpieczne odwodnienie u małych dzieci, dlatego nie wolno go im podawać
+pu: Działa w jelitach i prawie się nie wchłania, ale to lek na receptę przy zaparciach i jelicie drażliwym.
+sc: Diarrea, el efecto más frecuente ; Dolor de estómago ; Gases e hinchazón
+ss: Diarrea intensa con deshidratación ; Deshidratación peligrosa en niños pequeños, por lo que no debe usarse en ellos
+su: Actúa en el intestino y casi no se absorbe, pero es un medicamento con receta para el estreñimiento y el intestino irritable.
+
+=Teduglutyd
+t: abdominal, nausea, injsite, vomiting, swelling, gallbladder, pancreas, cancer
+ec: Stomach pain and bloating ; Nausea and vomiting ; Reactions where it is injected ; Swelling from extra fluid
+es: Growth of polyps in the colon and, in theory, of existing tumours ; Blocked bowel, gallbladder or pancreas problems ; Fluid overload
+eu: It is approved only for short bowel syndrome and requires regular colon checks.
+pc: Ból brzucha i wzdęcia ; Nudności i wymioty ; Odczyny w miejscu wstrzyknięcia ; Obrzęki z nadmiaru płynów
+ps: Rozrost polipów w jelicie grubym i teoretycznie istniejących guzów ; Niedrożność jelit, problemy z pęcherzykiem żółciowym lub trzustką ; Przeciążenie płynami
+pu: Jest zatwierdzony tylko w zespole krótkiego jelita i wymaga regularnych kontroli jelita grubego.
+sc: Dolor de estómago e hinchazón ; Náuseas y vómitos ; Reacciones en el lugar de la inyección ; Hinchazón por exceso de líquido
+ss: Crecimiento de pólipos en el colon y, en teoría, de tumores existentes ; Obstrucción intestinal, problemas de vesícula o páncreas ; Sobrecarga de líquidos
+su: Solo está aprobado para el síndrome del intestino corto y requiere revisiones periódicas del colon.
+
+=Oktreotyd
+t: diarrhoea, abdominal, nausea, gallbladder, injsite, headache, lowsugar, heart
+ec: Diarrhoea and loose stools ; Stomach pain, gas and nausea ; Pain where it is injected ; Headache
+es: Gallstones with long use ; Blood sugar that is too low or too high ; Slow heartbeat
+eu: It is a prescription medicine for acromegaly and certain tumours, and long-term use needs monitoring of blood sugar and the gallbladder.
+pc: Biegunka i luźne stolce ; Ból brzucha, gazy i nudności ; Ból w miejscu wstrzyknięcia ; Ból głowy
+ps: Kamienie żółciowe przy długim stosowaniu ; Zbyt niski lub zbyt wysoki poziom cukru we krwi ; Wolne bicie serca
+pu: To lek na receptę stosowany w akromegalii i niektórych guzach, a przy długim stosowaniu trzeba kontrolować cukier i pęcherzyk żółciowy.
+sc: Diarrea y heces blandas ; Dolor de estómago, gases y náuseas ; Dolor en el lugar de la inyección ; Dolor de cabeza
+ss: Cálculos biliares con el uso prolongado ; Azúcar en sangre demasiado bajo o demasiado alto ; Latido lento
+su: Es un medicamento con receta para la acromegalia y ciertos tumores, y el uso prolongado requiere vigilar el azúcar en sangre y la vesícula.
+
+=Lanreotyd
+t: diarrhoea, abdominal, nausea, gallbladder, injsite, lowsugar, heart
+ec: Diarrhoea and loose stools ; Stomach pain and nausea ; Pain or lumps where it is injected
+es: Gallstones with long use ; Blood sugar that is too low or too high ; Slow heartbeat
+eu: It is a prescription medicine for acromegaly and certain tumours, and long-term use needs monitoring of blood sugar and the gallbladder.
+pc: Biegunka i luźne stolce ; Ból brzucha i nudności ; Ból lub guzki w miejscu wstrzyknięcia
+ps: Kamienie żółciowe przy długim stosowaniu ; Zbyt niski lub zbyt wysoki poziom cukru we krwi ; Wolne bicie serca
+pu: To lek na receptę stosowany w akromegalii i niektórych guzach, a przy długim stosowaniu trzeba kontrolować cukier i pęcherzyk żółciowy.
+sc: Diarrea y heces blandas ; Dolor de estómago y náuseas ; Dolor o bultos en el lugar de la inyección
+ss: Cálculos biliares con el uso prolongado ; Azúcar en sangre demasiado bajo o demasiado alto ; Latido lento
+su: Es un medicamento con receta para la acromegalia y ciertos tumores, y el uso prolongado requiere vigilar el azúcar en sangre y la vesícula.
+
+=Pasyreotyd
+t: diarrhoea, nausea, gallbladder, headache, fatigue, heart, liver
+ec: High blood sugar, in most people ; Diarrhoea and nausea ; Headache and tiredness
+es: Gallstones ; Slow heartbeat and heart rhythm changes ; Raised liver tests ; Low cortisol
+eu: It is a prescription medicine for Cushing's disease and acromegaly, and blood sugar must be checked regularly.
+pc: Wysoki poziom cukru we krwi, u większości osób ; Biegunka i nudności ; Ból głowy i zmęczenie
+ps: Kamienie żółciowe ; Wolne bicie serca i zmiany rytmu serca ; Podwyższone próby wątrobowe ; Niski poziom kortyzolu
+pu: To lek na receptę stosowany w chorobie Cushinga i akromegalii, a poziom cukru trzeba regularnie kontrolować.
+sc: Azúcar alto en sangre, en la mayoría de las personas ; Diarrea y náuseas ; Dolor de cabeza y cansancio
+ss: Cálculos biliares ; Latido lento y cambios del ritmo del corazón ; Pruebas hepáticas elevadas ; Cortisol bajo
+su: Es un medicamento con receta para la enfermedad de Cushing y la acromegalia, y hay que controlar el azúcar en sangre con regularidad.
+
+=Motyksafortyd
+t: injsite, itching, flushing, allergy, rash
+ec: Reactions where it is injected ; Itching and flushing ; Back pain
+es: A severe allergic reaction within 30 minutes of the injection ; In theory, release of tumour cells along with stem cells
+eu: It is given in a clinic to collect stem cells in multiple myeloma, with monitoring after each dose.
+pc: Odczyny w miejscu wstrzyknięcia ; Swędzenie i nagłe zaczerwienienie ; Ból pleców
+ps: Ciężka reakcja alergiczna w ciągu 30 minut od wstrzyknięcia ; Teoretycznie uwolnienie komórek nowotworowych razem z komórkami macierzystymi
+pu: Podaje się go w ośrodku medycznym w celu pobrania komórek macierzystych w szpiczaku, z obserwacją po każdej dawce.
+sc: Reacciones en el lugar de la inyección ; Picor y rubor ; Dolor de espalda
+ss: Reacción alérgica grave en los 30 minutos siguientes a la inyección ; En teoría, liberación de células tumorales junto con las células madre
+su: Se administra en una clínica para obtener células madre en el mieloma múltiple, con vigilancia tras cada dosis.
+
+=Glatyramer
+t: injsite, flushing, heart, breathing, anxiety, rash, allergy
+ec: Redness, pain or itching where it is injected, in most people ; Flushing, chest tightness, palpitations or breathlessness within minutes of an injection, which usually pass ; Rash
+es: Loss of fat tissue or skin damage at injection sites ; Severe allergic reaction, rare ; Liver injury, rare
+eu: It is a prescription medicine for relapsing multiple sclerosis, and the minutes-long reaction after an injection can be frightening but is usually harmless.
+pc: Zaczerwienienie, ból lub swędzenie w miejscu wstrzyknięcia, u większości osób ; Nagłe zaczerwienienie, ucisk w klatce, kołatanie lub duszność w kilka minut po wstrzyknięciu, które zwykle mijają ; Wysypka
+ps: Zanik tkanki tłuszczowej lub uszkodzenie skóry w miejscach wstrzyknięć ; Ciężka reakcja alergiczna, rzadka ; Uszkodzenie wątroby, rzadkie
+pu: To lek na receptę w rzutowo-remisyjnym stwardnieniu rozsianym, a reakcja trwająca kilka minut po wstrzyknięciu bywa przerażająca, ale zwykle jest niegroźna.
+sc: Enrojecimiento, dolor o picor en el lugar de la inyección, en la mayoría de las personas ; Rubor, opresión en el pecho, palpitaciones o falta de aire a los pocos minutos de una inyección, que suelen pasar ; Sarpullido
+ss: Pérdida de tejido graso o daño de la piel en los sitios de inyección ; Reacción alérgica grave, rara ; Daño hepático, raro
+su: Es un medicamento con receta para la esclerosis múltiple remitente-recurrente, y la reacción de unos minutos tras una inyección puede asustar pero suele ser inofensiva.
+
+=Ikatybant
+t: injsite, nausea, headache, fever, dizziness
+ec: Redness, swelling, pain or burning where it is injected, in almost everyone ; Nausea ; Headache ; Fever ; Dizziness
+es: Allergic reaction, rare
+eu: It is a prescription medicine for attacks of hereditary angioedema, and the injection-site reaction is expected and usually fades in a day or two.
+pc: Zaczerwienienie, obrzęk, ból lub pieczenie w miejscu wstrzyknięcia, u prawie wszystkich ; Nudności ; Ból głowy ; Gorączka ; Zawroty głowy
+ps: Reakcja alergiczna, rzadka
+pu: To lek na receptę w atakach dziedzicznego obrzęku naczynioruchowego, a odczyn w miejscu wstrzyknięcia jest oczekiwany i zwykle mija w ciągu doby lub dwóch.
+sc: Enrojecimiento, hinchazón, dolor o ardor en el lugar de la inyección, en casi todos ; Náuseas ; Dolor de cabeza ; Fiebre ; Mareo
+ss: Reacción alérgica, rara
+su: Es un medicamento con receta para los ataques de angioedema hereditario, y la reacción en el lugar de la inyección es esperable y suele desaparecer en uno o dos días.
+
+=Pegcetakoplan i zilukoplan
+t: infection, injsite, diarrhoea, headache, fever
+ec: Reactions where it is injected ; Diarrhoea ; Headache ; Fever
+es: Serious infections, mainly meningitis, because the drug lowers a defence against some bacteria, in a boxed warning
+eu: Vaccination against these bacteria is needed before treatment, and the drugs are prescribed only by specialists for rare blood and muscle diseases.
+pc: Odczyny w miejscu wstrzyknięcia ; Biegunka ; Ból głowy ; Gorączka
+ps: Poważne zakażenia, głównie zapalenie opon mózgowych, bo lek osłabia obronę przed niektórymi bakteriami, w ramce ostrzegawczej
+pu: Przed leczeniem trzeba się zaszczepić przeciw tym bakteriom, a leki przepisują wyłącznie specjaliści w rzadkich chorobach krwi i mięśni.
+sc: Reacciones en el lugar de la inyección ; Diarrea ; Dolor de cabeza ; Fiebre
+ss: Infecciones graves, sobre todo meningitis, porque el fármaco reduce una defensa contra algunas bacterias, en una advertencia destacada
+su: Hace falta vacunarse contra estas bacterias antes del tratamiento, y los fármacos solo los recetan especialistas para enfermedades raras de la sangre y los músculos.
+
+=Enfuwirtyd
+t: injsite, diarrhoea, nausea, fatigue, allergy, infection, breathing
+ec: Pain, hardness or lumps where it is injected, in almost everyone ; Diarrhoea and nausea ; Tiredness
+es: Allergic reaction, including rash, fever and low blood pressure ; Pneumonia more often than with other HIV treatment
+eu: It is a twice-daily injection used only for HIV that resists other treatments, so it is a last-line medicine.
+pc: Ból, stwardnienie lub guzki w miejscu wstrzyknięcia, u prawie wszystkich ; Biegunka i nudności ; Zmęczenie
+ps: Reakcja alergiczna, w tym wysypka, gorączka i niskie ciśnienie ; Zapalenie płuc częściej niż przy innym leczeniu HIV
+pu: To zastrzyk dwa razy na dobę stosowany tylko w HIV opornym na inne leczenie, więc jest lekiem ostatniego wyboru.
+sc: Dolor, endurecimiento o bultos en el lugar de la inyección, en casi todos ; Diarrea y náuseas ; Cansancio
+ss: Reacción alérgica, con sarpullido, fiebre y presión arterial baja ; Neumonía más a menudo que con otros tratamientos del VIH
+su: Es una inyección dos veces al día que se usa solo para el VIH que resiste otros tratamientos, así que es un medicamento de último recurso.
+
+=Wankomycyna
+t: flushing, itching, rash, kidney
+ec: Flushing, itching and rash of the face and upper body if the drip runs too fast ; Pain at the vein where it is given
+es: Kidney damage ; Hearing loss and ringing in the ears ; Low white blood cell count
+eu: It is an antibiotic for serious infections, given in hospital, and levels in the blood are monitored.
+pc: Zaczerwienienie, swędzenie i wysypka twarzy oraz górnej części ciała, jeśli wlew jest zbyt szybki ; Ból w żyle, w której go podano
+ps: Uszkodzenie nerek ; Utrata słuchu i szumy uszne ; Niska liczba białych krwinek
+pu: To antybiotyk na ciężkie zakażenia, podawany w szpitalu, a jego poziom we krwi jest kontrolowany.
+sc: Rubor, picor y sarpullido en la cara y la parte alta del cuerpo si el goteo va demasiado rápido ; Dolor en la vena donde se administra
+ss: Daño renal ; Pérdida de audición y zumbido en los oídos ; Recuento bajo de glóbulos blancos
+su: Es un antibiótico para infecciones graves, administrado en el hospital, y se vigilan sus niveles en sangre.
+
+=Daptomycyna
+t: musclejoint, diarrhoea, headache, rash, breathing
+ec: Muscle pain or weakness ; Diarrhoea ; Headache ; Rash
+es: Muscle breakdown, which needs blood tests ; A lung condition with cough, fever and breathlessness ; Severe skin reactions ; Severe diarrhoea from an overgrowth of bacteria in the gut
+eu: It is an antibiotic for serious skin and blood infections, given in hospital.
+pc: Ból lub osłabienie mięśni ; Biegunka ; Ból głowy ; Wysypka
+ps: Rozpad mięśni, który wymaga badań krwi ; Choroba płuc z kaszlem, gorączką i dusznością ; Ciężkie reakcje skórne ; Ciężka biegunka z przerostu bakterii w jelicie
+pu: To antybiotyk na ciężkie zakażenia skóry i krwi, podawany w szpitalu.
+sc: Dolor o debilidad muscular ; Diarrea ; Dolor de cabeza ; Sarpullido
+ss: Destrucción del músculo, que requiere análisis de sangre ; Una enfermedad pulmonar con tos, fiebre y falta de aire ; Reacciones graves de la piel ; Diarrea intensa por sobrecrecimiento de bacterias en el intestino
+su: Es un antibiótico para infecciones graves de la piel y la sangre, administrado en el hospital.
+
+=Setmelanotyd
+t: injsite, nausea, headache, vomiting, mood, libido
+ec: Darkening of the skin and moles ; Reactions where it is injected ; Nausea, vomiting and headache ; Spontaneous erections
+es: Depression and thoughts of suicide, which need prompt medical help
+eu: It is approved only for rare genetic causes of severe obesity and Bardet-Biedl syndrome, and moles should be checked regularly.
+pc: Ciemnienie skóry i znamion ; Odczyny w miejscu wstrzyknięcia ; Nudności, wymioty i ból głowy ; Samoistne erekcje
+ps: Depresja i myśli samobójcze, które wymagają szybkiej pomocy lekarza
+pu: Jest zatwierdzony tylko w rzadkich genetycznych przyczynach ciężkiej otyłości i zespole Bardeta-Biedla, a znamiona trzeba regularnie kontrolować.
+sc: Oscurecimiento de la piel y de los lunares ; Reacciones en el lugar de la inyección ; Náuseas, vómitos y dolor de cabeza ; Erecciones espontáneas
+ss: Depresión e ideas de suicidio, que requieren ayuda médica rápida
+su: Solo está aprobado para causas genéticas raras de obesidad grave y para el síndrome de Bardet-Biedl, y hay que revisar los lunares con regularidad.
+
+=Cyklosporyna
+t: kidney, bp, tremor, headache, infection, cancer, nausea
+ec: Higher blood pressure ; Tremor and headache ; Nausea ; Gum overgrowth and extra hair growth
+es: Kidney damage ; Serious infections, because it lowers immunity ; Higher risk of some cancers, mainly skin
+eu: It is a prescription medicine to prevent organ rejection, and blood levels are checked regularly.
+pc: Wyższe ciśnienie krwi ; Drżenie i ból głowy ; Nudności ; Przerost dziąseł i zwiększone owłosienie
+ps: Uszkodzenie nerek ; Poważne zakażenia, bo osłabia odporność ; Wyższe ryzyko niektórych nowotworów, głównie skóry
+pu: To lek na receptę zapobiegający odrzuceniu przeszczepu, a jego poziom we krwi jest regularnie kontrolowany.
+sc: Presión arterial más alta ; Temblor y dolor de cabeza ; Náuseas ; Crecimiento de las encías y más vello
+ss: Daño renal ; Infecciones graves, porque reduce la inmunidad ; Mayor riesgo de algunos cánceres, sobre todo de piel
+su: Es un medicamento con receta para evitar el rechazo de un trasplante, y se controlan sus niveles en sangre con regularidad.
+
+=Telawancyna
+t: mouth, nausea, vomiting, kidney
+ec: Metallic or soapy taste ; Nausea and vomiting ; Foamy urine
+es: Kidney damage, in a boxed warning ; Harm to an unborn baby ; Abnormal heart rhythm
+eu: It is a hospital antibiotic that is rarely used now, and pregnancy must be ruled out first.
+pc: Metaliczny lub mydlany smak ; Nudności i wymioty ; Pienisty mocz
+ps: Uszkodzenie nerek, w ramce ostrzegawczej ; Szkoda dla nienarodzonego dziecka ; Zaburzenia rytmu serca
+pu: To antybiotyk szpitalny, rzadko dziś stosowany, a przed leczeniem trzeba wykluczyć ciążę.
+sc: Sabor metálico o a jabón ; Náuseas y vómitos ; Orina espumosa
+ss: Daño renal, en una advertencia destacada ; Daño para el bebé no nacido ; Ritmo cardíaco anormal
+su: Es un antibiótico hospitalario que hoy se usa poco, y antes hay que descartar un embarazo.
+
+=Orytawancyna
+t: headache, nausea, injsite, allergy
+ec: Headache ; Nausea ; Pain or redness at the drip site
+es: Allergic reaction during the drip ; Interference with blood clotting tests for days
+eu: It is a hospital antibiotic given as a single dose for skin infections.
+pc: Ból głowy ; Nudności ; Ból lub zaczerwienienie w miejscu wlewu
+ps: Reakcja alergiczna podczas wlewu ; Zaburzenie wyników badań krzepnięcia krwi przez kilka dni
+pu: To antybiotyk szpitalny podawany w jednej dawce w zakażeniach skóry.
+sc: Dolor de cabeza ; Náuseas ; Dolor o enrojecimiento en el lugar del goteo
+ss: Reacción alérgica durante el goteo ; Alteración de las pruebas de coagulación durante días
+su: Es un antibiótico hospitalario que se administra en una dosis única para infecciones de la piel.
+
+=Romidepsyna
+t: nausea, fatigue, vomiting, infection, mouth, heart, bleeding
+ec: Nausea and vomiting ; Tiredness ; Taste changes ; Infections
+es: Low blood cell counts: infections, bruising, bleeding ; Heart rhythm changes ; Tumour lysis syndrome
+eu: It is a chemotherapy drug for certain lymphomas and is given only in cancer centres.
+pc: Nudności i wymioty ; Zmęczenie ; Zmiany smaku ; Zakażenia
+ps: Niskie liczby krwinek: zakażenia, siniaki, krwawienia ; Zmiany rytmu serca ; Zespół rozpadu guza
+pu: To lek stosowany w chemioterapii niektórych chłoniaków i podaje się go wyłącznie w ośrodkach onkologicznych.
+sc: Náuseas y vómitos ; Cansancio ; Cambios del gusto ; Infecciones
+ss: Recuentos bajos de células sanguíneas: infecciones, moretones, sangrado ; Cambios del ritmo del corazón ; Síndrome de lisis tumoral
+su: Es un fármaco de quimioterapia para ciertos linfomas y solo se administra en centros oncológicos.
+
+=Palopegteriparatyd
+t: injsite, flushing, diarrhoea, headache
+ec: Reactions where it is injected ; Flushing and warmth ; Diarrhoea ; Headache
+es: Calcium in the blood that is too high or too low, causing cramps, tingling or confusion
+eu: It is approved only for low parathyroid hormone in adults, and calcium levels need monitoring.
+pc: Odczyny w miejscu wstrzyknięcia ; Nagłe zaczerwienienie i uczucie ciepła ; Biegunka ; Ból głowy
+ps: Zbyt wysoki lub zbyt niski poziom wapnia we krwi, powodujący skurcze, mrowienie lub splątanie
+pu: Jest zatwierdzony tylko przy niedoborze hormonu przytarczyc u dorosłych, a poziom wapnia wymaga kontroli.
+sc: Reacciones en el lugar de la inyección ; Rubor y sensación de calor ; Diarrea ; Dolor de cabeza
+ss: Calcio en sangre demasiado alto o demasiado bajo, con calambres, hormigueo o confusión
+su: Solo está aprobado para la hormona paratiroidea baja en adultos, y hay que vigilar el calcio.
+
+=Sekretyna
+t: flushing, nausea, vomiting, abdominal, allergy
+ec: Flushing ; Nausea and vomiting ; Stomach pain
+es: Allergic reaction, rare
+eu: It is a diagnostic test given once in hospital, not a treatment.
+pc: Nagłe zaczerwienienie ; Nudności i wymioty ; Ból brzucha
+ps: Reakcja alergiczna, rzadka
+pu: To jednorazowy test diagnostyczny podawany w szpitalu, a nie leczenie.
+sc: Rubor ; Náuseas y vómitos ; Dolor de estómago
+ss: Reacción alérgica, rara
+su: Es una prueba diagnóstica que se administra una vez en el hospital, no un tratamiento.
+
+=Dalbawancyna
+t: nausea, headache, diarrhoea, rash, itching
+ec: Nausea ; Headache ; Diarrhoea ; Rash and itching
+es: Allergic reaction ; Severe diarrhoea from an overgrowth of bacteria in the gut
+eu: It is a hospital antibiotic given once or twice for skin infections.
+pc: Nudności ; Ból głowy ; Biegunka ; Wysypka i swędzenie
+ps: Reakcja alergiczna ; Ciężka biegunka z przerostu bakterii w jelicie
+pu: To antybiotyk szpitalny podawany raz lub dwa razy w zakażeniach skóry.
+sc: Náuseas ; Dolor de cabeza ; Diarrea ; Sarpullido y picor
+ss: Reacción alérgica ; Diarrea intensa por sobrecrecimiento de bacterias en el intestino
+su: Es un antibiótico hospitalario que se administra una o dos veces para infecciones de la piel.
+
+=Glukagon
+t: nausea, vomiting, headache, injsite, bp, allergy
+ec: Nausea and vomiting ; Headache ; Pain where it is injected
+es: A sharp rise in blood pressure in people with a rare adrenal tumour ; Allergic reaction
+eu: It is used to treat severe low blood sugar, and a short-lived upset stomach afterwards is normal.
+pc: Nudności i wymioty ; Ból głowy ; Ból w miejscu wstrzyknięcia
+ps: Gwałtowny wzrost ciśnienia u osób z rzadkim guzem nadnerczy ; Reakcja alergiczna
+pu: Stosuje się go przy ciężkiej hipoglikemii, a krótkotrwałe dolegliwości żołądka po podaniu są normalne.
+sc: Náuseas y vómitos ; Dolor de cabeza ; Dolor en el lugar de la inyección
+ss: Subida brusca de la presión arterial en personas con un tumor suprarrenal raro ; Reacción alérgica
+su: Se usa para tratar el azúcar muy bajo, y es normal un malestar de estómago pasajero después.
+
+=Etelkalcetyd
+t: nausea, vomiting, diarrhoea, headache, musclejoint, heart
+ec: Nausea, vomiting and diarrhoea ; Headache ; Muscle cramps and tingling from low calcium
+es: Seizures or heart rhythm changes from very low calcium
+eu: It is given into the vein after dialysis for overactive parathyroid glands, and calcium is checked regularly.
+pc: Nudności, wymioty i biegunka ; Ból głowy ; Skurcze mięśni i mrowienie z powodu niskiego poziomu wapnia
+ps: Drgawki lub zmiany rytmu serca przy bardzo niskim poziomie wapnia
+pu: Podaje się go dożylnie po dializie przy nadczynnych przytarczycach, a poziom wapnia jest regularnie kontrolowany.
+sc: Náuseas, vómitos y diarrea ; Dolor de cabeza ; Calambres musculares y hormigueo por calcio bajo
+ss: Convulsiones o cambios del ritmo cardíaco por calcio muy bajo
+su: Se administra en una vena tras la diálisis para glándulas paratiroides hiperactivas, y el calcio se controla con regularidad.
+
+=Angiotensyna II
+t: clots, bp, heart
+ec: High blood pressure ; Fast or irregular heartbeat
+es: Blood clots in veins or arteries ; Reduced blood flow to fingers and toes
+eu: It is a hospital drip for dangerously low blood pressure in shock, and it is not for use outside intensive care.
+pc: Wysokie ciśnienie krwi ; Szybkie lub nieregularne bicie serca
+ps: Zakrzepy w żyłach lub tętnicach ; Zmniejszony przepływ krwi do palców rąk i nóg
+pu: To kroplówka szpitalna przy groźnie niskim ciśnieniu we wstrząsie i nie jest przeznaczona do stosowania poza intensywną terapią.
+sc: Presión arterial alta ; Latido rápido o irregular
+ss: Coágulos de sangre en venas o arterias ; Reducción del flujo de sangre a dedos de manos y pies
+su: Es un goteo hospitalario para la presión arterial peligrosamente baja en el shock y no es para usar fuera de cuidados intensivos.
+
+=Dazyglukagon
+t: nausea, vomiting, headache, injsite, diarrhoea
+ec: Nausea and vomiting ; Headache ; Pain where it is injected ; Diarrhoea
+es: Allergic reaction, rare
+eu: It is used to treat severe low blood sugar, and an upset stomach afterwards is common.
+pc: Nudności i wymioty ; Ból głowy ; Ból w miejscu wstrzyknięcia ; Biegunka
+ps: Reakcja alergiczna, rzadka
+pu: Stosuje się go przy ciężkiej hipoglikemii, a dolegliwości żołądka po podaniu są częste.
+sc: Náuseas y vómitos ; Dolor de cabeza ; Dolor en el lugar de la inyección ; Diarrea
+ss: Reacción alérgica, rara
+su: Se usa para tratar el azúcar muy bajo, y es frecuente un malestar de estómago después.
+
+=Synkalid
+t: abdominal, nausea, dizziness, flushing, allergy
+ec: Stomach cramps ; Nausea ; Dizziness ; Flushing
+es: Allergic reaction, rare
+eu: It is a diagnostic test given once in hospital to see how the gallbladder contracts, not a treatment.
+pc: Skurcze brzucha ; Nudności ; Zawroty głowy ; Nagłe zaczerwienienie
+ps: Reakcja alergiczna, rzadka
+pu: To jednorazowy test diagnostyczny podawany w szpitalu, który pokazuje, jak kurczy się pęcherzyk żółciowy, a nie leczenie.
+sc: Calambres de estómago ; Náuseas ; Mareo ; Rubor
+ss: Reacción alérgica, rara
+su: Es una prueba diagnóstica que se administra una vez en el hospital para ver cómo se contrae la vesícula, no un tratamiento.
+
+=Glutation
+t: rash, liver, kidney, abdominal, allergy
+ec: Stomach cramps and bloating with supplements
+es: Reported after injections for skin lightening: serious rashes, and liver or kidney problems
+eu: Injections for skin lightening are not an approved use, and regulators in some countries have warned against them because of these reports and unsterile products.
+pc: Skurcze brzucha i wzdęcia przy suplementach
+ps: Opisane po zastrzykach na rozjaśnienie skóry: poważne wysypki oraz problemy z wątrobą lub nerkami
+pu: Zastrzyki na rozjaśnienie skóry nie są zatwierdzonym zastosowaniem, a urzędy w niektórych krajach ostrzegały przed nimi z powodu takich doniesień i niesterylnych produktów.
+sc: Calambres de estómago e hinchazón con suplementos
+ss: Descritos tras inyecciones para aclarar la piel: sarpullidos graves y problemas de hígado o riñón
+su: Las inyecciones para aclarar la piel no son un uso aprobado, y las autoridades de algunos países han advertido contra ellas por estos informes y por productos no estériles.
+
+=GHK-Cu
+t: rash, itching
+ec: Redness or irritation of the skin when used on the skin
+eu: There are no proper trials of the injected form for safety. Evidence for skin use is limited, mostly small studies.
+pc: Zaczerwienienie lub podrażnienie skóry przy stosowaniu na skórę
+pu: Nie ma porządnych badań bezpieczeństwa wersji do wstrzykiwań. Dowody dla stosowania na skórę są ograniczone, głównie z małych badań.
+sc: Enrojecimiento o irritación de la piel al usarlo sobre la piel
+su: No hay ensayos adecuados de seguridad de la forma inyectable. Las pruebas para su uso sobre la piel son limitadas y proceden sobre todo de estudios pequeños.
+
+=AHK-Cu
+t: rash, itching
+ec: Redness or irritation of the skin when used on the skin
+eu: It is a cosmetic ingredient with little published safety research, and there are no proper human trials.
+pc: Zaczerwienienie lub podrażnienie skóry przy stosowaniu na skórę
+pu: To składnik kosmetyczny z niewielką liczbą opublikowanych badań bezpieczeństwa i bez porządnych badań na ludziach.
+sc: Enrojecimiento o irritación de la piel al usarlo sobre la piel
+su: Es un ingrediente cosmético con poca investigación de seguridad publicada y sin ensayos adecuados en personas.
+
+=Matrixyl
+t: rash, itching
+ec: Skin irritation or redness in people with sensitive skin
+eu: It is a cosmetic ingredient with mild known effects, and its anti-wrinkle claims are based on small studies.
+pc: Podrażnienie lub zaczerwienienie skóry u osób z wrażliwą skórą
+pu: To składnik kosmetyczny o łagodnych znanych skutkach, a twierdzenia o działaniu przeciwzmarszczkowym opierają się na małych badaniach.
+sc: Irritación o enrojecimiento de la piel en personas con piel sensible
+su: Es un ingrediente cosmético con efectos conocidos leves, y lo que se dice sobre su acción antiarrugas se basa en estudios pequeños.
+
+=Snap-8
+t:
+eu: It is a cosmetic ingredient with no established side effects, but there are no proper studies, and its claims are based on the maker's tests.
+pu: To składnik kosmetyczny bez ustalonych skutków ubocznych, ale nie ma porządnych badań, a twierdzenia opierają się na testach producenta.
+su: Es un ingrediente cosmético sin efectos secundarios establecidos, pero no hay estudios adecuados y lo que se afirma se basa en pruebas del fabricante.
+
+=PTD-DBM
+t:
+eu: It is a laboratory-stage substance tested for hair growth in animals. There are no human trials and nothing reliable is known about side effects in people.
+pu: To substancja na etapie laboratoryjnym, badana pod kątem wzrostu włosów na zwierzętach. Nie ma badań na ludziach i nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: Es una sustancia en fase de laboratorio probada para el crecimiento del cabello en animales. No hay ensayos en personas y no se sabe nada fiable sobre efectos secundarios en personas.

@@ -1,0 +1,425 @@
+=s-ostarine
+t: liver, cholesterol, fertility, libido
+ec: Lower natural testosterone ; Lower HDL cholesterol ; Headache
+es: Liver injury reported with products sold as SARMs ; Products sold online that contain other substances than the label says
+eu: It was never approved. Early trials stopped, so long-term safety in healthy people is not known, and it is on the WADA prohibited list.
+pc: Niższy własny testosteron ; Niższy cholesterol HDL ; Ból głowy
+ps: Uszkodzenie wątroby opisywane przy produktach sprzedawanych jako SARM-y ; Produkty sprzedawane online zawierające inne substancje, niż podaje etykieta
+pu: Nigdy nie został zatwierdzony. Wczesne badania przerwano, więc bezpieczeństwo długoterminowe u zdrowych osób nie jest znane, a środek jest na liście zabronionych WADA.
+sc: Testosterona propia más baja ; Colesterol HDL más bajo ; Dolor de cabeza
+ss: Daño hepático descrito con productos vendidos como SARM ; Productos que se venden en línea y contienen otras sustancias distintas de las de la etiqueta
+su: Nunca se aprobó. Los ensayos iniciales se detuvieron, así que no se conoce la seguridad a largo plazo en personas sanas, y está en la lista de prohibidas de la AMA.
+
+=s-ligandrol
+t: liver, fertility, libido
+ec: Lower natural testosterone that can last for months
+es: Serious liver injury in case reports ; Products sold online whose contents are not controlled
+eu: It was never approved, and data in people come from short trials and case reports.
+pc: Niższy własny testosteron, który może się utrzymywać miesiącami
+ps: Poważne uszkodzenie wątroby w opisach przypadków ; Produkty sprzedawane online, których zawartość nie jest kontrolowana
+pu: Nigdy nie został zatwierdzony, a dane u ludzi pochodzą z krótkich badań i opisów przypadków.
+sc: Testosterona propia más baja que puede durar meses
+ss: Daño hepático grave en informes de casos ; Productos que se venden en línea cuyo contenido no se controla
+su: Nunca se aprobó, y los datos en personas proceden de ensayos breves e informes de casos.
+
+=s-rad140
+t: liver, fertility, libido
+ec: Lower natural testosterone, expected from its action
+es: Serious liver injury in a published case report
+eu: It has no human safety data, so the full list of harms is not known.
+pc: Niższy własny testosteron, czego można się spodziewać po jego działaniu
+ps: Poważne uszkodzenie wątroby w opublikowanym opisie przypadku
+pu: Nie ma danych o bezpieczeństwie u ludzi, więc pełna lista szkód nie jest znana.
+sc: Testosterona propia más baja, esperable por su acción
+ss: Daño hepático grave en un informe de caso publicado
+su: No tiene datos de seguridad en personas, así que no se conoce la lista completa de daños.
+
+=s-andarine
+t: vision, fertility, libido
+ec: Altered colour vision and trouble seeing in the dark ; Lower natural testosterone
+eu: It was never approved, and the vision changes reported by users are the main known risk.
+pc: Zmienione widzenie kolorów i trudności z widzeniem po ciemku ; Niższy własny testosteron
+pu: Nigdy nie został zatwierdzony, a zmiany widzenia zgłaszane przez użytkowników to główne znane ryzyko.
+sc: Alteración de la visión del color y dificultad para ver en la oscuridad ; Testosterona propia más baja
+su: Nunca se aprobó, y los cambios de visión que refieren los usuarios son el principal riesgo conocido.
+
+=s-cardarine
+t: cancer
+eu: In animal studies it caused cancers in many organs, and nobody has shown the risk does not apply to people. It is not approved, and anti-doping bodies have warned against it.
+pu: W badaniach na zwierzętach wywoływał nowotwory w wielu narządach, a nikt nie wykazał, że ryzyko nie dotyczy ludzi. Nie jest zatwierdzony, a organizacje antydopingowe ostrzegały przed nim.
+su: En estudios con animales causó cánceres en muchos órganos, y nadie ha demostrado que el riesgo no se aplique a las personas. No está aprobado, y los organismos antidopaje han advertido contra él.
+
+=s-clomiphene
+t: flushing, mood, headache, vision, water, abdominal, mood
+ec: Hot flushes ; Mood changes ; Headache ; Bloating and stomach discomfort
+es: Visual disturbances such as blurred vision or flashes, which need a doctor ; In women, multiple pregnancy and ovarian overstimulation
+eu: Taking it without a medical reason can disturb hormone balance, and long-term use is not well studied.
+pc: Uderzenia gorąca ; Zmiany nastroju ; Ból głowy ; Wzdęcia i dyskomfort w żołądku
+ps: Zaburzenia widzenia, np. niewyraźne widzenie lub błyski, które wymagają lekarza ; U kobiet ciąża mnoga i hiperstymulacja jajników
+pu: Przyjmowanie go bez wskazań medycznych może zaburzać równowagę hormonalną, a długie stosowanie nie jest dobrze zbadane.
+sc: Sofocos ; Cambios de humor ; Dolor de cabeza ; Hinchazón y molestias de estómago
+ss: Alteraciones visuales como visión borrosa o destellos, que requieren un médico ; En mujeres, embarazo múltiple e hiperestimulación ovárica
+su: Tomarlo sin motivo médico puede alterar el equilibrio hormonal, y su uso prolongado no está bien estudiado.
+
+=s-tamoxifen
+t: flushing, mood, clots, cancer, vision, bleeding
+ec: Hot flushes ; Mood changes ; Vaginal discharge or bleeding ; Tiredness
+es: Blood clots in the legs or lungs ; Stroke ; In women, a higher chance of womb cancer ; Eye problems such as cataracts
+eu: It is a prescription breast cancer medicine, and its use outside medical care is not studied.
+pc: Uderzenia gorąca ; Zmiany nastroju ; Upławy lub krwawienie z pochwy ; Zmęczenie
+ps: Zakrzepy w nogach lub płucach ; Udar ; U kobiet wyższe ryzyko raka trzonu macicy ; Problemy z oczami, np. zaćma
+pu: To lek na receptę w raku piersi, a stosowanie poza opieką medyczną nie jest zbadane.
+sc: Sofocos ; Cambios de humor ; Flujo o sangrado vaginal ; Cansancio
+ss: Coágulos de sangre en piernas o pulmones ; Ictus ; En mujeres, mayor probabilidad de cáncer de útero ; Problemas oculares como cataratas
+su: Es un medicamento con receta para el cáncer de mama, y su uso fuera de la atención médica no está estudiado.
+
+=s-anastrozole
+t: musclejoint, flushing, cholesterol, bone, fatigue, mood
+ec: Joint pain and stiffness ; Hot flushes ; Tiredness ; Mood changes
+es: Bone thinning and fractures ; Higher cholesterol
+eu: Lowering oestrogen too far is also harmful in men, because oestrogen supports bones and mood.
+pc: Ból i sztywność stawów ; Uderzenia gorąca ; Zmęczenie ; Zmiany nastroju
+ps: Zmniejszenie gęstości kości i złamania ; Wyższy cholesterol
+pu: Zbyt duże obniżenie estrogenów szkodzi także mężczyznom, bo estrogeny wspierają kości i nastrój.
+sc: Dolor y rigidez de articulaciones ; Sofocos ; Cansancio ; Cambios de humor
+ss: Adelgazamiento de los huesos y fracturas ; Colesterol más alto
+su: Bajar demasiado los estrógenos también es perjudicial en hombres, porque los estrógenos ayudan a los huesos y al ánimo.
+
+=s-letrozole
+t: flushing, musclejoint, fatigue, bone, mood
+ec: Hot flushes ; Joint and muscle aches ; Tiredness ; Mood changes
+es: Bone thinning and fractures
+eu: Taken without a medical reason it can drive oestrogen too low and upset hormone balance.
+pc: Uderzenia gorąca ; Bóle stawów i mięśni ; Zmęczenie ; Zmiany nastroju
+ps: Zmniejszenie gęstości kości i złamania
+pu: Przyjmowany bez wskazań medycznych może zbyt mocno obniżyć estrogeny i zaburzyć równowagę hormonalną.
+sc: Sofocos ; Dolores de articulaciones y músculos ; Cansancio ; Cambios de humor
+ss: Adelgazamiento de los huesos y fracturas
+su: Tomado sin motivo médico puede bajar demasiado los estrógenos y alterar el equilibrio hormonal.
+
+=s-hcg
+t: headache, mood, gynecomastia, swelling, abdominal, injsite, fertility
+ec: Headache ; Mood changes ; Breast tenderness ; Pain where it is injected
+es: In women, ovarian overstimulation ; Blood clots, rare
+eu: Using it to chase muscle or weight loss is not supported by evidence.
+pc: Ból głowy ; Zmiany nastroju ; Tkliwość piersi ; Ból w miejscu wstrzyknięcia
+ps: U kobiet hiperstymulacja jajników ; Zakrzepy, rzadko
+pu: Stosowanie go w pogoni za mięśniami lub utratą masy ciała nie ma poparcia w dowodach.
+sc: Dolor de cabeza ; Cambios de humor ; Sensibilidad en las mamas ; Dolor en el lugar de la inyección
+ss: En mujeres, hiperestimulación ovárica ; Coágulos de sangre, raros
+su: Usarla para ganar músculo o perder peso no tiene respaldo en las pruebas.
+
+=s-prednisone
+t: appetite, water, swelling, bp, mood, insomnia, bone, vision, infection, lowsugar
+ec: Weight gain and bigger appetite ; Fluid retention ; Mood changes and trouble sleeping ; Higher blood pressure ; Stomach irritation
+es: High blood sugar ; Thinner bones ; Cataracts ; Higher chance of infection ; Sudden stopping after weeks of use can cause dangerous adrenal failure
+eu: Short courses are usually well tolerated, and the risks rise with dose and time.
+pc: Przyrost masy ciała i większy apetyt ; Zatrzymanie płynów ; Zmiany nastroju i trudności ze snem ; Wyższe ciśnienie krwi ; Podrażnienie żołądka
+ps: Wysoki poziom cukru ; Cieńsze kości ; Zaćma ; Większe ryzyko zakażeń ; Nagłe odstawienie po kilku tygodniach stosowania może wywołać groźną niewydolność nadnerczy
+pu: Krótkie kuracje są zwykle dobrze tolerowane, a ryzyko rośnie z dawką i czasem.
+sc: Aumento de peso y más apetito ; Retención de líquidos ; Cambios de humor y problemas para dormir ; Presión arterial más alta ; Irritación del estómago
+ss: Azúcar alto en sangre ; Huesos más delgados ; Cataratas ; Mayor probabilidad de infecciones ; Dejarlo de golpe tras semanas de uso puede causar una insuficiencia suprarrenal peligrosa
+su: Los ciclos cortos suelen tolerarse bien, y los riesgos aumentan con la dosis y el tiempo.
+
+=s-dexamethasone
+t: insomnia, mood, bone, musclejoint, abdominal, infection, appetite, water
+ec: Trouble sleeping and mood changes ; Stomach irritation ; Bigger appetite ; Fluid retention
+es: High blood sugar ; Weaker bones and muscles ; Higher chance of infection ; Sudden stopping after long use can cause dangerous adrenal failure
+eu: It is a strong corticosteroid, and the risks rise with dose and time.
+pc: Trudności ze snem i zmiany nastroju ; Podrażnienie żołądka ; Większy apetyt ; Zatrzymanie płynów
+ps: Wysoki poziom cukru ; Osłabienie kości i mięśni ; Większe ryzyko zakażeń ; Nagłe odstawienie po długim stosowaniu może wywołać groźną niewydolność nadnerczy
+pu: To silny kortykosteroid, a ryzyko rośnie z dawką i czasem.
+sc: Problemas para dormir y cambios de humor ; Irritación del estómago ; Más apetito ; Retención de líquidos
+ss: Azúcar alto en sangre ; Huesos y músculos más débiles ; Mayor probabilidad de infecciones ; Dejarlo de golpe tras un uso prolongado puede causar una insuficiencia suprarrenal peligrosa
+su: Es un corticoide potente, y los riesgos aumentan con la dosis y el tiempo.
+
+=s-hydrocortisone
+t: appetite, bone, rash, lowsugar
+ec: Weight gain ; Thin skin with creams used for long on thin areas ; Bruising
+es: High blood sugar ; Bone loss with higher doses over time
+eu: Replacement doses are generally well tolerated.
+pc: Przyrost masy ciała ; Cienka skóra przy długim stosowaniu kremów na cienkie okolice ; Siniaki
+ps: Wysoki poziom cukru ; Utrata kości przy większych dawkach przez długi czas
+pu: Dawki zastępcze są na ogół dobrze tolerowane.
+sc: Aumento de peso ; Piel fina con cremas usadas mucho tiempo en zonas delgadas ; Moretones
+ss: Azúcar alto en sangre ; Pérdida de hueso con dosis más altas durante mucho tiempo
+su: Las dosis de reemplazo suelen tolerarse bien.
+
+=s-yk-11
+t: liver, fertility, libido
+eu: There are no human studies. Compounds in this family can suppress natural testosterone and strain the liver, and products sold online are often not what the label says.
+pu: Nie ma badań u ludzi. Związki z tej rodziny mogą hamować własny testosteron i obciążać wątrobę, a produkty sprzedawane online często nie zawierają tego, co wskazuje etykieta.
+su: No hay estudios en personas. Los compuestos de esta familia pueden suprimir la testosterona propia y esforzar el hígado, y los productos que se venden en línea a menudo no son lo que dice la etiqueta.
+
+=s-mk-677
+t: appetite, water, swelling, lowsugar, fatigue
+ec: Increased appetite ; Fluid retention and swelling ; Tiredness
+es: Higher fasting blood sugar and lower insulin sensitivity
+eu: Trials ran for up to two years, and the effects of keeping growth hormone raised for longer are unknown.
+pc: Zwiększony apetyt ; Zatrzymanie płynów i obrzęki ; Zmęczenie
+ps: Wyższy poziom cukru na czczo i mniejsza wrażliwość na insulinę
+pu: Badania trwały do dwóch lat, a skutki dłuższego utrzymywania podwyższonego hormonu wzrostu są nieznane.
+sc: Más apetito ; Retención de líquidos e hinchazón ; Cansancio
+ss: Azúcar en ayunas más alto y menor sensibilidad a la insulina
+su: Los ensayos duraron hasta dos años, y se desconocen los efectos de mantener elevada la hormona del crecimiento durante más tiempo.
+
+=s-sr9009
+t:
+eu: There are no human safety data, so the risks are unknown. The compound is short-lived in the body, so many claims made for products are not backed by data.
+pu: Nie ma danych o bezpieczeństwie u ludzi, więc ryzyko jest nieznane. Związek szybko znika z organizmu, więc wiele twierdzeń o produktach nie ma poparcia w danych.
+su: No hay datos de seguridad en personas, así que se desconocen los riesgos. El compuesto dura poco en el cuerpo, así que muchas afirmaciones sobre los productos no tienen respaldo en datos.
+
+=s-somatropin
+t: water, swelling, musclejoint, lowsugar, headache, vision
+ec: Fluid retention ; Joint pain ; Carpal tunnel syndrome, with numbness and tingling in the hands ; Headache
+es: Higher blood sugar ; Severe headache with vision changes, which can mean raised pressure inside the skull
+eu: In people without a deficiency, a review found it added lean mass but not strength.
+pc: Zatrzymanie płynów ; Ból stawów ; Zespół cieśni nadgarstka z drętwieniem i mrowieniem rąk ; Ból głowy
+ps: Wyższy poziom cukru ; Silny ból głowy ze zmianami widzenia, co może oznaczać podwyższone ciśnienie wewnątrz czaszki
+pu: U osób bez niedoboru przegląd badań wykazał przyrost masy beztłuszczowej, ale nie siły.
+sc: Retención de líquidos ; Dolor de articulaciones ; Síndrome del túnel carpiano, con entumecimiento y hormigueo en las manos ; Dolor de cabeza
+ss: Azúcar más alto ; Dolor de cabeza intenso con cambios de visión, que puede indicar presión elevada dentro del cráneo
+su: En personas sin déficit, una revisión encontró que añadía masa magra pero no fuerza.
+
+=s-clenbuterol
+t: heart, tremor, anxiety, sweating, musclejoint, headache
+ec: Racing heart and palpitations ; Tremor ; Anxiety ; Sweating ; Muscle cramps ; Headache
+es: Low potassium in the blood ; Heart damage and deaths reported after misuse
+eu: It is a drug for horses and for asthma in some countries, and not approved for people in the US. Eating meat from treated animals is a known source of poisoning.
+pc: Szybkie bicie serca i kołatanie ; Drżenie ; Lęk ; Pocenie się ; Skurcze mięśni ; Ból głowy
+ps: Niski poziom potasu we krwi ; Uszkodzenie serca i zgony opisywane po nadużyciu
+pu: To lek dla koni i w niektórych krajach na astmę, niezatwierdzony dla ludzi w USA. Znanym źródłem zatruć jest mięso zwierząt nim leczonych.
+sc: Latido rápido y palpitaciones ; Temblor ; Ansiedad ; Sudoración ; Calambres musculares ; Dolor de cabeza
+ss: Potasio bajo en sangre ; Daño cardíaco y muertes descritos tras un mal uso
+su: Es un fármaco para caballos y, en algunos países, para el asma, y no está aprobado para personas en EE. UU. Comer carne de animales tratados es una fuente conocida de intoxicación.
+
+=s-dnp
+t: sweating, heart, fever, vision, kidney, liver, breathing
+ec: Heavy sweating and a feeling of heat ; Fast heartbeat ; Fast breathing ; Nausea
+es: Fatal overheating, with no antidote ; Cataracts ; Organ failure ; Deaths reported in the UK and the US
+eu: It is an industrial chemical, never a safe medicine, and the gap between a harmful and a deadly amount is small.
+pc: Silne pocenie się i uczucie gorąca ; Szybkie bicie serca ; Szybki oddech ; Nudności
+ps: Śmiertelne przegrzanie, na które nie ma antidotum ; Zaćma ; Niewydolność narządów ; Zgony opisywane w Wielkiej Brytanii i USA
+pu: To chemikalia przemysłowe, nigdy bezpieczny lek, a różnica między ilością szkodliwą a śmiertelną jest niewielka.
+sc: Sudoración intensa y sensación de calor ; Latido rápido ; Respiración rápida ; Náuseas
+ss: Sobrecalentamiento mortal, sin antídoto ; Cataratas ; Fallo de órganos ; Muertes descritas en el Reino Unido y en EE. UU.
+su: Es un producto químico industrial, nunca un medicamento seguro, y la diferencia entre una cantidad dañina y una mortal es pequeña.
+
+=s-raloxifene
+t: clots, flushing, musclejoint
+ec: Hot flushes ; Leg cramps ; Swelling
+es: Blood clots in the legs and lungs ; Death from stroke in women with heart disease
+eu: It is a prescription medicine for osteoporosis, and its use outside medical care is not studied.
+pc: Uderzenia gorąca ; Skurcze nóg ; Obrzęki
+ps: Zakrzepy w nogach i płucach ; Zgon z powodu udaru u kobiet z chorobą serca
+pu: To lek na receptę w osteoporozie, a stosowanie poza opieką medyczną nie jest zbadane.
+sc: Sofocos ; Calambres en las piernas ; Hinchazón
+ss: Coágulos de sangre en piernas y pulmones ; Muerte por ictus en mujeres con enfermedad cardíaca
+su: Es un medicamento con receta para la osteoporosis, y su uso fuera de la atención médica no está estudiado.
+
+=s-exemestane
+t: flushing, musclejoint, fatigue, bone
+ec: Hot flushes ; Joint pain ; Tiredness
+es: Bone thinning
+eu: Using it without medical need risks lowering oestrogen too far.
+pc: Uderzenia gorąca ; Ból stawów ; Zmęczenie
+ps: Zmniejszenie gęstości kości
+pu: Stosowanie go bez wskazań medycznych grozi zbyt dużym obniżeniem estrogenów.
+sc: Sofocos ; Dolor de articulaciones ; Cansancio
+ss: Adelgazamiento de los huesos
+su: Usarlo sin necesidad médica arriesga bajar demasiado los estrógenos.
+
+=s-prednisolone
+t: insomnia, mood, appetite, water, bone, infection
+ec: Trouble sleeping ; Mood changes ; Bigger appetite ; Fluid retention
+es: High blood sugar ; Thinner bones ; Higher chance of infection ; Sudden stopping after long use can cause dangerous adrenal failure
+eu: Short courses are usually well tolerated, and the risks rise with dose and time.
+pc: Trudności ze snem ; Zmiany nastroju ; Większy apetyt ; Zatrzymanie płynów
+ps: Wysoki poziom cukru ; Cieńsze kości ; Większe ryzyko zakażeń ; Nagłe odstawienie po długim stosowaniu może wywołać groźną niewydolność nadnerczy
+pu: Krótkie kuracje są zwykle dobrze tolerowane, a ryzyko rośnie z dawką i czasem.
+sc: Problemas para dormir ; Cambios de humor ; Más apetito ; Retención de líquidos
+ss: Azúcar alto en sangre ; Huesos más delgados ; Mayor probabilidad de infecciones ; Dejarlo de golpe tras un uso prolongado puede causar una insuficiencia suprarrenal peligrosa
+su: Los ciclos cortos suelen tolerarse bien, y los riesgos aumentan con la dosis y el tiempo.
+
+=s-cabergoline
+t: nausea, dizziness, bp, headache, heart, mood
+ec: Nausea ; Dizziness ; Low blood pressure ; Headache
+es: Damage to heart valves at the high doses used in Parkinson's disease ; Compulsive behaviour such as gambling in some people
+eu: It is a prescription medicine for raised prolactin and Parkinson's disease.
+pc: Nudności ; Zawroty głowy ; Niskie ciśnienie krwi ; Ból głowy
+ps: Uszkodzenie zastawek serca przy wysokich dawkach stosowanych w chorobie Parkinsona ; Zachowania kompulsywne, np. hazard, u niektórych osób
+pu: To lek na receptę przy podwyższonej prolaktynie i chorobie Parkinsona.
+sc: Náuseas ; Mareo ; Presión arterial baja ; Dolor de cabeza
+ss: Daño de las válvulas del corazón con las dosis altas que se usan en el Parkinson ; Conductas compulsivas como el juego en algunas personas
+su: Es un medicamento con receta para la prolactina alta y la enfermedad de Parkinson.
+
+=s-tadalafil
+t: headache, flushing, reflux, musclejoint, vision, bp, heart
+ec: Headache ; Flushing ; Indigestion ; Back and muscle pain
+es: A dangerous fall in blood pressure if combined with nitrate medicines ; Sudden loss of vision or hearing ; Erection lasting more than four hours
+eu: It is a prescription medicine for erection problems and prostate symptoms.
+pc: Ból głowy ; Nagłe zaczerwienienie ; Niestrawność ; Ból pleców i mięśni
+ps: Groźny spadek ciśnienia w połączeniu z lekami z grupy azotanów ; Nagła utrata wzroku lub słuchu ; Wzwód trwający dłużej niż cztery godziny
+pu: To lek na receptę przy zaburzeniach wzwodu i objawach ze strony prostaty.
+sc: Dolor de cabeza ; Rubor ; Indigestión ; Dolor de espalda y de músculos
+ss: Bajada peligrosa de la presión arterial si se combina con nitratos ; Pérdida repentina de visión o de audición ; Erección de más de cuatro horas
+su: Es un medicamento con receta para los problemas de erección y los síntomas de la próstata.
+
+=s-sildenafil
+t: headache, flushing, reflux, vision, bp, heart
+ec: Headache ; Flushing ; Blocked nose ; Indigestion ; A blue tinge to the vision
+es: A dangerous fall in blood pressure if combined with nitrate medicines ; Sudden loss of vision or hearing ; Erection lasting more than four hours
+eu: It is a prescription medicine for erection problems and, at other strengths, for pulmonary hypertension.
+pc: Ból głowy ; Nagłe zaczerwienienie ; Zatkany nos ; Niestrawność ; Niebieskawy odcień widzenia
+ps: Groźny spadek ciśnienia w połączeniu z lekami z grupy azotanów ; Nagła utrata wzroku lub słuchu ; Wzwód trwający dłużej niż cztery godziny
+pu: To lek na receptę przy zaburzeniach wzwodu i, w innych mocach, przy nadciśnieniu płucnym.
+sc: Dolor de cabeza ; Rubor ; Nariz tapada ; Indigestión ; Tono azulado en la visión
+ss: Bajada peligrosa de la presión arterial si se combina con nitratos ; Pérdida repentina de visión o de audición ; Erección de más de cuatro horas
+su: Es un medicamento con receta para los problemas de erección y, con otras dosis, para la hipertensión pulmonar.
+
+=s-dapoxetine
+t: nausea, dizziness, headache, heart, mood
+ec: Nausea ; Dizziness ; Headache ; Diarrhoea
+es: Fainting ; A dangerous reaction with other drugs that raise serotonin, such as antidepressants ; Mood changes and thoughts of suicide
+eu: It is licensed in the UK and many countries for premature ejaculation, and it is not approved in the US.
+pc: Nudności ; Zawroty głowy ; Ból głowy ; Biegunka
+ps: Omdlenia ; Groźna reakcja z innymi lekami podnoszącymi serotoninę, np. antydepresantami ; Zmiany nastroju i myśli samobójcze
+pu: Jest dopuszczony w Wielkiej Brytanii i wielu krajach przy przedwczesnym wytrysku, a w USA nie jest zatwierdzony.
+sc: Náuseas ; Mareo ; Dolor de cabeza ; Diarrea
+ss: Desmayos ; Una reacción peligrosa con otros fármacos que aumentan la serotonina, como los antidepresivos ; Cambios de humor e ideas de suicidio
+su: Está autorizado en el Reino Unido y en muchos países para la eyaculación precoz, y no está aprobado en EE. UU.
+
+=s-yohimbine
+t: anxiety, tremor, heart, bp, headache
+ec: Anxiety and restlessness ; Tremor ; Racing heart ; High blood pressure ; Headache
+es: Panic attacks ; Seizures ; Heart problems
+eu: Product strength varies between supplements, and serious poisonings have been reported.
+pc: Lęk i niepokój ruchowy ; Drżenie ; Szybkie bicie serca ; Wysokie ciśnienie krwi ; Ból głowy
+ps: Ataki paniki ; Drgawki ; Problemy z sercem
+pu: Moc produktów różni się między suplementami, a opisano ciężkie zatrucia.
+sc: Ansiedad e inquietud ; Temblor ; Latido rápido ; Presión arterial alta ; Dolor de cabeza
+ss: Ataques de pánico ; Convulsiones ; Problemas del corazón
+su: La concentración varía entre suplementos, y se han descrito intoxicaciones graves.
+
+=s-liothyronine
+t: heart, anxiety, tremor, bone, musclelossed, sweating
+ec: Racing or irregular heartbeat ; Anxiety ; Tremor ; Sweating
+es: Loss of muscle because the body burns protein ; Bone loss ; Heart rhythm problems
+eu: It is a prescription thyroid hormone, and without a thyroid condition it only pushes the body into an overactive state.
+pc: Szybkie lub nieregularne bicie serca ; Lęk ; Drżenie ; Pocenie się
+ps: Utrata mięśni, bo organizm spala białko ; Utrata kości ; Zaburzenia rytmu serca
+pu: To hormon tarczycy na receptę, a bez choroby tarczycy tylko wprowadza organizm w stan nadczynności.
+sc: Latido rápido o irregular ; Ansiedad ; Temblor ; Sudoración
+ss: Pérdida de músculo porque el cuerpo quema proteína ; Pérdida de hueso ; Problemas del ritmo cardíaco
+su: Es una hormona tiroidea con receta, y sin enfermedad de tiroides solo lleva al cuerpo a un estado de hiperactividad.
+
+=s-phentermine
+t: heart, bp, mouth, insomnia, anxiety
+ec: Fast heart rate ; Higher blood pressure ; Dry mouth ; Trouble sleeping ; Nervousness
+es: A potential for dependence ; Dangerous combinations with other stimulants or with some antidepressants
+eu: It is a prescription weight-loss medicine in the US, and it is not licensed in the UK.
+pc: Szybkie bicie serca ; Wyższe ciśnienie krwi ; Suchość w ustach ; Trudności ze snem ; Nerwowość
+ps: Możliwość uzależnienia ; Groźne połączenia z innymi stymulantami lub niektórymi antydepresantami
+pu: W USA to lek na receptę na odchudzanie, a w Wielkiej Brytanii nie jest dopuszczony.
+sc: Latido rápido ; Presión arterial más alta ; Boca seca ; Problemas para dormir ; Nerviosismo
+ss: Posibilidad de dependencia ; Combinaciones peligrosas con otros estimulantes o con algunos antidepresivos
+su: Es un medicamento con receta para adelgazar en EE. UU., y no está autorizado en el Reino Unido.
+
+=s-dmaa
+t: bp, heart, headache, clots
+ec: High blood pressure ; Racing heart ; Headache
+es: Heart attack ; Stroke and bleeding in the brain ; A runner died after the 2012 London Marathon, and DMAA was found at the inquest
+eu: It is banned in many countries and by anti-doping bodies, and still appears in some supplements.
+pc: Wysokie ciśnienie krwi ; Szybkie bicie serca ; Ból głowy
+ps: Zawał serca ; Udar i krwawienie w mózgu ; Biegaczka zmarła po Maratonie Londyńskim w 2012 r., a na przesłuchaniu stwierdzono obecność DMAA
+pu: Jest zakazany w wielu krajach i przez organizacje antydopingowe, a mimo to nadal pojawia się w niektórych suplementach.
+sc: Presión arterial alta ; Latido rápido ; Dolor de cabeza
+ss: Infarto ; Ictus y hemorragia cerebral ; Una corredora murió tras el Maratón de Londres de 2012 y se encontró DMAA en la investigación
+su: Está prohibido en muchos países y por los organismos antidopaje, y aun así aparece en algunos suplementos.
+
+=s-salbutamol
+t: tremor, heart, headache, breathing
+ec: Tremor ; Fast heart rate ; Headache
+es: Low potassium and heart rhythm problems with larger amounts ; Needing it more often than usual is a sign that asthma is getting worse
+eu: It is a reliever inhaler for asthma, and it is on the WADA list above certain limits.
+pc: Drżenie ; Szybkie bicie serca ; Ból głowy
+ps: Niski poziom potasu i zaburzenia rytmu serca przy większych ilościach ; Potrzeba częstszego sięgania po lek niż zwykle to znak pogorszenia astmy
+pu: To lek doraźny w astmie, a powyżej określonych limitów jest na liście WADA.
+sc: Temblor ; Latido rápido ; Dolor de cabeza
+ss: Potasio bajo y problemas del ritmo cardíaco con cantidades mayores ; Necesitarlo más a menudo de lo habitual es señal de que el asma empeora
+su: Es un inhalador de rescate para el asma, y está en la lista de la AMA por encima de ciertos límites.
+
+=s-meldonium
+t: abdominal, insomnia, nausea
+ec: Upset stomach ; Trouble sleeping
+eu: It is approved in some Eastern European countries, and it is on the WADA list since 2016. Large trials of benefit are lacking.
+pc: Dolegliwości żołądka ; Trudności ze snem
+pu: Jest dopuszczony w niektórych krajach Europy Wschodniej, a od 2016 r. znajduje się na liście WADA. Brakuje dużych badań jego korzyści.
+sc: Malestar de estómago ; Problemas para dormir
+su: Está autorizado en algunos países de Europa del Este y figura en la lista de la AMA desde 2016. Faltan ensayos grandes sobre su beneficio.
+
+=s-modafinil
+t: headache, nausea, anxiety, insomnia, rash
+ec: Headache ; Nausea ; Anxiety ; Trouble sleeping
+es: Rare serious skin reactions such as Stevens-Johnson syndrome ; It can make hormonal contraceptives work less well
+eu: It is a prescription medicine for sleep disorders, and use to stay awake in healthy people is not well studied.
+pc: Ból głowy ; Nudności ; Lęk ; Trudności ze snem
+ps: Rzadkie ciężkie reakcje skórne, np. zespół Stevensa-Johnsona ; Może osłabiać działanie hormonalnej antykoncepcji
+pu: To lek na receptę w zaburzeniach snu, a stosowanie u zdrowych osób, by nie zasnąć, nie jest dobrze zbadane.
+sc: Dolor de cabeza ; Náuseas ; Ansiedad ; Problemas para dormir
+ss: Reacciones cutáneas graves raras como el síndrome de Stevens-Johnson ; Puede reducir la eficacia de los anticonceptivos hormonales
+su: Es un medicamento con receta para trastornos del sueño, y su uso en personas sanas para no dormirse no está bien estudiado.
+
+=s-piracetam
+t: anxiety, insomnia, appetite, kidney
+ec: Restlessness and nervousness ; Trouble sleeping ; Weight gain
+es: It should be avoided in severe kidney disease
+eu: It has low overall toxicity, but its benefit in healthy people is not proven.
+pc: Niepokój ruchowy i nerwowość ; Trudności ze snem ; Przyrost masy ciała
+ps: Należy go unikać w ciężkiej chorobie nerek
+pu: Ma niską ogólną toksyczność, ale jego korzyść u zdrowych osób nie jest udowodniona.
+sc: Inquietud y nerviosismo ; Problemas para dormir ; Aumento de peso
+ss: Debe evitarse en la enfermedad renal grave
+su: Tiene una toxicidad general baja, pero no está demostrado su beneficio en personas sanas.
+
+=s-enclomiphene
+t: headache, flushing, vision
+ec: Headache ; Hot flushes
+es: Visual disturbances such as blurred vision or flashes
+eu: Long-term safety is not established, and products sold as enclomiphene outside medical care are not controlled.
+pc: Ból głowy ; Uderzenia gorąca
+ps: Zaburzenia widzenia, np. niewyraźne widzenie lub błyski
+pu: Bezpieczeństwo długoterminowe nie jest ustalone, a produkty sprzedawane jako enklomifen poza opieką medyczną nie są kontrolowane.
+sc: Dolor de cabeza ; Sofocos
+ss: Alteraciones visuales como visión borrosa o destellos
+su: No se ha establecido su seguridad a largo plazo, y los productos que se venden como enclomifeno fuera de la atención médica no se controlan.
+
+=s-bam15
+t: sweating, fever
+eu: There are no human data, so nothing is known about safe amounts, long-term effects or interactions. This class of compound forces cells to waste energy, so overheating is a concern.
+pu: Nie ma danych u ludzi, więc nic nie wiadomo o bezpiecznych ilościach, skutkach długoterminowych ani interakcjach. Ta klasa związków zmusza komórki do marnowania energii, więc przegrzanie budzi obawy.
+su: No hay datos en personas, así que no se sabe nada sobre cantidades seguras, efectos a largo plazo ni interacciones. Esta clase de compuestos obliga a las células a malgastar energía, así que preocupa el sobrecalentamiento.
+
+=s-finasteride
+t: libido, gynecomastia, mood, fertility
+ec: Lower sex drive ; Erection problems ; Breast tenderness
+es: Low mood and thoughts of suicide, with UK regulator warnings added in 2022 ; Sexual problems that some men say persist after stopping
+eu: It is a prescription medicine for hair loss and prostate enlargement.
+pc: Niższe libido ; Zaburzenia wzwodu ; Tkliwość piersi
+ps: Obniżony nastrój i myśli samobójcze, o czym brytyjski urząd dodał ostrzeżenia w 2022 r. ; Problemy seksualne, które część mężczyzn zgłasza jako utrzymujące się po odstawieniu
+pu: To lek na receptę przy łysieniu i przeroście prostaty.
+sc: Menos deseo sexual ; Problemas de erección ; Sensibilidad en las mamas
+ss: Ánimo bajo e ideas de suicidio, con advertencias del regulador británico añadidas en 2022 ; Problemas sexuales que algunos hombres dicen que persisten al dejarlo
+su: Es un medicamento con receta para la caída del cabello y el aumento de la próstata.
+
+=s-dutasteride
+t: libido, gynecomastia, fertility
+ec: Lower sex drive ; Erection and ejaculation problems ; Breast tenderness
+es: Sexual problems that some men say persist after stopping
+eu: It stays in the body for weeks, and it is a prescription medicine for prostate enlargement.
+pc: Niższe libido ; Zaburzenia wzwodu i wytrysku ; Tkliwość piersi
+ps: Problemy seksualne, które część mężczyzn zgłasza jako utrzymujące się po odstawieniu
+pu: Pozostaje w organizmie przez kilka tygodni i jest lekiem na receptę przy przeroście prostaty.
+sc: Menos deseo sexual ; Problemas de erección y eyaculación ; Sensibilidad en las mamas
+ss: Problemas sexuales que algunos hombres dicen que persisten al dejarlo
+su: Permanece en el cuerpo durante semanas y es un medicamento con receta para el aumento de la próstata.

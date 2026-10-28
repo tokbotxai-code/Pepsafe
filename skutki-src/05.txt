@@ -1,0 +1,449 @@
+=Buserelina
+t: flushing, libido, mood, headache, sweating, bone, fertility, injsite
+ec: Hot flushes and sweating ; Lower sex drive and, in men, erection problems ; Mood swings and headache ; Nose irritation with the spray
+es: Bone thinning with long use ; Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer ; Allergic reaction
+eu: It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is a prescription medicine used for prostate cancer, endometriosis and fertility treatment.
+pc: Uderzenia gorąca i pocenie się ; Niższe libido i u mężczyzn zaburzenia wzwodu ; Wahania nastroju i ból głowy ; Podrażnienie nosa przy sprayu
+ps: Zmniejszenie gęstości kości przy długim stosowaniu ; Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty ; Reakcja alergiczna
+pu: Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. To lek na receptę stosowany w raku prostaty, endometriozie i leczeniu niepłodności.
+sc: Sofocos y sudoración ; Menos deseo sexual y, en hombres, problemas de erección ; Cambios de humor y dolor de cabeza ; Irritación de la nariz con el aerosol
+ss: Adelgazamiento de los huesos con el uso prolongado ; Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata ; Reacción alérgica
+su: Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Es un medicamento con receta que se usa en cáncer de próstata, endometriosis y tratamientos de fertilidad.
+
+=Histrelina
+t: flushing, libido, mood, headache, injsite, bone, fertility
+ec: Hot flushes ; Lower sex drive and, in men, erection problems ; Mood swings and headache ; Pain, bruising or scarring where the implant goes in
+es: Bone thinning with long use ; Spinal cord pressure or urinary blockage during the first weeks in men with prostate cancer ; Allergic reaction
+eu: It lowers sex hormones on purpose, so effects resemble menopause or low testosterone. It is given as a small implant under the skin by a clinician.
+pc: Uderzenia gorąca ; Niższe libido i u mężczyzn zaburzenia wzwodu ; Wahania nastroju i ból głowy ; Ból, siniak lub blizna w miejscu wszczepienia implantu
+ps: Zmniejszenie gęstości kości przy długim stosowaniu ; Ucisk na rdzeń kręgowy lub zatrzymanie moczu w pierwszych tygodniach u mężczyzn z rakiem prostaty ; Reakcja alergiczna
+pu: Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę lub niski testosteron. Podaje go lekarz lub pielęgniarka jako mały implant pod skórę.
+sc: Sofocos ; Menos deseo sexual y, en hombres, problemas de erección ; Cambios de humor y dolor de cabeza ; Dolor, hematoma o cicatriz donde se coloca el implante
+ss: Adelgazamiento de los huesos con el uso prolongado ; Presión sobre la médula espinal o bloqueo urinario en las primeras semanas en hombres con cáncer de próstata ; Reacción alérgica
+su: Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia o a la testosterona baja. Lo administra un profesional como un pequeño implante bajo la piel.
+
+=Nafarelina
+t: flushing, libido, mood, headache, acne, bone, fertility, sweating
+ec: Hot flushes ; Vaginal dryness and lower sex drive ; Headache and mood swings ; Nose irritation with the spray ; Acne
+es: Bone thinning with long use ; Ovarian cysts ; Allergic reaction
+eu: It lowers sex hormones on purpose, so effects resemble menopause, and it is used for endometriosis and fertility treatment, not for long periods.
+pc: Uderzenia gorąca ; Suchość pochwy i niższe libido ; Ból głowy i wahania nastroju ; Podrażnienie nosa przy sprayu ; Trądzik
+ps: Zmniejszenie gęstości kości przy długim stosowaniu ; Torbiele jajników ; Reakcja alergiczna
+pu: Celowo obniża poziom hormonów płciowych, więc skutki przypominają menopauzę, a lek stosuje się w endometriozie i leczeniu niepłodności, nie przez długi czas.
+sc: Sofocos ; Sequedad vaginal y menos deseo sexual ; Dolor de cabeza y cambios de humor ; Irritación de la nariz con el aerosol ; Acné
+ss: Adelgazamiento de los huesos con el uso prolongado ; Quistes de ovario ; Reacción alérgica
+su: Baja las hormonas sexuales a propósito, así que los efectos se parecen a la menopausia, y se usa para la endometriosis y tratamientos de fertilidad, no durante periodos largos.
+
+=Abareliks
+t: allergy, flushing, injsite, heart
+ec: Hot flushes ; Pain where it is injected
+es: Sudden severe allergic reactions soon after the injection, which led to its withdrawal from the US market ; Heart rhythm changes
+eu: It was approved in the US in 2003 for advanced prostate cancer and withdrawn for the allergy risk, so it is not a medicine in use today.
+pc: Uderzenia gorąca ; Ból w miejscu wstrzyknięcia
+ps: Nagłe ciężkie reakcje alergiczne wkrótce po wstrzyknięciu, przez które wycofano go z rynku USA ; Zmiany rytmu serca
+pu: Został zatwierdzony w USA w 2003 r. w zaawansowanym raku prostaty i wycofany z powodu ryzyka alergii, więc nie jest dziś stosowanym lekiem.
+sc: Sofocos ; Dolor en el lugar de la inyección
+ss: Reacciones alérgicas graves y repentinas poco después de la inyección, que llevaron a su retirada del mercado de EE. UU. ; Cambios del ritmo del corazón
+su: Se aprobó en EE. UU. en 2003 para el cáncer de próstata avanzado y se retiró por el riesgo de alergia, así que hoy no es un medicamento en uso.
+
+=Atosiban
+t: nausea, vomiting, headache, dizziness, flushing, injsite, heart, bp
+ec: Nausea and vomiting ; Headache and dizziness ; Hot flushes ; Pain where it is injected ; Fast heartbeat and low blood pressure
+es: Allergic reaction, rare ; High blood sugar
+eu: It is given in hospital to delay preterm labour, and it is not available in the US.
+pc: Nudności i wymioty ; Ból głowy i zawroty głowy ; Uderzenia gorąca ; Ból w miejscu wstrzyknięcia ; Szybkie bicie serca i niskie ciśnienie
+ps: Reakcja alergiczna, rzadka ; Wysoki poziom cukru we krwi
+pu: Podaje się go w szpitalu, by opóźnić przedwczesny poród, i nie jest dostępny w USA.
+sc: Náuseas y vómitos ; Dolor de cabeza y mareo ; Sofocos ; Dolor en el lugar de la inyección ; Latido rápido y presión arterial baja
+ss: Reacción alérgica, rara ; Azúcar alto en sangre
+su: Se administra en el hospital para retrasar un parto prematuro y no está disponible en EE. UU.
+
+=Karbetocyna
+t: nausea, vomiting, abdominal, headache, flushing, tremor, bp, sweating
+ec: Nausea and vomiting ; Stomach pain ; Headache and flushing ; Tremor and sweating ; Low blood pressure ; Metallic taste
+es: Heavy bleeding if the womb does not contract ; Allergic reaction, rare
+eu: It is given once in hospital right after birth, and it is not an everyday medicine.
+pc: Nudności i wymioty ; Ból brzucha ; Ból głowy i nagłe zaczerwienienie ; Drżenie i pocenie się ; Niskie ciśnienie krwi ; Metaliczny smak
+ps: Silne krwawienie, jeśli macica się nie obkurczy ; Reakcja alergiczna, rzadka
+pu: Podaje się go jednorazowo w szpitalu tuż po porodzie i nie jest lekiem do codziennego stosowania.
+sc: Náuseas y vómitos ; Dolor de estómago ; Dolor de cabeza y rubor ; Temblor y sudoración ; Presión arterial baja ; Sabor metálico
+ss: Sangrado abundante si el útero no se contrae ; Reacción alérgica, rara
+su: Se administra una sola vez en el hospital justo después del parto y no es un medicamento de uso diario.
+
+=Kozyntropina
+t: flushing, nausea, injsite, allergy
+ec: Flushing ; Nausea ; Pain where it is injected
+es: Allergic reaction, rare
+eu: It is a diagnostic test given once to check the adrenal glands, not a treatment.
+pc: Nagłe zaczerwienienie ; Nudności ; Ból w miejscu wstrzyknięcia
+ps: Reakcja alergiczna, rzadka
+pu: To jednorazowy test diagnostyczny oceniający nadnercza, a nie leczenie.
+sc: Rubor ; Náuseas ; Dolor en el lugar de la inyección
+ss: Reacción alérgica, rara
+su: Es una prueba diagnóstica que se administra una vez para comprobar las glándulas suprarrenales, no un tratamiento.
+
+=Kortykorelina
+t: flushing, breathing, mouth, allergy
+ec: Flushing of the face ; A metallic taste ; Chest tightness or shortness of breath for a short time
+es: Allergic reaction, rare
+eu: It is a diagnostic test given once in hospital to tell causes of high cortisol apart, not a treatment.
+pc: Nagłe zaczerwienienie twarzy ; Metaliczny smak ; Krótkotrwały ucisk w klatce piersiowej lub duszność
+ps: Reakcja alergiczna, rzadka
+pu: To jednorazowy test diagnostyczny podawany w szpitalu, który pomaga odróżnić przyczyny wysokiego kortyzolu, a nie leczenie.
+sc: Rubor facial ; Sabor metálico ; Opresión en el pecho o falta de aire durante un tiempo corto
+ss: Reacción alérgica, rara
+su: Es una prueba diagnóstica que se administra una vez en el hospital para distinguir las causas de un cortisol alto, no un tratamiento.
+
+=Somatostatyna
+t: nausea, vomiting, abdominal, lowsugar, heart
+ec: Nausea and vomiting ; Stomach cramps ; Blood sugar that rises or falls
+es: Slow heartbeat ; Low blood sugar
+eu: Its effect lasts only minutes, so it is given only as a drip in hospital, and it is not an everyday medicine.
+pc: Nudności i wymioty ; Skurcze brzucha ; Poziom cukru, który rośnie lub spada
+ps: Wolne bicie serca ; Niski poziom cukru
+pu: Jego działanie trwa tylko kilka minut, więc podaje się go wyłącznie we wlewie w szpitalu i nie jest lekiem do codziennego stosowania.
+sc: Náuseas y vómitos ; Calambres de estómago ; Azúcar en sangre que sube o baja
+ss: Latido lento ; Azúcar bajo
+su: Su efecto dura solo minutos, así que se administra solo en goteo en el hospital y no es un medicamento de uso diario.
+
+=Mekasermina
+t: lowsugar, injsite, headache, vomiting, dizziness, sweating, tremor, appetite, vision, allergy, cancer
+ec: Low blood sugar, very common: shakiness, sweating, hunger, dizziness ; Thickening of the skin or fat where it is injected ; Headache and vomiting ; Enlarged tonsils and ear problems in children
+es: Severe low blood sugar ; Raised pressure inside the skull: severe headache, vision changes ; Allergic reaction ; Growth of existing tumours
+eu: It is given before or after a meal to reduce the risk of low blood sugar, and it is used only for children with severe IGF-1 deficiency under a children's endocrinologist.
+pc: Niski poziom cukru, bardzo częsty: drżenie, pocenie się, głód, zawroty głowy ; Zgrubienie skóry lub tkanki tłuszczowej w miejscu wstrzyknięcia ; Ból głowy i wymioty ; Powiększone migdałki i problemy z uszami u dzieci
+ps: Ciężka hipoglikemia ; Podwyższone ciśnienie wewnątrz czaszki: silny ból głowy, zmiany widzenia ; Reakcja alergiczna ; Wzrost istniejących nowotworów
+pu: Podaje się go tuż przed posiłkiem lub po nim, by zmniejszyć ryzyko niskiego cukru, i stosuje wyłącznie u dzieci z ciężkim niedoborem IGF-1 pod opieką endokrynologa dziecięcego.
+sc: Azúcar bajo en sangre, muy frecuente: temblor, sudoración, hambre, mareo ; Engrosamiento de la piel o de la grasa en el lugar de la inyección ; Dolor de cabeza y vómitos ; Amígdalas agrandadas y problemas de oído en niños
+ss: Hipoglucemia grave ; Presión elevada dentro del cráneo: dolor de cabeza intenso, cambios de visión ; Reacción alérgica ; Crecimiento de tumores existentes
+su: Se administra justo antes o después de una comida para reducir el riesgo de azúcar bajo, y se usa solo en niños con déficit grave de IGF-1 bajo un endocrinólogo infantil.
+
+=Macimorelina
+t: mouth, dizziness, headache, fatigue, nausea, diarrhoea, appetite, heart
+ec: Taste changes ; Dizziness and headache ; Tiredness ; Nausea and diarrhoea ; Hunger
+es: A small heart rhythm change (QT prolongation)
+eu: It is a drink given once for a test of growth hormone deficiency, not a treatment.
+pc: Zmiany smaku ; Zawroty i ból głowy ; Zmęczenie ; Nudności i biegunka ; Głód
+ps: Niewielka zmiana rytmu serca (wydłużenie odstępu QT)
+pu: To napój podawany jednorazowo w teście na niedobór hormonu wzrostu, a nie leczenie.
+sc: Cambios del gusto ; Mareo y dolor de cabeza ; Cansancio ; Náuseas y diarrea ; Hambre
+ss: Un pequeño cambio del ritmo del corazón (prolongación del QT)
+su: Es una bebida que se toma una vez para una prueba de déficit de hormona del crecimiento, no un tratamiento.
+
+=Anamorelina
+t: nausea, appetite, liver, heart
+ec: Higher blood sugar ; Nausea ; Raised liver tests
+es: Heart rhythm changes, so people with heart conduction problems are excluded
+eu: It is approved in Japan for weight loss from cancer, and not in the US or the EU, where regulators found the benefit too small.
+pc: Wyższy poziom cukru we krwi ; Nudności ; Podwyższone próby wątrobowe
+ps: Zmiany rytmu serca, dlatego wyklucza się osoby z zaburzeniami przewodzenia w sercu
+pu: Jest zatwierdzona w Japonii w utracie masy ciała z powodu raka, a nie w USA ani UE, gdzie urzędy uznały korzyść za zbyt małą.
+sc: Azúcar más alto en sangre ; Náuseas ; Pruebas hepáticas elevadas
+ss: Cambios del ritmo del corazón, por lo que se excluye a personas con problemas de conducción cardíaca
+su: Está aprobada en Japón para la pérdida de peso por cáncer, y no en EE. UU. ni en la UE, donde las autoridades consideraron el beneficio demasiado pequeño.
+
+=Bortezomib
+t: nausea, diarrhoea, constipation, fatigue, fever, bleeding, infection, dizziness
+ec: Numbness, tingling or burning pain in hands and feet ; Nausea, diarrhoea or constipation ; Tiredness and fever ; Low blood cell counts
+es: Nerve damage that can worsen ; Low blood pressure and fainting ; Heart failure ; Shingles or other infections ; Bleeding from low platelets
+eu: It is chemotherapy for multiple myeloma and is given only in cancer centres.
+pc: Drętwienie, mrowienie lub piekący ból dłoni i stóp ; Nudności, biegunka lub zaparcia ; Zmęczenie i gorączka ; Niskie liczby krwinek
+ps: Uszkodzenie nerwów, które może się nasilać ; Niskie ciśnienie i omdlenia ; Niewydolność serca ; Półpasiec i inne zakażenia ; Krwawienia z powodu małej liczby płytek
+pu: To chemioterapia szpiczaka mnogiego, podawana wyłącznie w ośrodkach onkologicznych.
+sc: Entumecimiento, hormigueo o dolor ardiente en manos y pies ; Náuseas, diarrea o estreñimiento ; Cansancio y fiebre ; Recuentos bajos de células sanguíneas
+ss: Daño de los nervios que puede empeorar ; Presión arterial baja y desmayos ; Insuficiencia cardíaca ; Herpes zóster u otras infecciones ; Sangrado por plaquetas bajas
+su: Es quimioterapia para el mieloma múltiple y solo se administra en centros oncológicos.
+
+=Karfilzomib
+t: fatigue, nausea, diarrhoea, fever, breathing, headache, swelling, heart, bp
+ec: Tiredness and low red blood cells ; Nausea and diarrhoea ; Fever and headache ; Shortness of breath and cough ; Swelling of the legs
+es: Heart failure ; High blood pressure ; Lung problems ; Reactions during the drip
+eu: It is chemotherapy for multiple myeloma and is given only in cancer centres.
+pc: Zmęczenie i niska liczba czerwonych krwinek ; Nudności i biegunka ; Gorączka i ból głowy ; Duszność i kaszel ; Obrzęk nóg
+ps: Niewydolność serca ; Wysokie ciśnienie krwi ; Problemy z płucami ; Reakcje podczas wlewu
+pu: To chemioterapia szpiczaka mnogiego, podawana wyłącznie w ośrodkach onkologicznych.
+sc: Cansancio y glóbulos rojos bajos ; Náuseas y diarrea ; Fiebre y dolor de cabeza ; Falta de aire y tos ; Hinchazón de piernas
+ss: Insuficiencia cardíaca ; Presión arterial alta ; Problemas de pulmón ; Reacciones durante el goteo
+su: Es quimioterapia para el mieloma múltiple y solo se administra en centros oncológicos.
+
+=Iksazomib
+t: nausea, vomiting, diarrhoea, constipation, swelling, musclejoint, rash, bleeding
+ec: Diarrhoea or constipation ; Nausea and vomiting ; Swelling of the legs ; Back pain ; Rash
+es: Low platelet count: bleeding and bruising ; Nerve damage ; Severe skin reactions
+eu: It is an oral chemotherapy for multiple myeloma used under cancer-centre supervision.
+pc: Biegunka lub zaparcia ; Nudności i wymioty ; Obrzęk nóg ; Ból pleców ; Wysypka
+ps: Mała liczba płytek: krwawienia i siniaki ; Uszkodzenie nerwów ; Ciężkie reakcje skórne
+pu: To doustna chemioterapia szpiczaka mnogiego stosowana pod nadzorem ośrodka onkologicznego.
+sc: Diarrea o estreñimiento ; Náuseas y vómitos ; Hinchazón de piernas ; Dolor de espalda ; Sarpullido
+ss: Plaquetas bajas: sangrado y moretones ; Daño de los nervios ; Reacciones graves de la piel
+su: Es quimioterapia oral para el mieloma múltiple que se usa bajo la supervisión de un centro oncológico.
+
+=Kangrelor
+t: bleeding, breathing
+ec: Bleeding, mostly minor ; Shortness of breath
+es: Serious or internal bleeding
+eu: It is a hospital drip used only during heart procedures and is not for use outside hospital.
+pc: Krwawienie, głównie niewielkie ; Duszność
+ps: Poważne lub wewnętrzne krwawienie
+pu: To kroplówka szpitalna stosowana wyłącznie podczas zabiegów na sercu i nie jest przeznaczona do stosowania poza szpitalem.
+sc: Sangrado, sobre todo leve ; Falta de aire
+ss: Sangrado grave o interno
+su: Es un goteo hospitalario que se usa solo durante procedimientos del corazón y no es para usar fuera del hospital.
+
+=Defibrotyd
+t: bleeding, bp, diarrhoea, vomiting, nausea
+ec: Low blood pressure ; Diarrhoea ; Nausea and vomiting ; Nosebleeds and other bleeding
+es: Serious bleeding
+eu: It is a hospital drip for a liver complication of stem cell transplant, used only in specialist centres.
+pc: Niskie ciśnienie krwi ; Biegunka ; Nudności i wymioty ; Krwawienia z nosa i inne
+ps: Poważne krwawienie
+pu: To kroplówka szpitalna przy powikłaniu wątrobowym po przeszczepie komórek macierzystych, stosowana tylko w ośrodkach specjalistycznych.
+sc: Presión arterial baja ; Diarrea ; Náuseas y vómitos ; Hemorragias nasales y otros sangrados
+ss: Sangrado grave
+su: Es un goteo hospitalario para una complicación hepática del trasplante de células madre, que se usa solo en centros especializados.
+
+=Pegwisomant
+t: injsite, headache, liver, diarrhoea, nausea, sweating, cancer
+ec: Reactions where it is injected ; Headache ; Diarrhoea and nausea ; Sweating
+es: Raised liver tests and, rarely, liver injury ; Growth of a pituitary tumour, which needs scans
+eu: It is a prescription medicine for acromegaly, and liver tests are checked regularly.
+pc: Odczyny w miejscu wstrzyknięcia ; Ból głowy ; Biegunka i nudności ; Pocenie się
+ps: Podwyższone próby wątrobowe i rzadko uszkodzenie wątroby ; Wzrost guza przysadki, który wymaga badań obrazowych
+pu: To lek na receptę w akromegalii, a próby wątrobowe są regularnie sprawdzane.
+sc: Reacciones en el lugar de la inyección ; Dolor de cabeza ; Diarrea y náuseas ; Sudoración
+ss: Pruebas hepáticas elevadas y, rara vez, daño hepático ; Crecimiento de un tumor de la hipófisis, que requiere pruebas de imagen
+su: Es un medicamento con receta para la acromegalia, y se revisan con regularidad las pruebas hepáticas.
+
+=Romiplostym
+t: headache, musclejoint, dizziness, insomnia, abdominal, clots, bleeding
+ec: Headache ; Joint and muscle pain ; Dizziness and trouble sleeping ; Stomach pain
+es: Blood clots ; Very low platelets and bleeding if the treatment is stopped suddenly ; Changes in the bone marrow
+eu: It is a prescription medicine for low platelets (ITP), and the platelet count is checked often.
+pc: Ból głowy ; Ból stawów i mięśni ; Zawroty głowy i trudności ze snem ; Ból brzucha
+ps: Zakrzepy krwi ; Bardzo mała liczba płytek i krwawienia po nagłym przerwaniu leczenia ; Zmiany w szpiku kostnym
+pu: To lek na receptę w małopłytkowości (ITP), a liczbę płytek często się kontroluje.
+sc: Dolor de cabeza ; Dolor de articulaciones y músculos ; Mareo y problemas para dormir ; Dolor de estómago
+ss: Coágulos de sangre ; Plaquetas muy bajas y sangrado si se suspende el tratamiento de golpe ; Cambios en la médula ósea
+su: Es un medicamento con receta para las plaquetas bajas (PTI), y se controla con frecuencia el recuento de plaquetas.
+
+=Peginesatyd
+t: allergy, bp, clots
+ec: High blood pressure ; Joint pain
+es: Severe allergic reactions, some fatal, which led to its withdrawal ; Blood clots, heart attack and stroke as with other medicines of its kind
+eu: It was approved in 2012 for anaemia in dialysis and withdrawn in 2013 over fatal allergic reactions, so it is not a medicine in use today.
+pc: Wysokie ciśnienie krwi ; Ból stawów
+ps: Ciężkie reakcje alergiczne, część śmiertelnych, przez które lek wycofano ; Zakrzepy, zawał i udar jak przy innych lekach tego rodzaju
+pu: Został zatwierdzony w 2012 r. przy niedokrwistości u dializowanych i wycofany w 2013 r. z powodu śmiertelnych reakcji alergicznych, więc nie jest dziś stosowanym lekiem.
+sc: Presión arterial alta ; Dolor de articulaciones
+ss: Reacciones alérgicas graves, algunas mortales, que llevaron a su retirada ; Coágulos, infarto e ictus como con otros medicamentos de su tipo
+su: Se aprobó en 2012 para la anemia en diálisis y se retiró en 2013 por reacciones alérgicas mortales, así que hoy no es un medicamento en uso.
+
+=Albiglutyd
+t: nausea, vomiting, diarrhoea, injsite, pancreas, thyroid, allergy
+ec: Nausea, vomiting and diarrhoea ; Reactions where it is injected ; Upper respiratory infection
+es: Severe, lasting stomach pain: possible pancreatitis ; Lump in the neck: boxed warning about thyroid tumours seen in rodents ; Allergic reaction
+eu: Its maker withdrew it from sale in 2018 for commercial reasons, not safety reasons, so it is no longer available.
+pc: Nudności, wymioty i biegunka ; Odczyny w miejscu wstrzyknięcia ; Zakażenie górnych dróg oddechowych
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy u gryzoni ; Reakcja alergiczna
+pu: Producent wycofał go ze sprzedaży w 2018 r. z powodów handlowych, a nie bezpieczeństwa, więc nie jest już dostępny.
+sc: Náuseas, vómitos y diarrea ; Reacciones en el lugar de la inyección ; Infección de las vías respiratorias altas
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Bulto en el cuello: advertencia destacada sobre tumores de tiroides en roedores ; Reacción alérgica
+su: Su fabricante lo retiró de la venta en 2018 por razones comerciales, no de seguridad, así que ya no está disponible.
+
+=Elkatonina
+t: nausea, flushing, dizziness, injsite, allergy
+ec: Nausea ; Flushing ; Dizziness ; Pain where it is injected
+es: Allergic reaction, rare ; Low calcium in the blood
+eu: It is used in Japan and some other countries for bone pain and osteoporosis, and it is not approved in the US or the EU.
+pc: Nudności ; Nagłe zaczerwienienie ; Zawroty głowy ; Ból w miejscu wstrzyknięcia
+ps: Reakcja alergiczna, rzadka ; Niski poziom wapnia we krwi
+pu: Stosuje się ją w Japonii i niektórych innych krajach przy bólu kości i osteoporozie, a w USA i UE nie jest zatwierdzona.
+sc: Náuseas ; Rubor ; Mareo ; Dolor en el lugar de la inyección
+ss: Reacción alérgica, rara ; Calcio bajo en sangre
+su: Se usa en Japón y otros países para el dolor óseo y la osteoporosis, y no está aprobada en EE. UU. ni en la UE.
+
+=CJC-1295 z DAC
+t: injsite, flushing, headache, water
+ec: Reactions where it is injected ; Flushing and warmth of the skin ; Headache ; Water retention
+eu: It keeps growth hormone and IGF-1 raised for days. It was studied only in small, short trials, a trial was stopped after a serious event, it is not approved, and long-term safety is unknown.
+pc: Odczyny w miejscu wstrzyknięcia ; Zaczerwienienie i uczucie ciepła skóry ; Ból głowy ; Zatrzymanie wody
+pu: Utrzymuje podwyższony poziom hormonu wzrostu i IGF-1 przez kilka dni. Badano go tylko w małych, krótkich badaniach, jedno przerwano po poważnym zdarzeniu, nie jest zatwierdzony, a bezpieczeństwo długoterminowe jest nieznane.
+sc: Reacciones en el lugar de la inyección ; Rubor y calor en la piel ; Dolor de cabeza ; Retención de agua
+su: Mantiene elevadas la hormona del crecimiento y el IGF-1 durante días. Solo se estudió en ensayos pequeños y breves, uno se detuvo tras un suceso grave, no está aprobado y se desconoce su seguridad a largo plazo.
+
+=IGF-1 DES
+t: lowsugar, cancer
+ec: Low blood sugar, expected as with other IGF-1 forms
+eu: This exact form has not been tested in people as a medicine, and growth factors can also feed existing tumours. Human safety is not established.
+pc: Niski poziom cukru, jak można się spodziewać przy innych formach IGF-1
+pu: Ta dokładna forma nie była badana u ludzi jako lek, a czynniki wzrostu mogą też podtrzymywać istniejące nowotwory. Bezpieczeństwo u ludzi nie zostało ustalone.
+sc: Azúcar bajo en sangre, esperable como con otras formas de IGF-1
+su: Esta forma exacta no se ha probado en personas como medicamento, y los factores de crecimiento también pueden alimentar tumores existentes. No se ha establecido su seguridad en personas.
+
+=PEG-MGF
+t:
+eu: There are no proper human trials of this substance, and almost all knowledge comes from cells and animals, so nothing reliable is known about side effects in people.
+pu: Nie ma porządnych badań tej substancji u ludzi, a prawie cała wiedza pochodzi z komórek i zwierząt, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: No hay ensayos adecuados de esta sustancia en personas, y casi todo el conocimiento procede de células y animales, así que no se sabe nada fiable sobre efectos secundarios en personas.
+
+=Folistatyna 344
+t:
+eu: Follistatin has only been tried as gene therapy in a few patients with a muscle disease. The 344 form is sold as a product with no safety data, and it may affect hormones that control fertility.
+pu: Folistatynę próbowano tylko w terapii genowej u kilku pacjentów z chorobą mięśni. Forma 344 jest sprzedawana jako produkt bez danych o bezpieczeństwie i może wpływać na hormony regulujące płodność.
+su: La folistatina solo se ha probado como terapia génica en unos pocos pacientes con una enfermedad muscular. La forma 344 se vende como producto sin datos de seguridad y puede afectar a las hormonas que controlan la fertilidad.
+
+=Folistatyna 315
+t:
+eu: Follistatin has only been tried as gene therapy in a few patients with a muscle disease. The 315 form has no safety data as a product, and it may affect hormones that control fertility.
+pu: Folistatynę próbowano tylko w terapii genowej u kilku pacjentów z chorobą mięśni. Forma 315 nie ma danych o bezpieczeństwie jako produkt i może wpływać na hormony regulujące płodność.
+su: La folistatina solo se ha probado como terapia génica en unos pocos pacientes con una enfermedad muscular. La forma 315 no tiene datos de seguridad como producto y puede afectar a las hormonas que controlan la fertilidad.
+
+=GDF-11
+t:
+eu: Early mouse studies suggesting it reverses ageing were not confirmed by later work, and later studies suggested it could harm muscle. There are no human safety data.
+pu: Wczesne badania na myszach sugerujące, że odwraca starzenie, nie zostały potwierdzone przez późniejsze prace, a część kolejnych badań sugerowała, że może szkodzić mięśniom. Nie ma danych o bezpieczeństwie u ludzi.
+su: Los primeros estudios en ratones que sugerían que revierte el envejecimiento no fueron confirmados por trabajos posteriores, y algunos estudios posteriores sugirieron que podría dañar el músculo. No hay datos de seguridad en personas.
+
+=Propeptyd miostatyny
+t:
+eu: It has been tested in animals only. There are no human trials, so nothing reliable is known about side effects in people.
+pu: Badano go tylko na zwierzętach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: Solo se ha probado en animales. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas.
+
+=Tymozyna beta-4
+t: vision, cancer
+ec: Mild eye irritation with eye drops in trials
+eu: The injected product has almost no proper human safety data. The natural protein is involved in wound healing and, in theory, in the spread of some cancers, which has not been tested.
+pc: Łagodne podrażnienie oka przy kroplach do oczu w badaniach
+pu: Wersja do wstrzykiwań nie ma prawie żadnych porządnych danych o bezpieczeństwie u ludzi. Naturalne białko bierze udział w gojeniu ran i teoretycznie w rozsiewie niektórych nowotworów, czego nie sprawdzono.
+sc: Irritación leve del ojo con las gotas oculares en los ensayos
+su: La versión inyectable casi no tiene datos de seguridad en personas adecuados. La proteína natural interviene en la cicatrización y, en teoría, en la propagación de algunos cánceres, algo que no se ha comprobado.
+
+=Ac-SDKP
+t:
+eu: It is a natural body molecule, and injected versions have been tested only in animals and a few small studies. Nothing reliable is known about side effects in people.
+pu: To naturalna cząsteczka organizmu, a wersje do wstrzykiwań badano tylko na zwierzętach i w kilku małych badaniach. Nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: Es una molécula natural del cuerpo, y las versiones inyectables solo se han probado en animales y en algunos estudios pequeños. No se sabe nada fiable sobre efectos secundarios en personas.
+
+=Larazotyd
+t: headache
+ec: Headache, at a similar rate to placebo in trials
+eu: It is not approved. A large trial in coeliac disease did not show enough benefit, so development was paused.
+pc: Ból głowy, z częstością podobną do placebo w badaniach
+pu: Nie jest zatwierdzony. Duże badanie w celiakii nie wykazało dostatecznej korzyści, więc prace wstrzymano.
+sc: Dolor de cabeza, con una frecuencia similar a la del placebo en los ensayos
+su: No está aprobado. Un ensayo grande en la enfermedad celíaca no mostró suficiente beneficio, así que se pausó su desarrollo.
+
+=Lekanemab
+t: headache, dizziness, vision, fever, bleeding, swelling
+ec: Headache and dizziness ; Reactions during the drip: fever, chills ; Falls
+es: Brain swelling or small bleeds (ARIA): headache, confusion, vision changes, seizures, in a boxed warning ; Higher risk in people with two copies of the gene APOE4
+eu: It is given into a vein every two weeks for early Alzheimer's disease, with regular brain scans for safety.
+pc: Ból głowy i zawroty głowy ; Reakcje podczas wlewu: gorączka, dreszcze ; Upadki
+ps: Obrzęk mózgu lub drobne krwawienia (ARIA): ból głowy, splątanie, zmiany widzenia, drgawki, w ramce ostrzegawczej ; Wyższe ryzyko u osób z dwiema kopiami genu APOE4
+pu: Podaje się go dożylnie co dwa tygodnie we wczesnej chorobie Alzheimera, z regularnymi badaniami mózgu dla bezpieczeństwa.
+sc: Dolor de cabeza y mareo ; Reacciones durante el goteo: fiebre, escalofríos ; Caídas
+ss: Hinchazón cerebral o pequeñas hemorragias (ARIA): dolor de cabeza, confusión, cambios de visión, convulsiones, en una advertencia destacada ; Mayor riesgo en personas con dos copias del gen APOE4
+su: Se administra en una vena cada dos semanas en el Alzheimer temprano, con resonancias cerebrales periódicas por seguridad.
+
+=Donanemab
+t: headache, dizziness, vision, fever, bleeding, swelling
+ec: Headache and dizziness ; Reactions during the drip: fever, chills, nausea ; Falls
+es: Brain swelling or small bleeds (ARIA): headache, confusion, vision changes, seizures, in a boxed warning ; Higher risk in people with two copies of the gene APOE4
+eu: It is given into a vein every four weeks for early Alzheimer's disease, with regular brain scans for safety.
+pc: Ból głowy i zawroty głowy ; Reakcje podczas wlewu: gorączka, dreszcze, nudności ; Upadki
+ps: Obrzęk mózgu lub drobne krwawienia (ARIA): ból głowy, splątanie, zmiany widzenia, drgawki, w ramce ostrzegawczej ; Wyższe ryzyko u osób z dwiema kopiami genu APOE4
+pu: Podaje się go dożylnie co cztery tygodnie we wczesnej chorobie Alzheimera, z regularnymi badaniami mózgu dla bezpieczeństwa.
+sc: Dolor de cabeza y mareo ; Reacciones durante el goteo: fiebre, escalofríos, náuseas ; Caídas
+ss: Hinchazón cerebral o pequeñas hemorragias (ARIA): dolor de cabeza, confusión, cambios de visión, convulsiones, en una advertencia destacada ; Mayor riesgo en personas con dos copias del gen APOE4
+su: Se administra en una vena cada cuatro semanas en el Alzheimer temprano, con resonancias cerebrales periódicas por seguridad.
+
+=Erenumab
+t: constipation, injsite, musclejoint, bp, itching, allergy
+ec: Constipation, sometimes severe ; Reactions where it is injected ; Muscle cramps and spasms ; Itching
+es: Severe constipation that needs treatment ; High blood pressure ; Allergic reaction, including rash and swelling of the face
+eu: It is a monthly injection to prevent migraine, and blood pressure should be checked.
+pc: Zaparcia, czasem ciężkie ; Odczyny w miejscu wstrzyknięcia ; Skurcze i kurcze mięśni ; Swędzenie
+ps: Ciężkie zaparcia wymagające leczenia ; Wysokie ciśnienie krwi ; Reakcja alergiczna, w tym wysypka i obrzęk twarzy
+pu: To miesięczny zastrzyk zapobiegający migrenie, a ciśnienie krwi warto kontrolować.
+sc: Estreñimiento, a veces grave ; Reacciones en el lugar de la inyección ; Calambres y espasmos musculares ; Picor
+ss: Estreñimiento intenso que necesita tratamiento ; Presión arterial alta ; Reacción alérgica, con sarpullido e hinchazón de la cara
+su: Es una inyección mensual para prevenir la migraña, y conviene controlar la presión arterial.
+
+=Galkanezumab
+t: injsite, itching, constipation, allergy
+ec: Reactions where it is injected ; Itching ; Constipation
+es: Allergic reaction, including rash and swelling of the face
+eu: It is a monthly injection to prevent migraine and cluster headache, and long-term safety data keep accumulating.
+pc: Odczyny w miejscu wstrzyknięcia ; Swędzenie ; Zaparcia
+ps: Reakcja alergiczna, w tym wysypka i obrzęk twarzy
+pu: To miesięczny zastrzyk zapobiegający migrenie i klasterowym bólom głowy, a dane o bezpieczeństwie długoterminowym wciąż się gromadzą.
+sc: Reacciones en el lugar de la inyección ; Picor ; Estreñimiento
+ss: Reacción alérgica, con sarpullido e hinchazón de la cara
+su: Es una inyección mensual para prevenir la migraña y la cefalea en racimos, y los datos de seguridad a largo plazo siguen acumulándose.
+
+=Fremanezumab
+t: injsite, itching, allergy
+ec: Reactions where it is injected: pain, hardness, redness ; Itching
+es: Allergic reaction, including rash and swelling of the face
+eu: It is a monthly or quarterly injection to prevent migraine, and long-term safety data keep accumulating.
+pc: Odczyny w miejscu wstrzyknięcia: ból, stwardnienie, zaczerwienienie ; Swędzenie
+ps: Reakcja alergiczna, w tym wysypka i obrzęk twarzy
+pu: To zastrzyk co miesiąc lub co kwartał zapobiegający migrenie, a dane o bezpieczeństwie długoterminowym wciąż się gromadzą.
+sc: Reacciones en el lugar de la inyección: dolor, endurecimiento, enrojecimiento ; Picor
+ss: Reacción alérgica, con sarpullido e hinchazón de la cara
+su: Es una inyección mensual o trimestral para prevenir la migraña, y los datos de seguridad a largo plazo siguen acumulándose.
+
+=Eptinezumab
+t: infection, allergy, breathing
+ec: Stuffy or runny nose and sore throat after the drip
+es: Allergic reaction during the drip, including rash and trouble breathing
+eu: It is given into a vein every three months to prevent migraine, and long-term safety data keep accumulating.
+pc: Zatkany lub cieknący nos i ból gardła po wlewie
+ps: Reakcja alergiczna podczas wlewu, w tym wysypka i trudności z oddychaniem
+pu: Podaje się go dożylnie co trzy miesiące zapobiegawczo przy migrenie, a dane o bezpieczeństwie długoterminowym wciąż się gromadzą.
+sc: Nariz tapada o con mocos y dolor de garganta tras el goteo
+ss: Reacción alérgica durante el goteo, con sarpullido y dificultad para respirar
+su: Se administra en una vena cada tres meses para prevenir la migraña, y los datos de seguridad a largo plazo siguen acumulándose.
+
+=Stamulumab
+t:
+eu: It was tested in boys with muscular dystrophy and did not show enough benefit, so development stopped. It is not approved, and published safety data are limited.
+pu: Badano go u chłopców z dystrofią mięśniową i nie wykazał dostatecznej korzyści, więc prace przerwano. Nie jest zatwierdzony, a opublikowane dane o bezpieczeństwie są ograniczone.
+su: Se probó en niños con distrofia muscular y no mostró suficiente beneficio, así que se detuvo su desarrollo. No está aprobado y los datos de seguridad publicados son limitados.
+
+=Abatacept
+t: headache, infection, nausea, breathing, allergy
+ec: Headache ; Colds and other upper airway infections ; Nausea ; Reactions during the drip or at the injection site
+es: Serious infections, including tuberculosis ; Worse breathing in people with lung disease ; Allergic reaction
+eu: It is a prescription medicine for rheumatoid arthritis and related diseases, and it lowers the body's defences.
+pc: Ból głowy ; Przeziębienia i inne zakażenia górnych dróg oddechowych ; Nudności ; Reakcje podczas wlewu lub w miejscu wstrzyknięcia
+ps: Poważne zakażenia, w tym gruźlica ; Pogorszenie oddychania u osób z chorobą płuc ; Reakcja alergiczna
+pu: To lek na receptę w reumatoidalnym zapaleniu stawów i pokrewnych chorobach, który osłabia obronę organizmu.
+sc: Dolor de cabeza ; Resfriados y otras infecciones de las vías respiratorias altas ; Náuseas ; Reacciones durante el goteo o en el lugar de la inyección
+ss: Infecciones graves, incluida la tuberculosis ; Peor respiración en personas con enfermedad pulmonar ; Reacción alérgica
+su: Es un medicamento con receta para la artritis reumatoide y enfermedades relacionadas, y reduce las defensas del cuerpo.
+
+=Belatacept
+t: diarrhoea, constipation, bp, swelling, fever, headache, infection, cancer
+ec: Diarrhoea or constipation ; High blood pressure ; Swelling of the legs ; Fever and headache ; Low red blood cells
+es: A cancer of immune cells called post-transplant lymphoproliferative disorder, including in the brain, in a boxed warning ; Serious infections ; Reduced defences
+eu: It is given into a vein to prevent rejection of a kidney transplant, and it is not used in people who have not had the Epstein-Barr virus.
+pc: Biegunka lub zaparcia ; Wysokie ciśnienie krwi ; Obrzęk nóg ; Gorączka i ból głowy ; Niska liczba czerwonych krwinek
+ps: Nowotwór komórek odporności zwany potransplantacyjną chorobą limfoproliferacyjną, także w mózgu, w ramce ostrzegawczej ; Poważne zakażenia ; Osłabiona obrona organizmu
+pu: Podaje się go dożylnie, by zapobiec odrzuceniu przeszczepionej nerki, i nie stosuje się go u osób, które nie przechodziły zakażenia wirusem Epsteina-Barr.
+sc: Diarrea o estreñimiento ; Presión arterial alta ; Hinchazón de piernas ; Fiebre y dolor de cabeza ; Glóbulos rojos bajos
+ss: Un cáncer de células inmunitarias llamado trastorno linfoproliferativo postrasplante, también en el cerebro, en una advertencia destacada ; Infecciones graves ; Defensas reducidas
+su: Se administra en una vena para evitar el rechazo de un trasplante de riñón, y no se usa en personas que no han pasado el virus de Epstein-Barr.
+
+=Ziw-aflibercept
+t: bleeding, bp, diarrhoea, fatigue, kidney, abdominal, mouth
+ec: Diarrhoea and mouth sores ; Tiredness ; High blood pressure ; Bleeding, such as nosebleeds ; Protein in the urine
+es: Tear or hole in the bowel ; Serious bleeding ; Poor wound healing ; Kidney damage
+eu: It is chemotherapy for bowel cancer that has spread and is given only in cancer centres.
+pc: Biegunka i owrzodzenia w jamie ustnej ; Zmęczenie ; Wysokie ciśnienie krwi ; Krwawienia, np. z nosa ; Białko w moczu
+ps: Pęknięcie lub perforacja jelita ; Poważne krwawienie ; Słabe gojenie ran ; Uszkodzenie nerek
+pu: To chemioterapia raka jelita grubego z przerzutami, podawana wyłącznie w ośrodkach onkologicznych.
+sc: Diarrea y llagas en la boca ; Cansancio ; Presión arterial alta ; Sangrados, como hemorragias nasales ; Proteínas en la orina
+ss: Rotura o perforación del intestino ; Sangrado grave ; Mala cicatrización de heridas ; Daño renal
+su: Es quimioterapia para el cáncer de intestino que se ha extendido y solo se administra en centros oncológicos.

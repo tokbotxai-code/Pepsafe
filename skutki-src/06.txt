@@ -1,0 +1,392 @@
+=Anakinra
+t: injsite, infection, headache, nausea, diarrhoea, allergy
+ec: Redness, swelling or pain where it is injected, in most people ; Headache ; Nausea and diarrhoea ; Colds and other infections
+es: Serious infections ; Low white blood cell count ; Allergic reaction
+eu: It is a daily injection for rheumatoid arthritis and rare inflammatory diseases, and it lowers some of the body's defences.
+pc: Zaczerwienienie, obrzęk lub ból w miejscu wstrzyknięcia, u większości osób ; Ból głowy ; Nudności i biegunka ; Przeziębienia i inne zakażenia
+ps: Poważne zakażenia ; Niska liczba białych krwinek ; Reakcja alergiczna
+pu: To codzienny zastrzyk w reumatoidalnym zapaleniu stawów i rzadkich chorobach zapalnych, który osłabia część obrony organizmu.
+sc: Enrojecimiento, hinchazón o dolor en el lugar de la inyección, en la mayoría de las personas ; Dolor de cabeza ; Náuseas y diarrea ; Resfriados y otras infecciones
+ss: Infecciones graves ; Recuento bajo de glóbulos blancos ; Reacción alérgica
+su: Es una inyección diaria para la artritis reumatoide y enfermedades inflamatorias raras, y reduce algunas de las defensas del cuerpo.
+
+=Apadamtaza alfa
+t: headache, diarrhoea, dizziness, nausea, abdominal, vomiting, allergy
+ec: Headache and migraine ; Diarrhoea ; Nausea and vomiting ; Dizziness ; Stomach pain
+es: Allergic reaction
+eu: It is replacement of a missing enzyme in a rare inherited clotting disease, given in specialist centres.
+pc: Ból głowy i migrena ; Biegunka ; Nudności i wymioty ; Zawroty głowy ; Ból brzucha
+ps: Reakcja alergiczna
+pu: To uzupełnienie brakującego enzymu w rzadkiej dziedzicznej chorobie krzepnięcia, podawane w ośrodkach specjalistycznych.
+sc: Dolor de cabeza y migraña ; Diarrea ; Náuseas y vómitos ; Mareo ; Dolor de estómago
+ss: Reacción alérgica
+su: Es la reposición de una enzima ausente en una enfermedad hereditaria rara de la coagulación, que se administra en centros especializados.
+
+=Asfotaza alfa
+t: injsite, fever, headache, allergy, vision, kidney
+ec: Redness, swelling or lumps where it is injected ; Fever ; Headache ; Loss of fat under the skin at injection sites
+es: Severe allergic reaction ; Calcium deposits in the eyes or kidneys
+eu: It is enzyme replacement for a rare bone disease (hypophosphatasia), given by specialists.
+pc: Zaczerwienienie, obrzęk lub guzki w miejscu wstrzyknięcia ; Gorączka ; Ból głowy ; Zanik tkanki tłuszczowej w miejscach wstrzyknięć
+ps: Ciężka reakcja alergiczna ; Złogi wapnia w oczach lub nerkach
+pu: To enzymatyczna terapia zastępcza w rzadkiej chorobie kości (hipofosfatazja), podawana przez specjalistów.
+sc: Enrojecimiento, hinchazón o bultos en el lugar de la inyección ; Fiebre ; Dolor de cabeza ; Pérdida de grasa bajo la piel en los sitios de inyección
+ss: Reacción alérgica grave ; Depósitos de calcio en los ojos o los riñones
+su: Es terapia de reposición enzimática para una enfermedad ósea rara (hipofosfatasia), administrada por especialistas.
+
+=Sebelipaza alfa
+t: fever, rash, vomiting, diarrhoea, headache, allergy
+ec: Fever ; Rash ; Vomiting and diarrhoea ; Headache
+es: Severe allergic reaction, in a boxed warning
+eu: It is enzyme replacement for a rare enzyme deficiency (LAL deficiency), given by drip in specialist centres.
+pc: Gorączka ; Wysypka ; Wymioty i biegunka ; Ból głowy
+ps: Ciężka reakcja alergiczna, w ramce ostrzegawczej
+pu: To enzymatyczna terapia zastępcza w rzadkim niedoborze enzymu (niedobór LAL), podawana we wlewie w ośrodkach specjalistycznych.
+sc: Fiebre ; Sarpullido ; Vómitos y diarrea ; Dolor de cabeza
+ss: Reacción alérgica grave, en una advertencia destacada
+su: Es terapia de reposición enzimática para un déficit enzimático raro (déficit de LAL), administrada por goteo en centros especializados.
+
+=Elosulfaza alfa
+t: fever, vomiting, headache, nausea, abdominal, fatigue, allergy
+ec: Fever and chills ; Vomiting and nausea ; Headache ; Stomach pain ; Tiredness
+es: Severe allergic reaction, in a boxed warning
+eu: It is enzyme replacement for a rare metabolic disease (Morquio A), given by drip in specialist centres.
+pc: Gorączka i dreszcze ; Wymioty i nudności ; Ból głowy ; Ból brzucha ; Zmęczenie
+ps: Ciężka reakcja alergiczna, w ramce ostrzegawczej
+pu: To enzymatyczna terapia zastępcza w rzadkiej chorobie metabolicznej (Morquio A), podawana we wlewie w ośrodkach specjalistycznych.
+sc: Fiebre y escalofríos ; Vómitos y náuseas ; Dolor de cabeza ; Dolor de estómago ; Cansancio
+ss: Reacción alérgica grave, en una advertencia destacada
+su: Es terapia de reposición enzimática para una enfermedad metabólica rara (Morquio A), administrada por goteo en centros especializados.
+
+=Idursulfaza
+t: headache, rash, fever, allergy, breathing
+ec: Headache ; Rash and itching ; Fever ; Reactions during the drip
+es: Severe allergic reaction, in a boxed warning ; Breathing problems in people with a lung illness
+eu: It is enzyme replacement for a rare metabolic disease (Hunter syndrome), given by drip in specialist centres.
+pc: Ból głowy ; Wysypka i swędzenie ; Gorączka ; Reakcje podczas wlewu
+ps: Ciężka reakcja alergiczna, w ramce ostrzegawczej ; Problemy z oddychaniem u osób z chorobą płuc
+pu: To enzymatyczna terapia zastępcza w rzadkiej chorobie metabolicznej (zespół Huntera), podawana we wlewie w ośrodkach specjalistycznych.
+sc: Dolor de cabeza ; Sarpullido y picor ; Fiebre ; Reacciones durante el goteo
+ss: Reacción alérgica grave, en una advertencia destacada ; Problemas para respirar en personas con una enfermedad pulmonar
+su: Es terapia de reposición enzimática para una enfermedad metabólica rara (síndrome de Hunter), administrada por goteo en centros especializados.
+
+=Galsulfaza
+t: fever, rash, itching, musclejoint, breathing, allergy
+ec: Fever ; Rash and itching ; Joint pain ; Cough and trouble breathing
+es: Severe allergic reaction
+eu: It is enzyme replacement for a rare metabolic disease (Maroteaux-Lamy syndrome), given by drip in specialist centres.
+pc: Gorączka ; Wysypka i swędzenie ; Ból stawów ; Kaszel i trudności z oddychaniem
+ps: Ciężka reakcja alergiczna
+pu: To enzymatyczna terapia zastępcza w rzadkiej chorobie metabolicznej (zespół Maroteaux-Lamy'ego), podawana we wlewie w ośrodkach specjalistycznych.
+sc: Fiebre ; Sarpullido y picor ; Dolor de articulaciones ; Tos y dificultad para respirar
+ss: Reacción alérgica grave
+su: Es terapia de reposición enzimática para una enfermedad metabólica rara (síndrome de Maroteaux-Lamy), administrada por goteo en centros especializados.
+
+=Alglukozydaza alfa
+t: fever, rash, breathing, heart, allergy
+ec: Fever ; Rash and hives ; Reactions during the drip
+es: Severe allergic reaction and heart or breathing failure in babies, in a boxed warning
+eu: It is enzyme replacement for a rare metabolic disease (Pompe disease), given by drip in specialist centres.
+pc: Gorączka ; Wysypka i pokrzywka ; Reakcje podczas wlewu
+ps: Ciężka reakcja alergiczna i niewydolność serca lub oddechowa u niemowląt, w ramce ostrzegawczej
+pu: To enzymatyczna terapia zastępcza w rzadkiej chorobie metabolicznej (choroba Pompego), podawana we wlewie w ośrodkach specjalistycznych.
+sc: Fiebre ; Sarpullido y urticaria ; Reacciones durante el goteo
+ss: Reacción alérgica grave e insuficiencia cardíaca o respiratoria en bebés, en una advertencia destacada
+su: Es terapia de reposición enzimática para una enfermedad metabólica rara (enfermedad de Pompe), administrada por goteo en centros especializados.
+
+=Agalzydaza beta
+t: fever, nausea, headache, allergy
+ec: Chills, fever and shaking during the drip ; Nausea ; Headache
+es: Severe allergic reaction
+eu: It is enzyme replacement for a rare metabolic disease (Fabry disease), given by drip, and some people form antibodies against it.
+pc: Dreszcze, gorączka i drżenie podczas wlewu ; Nudności ; Ból głowy
+ps: Ciężka reakcja alergiczna
+pu: To enzymatyczna terapia zastępcza w rzadkiej chorobie metabolicznej (choroba Fabry'ego), podawana we wlewie, a u części osób powstają przeciwciała przeciw lekowi.
+sc: Escalofríos, fiebre y temblores durante el goteo ; Náuseas ; Dolor de cabeza
+ss: Reacción alérgica grave
+su: Es terapia de reposición enzimática para una enfermedad metabólica rara (enfermedad de Fabry), administrada por goteo, y algunas personas forman anticuerpos contra ella.
+
+=Imigluceraza
+t: headache, nausea, vomiting, abdominal, musclejoint, rash, allergy
+ec: Headache ; Nausea, vomiting and stomach pain ; Back and joint pain ; Rash
+es: Allergic reaction
+eu: It is enzyme replacement for Gaucher disease, given by drip every two weeks.
+pc: Ból głowy ; Nudności, wymioty i ból brzucha ; Ból pleców i stawów ; Wysypka
+ps: Reakcja alergiczna
+pu: To enzymatyczna terapia zastępcza w chorobie Gauchera, podawana we wlewie co dwa tygodnie.
+sc: Dolor de cabeza ; Náuseas, vómitos y dolor de estómago ; Dolor de espalda y articulaciones ; Sarpullido
+ss: Reacción alérgica
+su: Es terapia de reposición enzimática para la enfermedad de Gaucher, administrada por goteo cada dos semanas.
+
+=Taligluceraza alfa
+t: headache, nausea, vomiting, abdominal, musclejoint, rash, allergy
+ec: Headache ; Nausea, vomiting and stomach pain ; Back and joint pain ; Rash
+es: Allergic reaction
+eu: It is enzyme replacement for Gaucher disease, given by drip every two weeks.
+pc: Ból głowy ; Nudności, wymioty i ból brzucha ; Ból pleców i stawów ; Wysypka
+ps: Reakcja alergiczna
+pu: To enzymatyczna terapia zastępcza w chorobie Gauchera, podawana we wlewie co dwa tygodnie.
+sc: Dolor de cabeza ; Náuseas, vómitos y dolor de estómago ; Dolor de espalda y articulaciones ; Sarpullido
+ss: Reacción alérgica
+su: Es terapia de reposición enzimática para la enfermedad de Gaucher, administrada por goteo cada dos semanas.
+
+=Welagluceraza alfa
+t: headache, nausea, vomiting, abdominal, musclejoint, rash, allergy
+ec: Headache ; Nausea, vomiting and stomach pain ; Back and joint pain ; Rash
+es: Allergic reaction
+eu: It is enzyme replacement for Gaucher disease, given by drip every two weeks.
+pc: Ból głowy ; Nudności, wymioty i ból brzucha ; Ból pleców i stawów ; Wysypka
+ps: Reakcja alergiczna
+pu: To enzymatyczna terapia zastępcza w chorobie Gauchera, podawana we wlewie co dwa tygodnie.
+sc: Dolor de cabeza ; Náuseas, vómitos y dolor de estómago ; Dolor de espalda y articulaciones ; Sarpullido
+ss: Reacción alérgica
+su: Es terapia de reposición enzimática para la enfermedad de Gaucher, administrada por goteo cada dos semanas.
+
+=Westronidaza alfa
+t: diarrhoea, rash, injsite, allergy
+ec: Diarrhoea ; Rash ; Reactions where the drip goes in
+es: Severe allergic reaction, in a boxed warning
+eu: It is enzyme replacement for a rare metabolic disease (MPS VII), given by drip in specialist centres.
+pc: Biegunka ; Wysypka ; Odczyny w miejscu wlewu
+ps: Ciężka reakcja alergiczna, w ramce ostrzegawczej
+pu: To enzymatyczna terapia zastępcza w rzadkiej chorobie metabolicznej (MPS VII), podawana we wlewie w ośrodkach specjalistycznych.
+sc: Diarrea ; Sarpullido ; Reacciones en el lugar del goteo
+ss: Reacción alérgica grave, en una advertencia destacada
+su: Es terapia de reposición enzimática para una enfermedad metabólica rara (MPS VII), administrada por goteo en centros especializados.
+
+=Vilon
+t:
+eu: It is a very short peptide from a research group that sells such products as supplements, with almost no independent evidence. Reliable data on side effects are missing.
+pu: To bardzo krótki peptyd z grupy badawczej, która sprzedaje takie produkty jako suplementy, z prawie żadnymi niezależnymi dowodami. Brakuje wiarygodnych danych o skutkach ubocznych.
+su: Es un péptido muy corto de un grupo de investigación que vende estos productos como suplementos, con casi ninguna prueba independiente. Faltan datos fiables sobre efectos secundarios.
+
+=Livagen
+t:
+eu: It is a very short peptide from a research group that sells such products as supplements, with almost no independent evidence. Reliable data on side effects are missing.
+pu: To bardzo krótki peptyd z grupy badawczej, która sprzedaje takie produkty jako suplementy, z prawie żadnymi niezależnymi dowodami. Brakuje wiarygodnych danych o skutkach ubocznych.
+su: Es un péptido muy corto de un grupo de investigación que vende estos productos como suplementos, con casi ninguna prueba independiente. Faltan datos fiables sobre efectos secundarios.
+
+=Tymogen
+t:
+eu: It is registered in Russia, with evidence mostly from Russian studies not independently repeated. It is not approved in the US or the EU, and side effects are not well documented.
+pu: Jest zarejestrowany w Rosji, a dowody pochodzą głównie z rosyjskich badań, których nie powtórzono niezależnie. Nie jest zatwierdzony w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.
+su: Está registrado en Rusia, con pruebas que proceden sobre todo de estudios rusos no repetidos de forma independiente. No está aprobado en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados.
+
+=Imunofan
+t:
+eu: It is registered in Russia, with evidence mostly from Russian studies not independently repeated. It is not approved in the US or the EU, and side effects are not well documented.
+pu: Jest zarejestrowany w Rosji, a dowody pochodzą głównie z rosyjskich badań, których nie powtórzono niezależnie. Nie jest zatwierdzony w USA ani UE, a skutki uboczne nie są dobrze udokumentowane.
+su: Está registrado en Rusia, con pruebas que proceden sobre todo de estudios rusos no repetidos de forma independiente. No está aprobado en EE. UU. ni en la UE, y los efectos secundarios no están bien documentados.
+
+=Korteksyna
+t: allergy
+eu: It is registered in Russia as an extract from animal brain, with evidence mostly from Russian studies. It is not approved in the US or the EU, and as an animal-derived product it may cause allergic reactions.
+pu: Jest zarejestrowana w Rosji jako wyciąg z mózgu zwierząt, a dowody pochodzą głównie z rosyjskich badań. Nie jest zatwierdzona w USA ani UE, a jako produkt pochodzenia zwierzęcego może wywoływać reakcje alergiczne.
+su: Está registrada en Rusia como un extracto de cerebro animal, con pruebas que proceden sobre todo de estudios rusos. No está aprobada en EE. UU. ni en la UE, y como producto de origen animal puede causar reacciones alérgicas.
+
+=Noopept
+t: aggression, headache, insomnia
+ec: Irritability ; Headache ; Sleep problems
+eu: It is not approved in the European Union either as a medicine or as a supplement, even though it is sometimes sold as one. Long-term safety is not established.
+pc: Drażliwość ; Ból głowy ; Zaburzenia snu
+pu: W Unii Europejskiej nie jest dopuszczony ani jako lek, ani jako suplement, mimo że bywa tak sprzedawany. Bezpieczeństwo długoterminowe nie jest ustalone.
+sc: Irritabilidad ; Dolor de cabeza ; Problemas de sueño
+su: En la Unión Europea no está autorizado ni como medicamento ni como suplemento, aunque a veces se vende como tal. No se ha establecido su seguridad a largo plazo.
+
+=N-acetylo-selank
+t:
+eu: It is a modified form of an unapproved peptide with almost no published data. Nothing reliable is known about its safety in people.
+pu: To zmodyfikowana forma niezatwierdzonego peptydu z prawie żadnymi opublikowanymi danymi. Nie wiadomo nic wiarygodnego o jego bezpieczeństwie u ludzi.
+su: Es una forma modificada de un péptido no aprobado con casi ningún dato publicado. No se sabe nada fiable sobre su seguridad en personas.
+
+=Glypromate
+t:
+eu: It was tested in people in early trials for brain protection, and development stopped. It is not approved, and side effects are not well documented.
+pu: Badano go u ludzi we wczesnych próbach ochrony mózgu, po czym prace przerwano. Nie jest zatwierdzony, a skutki uboczne nie są dobrze udokumentowane.
+su: Se probó en personas en ensayos tempranos de protección cerebral y se detuvo su desarrollo. No está aprobado y los efectos secundarios no están bien documentados.
+
+=FGL
+t:
+eu: It has been tested in animals only. There are no human trials, so nothing reliable is known about side effects in people.
+pu: Badano go tylko na zwierzętach. Nie ma badań na ludziach, więc nie wiadomo nic wiarygodnego o skutkach ubocznych u ludzi.
+su: Solo se ha probado en animales. No hay ensayos en personas, así que no se sabe nada fiable sobre efectos secundarios en personas.
+
+=Rigin
+t: rash, itching
+ec: Redness or irritation of the skin when used on the skin
+eu: It is a cosmetic ingredient with little published safety research and no proper human trials.
+pc: Zaczerwienienie lub podrażnienie skóry przy stosowaniu na skórę
+pu: To składnik kosmetyczny z niewielką liczbą opublikowanych badań bezpieczeństwa i bez porządnych badań na ludziach.
+sc: Enrojecimiento o irritación de la piel al usarlo sobre la piel
+su: Es un ingrediente cosmético con poca investigación de seguridad publicada y sin ensayos adecuados en personas.
+
+=GHK
+t: rash, itching
+ec: Redness or irritation of the skin when used on the skin
+eu: It is a cosmetic ingredient with little published safety research and no proper human trials.
+pc: Zaczerwienienie lub podrażnienie skóry przy stosowaniu na skórę
+pu: To składnik kosmetyczny z niewielką liczbą opublikowanych badań bezpieczeństwa i bez porządnych badań na ludziach.
+sc: Enrojecimiento o irritación de la piel al usarlo sobre la piel
+su: Es un ingrediente cosmético con poca investigación de seguridad publicada y sin ensayos adecuados en personas.
+
+=Tabimorelina
+t: flushing, appetite
+ec: Raised levels of the stress hormone cortisol and of prolactin in studies
+eu: It was tested in early trials for growth hormone deficiency and development stopped. It is not approved, and long-term safety is not established.
+pc: Podwyższony poziom hormonu stresu kortyzolu i prolaktyny w badaniach
+pu: Badano go we wczesnych próbach w niedoborze hormonu wzrostu, po czym prace przerwano. Nie jest zatwierdzony, a bezpieczeństwo długoterminowe nie jest ustalone.
+sc: Niveles elevados de la hormona del estrés (cortisol) y de prolactina en los estudios
+su: Se probó en ensayos tempranos para el déficit de hormona del crecimiento y se detuvo su desarrollo. No está aprobado y no se ha establecido su seguridad a largo plazo.
+
+=Teprotyd
+t: bp
+ec: Low blood pressure
+eu: It was used only in experiments in the 1970s and led to the first ACE inhibitor drugs. It is not available as a medicine today.
+pc: Niskie ciśnienie krwi
+pu: Stosowano go tylko w eksperymentach w latach 70. i doprowadził do powstania pierwszych leków z grupy inhibitorów ACE. Nie jest dziś dostępny jako lek.
+sc: Presión arterial baja
+su: Solo se usó en experimentos en los años 70 y condujo a los primeros fármacos inhibidores de la ECA. Hoy no está disponible como medicamento.
+
+=Epifadyna
+t:
+eu: It is a natural compound from bacteria that has been studied in laboratory experiments only. There are no human trials, so nothing is known about side effects in people.
+pu: To naturalny związek bakteryjny badany wyłącznie w eksperymentach laboratoryjnych. Nie ma badań na ludziach, więc nie wiadomo nic o skutkach ubocznych u ludzi.
+su: Es un compuesto natural de bacterias que solo se ha estudiado en experimentos de laboratorio. No hay ensayos en personas, así que no se sabe nada sobre efectos secundarios en personas.
+
+=Ekonoglutyd
+t: nausea, vomiting, diarrhoea, constipation, abdominal, appetite
+ec: Nausea, vomiting, diarrhoea and constipation, mostly mild to moderate ; Stomach discomfort ; Reduced appetite
+es: Dehydration from vomiting or diarrhoea
+eu: It is approved only in China, and long-term safety outside Chinese studies is not established.
+pc: Nudności, wymioty, biegunka i zaparcia, głównie łagodne lub umiarkowane ; Dyskomfort w żołądku ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach lub biegunce
+pu: Jest zatwierdzony tylko w Chinach, a bezpieczeństwo długoterminowe poza badaniami chińskimi nie zostało ustalone.
+sc: Náuseas, vómitos, diarrea y estreñimiento, sobre todo leves o moderados ; Molestias de estómago ; Menos apetito
+ss: Deshidratación por vómitos o diarrea
+su: Solo está aprobado en China y no se ha establecido su seguridad a largo plazo fuera de los estudios chinos.
+
+=Pemwidutyd
+t: nausea, vomiting, diarrhoea, constipation, appetite
+ec: Nausea, vomiting and diarrhoea, mostly mild to moderate ; Constipation ; Reduced appetite
+es: Dehydration from vomiting or diarrhoea
+eu: It is still in clinical trials and not approved, so rare effects and long-term safety are not known.
+pc: Nudności, wymioty i biegunka, głównie łagodne lub umiarkowane ; Zaparcia ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach lub biegunce
+pu: Jest wciąż w badaniach klinicznych i nie jest zatwierdzony, więc rzadkie skutki i bezpieczeństwo długoterminowe nie są znane.
+sc: Náuseas, vómitos y diarrea, sobre todo leves o moderados ; Estreñimiento ; Menos apetito
+ss: Deshidratación por vómitos o diarrea
+su: Sigue en ensayos clínicos y no está aprobado, así que no se conocen los efectos raros ni la seguridad a largo plazo.
+
+=Efpeglenatyd
+t: nausea, vomiting, diarrhoea, injsite
+ec: Nausea, vomiting and diarrhoea ; Reactions where it is injected
+es: Severe, lasting stomach pain: possible pancreatitis ; Low blood sugar with insulin or a sulfonylurea
+eu: It is not approved, and its development was stopped by its maker, so long-term safety data are limited.
+pc: Nudności, wymioty i biegunka ; Odczyny w miejscu wstrzyknięcia
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika
+pu: Nie jest zatwierdzony, a jego producent przerwał prace, więc dane o bezpieczeństwie długoterminowym są ograniczone.
+sc: Náuseas, vómitos y diarrea ; Reacciones en el lugar de la inyección
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Azúcar bajo con insulina o una sulfonilurea
+su: No está aprobado y su fabricante detuvo su desarrollo, así que los datos de seguridad a largo plazo son limitados.
+
+=Kotadutyd
+t: nausea, vomiting, diarrhoea, appetite
+ec: Nausea and vomiting ; Diarrhoea ; Reduced appetite
+es: Dehydration from vomiting or diarrhoea
+eu: It is not approved, and its development was stopped by its maker, so long-term safety data are limited.
+pc: Nudności i wymioty ; Biegunka ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach lub biegunce
+pu: Nie jest zatwierdzony, a jego producent przerwał prace, więc dane o bezpieczeństwie długoterminowym są ograniczone.
+sc: Náuseas y vómitos ; Diarrea ; Menos apetito
+ss: Deshidratación por vómitos o diarrea
+su: No está aprobado y su fabricante detuvo su desarrollo, así que los datos de seguridad a largo plazo son limitados.
+
+=Sekwencja G-L-O-W
+t:
+eu: This is a marketing name for a short sequence with no research behind it. Nothing reliable is known about its safety in people.
+pu: To nazwa marketingowa krótkiej sekwencji, za którą nie stoją żadne badania. Nie wiadomo nic wiarygodnego o jej bezpieczeństwie u ludzi.
+su: Es un nombre comercial de una secuencia corta sin investigación detrás. No se sabe nada fiable sobre su seguridad en personas.
+
+=Nazwy bez potwierdzenia
+t:
+eu: These are trade names with no scientific source, so the real contents are unknown. Side effects cannot be listed because no one knows what is in the product.
+pu: To nazwy handlowe bez źródeł naukowych, więc faktyczna zawartość jest nieznana. Nie da się wymienić skutków ubocznych, bo nikt nie wie, co jest w produkcie.
+su: Son nombres comerciales sin fuente científica, así que se desconoce el contenido real. No se pueden enumerar los efectos secundarios porque nadie sabe qué contiene el producto.
+
+=Peptydy owsiane
+t: rash, itching, allergy
+ec: Redness or itching of the skin in people sensitive to oats
+eu: They are a plant-based cosmetic ingredient, and allergy to oats or gluten-related reactions are the main concern.
+pc: Zaczerwienienie lub swędzenie skóry u osób uczulonych na owies
+pu: To roślinny składnik kosmetyczny, a główną obawą jest alergia na owies lub reakcje związane z glutenem.
+sc: Enrojecimiento o picor de la piel en personas sensibles a la avena
+su: Son un ingrediente cosmético de origen vegetal, y la principal preocupación es la alergia a la avena o las reacciones relacionadas con el gluten.
+
+=Peptydy jedwabiu
+t: rash, itching, allergy
+ec: Redness or itching of the skin in people sensitive to silk protein
+eu: They are an animal-protein cosmetic ingredient, and allergy is the main concern.
+pc: Zaczerwienienie lub swędzenie skóry u osób uczulonych na białko jedwabiu
+pu: To składnik kosmetyczny z białka zwierzęcego, a główną obawą jest alergia.
+sc: Enrojecimiento o picor de la piel en personas sensibles a la proteína de la seda
+su: Son un ingrediente cosmético de proteína animal, y la principal preocupación es la alergia.
+
+=Mekasermina rinfabat
+t: lowsugar, injsite, headache
+ec: Low blood sugar ; Reactions where it is injected ; Headache
+es: Severe low blood sugar
+eu: It was approved in the US in 2005 and withdrawn in 2007 for commercial reasons, so it is not available as a medicine.
+pc: Niski poziom cukru ; Odczyny w miejscu wstrzyknięcia ; Ból głowy
+ps: Ciężka hipoglikemia
+pu: Został zatwierdzony w USA w 2005 r. i wycofany w 2007 r. z powodów handlowych, więc nie jest dostępny jako lek.
+sc: Azúcar bajo en sangre ; Reacciones en el lugar de la inyección ; Dolor de cabeza
+ss: Hipoglucemia grave
+su: Se aprobó en EE. UU. en 2005 y se retiró en 2007 por razones comerciales, así que no está disponible como medicamento.
+
+=GLOW
+t: injsite
+eu: It is a ready-made mix of three substances that individually have almost no human safety data, and nobody has tested the mix. What is in the vial is not checked, so side effects are not known.
+pu: To gotowa mieszanka trzech substancji, z których każda osobno ma prawie żadnych danych o bezpieczeństwie u ludzi, a samej mieszanki nikt nie badał. Zawartość fiolki nie jest kontrolowana, więc skutki uboczne nie są znane.
+su: Es una mezcla ya preparada de tres sustancias que por separado casi no tienen datos de seguridad en personas, y nadie ha probado la mezcla. No se controla lo que hay en el vial, así que se desconocen los efectos secundarios.
+
+=KLOW
+t: injsite
+eu: It is a ready-made mix of four substances that individually have almost no human safety data, and nobody has tested the mix. What is in the vial is not checked, so side effects are not known.
+pu: To gotowa mieszanka czterech substancji, z których każda osobno ma prawie żadnych danych o bezpieczeństwie u ludzi, a samej mieszanki nikt nie badał. Zawartość fiolki nie jest kontrolowana, więc skutki uboczne nie są znane.
+su: Es una mezcla ya preparada de cuatro sustancias que por separado casi no tienen datos de seguridad en personas, y nadie ha probado la mezcla. No se controla lo que hay en el vial, así que se desconocen los efectos secundarios.
+
+=Rusfertyd
+t: injsite, fatigue
+ec: Reactions where it is injected ; Tiredness ; Low red blood cell count
+es: Low iron levels, because it works by limiting iron
+eu: It was approved in 2026 only for polycythaemia vera in adults, and long-term safety is still being collected.
+pc: Odczyny w miejscu wstrzyknięcia ; Zmęczenie ; Niska liczba czerwonych krwinek
+ps: Niski poziom żelaza, bo lek działa przez ograniczanie żelaza
+pu: Został zatwierdzony w 2026 r. wyłącznie w czerwienicy prawdziwej u dorosłych, a bezpieczeństwo długoterminowe jest wciąż zbierane.
+sc: Reacciones en el lugar de la inyección ; Cansancio ; Recuento bajo de glóbulos rojos
+ss: Hierro bajo, porque actúa limitando el hierro
+su: Se aprobó en 2026 solo para la policitemia vera en adultos, y la seguridad a largo plazo se sigue recopilando.
+
+=Eloralintyd
+t: nausea, vomiting, fatigue, appetite
+ec: Nausea, the most common effect ; Vomiting ; Tiredness ; Reduced appetite
+es: Dehydration from vomiting
+eu: It is not approved, and products sold online under this name are not the manufacturer's medicine, so long-term safety is unknown.
+pc: Nudności, najczęstszy skutek ; Wymioty ; Zmęczenie ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach
+pu: Nie jest zatwierdzony, a produkty sprzedawane online pod tą nazwą nie są lekiem producenta, więc bezpieczeństwo długoterminowe jest nieznane.
+sc: Náuseas, el efecto más frecuente ; Vómitos ; Cansancio ; Menos apetito
+ss: Deshidratación por vómitos
+su: No está aprobado, y los productos que se venden en línea con este nombre no son el medicamento del fabricante, así que se desconoce la seguridad a largo plazo.
+
+=Petrelintyd
+t: nausea, vomiting, appetite
+ec: Nausea, mostly mild to moderate ; Vomiting ; Reduced appetite
+es: Dehydration from vomiting
+eu: It is not approved, and full phase 2 results were not yet published, so long-term safety is unknown. Products sold online under this name are not the manufacturer's medicine.
+pc: Nudności, głównie łagodne lub umiarkowane ; Wymioty ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach
+pu: Nie jest zatwierdzony, a pełne wyniki II fazy nie zostały jeszcze opublikowane, więc bezpieczeństwo długoterminowe jest nieznane. Produkty sprzedawane online pod tą nazwą nie są lekiem producenta.
+sc: Náuseas, sobre todo leves o moderadas ; Vómitos ; Menos apetito
+ss: Deshidratación por vómitos
+su: No está aprobado y aún no se habían publicado los resultados completos de la fase 2, así que se desconoce la seguridad a largo plazo. Los productos que se venden en línea con este nombre no son el medicamento del fabricante.
