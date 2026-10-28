@@ -402,22 +402,22 @@
   var painters = [];
   function hues() {
     var st = getComputedStyle(html);
-    return ['--k1', '--k2', '--k3', '--k4', '--neon'].map(function (v) { return st.getPropertyValue(v).trim() || '#2F6DB5'; });
+    return ['--k1', '--k2', '--k3', '--k4'].map(function (v) { return st.getPropertyValue(v).trim() || '#2F6DB5'; });
   }
   function makeChains(cv, dense) {
     var ctx = cv.getContext ? cv.getContext('2d') : null;
     if (!ctx) return;
-    var chains = [], w = 0, h = 0, dpr = Math.min(2, devicePixelRatio || 1), raf = 0, visible = true;
+    var pal = [], chains = [], w = 0, h = 0, dpr = Math.min(2, devicePixelRatio || 1), raf = 0, visible = true;
     var seed = 7 + painters.length * 131;
     function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
     function size() { w = cv.clientWidth; h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
     function init() {
-      var c = hues();
+      var c = hues(); pal = c;
       chains = []; var n = Math.round((w < 600 ? 7 : 12) * dense);
       for (var i = 0; i < n; i++) chains.push({
         x: rnd() * w, y: rnd() * h, a: rnd() * 6.28, sp: .11 + rnd() * .17,
-        len: 5 + Math.floor(rnd() * 6), ph: rnd() * 6.28, sz: 2.8 + rnd() * 2.4,
-        col: c[i % c.length], glow: i % 5 === 4
+        len: 6 + Math.floor(rnd() * 6), ph: rnd() * 6.28, sz: 3.4 + rnd() * 2.6,
+        col: c[i % c.length], shift: i, glow: i % 3 === 2
       });
     }
     function draw(t) {
@@ -435,13 +435,20 @@
           pts.push([c.x + Math.cos(c.a) * u + Math.cos(ang + 1.57) * wob,
                     c.y + Math.sin(c.a) * u + Math.sin(ang + 1.57) * wob]);
         }
-        ctx.globalAlpha = c.glow ? .34 : .26;
-        ctx.strokeStyle = c.col; ctx.lineWidth = 1.5; ctx.beginPath();
+        // a chain is a string of beads in all four brand colours; strong enough to read on both themes
+        var dark = html.dataset.theme === 'dark' || (!html.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
+        var la = dark ? .5 : .55, da = dark ? .85 : .8;
+        ctx.globalAlpha = c.glow ? la + .12 : la;
+        ctx.strokeStyle = c.col; ctx.lineWidth = 2; ctx.beginPath();
         pts.forEach(function (p, i) { i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); });
         ctx.stroke();
-        ctx.globalAlpha = c.glow ? .46 : .36;
-        ctx.fillStyle = c.col;
-        pts.forEach(function (p) { ctx.beginPath(); ctx.arc(p[0], p[1], c.sz, 0, 6.2832); ctx.fill(); });
+        pts.forEach(function (p, i) {
+          ctx.globalAlpha = c.glow ? Math.min(1, da + .1) : da;
+          ctx.fillStyle = pal[(c.shift + i) % pal.length];
+          if (dark) { ctx.shadowColor = ctx.fillStyle; ctx.shadowBlur = c.glow ? 14 : 8; } else ctx.shadowBlur = 0;
+          ctx.beginPath(); ctx.arc(p[0], p[1], c.sz, 0, 6.2832); ctx.fill();
+        });
+        ctx.shadowBlur = 0;
       });
       ctx.globalAlpha = 1;
       raf = (motionOn && visible) ? requestAnimationFrame(draw) : 0;
