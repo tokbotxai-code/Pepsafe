@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=01df455b">
+<link rel="stylesheet" href="/assets/site.css?v=fd7a5bf6">
 <link rel="canonical" href="https://pepsafe.info/pl/index.html">
 <link rel="alternate" hreflang="en" href="https://pepsafe.info/en/index.html">
 <link rel="alternate" hreflang="pl" href="https://pepsafe.info/pl/index.html">
@@ -173,6 +173,7 @@
         <form id="checker" onsubmit="return false">
           <div class="picks">
             <label><span class="kick">Grupa A</span><select id="selA"><option value="glp1" selected>Agoniści GLP-1 i pokrewni (GIP, glukagon)</option><option value="amylin">Analogi amyliny</option><option value="gh">Oś hormonu wzrostu i IGF-1</option><option value="gnrh">Oś GnRH (agoniści, antagoniści i pobudzacze)</option><option value="sst">Analogi somatostatyny</option><option value="pth">Analogi parathormonu</option><option value="mc">Agoniści receptorów melanokortynowych</option><option value="vp">Wazopresyna i jej analogi</option><option value="gcc">Agoniści cyklazy guanylowej C</option><option value="anticoag">Leki przeciwkrzepliwe stosowane przy zabiegach na tętnicach</option><option value="repair">Peptydy „na regenerację” (niezatwierdzone)</option><option value="muscle">Substancje wokół miostatyny i wzrostu mięśni</option><option value="cns">Peptydy „na mózg i nastrój” (niezatwierdzone lub regionalne)</option><option value="long">Substancje „przeciwstarzeniowe” (niezatwierdzone)</option><option value="fat">Niezatwierdzone substancje „na odchudzanie”</option></select></label>
+            <button type="button" class="vswap" id="vswap" title="Zamień grupy" aria-label="Zamień grupy">⇄</button>
             <label><span class="kick">Grupa B</span><select id="selB"><option value="glp1">Agoniści GLP-1 i pokrewni (GIP, glukagon)</option><option value="amylin">Analogi amyliny</option><option value="gh">Oś hormonu wzrostu i IGF-1</option><option value="gnrh">Oś GnRH (agoniści, antagoniści i pobudzacze)</option><option value="sst">Analogi somatostatyny</option><option value="pth">Analogi parathormonu</option><option value="mc">Agoniści receptorów melanokortynowych</option><option value="vp">Wazopresyna i jej analogi</option><option value="gcc">Agoniści cyklazy guanylowej C</option><option value="anticoag" selected>Leki przeciwkrzepliwe stosowane przy zabiegach na tętnicach</option><option value="repair">Peptydy „na regenerację” (niezatwierdzone)</option><option value="muscle">Substancje wokół miostatyny i wzrostu mięśni</option><option value="cns">Peptydy „na mózg i nastrój” (niezatwierdzone lub regionalne)</option><option value="long">Substancje „przeciwstarzeniowe” (niezatwierdzone)</option><option value="fat">Niezatwierdzone substancje „na odchudzanie”</option></select></label>
           </div>
           <output id="verdict" class="verdict"><b>Nie wykryto wspólnego celu</b><span>Działają na inne cele, więc nie ma tu dublowania. To nie znaczy, że są bezpieczne razem: o interakcjach poza wspólnym receptorem decyduje lekarz, nie tabelka.</span></output>
@@ -300,7 +301,7 @@
 </footer>
 
 <script src="/assets/dane-pl.js" defer></script>
-<script src="/assets/ruch.js?v=01df455b" defer></script>
+<script src="/assets/ruch.js?v=fd7a5bf6" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "68889a9fe6604022bd3fa7d786e5d79f"}'></script>
 </body>
 </html>

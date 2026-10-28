@@ -509,6 +509,7 @@ function home(L) {
         <form id="checker" onsubmit="return false">
           <div class="picks">
             <label><span class="kick">${esc(h.selA)}</span><select id="selA">${opts(0)}</select></label>
+            <button type="button" class="vswap" id="vswap" title="${esc(en ? 'Swap groups' : 'Zamień grupy')}" aria-label="${esc(en ? 'Swap groups' : 'Zamień grupy')}">⇄</button>
             <label><span class="kick">${esc(h.selB)}</span><select id="selB">${opts(Math.min(9, GROUPS.length - 1))}</select></label>
           </div>
           <output id="verdict" class="verdict"><b>${esc(h.diff)}</b><span>${esc(h.diffWhy)}</span></output>

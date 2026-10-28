@@ -119,20 +119,23 @@
     }
     function label(sel) { return sel.options[sel.selectedIndex].textContent; }
     function side(sel) {
-      var m = members(sel.value), ex = m.slice(0, 3).map(function (r) { return r.n; }).join(', ');
-      return '<b>' + label(sel) + '</b>' +
-        (m.length ? ' <span class="muted">' + m.length + (pl ? ' wpisów' : es(' entries', ' fichas')) +
-          (ex ? (pl ? ', m.in. ' : es(', e.g. ', ', p. ej. ')) + ex : '') + '</span>' : '');
+      var m = members(sel.value), n = m.length;
+      var chips = m.slice(0, 8).map(function (r) { return '<em>' + r.n + '</em>'; }).join('') +
+        (n > 8 ? '<em class="more">+' + (n - 8) + '</em>' : '');
+      return '<div class="vside"><b>' + label(sel) + '</b>' +
+        (n ? '<small>' + n + (pl ? ' wpisów' : es(' entries', ' fichas')) + '</small><p class="vchips">' + chips + '</p>' : '') + '</div>';
     }
     var render = function () {
       var same = a.value === b.value;
       var src = document.getElementById(same ? 'a-' + a.value : 'a-diff');
       out.className = 'verdict' + (same ? ' same' : '');
-      var pair = '<p class="vpair">' + side(a) + '<i aria-hidden="true">' + (same ? '=' : '↔') + '</i>' + side(b) + '</p>';
-      out.innerHTML = '<b>' + (same ? sr.dataset.same : sr.dataset.diff) + '</b>' + pair +
+      out.innerHTML = '<b class="vhead">' + (ES ? (same ? 'Mismo grupo: no combinar' : 'No se detecta una diana compartida') : (same ? sr.dataset.same : sr.dataset.diff)) + '</b>' +
+        '<div class="vpair">' + side(a) + '<i aria-hidden="true">' + (same ? '=' : '↔') + '</i>' + side(b) + '</div>' +
         '<span>' + (src ? src.innerHTML : '') + '</span>';
       out.classList.remove('flash'); void out.offsetWidth; out.classList.add('flash');
     };
+    var sw = document.getElementById('vswap');
+    if (sw) sw.addEventListener('click', function () { var t = a.value; a.value = b.value; b.value = t; render(); });
     a.addEventListener('change', render);
     b.addEventListener('change', render);
     render();
