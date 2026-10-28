@@ -125,6 +125,30 @@
       return '<div class="vside"><b>' + label(sel) + '</b>' +
         (n ? '<small>' + n + (pl ? ' wpisów' : es(' entries', ' fichas')) + '</small><p class="vchips">' + chips + '</p>' : '') + '</div>';
     }
+    // every substance named in the explanation becomes a link to its card
+    var nameRx = null, bySlug = {};
+    function linkNames(box) {
+      if (!box || !window.PEP) return;
+      if (!nameRx) {
+        var names = window.PEP.rows.map(function (r) { bySlug[r.n.toLowerCase()] = r.s; return r.n; })
+          .filter(function (n) { return n.length > 2; }).sort(function (x, y) { return y.length - x.length; });
+        nameRx = new RegExp('(^|[^A-Za-z0-9\\-])(' + names.map(function (n) { return n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')(?![A-Za-z0-9\\-])', 'gi');
+      }
+      var sfx = pl ? '.pl.html' : ES ? '.es.html' : '.html';
+      var w = document.createTreeWalker(box, NodeFilter.SHOW_TEXT), nodes = [], n;
+      while ((n = w.nextNode())) if (!n.parentNode.closest('a')) nodes.push(n);
+      nodes.forEach(function (t) {
+        var txt = t.nodeValue; nameRx.lastIndex = 0;
+        if (!nameRx.test(txt)) return;
+        nameRx.lastIndex = 0;
+        var span = document.createElement('span');
+        span.innerHTML = txt.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(nameRx, function (m, pre, name) {
+          var sl = bySlug[name.toLowerCase()];
+          return sl ? pre + '<a href="/p/' + sl + sfx + '">' + name + '</a>' : m;
+        });
+        t.parentNode.replaceChild(span, t);
+      });
+    }
     var render = function () {
       var same = a.value === b.value;
       var src = document.getElementById(same ? 'a-' + a.value : 'a-diff');
@@ -132,6 +156,7 @@
       out.innerHTML = '<b class="vhead">' + (ES ? (same ? 'Mismo grupo: no combinar' : 'No se detecta una diana compartida') : (same ? sr.dataset.same : sr.dataset.diff)) + '</b>' +
         '<div class="vpair">' + side(a) + '<i aria-hidden="true">' + (same ? '=' : '↔') + '</i>' + side(b) + '</div>' +
         '<span>' + (src ? src.innerHTML : '') + '</span>';
+      linkNames(out.lastElementChild);
       out.classList.remove('flash'); void out.offsetWidth; out.classList.add('flash');
     };
     var sw = document.getElementById('vswap');
