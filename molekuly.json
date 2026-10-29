@@ -1,0 +1,940 @@
+{
+ "Semaglutyd": {
+  "cid": 56843331,
+  "f": "C187H291N45O59",
+  "mw": "4114",
+  "t": "Semaglutide",
+  "q": "Semaglutide"
+ },
+ "Tirzepatyd": {
+  "cid": 166567236,
+  "f": "C225H348N48O68",
+  "mw": "4813",
+  "t": "CID 166567236",
+  "q": "Tirzepatide"
+ },
+ "Liraglutyd": {
+  "cid": 16134956,
+  "f": "C172H265N43O51",
+  "mw": "3751",
+  "t": "Liraglutide",
+  "q": "Liraglutide"
+ },
+ "Dulaglutyd": null,
+ "Eksenatyd": {
+  "cid": 45588096,
+  "f": "C184H282N50O60S",
+  "mw": "4187",
+  "t": "Exenatide",
+  "q": "Exenatide"
+ },
+ "Liksysenatyd": {
+  "cid": 90472060,
+  "f": "C215H347N61O65S",
+  "mw": "4858",
+  "t": "Lixisenatide",
+  "q": "Lixisenatide"
+ },
+ "Retatrutyd": null,
+ "Mazdutyd": {
+  "cid": 167312357,
+  "f": "C207H317N45O65",
+  "mw": "4476",
+  "t": "Mazdutide",
+  "q": "Mazdutide"
+ },
+ "Survodutyd": {
+  "cid": 171378821,
+  "f": "C192H289N47O61",
+  "mw": "4232",
+  "t": "CID 171378821",
+  "q": "Survodutide"
+ },
+ "Cagrilintyd": {
+  "cid": 171397054,
+  "f": "C194H312N54O59S2",
+  "mw": "4409",
+  "t": "Cagrilintide",
+  "q": "Cagrilintide"
+ },
+ "Pramlintyd": {
+  "cid": 70691388,
+  "f": "C171H267N51O53S2",
+  "mw": "3949",
+  "t": "Pramlintide",
+  "q": "Pramlintide"
+ },
+ "Insuliny i analogi": null,
+ "AOD9604": {
+  "cid": 71300630,
+  "f": "C78H123N23O23S2",
+  "mw": "1815.1",
+  "t": "Aod-9604",
+  "q": "AOD9604"
+ },
+ "HGH Fragment 176–191": null,
+ "Adipotide": {
+  "cid": 163360068,
+  "f": "C111H206N36O28S2",
+  "mw": "2557.2",
+  "t": "Adipotide",
+  "q": "Adipotide"
+ },
+ "MIC i Lipo-C": null,
+ "Mieszanki: Reta + Tirzepatyd, Cagri + Sema": null,
+ "5-amino-1MQ": null,
+ "AICAR": {
+  "cid": 65110,
+  "f": "C9H15N4O8P",
+  "mw": "338.21",
+  "t": "AICA Ribotide",
+  "q": "AICAR"
+ },
+ "SLU-PP-332": {
+  "cid": 5338394,
+  "f": "C18H14N2O2",
+  "mw": "290.3",
+  "t": "Slu-PP-332",
+  "q": "SLU-PP-332"
+ },
+ "L-karnityna": {
+  "cid": 10917,
+  "f": "C7H15NO3",
+  "mw": "161.20",
+  "t": "(-)-Carnitine",
+  "q": "L-carnitine"
+ },
+ "Foundayo (orforglipron)": null,
+ "Somatropina (HGH)": null,
+ "Tesamorelina": {
+  "cid": 16137828,
+  "f": "C221H366N72O67S",
+  "mw": "5136",
+  "t": "Tesamorelin",
+  "q": "Tesamorelin"
+ },
+ "Sermorelina": {
+  "cid": 16132413,
+  "f": "C149H246N44O42S",
+  "mw": "3357.9",
+  "t": "Sermorelin",
+  "q": "Sermorelin"
+ },
+ "CJC-1295": {
+  "cid": 91971820,
+  "f": "C165H269N47O46",
+  "mw": "3647.2",
+  "t": "Cjc 1295",
+  "q": "CJC-1295"
+ },
+ "Ipamorelina": {
+  "cid": 9831659,
+  "f": "C38H49N9O5",
+  "mw": "711.9",
+  "t": "Ipamorelin",
+  "q": "Ipamorelin"
+ },
+ "GHRP-2": {
+  "cid": 6918245,
+  "f": "C45H55N9O6",
+  "mw": "818.0",
+  "t": "Pralmorelin",
+  "q": "GHRP-2"
+ },
+ "GHRP-6": {
+  "cid": 4345065,
+  "f": "C46H56N12O6",
+  "mw": "873.0",
+  "t": "Ghrp-6",
+  "q": "GHRP-6"
+ },
+ "Heksarelina": {
+  "cid": 6918297,
+  "f": "C47H58N12O6",
+  "mw": "887.0",
+  "t": "Examorelin",
+  "q": "Hexarelin"
+ },
+ "IGF-1 LR3": null,
+ "MGF i PEG-MGF": null,
+ "Follistatyna i FST-344": null,
+ "GDF-8 (miostatyna)": null,
+ "ACE-031": null,
+ "BPC-157": {
+  "cid": 9941957,
+  "f": "C62H98N16O22",
+  "mw": "1419.5",
+  "t": "Bpc-157",
+  "q": "BPC-157"
+ },
+ "TB-500": null,
+ "BPC-157 + TB-500": null,
+ "KPV": null,
+ "LL-37": {
+  "cid": 16198951,
+  "f": "C205H340N60O53",
+  "mw": "4493",
+  "t": "LL-37",
+  "q": "LL-37"
+ },
+ "Tymozyna alfa-1": {
+  "cid": 16130571,
+  "f": "C129H215N33O55",
+  "mw": "3108.3",
+  "t": "Thymalfasin",
+  "q": "Thymosin alpha-1"
+ },
+ "Tymalina i tymulina": null,
+ "VIP": null,
+ "Humanina": {
+  "cid": 16131438,
+  "f": "C119H204N34O32S2",
+  "mw": "2687.2",
+  "t": "Humanin",
+  "q": "Humanin"
+ },
+ "MOTS-c": {
+  "cid": 146675088,
+  "f": "C101H152N28O22S2",
+  "mw": "2174.6",
+  "t": "Mots-c",
+  "q": "MOTS-c"
+ },
+ "SS-31": {
+  "cid": 11764719,
+  "f": "C32H49N9O5",
+  "mw": "639.8",
+  "t": "Elamipretide",
+  "q": "SS-31"
+ },
+ "Epitalon": {
+  "cid": 219042,
+  "f": "C14H22N4O9",
+  "mw": "390.35",
+  "t": "Epitalon",
+  "q": "Epitalon"
+ },
+ "Peptydy bioregulatory": null,
+ "FOXO4-DRI": {
+  "cid": 167312269,
+  "f": "C228H388N86O64",
+  "mw": "5358",
+  "t": "Foxo4-dri",
+  "q": "FOXO4-DRI"
+ },
+ "PNC-27": {
+  "cid": 16201774,
+  "f": "C188H293N53O44S",
+  "mw": "4032",
+  "t": "H-Pro-Pro-Leu-Ser-Gln-Glu-Thr-Phe-Ser-Asp-Leu-Trp-Lys-Leu-Leu-Lys-Lys-Trp-Lys-Met-Arg-Arg-Asn-Gln-Phe-Trp-Val-Lys-Val-Gln-Arg-Gly-OH",
+  "q": "PNC-27"
+ },
+ "ARA290": {
+  "cid": 91810664,
+  "f": "C51H84N16O21",
+  "mw": "1257.3",
+  "t": "Cibinetide",
+  "q": "ARA290"
+ },
+ "B7-33": null,
+ "DSIP": {
+  "cid": 68816,
+  "f": "C35H48N10O15",
+  "mw": "848.8",
+  "t": "Delta Sleep-Inducing Peptide",
+  "q": "DSIP"
+ },
+ "Semax": {
+  "cid": 9811102,
+  "f": "C37H51N9O10S",
+  "mw": "813.9",
+  "t": "ACTH (4-7), Pro-Gly-Pro-",
+  "q": "Semax"
+ },
+ "Dihexa": {
+  "cid": 129010512,
+  "f": "C27H44N4O5",
+  "mw": "504.7",
+  "t": "N-(1-Oxohexyl)-L-tyrosyl-N-(6-amino-6-oxohexyl)-L-isoleucinamide",
+  "q": "Dihexa"
+ },
+ "Adamax": null,
+ "Selank": {
+  "cid": 11765600,
+  "f": "C33H57N11O9",
+  "mw": "751.9",
+  "t": "Selank",
+  "q": "Selank"
+ },
+ "P21": null,
+ "PE-22-28": null,
+ "Oreksyna A i B": null,
+ "Cerebrolizyna": null,
+ "Zikonotyd": {
+  "cid": 16135415,
+  "f": "C102H172N36O32S7",
+  "mw": "2639.2",
+  "t": "Ziconotide",
+  "q": "Ziconotide"
+ },
+ "Trofinetyd": {
+  "cid": 11318905,
+  "f": "C13H21N3O6",
+  "mw": "315.32",
+  "t": "Trofinetide",
+  "q": "Trofinetide"
+ },
+ "Difelikefalina": {
+  "cid": 24794466,
+  "f": "C36H53N7O6",
+  "mw": "679.8",
+  "t": "Difelikefalin",
+  "q": "Difelikefalin"
+ },
+ "Gonadorelina": {
+  "cid": 638793,
+  "f": "C55H75N17O13",
+  "mw": "1182.3",
+  "t": "Gonadorelin",
+  "q": "Gonadorelin"
+ },
+ "Kisspeptyna-10": {
+  "cid": 25240297,
+  "f": "C63H83N17O14",
+  "mw": "1302.4",
+  "t": "Kisspeptin-10",
+  "q": "Kisspeptin-10"
+ },
+ "Triptorelina": {
+  "cid": 25074470,
+  "f": "C64H82N18O13",
+  "mw": "1311.4",
+  "t": "Triptorelin",
+  "q": "Triptorelin"
+ },
+ "Leuprorelina": {
+  "cid": 657181,
+  "f": "C59H84N16O12",
+  "mw": "1209.4",
+  "t": "Leuprolide",
+  "q": "Leuprolide"
+ },
+ "Goserelina": {
+  "cid": 5311128,
+  "f": "C59H84N18O14",
+  "mw": "1269.4",
+  "t": "Goserelin",
+  "q": "Goserelin"
+ },
+ "Degareliks": {
+  "cid": 16136245,
+  "f": "C82H103ClN18O16",
+  "mw": "1632.3",
+  "t": "Degarelix",
+  "q": "Degarelix"
+ },
+ "Cetroreliks i Ganireliks": null,
+ "Oksytocyna": {
+  "cid": 439302,
+  "f": "C43H66N12O12S2",
+  "mw": "1007.2",
+  "t": "Oxytocin",
+  "q": "Oxytocin"
+ },
+ "HCG i HMG": null,
+ "Afamelanotyd": {
+  "cid": 16197727,
+  "f": "C78H111N21O19",
+  "mw": "1646.8",
+  "t": "Afamelanotide",
+  "q": "Afamelanotide"
+ },
+ "Melanotan II": {
+  "cid": 92432,
+  "f": "C50H69N15O9",
+  "mw": "1024.2",
+  "t": "melanotan-II",
+  "q": "Melanotan II"
+ },
+ "PT-141": {
+  "cid": 9941379,
+  "f": "C50H68N14O10",
+  "mw": "1025.2",
+  "t": "Bremelanotide",
+  "q": "PT-141"
+ },
+ "ACTH 1–39": null,
+ "Melatonina": {
+  "cid": 896,
+  "f": "C13H16N2O2",
+  "mw": "232.28",
+  "t": "Melatonin",
+  "q": "Melatonin"
+ },
+ "Erytropoetyna (EPO)": null,
+ "Toksyna botulinowa": null,
+ "NAD+": null,
+ "Teryparatyd": {
+  "cid": 16133850,
+  "f": "C181H291N55O51S2",
+  "mw": "4118",
+  "t": "Teriparatide",
+  "q": "Teriparatide"
+ },
+ "Abaloparatyd": {
+  "cid": 76943386,
+  "f": "C174H300N56O49",
+  "mw": "3961",
+  "t": "Abaloparatide",
+  "q": "Abaloparatide"
+ },
+ "Kalcytonina łososiowa": {
+  "cid": 16220016,
+  "f": "C145H240N44O48S2",
+  "mw": "3431.9",
+  "t": "Calcitonin Salmon",
+  "q": "Salmon calcitonin"
+ },
+ "Wosorytyd": {
+  "cid": 119058036,
+  "f": "C176H290N56O51S3",
+  "mw": "4103",
+  "t": "Vosoritide",
+  "q": "Vosoritide"
+ },
+ "Wazopresyna": null,
+ "Desmopresyna": {
+  "cid": 5311065,
+  "f": "C46H64N14O12S2",
+  "mw": "1069.2",
+  "t": "Desmopressin",
+  "q": "Desmopressin"
+ },
+ "Terlipresyna": {
+  "cid": 72081,
+  "f": "C52H74N16O15S2",
+  "mw": "1227.4",
+  "t": "Terlipressin",
+  "q": "Terlipressin"
+ },
+ "Biwalirudyna": {
+  "cid": 16129704,
+  "f": "C98H138N24O33",
+  "mw": "2180.3",
+  "t": "Bivalirudin",
+  "q": "Bivalirudin"
+ },
+ "Eptyfibatyd": {
+  "cid": 448812,
+  "f": "C35H49N11O9S2",
+  "mw": "832.0",
+  "t": "Eptifibatide",
+  "q": "Eptifibatide"
+ },
+ "Nesirytyd": {
+  "cid": 71308561,
+  "f": "C143H244N50O42S4",
+  "mw": "3464.0",
+  "t": "Nesiritide",
+  "q": "Nesiritide"
+ },
+ "Linaklotyd": {
+  "cid": 16158208,
+  "f": "C59H79N15O21S6",
+  "mw": "1526.8",
+  "t": "Linaclotide",
+  "q": "Linaclotide"
+ },
+ "Plekanatyd": {
+  "cid": 70693500,
+  "f": "C65H104N18O26S4",
+  "mw": "1681.9",
+  "t": "Plecanatide",
+  "q": "Plecanatide"
+ },
+ "Teduglutyd": {
+  "cid": 16139605,
+  "f": "C164H252N44O55S",
+  "mw": "3752.1",
+  "t": "Teduglutide",
+  "q": "Teduglutide"
+ },
+ "Oktreotyd": {
+  "cid": 448601,
+  "f": "C49H66N10O10S2",
+  "mw": "1019.2",
+  "t": "Octreotide",
+  "q": "Octreotide"
+ },
+ "Lanreotyd": {
+  "cid": 6918011,
+  "f": "C54H69N11O10S2",
+  "mw": "1096.3",
+  "t": "Lanreotide",
+  "q": "Lanreotide"
+ },
+ "Pasyreotyd": {
+  "cid": 9941444,
+  "f": "C58H66N10O9",
+  "mw": "1047.2",
+  "t": "Pasireotide",
+  "q": "Pasireotide"
+ },
+ "Motyksafortyd": {
+  "cid": 91865076,
+  "f": "C97H144FN33O19S2",
+  "mw": "2159.5",
+  "t": "Motixafortide",
+  "q": "Motixafortide"
+ },
+ "Glatyramer": null,
+ "Ikatybant": {
+  "cid": 6918173,
+  "f": "C59H89N19O13S",
+  "mw": "1304.5",
+  "t": "Icatibant",
+  "q": "Icatibant"
+ },
+ "Pegcetakoplan i zilukoplan": null,
+ "Enfuwirtyd": {
+  "cid": 16130199,
+  "f": "C204H301N51O64",
+  "mw": "4492",
+  "t": "Enfuvirtide",
+  "q": "Enfuvirtide"
+ },
+ "Wankomycyna": {
+  "cid": 14969,
+  "f": "C66H75Cl2N9O24",
+  "mw": "1449.2",
+  "t": "Vancomycin",
+  "q": "Vancomycin"
+ },
+ "Daptomycyna": {
+  "cid": 21585658,
+  "f": "C72H101N17O26",
+  "mw": "1620.7",
+  "t": "Daptomycin",
+  "q": "Daptomycin"
+ },
+ "Setmelanotyd": {
+  "cid": 11993702,
+  "f": "C49H68N18O9S2",
+  "mw": "1117.3",
+  "t": "Setmelanotide",
+  "q": "Setmelanotide"
+ },
+ "Cyklosporyna": {
+  "cid": 5284373,
+  "f": "C62H111N11O12",
+  "mw": "1202.6",
+  "t": "Cyclosporin A",
+  "q": "Cyclosporine"
+ },
+ "Telawancyna": {
+  "cid": 3081362,
+  "f": "C80H106Cl2N11O27P",
+  "mw": "1755.6",
+  "t": "Telavancin",
+  "q": "Telavancin"
+ },
+ "Orytawancyna": {
+  "cid": 16136912,
+  "f": "C86H97Cl3N10O26",
+  "mw": "1793.1",
+  "t": "Oritavancin",
+  "q": "Oritavancin"
+ },
+ "Romidepsyna": {
+  "cid": 5352062,
+  "f": "C24H36N4O6S2",
+  "mw": "540.7",
+  "t": "Romidepsin",
+  "q": "Romidepsin"
+ },
+ "Palopegteriparatyd": null,
+ "Sekretyna": {
+  "cid": 16129665,
+  "f": "C130H219N43O42",
+  "mw": "3056.4",
+  "t": "Secretin",
+  "q": "Secretin"
+ },
+ "Dalbawancyna": {
+  "cid": 16134627,
+  "f": "C88H100Cl2N10O28",
+  "mw": "1816.7",
+  "t": "Dalbavancin",
+  "q": "Dalbavancin"
+ },
+ "Glukagon": {
+  "cid": 16132283,
+  "f": "C153H225N43O49S",
+  "mw": "3482.7",
+  "t": "Glucagon",
+  "q": "Glucagon"
+ },
+ "Etelkalcetyd": {
+  "cid": 71511839,
+  "f": "C38H73N21O10S2",
+  "mw": "1048.3",
+  "t": "Etelcalcetide",
+  "q": "Etelcalcetide"
+ },
+ "Angiotensyna II": {
+  "cid": 172198,
+  "f": "C50H71N13O12",
+  "mw": "1046.2",
+  "t": "Angiotensin Ii",
+  "q": "Angiotensin II"
+ },
+ "Dazyglukagon": {
+  "cid": 126961379,
+  "f": "C152H222N38O50",
+  "mw": "3381.6",
+  "t": "Dasiglucagon",
+  "q": "Dasiglucagon"
+ },
+ "Synkalid": {
+  "cid": 9833444,
+  "f": "C49H62N10O16S3",
+  "mw": "1143.3",
+  "t": "Sincalide",
+  "q": "Sincalide"
+ },
+ "Glutation": {
+  "cid": 124886,
+  "f": "C10H17N3O6S",
+  "mw": "307.33",
+  "t": "Glutathione",
+  "q": "Glutathione"
+ },
+ "GHK-Cu": null,
+ "AHK-Cu": null,
+ "Matrixyl": {
+  "cid": 9897237,
+  "f": "C39H75N7O10",
+  "mw": "802.1",
+  "t": "Palmitoyl Pentapeptide-4",
+  "q": "Matrixyl"
+ },
+ "Snap-8": {
+  "cid": 71587832,
+  "f": "C42H72N16O15S",
+  "mw": "1073.2",
+  "t": "Acetyl octapeptide-3",
+  "q": "Snap-8"
+ },
+ "PTD-DBM": {
+  "cid": 176453931,
+  "f": "C124H225N61O28S2",
+  "mw": "3082.6",
+  "t": "Ptd-dbm",
+  "q": "PTD-DBM"
+ },
+ "Buserelina": {
+  "cid": 50225,
+  "f": "C60H86N16O13",
+  "mw": "1239.4",
+  "t": "Buserelin",
+  "q": "Buserelin"
+ },
+ "Histrelina": {
+  "cid": 25077993,
+  "f": "C66H86N18O12",
+  "mw": "1323.5",
+  "t": "Histrelin",
+  "q": "Histrelin"
+ },
+ "Nafarelina": {
+  "cid": 25077405,
+  "f": "C66H83N17O13",
+  "mw": "1322.5",
+  "t": "Nafarelin",
+  "q": "Nafarelin"
+ },
+ "Abareliks": {
+  "cid": 16131215,
+  "f": "C72H95ClN14O14",
+  "mw": "1416.1",
+  "t": "Abarelix",
+  "q": "Abarelix"
+ },
+ "Atosiban": {
+  "cid": 5311010,
+  "f": "C43H67N11O12S2",
+  "mw": "994.2",
+  "t": "Atosiban",
+  "q": "Atosiban"
+ },
+ "Karbetocyna": {
+  "cid": 16681432,
+  "f": "C45H69N11O12S",
+  "mw": "988.2",
+  "t": "Carbetocin",
+  "q": "Carbetocin"
+ },
+ "Kozyntropina": {
+  "cid": 16129617,
+  "f": "C136H210N40O31S",
+  "mw": "2933.4",
+  "t": "Cosyntropin",
+  "q": "Cosyntropin"
+ },
+ "Kortykorelina": {
+  "cid": 16186200,
+  "f": "C208H344N60O63S2",
+  "mw": "4757",
+  "t": "Corticorelin",
+  "q": "Corticorelin"
+ },
+ "Somatostatyna": {
+  "cid": 16129706,
+  "f": "C76H104N18O19S2",
+  "mw": "1637.9",
+  "t": "Somatostatin",
+  "q": "Somatostatin"
+ },
+ "Mekasermina": null,
+ "Macimorelina": {
+  "cid": 9804938,
+  "f": "C26H30N6O3",
+  "mw": "474.6",
+  "t": "Macimorelin",
+  "q": "Macimorelin"
+ },
+ "Anamorelina": {
+  "cid": 9828911,
+  "f": "C31H42N6O3",
+  "mw": "546.7",
+  "t": "Anamorelin",
+  "q": "Anamorelin"
+ },
+ "Bortezomib": {
+  "cid": 387447,
+  "f": "C19H25BN4O4",
+  "mw": "384.2",
+  "t": "Bortezomib",
+  "q": "Bortezomib"
+ },
+ "Karfilzomib": {
+  "cid": 11556711,
+  "f": "C40H57N5O7",
+  "mw": "719.9",
+  "t": "Carfilzomib",
+  "q": "Carfilzomib"
+ },
+ "Iksazomib": {
+  "cid": 25183872,
+  "f": "C14H19BCl2N2O4",
+  "mw": "361.0",
+  "t": "Ixazomib",
+  "q": "Ixazomib"
+ },
+ "Kangrelor": {
+  "cid": 9854012,
+  "f": "C17H25Cl2F3N5O12P3S2",
+  "mw": "776.4",
+  "t": "Cangrelor",
+  "q": "Cangrelor"
+ },
+ "Defibrotyd": null,
+ "Pegwisomant": null,
+ "Romiplostym": null,
+ "Peginesatyd": null,
+ "Albiglutyd": {
+  "cid": 122173812,
+  "f": "C148H223N39O46",
+  "mw": "3284.6",
+  "t": "Albiglutide",
+  "q": "Albiglutide"
+ },
+ "Elkatonina": {
+  "cid": 53395169,
+  "f": "C148H244N42O47",
+  "mw": "3363.8",
+  "t": "Elcatonin",
+  "q": "Elcatonin"
+ },
+ "CJC-1295 z DAC": null,
+ "IGF-1 DES": null,
+ "PEG-MGF": null,
+ "Folistatyna 344": null,
+ "Folistatyna 315": null,
+ "GDF-11": null,
+ "Propeptyd miostatyny": null,
+ "Tymozyna beta-4": {
+  "cid": 45382195,
+  "f": "C212H350N56O78S",
+  "mw": "4963",
+  "t": "Thymosin Beta 4",
+  "q": "Thymosin beta-4"
+ },
+ "Ac-SDKP": {
+  "cid": 65938,
+  "f": "C20H33N5O9",
+  "mw": "487.5",
+  "t": "Goralatide",
+  "q": "Ac-SDKP"
+ },
+ "Larazotyd": {
+  "cid": 9810532,
+  "f": "C32H55N9O10",
+  "mw": "725.8",
+  "t": "Larazotide",
+  "q": "Larazotide"
+ },
+ "Lekanemab": null,
+ "Donanemab": null,
+ "Erenumab": null,
+ "Galkanezumab": null,
+ "Fremanezumab": null,
+ "Eptinezumab": null,
+ "Stamulumab": null,
+ "Abatacept": null,
+ "Belatacept": null,
+ "Ziw-aflibercept": null,
+ "Anakinra": null,
+ "Apadamtaza alfa": null,
+ "Asfotaza alfa": null,
+ "Sebelipaza alfa": null,
+ "Elosulfaza alfa": null,
+ "Idursulfaza": null,
+ "Galsulfaza": null,
+ "Alglukozydaza alfa": null,
+ "Agalzydaza beta": null,
+ "Imigluceraza": null,
+ "Taligluceraza alfa": null,
+ "Welagluceraza alfa": null,
+ "Westronidaza alfa": null,
+ "Vilon": {
+  "cid": 7010502,
+  "f": "C11H21N3O5",
+  "mw": "275.30",
+  "t": "Lysylglutamic acid",
+  "q": "Vilon"
+ },
+ "Livagen": {
+  "cid": 87919683,
+  "f": "C18H31N5O9",
+  "mw": "461.5",
+  "t": "Livagen",
+  "q": "Livagen"
+ },
+ "Tymogen": {
+  "cid": 100094,
+  "f": "C16H19N3O5",
+  "mw": "333.34",
+  "t": "Thymogen",
+  "q": "Thymogen"
+ },
+ "Imunofan": {
+  "cid": 15788399,
+  "f": "C36H61N13O10",
+  "mw": "836.0",
+  "t": "Imunofan",
+  "q": "Imunofan"
+ },
+ "Korteksyna": null,
+ "Noopept": {
+  "cid": 180496,
+  "f": "C17H22N2O4",
+  "mw": "318.4",
+  "t": "1-(2-Phenylacetyl)-L-prolylglycine ethy ester",
+  "q": "Noopept"
+ },
+ "N-acetylo-selank": {
+  "cid": 133082488,
+  "f": "C35H59N11O10",
+  "mw": "793.9",
+  "t": "N-Acetyl selank",
+  "q": "N-Acetyl Selank"
+ },
+ "Glypromate": {
+  "cid": 3080768,
+  "f": "C12H19N3O6",
+  "mw": "301.30",
+  "t": "Glycyl-prolyl-glutamic acid",
+  "q": "Glypromate"
+ },
+ "FGL": null,
+ "Rigin": {
+  "cid": 127555,
+  "f": "C18H32N8O6",
+  "mw": "456.5",
+  "t": "Rigin",
+  "q": "Rigin"
+ },
+ "GHK": {
+  "cid": 73587,
+  "f": "C14H24N6O4",
+  "mw": "340.38",
+  "t": "glycyl-L-histidyl-L-lysine",
+  "q": "GHK"
+ },
+ "Tabimorelina": {
+  "cid": 9810101,
+  "f": "C32H40N4O3",
+  "mw": "528.7",
+  "t": "Tabimorelin",
+  "q": "Tabimorelin"
+ },
+ "Teprotyd": {
+  "cid": 443376,
+  "f": "C53H76N14O12",
+  "mw": "1101.3",
+  "t": "Teprotide",
+  "q": "Teprotide"
+ },
+ "Epifadyna": {
+  "cid": 170453135,
+  "f": "C51H63N7O12",
+  "mw": "966.1",
+  "t": "Epifadin",
+  "q": "Epifadin"
+ },
+ "Ekonoglutyd": {
+  "cid": 162625103,
+  "f": "C194H304N48O61",
+  "mw": "4285",
+  "t": "Ecnoglutide",
+  "q": "Ecnoglutide"
+ },
+ "Pemwidutyd": null,
+ "Efpeglenatyd": null,
+ "Kotadutyd": {
+  "cid": 134694273,
+  "f": "C167H252N42O55",
+  "mw": "3728.0",
+  "t": "Cotadutide",
+  "q": "Cotadutide"
+ },
+ "Sekwencja G-L-O-W": null,
+ "Nazwy bez potwierdzenia": null,
+ "Peptydy owsiane": null,
+ "Peptydy jedwabiu": null,
+ "Mekasermina rinfabat": null,
+ "GLOW": null,
+ "KLOW": null,
+ "Rusfertyd": {
+  "cid": 155884410,
+  "f": "C114H181N27O28S2",
+  "mw": "2442.0",
+  "t": "Rusfertide",
+  "q": "Rusfertide"
+ },
+ "Eloralintyd": {
+  "cid": 175663130,
+  "f": "C201H319N49O65S2",
+  "mw": "4526",
+  "t": "Eloralintide",
+  "q": "Eloralintide"
+ },
+ "Petrelintyd": {
+  "cid": 172915807,
+  "f": "C185H305N49O61",
+  "mw": "4192",
+  "t": "Petrelintide",
+  "q": "Petrelintide"
+ }
+}

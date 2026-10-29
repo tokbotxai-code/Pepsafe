@@ -26,6 +26,7 @@ const { D, EN, ST, ST_EN, FAMS, FAMS_EN, DAILY, FAQ, QA, ALERTS, TRICKS, MYTHS, 
 // longer write-ups per substance, kept out of dane.html so they can grow: {"<PL name>": {"pl": [paragraphs], "en": [paragraphs]}}
 const SKUTKI = require('./skutki.js');
 const PLUS = fs.existsSync(path.join(root, 'plusy.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'plusy.json'), 'utf8')) : {};   // advantages and disadvantages per card (plusy.json: en/pl/es lists)
+const MOL = fs.existsSync(path.join(root, 'molekuly.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'molekuly.json'), 'utf8')) : {};   // formula, weight, PubChem id (tools/molekuly.js)
 const OPISY = fs.existsSync(path.join(root, 'opisy.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'opisy.json'), 'utf8')) : {};
 // "Peptyd dnia": the newest entry dated today or earlier (UK), so entries written ahead show up on their own day
 const TODAY = process.env.PEP_TODAY || new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
@@ -401,6 +402,16 @@ function notSame(e, en, L) {
   const x = NOTSAME[e.n]; const o = x && D.find(y => y.n === x[0]);
   if (!o) return '';
   return `<aside class="blk reveal notsame"><h2 class="kick">${en ? 'Not the same thing' : 'To nie to samo'}</h2><p>${esc(en ? x[1] : x[2])}</p><p><span>${en ? 'See:' : 'Zobacz:'}</span> <a href="${BASE}${cardPath(o, L)}">${esc(nm(o.n, en))}${ARROW}</a></p></aside>`;
+}
+// molecule facts from PubChem: formula, weight, link (numbers only, same in every language)
+function molBox(e, en, L) {
+  const x = MOL[e.n]; if (!x) return '';
+  const g = o => o[L] || o.en;
+  const f = esc(x.f).replace(/(\d+)/g, '<sub>$1</sub>');
+  return `<section class="blk reveal molbox"><h2 class="kick">${esc(g({ en: 'Molecule', pl: 'Cząsteczka' }))}</h2>
+    <dl class="mol"><div><dt>${esc(g({ en: 'Formula', pl: 'Wzór' }))}</dt><dd>${f}</dd></div>
+    <div><dt>${esc(g({ en: 'Molecular weight', pl: 'Masa cząsteczkowa' }))}</dt><dd>${esc(L === 'pl' ? String(Number(x.mw).toFixed(1)).replace(/\.0$/, '').replace('.', ',') : String(Number(x.mw).toFixed(1)).replace(/\.0$/, ''))} g/mol</dd></div></dl>
+    <p class="small ink2"><a href="https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid}" rel="noopener" target="_blank">${esc(g({ en: 'Structure and details on PubChem', pl: 'Struktura i szczegóły w PubChem' }))}${ARROW}</a></p></section>`;
 }
 const cardRow = (e, en, L) => `<a class="card tile reveal" href="${BASE}${cardPath(e, L)}">
       <span><b>${esc(nm(e.n, en))}</b><em>${esc(en && EN[e.n] ? EN[e.n][1] : e.c)}</em></span>
@@ -860,7 +871,7 @@ function card(e, L) {
     </div>
 
     ${notSame(e, en, L)}
-    ${sec(t.what, d)}${sec(t.how, m)}${sec(t.use, u)}${sec(t.ev, ev)}${(() => { const o = (OPISY[e.n] || {})[L] || (OPISY[e.n] || {}).en; return o && o.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'In depth' : 'Więcej szczegółów'}</h2>${o.map(x => `<p>${esc(x)}</p>`).join('')}</section>` : ''; })()}${guideBox(e, en, L)}
+    ${sec(t.what, d)}${sec(t.how, m)}${molBox(e, en, L)}${sec(t.use, u)}${sec(t.ev, ev)}${(() => { const o = (OPISY[e.n] || {})[L] || (OPISY[e.n] || {}).en; return o && o.length ? `<section class="blk reveal"><h2 class="kick">${en ? 'In depth' : 'Więcej szczegółów'}</h2>${o.map(x => `<p>${esc(x)}</p>`).join('')}</section>` : ''; })()}${guideBox(e, en, L)}
     ${(() => { const pc = PLUS[e.n]; if (!pc) return ''; const li = a => (a[L] || a.en || []).map(x => `<li>${esc(x)}</li>`).join(''); return `<section class="blk reveal pcgrid"><div class="pc"><h2 class="kick">${en ? 'Advantages' : 'Zalety'}</h2><ul class="srcs-list">${li(pc.pros)}</ul></div><div class="pc"><h2 class="kick">${en ? 'Disadvantages' : 'Wady'}</h2><ul class="srcs-list">${li(pc.cons)}</ul></div></section>`; })()}
     ${SKUTKI.html(e.n, L, esc)}
     ${w ? `<section class="blk note reveal"><h2 class="kick">${esc(t.care)}</h2><p>${esc(w)}</p></section>` : ''}
