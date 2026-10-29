@@ -620,3 +620,4 @@ header.bar input { -webkit-user-select: text; user-select: text; }
 .notsame p{margin:0 0 6px}
 .notsame a svg{display:inline;vertical-align:-2px}
 .mol{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 10px}.mol div{border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:var(--shade)}.mol dt{font-size:12px;color:var(--ink3);margin:0 0 4px}.mol dd{margin:0;font-size:18px;font-weight:600;word-break:break-word}
+.mol dd.seq{font-size:14px;font-weight:500;font-family:'JetBrains Mono',monospace}
