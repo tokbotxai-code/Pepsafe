@@ -121,11 +121,11 @@
   "q": "Sermorelin"
  },
  "CJC-1295": {
-  "cid": 91971820,
-  "f": "C165H269N47O46",
-  "mw": "3647.2",
-  "t": "Cjc 1295",
-  "q": "CJC-1295"
+  "f": "C152H252N44O42",
+  "mw": "3368.0",
+  "t": "Modified GRF (1-29)",
+  "q": "CJC-1295",
+  "calc": true
  },
  "Ipamorelina": {
   "cid": 9831659,
@@ -756,7 +756,13 @@
   "t": "Elcatonin",
   "q": "Elcatonin"
  },
- "CJC-1295 z DAC": null,
+ "CJC-1295 z DAC": {
+  "cid": 91971820,
+  "f": "C165H269N47O46",
+  "mw": "3647.2",
+  "t": "CJC 1295",
+  "q": "CJC-1295 with DAC"
+ },
  "IGF-1 DES": null,
  "PEG-MGF": null,
  "Folistatyna 344": null,

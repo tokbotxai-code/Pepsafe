@@ -4341,5 +4341,10 @@
  "1311.4 g/mol": "1311,4 g/mol",
  "1449.2 g/mol": "1449,2 g/mol",
  "4103 g/mol": "4103 g/mol",
- "2639.2 g/mol": "2639,2 g/mol"
+ "2639.2 g/mol": "2639,2 g/mol",
+ "CJC-1295 no DAC, Mod GRF 1-29": "CJC-1295 sin DAC, Mod GRF 1-29",
+ "Acts on the GHRH receptor. This card covers the version without DAC (modified GRF 1-29, short-acting); the DAC version binds albumin and has its own card.": "Actúa sobre el receptor de GHRH. Esta ficha trata la versión sin DAC (GRF 1-29 modificado, de acción corta); la versión con DAC se une a la albúmina y tiene su propia ficha.",
+ "3368 g/mol": "3368 g/mol",
+ "Calculated from the amino acid sequence.": "Calculado a partir de la secuencia de aminoácidos.",
+ "29 October 2026": "29 de octubre de 2026"
 }
