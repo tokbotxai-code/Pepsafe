@@ -409,7 +409,7 @@ function molBox(e, en, L) {
   const g = o => o[L] || o.en;
   const f = esc(x.f).replace(/(\d+)/g, '<sub>$1</sub>');
   return `<section class="blk reveal molbox"><h2 class="kick">${esc(g({ en: 'Molecule', pl: 'Cząsteczka' }))}</h2>
-    <dl class="mol"><div><dt>${esc(g({ en: 'Formula', pl: 'Wzór' }))}</dt><dd>${f}</dd></div>${x.seq ? `<div><dt>${esc(g({ en: 'Sequence', pl: 'Sekwencja' }))}</dt><dd class="seq">${esc(x.seq)}</dd></div>` : ''}
+    <dl class="mol"><div><dt>${esc(g({ en: 'Formula', pl: 'Wzór' }))}</dt><dd>${f}</dd></div>${x.seq ? `<div><dt>${esc(g({ en: 'Sequence', pl: 'Sekwencja' }))}</dt><dd class="seq">${esc(L === 'pl' ? x.seq.replace('(disulfide ', '(mostek disulfidowy ') : x.seq)}</dd></div>` : ''}
     <div><dt>${esc(g({ en: 'Molecular weight', pl: 'Masa cząsteczkowa' }))}</dt><dd>${esc(L === 'pl' ? String(Number(x.mw).toFixed(1)).replace(/\.0$/, '').replace('.', ',') : String(Number(x.mw).toFixed(1)).replace(/\.0$/, ''))} g/mol</dd></div></dl>
     <p class="small ink2">${x.cid ? `<a href="https://pubchem.ncbi.nlm.nih.gov/compound/${x.cid}" rel="noopener" target="_blank">${esc(g({ en: 'Structure and details on PubChem', pl: 'Struktura i szczegóły w PubChem' }))}${ARROW}</a>` : esc(g({ en: 'Calculated from the amino acid sequence.', pl: 'Obliczone z sekwencji aminokwasów.' }))}</p></section>`;
 }

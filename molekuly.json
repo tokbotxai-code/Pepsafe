@@ -70,7 +70,8 @@
   "f": "C78H123N23O23S2",
   "mw": "1815.1",
   "t": "Aod-9604",
-  "q": "AOD9604"
+  "q": "AOD9604",
+  "seq": "Tyr-Leu-Arg-Ile-Val-Gln-Cys-Arg-Ser-Val-Glu-Gly-Ser-Cys-Gly-Phe (disulfide Cys7–Cys14)"
  },
  "HGH Fragment 176–191": null,
  "Adipotide": {
@@ -132,28 +133,32 @@
   "f": "C38H49N9O5",
   "mw": "711.9",
   "t": "Ipamorelin",
-  "q": "Ipamorelin"
+  "q": "Ipamorelin",
+  "seq": "Aib-His-D-2Nal-D-Phe-Lys-NH2"
  },
  "GHRP-2": {
   "cid": 6918245,
   "f": "C45H55N9O6",
   "mw": "818.0",
   "t": "Pralmorelin",
-  "q": "GHRP-2"
+  "q": "GHRP-2",
+  "seq": "D-Ala-D-2Nal-Ala-Trp-D-Phe-Lys-NH2"
  },
  "GHRP-6": {
   "cid": 4345065,
   "f": "C46H56N12O6",
   "mw": "873.0",
   "t": "Ghrp-6",
-  "q": "GHRP-6"
+  "q": "GHRP-6",
+  "seq": "His-D-Trp-Ala-Trp-D-Phe-Lys-NH2"
  },
  "Heksarelina": {
   "cid": 6918297,
   "f": "C47H58N12O6",
   "mw": "887.0",
   "t": "Examorelin",
-  "q": "Hexarelin"
+  "q": "Hexarelin",
+  "seq": "His-D-2-methyl-Trp-Ala-Trp-D-Phe-Lys-NH2"
  },
  "IGF-1 LR3": null,
  "MGF i PEG-MGF": null,
@@ -243,7 +248,8 @@
   "f": "C51H84N16O21",
   "mw": "1257.3",
   "t": "Cibinetide",
-  "q": "ARA290"
+  "q": "ARA290",
+  "seq": "pGlu-Glu-Gln-Leu-Glu-Arg-Ala-Leu-Asn-Ser-Ser"
  },
  "B7-33": null,
  "DSIP": {
@@ -308,7 +314,8 @@
   "f": "C55H75N17O13",
   "mw": "1182.3",
   "t": "Gonadorelin",
-  "q": "Gonadorelin"
+  "q": "Gonadorelin",
+  "seq": "pGlu-His-Trp-Ser-Tyr-Gly-Leu-Arg-Pro-Gly-NH2"
  },
  "Kisspeptyna-10": {
   "cid": 25240297,
@@ -353,7 +360,8 @@
   "f": "C43H66N12O12S2",
   "mw": "1007.2",
   "t": "Oxytocin",
-  "q": "Oxytocin"
+  "q": "Oxytocin",
+  "seq": "Cys-Tyr-Ile-Gln-Asn-Cys-Pro-Leu-Gly-NH2 (disulfide Cys1–Cys6)"
  },
  "HCG i HMG": null,
  "Afamelanotyd": {
@@ -361,7 +369,8 @@
   "f": "C78H111N21O19",
   "mw": "1646.8",
   "t": "Afamelanotide",
-  "q": "Afamelanotide"
+  "q": "Afamelanotide",
+  "seq": "Ac-Ser-Tyr-Ser-Nle-Glu-His-D-Phe-Arg-Trp-Gly-Lys-Pro-Val-NH2"
  },
  "Melanotan II": {
   "cid": 92432,
@@ -376,7 +385,8 @@
   "f": "C50H68N14O10",
   "mw": "1025.2",
   "t": "Bremelanotide",
-  "q": "PT-141"
+  "q": "PT-141",
+  "seq": "Ac-Nle-cyclo[Asp-His-D-Phe-Arg-Trp-Lys]-OH"
  },
  "ACTH 1–39": null,
  "Melatonina": {
@@ -423,7 +433,8 @@
   "f": "C46H64N14O12S2",
   "mw": "1069.2",
   "t": "Desmopressin",
-  "q": "Desmopressin"
+  "q": "Desmopressin",
+  "seq": "Mpa-Tyr-Phe-Gln-Asn-Cys-Pro-D-Arg-Gly-NH2 (disulfide Mpa1–Cys6)"
  },
  "Terlipresyna": {
   "cid": 72081,
@@ -601,7 +612,8 @@
   "f": "C50H71N13O12",
   "mw": "1046.2",
   "t": "Angiotensin Ii",
-  "q": "Angiotensin II"
+  "q": "Angiotensin II",
+  "seq": "Asp-Arg-Val-Tyr-Ile-His-Pro-Phe"
  },
  "Dazyglukagon": {
   "cid": 126961379,
@@ -631,7 +643,8 @@
   "f": "C39H75N7O10",
   "mw": "802.1",
   "t": "Palmitoyl Pentapeptide-4",
-  "q": "Matrixyl"
+  "q": "Matrixyl",
+  "seq": "Palmitoyl-Lys-Thr-Thr-Lys-Ser"
  },
  "Snap-8": {
   "cid": 71587832,
@@ -708,7 +721,8 @@
   "f": "C76H104N18O19S2",
   "mw": "1637.9",
   "t": "Somatostatin",
-  "q": "Somatostatin"
+  "q": "Somatostatin",
+  "seq": "Ala-Gly-Cys-Lys-Asn-Phe-Phe-Trp-Lys-Thr-Phe-Thr-Ser-Cys (disulfide Cys3–Cys14)"
  },
  "Mekasermina": null,
  "Macimorelina": {
@@ -796,14 +810,16 @@
   "f": "C20H33N5O9",
   "mw": "487.5",
   "t": "Goralatide",
-  "q": "Ac-SDKP"
+  "q": "Ac-SDKP",
+  "seq": "Ac-Ser-Asp-Lys-Pro"
  },
  "Larazotyd": {
   "cid": 9810532,
   "f": "C32H55N9O10",
   "mw": "725.8",
   "t": "Larazotide",
-  "q": "Larazotide"
+  "q": "Larazotide",
+  "seq": "Gly-Gly-Val-Leu-Val-Gln-Pro-Gly"
  },
  "Lekanemab": null,
  "Donanemab": null,
@@ -833,21 +849,24 @@
   "f": "C11H21N3O5",
   "mw": "275.30",
   "t": "Lysylglutamic acid",
-  "q": "Vilon"
+  "q": "Vilon",
+  "seq": "Lys-Glu"
  },
  "Livagen": {
   "cid": 87919683,
   "f": "C18H31N5O9",
   "mw": "461.5",
   "t": "Livagen",
-  "q": "Livagen"
+  "q": "Livagen",
+  "seq": "Lys-Glu-Asp-Ala"
  },
  "Tymogen": {
   "cid": 100094,
   "f": "C16H19N3O5",
   "mw": "333.34",
   "t": "Thymogen",
-  "q": "Thymogen"
+  "q": "Thymogen",
+  "seq": "Glu-Trp"
  },
  "Imunofan": {
   "cid": 15788399,
@@ -876,7 +895,8 @@
   "f": "C12H19N3O6",
   "mw": "301.30",
   "t": "Glycyl-prolyl-glutamic acid",
-  "q": "Glypromate"
+  "q": "Glypromate",
+  "seq": "Gly-Pro-Glu"
  },
  "FGL": null,
  "Rigin": {
@@ -884,7 +904,8 @@
   "f": "C18H32N8O6",
   "mw": "456.5",
   "t": "Rigin",
-  "q": "Rigin"
+  "q": "Rigin",
+  "seq": "Gly-Gln-Pro-Arg"
  },
  "GHK": {
   "cid": 73587,
@@ -906,7 +927,8 @@
   "f": "C53H76N14O12",
   "mw": "1101.3",
   "t": "Teprotide",
-  "q": "Teprotide"
+  "q": "Teprotide",
+  "seq": "pGlu-Trp-Pro-Arg-Pro-Gln-Ile-Pro-Pro"
  },
  "Epifadyna": {
   "cid": 170453135,
