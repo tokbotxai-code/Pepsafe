@@ -165,11 +165,18 @@
   "f": "C62H98N16O22",
   "mw": "1419.5",
   "t": "Bpc-157",
-  "q": "BPC-157"
+  "q": "BPC-157",
+  "seq": "GEPPPGKPADDAGLV (15 aa)"
  },
  "TB-500": null,
  "BPC-157 + TB-500": null,
- "KPV": null,
+ "KPV": {
+  "seq": "KPV",
+  "f": "C16H30N4O4",
+  "mw": "342.4",
+  "q": "KPV",
+  "calc": true
+ },
  "LL-37": {
   "cid": 16198951,
   "f": "C205H340N60O53",
@@ -198,7 +205,8 @@
   "f": "C101H152N28O22S2",
   "mw": "2174.6",
   "t": "Mots-c",
-  "q": "MOTS-c"
+  "q": "MOTS-c",
+  "seq": "MRWQEMGYIFYPRKLR (16 aa)"
  },
  "SS-31": {
   "cid": 11764719,
@@ -212,7 +220,8 @@
   "f": "C14H22N4O9",
   "mw": "390.35",
   "t": "Epitalon",
-  "q": "Epitalon"
+  "q": "Epitalon",
+  "seq": "AEDG"
  },
  "Peptydy bioregulatory": null,
  "FOXO4-DRI": {
@@ -242,14 +251,16 @@
   "f": "C35H48N10O15",
   "mw": "848.8",
   "t": "Delta Sleep-Inducing Peptide",
-  "q": "DSIP"
+  "q": "DSIP",
+  "seq": "WAGGDASGE (9 aa)"
  },
  "Semax": {
   "cid": 9811102,
   "f": "C37H51N9O10S",
   "mw": "813.9",
   "t": "ACTH (4-7), Pro-Gly-Pro-",
-  "q": "Semax"
+  "q": "Semax",
+  "seq": "MEHFPGP (7 aa)"
  },
  "Dihexa": {
   "cid": 129010512,
@@ -264,7 +275,8 @@
   "f": "C33H57N11O9",
   "mw": "751.9",
   "t": "Selank",
-  "q": "Selank"
+  "q": "Selank",
+  "seq": "TKPRPGP (7 aa)"
  },
  "P21": null,
  "PE-22-28": null,
@@ -301,9 +313,11 @@
  "Kisspeptyna-10": {
   "cid": 25240297,
   "f": "C63H83N17O14",
-  "mw": "1302.4",
+  "mw": "1302.5",
   "t": "Kisspeptin-10",
-  "q": "Kisspeptin-10"
+  "q": "Kisspeptin-10",
+  "seq": "YNWNSFGLRF-NH2 (10 aa)",
+  "calc": true
  },
  "Triptorelina": {
   "cid": 25074470,
@@ -877,7 +891,8 @@
   "f": "C14H24N6O4",
   "mw": "340.38",
   "t": "glycyl-L-histidyl-L-lysine",
-  "q": "GHK"
+  "q": "GHK",
+  "seq": "GHK"
  },
  "Tabimorelina": {
   "cid": 9810101,
