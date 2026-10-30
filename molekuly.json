@@ -26,7 +26,8 @@
   "f": "C184H282N50O60S",
   "mw": "4187",
   "t": "Exenatide",
-  "q": "Exenatide"
+  "q": "Exenatide",
+  "seq": "His-Gly-Glu-Gly-Thr-Phe-Thr-Ser-Asp-Leu-Ser-Lys-Gln-Met-Glu-Glu-Glu-Ala-Val-Arg-Leu-Phe-Ile-Glu-Trp-Leu-Lys-Asn-Gly-Gly-Pro-Ser-Ser-Gly-Ala-Pro-Pro-Pro-Ser-NH2 (39 aa)"
  },
  "Liksysenatyd": {
   "cid": 90472060,
@@ -62,7 +63,8 @@
   "f": "C171H267N51O53S2",
   "mw": "3949",
   "t": "Pramlintide",
-  "q": "Pramlintide"
+  "q": "Pramlintide",
+  "seq": "Lys-Cys-Asn-Thr-Ala-Thr-Cys-Ala-Thr-Gln-Arg-Leu-Ala-Asn-Phe-Leu-Val-His-Ser-Ser-Asn-Asn-Phe-Gly-Pro-Ile-Leu-Pro-Pro-Thr-Asn-Val-Gly-Ser-Asn-Thr-Tyr-NH2 (37 aa, disulfide Cys2–Cys7)"
  },
  "Insuliny i analogi": null,
  "AOD9604": {
@@ -119,7 +121,8 @@
   "f": "C149H246N44O42S",
   "mw": "3357.9",
   "t": "Sermorelin",
-  "q": "Sermorelin"
+  "q": "Sermorelin",
+  "seq": "Tyr-Ala-Asp-Ala-Ile-Phe-Thr-Asn-Ser-Tyr-Arg-Lys-Val-Leu-Gly-Gln-Leu-Ser-Ala-Arg-Lys-Leu-Leu-Gln-Asp-Ile-Met-Ser-Arg-NH2 (29 aa)"
  },
  "CJC-1295": {
   "f": "C152H252N44O42",
@@ -194,7 +197,8 @@
   "f": "C129H215N33O55",
   "mw": "3108.3",
   "t": "Thymalfasin",
-  "q": "Thymosin alpha-1"
+  "q": "Thymosin alpha-1",
+  "seq": "Ac-Ser-Asp-Ala-Ala-Val-Asp-Thr-Ser-Ser-Glu-Ile-Thr-Thr-Lys-Asp-Leu-Lys-Glu-Lys-Lys-Glu-Val-Val-Glu-Glu-Ala-Glu-Asn (28 aa)"
  },
  "Tymalina i tymulina": null,
  "VIP": null,
@@ -404,7 +408,8 @@
   "f": "C181H291N55O51S2",
   "mw": "4118",
   "t": "Teriparatide",
-  "q": "Teriparatide"
+  "q": "Teriparatide",
+  "seq": "Ser-Val-Ser-Glu-Ile-Gln-Leu-Met-His-Asn-Leu-Gly-Lys-His-Leu-Asn-Ser-Met-Glu-Arg-Val-Glu-Trp-Leu-Arg-Lys-Lys-Leu-Gln-Asp-Val-His-Asn-Phe (34 aa)"
  },
  "Abaloparatyd": {
   "cid": 76943386,
@@ -598,7 +603,8 @@
   "f": "C153H225N43O49S",
   "mw": "3482.7",
   "t": "Glucagon",
-  "q": "Glucagon"
+  "q": "Glucagon",
+  "seq": "His-Ser-Gln-Gly-Thr-Phe-Thr-Ser-Asp-Tyr-Ser-Lys-Tyr-Leu-Asp-Ser-Arg-Arg-Ala-Gln-Asp-Phe-Val-Gln-Trp-Leu-Met-Asn-Thr (29 aa)"
  },
  "Etelkalcetyd": {
   "cid": 71511839,
