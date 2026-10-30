@@ -341,6 +341,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
   odsyłającą do drugiego. Nie łączyć ich.
 
 ## TikTok po ograniczeniu konta (od 20.10.2026)
+- **Aktualizacja 30.10 (właściciel): wszystkie usunięte filmy wróciły.** Konto nie ma już kary za usunięcia z 19–20.10. Zera wyświetleń w Metricool z ostatnich dni mogą być opóźnieniem danych (u Night Metricool podawał ok. połowę wartości z aplikacji), więc nie wnioskuj o ograniczeniu zasięgu tylko z Metricool; poproś właściciela o liczby z aplikacji.
 - **Aktualizacja 22.10: TikTok przywraca filmy — usuniętych zostało już tylko 8** (właściciel sprawdza w aplikacji).
   Przywróconych nie publikujemy ponownie ani nie edytujemy; nowe treści dalej wyłącznie przyrodnicze, bez nazw.
 - **Aktualizacja 20.10 wieczorem: usuniętych jest 15 filmów.** Para WADA opublikowana 20.10 o 06:15 i 06:30
