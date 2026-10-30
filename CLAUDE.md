@@ -365,7 +365,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Dlatego na TikToka idą **wyłącznie treści czysto przyrodnicze**: aminokwasy, łańcuchy, zwijanie białek,
   okres półtrwania, enzymy, historia odkryć. Zero nazw substancji w opisie, na slajdach i w lektorze.
   Nazwy zostają na stronie i na Instagramie.
-- Hashtagi na TikToka: `#biology #science #chemistry #learnontiktok #education #pepsafe`.
+- Hashtagi na TikToka (od 30.10, decyzja właściciela): 8–9 tagów w opisie filmu przyrodniczego: 2 wąskie tematyczne (np. `#axolotl`, `#bananas`, nazwa zwierzęcia/zjawiska), 3 szerokie (`#sciencefacts #didyouknow #funfacts`), `#biology #learnontiktok #fyp #pepsafe`. Nigdy nazwy substancji w tagu na filmach przyrodniczych. Dotychczasowy zestaw `#biology #science #chemistry #learnontiktok #education #pepsafe` zostaje tylko jako zapasowy.
 - **Przed zaplanowaniem czegokolwiek na TikToka uruchom `node tools/sprawdz.js tiktok/<folder>`.**
   Skrypt porównuje `post.json` z całym katalogiem substancji (czytanym na bieżąco z `dane.html`, 21.10: 203) i z listą zakazanych słów i emotek.
   Kod wyjścia 1 = nie planuj, popraw. Sprawdza opis, slajdy, lektora i hashtagi naraz.
