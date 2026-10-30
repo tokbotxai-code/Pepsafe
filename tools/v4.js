@@ -335,7 +335,7 @@ ${o.body}
 
 <script src="${BASE}assets/dane-${L}.js" defer></script>
 <script src="${BASE}assets/ruch.js?v=${ASSET_V}" defer></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CF_BEACON}"}'></script>
+<script>if(!navigator.webdriver){var b=document.createElement('script');b.defer=true;b.src='https://static.cloudflareinsights.com/beacon.min.js';b.setAttribute('data-cf-beacon','{"token": "${CF_BEACON}"}');document.head.appendChild(b)}</script>
 </body>
 </html>
 `;
@@ -1509,7 +1509,7 @@ for (const [name, url] of Object.entries(GO)) {
     `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Opening Ko-fi…</title>` +
     `<meta http-equiv="refresh" content="3;url=${url}"><style>body{font:16px system-ui,sans-serif;margin:0;display:grid;place-items:center;min-height:100vh;background:#f6f6f2;color:#161a18}a{color:#0A7C66}</style></head>` +
     `<body><p>Opening Ko-fi… · Otwieram Ko-fi… · Abriendo Ko-fi… <a href="${url}">Ko-fi</a></p>` +
-    `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CF_BEACON}"}'></script>` +
+    `<script>if(!navigator.webdriver){var b=document.createElement('script');b.defer=true;b.src='https://static.cloudflareinsights.com/beacon.min.js';b.setAttribute('data-cf-beacon','{"token": "${CF_BEACON}"}');document.head.appendChild(b)}</script>` +
     `<script>setTimeout(function(){location.replace(${JSON.stringify(url)})},900)</script></body></html>`);
 }
 
