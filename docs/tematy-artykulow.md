@@ -15,3 +15,10 @@ Kolejka (kolejność ważności):
 8. What is the difference between compounded and branded semaglutide? (status prawny UK/USA)
 9. BPC-157: what human studies actually show
 10. Peptides and anti-doping: what is on the WADA list and why
+
+Seria „Jak to działa: budowa i mechanizm” (dopisane 31.10; edukacja, dane z bloku Molecule i z opisów kart; bez dawek, bez sprzedaży substancji, na końcu link do karty i do przewodnika Safety Guide):
+11. How does semaglutide work? Structure, receptor and why it lasts a week
+12. How does tirzepatide work? One molecule, two receptors (GIP and GLP-1)
+13. How does retatrutide work? The third receptor, glucagon, explained
+14. How do GHK-Cu and other copper peptides work in skin products?
+15. What is a peptide? Amino acids, chains and why size matters (z blokiem Molecule jako przykładem)
