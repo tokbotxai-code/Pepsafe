@@ -228,7 +228,7 @@ function layout(o) {
   const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['steroids.html', L === 'en' ? 'Steroids' : 'Sterydy'], ['dosing.html', t.dosingNav],
   ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['blog.html', t.blogNav],
-  ['glossary.html', t.glossNav], ['guides.html', L === 'en' ? 'Guides (PDF)' : 'Przewodniki (PDF)'], ['about.html', t.nav.about]];
+  ['glossary.html', t.glossNav], ['guides.html', L === 'en' ? 'Shop' : 'Sklep'], ['about.html', t.nav.about]];
   return `<!doctype html>
 <html lang="${L}" data-theme="light">
 <head>
@@ -779,7 +779,7 @@ function guidesPage(L) {
 <section class="page-head paper">
   <canvas id="chains" aria-hidden="true"></canvas>
   <div class="wrap narrow">
-    <p class="kick reveal">${en ? 'PepSafe guides' : 'Przewodniki PepSafe (po angielsku)'}</p>
+    <p class="kick reveal">${en ? 'PepSafe shop' : 'Sklep PepSafe (przewodniki po angielsku)'}</p>
     <h1 class="display reveal">${en ? 'Plain-English guides for people on GLP-1 medicines' : 'Przystępne przewodniki dla osób przyjmujących leki GLP-1'}</h1>
     <p class="lede reveal">${en ? 'Built from official labels, regulators and the major clinical trials — with sources on every page. Instant PDF download.' : 'Oparte na etykietach, zaleceniach regulatorów i dużych badaniach klinicznych — ze źródłami na każdej stronie. PDF do pobrania od razu.'}</p>
     <ul class="reveal small">
@@ -787,6 +787,14 @@ function guidesPage(L) {
       <li>${en ? 'Independent: no ads, and we never sell medicines or peptides' : 'Niezależne: bez reklam, nie sprzedajemy leków ani peptydów'}</li>
       <li>${en ? 'Updated October 2026' : 'Aktualizacja: październik 2026'}</li>
     </ul>
+    <section class="blk reveal" style="margin-top:22px">
+      <h2>${en ? 'Which guide is right for you?' : 'Który przewodnik jest dla Ciebie?'}</h2>
+      <ul>
+        <li>${en ? 'You are starting or have just started a GLP-1 medicine: the Safety Guide, £3.99.' : 'Zaczynasz lub właśnie zacząłeś lek GLP-1: Safety Guide, £3.99.'}</li>
+        <li>${en ? 'You want to keep your muscle and strength: the Muscle & Protein Guide, £7.99.' : 'Chcesz zachować mięśnie i siłę: Muscle & Protein Guide, £7.99.'}</li>
+        <li>${en ? 'You are thinking of stopping, or already stopped: Coming Off a GLP-1, £4.99.' : 'Myślisz o odstawieniu albo już odstawiłeś: Coming Off a GLP-1, £4.99.'}</li>
+      </ul>
+    </section>
     ${card(goUrl('guide', 'guides'), '£3.99', 'GLP-1 Weight-Loss Medicines: The Complete Safety Guide', en ? '23 pages: what to expect, what to watch for and what to ask your doctor.' : '23 strony: czego się spodziewać, na co uważać i o co pytać lekarza.',
       en ? ['Side effects and how often they really happen', 'Label warnings: pancreas, gallbladder, kidneys, eyes', 'Surgery, other medicines, pregnancy', 'Stopping and the long term; spotting fakes', 'Appointment checklist and pocket cheat sheet']
          : ['Skutki uboczne i jak często naprawdę występują', 'Ostrzeżenia z etykiet: trzustka, woreczek, nerki, oczy', 'Zabiegi, inne leki, ciąża', 'Odstawienie i długi termin; podróbki', 'Lista pytań do lekarza i ściąga'], ['safety-1', 'safety-2', 'safety-3'])}
@@ -797,11 +805,13 @@ function guidesPage(L) {
       en ? ['Your personal protein target in 2 minutes', '7-day meal plan with vegetarian swaps', '20-minute home strength routine, no gym', '12-week progression plan', 'Older adults, bones and balance']
          : ['Twój cel białkowy w 2 minuty', '7-dniowy plan posiłków z wersją wegetariańską', '20-minutowy trening siłowy w domu', '12-tygodniowy plan postępów', 'Starsi dorośli, kości i równowaga'], ['muscle-1', 'muscle-2', 'muscle-3'])}
     <p class="small ink2 reveal" style="margin-top:22px">${en ? 'Educational information only — not medical advice and no dosing instructions. Bought a guide? Tell us what you think at ' + FORM_TO + '.' : 'Informacje edukacyjne — nie porada medyczna i bez instrukcji dawkowania. Masz już przewodnik? Napisz nam, co o nim sądzisz: ' + FORM_TO + '.'}</p>
+    <p class="reveal">${en ? 'Free: ' : 'Za darmo: '}<a href="free.html">${en ? '5 mistakes that cost you muscle on GLP-1 (one-page checklist)' : '5 błędów, które kosztują mięśnie przy GLP-1 (checklista na jednej stronie)'}${ARROW}</a></p>
+    <p class="reveal">${en ? 'Like the free catalog? ' : 'Podoba Ci się darmowy katalog? '}<a href="${goUrl('kofi', 'guides')}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
     <p class="reveal"><a href="free.html">${en ? 'Not ready? Get the free one-page checklist first' : 'Nie teraz? Weź najpierw darmową checklistę'}${ARROW}</a></p>
   </div>
 </section>`;
   return layout({ lang: L, here: 'guides.html', twin: 'guides.html', body,
-    title: (en ? 'GLP-1 guides: safety, protein and muscle' : 'Przewodniki GLP-1: bezpieczeństwo, białko i mięśnie') + ' | PepSafe',
+    title: (en ? 'Shop: GLP-1 guides on safety, protein and stopping' : 'Sklep: przewodniki GLP-1 o bezpieczeństwie, białku i odstawieniu') + ' | PepSafe',
     desc: en ? 'Plain-English PDF guides for people on semaglutide or tirzepatide: safety guide and protein & muscle guide, with preview pages.' : 'Przewodniki PDF dla osób na lekach GLP-1: bezpieczeństwo oraz białko i mięśnie, z podglądem stron.' });
 }
 function privacy(L) {
@@ -1046,7 +1056,8 @@ ${others.length ? `<section class="band"><div class="wrap">
   return layout({
     lang: L, here: 't/' + postSlug(x) + '.html', twin: 't/' + postSlug(x) + '.html', body,
     title: (x.title[L] || x.title.pl) + ' | PepSafe',
-    desc: clip(paras[0] || '', 155)
+    desc: clip(paras[0] || '', 155),
+    ld: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: x.title[L] || x.title.pl, inLanguage: L, author: { '@type': 'Organization', name: 'PepSafe' }, publisher: { '@id': 'https://pepsafe.info/#org' }, mainEntityOfPage: `${SITE}${BASE}${L}/t/${postSlug(x)}.html` })
   });
 }
 
