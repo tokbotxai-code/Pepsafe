@@ -223,9 +223,9 @@ const THEME_BOOT = `<script>(function(){try{var t=localStorage.getItem('pep-them
 const DESC_PAD = { en: 'Facts, risks, legal status and sources. A free reference, not a shop.', pl: 'Fakty, ryzyka, status prawny i źródła. Darmowy katalog, nie sklep.' };
 function fitTitle(t) {
   if (!t || t.length <= 65) return t;
-  const m = t.match(/^(.*?)( — [^|]+?)?( \| PepSafe)$/);
+  const m = t.match(/^(.*?)(( — |: )[^|]+?)?( \| PepSafe)$/);
   if (!m) return t;
-  const [, base, , suf] = m;
+  const [, base, , , suf] = m;
   if ((base + suf).length <= 65) return base + suf;
   const room = 65 - suf.length - 1;
   let cut = base.slice(0, room), sp = cut.lastIndexOf(' ');
@@ -1461,7 +1461,7 @@ function savedPage(L) {
   <p class="muted" id="savedEmpty">${en ? 'Nothing saved yet. Open any entry and press the star.' : 'Nic jeszcze nie zapisano. Otwórz dowolny wpis i naciśnij gwiazdkę.'}</p>
 </div></section>`;
   return layout({
-    lang: L, here: 'saved.html', twin: 'saved.html', body,
+    lang: L, here: 'saved.html', twin: 'saved.html', body, noindex: true,
     title: (en ? 'Saved entries' : 'Zapisane wpisy') + ' | PepSafe',
     desc: en ? 'Entries you saved, kept in this browser only.' : 'Zapisane wpisy, trzymane tylko w tej przeglądarce.'
   });

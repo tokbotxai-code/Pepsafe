@@ -112,9 +112,9 @@ function translate(html, miss) {
 
 function fitTitleEs(t) {
   if (t.length <= 65) return t;
-  const m = t.match(/^(.*?)( — [^|]+?)?( \| PepSafe)$/);
+  const m = t.match(/^(.*?)(( — |: )[^|]+?)?( \| PepSafe)$/);
   if (!m) return t;
-  const [, base, , suf] = m;
+  const [, base, , , suf] = m;
   if ((base + suf).length <= 65) return base + suf;
   const room = 65 - suf.length - 1;
   let cut = base.slice(0, room), sp = cut.lastIndexOf(' ');

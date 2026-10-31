@@ -42,6 +42,8 @@ for (const [lang, suf] of Object.entries(LANGS)) {
   const T = TXT[lang];
   let h = fs.readFileSync(src, 'utf8')
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${T.title} | PepSafe</title>`)
+    .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${T.title}: ${T.ph}">`)
+    .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://pepsafe.info/${lang}/search.html">`)
     .replace(/<section class="page-head[\s\S]*?<\/section>/, `<section class="page-head paper">
   <div class="wrap narrow">
     <p class="kick">${T.kick}</p>
