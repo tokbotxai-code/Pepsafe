@@ -179,7 +179,7 @@ module.exports = function build(ctx) {
   const tx = (L, o) => S(L, l => o[l]);           // o = {en,pl,es}
   const txA = (L, a) => S(L, l => a[{ en: 0, pl: 1, es: 2 }[l]]);   // a = [en, pl, es]
   const list = (L, o) => (o.en || []).map((_, i) => S(L, l => (o[l] || [])[i]));
-  const first = s => { const m = /^(.+?[.!?])(\s|$)/.exec(s); return m ? m[1] : s; };
+  const first = s => { const t = s.replace(/(EE|U)\. ?(UU|S)\./g, (a, x, y) => x + '.\u0001' + y + '.'); const m = /^(.+?[.!?])(\s|$)/.exec(t); return (m ? m[1] : t).replace(/\u0001/g, ' '); };
   const sid = e => 's-' + e.id;
   // display name per language (EN name is the key; PL and ES spelling from NAMES when it differs)
   const nameOf = (L, e) => S(L, l => nmL(e, l));
