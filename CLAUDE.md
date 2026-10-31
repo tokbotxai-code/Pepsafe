@@ -7,6 +7,9 @@
 ## Zamrożenie zasad 31.10–7.11 (decyzja właściciela 31.10)
 - Przez 7 dni **nie zmieniamy zasad publikacji, godzin ani formatów** (poza naprawą błędów). Cel: dostać czytelne liczby, co działa. Autopilot zbiera dane i w poniedziałek 2.11 robi raport tygodniowy z wnioskami; zmiany planuje dopiero na tej podstawie i po zgodzie właściciela. Pozostają w mocy zasady z 30–31.10: TikTok 1 film dziennie, brak kart na IG, rolka z pytaniem o GLP-1 na IG + FB, 5 hashtagów na TikToku.
 
+## Zasada nadrzędna: publikuj tylko najlepszą wersję (decyzja właściciela 31.10)
+- Wada zauważona przed publikacją (ciemny kadr, ucięty napis, słaby hook, błąd w tekście) = naprawiasz przed publikacją, a nie opisujesz jej w raporcie. Film, post lub artykuł idzie do Metricool albo na stronę dopiero bez znanych wad. W raporcie podaj, co poprawiłeś.
+
 ## Pracuj samodzielnie (decyzja właściciela, 21.10)
 - **Zmiany w autopilocie wprowadzasz sam w `AUTOPILOT.md`** (commit + push na `main`). Zadanie w aplikacji ma tylko krótkie polecenie „przeczytaj AUTOPILOT.md i wykonaj” i czyta plik od nowa co rano.
   Nigdy nie proś właściciela o edycję zadania. Wyjątki (tylko te wymagają właściciela): godzina uruchomienia, connectory, sekrety. Numerów sesji ani kluczy nie wpisuj do repo (jest publiczne) — sesje wskazuj tytułem.
