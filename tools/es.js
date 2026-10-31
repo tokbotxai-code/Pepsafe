@@ -51,9 +51,15 @@ function list(dir, filter) { return fs.existsSync(dir) ? fs.readdirSync(dir).fil
 const PLEN = fs.existsSync(path.join(__dirname, 'pl-en.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'pl-en.json'), 'utf8')) : {};
 const enFiles = [...list(path.join(OUT, 'en'), f => f.endsWith('.html')), ...list(path.join(OUT, 'en', 't'), f => f.endsWith('.html')),
   ...list(path.join(OUT, 'p'), f => /^[^.]+\.html$/.test(f)), path.join(OUT, 'index.html')].filter(f => fs.existsSync(f));
+// source titles written by the generator in Polish (FDA label, EMA, trial names): turn the pattern into English on the English pages
+const PLRULES = [[/^Ulotka FDA: /, 'FDA label: '], [/^EMA: charakterystyka produktu /, 'EMA: product information '], [/^DailyMed: etykieta leku/, 'DailyMed: drug label'],
+  [/^PubMed: publikacje naukowe/, 'PubMed: scientific publications'], [/^ClinicalTrials\.gov: zarejestrowane badania( kliniczne)?/, 'ClinicalTrials.gov: registered clinical trials'],
+  [/^Badanie randomizowane: /, 'Randomized trial: '], [/badanie randomizowane/, 'randomized trial'], [/^Badanie kliniczne: /, 'Clinical trial: '], [/^Badanie III fazy w sepsie/, 'Phase III trial in sepsis']];
+const ruleEN = s => PLRULES.reduce((a, [re, to]) => a.replace(re, to), s);
 for (const f of enFiles) {
   let h = fs.readFileSync(f, 'utf8'), h0 = h;
   for (const [pl, en] of Object.entries(PLEN).sort((a, b) => b[0].length - a[0].length)) if (h.includes(pl)) h = h.split(pl).join(en);
+  h = h.replace(/>([^<>]{3,200})</g, (all, txt) => { const t = txt.trim(), r = ruleEN(t); if (r === t) return all; if (TM[t] && !TM[r]) TM[r] = TM[t]; return '>' + txt.replace(t, r) + '<'; });
   if (h !== h0) fs.writeFileSync(f, h);
 }
 for (const [pl, en] of Object.entries(PLEN)) if (TM[pl] && !TM[en]) TM[en] = TM[pl];
@@ -68,6 +74,13 @@ const need = new Set();
 function tr(s, miss) {
   const k = norm(s); if (!k || !hasWords(k)) return s;
   if (TM[k] != null) { const lead = s.match(/^\s*/)[0], trail = s.match(/\s*$/)[0]; return lead + TM[k] + trail; }
+  // descriptions padded by the generator: translate the original short text and the padding separately
+  const PAD = 'Facts, risks, legal status and sources. A free reference, not a shop.';
+  if (k.endsWith(' ' + PAD) && TM[k.slice(0, -PAD.length - 1)] != null && TM[PAD] != null) return s.replace(k, TM[k.slice(0, -PAD.length - 1)] + ' ' + TM[PAD]);
+  const pad2 = k.endsWith(' ' + PAD) ? k.slice(0, -PAD.length - 1) : null;
+  if (pad2 && TM[pad2.replace(/\.$/, '')] != null && TM[PAD] != null) return s.replace(k, TM[pad2.replace(/\.$/, '')] + '. ' + TM[PAD]);
+  // titles shortened by the generator ("name | PepSafe"): a name is a proper noun, keep it
+  if (/^[^|]{2,70}… \| PepSafe$/.test(k) || /^[A-Za-z0-9() ,.'\/+-]{2,60} \| PepSafe$/.test(k) && !/[a-z]{4,} [a-z]{3,} [a-z]{3,}/.test(k)) return s;
   miss.add(k); return s;
 }
 
@@ -97,9 +110,21 @@ function translate(html, miss) {
   return out.replace(META, (all, k, n, v) => `<meta ${k}="${n}" content="${tr(v, miss)}">`);
 }
 
+function fitTitleEs(t) {
+  if (t.length <= 65) return t;
+  const m = t.match(/^(.*?)( — [^|]+?)?( \| PepSafe)$/);
+  if (!m) return t;
+  const [, base, , suf] = m;
+  if ((base + suf).length <= 65) return base + suf;
+  const room = 65 - suf.length - 1;
+  let cut = base.slice(0, room), sp = cut.lastIndexOf(' ');
+  if (sp > room * 0.6) cut = cut.slice(0, sp);
+  return cut.replace(/[\s,:;—-]+$/, '') + '…' + suf;
+}
 function relink(html, dest) {
   return html
     .replace(/<html lang="en"/, '<html lang="es"')
+    .replace(/<title>([^<]*)<\/title>/, (a, t) => '<title>' + fitTitleEs(t) + '</title>')
     .replace(/content="en_GB"/, 'content="es_ES"')
     .replace(/(href|src)="\/en\//g, '$1="/es/')
     .replace(/href="(\.\.\/)?en\//g, 'href="$1es/')
@@ -179,7 +204,7 @@ function langSwitch(file, cur, urls) {
   const p = path.join(OUT, file); if (!fs.existsSync(p)) return;
   const h = fs.readFileSync(p, 'utf8');
   const NAME = { EN: 'English', PL: 'Polski', ES: 'Español' };
-  const sw = `<details class="lp"><summary aria-label="Language">🌐 ${cur} ▾</summary><ul>` +
+  const sw = `<details class="lp"><summary aria-label="Language"><svg class="ico" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> ${cur} ▾</summary><ul>` +
     ['EN', 'PL', 'ES'].map(L => `<li><a class="lang${L === cur ? ' on" aria-current="true' : ''}" data-l="${L.toLowerCase()}" href="${urls[L]}">${NAME[L]}</a></li>`).join('') + '</ul></details>';
   let out = h.replace(/(?:<span class="lang on"[^>]*>[A-Z]{2}<\/span>|<a class="lang" href="[^"]*">[A-Z]{2}<\/a>)+/g, sw);
   // phone menu footer: all three languages as plain links

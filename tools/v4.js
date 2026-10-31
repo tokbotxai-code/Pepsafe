@@ -79,6 +79,9 @@ function searchText(e, en) {
 const LANGS = ['en', 'pl'];
 
 const SITE = 'https://pepsafe.info';
+const ICO = (d) => `<svg class="ico" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${d}</svg>`;
+const ICON_CUP = ICO('<path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h2a2 2 0 0 1 0 4h-2"/><path d="M8 2v3M12 2v3"/>');
+const ICON_BOOK = ICO('<path d="M4 4h10a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M8 4v12"/>');
 const CF_BEACON = '68889a9fe6604022bd3fa7d786e5d79f';  // licznik odwiedzin (Cloudflare Web Analytics)
 // FormSubmit: nie wymaga konta ani klucza, wiadomosci ida na ten adres.
 // Pierwsza wysylka uruchamia maila aktywacyjnego, ktory wlasciciel klika raz.
@@ -216,10 +219,29 @@ const THEME_BOOT = `<script>(function(){try{var t=localStorage.getItem('pep-them
   `if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';` +
   `document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</` + `script>`;
 
+// Google cuts titles above ~65 characters and ignores descriptions that are too thin: fit both here for every page
+const DESC_PAD = { en: 'Facts, risks, legal status and sources. A free reference, not a shop.', pl: 'Fakty, ryzyka, status prawny i źródła. Darmowy katalog, nie sklep.' };
+function fitTitle(t) {
+  if (!t || t.length <= 65) return t;
+  const m = t.match(/^(.*?)( — [^|]+?)?( \| PepSafe)$/);
+  if (!m) return t;
+  const [, base, , suf] = m;
+  if ((base + suf).length <= 65) return base + suf;
+  const room = 65 - suf.length - 1;
+  let cut = base.slice(0, room), sp = cut.lastIndexOf(' ');
+  if (sp > room * 0.6) cut = cut.slice(0, sp);
+  return cut.replace(/[\s,:;—-]+$/, '') + '…' + suf;
+}
+function fitDesc(d, L) {
+  if (!d || d.length >= 70) return d;
+  const pad = DESC_PAD[L] || DESC_PAD.en, base = d.trim().replace(/[\s]+$/, '');
+  return (/[.!?…]$/.test(base) ? base : base + '.') + ' ' + pad;
+}
 // desktop menu: the main tabs stay visible, the rest sit under "More" (the phone menu lists everything)
 const NAV_MAIN = ['index.html', 'catalog.html', 'steroids.html', 'groups.html', 'compare.html', 'dosing.html', 'symptoms.html'];
 function layout(o) {
   const L = o.lang, t = W[L];
+  o = { ...o, title: fitTitle(o.title), desc: fitDesc(o.desc, L) };
   const other = L === 'en' ? 'pl' : 'en';
   const self = o.depth ? o.twin : L + '/' + o.here;   // sciezka strony od korzenia witryny
   const up = BASE + L + '/';                           // odnosniki do stron tego jezyka
@@ -327,7 +349,7 @@ ${o.body}
       <a class="soc" href="${IG}" rel="me noopener" target="_blank">${ICO_IG}<span>Instagram</span></a>
       <a class="soc" href="${FB}" rel="me noopener" target="_blank">${ICO_FB}<span>Facebook</span></a>
       <a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a>
-      <a class="soc" href="${goUrl('kofi', 'footer')}" rel="noopener" target="_blank">☕ <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
+      <a class="soc" href="${goUrl('kofi', 'footer')}" rel="noopener" target="_blank">${ICON_CUP} <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
     </p>
     <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span> · <a href="${BASE}${L}/privacy.html">${L === 'en' ? 'Privacy' : 'Prywatność'}</a></p>
   </div>
@@ -512,10 +534,10 @@ function home(L) {
 <section class="field" style="padding-top:0">
   <div class="wrap">
     <a class="reveal" href="${BASE}${L}/guides.html" style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;border:2px solid #3CCFA9;border-radius:14px;padding:16px 20px;text-decoration:none;color:inherit">
-      <span><b>📘 ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Przyjmujesz lek GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £3.99 · Coming Off a GLP-1 £4.99 · Muscle &amp; Protein Guide £7.99 · sources on every page' : 'Safety Guide £3.99 · Coming Off a GLP-1 £4.99 · Muscle &amp; Protein Guide £7.99 · źródła na każdej stronie'}</span></span>
+      <span><b>${ICON_BOOK} ${en ? 'On GLP-1 medicines? Our plain-English PDF guides' : 'Przyjmujesz lek GLP-1? Nasze przewodniki PDF (po angielsku)'}</b><br><span class="small ink2">${en ? 'Safety Guide £3.99 · Coming Off a GLP-1 £4.99 · Muscle &amp; Protein Guide £7.99 · sources on every page' : 'Safety Guide £3.99 · Coming Off a GLP-1 £4.99 · Muscle &amp; Protein Guide £7.99 · źródła na każdej stronie'}</span></span>
       <span class="btn">${en ? 'See inside' : 'Zobacz podgląd'}${ARROW}</span>
     </a>
-    <p class="small ink2 reveal" style="margin-top:10px">${en ? 'The catalog stays free and ad-free.' : 'Katalog zostaje darmowy i bez reklam.'} <a href="${goUrl('kofi', 'home')}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
+    <p class="small ink2 reveal" style="margin-top:10px">${en ? 'The catalog stays free and ad-free.' : 'Katalog zostaje darmowy i bez reklam.'} <a href="${goUrl('kofi', 'home')}" rel="noopener">${en ? 'Buy us a coffee' : 'Postaw nam kawę'} ${ICON_CUP}</a></p>
   </div>
 </section>
 
@@ -806,7 +828,7 @@ function guidesPage(L) {
          : ['Twój cel białkowy w 2 minuty', '7-dniowy plan posiłków z wersją wegetariańską', '20-minutowy trening siłowy w domu', '12-tygodniowy plan postępów', 'Starsi dorośli, kości i równowaga'], ['muscle-1', 'muscle-2', 'muscle-3'])}
     <p class="small ink2 reveal" style="margin-top:22px">${en ? 'Educational information only — not medical advice and no dosing instructions. Bought a guide? Tell us what you think at ' + FORM_TO + '.' : 'Informacje edukacyjne — nie porada medyczna i bez instrukcji dawkowania. Masz już przewodnik? Napisz nam, co o nim sądzisz: ' + FORM_TO + '.'}</p>
     <p class="reveal">${en ? 'Free: ' : 'Za darmo: '}<a href="free.html">${en ? '5 mistakes that cost you muscle on GLP-1 (one-page checklist)' : '5 błędów, które kosztują mięśnie przy GLP-1 (checklista na jednej stronie)'}${ARROW}</a></p>
-    <p class="reveal">${en ? 'Like the free catalog? ' : 'Podoba Ci się darmowy katalog? '}<a href="${goUrl('kofi', 'guides')}" rel="noopener">${en ? 'Buy us a coffee ☕' : 'Postaw nam kawę ☕'}</a></p>
+    <p class="reveal">${en ? 'Like the free catalog? ' : 'Podoba Ci się darmowy katalog? '}<a href="${goUrl('kofi', 'guides')}" rel="noopener">${en ? 'Buy us a coffee' : 'Postaw nam kawę'} ${ICON_CUP}</a></p>
     <p class="reveal"><a href="free.html">${en ? 'Not ready? Get the free one-page checklist first' : 'Nie teraz? Weź najpierw darmową checklistę'}${ARROW}</a></p>
   </div>
 </section>`;
@@ -1501,7 +1523,7 @@ function retarget(html, canon) {
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}${BASE}${canon}">`)
     .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${SITE}${BASE}${canon}">`);
 }
-fs.writeFileSync(path.join(out, 'index.html'), enLinks(retarget(home('en'), '')));
+fs.writeFileSync(path.join(out, 'index.html'), enLinks(retarget(home('en'), 'en/index.html')));
 fs.writeFileSync(path.join(out, '404.html'), notFound('en'));
 fs.mkdirSync(path.join(out, 'start'), { recursive: true });
 for (const f of ['index.html', 'ig.html', 'tt.html', 'fb.html']) fs.writeFileSync(path.join(out, 'start', f), start());   // GitHub Pages serwuje to przy kazdym 404

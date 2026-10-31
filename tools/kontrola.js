@@ -64,7 +64,7 @@ for (const f of pliki) {
   const obce = pliki.filter(f => /^(en|es)\//.test(f) || /^p\/[^.]+(\.es)?\.html$/.test(f));
   for (const f of obce) {
     const t = fs.readFileSync(path.join(root, f), 'utf8').replace(/<(script|style)\b[\s\S]*?<\/\1>/g, '').replace(/<[^>]+>/g, '\n');
-    for (const l of t.split('\n')) if (plChars.test(l) && l.trim().length < 200 && !/Polski/.test(l)) wyciek.push(f + ': ' + l.trim().slice(0, 60));
+    for (const l of t.split('\n')) if ((plChars.test(l) || /\b(Lista zakazana|zakazana|etykieta|Ulotka|przegląd|badanie|badania|publikacje|rejestr|Charakterystyka|Wytyczne)\b/i.test(l)) && l.trim().length < 200 && !/Polski/.test(l)) wyciek.push(f + ': ' + l.trim().slice(0, 60));
   }
   wyciek.length ? zle('polskie napisy na stronach EN/ES', wyciek.length + ', np. ' + wyciek.slice(0, 3).join(' | ')) : ok('bez polskich napisów na EN/ES', obce.length + ' stron');
 }
