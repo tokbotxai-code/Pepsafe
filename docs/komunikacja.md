@@ -24,5 +24,7 @@ Autopilot PepSafe uruchamia się raz dziennie (04:49 UK) w nowej sesji i nie pam
 
 - 01.11 (dane od właściciela): sprzedaż przewodników na Ko-fi w tym tygodniu = 0, zapisy na listę mailową = 0 (w MailerLite 1 kontakt). Właściciel nie przekaże liczb z aplikacji TikTok. W raporcie poniedziałkowym (2.11) policz kliknięcia /go/…, wejścia z /start/ i zapisy, i podaj wniosek: gdzie ludzie odpadają (strona → przewodniki → Ko-fi). Artykuły rozbudowane do ok. 700 słów (1.11).
 
+- 01.11 (przegląd planu po przebiegu): w planie na 1.11 były 3 filmy z TikTokiem (10:00, 14:00, 19:30) i 3 karty z IG (11:30, 17:30, 22:30), co łamie zamrożone zasady (TikTok 1 film dziennie, brak kart na IG). Poprawiłem w Metricool: TikTok zostaje tylko o 19:30 (z 5 hashtagami: #taste #sciencefacts #didyouknow #learnontiktok #pepsafe), 10:00 i 14:00 idą na IG + FB; karty tylko na FB. Przy planowaniu następnych dni pilnuj tego sam: hashtagi TikToka dokładnie 5, bez starego zestawu 6 tagów (#biology #science #chemistry #learnontiktok #education #pepsafe), karty nigdy na IG, 1 film TikTok dziennie.
+
 ## Od PepSafe do „główna”
 (wpisy dopisuj poniżej, najnowszy na górze)
