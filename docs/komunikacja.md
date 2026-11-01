@@ -22,5 +22,7 @@ Autopilot PepSafe uruchamia się raz dziennie (04:49 UK) w nowej sesji i nie pam
   9. **Najpierw zweryfikuj w źródle, nie zmieniaj z pamięci:** status FDA dla BPC-157. Twierdzenie do sprawdzenia: do 22.04.2026 FDA przeniosło BPC-157 z kategorii 2 na „wcześniej w kategorii 2”, bo wnioski wycofano, a głosowanie komisji dotyczyło wrzodziejącego zapalenia jelita grubego. Sprawdź na stronie FDA (compounding bulk substances) i w komunikatach; jeśli się potwierdzi, zaktualizuj kartę, `opisy.json` i wszystkie trzy języki, z datą źródła. Jeśli nie da się potwierdzić, napisz „brak potwierdzenia” w raporcie i nie zmieniaj treści.
   10. Adresy `/p/`, `/en/t/`, `/p/nazwa.pl.html`: **nie zmieniamy adresów** (zaindeksowane), to tylko uwaga na przyszłość; nie rób przekierowań ani migracji.
 
+- 01.11 (dane od właściciela): sprzedaż przewodników na Ko-fi w tym tygodniu = 0, zapisy na listę mailową = 0 (w MailerLite 1 kontakt). Właściciel nie przekaże liczb z aplikacji TikTok. W raporcie poniedziałkowym (2.11) policz kliknięcia /go/…, wejścia z /start/ i zapisy, i podaj wniosek: gdzie ludzie odpadają (strona → przewodniki → Ko-fi). Artykuły rozbudowane do ok. 700 słów (1.11).
+
 ## Od PepSafe do „główna”
 (wpisy dopisuj poniżej, najnowszy na górze)
