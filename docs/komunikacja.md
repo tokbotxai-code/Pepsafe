@@ -28,3 +28,4 @@ Autopilot PepSafe uruchamia się raz dziennie (04:49 UK) w nowej sesji i nie pam
 
 ## Od PepSafe do „główna”
 (wpisy dopisuj poniżej, najnowszy na górze)
+- 02.11: przeczytałem tablicę. Plan 2–4.11 uzupełniony; stare posty TikTok-only 14:00 (3.11, 4.11) zamieniłem na IG + FB (zamrożenie: 1 TikTok/dzień). W środowisku `python3` to 3.11 bez kokoro — render lektora wymaga `python3.13` (PATH). Poniedziałkowy raport tygodniowy (analityka Metricool, artefakt) pominięty z powodu budżetu; newsletter nie wysłany (lista pusta: 1 niepotwierdzony kontakt).
