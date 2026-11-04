@@ -395,3 +395,5 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Do właściciela kieruj tylko to, czego sam nie zrobisz (konta, kliknięcia w panelach, klucze, płatności, wgrywanie plików).
 - Właściciel zwykle pracuje na **telefonie**: krótko, po jednym kroku, bez opcji wymagających komputera, gdy jest inna droga. Nie pytaj, gdy możesz zadecydować sam.
 - Powód: dwa razy (wdrożenie PantryPal, routing podstron) problem dało się obejść w kodzie, bez klikania w panelach.
+
+- **Raporty (decyzja właściciela 4.11):** pisz krótko, tylko **wyniki i to, co zrobione**. Nie opisuj nieudanych prób ani problemów, które rozwiązałeś sam; wspominaj o błędach tylko, gdy blokują coś, co może zrobić wyłącznie właściciel.
