@@ -1,5 +1,7 @@
 # PepSafe – zasady publikacji (Metricool, marka 7506075, Europe/London)
 
+> **ZMIANA 4.11.2026 (decyzja właściciela): konto TikTok PepSafe zostało USUNIĘTE.** Od teraz **nie planuj nic na TikTok dla marki PepSafe** (zero postów z providerem `tiktok`). Wszystkie zasady o TikToku w tym pliku (1 film dziennie, 5 hashtagów, filmy przyrodnicze na TikToka, limity API, hamulec, sprawdzanie `sprawdz.js` pod TikToka, obraz w stylu Dola o 21:30 itd.) są **nieaktywne**. Planuj tylko **Instagram + Facebook**. Metricool może jeszcze pokazywać `tiktokData` w `networksData` (nieodłączone): ignoruj. Filmy przyrodnicze dalej robimy, ale idą tylko na IG + FB (rolka 06:30, 10:00, 12:30, 14:00 i 19:30). Raporty bez linijki TikTok. Strona `/start/tt.html` może zostać, nie wymaga zmian.
+
 > **Dla autopilota (stan na 22.10 wieczorem):** kanały: Instagram + Facebook + TikTok, wszystko po angielsku, rynek UK/USA.
 > Jego polecenie (przepisane 22.10) ma pierwszeństwo tylko w punktach STEP 4 (b), (c), (d). **STEP 4(a) o 6 reklamach dziennie właściciel odwołał 23.10 — obowiązuje sekcja „Reklamy: 2 w tygodniu”** (zero reklam na TikToku). Resztę rozstrzyga ten plik.
 > Zasady z 22.10 wieczorem („Mniej, a lepiej”) i z 23.10 („Reklamy: 2 w tygodniu”) zastępują wcześniejsze limity, także STEP 4(a) w poleceniu.
