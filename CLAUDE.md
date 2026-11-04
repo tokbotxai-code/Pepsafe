@@ -397,3 +397,5 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Powód: dwa razy (wdrożenie PantryPal, routing podstron) problem dało się obejść w kodzie, bez klikania w panelach.
 
 - **Raporty (decyzja właściciela 4.11):** pisz krótko, tylko **wyniki i to, co zrobione**. Nie opisuj nieudanych prób ani problemów, które rozwiązałeś sam; wspominaj o błędach tylko, gdy blokują coś, co może zrobić wyłącznie właściciel.
+
+- **Publikacja bez pytania (decyzja właściciela 4.11):** masz pełne prawo planować, zmieniać i usuwać posty w Metricool oraz wypychać zmiany na GitHub **bez pytania o zgodę** (Night, PepSafe, FridgeChef, PantryPal). Zasady jakości, bezpieczeństwa i marek (Night nigdy nie miesza się z PepSafe) obowiązują dalej, w tym „nic poniżej 8” dla Night. Nie pytaj o publikację, tylko publikuj i krótko zgłoś wynik.
