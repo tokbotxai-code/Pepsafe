@@ -48,7 +48,8 @@ jobs:
             id=$(jq -r .id "$f"); url=$(jq -r .adres_strony "$f")
             echo "::add-mask::$url"; echo "::add-mask::$(jq -r .email "$f")"
             token=$(openssl rand -hex 12); status=error
-            if python3 tools/wcag/safe-url.py "$url"; then
+            if url=$(python3 tools/wcag/safe-url.py "$url"); then
+              echo "::add-mask::$url"
               if timeout 150 tools/wcag/run.sh "$url" "$token.pdf" >/dev/null 2>&1 && [ -s "tools/wcag/$token.pdf" ]; then status=ok; fi
             fi
             if [ "$status" = ok ]; then
