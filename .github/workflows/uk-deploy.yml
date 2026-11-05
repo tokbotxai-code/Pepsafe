@@ -1,0 +1,15 @@
+name: UK SFTP deploy (manual)
+on: workflow_dispatch
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y lftp >/dev/null
+      - name: Upload uk-site/ to public/ (no delete)
+        env:
+          H: ${{ secrets.UK_SFTP_HOST }}
+          U: ${{ secrets.UK_SFTP_USER }}
+          P: ${{ secrets.UK_SFTP_PASS }}
+        run: |
+          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; set net:max-retries 2; mirror -R --verbose uk-site public; find -d 2 public; quit" 2>&1 | head -80
