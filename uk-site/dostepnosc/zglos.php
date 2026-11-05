@@ -34,5 +34,5 @@ $to = 'contact@pepsafe.info';
 $subject = '=?UTF-8?B?' . base64_encode('Darmowy skan dostępności: nowe zgłoszenie') . '?=';
 $body = "Nowe zgłoszenie z pepsafe.uk/dostepnosc\n\nAdres strony: $url\nPlacówka: $name\nE-mail: $email\nZgoda na raport i informacje o usługach: tak\nData (UTC): " . gmdate('Y-m-d H:i:s') . "\nIP: $ip\n";
 $headers = "From: PepSafe Studio <contact@pepsafe.info>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n";
-$ok = mail($to, $subject, $body, $headers, '-fcontact@pepsafe.info');
-out($ok, $ok ? 200 : 500);
+@mail($to, $subject, $body, $headers);   // owner notification; the job is already queued, so a mail hiccup must not fail the form
+out(true);

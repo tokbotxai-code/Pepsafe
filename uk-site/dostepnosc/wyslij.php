@@ -23,8 +23,8 @@ if ($ok) {
   $body = "Dzień dobry,\n\nniestety nie udało nam się automatycznie sprawdzić strony: $url\n(strona mogła nie odpowiadać albo blokować automatyczne sprawdzanie). Napisz do nas na contact@pepsafe.info, a sprawdzimy ją ręcznie.\n\nPepSafe Studio";
   $s = 'Nie udało się sprawdzić Twojej strony';
 }
-$sent = mail($email, $subj($s), $body, $head, '-fcontact@pepsafe.info');
-@mail('contact@pepsafe.info', $subj('Skaner: ' . ($ok ? 'raport wysłany' : 'błąd skanu')), "Zlecenie $id: " . ($ok ? 'ok' : 'błąd') . "\nStrona: $url\nE-mail: $email\nWysłano: " . ($sent ? 'tak' : 'NIE') . "\n", $head, '-fcontact@pepsafe.info');
+$sent = mail($email, $subj($s), $body, $head);
+@mail('contact@pepsafe.info', $subj('Skaner: ' . ($ok ? 'raport wysłany' : 'błąd skanu')), "Zlecenie $id: " . ($ok ? 'ok' : 'błąd') . "\nStrona: $url\nE-mail: $email\nWysłano: " . ($sent ? 'tak' : 'NIE') . "\n", $head);
 if ($sent) { if (!is_dir($q . '/done')) @mkdir($q . '/done', 0750, true); @rename($f, $q . '/done/' . $id . '.json'); }
 // retention: reports 30 days, processed jobs 12 months
 foreach (glob(__DIR__ . '/raporty/*.pdf') ?: [] as $p) if (filemtime($p) < time() - 30 * 86400) @unlink($p);
