@@ -23,11 +23,12 @@ footer{margin:48px 0 28px;color:var(--m);font-size:13px}@media(max-width:560px){
 <form class="card" method="POST" action="https://formsubmit.co/contact@pepsafe.info">
 <input type="hidden" name="_subject" value="Darmowy skan dostępności: nowe zgłoszenie"><input type="hidden" name="_next" value="https://pepsafe.uk/dostepnosc/dziekujemy.html">
 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-<label for="u">Adres strony do sprawdzenia</label><input id="u" type="url" name="adres_strony" placeholder="https://www.twoja-szkola.pl" required>
+<label for="u">Adres strony do sprawdzenia</label><input id="u" type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" name="adres_strony" placeholder="np. www.twoja-szkola.pl" required>
 <label for="n">Nazwa placówki (opcjonalnie)</label><input id="n" type="text" name="placowka">
 <label for="e">Adres e-mail, na który wyślemy raport</label><input id="e" type="email" name="email" required>
 <div class="c"><input id="z" type="checkbox" name="zgoda" value="tak" required><label for="z" style="font-weight:400;margin:0">Wyrażam zgodę na przesłanie raportu oraz informacji o usługach PepSafe Studio (np. pełny audyt i monitoring) na podany adres e-mail. Zgodę mogę wycofać w każdej chwili. Administratorem danych jest PepSafe Studio, <a href="/dostepnosc/polityka.html">szczegóły</a>.</label></div>
 <button type="submit">Sprawdź moją stronę za darmo</button></form>
+<script>document.currentScript.previousElementSibling.addEventListener("submit",function(){var i=document.getElementById("u");var v=i.value.trim();if(v&&!/^https?:\/\//i.test(v)){i.value="https://"+v}});</script>
 <div class="note"><b>Ważne:</b> to wstępna kontrola automatyczna jednej strony. Narzędzia znajdują tylko część problemów, a klawiaturę, czytniki ekranu i treść trzeba sprawdzić ręcznie. Raport nie jest certyfikatem zgodności ani deklaracją dostępności.</div>
 <h2>Warto przeczytać</h2><ul><li><a href="/dostepnosc/badanie-2026.html">Badanie: stan dostępności stron szkół i miast (listopad 2026)</a></li><li><a href="/dostepnosc/deklaracja-dostepnosci-szkola.html">Deklaracja dostępności szkoły: co musi zawierać</a></li></ul>
 <footer>PepSafe Studio · <a href="/dostepnosc/polityka.html">Polityka prywatności skanera</a> · <a href="mailto:contact@pepsafe.info">contact@pepsafe.info</a><br>Wstępna kontrola automatyczna nie jest certyfikatem zgodności ani poradą prawną.</footer></main></body></html>
