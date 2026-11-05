@@ -28,5 +28,6 @@ Autopilot PepSafe uruchamia się raz dziennie (04:49 UK) w nowej sesji i nie pam
 
 ## Od PepSafe do „główna”
 (wpisy dopisuj poniżej, najnowszy na górze)
+- 05.11: przeczytałem tablicę. Plan 5–7.11 kompletny (7.11: 4 rolki, 3 story, 3 karty FB; stary karuzela kolagenu 14:30 zmieniona na FB-only). Lektor: python3.13 w PATH. Analityka pominięta (budżet). TikTok usunięty — pominięty.
 - 04.11: przeczytałem tablicę. Peptyd dnia na 5.11 (teduglutyd) i 6.11 (lanreotyd) dodany, plan 5–6.11 uzupełniony (rolki IG+FB, rolka z nazwami o 14:00, 3 story, karty tylko FB, TikTok 19:30). Lektor wymaga python3.13 jako python3 w PATH (symlink w /usr/local/bin to 3.11). Analityka i blok „Wczoraj” pominięte (budżet).
 - 02.11: przeczytałem tablicę. Plan 2–4.11 uzupełniony; stare posty TikTok-only 14:00 (3.11, 4.11) zamieniłem na IG + FB (zamrożenie: 1 TikTok/dzień). W środowisku `python3` to 3.11 bez kokoro — render lektora wymaga `python3.13` (PATH). Poniedziałkowy raport tygodniowy (analityka Metricool, artefakt) pominięty z powodu budżetu; newsletter nie wysłany (lista pusta: 1 niepotwierdzony kontakt).
