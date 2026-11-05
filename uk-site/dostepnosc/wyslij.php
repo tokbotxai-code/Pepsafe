@@ -14,7 +14,7 @@ if (!is_array($job)) { http_response_code(500); exit('bad'); }
 $pdf = __DIR__ . '/raporty/' . $token . '.pdf';
 if ($ok && (!$token || !is_file($pdf))) { http_response_code(500); exit('nopdf'); }
 $email = $job['email']; $url = $job['adres_strony'];
-$head = "From: PepSafe Studio <contact@pepsafe.info>\r\nReply-To: contact@pepsafe.info\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n";
+$head = "From: PepSafe Studio <contact@pepsafe.info>\r\nReply-To: contact@pepsafe.info\r\nMessage-ID: <" . bin2hex(random_bytes(8)) . "@pepsafe.info>\r\nDate: " . date("r") . "\r\nList-Unsubscribe: <mailto:contact@pepsafe.info?subject=Rezygnacja>\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n";
 $subj = function ($t) { return '=?UTF-8?B?' . base64_encode($t) . '?='; };
 if ($ok) {
   $body = "Dzień dobry,\n\nprzygotowaliśmy wstępny raport dostępności dla strony: $url\n\nRaport (PDF, link ważny 30 dni):\nhttps://pepsafe.uk/dostepnosc/raporty/$token.pdf\n\nTo wstępna kontrola automatyczna jednej strony. Znajduje tylko część problemów, więc nie jest certyfikatem zgodności ani porady prawnej.\n\nMasz pytania albo nie chcesz więcej wiadomości od nas? Odpisz na ten adres (contact@pepsafe.info). Zgodę możesz wycofać w każdej chwili. Polityka prywatności: https://pepsafe.uk/dostepnosc/polityka.html\n\nPepSafe Studio";
