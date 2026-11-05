@@ -1,0 +1,60 @@
+name: UK scanner (automatic)
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+concurrency:
+  group: uk-skan
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install lftp
+        run: sudo apt-get install -y lftp >/dev/null
+      - name: Fetch queue
+        id: q
+        env:
+          H: ${{ secrets.UK_SFTP_HOST }}
+          U: ${{ secrets.UK_SFTP_USER }}
+          P: ${{ secrets.UK_SFTP_PASS }}
+        run: |
+          mkdir -p queue
+          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; set net:max-retries 2; mget -O queue kolejka/*.json; get kolejka/.key -o queue/.key; quit" >/dev/null 2>&1 || true
+          n=$(ls queue/*.json 2>/dev/null | wc -l)
+          echo "jobs=$n" >> "$GITHUB_OUTPUT"
+          echo "waiting: $n"
+      - uses: actions/setup-node@v4
+        if: steps.q.outputs.jobs != '0'
+        with:
+          node-version: '22'
+      - name: Install scanner
+        if: steps.q.outputs.jobs != '0'
+        run: |
+          cd tools/wcag && npm i --silent && npx playwright install --with-deps chromium >/dev/null 2>&1
+      - name: Process jobs (max 3)
+        if: steps.q.outputs.jobs != '0'
+        env:
+          H: ${{ secrets.UK_SFTP_HOST }}
+          U: ${{ secrets.UK_SFTP_USER }}
+          P: ${{ secrets.UK_SFTP_PASS }}
+        run: |
+          set +e
+          KEY=$(cat queue/.key); echo "::add-mask::$KEY"
+          count=0
+          for f in $(ls queue/*.json | head -3); do
+            id=$(jq -r .id "$f"); url=$(jq -r .adres_strony "$f")
+            echo "::add-mask::$url"; echo "::add-mask::$(jq -r .email "$f")"
+            token=$(openssl rand -hex 12); status=error
+            if python3 tools/wcag/safe-url.py "$url"; then
+              if timeout 150 tools/wcag/run.sh "$url" "$token.pdf" >/dev/null 2>&1 && [ -s "tools/wcag/$token.pdf" ]; then status=ok; fi
+            fi
+            if [ "$status" = ok ]; then
+              lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; put -O public/dostepnosc/raporty tools/wcag/$token.pdf; quit" >/dev/null 2>&1 || status=error
+            fi
+            res=$(curl -s -m 60 -X POST https://pepsafe.uk/dostepnosc/wyslij.php --data-urlencode "key=$KEY" --data-urlencode "id=$id" --data-urlencode "status=$status" --data-urlencode "token=$token")
+            echo "job $((count+1)): scan=$status mail=$res"
+            count=$((count+1))
+          done
