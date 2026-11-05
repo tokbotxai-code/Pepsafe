@@ -28,7 +28,19 @@ footer{margin:48px 0 28px;color:var(--m);font-size:13px}@media(max-width:560px){
 <label for="e">Adres e-mail, na który wyślemy raport</label><input id="e" type="email" name="email" required>
 <div class="c"><input id="z" type="checkbox" name="zgoda" value="tak" required><label for="z" style="font-weight:400;margin:0">Wyrażam zgodę na przesłanie raportu oraz informacji o usługach PepSafe Studio (np. pełny audyt i monitoring) na podany adres e-mail. Zgodę mogę wycofać w każdej chwili. Administratorem danych jest PepSafe Studio, <a href="/dostepnosc/polityka.html">szczegóły</a>.</label></div>
 <button type="submit">Sprawdź moją stronę za darmo</button></form>
-<script>document.currentScript.previousElementSibling.addEventListener("submit",function(){var i=document.getElementById("u");var v=i.value.trim();if(v&&!/^https?:\/\//i.test(v)){i.value="https://"+v}});</script>
+<p id="fmsg" class="note" style="display:none" role="status"></p>
+<script>(function(){var f=document.querySelector("form");var m=document.getElementById("fmsg");
+f.addEventListener("submit",function(e){e.preventDefault();
+var i=document.getElementById("u");var v=i.value.trim();if(v&&!/^https?:\/\//i.test(v)){v="https://"+v;i.value=v}
+var d={adres_strony:v,placowka:document.getElementById("n").value,email:document.getElementById("e").value,zgoda:"tak",_subject:"Darmowy skan dostępności: nowe zgłoszenie",_captcha:"false"};
+var b=f.querySelector("button");b.disabled=true;b.textContent="Wysyłanie...";
+var c=new AbortController();var t=setTimeout(function(){c.abort()},9000);
+fetch("https://formsubmit.co/ajax/contact@pepsafe.info",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d),signal:c.signal})
+.then(function(r){clearTimeout(t);if(!r.ok)throw 0;location.href="/dostepnosc/dziekujemy.html"})
+.catch(function(){clearTimeout(t);b.disabled=false;b.textContent="Sprawdź moją stronę za darmo";
+var body="Adres strony: "+v+"\nPlacówka: "+d.placowka+"\nE-mail: "+d.email+"\nWyrażam zgodę na przesłanie raportu oraz informacji o usługach PepSafe Studio na podany adres e-mail.";
+var href="mailto:contact@pepsafe.info?subject="+encodeURIComponent("Darmowy skan dostępności")+"&body="+encodeURIComponent(body);
+m.style.display="block";m.innerHTML='Formularz jest chwilowo niedostępny. <a href="'+href+'">Wyślij zgłoszenie e-mailem</a> (treść jest już uzupełniona).';});});})();</script>
 <div class="note"><b>Ważne:</b> to wstępna kontrola automatyczna jednej strony. Narzędzia znajdują tylko część problemów, a klawiaturę, czytniki ekranu i treść trzeba sprawdzić ręcznie. Raport nie jest certyfikatem zgodności ani deklaracją dostępności.</div>
 <h2>Warto przeczytać</h2><ul><li><a href="/dostepnosc/badanie-2026.html">Badanie: stan dostępności stron szkół i miast (listopad 2026)</a></li><li><a href="/dostepnosc/deklaracja-dostepnosci-szkola.html">Deklaracja dostępności szkoły: co musi zawierać</a></li></ul>
 <footer>PepSafe Studio · <a href="/dostepnosc/polityka.html">Polityka prywatności skanera</a> · <a href="mailto:contact@pepsafe.info">contact@pepsafe.info</a><br>Wstępna kontrola automatyczna nie jest certyfikatem zgodności ani poradą prawną.</footer></main></body></html>
