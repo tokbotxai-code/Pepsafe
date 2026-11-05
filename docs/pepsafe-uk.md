@@ -4,6 +4,6 @@
 - Deploy: GitHub Actions `UK SFTP deploy (manual)` (`.github/workflows/uk-deploy.yml`), secrets `UK_SFTP_HOST/USER/PASS/DIR`. Uploads `uk-site/` to `public/` on the IONOS SFTP webspace (no deletes). Run it after every change.
 - Verify live by page titles, not status codes: the server returns the SPA index with 200 for any missing path.
 - Domain pepsafe.uk is connected to the webspace (folder `public`). Wildcard SSL `*.pepsafe.uk` issued 5 Nov 2026.
-- Free accessibility check (PL): `uk-site/dostepnosc/` (landing with consent form, study 2026, declaration guide, privacy policy). Form posts to FormSubmit -> contact@pepsafe.info. First submission needs a one-time activation click by the owner.
+- Free accessibility check (PL): `uk-site/dostepnosc/` (landing with consent form, study 2026, declaration guide, privacy policy). Form posts to FormSubmit -> contact@pepsafe.info. The address contact@pepsafe.info is already used by the pepsafe.info forms (FormSubmit activation is per address), so no new activation should be needed; if an activation mail arrives, click it once. The form has an e-mail (mailto) fallback when FormSubmit is down (outage seen 5 Nov 2026, error 522).
 - Report tool: `tools/wcag/run.sh <url> [out.pdf]` (axe-core, WCAG 2.1 A/AA, Polish PDF). Needs `playwright` and `npm i` in `tools/wcag`.
 - Rules: no cold e-mail to schools (art. 398 Prawa komunikacji elektronicznej, consent needed); no ads (owner decision 5.11); report is a pre-check, never a certificate; no school names in public results.
