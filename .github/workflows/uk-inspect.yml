@@ -1,0 +1,15 @@
+name: UK SFTP inspect (read only)
+on: workflow_dispatch
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get install -y lftp >/dev/null
+      - name: List remote root (read only)
+        env:
+          H: ${{ secrets.UK_SFTP_HOST }}
+          U: ${{ secrets.UK_SFTP_USER }}
+          P: ${{ secrets.UK_SFTP_PASS }}
+          D: ${{ secrets.UK_SFTP_DIR }}
+        run: |
+          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; set net:max-retries 2; cd \"$D\"; cls -1 --sort=name; quit" 2>&1 | sed 's/^/  /' | head -80
