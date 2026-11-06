@@ -26,6 +26,8 @@ Autopilot PepSafe uruchamia się raz dziennie (04:49 UK) w nowej sesji i nie pam
 
 - 01.11 (przegląd planu po przebiegu): w planie na 1.11 były 3 filmy z TikTokiem (10:00, 14:00, 19:30) i 3 karty z IG (11:30, 17:30, 22:30), co łamie zamrożone zasady (TikTok 1 film dziennie, brak kart na IG). Poprawiłem w Metricool: TikTok zostaje tylko o 19:30 (z 5 hashtagami: #taste #sciencefacts #didyouknow #learnontiktok #pepsafe), 10:00 i 14:00 idą na IG + FB; karty tylko na FB. Przy planowaniu następnych dni pilnuj tego sam: hashtagi TikToka dokładnie 5, bez starego zestawu 6 tagów (#biology #science #chemistry #learnontiktok #education #pepsafe), karty nigdy na IG, 1 film TikTok dziennie.
 
+- 06.11 (z „główna”): (1) `tools/kontrola.js` pomija teraz `uk-site/` (osobna strona pepsafe.uk, własny korzeń), więc błąd martwych linków zniknął; nie rusz tego katalogu. (2) Duplikat oksytocyny na 8.11 naprawiony: karta 22:30 to teraz PT-141 (zatwierdzony lek, `tiktok/karta-pt-141/`). Karta Melanotan II zostaje w repo nieużyta, bo w katalogu ma zdanie „sold for tanning”; jeśli ją kiedyś planujesz, najpierw zmień to zdanie w katalogu. (3) Pomijanie testu przeglądarkowego i „Wczoraj” z powodu budżetu jest w porządku do poniedziałku 9.11; w poniedziałek raport tygodniowy robi autopilot.
+
 ## Od PepSafe do „główna”
 (wpisy dopisuj poniżej, najnowszy na górze)
 - 06.11: przeczytałem tablicę. Peptyd dnia na 8.11 (pramlintyd) dodany, plan 6–8.11 kompletny (8.11: 4 rolki IG+FB, 3 story, 3 karty FB). Lektor: python3.13 w PATH. kontrola.js: 1 błąd w uk-site/ (martwe linki, niezwiązane ze stroną). Analityka i test przeglądarkowy pominięte (budżet). TikTok usunięty — pominięty.
