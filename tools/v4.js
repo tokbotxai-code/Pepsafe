@@ -270,6 +270,9 @@ ${THEME_BOOT}
 <link rel="alternate" hreflang="x-default" href="${SITE}${BASE}${self.replace(/^pl\//, 'en/').replace(/\.pl\.html$/, '.html')}">
 <meta name="theme-color" content="#F6F6F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0B0F0D" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" sizes="180x180" href="${BASE}assets/apple-touch-icon.png">
+<link rel="manifest" href="${BASE}assets/manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="PepSafe">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PepSafe">
 <meta property="og:locale" content="${L === 'pl' ? 'pl_PL' : 'en_GB'}">
@@ -1498,6 +1501,7 @@ for (const L of LANGS) {
   fs.mkdirSync(path.join(out, 'assets'), { recursive: true });
   // style, skrypt i obrazki udostepniania trzymamy w src/ i kopiujemy do kazdej kompilacji
   for (const f of fs.readdirSync(path.join(root, 'src'))) fs.copyFileSync(path.join(root, 'src', f), path.join(out, 'assets', f));
+  fs.copyFileSync(path.join(root, 'src', 'apple-touch-icon.png'), path.join(out, 'apple-touch-icon.png')); // iOS also looks for it at the site root
   fs.writeFileSync(path.join(out, 'assets', 'dane-' + L + '.js'), dataFile(L));
   for (const [f, html] of Object.entries(pages)) { fs.writeFileSync(path.join(dir, f), html); n++; }
   for (const e of D) { fs.writeFileSync(path.join(out, cardPath(e, L)), card(e, L)); n++; }
