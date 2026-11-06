@@ -42,7 +42,7 @@ console.log('\n── linki wewnętrzne ──');
 const pliki = [];
 (function chodz(d) {
   for (const f of fs.readdirSync(path.join(root, d), { withFileTypes: true })) {
-    if (/^(\.git|node_modules|tiktok|tools|src|brand|docs)$/.test(f.name)) continue;
+    if (/^(\.git|node_modules|tiktok|tools|src|brand|docs|uk-site)$/.test(f.name)) continue;
     const r = d ? d + '/' + f.name : f.name;
     f.isDirectory() ? chodz(r) : /\.html$/.test(f.name) && pliki.push(r);
   }
