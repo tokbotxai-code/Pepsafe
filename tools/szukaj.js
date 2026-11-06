@@ -57,3 +57,6 @@ for (const [lang, suf] of Object.entries(LANGS)) {
   fs.writeFileSync(path.join(OUT, lang, 'search.html'), h);
   console.log(`szukaj ${lang}: ${idx.length} stron w indeksie`);
 }
+
+// druga kopia sitemapy pod innym adresem (Search Console trzymal stary blad dla sitemap.xml)
+fs.copyFileSync(path.join(OUT, 'sitemap.xml'), path.join(OUT, 'sitemap-pages.xml'));
