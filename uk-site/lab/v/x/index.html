@@ -12,7 +12,7 @@ body[data-s="1"]{--g1:rgba(242,169,0,.26);--g2:rgba(143,216,255,.10)}
 body[data-s="2"]{--g1:rgba(70,180,240,.34);--g2:rgba(255,194,51,.10)}
 body[data-s="3"]{--g1:rgba(90,190,200,.32);--g2:rgba(242,169,0,.10)}
 body[data-s="4"]{--g1:rgba(255,194,51,.28);--g2:rgba(90,170,235,.12)}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth;scroll-padding-top:20px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:radial-gradient(1200px 800px at 50% -10%,#2f7399,#174460 60%,#0b2230);overflow-x:clip;-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;transition:--g1 1.2s,--g2 1.2s}
 img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
 .mail{user-select:text;-webkit-user-select:text}
@@ -117,6 +117,9 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 .logo svg{width:38px;height:38px;flex:none;transition:width .6s cubic-bezier(.3,1.2,.4,1);overflow:visible;color:#fff;filter:drop-shadow(0 0 6px rgba(143,216,255,.55))}
 .logo .word{white-space:nowrap}.cell{transform-box:fill-box;transform-origin:center;transition:transform .55s cubic-bezier(.3,1.5,.5,1),fill .4s}
 @media(prefers-reduced-motion:reduce){.cell{transition:none}}
+.sc{width:100%;height:100%;overflow:hidden;border-radius:27px}.sc img{transform-origin:50% 0;animation:scr 14s ease-in-out infinite alternate}.app:nth-child(2) .sc img{animation-duration:19s;animation-delay:-5s}.app.wide .sc img{animation-duration:22s;animation-delay:-9s}
+@keyframes scr{0%,8%{transform:translateY(0) scale(1.02)}92%,100%{transform:translateY(-19%) scale(1.19)}}
+@media(prefers-reduced-motion:reduce){.sc img{animation:none}}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
@@ -162,6 +165,7 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 
 <script>
 (function(){
+document.querySelectorAll('.ph img').forEach(function(im){var w=document.createElement('div');w.className='sc';im.parentNode.insertBefore(w,im);w.appendChild(im)});
 var NPV=[['X...A','XX..X','X.X.X','X..XX','X...X'],['..X..','..X..','XXAXX','..X..','..X..'],['.XXX.','X...X','X.A.X','X...X','.XXX.'],['....A','...XX','..XX.','XXX..','X....'],['.....','.XXX.','.XXX.','.XXA.','.....'],['.....','XXXX.','X...X','X...X','A...X']],npc=-1,npEl=document.getElementById('mk');
 (function(){var COLS=26,GL={N:['X..X','XX.X','X.XX','X..X','X..X'],o:['...','XXX','X.X','X.X','XXX'],v:['...','X.X','X.X','X.X','.X.'],P:['XXX','X.X','XXX','X..','X..'],i:['A','.','X','X','X'],x:['...','X.X','.X.','X.X','X.X']};
 var WORD=['','','','',''],ch='NovoPix'.split(''),r;for(r=0;r<5;r++){var row=[];ch.forEach(function(c,k){row.push(GL[c][r]);if(k<ch.length-1)row.push('.')});WORD[r]=row.join('')}
@@ -260,7 +264,7 @@ addEventListener('pointerdown',function(e){mouse.x=e.clientX;mouse.y=e.clientY;m
 document.addEventListener('pointerup',function(e){if(e.pointerType==='touch'){clearTimeout(window.__tm);window.__tm=setTimeout(function(){mouse.on=0},500)}});
 document.addEventListener('selectstart',function(e){if(!e.target.closest||!e.target.closest('.mail'))e.preventDefault()});
 var navLinks=[].slice.call(document.querySelectorAll('#nv a')),bubs=[].slice.call(document.querySelectorAll('.bub'));
-function goSec(el){if(!el)return;var y=el.id==='top'?0:el.getBoundingClientRect().top+scrollY-12;window.scrollTo({top:y,behavior:rm?'auto':'smooth'})}
+function goSec(el){if(!el)return;var y=el.id==='top'?0:el.getBoundingClientRect().top+scrollY-(innerWidth<820?84:96);window.scrollTo({top:y,behavior:rm?'auto':'smooth'})}
 function spyShape(){var y=scrollY+innerHeight*.78,c=0;SECS.forEach(function(s,i){if(s&&s.offsetTop<=y)c=i});if(scrollY+innerHeight>=document.documentElement.scrollHeight-4)c=SECS.length-1;
  if(c!==sec){sec=c;document.body.dataset.s=sec;if(sec===0)morphTo('w'+wi);else morphTo(SHAPES[SECS[sec].id])}
  navLinks.forEach(function(a){var i=SECS.indexOf(document.querySelector(a.getAttribute('href')));a.classList.toggle('on',i===sec&&sec>0);if(i===sec&&sec>0)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
