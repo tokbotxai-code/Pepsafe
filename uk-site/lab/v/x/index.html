@@ -167,16 +167,16 @@ var palCur=PAL[0].slice();
 var glc=document.getElementById('gl'),bgc=document.getElementById('bg'),gl=null,gb=null,ok=false,booted=false;
 function sh(g,t,src){var s=g.createShader(t);g.shaderSource(s,src);g.compileShader(s);if(!g.getShaderParameter(s,g.COMPILE_STATUS))throw new Error(g.getShaderInfoLog(s));return s}
 function mkProg(g,vs,fs){var p=g.createProgram();g.attachShader(p,sh(g,g.VERTEX_SHADER,vs));g.attachShader(p,sh(g,g.FRAGMENT_SHADER,fs));g.linkProgram(p);if(!g.getProgramParameter(p,g.LINK_STATUS))throw new Error(g.getProgramInfoLog(p));return p}
-var bqBuf=null,VW=innerWidth,VH=innerHeight,DPR=1,N=0,DRAW=0,Q=1,PR=null,BR=null,buf={},loc={},bloc={},cache={},cur={name:'w0',from:null,to:null,del:null,t0:-99,dur:1.5,spread:.9,swirl:.8,style:'wave'},sv=0,lastSy=0,par={x:0,y:0},shock={x:-9999,y:-9999,t:-99},styleI=0,sec=0,wi=0,hovering=false,lastWord=0,bgFrame=0,bgEvery=2,bgScale=.3,sw=null;
+var bqBuf=null,VW=innerWidth,VH=innerHeight,DPR=1,N=0,DRAW=0,KEEP=1,Q=1,PR=null,BR=null,buf={},loc={},bloc={},cache={},cur={name:'w0',from:null,to:null,del:null,t0:-99,dur:1.5,spread:.9,swirl:.8,style:'wave'},sv=0,lastSy=0,par={x:0,y:0},shock={x:-9999,y:-9999,t:-99},styleI=0,sec=0,wi=0,hovering=false,lastWord=0,bgFrame=0,bgEvery=2,bgScale=.3,sw=null;
 var mouse={x:-9999,y:-9999,sx:-9999,sy:-9999,on:0,k:0},tnow=0,T00=performance.now();
-var PV='attribute vec4 aFT;attribute float aD;attribute vec3 aM;uniform float uTime,uT0,uDur,uPx,uSpread,uK,uR,uBr,uSwirl,uSV,uScroll;uniform vec2 uRes,uMouse,uPar;uniform vec3 uSh;varying vec3 vC;varying float vF;'
+var PV='attribute vec4 aFT;attribute float aD;attribute vec3 aM;uniform float uKeep,uTime,uT0,uDur,uPx,uSpread,uK,uR,uBr,uSwirl,uSV,uScroll;uniform vec2 uRes,uMouse,uPar;uniform vec3 uSh;varying vec3 vC;varying float vF;'
 +'float ez(float t){return t<.5?4.*t*t*t:1.-pow(-2.*t+2.,3.)/2.;}'
 +'void main(){float p=clamp((uTime-uT0-aD*uSpread)/uDur,0.,1.);float e=ez(p);vec2 a=aFT.xy,b=aFT.zw;vec2 pos=mix(a,b,e);vec2 d=b-a;float fl=sin(e*3.14159);'
 +'pos+=vec2(-d.y,d.x)*fl*(aM.z-.5)*uSwirl;pos+=vec2(sin(uTime*1.3+aM.x*40.),cos(uTime*1.1+aM.x*37.))*(1.3+26.*fl)*uBr;'
 +'pos+=uPar*(aM.y-3.6)*uBr;pos.y+=sin(pos.x*.011+uTime*1.5)*3.4*(1.-fl)*uBr;pos.y-=uScroll;pos.y+=(uSV*(aM.z-.5)*10.+sin(pos.x*.02+uTime*5.)*uSV*.35)*uBr;'
 +'vec2 sd=pos-uSh.xy;float sdist=length(sd);float age=uTime-uSh.z;float rq=(sdist-age*900.)/120.;float ring=exp(-rq*rq)*exp(-age*1.5)*step(0.,age)*step(age,3.);pos+=sd/(sdist+.001)*ring*70.*uBr;'
 +'vec2 md=pos-uMouse;float dist=length(md);float f=smoothstep(uR,0.,dist);pos+=md/(dist+.001)*f*f*uK;'
-+'gl_Position=vec4(pos.x/uRes.x*2.-1.,1.-pos.y/uRes.y*2.,0.,1.);gl_PointSize=aM.y*uPx*(1.+.6*fl+f*.9);'
++'gl_Position=vec4(pos.x/uRes.x*2.-1.,1.-pos.y/uRes.y*2.,0.,1.);gl_PointSize=aM.y*uPx*(1.+.6*fl+f*.9)*(1.+(1.-uKeep)*.7);if(aM.x>uKeep)gl_Position=vec4(2.,2.,2.,1.);'
 +'float h=aM.x*.11+pos.x/uRes.x*.75+uTime*.04;vC=.58+.42*cos(6.2831*(vec3(0.,.33,.67)+h));vF=f;}';
 var PF='precision mediump float;varying vec3 vC;varying float vF;void main(){float r=length(gl_PointCoord-.5);float a=smoothstep(.5,.12,r);gl_FragColor=vec4((vC+vF*.4)*a*1.15,a);}';
 var BV='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
@@ -186,13 +186,13 @@ var BF='precision mediump float;uniform vec2 uRes,uMouse;uniform float uTime,uSc
 +'vec2 m=uMouse/uRes;m.y=1.-m.y;col+=vec3(.25,.3,.6)*.35*smoothstep(.35,0.,length((uv-m)*vec2(uRes.x/uRes.y,1.)));float v=smoothstep(1.25,.15,length(uv-.5));col*=.66+.6*v;gl_FragColor=vec4(col,1.);}';
 function setupGL(){try{gl=glc.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:true,preserveDrawingBuffer:TEST,powerPreference:'high-performance'});gb=bgc.getContext('webgl',{alpha:false,antialias:false,preserveDrawingBuffer:TEST});ok=!!(gl&&gb)}catch(e){ok=false}
  if(!ok)return;try{PR=mkProg(gl,PV,PF);BR=mkProg(gb,BV,BF)}catch(e){ok=false;if(window.console)console.warn('GL setup failed: '+e.message);return}
- ['aFT','aD','aM'].forEach(function(a){loc[a]=gl.getAttribLocation(PR,a)});['uTime','uT0','uDur','uPx','uSpread','uK','uR','uBr','uSwirl','uSV','uScroll','uPar','uSh','uRes','uMouse'].forEach(function(u){loc[u]=gl.getUniformLocation(PR,u)});
+ ['aFT','aD','aM'].forEach(function(a){loc[a]=gl.getAttribLocation(PR,a)});['uKeep','uTime','uT0','uDur','uPx','uSpread','uK','uR','uBr','uSwirl','uSV','uScroll','uPar','uSh','uRes','uMouse'].forEach(function(u){loc[u]=gl.getUniformLocation(PR,u)});
  ['uRes','uMouse','uTime','uScroll','uC'].forEach(function(u){bloc[u]=gb.getUniformLocation(BR,u)});bloc.p=gb.getAttribLocation(BR,'p');
  bqBuf=gb.createBuffer();gb.bindBuffer(gb.ARRAY_BUFFER,bqBuf);gb.bufferData(gb.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gb.STATIC_DRAW);
  buf.ft=gl.createBuffer();buf.d=gl.createBuffer();buf.m=gl.createBuffer();
  N=coarse?9000:16000;var M=new Float32Array(N*3);for(var i=0;i<N;i++){M[i*3]=Math.random();M[i*3+1]=(2.4+Math.random()*2.4)*(VW<700?.75:1.05);M[i*3+2]=Math.random()}gl.bindBuffer(gl.ARRAY_BUFFER,buf.m);gl.bufferData(gl.ARRAY_BUFFER,M,gl.STATIC_DRAW);
  cur.from=new Float32Array(N*2);cur.to=new Float32Array(N*2);cur.del=new Float32Array(N)}
-function applyQ(q){Q=q;DRAW=Math.min(N,[4200,Math.round(N*.6),N][q]);bgScale=[.2,.28,.38][q];bgEvery=[3,2,1][q];document.body.classList.toggle('lite',q===0);sizeGL()}
+function applyQ(q){Q=q;DRAW=N;KEEP=[.4,.7,1][q];bgScale=[.2,.28,.38][q];bgEvery=[3,2,1][q];document.body.classList.toggle('lite',q===0);sizeGL()}
 function sizeGL(){VW=innerWidth;VH=innerHeight;DPR=Math.min(devicePixelRatio||1,[1,1.25,1.75][Q]);glc.width=Math.round(VW*DPR);glc.height=Math.round(VH*DPR);bgc.width=Math.max(120,Math.round(VW*bgScale));bgc.height=Math.max(90,Math.round(VH*bgScale))}
 function orderByX(xs,n){var B=4096,cnt=new Int32Array(B+1),k=B/(VW+1),i,idx=new Int32Array(n);for(i=0;i<n;i++){var b=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));cnt[b+1]++}for(i=0;i<B;i++)cnt[i+1]+=cnt[i];for(i=0;i<n;i++){var b2=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));idx[cnt[b2]++]=i}return idx}
 function stageEl(name){return document.getElementById(name.charAt(0)==='w'?STAGES.w:STAGES[name])}
@@ -233,7 +233,7 @@ function frame(now){tnow=(now-T00)/1000;var dt=now-lastT;lastT=now;frames++;if(d
 function draw(){if(bgFrame++%bgEvery===0){gb.viewport(0,0,bgc.width,bgc.height);gb.useProgram(BR);gb.bindBuffer(gb.ARRAY_BUFFER,bqBuf);gb.enableVertexAttribArray(bloc.p);gb.vertexAttribPointer(bloc.p,2,gb.FLOAT,false,0,0);gb.uniform2f(bloc.uRes,bgc.width,bgc.height);gb.uniform2f(bloc.uMouse,mouse.sx*bgc.width/VW,mouse.sy*bgc.height/VH);gb.uniform1f(bloc.uTime,rm?3:tnow);gb.uniform1f(bloc.uScroll,scrollY);gb.uniform3fv(bloc.uC,palCur);gb.drawArrays(gb.TRIANGLES,0,3)}
  gl.viewport(0,0,glc.width,glc.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE);gl.useProgram(PR);
  gl.bindBuffer(gl.ARRAY_BUFFER,buf.ft);gl.enableVertexAttribArray(loc.aFT);gl.vertexAttribPointer(loc.aFT,4,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,buf.d);gl.enableVertexAttribArray(loc.aD);gl.vertexAttribPointer(loc.aD,1,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,buf.m);gl.enableVertexAttribArray(loc.aM);gl.vertexAttribPointer(loc.aM,3,gl.FLOAT,false,0,0);
- gl.uniform1f(loc.uTime,tnow);gl.uniform1f(loc.uT0,cur.t0);gl.uniform1f(loc.uDur,cur.dur);gl.uniform1f(loc.uSpread,cur.spread);gl.uniform1f(loc.uPx,DPR);gl.uniform2f(loc.uRes,VW,VH);gl.uniform2f(loc.uMouse,mouse.sx,mouse.sy);gl.uniform1f(loc.uK,mouse.k);gl.uniform1f(loc.uR,rm?0:150);gl.uniform1f(loc.uBr,rm?0:1);gl.uniform1f(loc.uSwirl,cur.swirl);gl.uniform1f(loc.uSV,Math.max(-60,Math.min(60,sv)));gl.uniform1f(loc.uScroll,scrollY);gl.uniform2f(loc.uPar,par.x,par.y);gl.uniform3f(loc.uSh,shock.x,shock.y,shock.t);gl.drawArrays(gl.POINTS,0,DRAW);
+ gl.uniform1f(loc.uKeep,KEEP);gl.uniform1f(loc.uTime,tnow);gl.uniform1f(loc.uT0,cur.t0);gl.uniform1f(loc.uDur,cur.dur);gl.uniform1f(loc.uSpread,cur.spread);gl.uniform1f(loc.uPx,DPR);gl.uniform2f(loc.uRes,VW,VH);gl.uniform2f(loc.uMouse,mouse.sx,mouse.sy);gl.uniform1f(loc.uK,mouse.k);gl.uniform1f(loc.uR,rm?0:150);gl.uniform1f(loc.uBr,rm?0:1);gl.uniform1f(loc.uSwirl,cur.swirl);gl.uniform1f(loc.uSV,Math.max(-60,Math.min(60,sv)));gl.uniform1f(loc.uScroll,scrollY);gl.uniform2f(loc.uPar,par.x,par.y);gl.uniform3f(loc.uSh,shock.x,shock.y,shock.t);gl.drawArrays(gl.POINTS,0,DRAW);
  if(!document.body.classList.contains('ready'))document.body.classList.add('ready')}
 var curEl=document.getElementById('cur');
 addEventListener('pointermove',function(e){mouse.x=e.clientX;mouse.y=e.clientY;mouse.on=1;if(!rm&&Q>0){curEl.style.opacity=e.pointerType==='touch'?0:1;curEl.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)'}
