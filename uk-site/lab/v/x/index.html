@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Novopix: apps and software</title>
+<title>NovoPix: apps and software</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
 @property --g1{syntax:'<color>';inherits:true;initial-value:rgba(120,140,255,.30)}
@@ -115,12 +115,12 @@ footer{position:relative;z-index:5;padding:30px 0 40px;color:var(--mut);font-siz
 h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;letter-spacing:-.03em}
 .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:27px;line-height:1;cursor:pointer;background:none;border:0;padding:0}
 .logo svg{width:38px;height:38px;flex:none;transition:width .6s cubic-bezier(.3,1.2,.4,1);overflow:visible;color:#fff;filter:drop-shadow(0 0 6px rgba(143,216,255,.55))}
-.logo .word{transition:opacity .4s,max-width .6s;overflow:hidden;white-space:nowrap;max-width:200px}.cell{transform-box:fill-box;transform-origin:center;transition:transform .55s cubic-bezier(.3,1.5,.5,1),fill .4s}
+.logo .word{white-space:nowrap}.cell{transform-box:fill-box;transform-origin:center;transition:transform .55s cubic-bezier(.3,1.5,.5,1),fill .4s}
 @media(prefers-reduced-motion:reduce){.cell{transition:none}}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="bar gl"><button class="logo" id="mk" type="button" aria-label="Novopix"></button>
+<header><div class="bar gl"><button class="logo" id="mk" type="button" aria-label="NovoPix"></button>
 <nav id="nv" aria-label="Main"><a href="#apps">Projects</a><a href="#numbers">Numbers</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav></div></header>
 <div class="dock gl" id="dock" role="navigation" aria-label="Sections">
 <a class="bub on" href="#top" data-i="0" aria-label="Top"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg><b>Top</b></a>
@@ -158,18 +158,18 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 
 <section id="contact"><div class="w"><div class="stage2" id="st-contact" aria-hidden="true"></div><div class="contact gl tilt rv"><div><h2>Need a website or an app?</h2><p>We build websites too. If you have an idea, write to us and we will help you shape it. Questions, bug reports and feedback are welcome as well.</p></div><div style="display:grid;gap:18px;justify-items:start"><a class="mail" href="mailto:contact@pepsafe.info">contact@pepsafe.info</a><a class="btn pri" href="mailto:contact@pepsafe.info?subject=My%20idea">Write to us</a></div></div></div></section>
 </main>
-<footer><div class="w"><span>© 2026 Novopix</span><span><a href="#apps">Projects</a> · <a href="#numbers">Numbers</a> · <a href="#approach">Approach</a> · <a href="#contact">Contact</a> · <a href="https://pantrypal.pepsafe.uk/#/privacy" target="_blank" rel="noopener">PantryPal privacy</a></span></div></footer>
+<footer><div class="w"><span>© 2026 NovoPix</span><span><a href="#apps">Projects</a> · <a href="#numbers">Numbers</a> · <a href="#approach">Approach</a> · <a href="#contact">Contact</a> · <a href="https://pantrypal.pepsafe.uk/#/privacy" target="_blank" rel="noopener">PantryPal privacy</a></span></div></footer>
 
 <script>
 (function(){
 var NPV=[['X...A','XX..X','X.X.X','X..XX','X...X'],['..X..','..X..','XXAXX','..X..','..X..'],['.XXX.','X...X','X.A.X','X...X','.XXX.'],['....A','...XX','..XX.','XXX..','X....'],['.....','.XXX.','.XXX.','.XXA.','.....'],['.....','XXXX.','X...X','X...X','A...X']],npc=-1,npEl=document.getElementById('mk');
-(function(){var COLS=27,GL={n:['...','XX.','X.X','X.X','X.X'],o:['...','XXX','X.X','X.X','XXX'],v:['...','X.X','X.X','X.X','.X.'],p:['XX.','X.X','X.X','XX.','X..'],i:['A..','...','X..','X..','X..'],x:['...','X.X','.X.','X.X','X.X']};
-var WORD=['','','','',''],ch='novopix'.split(''),r,j;for(r=0;r<5;r++){var row=[];ch.forEach(function(c,k){row.push(GL[c][r].replace(/^A/,'A'));if(k<ch.length-1)row.push('.')});WORD[r]=row.join('')}
-var h='<svg viewBox="0 0 60 60" aria-hidden="true">';for(var y=0;y<5;y++)for(var x=0;x<COLS;x++)h+='<rect class="cell" x="'+(x*12+1)+'" y="'+(y*12+1)+'" width="10" height="10" rx="2.4" fill="currentColor" style="transform:scale(0)"/>';
-npEl.innerHTML=h+'</svg><span class="word">novopix</span>';var svg=npEl.querySelector('svg'),cs=npEl.querySelectorAll('.cell'),wd=npEl.querySelector('.word'),inWord=false;
+(function(){var COLS=26,GL={N:['X..X','XX.X','X.XX','X..X','X..X'],o:['...','XXX','X.X','X.X','XXX'],v:['...','X.X','X.X','X.X','.X.'],P:['XXX','X.X','XXX','X..','X..'],i:['A','.','X','X','X'],x:['...','X.X','.X.','X.X','X.X']};
+var WORD=['','','','',''],ch='NovoPix'.split(''),r;for(r=0;r<5;r++){var row=[];ch.forEach(function(c,k){row.push(GL[c][r]);if(k<ch.length-1)row.push('.')});WORD[r]=row.join('')}
+var h='<svg viewBox="0 0 60 60" aria-hidden="true">';for(var y=0;y<5;y++)for(var x=0;x<COLS;x++)h+='<rect class="cell" x="'+(x*12+1)+'" y="'+(y*12+1)+'" width="10" height="10" rx="1.5" fill="currentColor" style="transform:scale(0)"/>';
+npEl.innerHTML=h+'</svg><span class="word">NovoPix</span>';var svg=npEl.querySelector('svg'),cs=npEl.querySelectorAll('.cell'),wd=npEl.querySelector('.word'),inWord=false;
 function paint(m,w){for(var y=0;y<5;y++)for(var x=0;x<COLS;x++){var e=cs[y*COLS+x],c=(x<w&&m[y])?m[y][x]:'.';if(c===undefined)c='.';e.style.transitionDelay=(x*.012+y*.03)+'s';if(c==='.'){e.style.transform='scale(0)'}else{e.style.transform='scale(1)';e.setAttribute('fill',c==='A'?'#ffc233':'currentColor')}}}
-function show(i){npc=i;inWord=false;svg.setAttribute('viewBox','0 0 60 60');svg.style.width='38px';wd.style.opacity=1;wd.style.maxWidth='200px';paint(NPV[i],5)}
-function word(){inWord=true;svg.setAttribute('viewBox','0 0 '+COLS*12+' 60');svg.style.width=(COLS*12/60*38)+'px';wd.style.opacity=0;wd.style.maxWidth='0px';paint(WORD,COLS)}
+function show(i){npc=i;inWord=false;svg.setAttribute('viewBox','0 0 60 60');svg.style.width='38px';paint(NPV[i],5)}
+function word(){inWord=true;var avail=npEl.parentNode.clientWidth-wd.offsetWidth-70,full=COLS*12/60*38;svg.setAttribute('viewBox','0 0 '+COLS*12+' 60');svg.style.width=Math.max(120,Math.min(full*1.15,avail))+'px';paint(WORD,COLS)}
 function next(){var n;do{n=Math.floor(Math.random()*NPV.length)}while(n===npc);show(n)}
 var n=0,lu=0;next();
 function tick(){if(document.hidden||Date.now()-lu<2500)return;n++;if(inWord)next();else if(n%3===0)word();else next()}
@@ -178,7 +178,7 @@ setInterval(tick,3200);window.__studioMark={get:function(){return{sty:npc,word:i
 var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,TEST=/[?&]t=1/.test(location.search),FQ=(location.search.match(/[?&]q=(\d)/)||[])[1],coarse=matchMedia('(pointer:coarse)').matches||innerWidth<700;
 var SECS=['top','apps','numbers','approach','contact'].map(function(i){return document.getElementById(i)});
 var STAGES={w:'stage',phone:'st-apps',chart:'st-numbers',gear:'st-approach',mail:'st-contact'};
-var WORDS=['Novopix','Apps','Software','Design'],SHAPES={apps:'phone',numbers:'chart',approach:'gear',contact:'mail'};
+var WORDS=['NovoPix','Apps','Software','Design'],SHAPES={apps:'phone',numbers:'chart',approach:'gear',contact:'mail'};
 var PAL=[[.05,.18,.28, .15,.45,.62, .55,.82,.95, .95,.66,.05, 1.,.78,.25],[.06,.20,.30, .20,.52,.70, .95,.66,.10, .45,.78,.95, 1.,.80,.30],[.04,.16,.26, .10,.50,.72, .50,.85,.98, .98,.72,.15, .75,.92,1.],[.07,.22,.32, .25,.55,.65, .40,.80,.85, .95,.70,.12, 1.,.85,.45],[.06,.17,.27, .90,.62,.05, 1.,.80,.30, .30,.65,.90, .60,.85,1.]];
 var palCur=PAL[0].slice();
 var glc=document.getElementById('gl'),bgc=document.getElementById('bg'),gl=null,gb=null,ok=false,booted=false;
@@ -186,16 +186,16 @@ function sh(g,t,src){var s=g.createShader(t);g.shaderSource(s,src);g.compileShad
 function mkProg(g,vs,fs){var p=g.createProgram();g.attachShader(p,sh(g,g.VERTEX_SHADER,vs));g.attachShader(p,sh(g,g.FRAGMENT_SHADER,fs));g.linkProgram(p);if(!g.getProgramParameter(p,g.LINK_STATUS))throw new Error(g.getProgramInfoLog(p));return p}
 var bqBuf=null,VW=innerWidth,VH=innerHeight,DPR=1,N=0,DRAW=0,KEEP=1,Q=1,PR=null,BR=null,buf={},loc={},bloc={},cache={},cur={name:'w0',from:null,to:null,del:null,t0:-99,dur:1.5,spread:.9,swirl:.8,style:'wave'},sv=0,lastSy=0,par={x:0,y:0},shock={x:-9999,y:-9999,t:-99},styleI=0,sec=0,wi=0,hovering=false,lastWord=0,bgFrame=0,bgEvery=2,bgScale=.3,sw=null;
 var mouse={x:-9999,y:-9999,sx:-9999,sy:-9999,on:0,k:0},tnow=0,T00=performance.now();
-var PV='attribute vec4 aFT;attribute float aD;attribute vec3 aM;uniform float uKeep,uTime,uT0,uDur,uPx,uSpread,uK,uR,uBr,uSwirl,uSV,uScroll;uniform vec2 uRes,uMouse,uPar;uniform vec3 uSh;varying vec3 vC;varying float vF;'
+var PV='attribute vec4 aFT;attribute float aD;attribute vec3 aM;uniform float uCell,uKeep,uTime,uT0,uDur,uPx,uSpread,uK,uR,uBr,uSwirl,uSV,uScroll;uniform vec2 uRes,uMouse,uPar;uniform vec3 uSh;varying vec3 vC;varying float vF;'
 +'float ez(float t){return t<.5?4.*t*t*t:1.-pow(-2.*t+2.,3.)/2.;}'
 +'void main(){float p=clamp((uTime-uT0-aD*uSpread)/uDur,0.,1.);float e=ez(p);vec2 a=aFT.xy,b=aFT.zw;vec2 pos=mix(a,b,e);vec2 d=b-a;float fl=sin(e*3.14159);'
-+'pos+=vec2(-d.y,d.x)*fl*(aM.z-.5)*uSwirl;pos+=vec2(sin(uTime*1.3+aM.x*40.),cos(uTime*1.1+aM.x*37.))*(1.3+26.*fl)*uBr;'
-+'pos+=uPar*(aM.y-3.6)*uBr;pos.y+=sin(pos.x*.011+uTime*1.5)*3.4*(1.-fl)*uBr;pos.y-=uScroll;pos.y+=(uSV*(aM.z-.5)*10.+sin(pos.x*.02+uTime*5.)*uSV*.35)*uBr;'
++'pos+=vec2(-d.y,d.x)*fl*(aM.z-.5)*uSwirl;pos+=vec2(sin(uTime*1.3+aM.x*40.),cos(uTime*1.1+aM.x*37.))*(.25+26.*fl)*uBr;'
++'pos+=uPar*(aM.y-3.6)*.2*uBr;pos.y+=sin(pos.x*.011+uTime*1.5)*1.1*(1.-fl)*uBr;pos=floor(pos/uCell+.5)*uCell;pos.y-=uScroll;pos.y+=(uSV*(aM.z-.5)*10.+sin(pos.x*.02+uTime*5.)*uSV*.35)*uBr;'
 +'vec2 sd=pos-uSh.xy;float sdist=length(sd);float age=uTime-uSh.z;float rq=(sdist-age*900.)/120.;float ring=exp(-rq*rq)*exp(-age*1.5)*step(0.,age)*step(age,3.);pos+=sd/(sdist+.001)*ring*70.*uBr;'
 +'vec2 md=pos-uMouse;float dist=length(md);float f=smoothstep(uR,0.,dist);pos+=md/(dist+.001)*f*f*uK;'
-+'gl_Position=vec4(pos.x/uRes.x*2.-1.,1.-pos.y/uRes.y*2.,0.,1.);gl_PointSize=aM.y*.78*uPx*(1.+.6*fl+f*.9)*(1.+(1.-uKeep)*.7);if(aM.x>uKeep)gl_Position=vec4(2.,2.,2.,1.);'
-+'float h=aM.x*.11+pos.x/uRes.x*.75+uTime*.04;float hh=fract(h*2.3+aM.z);vC=mix(mix(vec3(.38,.72,.98),vec3(.9,.97,1.),smoothstep(.72,.95,hh)),vec3(1.,.72,.08),step(.84,fract(aM.x*7.13+aM.z)));vF=f;}';
-var PF='precision mediump float;varying vec3 vC;varying float vF;void main(){vec2 q=abs(gl_PointCoord-.5);float a=smoothstep(.5,.4,max(q.x,q.y));gl_FragColor=vec4((vC+vF*.4)*a*1.15,a);}';
++'gl_Position=vec4(pos.x/uRes.x*2.-1.,1.-pos.y/uRes.y*2.,0.,1.);gl_PointSize=uCell*uPx*(1.+.5*fl+f*.6);if(aM.x>uKeep)gl_Position=vec4(2.,2.,2.,1.);'
++'float h=aM.x*.11+pos.x/uRes.x*.75+uTime*.04;float hh=fract(h*2.3+aM.z);vC=mix(mix(vec3(.45,.78,1.),vec3(.95,.985,1.),smoothstep(.35,.6,hh)),vec3(1.,.72,.08),step(.9,fract(aM.x*7.13+aM.z)));vF=f;}';
+var PF='precision mediump float;varying vec3 vC;varying float vF;void main(){vec2 q=abs(gl_PointCoord-.5);float a=step(max(q.x,q.y),.49);gl_FragColor=vec4((vC+vF*.4)*a*1.15,a);}';
 var BV='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
 var BF='precision mediump float;uniform vec2 uRes,uMouse;uniform float uTime,uScroll;uniform vec3 uC[5];float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}float fb(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}'
 +'void main(){vec2 uv=gl_FragCoord.xy/uRes;vec2 p=uv*vec2(uRes.x/uRes.y,1.)*1.5;float t=uTime*.045;p.y+=uScroll*.0004;vec2 q=vec2(fb(p+t),fb(p+vec2(5.2,1.3)-t));float f=fb(p+3.2*q+t*.7);'
@@ -203,20 +203,20 @@ var BF='precision mediump float;uniform vec2 uRes,uMouse;uniform float uTime,uSc
 +'vec2 m=uMouse/uRes;m.y=1.-m.y;col+=vec3(.25,.3,.6)*.35*smoothstep(.35,0.,length((uv-m)*vec2(uRes.x/uRes.y,1.)));float v=smoothstep(1.25,.15,length(uv-.5));col*=.9+.3*v;col=col*1.02+vec3(.015,.025,.04);gl_FragColor=vec4(col,1.);}';
 function setupGL(){try{gl=glc.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:true,preserveDrawingBuffer:TEST,powerPreference:'high-performance'});gb=bgc.getContext('webgl',{alpha:false,antialias:false,preserveDrawingBuffer:TEST});ok=!!(gl&&gb)}catch(e){ok=false}
  if(!ok)return;try{PR=mkProg(gl,PV,PF);BR=mkProg(gb,BV,BF)}catch(e){ok=false;if(window.console)console.warn('GL setup failed: '+e.message);return}
- ['aFT','aD','aM'].forEach(function(a){loc[a]=gl.getAttribLocation(PR,a)});['uKeep','uTime','uT0','uDur','uPx','uSpread','uK','uR','uBr','uSwirl','uSV','uScroll','uPar','uSh','uRes','uMouse'].forEach(function(u){loc[u]=gl.getUniformLocation(PR,u)});
+ ['aFT','aD','aM'].forEach(function(a){loc[a]=gl.getAttribLocation(PR,a)});['uCell','uKeep','uTime','uT0','uDur','uPx','uSpread','uK','uR','uBr','uSwirl','uSV','uScroll','uPar','uSh','uRes','uMouse'].forEach(function(u){loc[u]=gl.getUniformLocation(PR,u)});
  ['uRes','uMouse','uTime','uScroll','uC'].forEach(function(u){bloc[u]=gb.getUniformLocation(BR,u)});bloc.p=gb.getAttribLocation(BR,'p');
  bqBuf=gb.createBuffer();gb.bindBuffer(gb.ARRAY_BUFFER,bqBuf);gb.bufferData(gb.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gb.STATIC_DRAW);
  buf.ft=gl.createBuffer();buf.d=gl.createBuffer();buf.m=gl.createBuffer();
  N=coarse?9000:16000;var M=new Float32Array(N*3);for(var i=0;i<N;i++){M[i*3]=Math.random();M[i*3+1]=(2.4+Math.random()*2.4)*(VW<700?.75:1.05);M[i*3+2]=Math.random()}gl.bindBuffer(gl.ARRAY_BUFFER,buf.m);gl.bufferData(gl.ARRAY_BUFFER,M,gl.STATIC_DRAW);
  cur.from=new Float32Array(N*2);cur.to=new Float32Array(N*2);cur.del=new Float32Array(N)}
-function applyQ(q){Q=q;DRAW=N;KEEP=[.6,.8,1][q];bgScale=[.2,.28,.38][q];bgEvery=[3,2,1][q];document.body.classList.toggle('lite',q===0);sizeGL()}
+function applyQ(q){Q=q;DRAW=N;KEEP=[.7,.85,1][q];bgScale=[.2,.28,.38][q];bgEvery=[3,2,1][q];document.body.classList.toggle('lite',q===0);sizeGL()}
 function sizeGL(){VW=innerWidth;VH=innerHeight;DPR=Math.min(devicePixelRatio||1,[1,1.25,1.75][Q]);glc.width=Math.round(VW*DPR);glc.height=Math.round(VH*DPR);bgc.width=Math.max(120,Math.round(VW*bgScale));bgc.height=Math.max(90,Math.round(VH*bgScale))}
 function orderByX(xs,n){var B=4096,cnt=new Int32Array(B+1),k=B/(VW+1),i,idx=new Int32Array(n);for(i=0;i<n;i++){var b=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));cnt[b+1]++}for(i=0;i<B;i++)cnt[i+1]+=cnt[i];for(i=0;i<n;i++){var b2=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));idx[cnt[b2]++]=i}return idx}
 function stageEl(name){return document.getElementById(name.charAt(0)==='w'?STAGES.w:STAGES[name])}
 function rr(g,x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath()}
 function sampleShape(name){var el=stageEl(name),r=el.getBoundingClientRect(),top=r.top+scrollY,key=name+'|'+VW+'|'+Math.round(top)+'|'+Math.round(r.height);if(cache[key])return cache[key];
  var SW=Math.min(1100,VW),k=VW/SW,SH=Math.max(60,Math.round(r.height/k)),o=document.createElement('canvas');o.width=SW;o.height=SH;var g=o.getContext('2d',{willReadFrequently:true});g.fillStyle='#fff';g.strokeStyle='#fff';g.lineJoin='round';g.lineCap='round';var cx=SW/2,cy=SH/2;
- if(name.charAt(0)==='w'){var w=WORDS[+name.slice(1)],fs=Math.min(SH*1.02,SW*.92/(w.length*.52));g.font='800 '+fs+'px "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Arial,sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText(w,cx,cy+SH*.04)}
+ if(name.charAt(0)==='w'){var w=WORDS[+name.slice(1)],fs=Math.min(SH*1.02,SW*.78/(w.length*.52));g.font='800 '+fs+'px "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Arial,sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText(w,cx,cy+SH*.04)}
  else if(name==='phone'){var ph=SH*.94,pw=ph*.49;g.lineWidth=ph*.035;rr(g,cx-pw/2,cy-ph/2,pw,ph,pw*.16);g.stroke();g.lineWidth=ph*.02;rr(g,cx-pw*.42,cy-ph*.44,pw*.84,ph*.86,pw*.1);g.stroke();g.fillRect(cx-pw*.16,cy-ph/2+ph*.018,pw*.32,ph*.016);g.beginPath();g.arc(cx,cy+ph*.18,ph*.09,0,6.283);g.stroke();for(var q=0;q<3;q++){g.fillRect(cx-pw*.32,cy-ph*.3+q*ph*.075,pw*(.64-q*.14),ph*.03)}g.fillRect(cx-pw*.2,cy+ph*.425,pw*.4,ph*.012)}
  else if(name==='chart'){var bw=Math.min(SW*.08,SH*.14),hs=[.35,.2,.28,.62,.42,.8,.55,.95],gap=bw*.55,tw=hs.length*bw+(hs.length-1)*gap,bh=SH*.78;hs.forEach(function(h,i){var x=cx-tw/2+i*(bw+gap),hh=bh*h;rr(g,x,cy+bh/2-hh,bw,hh,bw*.3);g.fill()});g.lineWidth=SH*.016;g.beginPath();g.moveTo(cx-tw/2-bw,cy+bh/2+SH*.04);g.lineTo(cx+tw/2+bw,cy+bh/2+SH*.04);g.stroke()}
  else if(name==='gear'){var R=Math.min(SH*.47,SW*.3),teeth=14,pts=[];for(var i=0;i<teeth*4;i++){var a=i/(teeth*4)*6.283,kk=(i%4<2)?R:R*.8;pts.push([cx+Math.cos(a)*kk,cy+Math.sin(a)*kk])}g.beginPath();pts.forEach(function(p,i){i?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1])});g.closePath();g.lineWidth=R*.07;g.stroke();g.beginPath();g.arc(cx,cy,R*.34,0,6.283);g.lineWidth=R*.08;g.stroke();for(var s=0;s<6;s++){var a2=s/6*6.283;g.beginPath();g.moveTo(cx+Math.cos(a2)*R*.38,cy+Math.sin(a2)*R*.38);g.lineTo(cx+Math.cos(a2)*R*.68,cy+Math.sin(a2)*R*.68);g.lineWidth=R*.07;g.stroke()}g.beginPath();g.arc(cx,cy,R*.1,0,6.283);g.fill()}
@@ -250,7 +250,7 @@ function frame(now){tnow=(now-T00)/1000;var dt=now-lastT;lastT=now;frames++;if(d
 function draw(){if(bgFrame++%bgEvery===0){gb.viewport(0,0,bgc.width,bgc.height);gb.useProgram(BR);gb.bindBuffer(gb.ARRAY_BUFFER,bqBuf);gb.enableVertexAttribArray(bloc.p);gb.vertexAttribPointer(bloc.p,2,gb.FLOAT,false,0,0);gb.uniform2f(bloc.uRes,bgc.width,bgc.height);gb.uniform2f(bloc.uMouse,mouse.sx*bgc.width/VW,mouse.sy*bgc.height/VH);gb.uniform1f(bloc.uTime,rm?3:tnow);gb.uniform1f(bloc.uScroll,scrollY);gb.uniform3fv(bloc.uC,palCur);gb.drawArrays(gb.TRIANGLES,0,3)}
  gl.viewport(0,0,glc.width,glc.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE);gl.useProgram(PR);
  gl.bindBuffer(gl.ARRAY_BUFFER,buf.ft);gl.enableVertexAttribArray(loc.aFT);gl.vertexAttribPointer(loc.aFT,4,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,buf.d);gl.enableVertexAttribArray(loc.aD);gl.vertexAttribPointer(loc.aD,1,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,buf.m);gl.enableVertexAttribArray(loc.aM);gl.vertexAttribPointer(loc.aM,3,gl.FLOAT,false,0,0);
- gl.uniform1f(loc.uKeep,KEEP);gl.uniform1f(loc.uTime,tnow);gl.uniform1f(loc.uT0,cur.t0);gl.uniform1f(loc.uDur,cur.dur);gl.uniform1f(loc.uSpread,cur.spread);gl.uniform1f(loc.uPx,DPR);gl.uniform2f(loc.uRes,VW,VH);gl.uniform2f(loc.uMouse,mouse.sx,mouse.sy);gl.uniform1f(loc.uK,mouse.k);gl.uniform1f(loc.uR,rm?0:150);gl.uniform1f(loc.uBr,rm?0:1);gl.uniform1f(loc.uSwirl,cur.swirl);gl.uniform1f(loc.uSV,Math.max(-60,Math.min(60,sv)));gl.uniform1f(loc.uScroll,scrollY);gl.uniform2f(loc.uPar,par.x,par.y);gl.uniform3f(loc.uSh,shock.x,shock.y,shock.t);gl.drawArrays(gl.POINTS,0,DRAW);
+ gl.uniform1f(loc.uKeep,KEEP);gl.uniform1f(loc.uCell,coarse?6:7);gl.uniform1f(loc.uTime,tnow);gl.uniform1f(loc.uT0,cur.t0);gl.uniform1f(loc.uDur,cur.dur);gl.uniform1f(loc.uSpread,cur.spread);gl.uniform1f(loc.uPx,DPR);gl.uniform2f(loc.uRes,VW,VH);gl.uniform2f(loc.uMouse,mouse.sx,mouse.sy);gl.uniform1f(loc.uK,mouse.k);gl.uniform1f(loc.uR,rm?0:150);gl.uniform1f(loc.uBr,rm?0:1);gl.uniform1f(loc.uSwirl,cur.swirl);gl.uniform1f(loc.uSV,Math.max(-60,Math.min(60,sv)));gl.uniform1f(loc.uScroll,scrollY);gl.uniform2f(loc.uPar,par.x,par.y);gl.uniform3f(loc.uSh,shock.x,shock.y,shock.t);gl.drawArrays(gl.POINTS,0,DRAW);
  if(!document.body.classList.contains('ready'))document.body.classList.add('ready')}
 var curEl=document.getElementById('cur');
 addEventListener('pointermove',function(e){mouse.x=e.clientX;mouse.y=e.clientY;mouse.on=1;if(!rm&&Q>0){curEl.style.opacity=e.pointerType==='touch'?0:1;curEl.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)'}
