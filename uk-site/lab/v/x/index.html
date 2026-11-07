@@ -192,7 +192,7 @@ function setupGL(){try{gl=glc.getContext('webgl',{alpha:true,antialias:false,pre
  buf.ft=gl.createBuffer();buf.d=gl.createBuffer();buf.m=gl.createBuffer();
  N=coarse?9000:16000;var M=new Float32Array(N*3);for(var i=0;i<N;i++){M[i*3]=Math.random();M[i*3+1]=(2.4+Math.random()*2.4)*(VW<700?.75:1.05);M[i*3+2]=Math.random()}gl.bindBuffer(gl.ARRAY_BUFFER,buf.m);gl.bufferData(gl.ARRAY_BUFFER,M,gl.STATIC_DRAW);
  cur.from=new Float32Array(N*2);cur.to=new Float32Array(N*2);cur.del=new Float32Array(N)}
-function applyQ(q){Q=q;DRAW=N;KEEP=[.4,.7,1][q];bgScale=[.2,.28,.38][q];bgEvery=[3,2,1][q];document.body.classList.toggle('lite',q===0);sizeGL()}
+function applyQ(q){Q=q;DRAW=N;KEEP=[.6,.8,1][q];bgScale=[.2,.28,.38][q];bgEvery=[3,2,1][q];document.body.classList.toggle('lite',q===0);sizeGL()}
 function sizeGL(){VW=innerWidth;VH=innerHeight;DPR=Math.min(devicePixelRatio||1,[1,1.25,1.75][Q]);glc.width=Math.round(VW*DPR);glc.height=Math.round(VH*DPR);bgc.width=Math.max(120,Math.round(VW*bgScale));bgc.height=Math.max(90,Math.round(VH*bgScale))}
 function orderByX(xs,n){var B=4096,cnt=new Int32Array(B+1),k=B/(VW+1),i,idx=new Int32Array(n);for(i=0;i<n;i++){var b=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));cnt[b+1]++}for(i=0;i<B;i++)cnt[i+1]+=cnt[i];for(i=0;i<n;i++){var b2=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));idx[cnt[b2]++]=i}return idx}
 function stageEl(name){return document.getElementById(name.charAt(0)==='w'?STAGES.w:STAGES[name])}
@@ -218,7 +218,7 @@ function morphTo(name,opts){if(!ok||!PR||!booted||cur.name===name)return;opts=op
   if(style==='burst')dd=Math.min(1,Math.hypot(tx-cxm,ty-cym)/(maxd*.8))*.85;else if(style==='rain')dd=((ty-ymin)/yr)*.85;else if(style==='vortex')dd=((Math.atan2(ty-cym,tx-cxm)+Math.PI)/(2*Math.PI))*.85;else if(style==='pointer')dd=Math.min(1,Math.hypot(tx-mx0,ty-my0)/(maxd*1.6))*.9;else dd=Math.min(1,(tx/VW))*.85;
   del[pi]=Math.min(1,dd+Math.random()*.15)}
  cur.swirl=style==='vortex'?2.6:style==='burst'?1.2:style==='rain'?.25:.8;cur.style=style;if(style==='burst'&&!rm){shock.x=cxm;shock.y=cym-scrollY;shock.t=t+.25}
- cur.from=from;cur.to=to;cur.del=del;cur.t0=t;cur.dur=rm?.01:(opts.fast?1.15:1.7);cur.spread=rm?0:(opts.fast?.45:.9);cur.name=name;upload(from,to,del)}
+ cur.from=from;cur.to=to;cur.del=del;cur.t0=t;cur.dur=rm?.01:(Q===0?1:(opts.fast?1.15:1.7));cur.spread=rm?0:(Q===0?.3:(opts.fast?.45:.9));cur.name=name;upload(from,to,del)}
 var tags=[].slice.call(document.querySelectorAll('#tag span'));
 function showWord(i,fast){wi=i;lastWord=tnow;tags.forEach(function(s,k){s.classList.toggle('on',k===i)});if(sec===0)morphTo('w'+i,{fast:fast})}
 var frames=0,ema=16,lastT=performance.now(),fpsOut=0,okTicks=0;
