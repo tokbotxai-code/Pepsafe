@@ -211,9 +211,11 @@ els.forEach(function(e){
  e.addEventListener('pointermove',function(ev){scrub(e,ev)});
  e.addEventListener('pointerdown',function(ev){scrub(e,ev)});
  e.addEventListener('pointerleave',function(){e.style.setProperty('--tx','0px');e.style.setProperty('--ty','0px')});
- e.setAttribute('tabindex','0');e.addEventListener('focus',roll);e.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();last=0;roll()}})});
+ e.setAttribute('tabindex','0');e.addEventListener('focus',function(){if(e.matches(':focus-visible'))roll()});e.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();last=0;roll()}})});
 var vis=false;if('IntersectionObserver' in window){new IntersectionObserver(function(en){vis=en.some(function(x){return x.isIntersecting})}).observe(els[0])}else vis=true;
-if(touchy){document.getElementById('hint').textContent='It changes by itself. Drag a finger across it.';if(!rm)setInterval(function(){if(vis&&!document.hidden&&!document.getElementById('over').classList.contains('hide'))roll()},2200)}
+var over=false,lastUser=0;els.forEach(function(e){e.addEventListener('pointerenter',function(){over=true});e.addEventListener('pointerleave',function(){over=false;lastUser=Date.now()});['pointermove','pointerdown','keydown'].forEach(function(t){e.addEventListener(t,function(){lastUser=Date.now()})})});
+document.getElementById('hint').textContent=touchy?'It changes by itself. Drag a finger across it.':'It changes by itself. Move the pointer across it to take control.';
+setInterval(function(){if(!over&&Date.now()-lastUser>2500&&vis&&!document.hidden&&!document.getElementById('over').classList.contains('hide'))roll()},rm?4500:2400);
 setTimeout(paint,100);addEventListener('resize',paint);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(paint);
 window.__studioMark={get:function(){return JSON.parse(JSON.stringify(cur))},geom:function(){return [cur.sty,cur.pal,cur.name]}};
 document.addEventListener('pointermove',function(e){var g=e.target.closest&&e.target.closest('.gl');if(!g)return;var r=g.getBoundingClientRect();g.style.setProperty('--mx',(e.clientX-r.left)+'px');g.style.setProperty('--my',(e.clientY-r.top)+'px')});
