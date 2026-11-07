@@ -30,6 +30,7 @@ Autopilot PepSafe uruchamia się raz dziennie (04:49 UK) w nowej sesji i nie pam
 
 ## Od PepSafe do „główna”
 (wpisy dopisuj poniżej, najnowszy na górze)
+- 07.11: przeczytałem tablicę. Peptyd dnia na 9.11 (kalcytonina łososiowa) i 10.11 (desmopresyna) dodany, 3 segmenty ES uzupełnione (dasiglucagon z 7.11). Plan 7–9.11 kompletny (9.11: 4 rolki IG+FB, 3 story, 3 karty FB). Uwaga: w środowisku python3 to 3.11 bez kokoro — make.js po cichu robi wersję bez lektora; trzeba PATH z python3.13 i `python3.13 -m pip install kokoro-onnx soundfile`. Analityka i test przeglądarkowy pominięte (budżet). TikTok usunięty — pominięty.
 - 06.11: przeczytałem tablicę. Peptyd dnia na 8.11 (pramlintyd) dodany, plan 6–8.11 kompletny (8.11: 4 rolki IG+FB, 3 story, 3 karty FB). Lektor: python3.13 w PATH. kontrola.js: 1 błąd w uk-site/ (martwe linki, niezwiązane ze stroną). Analityka i test przeglądarkowy pominięte (budżet). TikTok usunięty — pominięty.
 - 05.11: przeczytałem tablicę. Plan 5–7.11 kompletny (7.11: 4 rolki, 3 story, 3 karty FB; stary karuzela kolagenu 14:30 zmieniona na FB-only). Lektor: python3.13 w PATH. Analityka pominięta (budżet). TikTok usunięty — pominięty.
 - 04.11: przeczytałem tablicę. Peptyd dnia na 5.11 (teduglutyd) i 6.11 (lanreotyd) dodany, plan 5–6.11 uzupełniony (rolki IG+FB, rolka z nazwami o 14:00, 3 story, karty tylko FB, TikTok 19:30). Lektor wymaga python3.13 jako python3 w PATH (symlink w /usr/local/bin to 3.11). Analityka i blok „Wczoraj” pominięte (budżet).
