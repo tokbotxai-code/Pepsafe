@@ -97,7 +97,7 @@ h2{font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-.035em;marg
 .contact h2{margin:0 0 10px}.contact p{margin:0;color:#eef0ff;font-size:18px}.mail{font-size:clamp(20px,2.6vw,30px);font-weight:800;color:#fff;text-decoration:none;border-bottom:3px solid #fff;word-break:break-all}
 @media(max-width:900px){.contact{grid-template-columns:minmax(0,1fr);padding:34px 24px}}
 footer{position:relative;z-index:5;padding:30px 0 40px;color:var(--mut);font-size:14px}footer .w{display:flex;gap:16px 30px;flex-wrap:wrap;justify-content:space-between;align-items:center}footer a{color:#fff;text-decoration:none}footer a:hover{text-decoration:underline}
-.rv{opacity:0;transform:translateY(36px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0ms)}.rv.in{opacity:1;transform:none}
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0ms)}.rv.in{opacity:1;transform:none}.rv.now{transition-duration:.35s;transition-delay:0ms!important}
 .tilt.rv.in{transition:opacity .9s,transform .3s ease-out,box-shadow .3s}
 .sw{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}.sw>span{display:inline-block;transform:translateY(112%);transition:transform .95s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*70ms + 120ms)}.rv.in .sw>span,.hero h1 .sw>span.go{transform:none}
 .skip{position:absolute;left:-999px;z-index:99}.skip:focus{left:8px;top:8px;background:#fff;color:#000;padding:8px 12px}
@@ -286,7 +286,7 @@ addEventListener('pointerdown',function(e){mouse.x=e.clientX;mouse.y=e.clientY;m
 document.addEventListener('pointerup',function(e){if(e.pointerType==='touch'){clearTimeout(window.__tm);window.__tm=setTimeout(function(){mouse.on=0},500)}});
 document.addEventListener('selectstart',function(e){if(!e.target.closest||!e.target.closest('.mail'))e.preventDefault()});
 var navLinks=[].slice.call(document.querySelectorAll('#nv a')),bubs=[].slice.call(document.querySelectorAll('.bub'));
-function goSec(el){if(!el)return;var y=el.id==='top'?0:el.getBoundingClientRect().top+scrollY-(innerWidth<820?80:88);window.scrollTo({top:y,behavior:rm?'auto':'smooth'})}
+function goSec(el){if(!el)return;el.querySelectorAll('.rv:not(.in)').forEach(function(x){x.classList.add('in','now');try{fire(x)}catch(e){}});var y=el.id==='top'?0:el.getBoundingClientRect().top+scrollY-(innerWidth<820?80:88);window.scrollTo({top:y,behavior:rm?'auto':'smooth'})}
 function spyShape(){var y=scrollY+innerHeight*.78,c=0;SECS.forEach(function(s,i){if(s&&s.offsetTop<=y)c=i});if(scrollY+innerHeight>=document.documentElement.scrollHeight-4)c=SECS.length-1;
  if(c!==sec){sec=c;document.body.dataset.s=sec;if(sec===0)morphTo('w'+wi);else morphTo(SHAPES[SECS[sec].id])}
  navLinks.forEach(function(a){var i=SECS.indexOf(document.querySelector(a.getAttribute('href')));a.classList.toggle('on',i===sec&&sec>0);if(i===sec&&sec>0)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
