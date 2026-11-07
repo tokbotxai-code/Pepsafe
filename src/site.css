@@ -623,3 +623,7 @@ header.bar input { -webkit-user-select: text; user-select: text; }
 .mol dd.seq{font-size:14px;font-weight:500;font-family:'JetBrains Mono',monospace}
 
 .ico { width: 1em; height: 1em; vertical-align: -0.15em; flex: none; }
+
+/* molecule photo on the home hero: right side, faded into the page so the text stays readable */
+#top.hero::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: min(60%, 860px); background: url(molecules.webp) center / cover no-repeat; opacity: .4; -webkit-mask-image: linear-gradient(to right, transparent, #000 55%); mask-image: linear-gradient(to right, transparent, #000 55%); pointer-events: none; }
+@media (max-width: 639px) { #top.hero::before { width: 100%; opacity: .2; -webkit-mask-image: none; mask-image: none; } }
