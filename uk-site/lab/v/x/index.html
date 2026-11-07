@@ -117,10 +117,39 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 .logo svg{width:38px;height:38px;flex:none;transition:width .6s cubic-bezier(.3,1.2,.4,1);overflow:visible;color:#fff;filter:drop-shadow(0 0 6px rgba(143,216,255,.55))}
 .cell{transform-box:fill-box;transform-origin:center;transition:transform .55s cubic-bezier(.3,1.5,.5,1),fill .4s}
 @media(prefers-reduced-motion:reduce){.cell{transition:none}}
-.sc{width:100%;height:100%;overflow:hidden;border-radius:27px}.sc img{transform-origin:50% 0;animation:scr 14s ease-in-out infinite alternate}.app:nth-child(2) .sc img{animation-duration:19s;animation-delay:-5s}.app.wide .sc img{animation-duration:22s;animation-delay:-9s}
+.sc{width:100%;height:100%;overflow:hidden;border-radius:27px}.sc img{transform-origin:50% 0;animation:scr 14s ease-in-out infinite alternate}.proj:nth-child(2) .sc img{animation-duration:19s;animation-delay:-5s}.proj:nth-child(3) .sc img{animation-duration:22s;animation-delay:-9s}
 @keyframes scr{0%,8%{transform:translateY(0) scale(1.02)}92%,100%{transform:translateY(-19%) scale(1.19)}}
 @media(prefers-reduced-motion:reduce){.sc img{animation:none}}
 .logo .word{white-space:nowrap}
+
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}
+.filters button{font:700 14px Figtree,system-ui,sans-serif;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.32);border-radius:99px;padding:0 18px;min-height:46px;cursor:pointer;transition:background .25s,color .25s,transform .2s}
+.filters button i{font-style:normal;opacity:.75;margin-left:6px}.filters button:hover{transform:translateY(-2px);background:rgba(255,255,255,.22)}
+.filters button[aria-pressed=true]{background:#fff;color:#0e2733;border-color:#fff}
+.projs{display:grid;gap:22px}
+.proj{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:30px;padding:36px 40px;align-items:center;overflow:hidden}
+.proj[hidden]{display:none}
+.proj .meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.st{border-radius:99px;padding:6px 12px;font:800 11px/1 Figtree,sans-serif;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:7px}
+.st::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.st.live{background:rgba(61,220,151,.2);color:#9af0c8;border:1px solid rgba(61,220,151,.5)}.st.live::before{animation:pl 1.8s ease-in-out infinite}
+.st.soonb{background:rgba(255,194,51,.2);color:#ffe08a;border:1px solid rgba(255,194,51,.55)}
+@keyframes pl{50%{opacity:.35}}
+.pill.ac{background:rgba(255,194,51,.18);color:#ffe9c2;border-color:rgba(255,194,51,.45)}
+.proj h3{font-size:clamp(32px,3.6vw,50px);margin:16px 0 6px;letter-spacing:-.035em;line-height:1.04}
+.proj .lead{color:var(--ink);opacity:.9;font-size:18px;max-width:30em}
+.proj ul{list-style:none;margin:18px 0 22px;padding:0;display:grid;gap:10px;font-size:15px;color:var(--mut)}
+.proj li{display:flex;gap:10px}.proj li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:2px;background:#ffc233}
+.proj .note{font-size:13px;color:var(--mut);margin:-8px 0 18px}
+.shot{justify-self:center;width:min(250px,100%);perspective:900px}
+.shot .ph{transform:rotate(4deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}.proj:hover .shot .ph{transform:rotate(0) translateY(-6px)}
+.ph.soon{display:grid;place-items:center;align-content:center;gap:14px;background:linear-gradient(160deg,#103247,#0b2230)}
+.ph.soon svg{width:62%;overflow:visible}.ph.soon .sq{transform-box:fill-box;transform-origin:center;animation:sq 2.4s ease-in-out infinite;animation-delay:calc(var(--i)*.18s)}
+@keyframes sq{0%,100%{transform:scale(.55);opacity:.5}50%{transform:scale(1);opacity:1}}
+.ph.soon b{color:#fff;font:800 14px 'Bricolage Grotesque',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.empty{color:var(--mut)}
+@media(max-width:900px){.proj{grid-template-columns:minmax(0,1fr);padding:28px 22px;text-align:center}.proj .meta{justify-content:center}.proj ul{text-align:left;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}.proj .lead{margin-left:auto;margin-right:auto}.shot{width:210px}.filters{justify-content:center}}
+@media(prefers-reduced-motion:reduce){.st.live::before,.ph.soon .sq{animation:none}}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
@@ -139,18 +168,14 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 <p class="lede">A small independent studio. We build apps, software and websites, and test everything before it ships.</p>
 <div class="row"><a class="btn pri" href="#apps">See our projects</a><a class="btn sec" href="#contact">Get in touch</a></div><div class="hint" aria-hidden="true"></div></div>
 
-<section id="apps"><div class="w"><div class="stage2" id="st-apps" aria-hidden="true"></div><p class="eyebrow rv">Our projects</p><h2 class="rv">Three things you can use today.</h2><p class="sub rv">Hover, tap or focus a card to see what is inside.</p>
-<div class="apps">
-<article class="app fb gl tilt rv" data-app="fb" tabindex="0" role="button" aria-expanded="false"><span class="pill">Recipes app</span><h3>FridgeBite</h3><p>Turn what is in your fridge into dinner.</p>
-<div class="feat"><div><ul><li>Over 3,000 real recipes to browse</li><li>Scan your fridge to find what you can cook</li><li>Allergy filter, favourites and a shopping list</li><li>English, Polish and Spanish</li></ul><a class="btn pri" href="https://fridgebite.pepsafe.uk" target="_blank" rel="noopener">Open FridgeBite ↗</a></div></div>
-<span class="hintx">Hover or tap</span><div class="pwrap"><div class="ph"><img src="../img/fridgebite.webp" alt="FridgeBite home screen with the scan button and recipe count" width="780" height="1688"></div></div></article>
-<article class="app pp gl tilt rv" data-app="pp" tabindex="0" role="button" aria-expanded="false" style="--d:140ms"><span class="pill">Pantry app</span><h3>PantryPal</h3><p>A calm view of what you have at home.</p>
-<div class="feat"><div><ul><li>Saved on your device, no account needed</li><li>A “Use first” list built from your dates</li><li>Shopping list and backup to a file</li><li>No ads and no trackers</li></ul><a class="btn pri" href="https://pantrypal.pepsafe.uk" target="_blank" rel="noopener">Open PantryPal ↗</a></div></div>
-<span class="hintx">Hover or tap</span><div class="pwrap"><div class="ph"><img src="../img/pantrypal.webp" alt="PantryPal home screen showing the use first list and inventory" width="780" height="1688"></div></div></article>
-<article class="app ps wide gl tilt rv" data-app="ps" tabindex="0" role="button" aria-expanded="false" style="--d:200ms"><span class="pill">Reference website</span><h3>PepSafe</h3><p>272 substances. Legal status and evidence. Nothing for sale.</p>
-<div class="feat"><div><ul><li>A plain-English reference for peptides, GLP-1 drugs and steroids</li><li>What each one is, what the research shows and whether a regulator approved it</li><li>Independent: no ads, no affiliates, sources on every page</li><li>English, Polish and Spanish</li></ul><p class="note">Education only. It is not medical advice.</p><a class="btn pri" href="https://pepsafe.info" target="_blank" rel="noopener">Open PepSafe ↗</a></div></div>
-<div class="chips2"><span>272 entries</span><span>3 languages</span><span>No ads</span></div><span class="hintx">Hover or tap</span><div class="pwrap"><div class="ph"><img src="../img/pepsafe.webp" alt="PepSafe home page: 272 substances, legal status and evidence, nothing for sale" width="780" height="1688"></div></div></article>
-</div></div></section>
+<section id="apps"><div class="w"><div class="stage2" id="st-apps" aria-hidden="true"></div><p class="eyebrow rv">Our projects</p><h2 class="rv">Live now, and what is next.</h2><p class="sub rv">Everything here is built and tested by us. Filter by status.</p>
+<div class="filters rv" id="flt" role="group" aria-label="Filter projects"><button type="button" data-f="all" aria-pressed="true">All <i>4</i></button><button type="button" data-f="live" aria-pressed="false">Live <i>3</i></button><button type="button" data-f="soon" aria-pressed="false">In progress <i>1</i></button></div>
+<div class="projs">
+<article class="proj gl tilt rv" data-st="live"><div class="pt"><div class="meta"><span class="st live">Live</span><span class="pill">Recipes app</span></div><h3>FridgeBite</h3><p class="lead">Turn what is in your fridge into dinner.</p><ul><li>Over 3,000 real recipes to browse</li><li>Scan your fridge to find what you can cook</li><li>Allergy filter, favourites and a shopping list</li><li>English, Polish and Spanish</li></ul><a class="btn pri" href="https://fridgebite.pepsafe.uk" target="_blank" rel="noopener">Open FridgeBite ↗</a></div><div class="shot"><div class="ph"><img src="../img/fridgebite.webp" alt="FridgeBite home screen with the scan button and recipe count" width="780" height="1688"></div></div></article>
+<article class="proj gl tilt rv" data-st="live"><div class="pt"><div class="meta"><span class="st live">Live</span><span class="pill pp">Pantry app</span></div><h3>PantryPal</h3><p class="lead">A calm view of what you have at home.</p><ul><li>Saved on your device, no account needed</li><li>A “Use first” list built from your dates</li><li>Shopping list and backup to a file</li><li>No ads and no trackers</li></ul><a class="btn pri" href="https://pantrypal.pepsafe.uk" target="_blank" rel="noopener">Open PantryPal ↗</a></div><div class="shot"><div class="ph"><img src="../img/pantrypal.webp" alt="PantryPal home screen showing the use first list and inventory" width="780" height="1688"></div></div></article>
+<article class="proj gl tilt rv" data-st="live"><div class="pt"><div class="meta"><span class="st live">Live</span><span class="pill ps">Reference website</span></div><h3>PepSafe</h3><p class="lead">272 substances. Legal status and evidence. Nothing for sale.</p><ul><li>A plain-English reference for peptides, GLP-1 drugs and steroids</li><li>What each one is, what the research shows and whether a regulator approved it</li><li>Independent: no ads, no affiliates, sources on every page</li><li>English, Polish and Spanish</li></ul><p class="note">Education only. It is not medical advice.</p><a class="btn pri" href="https://pepsafe.info" target="_blank" rel="noopener">Open PepSafe ↗</a></div><div class="shot"><div class="ph"><img src="../img/pepsafe.webp" alt="PepSafe home page: 272 substances, legal status and evidence, nothing for sale" width="780" height="1688"></div></div></article>
+<article class="proj gl tilt rv" data-st="soon"><div class="pt"><div class="meta"><span class="st soonb">In progress</span><span class="pill ac">Free service</span></div><h3>Accessibility check</h3><p class="lead">A free accessibility report for your website.</p><ul><li>Send us your site address, we email you a report</li><li>Made for schools and public bodies</li><li>Not live yet. Tell us if you want to be first</li></ul><a class="btn pri" href="mailto:contact@pepsafe.info?subject=Accessibility%20check&body=My%20website%20address%3A%20">Ask for early access</a></div><div class="shot"><div class="ph soon" aria-hidden="true"><svg viewBox="0 0 60 60"><g fill="#fff"><rect class="sq" style="--i:0" x="1" y="37" width="10" height="10" rx="2.4"/><rect class="sq" style="--i:1" x="13" y="49" width="10" height="10" rx="2.4"/><rect class="sq" style="--i:2" x="25" y="37" width="10" height="10" rx="2.4"/><rect class="sq" style="--i:3" x="37" y="25" width="10" height="10" rx="2.4"/><rect class="sq" style="--i:4" x="49" y="13" width="10" height="10" rx="2.4"/></g><rect class="sq" style="--i:5" x="49" y="1" width="10" height="10" rx="2.4" fill="#ffc233" transform="translate(0 -12)"/></svg><b>Coming soon</b></div></div></article>
+</div><p class="empty" id="emp" hidden>Nothing here yet.</p></div></section>
 
 <section id="numbers"><div class="w"><div class="stage2" id="st-numbers" aria-hidden="true"></div><p class="eyebrow rv">By the numbers</p><h2 class="rv">Small, useful and moving.</h2><p class="sub rv">Real figures from our products. Activity is counted from our own code history, last 7 days.</p>
 <div class="k4"><div class="k gl tilt rv"><div class="l">Products live</div><div class="n" data-c="3">0</div><div class="s">FridgeBite · PantryPal · PepSafe</div></div><div class="k gl tilt rv" style="--d:80ms"><div class="l">Languages</div><div class="n" data-c="3">0</div><div class="s">English · Polski · Español</div></div><div class="k gl tilt rv" style="--d:160ms"><div class="l">Recipes to browse</div><div class="n">3,000+</div><div class="s">in FridgeBite</div></div><div class="k gl tilt rv" style="--d:240ms"><div class="l">Reference entries</div><div class="n" data-c="272">0</div><div class="s">on PepSafe</div></div></div>
@@ -167,6 +192,7 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 <script>
 (function(){
 document.querySelectorAll('.ph img').forEach(function(im){var w=document.createElement('div');w.className='sc';im.parentNode.insertBefore(w,im);w.appendChild(im)});
+(function(){var f=document.getElementById('flt'),ps=document.querySelectorAll('.proj');if(!f)return;f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var v=b.dataset.f;f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});ps.forEach(function(p){var show=v==='all'||p.dataset.st===v;p.hidden=!show;if(show){p.classList.add('in')}});window.dispatchEvent(new Event('resize'))})})();
 var LET=[['A...X','XX..X','X.X.X','X..XX','X...X'],['.XXX.','X...X','X...X','X...X','.XXA.'],['X...X','X...X','.X.X.','.X.X.','..A..'],['.XXX.','X...X','X...X','X...X','.XXA.'],['XXXX.','X...X','XXXA.','X....','X....'],['..A..','.....','..X..','..X..','..X..'],['X...X','.X.X.','..A..','.X.X.','X...X']],npc=-1,npEl=document.getElementById('mk');
 (function(){var h='<svg viewBox="0 0 60 60" aria-hidden="true">';for(var y=0;y<5;y++)for(var x=0;x<5;x++)h+='<rect class="cell" x="'+(x*12+1)+'" y="'+(y*12+1)+'" width="10" height="10" rx="2.4" fill="currentColor" style="transform:scale(0)"/>';
 npEl.innerHTML=h+'</svg><span class="word">NovoPix</span>';var cs=npEl.querySelectorAll('.cell');
