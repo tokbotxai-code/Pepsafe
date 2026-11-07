@@ -9,7 +9,7 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg
 .gl{background:var(--g);border:1px solid var(--edge);border-radius:24px;backdrop-filter:blur(26px) saturate(1.4);-webkit-backdrop-filter:blur(26px) saturate(1.4);box-shadow:0 12px 40px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.25)}
 .app{position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px}
 .rail{display:flex;flex-direction:column;gap:8px;align-items:center;padding:12px 8px;height:fit-content;position:sticky;top:14px}
-.rail .lg{font-weight:800;font-size:13px;color:var(--o);padding:6px 0 10px}
+
 .rail button{all:unset;cursor:pointer;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;font-size:18px;transition:background .25s,transform .2s}
 .rail button:hover{background:var(--g2);transform:scale(1.06)}.rail button.on{background:rgba(255,255,255,.22);box-shadow:inset 0 0 0 1px var(--edge)}
 .rail button:focus-visible,.pill button:focus-visible,.tile2:focus-visible{outline:2px solid var(--o);outline-offset:2px}
@@ -27,7 +27,7 @@ h1{margin:0;font-size:clamp(22px,3.5vw,30px)}h2{margin:0;font-size:16px}.m{color
 .n{font-size:32px;font-weight:800;letter-spacing:-.02em;margin:2px 0}
 .up{color:var(--ok);font-size:13px}
 .two{display:grid;gap:14px;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
-@media(max-width:820px){.app{grid-template-columns:minmax(0,1fr)}.rail{flex-direction:row;position:static;justify-content:center}.rail .lg{display:none}.two{grid-template-columns:minmax(0,1fr)}.av{display:none}}
+@media(max-width:820px){.app{grid-template-columns:minmax(0,1fr)}.rail{flex-direction:row;position:static;justify-content:center}.two{grid-template-columns:minmax(0,1fr)}.av{display:none}}
 svg{display:block;width:100%;height:auto}
 .spk{fill:none;stroke:var(--ok);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:300;stroke-dashoffset:300}
 .go .spk{stroke-dashoffset:0;transition:stroke-dashoffset 1.2s .3s ease}
@@ -55,15 +55,37 @@ a.btn{display:inline-block;background:var(--o);color:#2a1604;text-decoration:non
 .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:#000;padding:6px 10px;border-radius:8px;z-index:9}
 @media(prefers-reduced-motion:reduce){.stag>*{opacity:1;transform:none;transition:none}.col i,.split i,.bar i{transition:none}.spk{stroke-dashoffset:0;transition:none}}
 @supports not (backdrop-filter:blur(1px)) and not (-webkit-backdrop-filter:blur(1px)){.gl{background:rgba(30,20,12,.82)}}
+
+.brand{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;align-items:center}
+@media(max-width:820px){.brand{grid-template-columns:minmax(0,1fr)}}
+.tileL{border-radius:22px;padding:22px;display:flex;align-items:center;gap:16px;justify-content:center;min-height:150px;transition:background .6s,color .6s;cursor:pointer;border:1px solid var(--edge);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+.tileL:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+.tileL svg{width:84px;height:84px;flex:none;overflow:visible}
+.tileL .cell{transition:transform .55s cubic-bezier(.3,1.4,.4,1),fill .6s,stroke .6s,rx .5s}
+.wd{font-weight:800;font-size:clamp(34px,6vw,54px);letter-spacing:-.03em;display:inline-flex;align-items:baseline;white-space:nowrap;line-height:1}
+.mid{position:relative;display:inline-block;transition:width .5s cubic-bezier(.3,1.2,.4,1);white-space:nowrap}
+.mid span{display:inline-block;transition:opacity .45s,transform .45s}.mid .b{position:absolute;left:0;top:0}
+.mid .off{opacity:0;transform:translateY(-55%)}.mid .b.off{transform:translateY(55%)}
+.ctl{display:grid;gap:10px}.ctl label{display:grid;gap:4px;font-size:12px;color:var(--mut)}
+.ctl select{appearance:none;-webkit-appearance:none;background:var(--g2);color:var(--fg);border:1px solid var(--edge);border-radius:12px;padding:9px 12px;font:inherit;font-size:14px}
+.ctl select option{color:#222}
+.ctl .r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bt{all:unset;cursor:pointer;text-align:center;padding:9px 14px;border-radius:99px;border:1px solid var(--edge);font-size:14px;font-weight:600;transition:background .2s}.bt:hover{background:var(--g2)}.bt.pri{background:var(--o);color:#2a1604;border-color:var(--o)}.bt:focus-visible{outline:2px solid var(--o);outline-offset:2px}.bt[aria-pressed=true]{background:rgba(255,255,255,.2)}
+.rail .mk{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;transition:background .6s;cursor:pointer;border:0;padding:0}.rail .mk svg{width:28px;height:28px;overflow:visible}.rail .mk .cell{transition:transform .55s cubic-bezier(.3,1.4,.4,1),fill .6s,stroke .6s}
 </style></head><body><a class="skip" href="#over">Skip to content</a>
 <div class="app">
-<aside class="rail gl" aria-label="Menu"><div class="lg">F</div>
+<aside class="rail gl" aria-label="Menu"><button class="mk" id="mk" aria-label="Change the studio mark" title="Studio mark"></button>
 <button class="on" data-v="over" aria-label="Overview" title="Overview">🏠</button><button data-v="apps" aria-label="Apps" title="Apps">📱</button><button data-v="todo" aria-label="Tasks" title="Tasks">✅</button></aside>
 <main>
 <div class="top"><div class="pill gl" id="tabs" role="tablist" aria-label="Sections"><span class="ind"></span><button role="tab" class="on" data-v="over" aria-selected="true">Overview</button><button role="tab" data-v="apps" aria-selected="false">Apps</button><button role="tab" data-v="todo" aria-selected="false">Tasks</button></div><div class="av" aria-hidden="true">F</div></div>
 
 <section class="view" id="over" role="tabpanel" aria-label="Overview"><div class="stag">
 <div class="card gl" style="margin-bottom:14px"><h1 id="gr">Good evening</h1><div class="m">Studio activity from the real repositories, last 7 days</div></div>
+<div class="card gl brand" style="margin-bottom:14px"><div class="tileL" id="tl" role="button" tabindex="0" aria-label="Studio mark, press to change"></div>
+<div class="ctl"><div><h2>Studio mark</h2><div class="m">Form, shape, colour and name change together. Pick your own or let it roll.</div></div>
+<div class="r2"><label>Form<select id="sForm"></select></label><label>Shape<select id="sShape"></select></label></div>
+<div class="r2"><label>Colour<select id="sPal"></select></label><label>Name<select id="sName"><option value="0">Fikol</option><option value="1">F21kol</option></select></label></div>
+<div class="r2"><button class="bt pri" id="roll">Roll all</button><button class="bt" id="auto" aria-pressed="true">Auto</button></div></div></div>
 <div class="k4" style="margin-bottom:14px">
 <div class="card gl"><div class="m">Commits this week</div><div class="n"><span data-c="153">0</span></div><svg viewBox="0 0 140 36" aria-hidden="true"><path class="spk" d="M0,30 L23,34 L46,32 L70,4 L93,12 L116,14 L140,22"/></svg></div>
 <div class="card gl"><div class="m">Apps live</div><div class="n"><span data-c="2">0</span></div><div class="m">FridgeBite · PantryPal</div></div>
@@ -96,7 +118,7 @@ var cols=document.getElementById('cols'),mx=Math.max.apply(null,V);
 V.forEach(function(v,i){var c=el('div','col'+(i===6?' hl':''));c.appendChild(el('b','',String(v)));var b=el('i');b.dataset.h=Math.round(v/mx*100);c.appendChild(b);c.appendChild(el('span','',DAYS[i]));cols.appendChild(c)});
 var rp=document.getElementById('repos');REP.forEach(function(r){var w=el('div','row');w.appendChild(el('span','',r[0]));var bar=el('div','bar'),i=el('i');i.dataset.w=Math.round(r[1]/74*100);bar.appendChild(i);w.appendChild(bar);w.appendChild(el('b','',String(r[1])));rp.appendChild(w)});
 var h=new Date().getHours();document.getElementById('gr').textContent=h<5?'Good night':h<12?'Good morning':h<18?'Good afternoon':'Good evening';
-var views=document.querySelectorAll('.view'),tabs=document.querySelectorAll('#tabs button'),rail=document.querySelectorAll('.rail button'),ind=document.querySelector('.ind');
+var views=document.querySelectorAll('.view'),tabs=document.querySelectorAll('#tabs button'),rail=document.querySelectorAll('.rail button[data-v]'),ind=document.querySelector('.ind');
 function place(){var on=document.querySelector('#tabs button.on');ind.style.left=on.offsetLeft+'px';ind.style.width=on.offsetWidth+'px'}
 function count(root){root.querySelectorAll('[data-c]').forEach(function(e){var t=+e.dataset.c;if(rm){e.textContent=t;return}var st=null;function f(ts){if(!st)st=ts;var p=Math.min((ts-st)/1000,1);e.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}e.textContent=0;requestAnimationFrame(f)})}
 function enter(v){var s=v.querySelector('.stag');[].forEach.call(s.children,function(c,i){c.style.setProperty('--d',i)});v.classList.add('rs');v.classList.remove('go');s.classList.remove('in');v.querySelectorAll('.col i').forEach(function(i){i.style.height='0'});v.querySelectorAll('.bar i').forEach(function(i){i.style.width='0'});v.querySelectorAll('.split i').forEach(function(i){i.style.width='0'});if(!rm)v.querySelectorAll('[data-c]').forEach(function(e){e.textContent=0});
@@ -107,4 +129,36 @@ v.querySelectorAll('.split i').forEach(function(i,k){setTimeout(function(){i.sty
 function go(id){views.forEach(function(v){v.classList.toggle('hide',v.id!==id)});[].forEach.call(tabs,function(b){var o=b.dataset.v===id;b.classList.toggle('on',o);b.setAttribute('aria-selected',o)});[].forEach.call(rail,function(b){var o=b.dataset.v===id;b.classList.toggle('on',o);if(o)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});place();try{history.replaceState(null,'','#'+id)}catch(e){}enter(document.getElementById(id))}
 [].forEach.call(tabs,function(b){b.addEventListener('click',function(){go(b.dataset.v)})});[].forEach.call(rail,function(b){b.addEventListener('click',function(){go(b.dataset.v)})});
 addEventListener('resize',place);var hh=(location.hash||'').slice(1),ok=document.getElementById(hh);setTimeout(function(){go(ok&&ok.classList.contains('view')?hh:'over')},60)})();
+
+(function(){
+var FORMS=[['Classic',['XXXXA','X....','XXXX.','X....','X....']],['Accent low',['XXXX.','X....','XXX..','X....','A....']],['Heavy',['XXXXA','XX...','XXXX.','XX...','XX...']],['Slanted',['..XXA','.X...','.XXX.','X....','X....']],['Narrow',['.XXA.','.X...','.XX..','.X...','.X...']],['Dots',['X.X.A','.....','X.X..','.....','X....']],['Mirrored',['AXXXX','....X','.XXXX','....X','....X']],['Upside down',['X....','X....','XXXX.','X....','XXXXA']],['Stairs',['XXXXA','XXXX.','XXX..','XX...','X....']],['Hook',['XXXXX','X...A','XXXX.','X....','X....']],['Small',['.....','.XXA.','.XX..','.X...','.....']],['Two bars',['XXXXA','.....','XXXX.','.....','X....']]];
+var SHAPES=[['Rounded squares','round'],['Circles','circle'],['Sharp squares','sharp'],['Diamonds','diamond'],['Outlines','outline'],['Small dots','dot']];
+var PALS=[['Amber','#ffb15c','#2a1604','#ffffff'],['Coral','#ff6b5b','#ffffff','#2a0f0a'],['Mint','#12453f','#e6fff7','#ff8a8a'],['Violet','#2a1b5c','#f1ecff','#ffd166'],['Lime','#d8f261','#0e2733','#ff4f8b'],['Sky','#cfe9ff','#0e2733','#ff9f1c'],['Rose','#ffd6e5','#3a0f2a','#00b894']];
+var cur={form:0,shape:0,pal:0,name:0},rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var tl=document.getElementById('tl'),mk=document.getElementById('mk');
+function mark(){var h='<svg viewBox="0 0 60 60" aria-hidden="true" focusable="false">';for(var i=0;i<25;i++)h+='<rect class="cell" x="'+((i%5)*12+1)+'" y="'+(((i/5)|0)*12+1)+'" width="10" height="10" rx="2.4" style="transform-box:fill-box;transform-origin:center;transform:scale(0)"/>';return h+'</svg>'}
+tl.innerHTML=mark()+'<span class="wd" aria-hidden="true"><span>F</span><span class="mid"><span class="a off">21</span><span class="b on">i</span></span><span>kol</span></span>';
+mk.innerHTML=mark();
+function cells(){return [].slice.call(tl.querySelectorAll('.cell')).concat([].slice.call(mk.querySelectorAll('.cell')))}
+function paint(){var m=FORMS[cur.form][1],p=PALS[cur.pal],sh=SHAPES[cur.shape][1];
+tl.style.background=p[1];tl.style.color=p[2];mk.style.background=p[1];mk.style.color=p[2];
+cells().forEach(function(c,k){var i=k%25,x=i%5,y=(i/5)|0,ch=m[y][x],vis=ch!=='.',fill=ch==='A'?p[3]:p[2],rx=2.4,sc=1,rot=0;
+if(sh==='circle')rx=5;if(sh==='sharp')rx=0;if(sh==='diamond'){rx=1.5;rot=45;sc=.78}if(sh==='dot'){rx=5;sc=.62}
+c.style.transitionDelay=rm?'0s':((x+y)*0.035)+'s';c.setAttribute('rx',rx);
+if(sh==='outline'){c.setAttribute('fill','none');c.setAttribute('stroke',fill);c.setAttribute('stroke-width','2.2')}else{c.setAttribute('fill',fill);c.removeAttribute('stroke');c.removeAttribute('stroke-width')}
+c.style.transform=vis?'scale('+sc+') rotate('+rot+'deg)':'scale(0)'});
+var mid=tl.querySelector('.mid'),a=mid.querySelector('.a'),b=mid.querySelector('.b');mid.style.width=(cur.name?a:b).offsetWidth+'px';a.className='a '+(cur.name?'on':'off');b.className='b '+(cur.name?'off':'on');
+sF.value=cur.form;sS.value=cur.shape;sP.value=cur.pal;sN.value=cur.name}
+var sF=document.getElementById('sForm'),sS=document.getElementById('sShape'),sP=document.getElementById('sPal'),sN=document.getElementById('sName');
+FORMS.forEach(function(f,i){sF.add(new Option(f[0],i))});SHAPES.forEach(function(f,i){sS.add(new Option(f[0],i))});PALS.forEach(function(f,i){sP.add(new Option(f[0],i))});
+function rnd(n,not){var r;do{r=Math.floor(Math.random()*n)}while(r===not&&n>1);return r}
+function roll(){cur.form=rnd(FORMS.length,cur.form);cur.shape=rnd(SHAPES.length,cur.shape);cur.pal=rnd(PALS.length,cur.pal);cur.name=1-cur.name;paint()}
+var timer=null,auto=!rm,ab=document.getElementById('auto');
+function setAuto(v){auto=v;ab.setAttribute('aria-pressed',v?'true':'false');clearInterval(timer);if(v&&!rm)timer=setInterval(function(){if(!tl.closest('.view').classList.contains('hide'))roll()},3400)}
+document.getElementById('roll').addEventListener('click',function(){setAuto(false);roll()});ab.addEventListener('click',function(){setAuto(!auto)});
+[[sF,'form'],[sS,'shape'],[sP,'pal'],[sN,'name']].forEach(function(p){p[0].addEventListener('change',function(){setAuto(false);cur[p[1]]=+p[0].value;paint()})});
+function tap(){setAuto(false);roll()}tl.addEventListener('click',tap);tl.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tap()}});mk.addEventListener('click',tap);
+setTimeout(function(){paint();setAuto(auto)},120);addEventListener('resize',function(){paint()});
+window.__studioMark={get:function(){return JSON.parse(JSON.stringify(cur))}};
+})();
 </script></body></html>
