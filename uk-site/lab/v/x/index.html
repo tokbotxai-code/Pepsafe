@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2072%2072'%3E%3Crect%20width='72'%20height='72'%20rx='15'%20fill='%230e2733'/%3E%3Crect%20x='19'%20y='7'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='31'%20y='7'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='43'%20y='7'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='7'%20y='19'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='55'%20y='19'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='7'%20y='31'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='31'%20y='31'%20width='10'%20height='10'%20rx='2.4'%20fill='%23ffc233'/%3E%3Crect%20x='55'%20y='31'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='7'%20y='43'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='55'%20y='43'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='19'%20y='55'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='31'%20y='55'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='43'%20y='55'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3C/svg%3E"><title>NovoPix: apps and software</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2"><link rel="apple-touch-icon" href="favicon.png?v=2"><title>NovoPix: apps and software</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
 @property --g1{syntax:'<color>';inherits:true;initial-value:rgba(120,140,255,.30)}
@@ -181,6 +181,10 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 #numbers .card{padding:18px 22px}#numbers .chart{height:96px;margin-top:12px;gap:10px}#numbers .rep{gap:10px;margin-top:12px}
 }
 @media(max-width:999px){.tl{grid-template-columns:44px minmax(0,1fr) auto}}
+
+#apps,#numbers,#approach,#contact{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-top:96px;padding-bottom:40px;scroll-margin-top:0}
+#apps>.w,#numbers>.w,#approach>.w,#contact>.w{width:min(1160px,100% - 2*var(--dock))}
+@media(max-width:999px){#apps,#numbers,#approach,#contact{min-height:0;display:block;padding-top:70px;padding-bottom:70px}}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
@@ -317,7 +321,7 @@ addEventListener('pointerdown',function(e){mouse.x=e.clientX;mouse.y=e.clientY;m
 document.addEventListener('pointerup',function(e){if(e.pointerType==='touch'){clearTimeout(window.__tm);window.__tm=setTimeout(function(){mouse.on=0},500)}});
 document.addEventListener('selectstart',function(e){if(!e.target.closest||!e.target.closest('.mail'))e.preventDefault()});
 var navLinks=[].slice.call(document.querySelectorAll('#nv a')),bubs=[].slice.call(document.querySelectorAll('.bub'));
-function goSec(el){if(!el)return;el.querySelectorAll('.rv:not(.in)').forEach(function(x){x.classList.add('in','now');try{fire(x)}catch(e){}});var y=el.id==='top'?0:el.getBoundingClientRect().top+scrollY-(innerWidth<820?80:88);window.scrollTo({top:y,behavior:rm?'auto':'smooth'})}
+function goSec(el){if(!el)return;el.querySelectorAll('.rv:not(.in)').forEach(function(x){x.classList.add('in','now');try{fire(x)}catch(e){}});var y=el.id==='top'?0:el.getBoundingClientRect().top+scrollY-0;window.scrollTo({top:y,behavior:rm?'auto':'smooth'})}
 function spyShape(){var y=scrollY+innerHeight*.78,c=0;SECS.forEach(function(s,i){if(s&&s.offsetTop<=y)c=i});if(scrollY+innerHeight>=document.documentElement.scrollHeight-4)c=SECS.length-1;
  if(c!==sec){sec=c;document.body.dataset.s=sec;if(sec===0)morphTo('w'+wi);else morphTo(SHAPES[SECS[sec].id])}
  navLinks.forEach(function(a){var i=SECS.indexOf(document.querySelector(a.getAttribute('href')));a.classList.toggle('on',i===sec&&sec>0);if(i===sec&&sec>0)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
