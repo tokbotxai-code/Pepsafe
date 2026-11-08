@@ -13,3 +13,22 @@ jobs:
           P: ${{ secrets.UK_SFTP_PASS }}
         run: |
           lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; set net:max-retries 2; rm -f public/dostepnosc/_t.php public/dostepnosc/_p.php public/novopix/_diag.php; mirror -R --verbose uk-site public; find -d 2 public; quit" 2>&1 | head -80
+      - name: Write SMTP settings for the contact form (only if SMTP_PASS secret exists)
+        env:
+          H: ${{ secrets.UK_SFTP_HOST }}
+          U: ${{ secrets.UK_SFTP_USER }}
+          P: ${{ secrets.UK_SFTP_PASS }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        run: |
+          if [ -z "$SMTP_PASS" ]; then echo "SMTP_PASS not set, skipping (contact form uses mail())"; exit 0; fi
+          python3 - <<'PY'
+          import json, os
+          host = os.environ.get("SMTP_HOST") or "smtp.ionos.co.uk"
+          user = os.environ.get("SMTP_USER") or "contact@pepsafe.info"
+          json.dump({"host": host, "port": 587, "secure": "tls", "user": user, "pass": os.environ["SMTP_PASS"], "from": user, "to": "contact@pepsafe.info"}, open("smtp.json", "w"))
+          PY
+          chmod 600 smtp.json
+          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; put -O kolejka/ smtp.json; quit" 2>&1 | tail -3
+          rm -f smtp.json
