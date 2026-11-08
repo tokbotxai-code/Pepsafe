@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="description" content="NovoPix is an independent studio building useful apps, software and websites. FridgeBite for meal ideas, PantryPal for your pantry, PepSafe for reference."><meta property="og:title" content="NovoPix: apps, software and websites"><meta property="og:description" content="An independent studio building useful apps, software and websites."><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2"><link rel="apple-touch-icon" href="favicon.png?v=2"><title>NovoPix: apps and software</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
@@ -276,7 +276,7 @@ var PV='attribute vec4 aFT;attribute float aD;attribute vec3 aM;uniform float uM
 +'vec2 sd=pos-uSh.xy;float sdist=length(sd);float age=uTime-uSh.z;float rq=(sdist-age*900.)/120.;float ring=exp(-rq*rq)*exp(-age*1.5)*step(0.,age)*step(age,3.);pos+=sd/(sdist+.001)*ring*70.*uBr;'
 +'vec2 md=pos-uMouse;float dist=length(md);float f=smoothstep(uR,0.,dist);pos+=md/(dist+.001)*f*f*uK;'
 +'gl_Position=vec4(pos.x/uRes.x*2.-1.,1.-pos.y/uRes.y*2.,0.,1.);gl_PointSize=aM.y*.78*uSz*uPx*uMob*(1.+.6*fl+f*.9)*(1.+(1.-uKeep)*.7);if(aM.x>uKeep)gl_Position=vec4(2.,2.,2.,1.);'
-+'float h=aM.x*.11+pos.x/uRes.x*.75+uTime*.04;float hh=fract(h*2.3+aM.z);vC=mix(mix(vec3(.38,.72,.98),vec3(.9,.97,1.),smoothstep(.72,.95,hh)),vec3(1.,.72,.08),step(.84,fract(aM.x*7.13+aM.z)));vF=f;}';
++'float h=aM.x*.11+pos.x/uRes.x*.75+uTime*.04;float hh=fract(h*2.3+aM.z);vC=mix(mix(vec3(.38,.72,.98),vec3(.9,.97,1.),smoothstep(.72,.95,hh)),vec3(1.,.72,.08),step(mix(.84,.7,step(.9,uSz)),fract(aM.x*7.13+aM.z)));vF=f;}';
 var PF='precision mediump float;varying vec3 vC;varying float vF;void main(){vec2 q=abs(gl_PointCoord-.5);float a=smoothstep(.5,.4,max(q.x,q.y));gl_FragColor=vec4((vC+vF*.4)*a*1.15,a);}';
 var BV='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
 var BF='precision mediump float;uniform vec2 uRes,uMouse;uniform float uTime,uScroll;uniform vec3 uC[5];float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}float fb(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}'
@@ -321,7 +321,7 @@ function morphTo(name,opts){if(!ok||!PR||!booted||cur.name===name)return;opts=op
 var tags=[].slice.call(document.querySelectorAll('#tag span'));
 function showWord(i,fast){wi=i;lastWord=tnow;tags.forEach(function(s,k){s.classList.toggle('on',k===i)});if(sec===0)morphTo('w'+i,{fast:fast})}
 var frames=0,ema=16,lastT=performance.now(),fpsOut=0,okTicks=0;
-function frame(now){tnow=(now-T00)/1000;var dt=now-lastT;lastT=now;frames++;if(dt<200)ema+=(dt-ema)*.06;
+function frame(now){if(document.hidden){lastT=now;requestAnimationFrame(frame);return}tnow=(now-T00)/1000;var dt=now-lastT;lastT=now;frames++;if(dt<200)ema+=(dt-ema)*.06;
  if(frames%75===0&&FQ===undefined&&!rm&&booted){if(ema>30&&Q>0){applyQ(Q-1);okTicks=0}else if(ema<12.5&&Q<2){okTicks++;if(okTicks>=2){applyQ(Q+1);okTicks=0}}else okTicks=0}
  fpsOut=Math.round(1000/Math.max(ema,1));
  sv+=((scrollY-lastSy)-sv)*.18;lastSy=scrollY;var ptx=mouse.on&&!rm?(mouse.sx/VW-.5)*46:0,pty=mouse.on&&!rm?(mouse.sy/VH-.5)*30:0;par.x+=(ptx-par.x)*.08;par.y+=(pty-par.y)*.08;mouse.sx+=(mouse.x-mouse.sx)*.22;mouse.sy+=(mouse.y-mouse.sy)*.22;mouse.k+=(mouse.on*58-mouse.k)*.14;
