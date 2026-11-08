@@ -1,6 +1,9 @@
 <?php
 // NovoPix contact form handler (own server, no third-party service). Sends a mail to contact@pepsafe.info.
 header('Content-Type: application/json; charset=utf-8');
+$o = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($o, ['https://novopix.uk', 'https://www.novopix.uk', 'https://pepsafe.uk'], true)) { header('Access-Control-Allow-Origin: ' . $o); header('Vary: Origin'); header('Access-Control-Allow-Headers: Accept, Content-Type'); header('Access-Control-Allow-Methods: POST, OPTIONS'); }
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') { http_response_code(204); exit; }
 header('Cache-Control: no-store');
 function out($ok, $msg, $code = 200) { http_response_code($code); echo json_encode(['ok' => $ok, 'msg' => $msg]); exit; }
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') out(false, 'method', 405);
