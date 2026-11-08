@@ -201,6 +201,11 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar,body::
 .k{padding:14px 10px}.k .n{font-size:30px!important}.k .l,.k .s{font-size:11.5px}
 .stage{height:clamp(260px,40vh,380px)!important}
 }
+
+@media(min-width:1000px){
+#contact>.w{display:grid;grid-template-columns:minmax(150px,.24fr) minmax(0,1fr);column-gap:36px;align-items:center}
+#contact>.w>.stage2{grid-column:1;height:clamp(150px,26vh,240px);margin:0}#contact>.w>.contact{grid-column:2}
+}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
@@ -244,11 +249,13 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar,body::
 (function(){
 document.querySelectorAll('.ph img').forEach(function(im){var w=document.createElement('div');w.className='sc';im.parentNode.insertBefore(w,im);w.appendChild(im)});
 (function(){var f=document.getElementById('flt'),ps=document.querySelectorAll('.tl');if(!f)return;f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var v=b.dataset.f;f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});ps.forEach(function(p){var show=v==='all'||p.dataset.st===v;p.hidden=!show;if(show){p.classList.add('in')}});window.dispatchEvent(new Event('resize'))})})();
-(function(){function off(){return innerWidth>=1000}
-addEventListener('wheel',function(e){if(off()&&!e.ctrlKey)e.preventDefault()},{passive:false});
-addEventListener('keydown',function(e){if(off()&&[' ','ArrowDown','ArrowUp','PageDown','PageUp','Home','End'].indexOf(e.key)>-1&&!/INPUT|TEXTAREA|BUTTON/.test((e.target||{}).tagName||''))e.preventDefault()});
-addEventListener('contextmenu',function(e){if(!(e.target.closest&&e.target.closest('.mail')))e.preventDefault()});addEventListener('mousedown',function(e){if(off()&&e.button===1)e.preventDefault()})})();
-setTimeout(function(){['https://fridgebite.pepsafe.uk/api/health','https://pantrypal.pepsafe.uk/'].forEach(function(u){try{fetch(u,{mode:'no-cors',cache:'no-store'}).catch(function(){})}catch(e){}})},1200);
+(function(){function off(){return innerWidth>=1000}var lock=0;
+function step(dir){var cs=SECS[sec];if(!cs)return false;var r=cs.getBoundingClientRect();if(dir>0&&r.bottom>innerHeight+24)return false;if(dir<0&&r.top<-24)return false;var t=SECS[sec+dir];if(!t)return true;if(Date.now()<lock)return true;lock=Date.now()+850;goSec(t);return true}
+addEventListener('wheel',function(e){if(!off()||e.ctrlKey||Math.abs(e.deltaY)<4)return;if(step(e.deltaY>0?1:-1))e.preventDefault()},{passive:false});
+addEventListener('keydown',function(e){if(!off()||/INPUT|TEXTAREA|BUTTON/.test((e.target||{}).tagName||''))return;var k=e.key,d=(k===' '||k==='ArrowDown'||k==='PageDown')?1:(k==='ArrowUp'||k==='PageUp')?-1:0;if(k==='Home'){e.preventDefault();goSec(SECS[0]);return}if(k==='End'){e.preventDefault();goSec(SECS[SECS.length-1]);return}if(d&&step(d))e.preventDefault()});
+addEventListener('contextmenu',function(e){if(!(e.target.closest&&e.target.closest('.mail')))e.preventDefault()});})();
+(function(){var woke={};function wake(u){if(woke[u])return;woke[u]=1;try{fetch(u,{mode:'no-cors',cache:'no-store'}).catch(function(){})}catch(e){}}
+document.querySelectorAll('.tl[href^="https://fridge"],.tl[href^="https://pantry"]').forEach(function(a){var u=a.href.indexOf('fridge')>-1?'https://fridgebite.pepsafe.uk/api/health':'https://pantrypal.pepsafe.uk/';['pointerenter','touchstart','focus'].forEach(function(ev){a.addEventListener(ev,function(){wake(u)},{passive:true})})})})();
 var LET=[['A...X','XX..X','X.X.X','X..XX','X...X'],['.XXX.','X...X','X...X','X...X','.XXA.'],['X...X','X...X','.X.X.','.X.X.','..A..'],['.XXX.','X...X','X...X','X...X','.XXA.'],['XXXX.','X...X','XXXA.','X....','X....'],['..A..','.....','..X..','..X..','..X..'],['X...X','.X.X.','..A..','.X.X.','X...X']],npc=-1,npEl=document.getElementById('mk');
 (function(){var h='<svg viewBox="0 0 60 60" aria-hidden="true">';for(var y=0;y<5;y++)for(var x=0;x<5;x++)h+='<rect class="cell" x="'+(x*12+1)+'" y="'+(y*12+1)+'" width="10" height="10" rx="2.4" fill="currentColor" style="transform:scale(0)"/>';
 npEl.innerHTML=h+'</svg><span class="word">NovoPix</span>';var cs=npEl.querySelectorAll('.cell');
