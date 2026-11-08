@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>NovoPix: apps and software</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2072%2072'%3E%3Crect%20width='72'%20height='72'%20rx='15'%20fill='%230e2733'/%3E%3Crect%20x='19'%20y='7'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='31'%20y='7'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='43'%20y='7'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='7'%20y='19'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='55'%20y='19'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='7'%20y='31'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='31'%20y='31'%20width='10'%20height='10'%20rx='2.4'%20fill='%23ffc233'/%3E%3Crect%20x='55'%20y='31'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='7'%20y='43'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='55'%20y='43'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='19'%20y='55'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='31'%20y='55'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3Crect%20x='43'%20y='55'%20width='10'%20height='10'%20rx='2.4'%20fill='%23f2f7fa'/%3E%3C/svg%3E"><title>NovoPix: apps and software</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
 @property --g1{syntax:'<color>';inherits:true;initial-value:rgba(120,140,255,.30)}
@@ -150,6 +150,15 @@ h1,h2,h3,h4,.logo,.word{font-family:'Bricolage Grotesque',Figtree,system-ui,sans
 .empty{color:var(--mut)}
 @media(max-width:900px){.proj{grid-template-columns:minmax(0,1fr);padding:28px 22px;text-align:center}.proj .meta{justify-content:center}.proj ul{text-align:left;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}.proj .lead{margin-left:auto;margin-right:auto}.shot{width:210px}.filters{justify-content:center}}
 @media(prefers-reduced-motion:reduce){.st.live::before,.ph.soon .sq{animation:none}}
+
+@media(min-width:900px){
+#apps>.w,#numbers>.w,#approach>.w{display:grid;grid-template-columns:minmax(200px,.32fr) minmax(0,1fr);column-gap:48px;align-items:center}
+#apps>.w>.stage2,#numbers>.w>.stage2,#approach>.w>.stage2{grid-column:1;grid-row:1/span 4;height:clamp(170px,28vh,270px);margin:0}
+#apps>.w>.eyebrow,#apps>.w>h2,#apps>.w>.sub,#apps>.w>.filters,#numbers>.w>.eyebrow,#numbers>.w>h2,#numbers>.w>.sub,#approach>.w>.eyebrow,#approach>.w>h2,#approach>.w>.sub{grid-column:2}
+#apps>.w>.projs,#apps>.w>.empty,#numbers>.w>:not(.stage2):not(.eyebrow):not(h2):not(.sub),#approach>.w>:not(.stage2):not(.eyebrow):not(h2):not(.sub){grid-column:1/-1}
+#apps>.w>.projs{margin-top:26px}#numbers>.w>:not(.stage2):not(.eyebrow):not(h2):not(.sub),#approach>.w>:not(.stage2):not(.eyebrow):not(h2):not(.sub){margin-top:22px}
+#apps h2,#numbers h2,#approach h2{margin-bottom:8px}#apps .sub,#numbers .sub,#approach .sub{margin-bottom:18px}
+}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
@@ -240,8 +249,8 @@ function sizeGL(){VW=innerWidth;VH=innerHeight;DPR=Math.min(devicePixelRatio||1,
 function orderByX(xs,n){var B=4096,cnt=new Int32Array(B+1),k=B/(VW+1),i,idx=new Int32Array(n);for(i=0;i<n;i++){var b=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));cnt[b+1]++}for(i=0;i<B;i++)cnt[i+1]+=cnt[i];for(i=0;i<n;i++){var b2=Math.min(B-1,Math.max(0,Math.floor(xs[i]*k)));idx[cnt[b2]++]=i}return idx}
 function stageEl(name){return document.getElementById(name.charAt(0)==='w'?STAGES.w:STAGES[name])}
 function rr(g,x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath()}
-function sampleShape(name){var el=stageEl(name),r=el.getBoundingClientRect(),top=r.top+scrollY,key=name+'|'+VW+'|'+Math.round(top)+'|'+Math.round(r.height);if(cache[key])return cache[key];
- var SW=Math.min(1100,VW),k=VW/SW,SH=Math.max(60,Math.round(r.height/k)),o=document.createElement('canvas');o.width=SW;o.height=SH;var g=o.getContext('2d',{willReadFrequently:true});g.fillStyle='#fff';g.strokeStyle='#fff';g.lineJoin='round';g.lineCap='round';var cx=SW/2,cy=SH/2;
+function sampleShape(name){var el=stageEl(name),r=el.getBoundingClientRect(),top=r.top+scrollY,key=name+'|'+VW+'|'+Math.round(top)+'|'+Math.round(r.height)+'|'+Math.round(r.left)+'|'+Math.round(r.width);if(cache[key])return cache[key];
+ var SW=Math.min(1100,VW),k=VW/SW,SH=Math.max(60,Math.round(r.height/k)),o=document.createElement('canvas');o.width=SW;o.height=SH;var g=o.getContext('2d',{willReadFrequently:true});g.fillStyle='#fff';g.strokeStyle='#fff';g.lineJoin='round';g.lineCap='round';var cx=(r.left+r.width/2)/k,cy=SH/2;
  if(name.charAt(0)==='w'){var w=WORDS[+name.slice(1)],fs=Math.min(SH*1.02,SW*.78/(w.length*.52));g.font='800 '+fs+'px "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Arial,sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText(w,cx,cy+SH*.04)}
  else if(name==='phone'){var ph=SH*.94,pw=ph*.5;g.lineWidth=ph*.03;rr(g,cx-pw/2,cy-ph/2,pw,ph,pw*.18);g.stroke();g.fillRect(cx-pw*.14,cy-ph/2+ph*.03,pw*.28,ph*.02);var tw2=pw*.26,gp=pw*.14,x0=cx-tw2-gp/2-tw2/2+tw2/2-gp/2;for(var ro=0;ro<3;ro++)for(var co=0;co<2;co++){rr(g,cx-tw2-gp/2+co*(tw2+gp),cy-ph*.34+ro*(tw2+gp*1.4),tw2,tw2,tw2*.28);g.fill()}g.fillRect(cx-pw*.18,cy+ph*.42,pw*.36,ph*.014)}
  else if(name==='chart'){var bw=Math.min(SW*.09,SH*.15),hs=[.3,.5,.68,.98],gap=bw*1.1,tw=hs.length*bw+(hs.length-1)*gap,bh=SH*.66,x1=cx-tw/2,y1=cy+bh/2+SH*.08;hs.forEach(function(h,i){var x=x1+i*(bw+gap),hh=bh*h;rr(g,x,y1-hh-SH*.08,bw,hh,bw*.25);g.fill()});g.lineWidth=SH*.03;g.beginPath();g.moveTo(x1-bw*.6,y1);g.lineTo(x1+tw+bw*.6,y1);g.stroke();g.lineWidth=SH*.035;g.lineCap='round';g.beginPath();g.moveTo(x1+bw*.2,cy-bh*.05);g.lineTo(x1+tw*.42,cy-bh*.26);g.lineTo(x1+tw*.6,cy-bh*.14);g.lineTo(x1+tw*.9,cy-bh*.62);g.stroke();g.beginPath();g.moveTo(x1+tw*.9-bw*.5,cy-bh*.62+bw*.1);g.lineTo(x1+tw*.9,cy-bh*.62);g.lineTo(x1+tw*.9+bw*.1,cy-bh*.62+bw*.55);g.stroke()}
