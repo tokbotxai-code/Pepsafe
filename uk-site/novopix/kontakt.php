@@ -30,17 +30,24 @@ $cfgf = dirname(__DIR__, 2) . '/kolejka/smtp.json';
 if (is_file($cfgf) && is_file(__DIR__ . '/lib/PHPMailer.php')) {
   $c = json_decode((string)file_get_contents($cfgf), true);
   if (is_array($c) && !empty($c['host']) && !empty($c['user']) && !empty($c['pass'])) {
-    try {
-      require_once __DIR__ . '/lib/Exception.php'; require_once __DIR__ . '/lib/PHPMailer.php'; require_once __DIR__ . '/lib/SMTP.php';
-      $m = new PHPMailer\PHPMailer\PHPMailer(true);
-      $m->isSMTP(); $m->Host = $c['host']; $m->Port = (int)($c['port'] ?? 587); $m->SMTPAuth = true; $m->Username = $c['user']; $m->Password = $c['pass'];
-      $m->SMTPSecure = (($c['secure'] ?? 'tls') === 'ssl') ? PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS : PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
-      if (!empty($c['insecure_local'])) { $m->SMTPSecure = ''; $m->SMTPAutoTLS = false; }
-      $m->CharSet = 'UTF-8'; $m->Timeout = 12;
-      $from = $c['from'] ?? $c['user']; $m->setFrom($from, 'NovoPix'); $m->addAddress($c['to'] ?? 'contact@pepsafe.info');
-      $m->addReplyTo($email, $name); $m->Subject = 'NovoPix contact: ' . $name; $m->Body = $body; $m->isHTML(false);
-      $sent = $m->send(); if ($sent) $via = 'smtp';
-    } catch (Throwable $e) { $note = 'smtp-error: ' . preg_replace('/[^A-Za-z0-9 .:,_\/-]/', '', substr($e->getMessage(), 0, 120)); $sent = false; }
+    require_once __DIR__ . '/lib/Exception.php'; require_once __DIR__ . '/lib/PHPMailer.php'; require_once __DIR__ . '/lib/SMTP.php';
+    $hosts = array_values(array_unique(array_filter([trim((string)$c['host']), 'smtp.ionos.co.uk', 'smtp.ionos.com'])));
+    $tries = [];
+    foreach ($hosts as $h) { $tries[] = [$h, 587, 'tls']; $tries[] = [$h, 465, 'ssl']; }
+    $tries = array_slice($tries, 0, 4); $errs = [];
+    foreach ($tries as $t) {
+      try {
+        $m = new PHPMailer\PHPMailer\PHPMailer(true);
+        $m->isSMTP(); $m->Host = $t[0]; $m->Port = $t[1]; $m->SMTPAuth = true; $m->Username = $c['user']; $m->Password = $c['pass'];
+        $m->SMTPSecure = ($t[2] === 'ssl') ? PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS : PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+        if (!empty($c['insecure_local'])) { $m->SMTPSecure = ''; $m->SMTPAutoTLS = false; }
+        $m->CharSet = 'UTF-8'; $m->Timeout = 6;
+        $from = $c['from'] ?? $c['user']; $m->setFrom($from, 'NovoPix'); $m->addAddress($c['to'] ?? 'contact@pepsafe.info');
+        $m->addReplyTo($email, $name); $m->Subject = 'NovoPix contact: ' . $name; $m->Body = $body; $m->isHTML(false);
+        $sent = $m->send(); if ($sent) { $via = 'smtp'; $note = 'smtp-ok ' . $t[0] . ':' . $t[1]; break; }
+      } catch (Throwable $e) { $errs[] = $t[0] . ':' . $t[1] . ' ' . preg_replace('/[^A-Za-z0-9 .:,_\\/-]/', '', substr($e->getMessage(), 0, 60)); $sent = false; }
+    }
+    if (!$sent && $errs) $note = 'smtp-error: ' . implode(' | ', $errs);
   }
 }
 if (!$sent) $sent = @mail('contact@pepsafe.info', $subj, $body, $head);
