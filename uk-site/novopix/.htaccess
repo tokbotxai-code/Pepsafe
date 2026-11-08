@@ -1,0 +1,3 @@
+# If a domain points straight at this folder, make /novopix/... paths work too.
+RewriteEngine On
+RewriteRule ^novopix/(.*)$ /$1 [L]

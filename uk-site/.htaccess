@@ -1,4 +1,12 @@
 RewriteEngine On
+# NovoPix is served on both novopix.uk and pepsafe.uk (root page); other pepsafe.uk paths keep working.
+RewriteCond %{HTTP_HOST} ^(www\.)?(novopix\.uk|pepsafe\.uk)$ [NC]
+RewriteRule ^$ /novopix/index.html [L]
+# novopix.uk: everything comes from the novopix folder
+RewriteCond %{HTTP_HOST} ^(www\.)?novopix\.uk$ [NC]
+RewriteCond %{REQUEST_URI} !^/novopix/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ /novopix/index.html [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ /index.html [L]
