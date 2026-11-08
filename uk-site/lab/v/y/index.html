@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="description" content="NovoPix is an independent studio building useful apps, software and websites. FridgeBite for meal ideas, PantryPal for your pantry, PepSafe for reference."><meta property="og:title" content="NovoPix: apps, software and websites"><meta property="og:description" content="An independent studio building useful apps, software and websites."><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="description" content="NovoPix is an independent studio building useful apps, software and websites. FridgeBite for meal ideas, PantryPal for your pantry, PepSafe for reference."><meta property="og:title" content="NovoPix: apps, software and websites"><meta property="og:description" content="An independent studio building useful apps, software and websites."><meta property="og:type" content="website"><link rel="canonical" href="https://pepsafe.uk/lab/v/y/"><meta property="og:url" content="https://pepsafe.uk/lab/v/y/"><meta property="og:image" content="https://pepsafe.uk/lab/v/y/og-preview.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://pepsafe.uk/lab/v/y/og-preview.png"><meta name="theme-color" content="#0b2230"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NovoPix","url":"https://pepsafe.uk/lab/v/y/","description":"Independent studio building apps, software and websites.","email":"contact@pepsafe.info"}</script><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2"><link rel="apple-touch-icon" href="favicon.png?v=2"><title>NovoPix: apps and software (wordmark test)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
@@ -217,17 +217,37 @@ nav a{color:rgba(255,255,255,.82)!important;background:none!important;border:0!i
 nav a:hover{color:#fff!important;background:none!important;transform:none!important}
 nav a.on{color:#fff!important;background:none!important;box-shadow:inset 0 -2px 0 #ffc233!important;border-radius:0!important;text-shadow:none!important}
 .logo svg{width:34px;height:34px}.logo{gap:10px!important}
+
+.abt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ab{padding:22px 24px}.ab h3{margin:0 0 10px;font-size:19px}.ab ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14.5px;color:var(--mut)}.ab li{display:flex;gap:10px}.ab li::before{content:"";flex:none;width:7px;height:7px;margin-top:8px;border-radius:2px;background:#ffc233}
+.contact .alt{margin-top:14px;font-size:14px}.contact .alt .mail{font-size:inherit;border-bottom:1px solid rgba(255,255,255,.5)}
+.cf{display:grid;gap:12px;width:100%}.cf label{display:grid;gap:5px;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--mut);text-align:left}
+.cf input,.cf textarea{font:500 15px Figtree,system-ui,sans-serif;color:#fff;background:rgba(6,24,38,.45);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:11px 13px;width:100%;resize:vertical;user-select:text;-webkit-user-select:text;transition:border-color .2s,background .2s}
+.cf input::placeholder,.cf textarea::placeholder{color:rgba(255,255,255,.45)}.cf input:focus,.cf textarea:focus{outline:none;border-color:#ffc233;background:rgba(6,24,38,.6)}
+.cf [aria-invalid=true]{border-color:#ff8a8a}.cr{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.cb{display:flex;align-items:center;gap:14px;flex-wrap:wrap}#cs{font-size:14px;font-weight:600}#cs.ok{color:#9af0c8}#cs.err{color:#ffb0b0}
+@media(max-width:900px){.abt{grid-template-columns:minmax(0,1fr)}.cr{grid-template-columns:minmax(0,1fr)}.contact{text-align:left}}
+@media(min-width:1000px){
+#about>.w{display:grid;grid-template-columns:minmax(150px,.24fr) minmax(0,1fr);column-gap:36px;align-items:center}
+#about>.w>.stage2{grid-column:1;grid-row:1/span 3;height:clamp(150px,26vh,240px);margin:0}
+#about>.w>.eyebrow,#about>.w>h2,#about>.w>.sub{grid-column:2}#about>.w>.abt{grid-column:1/-1;margin-top:22px}
+#about h2{font-size:clamp(28px,3vw,44px)}#about{padding-top:112px}
+#contact>.w>.contact{padding:34px 40px}
+}
+body[data-s="4"]{--g1:rgba(90,200,190,.30);--g2:rgba(143,216,255,.10)}
+body[data-s="5"]{--g1:rgba(255,194,51,.28);--g2:rgba(90,170,235,.12)}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="bar gl"><button class="logo" id="mk" type="button" aria-label="NovoPix"></button>
-<nav id="nv" aria-label="Main"><a href="#apps">Projects</a><a href="#numbers">Numbers</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav></div></header>
+<nav id="nv" aria-label="Main"><a href="#apps">Projects</a><a href="#numbers">Numbers</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
 <div class="dock gl" id="dock" role="navigation" aria-label="Sections">
 <a class="bub on" href="#top" data-i="0" aria-label="Top"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg><b>Top</b></a>
 <a class="bub" href="#apps" data-i="1" aria-label="Projects"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M11 18h2"/></svg><b>Projects</b></a>
 <a class="bub" href="#numbers" data-i="2" aria-label="Numbers"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><b>Numbers</b></a>
 <a class="bub" href="#approach" data-i="3" aria-label="Approach"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg><b>Approach</b></a>
-<a class="bub" href="#contact" data-i="4" aria-label="Contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><b>Contact</b></a></div>
+<a class="bub" href="#about" data-i="4" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg><b>About</b></a>
+<a class="bub" href="#contact" data-i="5" aria-label="Contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><b>Contact</b></a></div>
 <main id="main">
 <div class="hero" id="top"><div class="stage" id="stage" aria-hidden="true"></div>
 <div class="tag" id="tag" aria-hidden="true"><span class="on">Independent apps &amp; software studio</span><span>Built to be used every day</span><span>Small, careful and useful</span><span>Tested before it ships</span><span>Plain, calm and honest</span></div>
@@ -252,7 +272,17 @@ nav a.on{color:#fff!important;background:none!important;box-shadow:inset 0 -2px 
 <section id="approach"><div class="w"><div class="stage2" id="st-approach" aria-hidden="true"></div><p class="eyebrow rv">How we work</p><h2 class="rv">Simple rules.</h2><p class="sub rv">Small teams ship better when the rules are simple.</p>
 <div class="g3"><div class="pc gl tilt rv"><div class="i">✔</div><h3>Tested before it ships</h3><p>Every change is tried on a phone and on a desktop before it goes out. If it is not ready, it waits.</p></div><div class="pc gl tilt rv" style="--d:100ms"><div class="i">🔒</div><h3>Private by default</h3><p>PantryPal keeps your data on your own device. We do not add ads or third-party trackers to our apps.</p></div><div class="pc gl tilt rv" style="--d:200ms"><div class="i">☰</div><h3>Plain and honest</h3><p>Clear wording, real data, no invented numbers. Dates in PantryPal are labels you entered, not safety advice.</p></div></div></div></section>
 
-<section id="contact"><div class="w"><div class="stage2" id="st-contact" aria-hidden="true"></div><div class="contact gl tilt rv"><div><h2>Need a website or an app?</h2><p>We build websites too. If you have an idea, write to us and we will help you shape it. Questions, bug reports and feedback are welcome as well.</p></div><div style="display:grid;gap:18px;justify-items:start"><a class="mail" href="mailto:contact@pepsafe.info">contact@pepsafe.info</a><a class="btn pri" href="mailto:contact@pepsafe.info?subject=My%20idea">Write to us</a></div></div></div></section>
+<section id="about"><div class="w"><div class="stage2" id="st-about" aria-hidden="true"></div><p class="eyebrow rv">About</p><h2 class="rv">A small studio that finishes things.</h2><p class="sub rv">NovoPix is an independent studio. We design, build and look after apps, software and websites ourselves, from the first sketch to the update after launch.</p>
+<div class="abt">
+<div class="ab gl tilt rv"><h3>What we do</h3><ul><li>Apps that open in the browser and on a phone</li><li>Websites and small web tools</li><li>Software built around one clear job</li></ul></div>
+<div class="ab gl tilt rv" style="--d:90ms"><h3>How we work</h3><ul><li>We test on a phone and a desktop before anything ships</li><li>Plain wording, real data, no invented numbers</li><li>Your data stays yours: no ads, no trackers in our apps</li></ul></div>
+<div class="ab gl tilt rv" style="--d:180ms"><h3>Working with us</h3><ul><li>Tell us what you need, we reply by e-mail</li><li>We say clearly what is and is not possible</li><li>Small team, one point of contact</li></ul></div>
+</div></div></section>
+<section id="contact"><div class="w"><div class="stage2" id="st-contact" aria-hidden="true"></div><div class="contact gl tilt rv"><div><h2>Need a website or an app?</h2><p>We build websites too. Tell us about your idea and we will help you shape it. Questions, bug reports and feedback are welcome as well.</p><p class="alt">Prefer e-mail? <a class="mail" href="mailto:contact@pepsafe.info">contact@pepsafe.info</a></p></div>
+<form id="cf" class="cf" novalidate action="../kontakt.php" method="post"><div class="cr"><label>Name<input name="name" autocomplete="name" required maxlength="80"></label><label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="120"></label></div>
+<label>Message<textarea name="message" rows="4" required maxlength="4000" placeholder="What would you like to build?"></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="cb"><button class="btn pri" type="submit">Send message</button><span id="cs" role="status" aria-live="polite"></span></div></form></div></div></section>
 </main>
 <footer><div class="w"><span>© 2026 NovoPix</span><span><a href="#apps">Projects</a> · <a href="#numbers">Numbers</a> · <a href="#approach">Approach</a> · <a href="#contact">Contact</a> · <a href="https://pantrypal.pepsafe.uk/#/privacy" target="_blank" rel="noopener">PantryPal privacy</a></span></div></footer>
 
@@ -262,11 +292,17 @@ document.querySelectorAll('.ph img').forEach(function(im){var w=document.createE
 (function(){var f=document.getElementById('flt'),ps=document.querySelectorAll('.tl');if(!f)return;f.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var v=b.dataset.f;f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});ps.forEach(function(p){var show=v==='all'||p.dataset.st===v;p.hidden=!show;if(show){p.classList.add('in')}});window.dispatchEvent(new Event('resize'))})})();
 (function(){function off(){return innerWidth>=1000}var lock=0;
 function step(dir){var cs=SECS[sec];if(!cs)return false;var r=cs.getBoundingClientRect();if(dir>0&&r.bottom>innerHeight+24)return false;if(dir<0&&r.top<-24)return false;var t=SECS[sec+dir];if(!t)return true;if(Date.now()<lock)return true;lock=Date.now()+850;goSec(t);return true}
-addEventListener('wheel',function(e){if(!off()||e.ctrlKey||Math.abs(e.deltaY)<4)return;if(step(e.deltaY>0?1:-1))e.preventDefault()},{passive:false});
+addEventListener('wheel',function(e){if(!off()||e.ctrlKey||Math.abs(e.deltaY)<4||(e.target.closest&&e.target.closest('textarea')))return;if(step(e.deltaY>0?1:-1))e.preventDefault()},{passive:false});
 addEventListener('keydown',function(e){if(!off()||/INPUT|TEXTAREA|BUTTON/.test((e.target||{}).tagName||''))return;var k=e.key,d=(k===' '||k==='ArrowDown'||k==='PageDown')?1:(k==='ArrowUp'||k==='PageUp')?-1:0;if(k==='Home'){e.preventDefault();goSec(SECS[0]);return}if(k==='End'){e.preventDefault();goSec(SECS[SECS.length-1]);return}if(d&&step(d))e.preventDefault()});
 addEventListener('contextmenu',function(e){if(!(e.target.closest&&e.target.closest('.mail')))e.preventDefault()});})();
 (function(){var woke={};function wake(u){if(woke[u])return;woke[u]=1;try{fetch(u,{mode:'no-cors',cache:'no-store'}).catch(function(){})}catch(e){}}
 document.querySelectorAll('.tl[href^="https://fridge"],.tl[href^="https://pantry"]').forEach(function(a){var u=a.href.indexOf('fridge')>-1?'https://fridgebite.pepsafe.uk/api/health':'https://pantrypal.pepsafe.uk/';['pointerenter','touchstart','focus'].forEach(function(ev){a.addEventListener(ev,function(){wake(u)},{passive:true})})})})();
+(function(){var f=document.getElementById('cf');if(!f)return;var st=document.getElementById('cs');
+function msg(t,c){st.textContent=t;st.className=c||''}
+f.addEventListener('submit',function(e){e.preventDefault();var bad=null;['name','email','message'].forEach(function(n){var el=f.elements[n],v=el.value.trim(),ok=n==='email'?/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v):n==='name'?v.length>=2:v.length>=10;el.setAttribute('aria-invalid',ok?'false':'true');if(!ok&&!bad)bad=el});
+if(bad){bad.focus();msg(bad.name==='message'?'Please write a few words (at least 10 characters).':bad.name==='email'?'Please enter a valid e-mail address.':'Please enter your name.','err');return}
+var btn=f.querySelector('button');btn.disabled=true;msg('Sending...','');
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.json().then(function(j){return{r:r,j:j}})}).then(function(x){btn.disabled=false;if(x.j&&x.j.ok){f.reset();msg('Thank you. We will reply by e-mail.','ok')}else if(x.r.status===429){msg('Too many messages. Please try again later or write to contact@pepsafe.info.','err')}else throw 0}).catch(function(){btn.disabled=false;var sbj=encodeURIComponent('NovoPix: message from '+f.elements.name.value),bd=encodeURIComponent(f.elements.message.value+'\n\n'+f.elements.name.value+' ('+f.elements.email.value+')');st.className='err';st.innerHTML='Could not send. <a class="mail" href="mailto:contact@pepsafe.info?subject='+sbj+'&body='+bd+'">Send by e-mail instead</a>'})})})();
 var LET=[['A...X','XX..X','X.X.X','X..XX','X...X'],['.XXX.','X...X','X...X','X...X','.XXA.'],['X...X','X...X','.X.X.','.X.X.','..A..'],['.XXX.','X...X','X...X','X...X','.XXA.'],['XXXX.','X...X','XXXA.','X....','X....'],['..A..','.....','..X..','..X..','..X..'],['X...X','.X.X.','..A..','.X.X.','X...X']],npc=-1,npEl=document.getElementById('mk');
 (function(){var h='<svg viewBox="0 0 60 60" aria-hidden="true">';for(var y=0;y<5;y++)for(var x=0;x<5;x++)h+='<rect class="cell" x="'+(x*12+1)+'" y="'+(y*12+1)+'" width="10" height="10" rx="2.4" fill="currentColor" style="transform:scale(0)"/>';
 npEl.innerHTML=h+'</svg><span class="word wm"><span class="a">Novo</span><span class="b">Pix</span></span>';var cs=npEl.querySelectorAll('.cell');
@@ -276,10 +312,10 @@ var lu=0;show(0);
 npEl.addEventListener('pointerenter',function(){lu=Date.now();next()});npEl.addEventListener('click',function(){lu=Date.now();next()});
 setInterval(function(){if(!document.hidden&&Date.now()-lu>1800)next()},1500);window.__studioMark={get:function(){return{sty:npc}},next:next};})();
 var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,TEST=/[?&]t=1/.test(location.search),FQ=(location.search.match(/[?&]q=(\d)/)||[])[1],coarse=matchMedia('(pointer:coarse)').matches||innerWidth<700;
-var SECS=['top','apps','numbers','approach','contact'].map(function(i){return document.getElementById(i)});
-var STAGES={w:'stage',phone:'st-apps',chart:'st-numbers',gear:'st-approach',mail:'st-contact'};
-var WORDS=['NovoPix','Apps','Software','Design'],SHAPES={apps:'phone',numbers:'chart',approach:'gear',contact:'mail'};
-var PAL=[[.05,.18,.28, .15,.45,.62, .55,.82,.95, .95,.66,.05, 1.,.78,.25],[.06,.20,.30, .20,.52,.70, .95,.66,.10, .45,.78,.95, 1.,.80,.30],[.04,.16,.26, .10,.50,.72, .50,.85,.98, .98,.72,.15, .75,.92,1.],[.07,.22,.32, .25,.55,.65, .40,.80,.85, .95,.70,.12, 1.,.85,.45],[.06,.17,.27, .90,.62,.05, 1.,.80,.30, .30,.65,.90, .60,.85,1.]];
+var SECS=['top','apps','numbers','approach','about','contact'].map(function(i){return document.getElementById(i)});
+var STAGES={w:'stage',phone:'st-apps',chart:'st-numbers',gear:'st-approach',code:'st-about',mail:'st-contact'};
+var WORDS=['NovoPix','Apps','Software','Design'],SHAPES={apps:'phone',numbers:'chart',approach:'gear',about:'code',contact:'mail'};
+var PAL=[[.05,.18,.28, .15,.45,.62, .55,.82,.95, .95,.66,.05, 1.,.78,.25],[.06,.20,.30, .20,.52,.70, .95,.66,.10, .45,.78,.95, 1.,.80,.30],[.04,.16,.26, .10,.50,.72, .50,.85,.98, .98,.72,.15, .75,.92,1.],[.07,.22,.32, .25,.55,.65, .40,.80,.85, .95,.70,.12, 1.,.85,.45],[.05,.20,.26, .12,.52,.60, .40,.85,.80, .95,.70,.12, .75,.95,.95],[.06,.17,.27, .90,.62,.05, 1.,.80,.30, .30,.65,.90, .60,.85,1.]];
 var palCur=PAL[0].slice();
 var glc=document.getElementById('gl'),bgc=document.getElementById('bg'),gl=null,gb=null,ok=false,booted=false;
 function sh(g,t,src){var s=g.createShader(t);g.shaderSource(s,src);g.compileShader(s);if(!g.getShaderParameter(s,g.COMPILE_STATUS))throw new Error(g.getShaderInfoLog(s));return s}
@@ -320,6 +356,7 @@ function sampleShape(name){var el=stageEl(name),r=el.getBoundingClientRect(),top
  else if(name==='phone'){var ph=SH*.94,pw=ph*.5;g.lineWidth=ph*.03;rr(g,cx-pw/2,cy-ph/2,pw,ph,pw*.18);g.stroke();g.fillRect(cx-pw*.14,cy-ph/2+ph*.03,pw*.28,ph*.02);var tw2=pw*.26,gp=pw*.14,x0=cx-tw2-gp/2-tw2/2+tw2/2-gp/2;for(var ro=0;ro<3;ro++)for(var co=0;co<2;co++){rr(g,cx-tw2-gp/2+co*(tw2+gp),cy-ph*.34+ro*(tw2+gp*1.4),tw2,tw2,tw2*.28);g.fill()}g.fillRect(cx-pw*.18,cy+ph*.42,pw*.36,ph*.014)}
  else if(name==='chart'){var bw=Math.min(SW*.09,SH*.15),hs=[.3,.5,.68,.98],gap=bw*1.1,tw=hs.length*bw+(hs.length-1)*gap,bh=SH*.66,x1=cx-tw/2,y1=cy+bh/2+SH*.08;hs.forEach(function(h,i){var x=x1+i*(bw+gap),hh=bh*h;rr(g,x,y1-hh-SH*.08,bw,hh,bw*.25);g.fill()});g.lineWidth=SH*.03;g.beginPath();g.moveTo(x1-bw*.6,y1);g.lineTo(x1+tw+bw*.6,y1);g.stroke();g.lineWidth=SH*.035;g.lineCap='round';g.beginPath();g.moveTo(x1+bw*.2,cy-bh*.05);g.lineTo(x1+tw*.42,cy-bh*.26);g.lineTo(x1+tw*.6,cy-bh*.14);g.lineTo(x1+tw*.9,cy-bh*.62);g.stroke();g.beginPath();g.moveTo(x1+tw*.9-bw*.5,cy-bh*.62+bw*.1);g.lineTo(x1+tw*.9,cy-bh*.62);g.lineTo(x1+tw*.9+bw*.1,cy-bh*.62+bw*.55);g.stroke()}
  else if(name==='gear'){var R=Math.min(SH*.47,SW*.3),teeth=14,pts=[];for(var i=0;i<teeth*4;i++){var a=i/(teeth*4)*6.283,kk=(i%4<2)?R:R*.8;pts.push([cx+Math.cos(a)*kk,cy+Math.sin(a)*kk])}g.beginPath();pts.forEach(function(p,i){i?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1])});g.closePath();g.lineWidth=R*.07;g.stroke();g.beginPath();g.arc(cx,cy,R*.34,0,6.283);g.lineWidth=R*.08;g.stroke();for(var s=0;s<6;s++){var a2=s/6*6.283;g.beginPath();g.moveTo(cx+Math.cos(a2)*R*.38,cy+Math.sin(a2)*R*.38);g.lineTo(cx+Math.cos(a2)*R*.68,cy+Math.sin(a2)*R*.68);g.lineWidth=R*.07;g.stroke()}g.beginPath();g.arc(cx,cy,R*.1,0,6.283);g.fill()}
+ else if(name==='code'){var s0=Math.min(SH*.34,(r.width/k)/5.6);g.lineWidth=s0*.34;g.lineCap='round';g.lineJoin='round';g.beginPath();g.moveTo(cx-s0*.9,cy-s0*1.1);g.lineTo(cx-s0*2.5,cy);g.lineTo(cx-s0*.9,cy+s0*1.1);g.stroke();g.beginPath();g.moveTo(cx+s0*.9,cy-s0*1.1);g.lineTo(cx+s0*2.5,cy);g.lineTo(cx+s0*.9,cy+s0*1.1);g.stroke();g.beginPath();g.moveTo(cx+s0*.38,cy-s0*1.35);g.lineTo(cx-s0*.38,cy+s0*1.35);g.stroke()}
  else if(name==='mail'){var ew=Math.min(SW*.5,SH*1.3),eh=ew*.64;g.lineWidth=eh*.07;rr(g,cx-ew/2,cy-eh/2,ew,eh,eh*.1);g.stroke();g.beginPath();g.moveTo(cx-ew/2,cy-eh/2);g.lineTo(cx,cy+eh*.12);g.lineTo(cx+ew/2,cy-eh/2);g.stroke();g.beginPath();g.moveTo(cx-ew/2,cy+eh/2);g.lineTo(cx-ew*.16,cy-eh*.04);g.moveTo(cx+ew/2,cy+eh/2);g.lineTo(cx+ew*.16,cy-eh*.04);g.lineWidth=eh*.04;g.stroke()}
  var d=g.getImageData(0,0,SW,SH).data,pts2=[],step=2;for(var y=0;y<SH;y+=step)for(var x=0;x<SW;x+=step){if(d[(y*SW+x)*4+3]>130)pts2.push(x*k,y*k+top)}
  var cnt=Math.max(1,pts2.length/2),xs=new Float32Array(N),ys=new Float32Array(N);for(var i2=0;i2<N;i2++){var idx=Math.floor(Math.random()*cnt);xs[i2]=pts2[idx*2]||cx*k;ys[i2]=pts2[idx*2+1]||top}
