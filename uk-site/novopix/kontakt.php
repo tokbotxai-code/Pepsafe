@@ -24,7 +24,26 @@ $subj = '=?UTF-8?B?' . base64_encode('NovoPix contact: ' . $name) . '?=';
 $head = "From: NovoPix <contact@pepsafe.info>\r\nReply-To: $name <$email>\r\nMessage-ID: <" . bin2hex(random_bytes(8)) . "@pepsafe.info>\r\nDate: " . date('r') . "\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n";
 $body = "Name: $name\nEmail: $email\n\n$msg\n\n--\nSent from the NovoPix contact form.";
 // envelope sender = our own address, so mail clients do not show the hosting's technical address
-$sent = @mail('contact@pepsafe.info', $subj, $body, $head);
+$sent = false;
+// Preferred: SMTP through a real mailbox (config kept outside the web root: ../kolejka/smtp.json). Fallback: PHP mail().
+$cfgf = dirname(__DIR__, 2) . '/kolejka/smtp.json';
+if (is_file($cfgf) && is_file(__DIR__ . '/lib/PHPMailer.php')) {
+  $c = json_decode((string)file_get_contents($cfgf), true);
+  if (is_array($c) && !empty($c['host']) && !empty($c['user']) && !empty($c['pass'])) {
+    try {
+      require_once __DIR__ . '/lib/Exception.php'; require_once __DIR__ . '/lib/PHPMailer.php'; require_once __DIR__ . '/lib/SMTP.php';
+      $m = new PHPMailer\PHPMailer\PHPMailer(true);
+      $m->isSMTP(); $m->Host = $c['host']; $m->Port = (int)($c['port'] ?? 587); $m->SMTPAuth = true; $m->Username = $c['user']; $m->Password = $c['pass'];
+      $m->SMTPSecure = (($c['secure'] ?? 'tls') === 'ssl') ? PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS : PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+      if (!empty($c['insecure_local'])) { $m->SMTPSecure = ''; $m->SMTPAutoTLS = false; }
+      $m->CharSet = 'UTF-8'; $m->Timeout = 12;
+      $from = $c['from'] ?? $c['user']; $m->setFrom($from, 'NovoPix'); $m->addAddress($c['to'] ?? 'contact@pepsafe.info');
+      $m->addReplyTo($email, $name); $m->Subject = 'NovoPix contact: ' . $name; $m->Body = $body; $m->isHTML(false);
+      $sent = $m->send();
+    } catch (Throwable $e) { @file_put_contents(sys_get_temp_dir() . '/novopix-smtp-error.txt', date('c') . ' ' . $e->getMessage() . "\n", FILE_APPEND); $sent = false; }
+  }
+}
+if (!$sent) $sent = @mail('contact@pepsafe.info', $subj, $body, $head);
 if (!$sent) out(false, 'mail', 500);
 $log[] = $now; @file_put_contents($f, json_encode($log), LOCK_EX);
 out(true, 'ok');
