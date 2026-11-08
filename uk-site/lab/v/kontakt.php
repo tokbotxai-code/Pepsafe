@@ -7,7 +7,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') { http_response_code(204);
 header('Cache-Control: no-store');
 function out($ok, $msg, $code = 200) { http_response_code($code); echo json_encode(['ok' => $ok, 'msg' => $msg]); exit; }
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') out(false, 'method', 405);
-if (trim((string)($_POST['website'] ?? '')) !== '') out(true, 'ok'); // honeypot: pretend success
+if (trim((string)($_POST['website'] ?? '')) !== '') header('X-Mail-Transport: ' . $via); out(true, 'ok'); // honeypot: pretend success
 $name = trim(preg_replace('/[\r\n]+/', ' ', (string)($_POST['name'] ?? '')));
 $email = trim((string)($_POST['email'] ?? ''));
 $msg = trim((string)($_POST['message'] ?? ''));
@@ -24,7 +24,7 @@ $subj = '=?UTF-8?B?' . base64_encode('NovoPix contact: ' . $name) . '?=';
 $head = "From: NovoPix <contact@pepsafe.info>\r\nReply-To: $name <$email>\r\nMessage-ID: <" . bin2hex(random_bytes(8)) . "@pepsafe.info>\r\nDate: " . date('r') . "\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n";
 $body = "Name: $name\nEmail: $email\n\n$msg\n\n--\nSent from the NovoPix contact form.";
 // envelope sender = our own address, so mail clients do not show the hosting's technical address
-$sent = false;
+$sent = false; $via = 'mail';
 // Preferred: SMTP through a real mailbox (config kept outside the web root: ../kolejka/smtp.json). Fallback: PHP mail().
 $cfgf = dirname(__DIR__, 2) . '/kolejka/smtp.json';
 if (is_file($cfgf) && is_file(__DIR__ . '/lib/PHPMailer.php')) {
@@ -39,11 +39,11 @@ if (is_file($cfgf) && is_file(__DIR__ . '/lib/PHPMailer.php')) {
       $m->CharSet = 'UTF-8'; $m->Timeout = 12;
       $from = $c['from'] ?? $c['user']; $m->setFrom($from, 'NovoPix'); $m->addAddress($c['to'] ?? 'contact@pepsafe.info');
       $m->addReplyTo($email, $name); $m->Subject = 'NovoPix contact: ' . $name; $m->Body = $body; $m->isHTML(false);
-      $sent = $m->send();
+      $sent = $m->send(); if ($sent) $via = 'smtp';
     } catch (Throwable $e) { @file_put_contents(sys_get_temp_dir() . '/novopix-smtp-error.txt', date('c') . ' ' . $e->getMessage() . "\n", FILE_APPEND); $sent = false; }
   }
 }
 if (!$sent) $sent = @mail('contact@pepsafe.info', $subj, $body, $head);
 if (!$sent) out(false, 'mail', 500);
 $log[] = $now; @file_put_contents($f, json_encode($log), LOCK_EX);
-out(true, 'ok');
+header('X-Mail-Transport: ' . $via); out(true, 'ok');
