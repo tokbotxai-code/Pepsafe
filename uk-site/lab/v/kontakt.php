@@ -1,6 +1,9 @@
 <?php
 // NovoPix contact form handler (own server, no third-party service). Sends a mail to contact@pepsafe.info.
 header('Content-Type: application/json; charset=utf-8');
+$o = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($o, ['https://novopix.uk', 'https://www.novopix.uk', 'https://pepsafe.uk'], true)) { header('Access-Control-Allow-Origin: ' . $o); header('Vary: Origin'); header('Access-Control-Allow-Headers: Accept, Content-Type'); header('Access-Control-Allow-Methods: POST, OPTIONS'); }
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') { http_response_code(204); exit; }
 header('Cache-Control: no-store');
 function out($ok, $msg, $code = 200) { http_response_code($code); echo json_encode(['ok' => $ok, 'msg' => $msg]); exit; }
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') out(false, 'method', 405);
@@ -13,7 +16,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($email) > 120 || pre
 if (mb_strlen($msg) < 10 || mb_strlen($msg) > 4000) out(false, 'message', 422);
 // rate limit: 5 per hour per IP, stored outside the web root when possible
 $ip = preg_replace('/[^0-9a-f:.]/i', '', (string)($_SERVER['REMOTE_ADDR'] ?? 'x'));
-$dir = dirname(__DIR__, 3) . '/kolejka'; if (!is_dir($dir)) $dir = sys_get_temp_dir();
+$dir = dirname(__DIR__, 2) . '/kolejka'; if (!is_dir($dir)) $dir = sys_get_temp_dir();
 $f = $dir . '/kontakt-' . md5($ip) . '.json'; $now = time(); $log = [];
 if (is_file($f)) { $d = json_decode((string)file_get_contents($f), true); if (is_array($d)) $log = array_values(array_filter($d, function ($t) use ($now) { return $t > $now - 3600; })); }
 if (count($log) >= 5) out(false, 'rate', 429);
@@ -22,8 +25,8 @@ $head = "From: NovoPix <contact@pepsafe.info>\r\nReply-To: $name <$email>\r\nMes
 $body = "Name: $name\nEmail: $email\n\n$msg\n\n--\nSent from the NovoPix contact form.";
 $head = str_replace('From: NovoPix <contact@pepsafe.info>', "From: NovoPix <contact@pepsafe.info>\r\nSender: contact@pepsafe.info\r\nReturn-Path: contact@pepsafe.info", $head);
 // envelope sender = our own address, so mail clients do not show the hosting's technical address
-$sent = @mail('contact@pepsafe.info', $subj, $body, $head, '-fcontact@pepsafe.info');
-if (!$sent) $sent = mail('contact@pepsafe.info', $subj, $body, $head);
+$sent = @mail('contact@pepsafe.info', $subj, $body, $head);
+if (!$sent) { $e = error_get_last(); @file_put_contents(sys_get_temp_dir() . '/novopix-mail-error.txt', date('c') . ' ' . json_encode($e) . "\n", FILE_APPEND); $sent = @mail('contact@pepsafe.info', $subj, $body, $head, '-fcontact@pepsafe.info'); }
 if (!$sent) out(false, 'mail', 500);
 $log[] = $now; @file_put_contents($f, json_encode($log), LOCK_EX);
 out(true, 'ok');
