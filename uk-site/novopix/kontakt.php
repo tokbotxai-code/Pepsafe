@@ -23,10 +23,8 @@ if (count($log) >= 5) out(false, 'rate', 429);
 $subj = '=?UTF-8?B?' . base64_encode('NovoPix contact: ' . $name) . '?=';
 $head = "From: NovoPix <contact@pepsafe.info>\r\nReply-To: $name <$email>\r\nMessage-ID: <" . bin2hex(random_bytes(8)) . "@pepsafe.info>\r\nDate: " . date('r') . "\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n";
 $body = "Name: $name\nEmail: $email\n\n$msg\n\n--\nSent from the NovoPix contact form.";
-$head = str_replace('From: NovoPix <contact@pepsafe.info>', "From: NovoPix <contact@pepsafe.info>\r\nSender: contact@pepsafe.info\r\nReturn-Path: contact@pepsafe.info", $head);
 // envelope sender = our own address, so mail clients do not show the hosting's technical address
 $sent = @mail('contact@pepsafe.info', $subj, $body, $head);
-if (!$sent) { $e = error_get_last(); @file_put_contents(sys_get_temp_dir() . '/novopix-mail-error.txt', date('c') . ' ' . json_encode($e) . "\n", FILE_APPEND); $sent = @mail('contact@pepsafe.info', $subj, $body, $head, '-fcontact@pepsafe.info'); }
 if (!$sent) out(false, 'mail', 500);
 $log[] = $now; @file_put_contents($f, json_encode($log), LOCK_EX);
 out(true, 'ok');

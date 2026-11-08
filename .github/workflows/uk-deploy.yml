@@ -12,4 +12,4 @@ jobs:
           U: ${{ secrets.UK_SFTP_USER }}
           P: ${{ secrets.UK_SFTP_PASS }}
         run: |
-          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; set net:max-retries 2; rm -f public/dostepnosc/_t.php public/dostepnosc/_p.php; mirror -R --verbose uk-site public; find -d 2 public; quit" 2>&1 | head -80
+          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; set net:max-retries 2; rm -f public/dostepnosc/_t.php public/dostepnosc/_p.php public/novopix/_diag.php; mirror -R --verbose uk-site public; find -d 2 public; quit" 2>&1 | head -80
