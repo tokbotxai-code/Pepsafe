@@ -1,4 +1,6 @@
 RewriteEngine On
+# privacy policy moved to novopix.uk
+RewriteRule ^dostepnosc/polityka\.html$ https://novopix.uk/polityka/ [R=301,L]
 # NovoPix is served on both novopix.uk and pepsafe.uk (root page); other pepsafe.uk paths keep working.
 RewriteCond %{HTTP_HOST} ^(www\.)?(novopix\.uk|pepsafe\.uk)$ [NC]
 RewriteRule ^$ /novopix/index.html [L]
