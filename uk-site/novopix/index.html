@@ -249,18 +249,44 @@ body[data-s="5"]{--g1:rgba(255,194,51,.28);--g2:rgba(90,170,235,.12)}
 @media(min-width:1000px){#apps>.w>#st-apps{height:clamp(210px,36vh,320px)!important}}
 @media(max-width:999px){#st-apps{height:270px!important;margin-bottom:12px!important}}
 @media(prefers-reduced-motion:reduce){.p3b{transition:none}.p3s img{animation:none}}
+
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.sv{padding:20px 22px}.sv h3{margin:0 0 8px;font-size:19px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.sv p{margin:0;font-size:14.5px;color:var(--mut)}
+.soonl{font-style:normal;font:800 10px Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,194,51,.2);color:#ffe08a;border:1px solid rgba(255,194,51,.5);border-radius:99px;padding:3px 8px}
+.steps{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.steps li{display:flex;gap:12px;align-items:center;font-size:14px;color:#fff;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)}
+.steps b{flex:none;width:30px;height:30px;border-radius:9px;background:#ffc233;color:#0e2733;display:grid;place-items:center;font:800 15px 'Bricolage Grotesque',sans-serif}
+.faq{display:grid;gap:8px;max-width:860px}
+.faq details{border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.26);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .2s}
+.faq details[open]{background:rgba(255,255,255,.16)}
+.faq summary{cursor:pointer;list-style:none;padding:14px 48px 14px 18px;font-weight:700;color:#fff;position:relative;min-height:48px;display:flex;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:22px;color:#ffc233;transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{margin:0;padding:0 18px 16px;color:var(--mut);font-size:15px}
+.faq summary:focus-visible{outline:3px solid #ffc233;outline-offset:2px;border-radius:16px}
+body[data-s="6"]{--g1:rgba(255,194,51,.28);--g2:rgba(90,170,235,.12)}
+@media(max-width:999px){.svc,.steps{grid-template-columns:minmax(0,1fr)}.bub{width:40px!important;height:40px!important}.dock{gap:4px!important;padding:7px 8px!important}}
+@media(min-width:1000px){
+#faq>.w{display:grid;grid-template-columns:minmax(150px,.24fr) minmax(0,1fr);column-gap:36px;align-items:center}
+#faq>.w>.stage2{grid-column:1;grid-row:1/span 3;height:clamp(150px,26vh,240px);margin:0}
+#faq>.w>.eyebrow,#faq>.w>h2,#faq>.w>.sub{grid-column:2}#faq>.w>.faq{grid-column:2;margin-top:12px}
+#faq h2{font-size:clamp(28px,3vw,44px)}#faq{padding-top:112px}
+#about>.w>.svc,#about>.w>.steps{grid-column:1/-1}#about>.w>.svc{margin-top:22px}
+}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="bar gl"><button class="logo" id="mk" type="button" aria-label="NovoPix"></button>
-<nav id="nv" aria-label="Main"><a href="#apps">Projects</a><a href="#numbers">Numbers</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+<nav id="nv" aria-label="Main"><a href="#apps">Projects</a><a href="#numbers">Numbers</a><a href="#approach">Approach</a><a href="#about">Services</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div></header>
 <div class="dock gl" id="dock" role="navigation" aria-label="Sections">
 <a class="bub on" href="#top" data-i="0" aria-label="Top"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg><b>Top</b></a>
 <a class="bub" href="#apps" data-i="1" aria-label="Projects"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M11 18h2"/></svg><b>Projects</b></a>
 <a class="bub" href="#numbers" data-i="2" aria-label="Numbers"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><b>Numbers</b></a>
 <a class="bub" href="#approach" data-i="3" aria-label="Approach"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg><b>Approach</b></a>
-<a class="bub" href="#about" data-i="4" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg><b>About</b></a>
-<a class="bub" href="#contact" data-i="5" aria-label="Contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><b>Contact</b></a></div>
+<a class="bub" href="#about" data-i="4" aria-label="Services"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg><b>Services</b></a>
+<a class="bub" href="#faq" data-i="5" aria-label="FAQ"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 015 .8c0 1.7-2.5 2.2-2.5 4M12 17.2h.01"/></svg><b>FAQ</b></a>
+<a class="bub" href="#contact" data-i="6" aria-label="Contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><b>Contact</b></a></div>
 <main id="main">
 <div class="hero" id="top"><div class="stage" id="stage" aria-hidden="true"></div>
 <div class="tag" id="tag" aria-hidden="true"><span class="on">Independent apps &amp; software studio</span><span>Built to be used every day</span><span>Small, careful and useful</span><span>Tested before it ships</span><span>Plain, calm and honest</span></div>
@@ -285,12 +311,24 @@ body[data-s="5"]{--g1:rgba(255,194,51,.28);--g2:rgba(90,170,235,.12)}
 <section id="approach"><div class="w"><div class="stage2" id="st-approach" aria-hidden="true"></div><p class="eyebrow rv">How we work</p><h2 class="rv">Simple rules.</h2><p class="sub rv">Small teams ship better when the rules are simple.</p>
 <div class="g3"><div class="pc gl tilt rv"><div class="i">✔</div><h3>Tested before it ships</h3><p>Every change is tried on a phone and on a desktop before it goes out. If it is not ready, it waits.</p></div><div class="pc gl tilt rv" style="--d:100ms"><div class="i">🔒</div><h3>Private by default</h3><p>PantryPal keeps your data on your own device. We do not add ads or third-party trackers to our apps.</p></div><div class="pc gl tilt rv" style="--d:200ms"><div class="i">☰</div><h3>Plain and honest</h3><p>Clear wording, real data, no invented numbers. Dates in PantryPal are labels you entered, not safety advice.</p></div></div></div></section>
 
-<section id="about"><div class="w"><div class="stage2" id="st-about" aria-hidden="true"></div><p class="eyebrow rv">About</p><h2 class="rv">A small studio that finishes things.</h2><p class="sub rv">NovoPix is an independent studio. We design, build and look after apps, software and websites ourselves, from the first sketch to the update after launch.</p>
-<div class="abt">
-<div class="ab gl tilt rv"><h3>What we do</h3><ul><li>Apps that open in the browser and on a phone</li><li>Websites and small web tools</li><li>Software built around one clear job</li></ul></div>
-<div class="ab gl tilt rv" style="--d:90ms"><h3>How we work</h3><ul><li>We test on a phone and a desktop before anything ships</li><li>Plain wording, real data, no invented numbers</li><li>Your data stays yours: no ads, no trackers in our apps</li></ul></div>
-<div class="ab gl tilt rv" style="--d:180ms"><h3>Working with us</h3><ul><li>Tell us what you need, we reply by e-mail</li><li>We say clearly what is and is not possible</li><li>Small team, one point of contact</li></ul></div>
+<section id="about"><div class="w"><div class="stage2" id="st-about" aria-hidden="true"></div><p class="eyebrow rv">What we do</p><h2 class="rv">Apps, websites and small tools.</h2><p class="sub rv">NovoPix is an independent studio. We design, build and look after what we make, from the first sketch to the update after launch.</p>
+<div class="svc">
+<div class="sv gl tilt rv"><h3>Apps</h3><p>Web apps that open in the browser and work well on a phone, like FridgeBite and PantryPal.</p></div>
+<div class="sv gl tilt rv" style="--d:70ms"><h3>Websites</h3><p>Clear, fast websites for small businesses and organisations, in the languages you need.</p></div>
+<div class="sv gl tilt rv" style="--d:140ms"><h3>Custom software</h3><p>Small tools built around one clear job, so people can use them without a manual.</p></div>
+<div class="sv gl tilt rv" style="--d:210ms"><h3>Accessibility checks <em class="soonl">soon</em></h3><p>A free first look at how accessible your website is. We are preparing it now.</p></div>
+</div>
+<ol class="steps rv"><li><b>1</b><span>You tell us your idea</span></li><li><b>2</b><span>We reply with questions and a plan</span></li><li><b>3</b><span>We build it and test it on a phone and a desktop</span></li><li><b>4</b><span>We launch it and look after it</span></li></ol></div></section>
+<section id="faq"><div class="w"><div class="stage2" id="st-faq" aria-hidden="true"></div><p class="eyebrow rv">Questions</p><h2 class="rv">Frequently asked questions.</h2><p class="sub rv">Short answers. If yours is missing, write to us.</p>
+<div class="faq rv">
+<details><summary>What do you build?</summary><p>Web apps, websites and small custom tools. Our own apps are FridgeBite, PantryPal and the PepSafe reference website.</p></details>
+<details><summary>How do we start?</summary><p>Send us a short message with your idea using the form below. We reply by e-mail with questions and a plan.</p></details>
+<details><summary>How much does it cost and how long does it take?</summary><p>It depends on what you need, so we do not publish fixed prices. After we hear your idea we send a plan with a price and a time estimate.</p></details>
+<details><summary>What happens to my data?</summary><p>Our own apps have no ads and no trackers. For any project we tell you plainly what it collects and why.</p></details>
+<details><summary>Which languages do you work in?</summary><p>Our apps are in English, Polish and Spanish. Tell us which languages your project needs.</p></details>
+<details><summary>Do you look after a project after launch?</summary><p>Yes. We can fix problems and keep what we built up to date.</p></details>
 </div></div></section>
+
 <section id="contact"><div class="w"><div class="stage2" id="st-contact" aria-hidden="true"></div><div class="contact gl tilt rv"><div><h2>Need a website or an app?</h2><p>We build websites too. Tell us about your idea and we will help you shape it. Questions, bug reports and feedback are welcome as well.</p><p class="alt">Prefer e-mail? <a class="mail" href="mailto:contact@pepsafe.info">contact@pepsafe.info</a></p></div>
 <form id="cf" class="cf" novalidate action="/novopix/kontakt.php" method="post"><div class="cr"><label>Name<input name="name" autocomplete="name" required maxlength="80"></label><label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="120"></label></div>
 <label>Message<textarea name="message" rows="4" required maxlength="4000" placeholder="What would you like to build?"></textarea></label>
@@ -333,10 +371,10 @@ var lu=0;show(0);
 npEl.addEventListener('pointerenter',function(){lu=Date.now();next()});npEl.addEventListener('click',function(){lu=Date.now();next()});
 setInterval(function(){if(!document.hidden&&Date.now()-lu>1800)next()},1500);window.__studioMark={get:function(){return{sty:npc}},next:next};})();
 var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,TEST=/[?&]t=1/.test(location.search),FQ=(location.search.match(/[?&]q=(\d)/)||[])[1],coarse=matchMedia('(pointer:coarse)').matches||innerWidth<700;
-var SECS=['top','apps','numbers','approach','about','contact'].map(function(i){return document.getElementById(i)});
-var STAGES={w:'stage',ring:'st-apps',phone:'st-apps',chart:'st-numbers',gear:'st-approach',code:'st-about',mail:'st-contact'};
-var WORDS=['NovoPix','Apps','Software','Design'],SHAPES={apps:'ring',numbers:'chart',approach:'gear',about:'code',contact:'mail'};
-var PAL=[[.05,.18,.28, .15,.45,.62, .55,.82,.95, .95,.66,.05, 1.,.78,.25],[.06,.20,.30, .20,.52,.70, .95,.66,.10, .45,.78,.95, 1.,.80,.30],[.04,.16,.26, .10,.50,.72, .50,.85,.98, .98,.72,.15, .75,.92,1.],[.07,.22,.32, .25,.55,.65, .40,.80,.85, .95,.70,.12, 1.,.85,.45],[.05,.20,.26, .12,.52,.60, .40,.85,.80, .95,.70,.12, .75,.95,.95],[.06,.17,.27, .90,.62,.05, 1.,.80,.30, .30,.65,.90, .60,.85,1.]];
+var SECS=['top','apps','numbers','approach','about','faq','contact'].map(function(i){return document.getElementById(i)});
+var STAGES={w:'stage',ring:'st-apps',phone:'st-apps',chart:'st-numbers',gear:'st-approach',code:'st-about',qm:'st-faq',mail:'st-contact'};
+var WORDS=['NovoPix','Apps','Software','Design'],SHAPES={apps:'ring',numbers:'chart',approach:'gear',about:'code',faq:'qm',contact:'mail'};
+var PAL=[[.05,.18,.28, .15,.45,.62, .55,.82,.95, .95,.66,.05, 1.,.78,.25],[.06,.20,.30, .20,.52,.70, .95,.66,.10, .45,.78,.95, 1.,.80,.30],[.04,.16,.26, .10,.50,.72, .50,.85,.98, .98,.72,.15, .75,.92,1.],[.07,.22,.32, .25,.55,.65, .40,.80,.85, .95,.70,.12, 1.,.85,.45],[.05,.20,.26, .12,.52,.60, .40,.85,.80, .95,.70,.12, .75,.95,.95],[.07,.18,.30, .22,.50,.68, .60,.86,.92, .96,.68,.10, .85,.95,1.],[.06,.17,.27, .90,.62,.05, 1.,.80,.30, .30,.65,.90, .60,.85,1.]];
 var palCur=PAL[0].slice();
 var glc=document.getElementById('gl'),bgc=document.getElementById('bg'),gl=null,gb=null,ok=false,booted=false;
 function sh(g,t,src){var s=g.createShader(t);g.shaderSource(s,src);g.compileShader(s);if(!g.getShaderParameter(s,g.COMPILE_STATUS))throw new Error(g.getShaderInfoLog(s));return s}
@@ -379,6 +417,7 @@ function sampleShape(name){var el=stageEl(name),r=el.getBoundingClientRect(),top
  else if(name==='chart'){var bw=Math.min(SW*.09,SH*.15),hs=[.3,.5,.68,.98],gap=bw*1.1,tw=hs.length*bw+(hs.length-1)*gap,bh=SH*.66,x1=cx-tw/2,y1=cy+bh/2+SH*.08;hs.forEach(function(h,i){var x=x1+i*(bw+gap),hh=bh*h;rr(g,x,y1-hh-SH*.08,bw,hh,bw*.25);g.fill()});g.lineWidth=SH*.03;g.beginPath();g.moveTo(x1-bw*.6,y1);g.lineTo(x1+tw+bw*.6,y1);g.stroke();g.lineWidth=SH*.035;g.lineCap='round';g.beginPath();g.moveTo(x1+bw*.2,cy-bh*.05);g.lineTo(x1+tw*.42,cy-bh*.26);g.lineTo(x1+tw*.6,cy-bh*.14);g.lineTo(x1+tw*.9,cy-bh*.62);g.stroke();g.beginPath();g.moveTo(x1+tw*.9-bw*.5,cy-bh*.62+bw*.1);g.lineTo(x1+tw*.9,cy-bh*.62);g.lineTo(x1+tw*.9+bw*.1,cy-bh*.62+bw*.55);g.stroke()}
  else if(name==='gear'){var R=Math.min(SH*.47,SW*.3),teeth=14,pts=[];for(var i=0;i<teeth*4;i++){var a=i/(teeth*4)*6.283,kk=(i%4<2)?R:R*.8;pts.push([cx+Math.cos(a)*kk,cy+Math.sin(a)*kk])}g.beginPath();pts.forEach(function(p,i){i?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1])});g.closePath();g.lineWidth=R*.07;g.stroke();g.beginPath();g.arc(cx,cy,R*.34,0,6.283);g.lineWidth=R*.08;g.stroke();for(var s=0;s<6;s++){var a2=s/6*6.283;g.beginPath();g.moveTo(cx+Math.cos(a2)*R*.38,cy+Math.sin(a2)*R*.38);g.lineTo(cx+Math.cos(a2)*R*.68,cy+Math.sin(a2)*R*.68);g.lineWidth=R*.07;g.stroke()}g.beginPath();g.arc(cx,cy,R*.1,0,6.283);g.fill()}
  else if(name==='code'){var s0=Math.min(SH*.34,(r.width/k)/5.6);g.lineWidth=s0*.34;g.lineCap='round';g.lineJoin='round';g.beginPath();g.moveTo(cx-s0*.9,cy-s0*1.1);g.lineTo(cx-s0*2.5,cy);g.lineTo(cx-s0*.9,cy+s0*1.1);g.stroke();g.beginPath();g.moveTo(cx+s0*.9,cy-s0*1.1);g.lineTo(cx+s0*2.5,cy);g.lineTo(cx+s0*.9,cy+s0*1.1);g.stroke();g.beginPath();g.moveTo(cx+s0*.38,cy-s0*1.35);g.lineTo(cx-s0*.38,cy+s0*1.35);g.stroke()}
+ else if(name==='qm'){g.font='800 '+SH*.95+'px "Bricolage Grotesque",system-ui,Arial,sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('?',cx,cy+SH*.05)}
  else if(name==='mail'){var ew=Math.min(SW*.5,SH*1.3),eh=ew*.64;g.lineWidth=eh*.07;rr(g,cx-ew/2,cy-eh/2,ew,eh,eh*.1);g.stroke();g.beginPath();g.moveTo(cx-ew/2,cy-eh/2);g.lineTo(cx,cy+eh*.12);g.lineTo(cx+ew/2,cy-eh/2);g.stroke();g.beginPath();g.moveTo(cx-ew/2,cy+eh/2);g.lineTo(cx-ew*.16,cy-eh*.04);g.moveTo(cx+ew/2,cy+eh/2);g.lineTo(cx+ew*.16,cy-eh*.04);g.lineWidth=eh*.04;g.stroke()}
  var d=g.getImageData(0,0,SW,SH).data,pts2=[],step=2;for(var y=0;y<SH;y+=step)for(var x=0;x<SW;x+=step){if(d[(y*SW+x)*4+3]>130)pts2.push(x*k,y*k+top)}
  var cnt=Math.max(1,pts2.length/2),xs=new Float32Array(N),ys=new Float32Array(N);for(var i2=0;i2<N;i2++){var idx=Math.floor(Math.random()*cnt);xs[i2]=pts2[idx*2]||cx*k;ys[i2]=pts2[idx*2+1]||top}
