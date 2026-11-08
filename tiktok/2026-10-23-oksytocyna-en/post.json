@@ -1,0 +1,50 @@
+{
+ "topic": "Oxytocin",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Myth or fact?",
+   "title": "Oxytocin: the “love hormone”?",
+   "hero": true,
+   "text": "A trust spray sounds great. What does the research say? 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "What it is",
+   "title": "A 9-amino-acid peptide",
+   "text": "A hormone made in the brain. In medicine it's an established obstetric drug, e.g. to induce labor and treat postpartum bleeding.",
+   "seconds": 5.5
+  },
+  {
+   "kicker": "Where the myth came from",
+   "title": "One study from 2005",
+   "text": "A study in Nature suggested nasal oxytocin increases trust. Media turned it into the “love hormone”.",
+   "seconds": 5
+  },
+  {
+   "kicker": "What later research found",
+   "verdict": "NOT CONFIRMED",
+   "tone": "part",
+   "text": "Replication attempts kept failing. A 2015 review found no robust evidence, and a large 2020 replication study did not confirm the effect.",
+   "seconds": 6
+  },
+  {
+   "kicker": "Takeaway",
+   "list": [
+    "In hospital: a proven medicine",
+    "As a “trust spray”: marketing",
+    "Social effects: weak and uncertain"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "Peptide catalog, myths vs facts, FDA decision timeline.",
+   "foot": "Educational content, not medical advice.",
+   "seconds": 4
+  }
+ ],
+ "caption": "Oxytocin: the “love hormone”? 💞 In obstetrics it's a proven medicine, but the “trust spray” has no robust evidence. Later research didn't confirm the famous 2005 result.\n\nEducational content, not medical advice. More at pepsafe.info\n\n#oxytocin #mythsvsfacts #science #psychology #peptides #pepsafe",
+ "vo": "kokoro"
+}

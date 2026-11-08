@@ -1,0 +1,35 @@
+{
+"topic": "Your skeleton is alive",
+"tagline": "Science, plainly",
+"slides": [
+{
+"kicker": "The fact",
+"title": "Your skeleton is rebuilt about every ten years.",
+"vo": "Your skeleton is rebuilt about every ten years.",
+"seconds": 3,
+"hero": true
+},
+{
+"kicker": "How",
+"title": "Cells keep breaking down old bone and laying down new bone.",
+"vo": "Cells keep breaking down old bone and laying down new bone.",
+"seconds": 3
+},
+{
+"kicker": "Why",
+"title": "That constant renewal repairs tiny cracks and keeps bone strong.",
+"vo": "That constant renewal repairs tiny cracks and keeps bone strong.",
+"seconds": 3
+},
+{
+"kicker": "Your turn",
+"title": "Did you know this? Yes or no.",
+"vo": "Did you know this? Yes or no.",
+"seconds": 3,
+"cta": "pepsafe.info",
+"foot": "Educational content. Questions? Comment or DM us."
+}
+],
+"caption": "Your skeleton is rebuilt about every ten years. Cells keep breaking down old bone and laying down new bone, which repairs tiny cracks and keeps bone strong. Did you know this? Yes or no. 🦴\n\nMore biology at pepsafe.info\n\n#bones #sciencefacts #didyouknow #nutrition #pepsafe",
+"vo": "kokoro"
+}

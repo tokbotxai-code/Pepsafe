@@ -1,0 +1,326 @@
+=s-testosterone
+t: acne, water, swelling, bp, mood, aggression, fertility, libido, gynecomastia, hairloss, clots, cholesterol, heart
+ec: Acne and oily skin ; Fluid retention and swelling ; Higher blood pressure ; Mood swings and irritability ; Lower natural sperm production and smaller testicles with extra use ; Breast tissue growth in men
+es: Thicker blood from a higher red blood cell count, which raises the risk of clots, heart attack and stroke ; Worse cholesterol ; Sleep apnoea getting worse
+eu: Long-term effects of high, non-medical amounts on the heart are not fully known, and recovery of natural testosterone after stopping can take months or longer.
+pc: Trądzik i tłusta skóra ; Zatrzymanie płynów i obrzęki ; Wyższe ciśnienie krwi ; Wahania nastroju i drażliwość ; Mniejsza własna produkcja plemników i mniejsze jądra przy dodatkowym stosowaniu ; Rozrost tkanki piersi u mężczyzn
+ps: Zagęszczenie krwi przez wyższą liczbę czerwonych krwinek, co podnosi ryzyko zakrzepów, zawału i udaru ; Gorszy cholesterol ; Nasilenie bezdechu sennego
+pu: Skutki długotrwałego stosowania dużych, niemedycznych ilości dla serca nie są w pełni znane, a powrót własnego testosteronu po odstawieniu może trwać miesiące lub dłużej.
+sc: Acné y piel grasa ; Retención de líquidos e hinchazón ; Presión arterial más alta ; Cambios de humor e irritabilidad ; Menor producción propia de esperma y testículos más pequeños con el uso añadido ; Crecimiento del tejido mamario en hombres
+ss: Sangre más espesa por más glóbulos rojos, lo que aumenta el riesgo de coágulos, infarto e ictus ; Peor colesterol ; Empeoramiento de la apnea del sueño
+su: Los efectos a largo plazo de cantidades altas y no médicas sobre el corazón no se conocen del todo, y la recuperación de la testosterona propia tras dejarla puede tardar meses o más.
+
+=s-testosterone-cypionate
+t: acne, water, swelling, bp, mood, fertility, libido, gynecomastia, hairloss, clots, cholesterol, heart
+ec: Acne and oily skin ; Fluid retention and swelling ; Higher blood pressure ; Mood swings ; Lower sperm count ; Breast tissue growth in men ; Pain where it is injected
+es: Thicker blood and blood clots ; Sleep apnoea getting worse ; Worse cholesterol
+eu: The label asks for regular checks of red blood cell count and blood pressure, because both can rise during treatment.
+pc: Trądzik i tłusta skóra ; Zatrzymanie płynów i obrzęki ; Wyższe ciśnienie krwi ; Wahania nastroju ; Mniejsza liczba plemników ; Rozrost tkanki piersi u mężczyzn ; Ból w miejscu wstrzyknięcia
+ps: Zagęszczenie krwi i zakrzepy ; Nasilenie bezdechu sennego ; Gorszy cholesterol
+pu: Ulotka wymaga regularnej kontroli liczby czerwonych krwinek i ciśnienia, bo oba mogą rosnąć w trakcie leczenia.
+sc: Acné y piel grasa ; Retención de líquidos e hinchazón ; Presión arterial más alta ; Cambios de humor ; Menor recuento de espermatozoides ; Crecimiento del tejido mamario en hombres ; Dolor en el lugar de la inyección
+ss: Sangre más espesa y coágulos ; Empeoramiento de la apnea del sueño ; Peor colesterol
+su: El prospecto pide revisar con regularidad el recuento de glóbulos rojos y la presión arterial, porque ambos pueden subir durante el tratamiento.
+
+=s-testosterone-enanthate
+t: acne, water, swelling, bp, mood, fertility, libido, gynecomastia, hairloss, clots, cholesterol, heart, injsite
+ec: Acne and oily skin ; Fluid retention and swelling ; Higher blood pressure ; Mood swings ; Lower sperm count ; Breast tissue growth ; Pain where it is injected
+es: Thicker blood and blood clots ; Sleep apnoea getting worse ; Worse cholesterol
+eu: It is a prescription medicine for low testosterone, and the effects of amounts far above medical levels are not well studied.
+pc: Trądzik i tłusta skóra ; Zatrzymanie płynów i obrzęki ; Wyższe ciśnienie krwi ; Wahania nastroju ; Mniejsza liczba plemników ; Rozrost tkanki piersi ; Ból w miejscu wstrzyknięcia
+ps: Zagęszczenie krwi i zakrzepy ; Nasilenie bezdechu sennego ; Gorszy cholesterol
+pu: To lek na receptę przy niskim testosteronie, a skutki ilości dalece przekraczających medyczne nie są dobrze zbadane.
+sc: Acné y piel grasa ; Retención de líquidos e hinchazón ; Presión arterial más alta ; Cambios de humor ; Menor recuento de espermatozoides ; Crecimiento del tejido mamario ; Dolor en el lugar de la inyección
+ss: Sangre más espesa y coágulos ; Empeoramiento de la apnea del sueño ; Peor colesterol
+su: Es un medicamento con receta para la testosterona baja, y los efectos de cantidades muy superiores a las médicas no están bien estudiados.
+
+=s-testosterone-undecanoate
+t: breathing, allergy, bp, acne, mood, injsite, fertility
+ec: Pain where it is injected ; Acne ; Higher blood pressure ; Mood changes
+es: A rare oil droplet reaction in the lungs: cough, breathlessness, throat tightness, dizziness, in a US boxed warning ; Severe allergic reaction ; Thicker blood
+eu: The injection is given only in a clinic, with 30 minutes of observation afterwards.
+pc: Ból w miejscu wstrzyknięcia ; Trądzik ; Wyższe ciśnienie krwi ; Zmiany nastroju
+ps: Rzadka reakcja płucna na kropelki oleju: kaszel, duszność, ucisk w gardle, zawroty głowy, w amerykańskiej ramce ostrzegawczej ; Ciężka reakcja alergiczna ; Zagęszczenie krwi
+pu: Zastrzyk podaje się wyłącznie w ośrodku medycznym, z 30-minutową obserwacją po podaniu.
+sc: Dolor en el lugar de la inyección ; Acné ; Presión arterial más alta ; Cambios de humor
+ss: Una reacción pulmonar rara por gotitas de aceite: tos, falta de aire, opresión de garganta, mareo, en una advertencia destacada de EE. UU. ; Reacción alérgica grave ; Sangre más espesa
+su: La inyección se administra solo en una clínica, con 30 minutos de observación después.
+
+=s-sustanon
+t: acne, water, swelling, bp, mood, fertility, libido, gynecomastia, hairloss, clots
+ec: Acne and oily skin ; Fluid retention ; Higher blood pressure ; Mood swings ; Lower sperm count ; Breast tissue growth
+es: Thicker blood and blood clots ; Harm from fake products, which are common for this blend
+eu: Because several testosterone forms are mixed, it is hard to tell what causes an effect, and fake products are a known problem.
+pc: Trądzik i tłusta skóra ; Zatrzymanie płynów ; Wyższe ciśnienie krwi ; Wahania nastroju ; Mniejsza liczba plemników ; Rozrost tkanki piersi
+ps: Zagęszczenie krwi i zakrzepy ; Szkody z podróbek, które często dotyczą tej mieszanki
+pu: Ponieważ miesza kilka form testosteronu, trudno ustalić przyczynę skutku, a podróbki są znanym problemem.
+sc: Acné y piel grasa ; Retención de líquidos ; Presión arterial más alta ; Cambios de humor ; Menor recuento de espermatozoides ; Crecimiento del tejido mamario
+ss: Sangre más espesa y coágulos ; Daños por productos falsificados, que son frecuentes en esta mezcla
+su: Como mezcla varias formas de testosterona, es difícil saber qué causa cada efecto, y las falsificaciones son un problema conocido.
+
+=s-nandrolone-decanoate
+t: libido, bp, cholesterol, heart, fertility, water, acne, musclejoint, mood
+ec: Lower natural testosterone ; Lower sex drive and erection problems ; Higher blood pressure ; Fluid retention ; Joint pain ; Acne
+es: Worse cholesterol with lower HDL ; Strain on the heart ; In women, deeper voice and body hair that can be permanent
+eu: Its breakdown products stay detectable in urine tests for a long time, and recovery of natural testosterone can be slow.
+pc: Niższy własny testosteron ; Niższe libido i zaburzenia wzwodu ; Wyższe ciśnienie krwi ; Zatrzymanie płynów ; Ból stawów ; Trądzik
+ps: Gorszy cholesterol z niższym HDL ; Obciążenie serca ; U kobiet niższy głos i owłosienie ciała, które mogą być trwałe
+pu: Jego produkty rozpadu długo wykrywa się w badaniach moczu, a powrót własnego testosteronu może być powolny.
+sc: Testosterona propia más baja ; Menos deseo sexual y problemas de erección ; Presión arterial más alta ; Retención de líquidos ; Dolor de articulaciones ; Acné
+ss: Peor colesterol con HDL más bajo ; Esfuerzo del corazón ; En mujeres, voz más grave y vello corporal que pueden ser permanentes
+su: Sus productos de degradación se detectan durante mucho tiempo en los análisis de orina, y la recuperación de la testosterona propia puede ser lenta.
+
+=s-trenbolone
+t: sweating, insomnia, aggression, anxiety, bp, kidney, heart, fertility, libido, breathing
+ec: Night sweats ; Trouble sleeping ; Aggression and anxiety ; Higher blood pressure ; Lower natural testosterone ; Coughing fits after injections in some users
+es: Strain on the kidneys and heart ; Deep drop in natural testosterone with sexual problems
+eu: It is a veterinary drug that was never approved for people, so there are no proper human trials and effects are known only from user reports and case reports.
+pc: Nocne poty ; Trudności ze snem ; Agresja i lęk ; Wyższe ciśnienie krwi ; Niższy własny testosteron ; Napady kaszlu po zastrzykach u niektórych użytkowników
+ps: Obciążenie nerek i serca ; Głęboki spadek własnego testosteronu z problemami seksualnymi
+pu: To lek weterynaryjny, nigdy niezatwierdzony dla ludzi, więc nie ma porządnych badań u ludzi, a skutki znamy tylko z relacji użytkowników i opisów przypadków.
+sc: Sudores nocturnos ; Problemas para dormir ; Agresividad y ansiedad ; Presión arterial más alta ; Testosterona propia más baja ; Ataques de tos tras inyecciones en algunos usuarios
+ss: Esfuerzo de riñones y corazón ; Caída profunda de la testosterona propia con problemas sexuales
+su: Es un fármaco veterinario que nunca se aprobó para personas, así que no hay ensayos adecuados en humanos y los efectos solo se conocen por relatos de usuarios y casos clínicos.
+
+=s-boldenone
+t: bp, acne, water, fertility, libido, clots, appetite
+ec: Higher blood pressure ; Acne ; Fluid retention ; Lower natural testosterone ; Raised appetite
+es: Thicker blood from a higher red blood cell count
+eu: It is a veterinary drug never approved for people, so human data are limited to reports from users.
+pc: Wyższe ciśnienie krwi ; Trądzik ; Zatrzymanie płynów ; Niższy własny testosteron ; Zwiększony apetyt
+ps: Zagęszczenie krwi przez wyższą liczbę czerwonych krwinek
+pu: To lek weterynaryjny, nigdy niezatwierdzony dla ludzi, więc dane u ludzi ograniczają się do relacji użytkowników.
+sc: Presión arterial más alta ; Acné ; Retención de líquidos ; Testosterona propia más baja ; Más apetito
+ss: Sangre más espesa por más glóbulos rojos
+su: Es un fármaco veterinario nunca aprobado para personas, así que los datos en humanos se limitan a relatos de usuarios.
+
+=s-drostanolone
+t: fertility, libido, cholesterol, acne, hairloss
+ec: In women, a deeper voice, body hair and an enlarged clitoris, some permanent ; Lower natural testosterone in men ; Acne
+es: Worse cholesterol ; Permanent masculinising changes in women
+eu: It was once used in breast cancer, and it is now used almost only outside medicine.
+pc: U kobiet niższy głos, owłosienie ciała i powiększona łechtaczka, częściowo trwałe ; Niższy własny testosteron u mężczyzn ; Trądzik
+ps: Gorszy cholesterol ; Trwałe zmiany męskie u kobiet
+pu: Dawniej stosowano go w raku piersi, a dziś używa się go prawie wyłącznie poza medycyną.
+sc: En mujeres, voz más grave, vello corporal y clítoris agrandado, en parte permanentes ; Testosterona propia más baja en hombres ; Acné
+ss: Peor colesterol ; Cambios masculinizantes permanentes en mujeres
+su: Antes se usaba en el cáncer de mama, y hoy se usa casi solo fuera de la medicina.
+
+=s-methenolone-enanthate
+t: fertility, libido, cholesterol, acne
+ec: Lower natural testosterone ; In women, masculinising changes ; Acne
+es: Worse cholesterol ; Harm from fake products, which are common for this steroid
+eu: Products sold under this name are often not what they claim.
+pc: Niższy własny testosteron ; U kobiet zmiany męskie ; Trądzik
+ps: Gorszy cholesterol ; Szkody z podróbek, które często dotyczą tego sterydu
+pu: Produkty sprzedawane pod tą nazwą często nie zawierają tego, co deklarują.
+sc: Testosterona propia más baja ; En mujeres, cambios masculinizantes ; Acné
+ss: Peor colesterol ; Daños por productos falsificados, que son frecuentes con este esteroide
+su: Los productos que se venden con este nombre a menudo no son lo que dicen.
+
+=s-oxandrolone
+t: liver, cholesterol, fertility, libido, water, acne, bp
+ec: Lower natural testosterone ; Acne ; Fluid retention ; Higher blood pressure ; Lower HDL cholesterol
+es: Peliosis hepatis, blood-filled cysts in the liver ; Liver tumours ; Liver damage with yellow skin
+eu: Its US approval was withdrawn in 2023, so it is no longer sold as a medicine there.
+pc: Niższy własny testosteron ; Trądzik ; Zatrzymanie płynów ; Wyższe ciśnienie krwi ; Niższy cholesterol HDL
+ps: Plamica wątroby, czyli torbiele wypełnione krwią ; Guzy wątroby ; Uszkodzenie wątroby z żółtaczką
+pu: Jego zatwierdzenie w USA wycofano w 2023 r., więc nie jest tam już sprzedawany jako lek.
+sc: Testosterona propia más baja ; Acné ; Retención de líquidos ; Presión arterial más alta ; Colesterol HDL más bajo
+ss: Peliosis hepática, quistes del hígado llenos de sangre ; Tumores hepáticos ; Daño hepático con piel amarillenta
+su: Su aprobación en EE. UU. se retiró en 2023, así que ya no se vende allí como medicamento.
+
+=s-methandienone
+t: liver, bp, water, gynecomastia, acne, fertility, libido, heart
+ec: Fluid retention ; Higher blood pressure ; Breast tissue growth in men ; Acne ; Lower natural testosterone
+es: Liver strain and damage ; Heart strain
+eu: It is an oral steroid that was once a medicine and has been dropped from medical use in most countries.
+pc: Zatrzymanie płynów ; Wyższe ciśnienie krwi ; Rozrost tkanki piersi u mężczyzn ; Trądzik ; Niższy własny testosteron
+ps: Obciążenie i uszkodzenie wątroby ; Obciążenie serca
+pu: To doustny steryd, który dawniej był lekiem i w większości krajów wycofano go z użycia medycznego.
+sc: Retención de líquidos ; Presión arterial más alta ; Crecimiento del tejido mamario en hombres ; Acné ; Testosterona propia más baja
+ss: Esfuerzo y daño del hígado ; Esfuerzo del corazón
+su: Es un esteroide oral que antes fue un medicamento y que se ha retirado del uso médico en la mayoría de los países.
+
+=s-stanozolol
+t: liver, cholesterol, bp, musclejoint, fertility, libido, acne
+ec: Higher blood pressure ; Acne ; Joint pain ; Lower natural testosterone
+es: Liver damage ; Worse cholesterol with a drop in HDL ; Tendon problems and tears
+eu: It is a common cause of positive doping tests, and fake products are common.
+pc: Wyższe ciśnienie krwi ; Trądzik ; Ból stawów ; Niższy własny testosteron
+ps: Uszkodzenie wątroby ; Gorszy cholesterol ze spadkiem HDL ; Problemy ze ścięgnami i ich zerwania
+pu: Jest częstą przyczyną pozytywnych wyników testów antydopingowych, a podróbki są powszechne.
+sc: Presión arterial más alta ; Acné ; Dolor de articulaciones ; Testosterona propia más baja
+ss: Daño hepático ; Peor colesterol con descenso del HDL ; Problemas y roturas de tendones
+su: Es una causa frecuente de positivos en controles antidopaje, y las falsificaciones son habituales.
+
+=s-oxymetholone
+t: liver, cholesterol, water, bp, acne, fertility
+ec: Fluid retention ; Higher blood pressure ; Acne ; Lower natural testosterone ; Nausea
+es: Peliosis hepatis and liver tumours, in a boxed warning ; Harmful changes in blood cholesterol
+eu: It is a prescription medicine for some anaemias, and it is among the harder steroids on the liver.
+pc: Zatrzymanie płynów ; Wyższe ciśnienie krwi ; Trądzik ; Niższy własny testosteron ; Nudności
+ps: Plamica wątroby i guzy wątroby, w ramce ostrzegawczej ; Szkodliwe zmiany cholesterolu we krwi
+pu: To lek na receptę w niektórych niedokrwistościach i jeden z sterydów najbardziej obciążających wątrobę.
+sc: Retención de líquidos ; Presión arterial más alta ; Acné ; Testosterona propia más baja ; Náuseas
+ss: Peliosis hepática y tumores hepáticos, en una advertencia destacada ; Cambios perjudiciales del colesterol en sangre
+su: Es un medicamento con receta para algunas anemias, y es de los esteroides más duros para el hígado.
+
+=s-methyltestosterone
+t: liver, acne, water, bp, fertility, clots, cholesterol
+ec: Acne ; Fluid retention ; Higher blood pressure ; Lower natural testosterone ; Nausea
+es: Yellow skin from bile flow problems ; Liver tumours with long use ; Thicker blood
+eu: It is an oral steroid with a long record, and the liver risk is the reason it is little used now.
+pc: Trądzik ; Zatrzymanie płynów ; Wyższe ciśnienie krwi ; Niższy własny testosteron ; Nudności
+ps: Żółtaczka z powodu zaburzeń odpływu żółci ; Guzy wątroby przy długim stosowaniu ; Zagęszczenie krwi
+pu: To doustny steryd o długiej historii, a ryzyko dla wątroby jest powodem, dla którego dziś rzadko się go stosuje.
+sc: Acné ; Retención de líquidos ; Presión arterial más alta ; Testosterona propia más baja ; Náuseas
+ss: Piel amarillenta por problemas del flujo de bilis ; Tumores hepáticos con el uso prolongado ; Sangre más espesa
+su: Es un esteroide oral con un largo historial, y el riesgo para el hígado es la razón por la que hoy se usa poco.
+
+=s-turinabol
+t: liver, fertility, libido, cholesterol, acne
+ec: Acne ; Lower natural testosterone ; In women, masculinising changes
+es: Liver problems ; Fertility problems ; Permanent masculinising changes in women
+eu: Follow-up of athletes from the East German state doping programme documented serious long-term harm.
+pc: Trądzik ; Niższy własny testosteron ; U kobiet zmiany męskie
+ps: Problemy z wątrobą ; Problemy z płodnością ; Trwałe zmiany męskie u kobiet
+pu: Obserwacja sportowców z państwowego programu dopingowego NRD udokumentowała poważne długotrwałe szkody.
+sc: Acné ; Testosterona propia más baja ; En mujeres, cambios masculinizantes
+ss: Problemas del hígado ; Problemas de fertilidad ; Cambios masculinizantes permanentes en mujeres
+su: El seguimiento de deportistas del programa estatal de dopaje de la RDA documentó graves daños a largo plazo.
+
+=s-mesterolone
+t: cholesterol, fertility, libido, acne
+ec: Acne ; Changes in hormone balance ; Lower natural testosterone at higher use
+es: Worse cholesterol
+eu: It is milder on the liver than methylated steroids, and it is a prescription medicine in some countries.
+pc: Trądzik ; Zmiany równowagi hormonalnej ; Niższy własny testosteron przy większym stosowaniu
+ps: Gorszy cholesterol
+pu: Jest łagodniejszy dla wątroby niż sterydy metylowane i w niektórych krajach jest lekiem na receptę.
+sc: Acné ; Cambios del equilibrio hormonal ; Testosterona propia más baja con un uso mayor
+ss: Peor colesterol
+su: Es más suave con el hígado que los esteroides metilados, y en algunos países es un medicamento con receta.
+
+=s-testosterone-gel
+t: acne, bp, mood, fertility, rash, itching, clots
+ec: Skin irritation or redness where applied ; Acne ; Higher blood pressure ; Mood changes
+es: Transfer to a partner or child through skin contact, which can cause unwanted effects, in a boxed warning ; Thicker blood
+eu: The gel must be covered and the area washed to protect people around the user.
+pc: Podrażnienie lub zaczerwienienie skóry w miejscu nałożenia ; Trądzik ; Wyższe ciśnienie krwi ; Zmiany nastroju
+ps: Przeniesienie na partnera lub dziecko przez kontakt skórny, co może wywołać niepożądane skutki, w ramce ostrzegawczej ; Zagęszczenie krwi
+pu: Żel trzeba zakryć, a miejsce umyć, aby chronić osoby w otoczeniu.
+sc: Irritación o enrojecimiento de la piel donde se aplica ; Acné ; Presión arterial más alta ; Cambios de humor
+ss: Transferencia a una pareja o a un niño por contacto con la piel, que puede causar efectos no deseados, en una advertencia destacada ; Sangre más espesa
+su: El gel debe cubrirse y la zona lavarse para proteger a las personas del entorno.
+
+=s-dhea
+t: acne, hairloss, cancer
+ec: Acne and oily skin ; Facial hair growth in women ; Hair thinning
+es: Effects on people with hormone-driven cancers
+eu: Product strength varies between supplements, and in the US it is sold as a supplement while many countries restrict it.
+pc: Trądzik i tłusta skóra ; Owłosienie twarzy u kobiet ; Przerzedzenie włosów
+ps: Wpływ na osoby z nowotworami zależnymi od hormonów
+pu: Moc produktów różni się między suplementami, a w USA jest sprzedawany jako suplement, podczas gdy wiele krajów go ogranicza.
+sc: Acné y piel grasa ; Crecimiento de vello facial en mujeres ; Adelgazamiento del cabello
+ss: Efectos en personas con cánceres dependientes de hormonas
+su: La concentración varía entre suplementos, y en EE. UU. se vende como suplemento mientras que muchos países lo restringen.
+
+=s-androstenedione
+t: acne, cholesterol, gynecomastia
+ec: Acne ; Higher oestrogen with breast tissue growth in men ; In women, masculinising changes
+es: Lower HDL cholesterol
+eu: The US moved it into the group of controlled steroids in 2004.
+pc: Trądzik ; Wyższy poziom estrogenów z rozrostem tkanki piersi u mężczyzn ; U kobiet zmiany męskie
+ps: Niższy cholesterol HDL
+pu: USA przeniosły go do grupy kontrolowanych sterydów w 2004 r.
+sc: Acné ; Estrógenos más altos con crecimiento del tejido mamario en hombres ; En mujeres, cambios masculinizantes
+ss: Colesterol HDL más bajo
+su: EE. UU. lo pasó al grupo de esteroides controlados en 2004.
+
+=s-tibolone
+t: clots, cancer, bleeding
+ec: Vaginal bleeding or spotting ; Breast tenderness ; Weight gain
+es: A higher risk of stroke in older women ; Return of breast cancer in survivors
+eu: It is used in some countries for menopause symptoms and is not approved in the US.
+pc: Krwawienie lub plamienie z pochwy ; Tkliwość piersi ; Przyrost masy ciała
+ps: Wyższe ryzyko udaru u starszych kobiet ; Nawrót raka piersi u osób po leczeniu
+pu: Stosuje się go w niektórych krajach przy objawach menopauzy, a w USA nie jest zatwierdzony.
+sc: Sangrado o manchado vaginal ; Sensibilidad en las mamas ; Aumento de peso
+ss: Mayor riesgo de ictus en mujeres mayores ; Reaparición del cáncer de mama en supervivientes
+su: Se usa en algunos países para los síntomas de la menopausia y no está aprobada en EE. UU.
+
+=s-testosterone-propionate
+t: acne, water, bp, fertility, clots, injsite
+ec: Acne ; Fluid retention ; Higher blood pressure ; Lower sperm count ; Pain where it is injected
+es: Thicker blood ; Blood levels that swing because it acts briefly
+eu: It acts briefly, so it is injected often, and blood levels rise and fall more than with other forms.
+pc: Trądzik ; Zatrzymanie płynów ; Wyższe ciśnienie krwi ; Mniejsza liczba plemników ; Ból w miejscu wstrzyknięcia
+ps: Zagęszczenie krwi ; Wahania poziomu we krwi, bo działa krótko
+pu: Działa krótko, więc wstrzykuje się go często, a jego poziom we krwi waha się bardziej niż przy innych formach.
+sc: Acné ; Retención de líquidos ; Presión arterial más alta ; Menor recuento de espermatozoides ; Dolor en el lugar de la inyección
+ss: Sangre más espesa ; Niveles en sangre que fluctúan porque actúa poco tiempo
+su: Actúa poco tiempo, así que se inyecta a menudo, y sus niveles en sangre suben y bajan más que con otras formas.
+
+=s-danazol
+t: clots, liver, vision, headache, acne, hairloss, water, bleeding
+ec: Acne and oily skin ; Weight gain and fluid retention ; Hair loss ; Menstrual changes ; In women, voice deepening
+es: Blood clots ; Liver problems, including benign liver tumours and peliosis hepatis ; Raised pressure around the brain with headache and vision changes ; Harm to a pregnancy
+eu: It is a prescription medicine for endometriosis and some blood conditions, and it must not be used in pregnancy.
+pc: Trądzik i tłusta skóra ; Przyrost masy ciała i zatrzymanie płynów ; Wypadanie włosów ; Zmiany miesiączkowania ; U kobiet obniżenie głosu
+ps: Zakrzepy ; Problemy z wątrobą, w tym łagodne guzy wątroby i plamica wątroby ; Podwyższone ciśnienie wokół mózgu z bólem głowy i zmianami widzenia ; Szkoda dla ciąży
+pu: To lek na receptę w endometriozie i niektórych chorobach krwi, którego nie wolno stosować w ciąży.
+sc: Acné y piel grasa ; Aumento de peso y retención de líquidos ; Caída del cabello ; Cambios en la regla ; En mujeres, voz más grave
+ss: Coágulos de sangre ; Problemas del hígado, incluidos tumores hepáticos benignos y peliosis hepática ; Presión elevada alrededor del cerebro con dolor de cabeza y cambios de visión ; Daño para el embarazo
+su: Es un medicamento con receta para la endometriosis y algunas enfermedades de la sangre, y no debe usarse en el embarazo.
+
+=s-nandrolone-phenylpropionate
+t: libido, bp, cholesterol, heart, fertility, water, acne
+ec: Lower natural testosterone ; Lower sex drive and erection problems ; Higher blood pressure ; Fluid retention
+es: Worse cholesterol ; Strain on the heart ; In women, deeper voice and body hair
+eu: It acts only briefly, so it is injected often.
+pc: Niższy własny testosteron ; Niższe libido i zaburzenia wzwodu ; Wyższe ciśnienie krwi ; Zatrzymanie płynów
+ps: Gorszy cholesterol ; Obciążenie serca ; U kobiet niższy głos i owłosienie ciała
+pu: Działa tylko krótko, więc wstrzykuje się go często.
+sc: Testosterona propia más baja ; Menos deseo sexual y problemas de erección ; Presión arterial más alta ; Retención de líquidos
+ss: Peor colesterol ; Esfuerzo del corazón ; En mujeres, voz más grave y vello corporal
+su: Actúa solo poco tiempo, así que se inyecta a menudo.
+
+=s-methasterone
+t: liver, bp, cholesterol, fertility, libido, abdominal
+ec: Higher blood pressure ; Lower natural testosterone ; Nausea and stomach pain
+es: Cholestatic jaundice and acute liver injury, sometimes serious ; Strongly lowered HDL cholesterol
+eu: It was sold as a supplement before being classified as a controlled steroid in the US in 2012–2014.
+pc: Wyższe ciśnienie krwi ; Niższy własny testosteron ; Nudności i ból brzucha
+ps: Żółtaczka cholestatyczna i ostre uszkodzenie wątroby, czasem ciężkie ; Silnie obniżony cholesterol HDL
+pu: Sprzedawano go jako suplement, zanim w USA w latach 2012–2014 zaliczono go do sterydów kontrolowanych.
+sc: Presión arterial más alta ; Testosterona propia más baja ; Náuseas y dolor de estómago
+ss: Ictericia colestásica y lesión hepática aguda, a veces grave ; HDL muy bajo
+su: Se vendía como suplemento antes de clasificarse como esteroide controlado en EE. UU. en 2012–2014.
+
+=s-trestolone
+t: acne, water, gynecomastia, fertility, libido
+ec: Acne ; Fluid retention ; Breast tissue growth ; Lower natural testosterone and sperm count
+eu: It is an experimental drug studied for male contraception, and long-term effects are unknown.
+pc: Trądzik ; Zatrzymanie płynów ; Rozrost tkanki piersi ; Niższy własny testosteron i liczba plemników
+pu: To lek eksperymentalny badany jako antykoncepcja męska, a skutki długoterminowe są nieznane.
+sc: Acné ; Retención de líquidos ; Crecimiento del tejido mamario ; Testosterona propia y recuento de espermatozoides más bajos
+su: Es un fármaco experimental estudiado como anticonceptivo masculino, y se desconocen sus efectos a largo plazo.
+
+=s-clostebol
+t: fertility, libido, rash, itching
+ec: Skin irritation where used on the skin ; Lower natural testosterone when taken in other ways
+eu: Athletes have tested positive after skin contact with products containing it.
+pc: Podrażnienie skóry w miejscu stosowania na skórę ; Niższy własny testosteron przy innych sposobach przyjmowania
+pu: Sportowcy mieli pozytywne wyniki testów po kontakcie skóry z produktami, które go zawierały.
+sc: Irritación de la piel donde se usa sobre la piel ; Testosterona propia más baja cuando se toma de otras formas
+su: Algunos deportistas dieron positivo tras el contacto de la piel con productos que lo contenían.
+
+=s-androstanolone
+t: hairloss, acne, cancer
+ec: Hair loss in men prone to baldness ; Acne ; Prostate enlargement
+eu: DHT drives male-pattern hair loss and prostate growth, so more of it raises those risks.
+pc: Wypadanie włosów u mężczyzn podatnych na łysienie ; Trądzik ; Powiększenie prostaty
+pu: DHT napędza łysienie typu męskiego i rozrost prostaty, więc jego większa ilość zwiększa to ryzyko.
+sc: Caída del cabello en hombres propensos a la calvicie ; Acné ; Aumento de la próstata
+su: La DHT impulsa la calvicie masculina y el crecimiento de la próstata, así que más cantidad aumenta esos riesgos.

@@ -1,0 +1,19 @@
+name: UK SFTP inspect (read only)
+on: workflow_dispatch
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get install -y lftp jq >/dev/null
+      - name: Summarise scanner jobs (no personal data printed)
+        env:
+          H: ${{ secrets.UK_SFTP_HOST }}
+          U: ${{ secrets.UK_SFTP_USER }}
+          P: ${{ secrets.UK_SFTP_PASS }}
+        run: |
+          mkdir -p q
+          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; mget -O q kolejka/*.json; mget -O q kolejka/done/*.json; quit" >/dev/null 2>&1 || true
+          echo "jobs files: $(ls q | wc -l)"
+          for f in q/*.json; do
+            jq -r '[.created, (.email|split("@")[1]), (.adres_strony|split("/")[2])] | join(" | ")' "$f"
+          done | sort

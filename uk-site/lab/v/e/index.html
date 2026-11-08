@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fikol Studio: apps and software</title>
+<link rel="stylesheet" href="../shared/mark.css">
+<style>
+:root{--bg:#f2eee6;--ink:#17130e;--mut:#6b6358;--o:#ff7a1a;--r:30px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}.w{width:min(1180px,100% - 32px);margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{display:inline-block;background:#12171f;color:#fff;border-radius:16px;padding:10px 18px;font-size:24px;font-weight:800;line-height:1}
+.hl{display:flex;gap:8px;align-items:center}
+.pill{font-size:14px;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:99px;background:#fff;color:var(--ink);transition:transform .2s,box-shadow .2s}.pill:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.1)}.pill.o{background:var(--o);color:#fff}
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:150px;gap:16px;padding-bottom:16px}
+.t{position:relative;border-radius:var(--r);padding:28px;overflow:hidden;background:#fff;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;min-width:0}
+.t:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(40,30,10,.16)}
+.t:focus-visible{outline:3px solid var(--o);outline-offset:3px}
+.hero{grid-column:1/3;grid-row:span 3;display:flex;flex-direction:column;justify-content:space-between}
+.hero h1{font-size:clamp(36px,5.2vw,66px);line-height:1.02;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}.hero h1 em{font-style:normal;color:var(--o)}
+.hero p{font-size:18px;color:var(--mut);margin:16px 0 0;max-width:30em}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--o);margin:0 0 14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.app{grid-column:span 2;grid-row:span 3;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between}
+.app.fb{background:#ffdfb8}.app.pp{background:#cdeadb}
+.app .tag{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.app h2{font-size:clamp(30px,3.4vw,44px);margin:6px 0 8px;letter-spacing:-.02em;line-height:1.05}
+.app p{margin:0;max-width:17em;color:rgba(23,19,14,.72)}
+.app .ph{position:absolute;right:26px;bottom:-60px;width:178px;aspect-ratio:390/844;border-radius:30px;background:#0b1624;padding:7px;box-shadow:0 24px 40px rgba(0,0,0,.3);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.app .ph img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:24px;display:block}
+.app:hover .ph,.app:focus-visible .ph{transform:translateY(-34px) rotate(-3deg)}
+.app .open{display:inline-flex;align-items:center;gap:8px;font-weight:700;background:#17130e;color:#fff;padding:10px 18px;border-radius:99px;font-size:14px;width:max-content;transition:gap .3s}
+.app:hover .open{gap:14px}
+.peek{position:absolute;left:0;right:0;bottom:0;background:rgba(23,19,14,.94);color:#fff;padding:20px 26px;transform:translateY(101%);transition:transform .45s cubic-bezier(.2,.8,.2,1);z-index:2}
+.app:hover .peek,.app:focus-visible .peek,.app.peeking .peek{transform:none}
+.peek ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14px}.peek li::before{content:"✓ ";color:var(--o);font-weight:800}
+.stat{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer}
+.stat .big{font-size:clamp(54px,7vw,88px);font-weight:800;letter-spacing:-.04em;line-height:1}.stat .l{font-size:14px;color:var(--mut);font-weight:600}
+.s1{background:#e4defc}.s2{background:#ffd9de}
+.appr{grid-column:1/5;grid-row:span 2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;align-items:start}
+.appr h3{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}.appr p{margin:0;color:var(--mut);font-size:15px}
+.appr .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#17130e;color:var(--o);font-weight:800;margin-bottom:12px;transition:transform .3s}
+.appr div:hover .n{transform:scale(1.2) rotate(-8deg)}
+.contact{grid-column:1/5;grid-row:span 2;background:#12171f;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.contact::after{content:"";position:absolute;right:-60px;top:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,26,.5),transparent 70%);pointer-events:none}
+.contact h2{font-size:clamp(26px,3.6vw,44px);margin:0 0 8px;letter-spacing:-.02em;line-height:1.08}.contact p{margin:0;color:#b8c0cc}
+.mail{position:relative;z-index:1;font-size:clamp(18px,2.4vw,26px);font-weight:700;color:#fff;text-decoration:none;border-bottom:2px solid var(--o)}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:12px 22px;border-radius:99px;background:var(--o);color:#fff;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(255,122,26,.4)}.btn.d{background:#17130e}
+.btn:focus-visible,.pill:focus-visible,.x:focus-visible{outline:3px solid #0a8f9c;outline-offset:3px}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;padding:20px 0 40px;color:var(--mut);font-size:14px}
+footer a{color:var(--ink);font-weight:600;text-decoration:none}
+@media(max-width:900px){.bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:130px}.hero{grid-column:1/3;grid-row:span 3}.app{grid-column:1/3;grid-row:span 3}.appr{grid-column:1/3;grid-template-columns:minmax(0,1fr);grid-row:span 4}.contact{grid-column:1/3;grid-row:span 3}.stat{grid-row:span 2}}
+@media(max-width:520px){.t{padding:22px}.app .ph{width:140px;right:16px}.hl .pill:not(.o){display:none}}
+/* dialog */
+dialog{border:0;padding:0;border-radius:32px;max-width:min(880px,94vw);width:100%;background:#fff;color:var(--ink);box-shadow:0 40px 100px rgba(0,0,0,.45);overflow:visible}
+dialog::backdrop{background:rgba(18,23,31,.55);backdrop-filter:blur(8px)}
+dialog[open]{animation:dp .4s cubic-bezier(.2,.9,.3,1.2)}@keyframes dp{from{opacity:0;transform:translateY(24px) scale(.96)}}
+.dg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:30px;padding:38px;align-items:center}
+.dg .tag{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--o)}.dg h2{font-size:clamp(30px,4vw,46px);margin:6px 0 12px;letter-spacing:-.02em}
+.dg p{color:var(--mut);margin:0 0 16px}.dg ul{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:10px}.dg li::before{content:"✓ ";color:var(--o);font-weight:800}
+.dg .sh{display:grid;place-items:center;border-radius:24px;padding:24px 10px 0;overflow:hidden;align-self:stretch}.dg .ph{position:relative;right:auto;bottom:auto;width:200px;aspect-ratio:390/700;border-radius:30px 30px 0 0;background:#0b1624;padding:7px 7px 0;box-shadow:0 -10px 40px rgba(0,0,0,.3)}.dg .ph img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:24px 24px 0 0;display:block}
+.x{position:absolute;right:16px;top:16px;width:44px;height:44px;border-radius:50%;border:0;background:#f2eee6;font-size:20px;cursor:pointer;z-index:3}.x:hover{background:#e6dfd2}
+@media(max-width:700px){.dg{grid-template-columns:minmax(0,1fr);padding:26px}.dg .sh{order:-1;max-height:240px}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0ms)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.t,.app .ph,.peek,dialog[open]{transition:none;animation:none}html{scroll-behavior:auto}}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;border-radius:8px;z-index:99}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="w">
+<header><div class="logo" id="mk" aria-label="Fikol Studio"></div><div class="hl"><a class="pill" href="#apps">Apps</a><a class="pill" href="#approach">Approach</a><a class="pill o" href="mailto:contact@pepsafe.info">Get in touch</a></div></header>
+<main id="main"><div class="bento">
+<section class="t hero rv"><div><p class="eyebrow">Apps &amp; software studio</p><h1>Practical apps for the kitchen and <em>the home.</em></h1><p>We design and build small, careful apps in English, Polish and Spanish. Open them in your browser, nothing to install.</p></div>
+<div class="row"><a class="btn" href="#apps">See the apps</a><a class="btn d" href="#contact">Get in touch</a></div></section>
+
+<article class="t app fb rv" id="apps" data-app="fb" tabindex="0" role="button" aria-haspopup="dialog" style="--d:80ms"><div><span class="tag">Recipes</span><h2>FridgeBite</h2><p>Turn what is in your fridge into dinner.</p></div><span class="open">Open details <span aria-hidden="true">→</span></span>
+<div class="ph" aria-hidden="true"><img src="../img/fridgebite.webp" alt="" width="780" height="1688"></div>
+<div class="peek" aria-hidden="true"><ul><li>Over 3,000 real recipes</li><li>Scan your fridge</li><li>Allergy filter and shopping list</li></ul></div></article>
+
+<article class="t app pp rv" data-app="pp" tabindex="0" role="button" aria-haspopup="dialog" style="--d:120ms"><div><span class="tag">Home pantry</span><h2>PantryPal</h2><p>A calm view of what you have at home.</p></div><span class="open">Open details <span aria-hidden="true">→</span></span>
+<div class="ph" aria-hidden="true"><img src="../img/pantrypal.webp" alt="" width="780" height="1688"></div>
+<div class="peek" aria-hidden="true"><ul><li>Saved on your device, no account</li><li>“Use first” list from your dates</li><li>No ads and no trackers</li></ul></div></article>
+
+<div class="t stat s1 rv" data-app="fb" tabindex="0" role="button" aria-haspopup="dialog"><div class="l">Apps live</div><div class="big" data-c="2">0</div><div class="l">FridgeBite · PantryPal</div></div>
+<div class="t stat s2 rv" data-app="pp" tabindex="0" role="button" aria-haspopup="dialog"><div class="l">Languages in FridgeBite</div><div class="big" data-c="3">0</div><div class="l">English · Polski · Español</div></div>
+
+<section class="t appr rv" id="approach"><div><span class="n">1</span><h3>Tested before it ships</h3><p>Every change is tried on a phone and on a desktop before it goes out. If it is not ready, it waits.</p></div><div><span class="n">2</span><h3>Private by default</h3><p>PantryPal keeps your data on your own device. We do not add ads or third-party trackers to our apps.</p></div><div><span class="n">3</span><h3>Plain and honest</h3><p>Clear wording, real data, no invented numbers. Dates in PantryPal are labels you entered, not safety advice.</p></div></section>
+
+<section class="t contact rv" id="contact"><div style="position:relative;z-index:1"><h2>Questions, bug reports or ideas?</h2><p>We read every message.</p></div><div style="position:relative;z-index:1;display:grid;gap:14px;justify-items:start"><a class="mail" href="mailto:contact@pepsafe.info">contact@pepsafe.info</a><a class="btn" href="mailto:contact@pepsafe.info?subject=Hello%20Fikol%20Studio">Write to us</a></div></section>
+</div></main>
+<footer><span>© 2026 Fikol Studio</span><span><a href="https://pantrypal.pepsafe.uk/#/privacy" target="_blank" rel="noopener">PantryPal privacy</a></span></footer>
+</div>
+<dialog id="dlg" aria-labelledby="dt"><button class="x" id="dx" aria-label="Close">✕</button><div class="dg"><div><span class="tag" id="dtag"></span><h2 id="dt"></h2><p id="dd"></p><ul id="dl"></ul><a class="btn" id="dgo" href="https://fridgebite.pepsafe.uk" target="_blank" rel="noopener">Open FridgeBite ↗</a></div><div class="sh" id="dsh"><div class="ph"><img id="dimg" src="../img/fridgebite.webp" alt="FridgeBite home screen" width="780" height="1688"></div></div></div></dialog>
+<script src="../shared/mark.js"></script>
+<script>
+(function(){
+FIKOL.mount(document.getElementById('mk'));
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var A={fb:{tag:'Recipes',t:'FridgeBite',d:'Turn what is in your fridge into dinner. Scan your ingredients or browse recipes matched to what you already have.',l:['Over 3,000 real recipes to browse','Scan your fridge to find what you can cook','Allergy filter, favourites and a shopping list','English, Polish and Spanish'],h:'https://fridgebite.pepsafe.uk',b:'Open FridgeBite ↗',i:'../img/fridgebite.webp',bg:'#ffdfb8',a:'FridgeBite home screen'},
+pp:{tag:'Home pantry',t:'PantryPal',d:'A simple, calm view of what you have at home. Add items, see what to use first, and keep a shopping list.',l:['Saved on your device, no account needed','A “Use first” list built from the dates you enter','Shopping list and backup to a file you keep','No ads and no trackers'],h:'https://pantrypal.pepsafe.uk',b:'Open PantryPal ↗',i:'../img/pantrypal.webp',bg:'#cdeadb',a:'PantryPal home screen'}};
+var dlg=document.getElementById('dlg'),last=null;
+function openApp(k,from){var a=A[k];last=from;document.getElementById('dtag').textContent=a.tag;document.getElementById('dt').textContent=a.t;document.getElementById('dd').textContent=a.d;var ul=document.getElementById('dl');ul.innerHTML='';a.l.forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});var g=document.getElementById('dgo');g.href=a.h;g.textContent=a.b;var im=document.getElementById('dimg');im.src=a.i;im.alt=a.a;document.getElementById('dsh').style.background=a.bg;if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')}
+document.querySelectorAll('[data-app]').forEach(function(t){t.addEventListener('click',function(){openApp(t.dataset.app,t)});t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openApp(t.dataset.app,t)}})});
+document.getElementById('dx').addEventListener('click',function(){dlg.close()});
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+dlg.addEventListener('close',function(){if(last)last.focus({preventScroll:true})});
+/* reveal + counters */
+var rv=[].slice.call(document.querySelectorAll('.rv'));
+function count(el){var t=+el.dataset.c;if(rm){el.textContent=t;return}var st=null;function f(ts){if(!st)st=ts;var p=Math.min((ts-st)/1000,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+if('IntersectionObserver' in window&&!rm){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');x.target.querySelectorAll('[data-c]').forEach(count);if(x.target.dataset.c)count(x.target);io.unobserve(x.target)}})},{threshold:.15});rv.forEach(function(e){io.observe(e)})}else{rv.forEach(function(e){e.classList.add('in');e.querySelectorAll('[data-c]').forEach(count)})}
+document.querySelectorAll('.stat .big').forEach(function(e){if(rm)count(e)});
+})();
+</script></body></html>

@@ -1,0 +1,10 @@
+.fk{--nc:#5ef0ff}
+.fk .wd{display:inline-flex;align-items:baseline;white-space:nowrap}
+.fk svg{height:1.1em;width:auto;aspect-ratio:70/100;overflow:visible;margin-right:.05em;flex:none;color:var(--nc);filter:drop-shadow(0 0 5px var(--nc))}
+.fk .mid{position:relative;display:inline-block;transition:width .5s cubic-bezier(.3,1.2,.4,1);white-space:nowrap;color:var(--nc)}
+.fk .mid span{display:inline-block;transition:opacity .45s,transform .45s}.fk .mid .b{position:absolute;left:0;top:0}
+.fk .mid .off{opacity:0;transform:translateY(-55%)}.fk .mid .b.off{transform:translateY(55%)}
+.fk .sg{opacity:0;transform-origin:50% 50%;transform:scale(.94);transition:opacity .6s,transform .45s}.fk .sg.on{opacity:1;transform:none;transition:opacity .25s,transform .45s}
+.fk .sg path[pathLength]{stroke-dasharray:1;stroke-dashoffset:0}.fk .sg.on path[pathLength]{animation:fkdrw .6s cubic-bezier(.3,.7,.2,1) backwards}.fk .sg.on circle{animation:fkpop .45s cubic-bezier(.3,1.5,.4,1) backwards;animation-delay:calc(var(--i,0)*50ms + 150ms)}
+.fk .sg circle{transform-box:fill-box;transform-origin:center}.fk .ghost{opacity:.22}
+@keyframes fkdrw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}@keyframes fkpop{from{transform:scale(0)}to{transform:scale(1)}}

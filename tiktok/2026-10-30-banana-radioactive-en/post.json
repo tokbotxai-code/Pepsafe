@@ -1,0 +1,12 @@
+{
+ "topic": "Bananas are slightly radioactive",
+ "tagline": "Science, plainly",
+ "slides": [
+  {"kicker": "The fact", "title": "A banana is very slightly radioactive.", "seconds": 3, "hero": true},
+  {"kicker": "Why", "title": "It is full of potassium, and a tiny part of natural potassium is a radioactive form.", "seconds": 4.2},
+  {"kicker": "Is it a risk?", "title": "No. The amount is far too small to matter for your health.", "seconds": 3.6},
+  {"kicker": "Your turn", "title": "Banana or apple? One word.", "seconds": 3.2, "cta": "pepsafe.info", "foot": "Educational content. Questions? Comment or DM us."}
+ ],
+ "caption": "A banana is very slightly radioactive: it is rich in potassium, and a tiny part of natural potassium is a radioactive form. The amount is far too small to matter for your health. Banana or apple? One word. 🍌\n\nMore biology at pepsafe.info\n\n#biology #science #chemistry #learnontiktok #education #pepsafe",
+ "vo": false
+}

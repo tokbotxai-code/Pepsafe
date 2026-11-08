@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /dostepnosc/raporty/
+Sitemap: https://pepsafe.uk/sitemap.xml

@@ -1,0 +1,52 @@
+{
+ "topic": "BPC-157",
+ "tagline": "Peptide facts, zero hype",
+ "slides": [
+  {
+   "kicker": "Fact check",
+   "title": "BPC-157: miracle peptide or marketing?",
+   "hero": true,
+   "text": "What does the research actually say? Let's check 👉",
+   "seconds": 3.5
+  },
+  {
+   "kicker": "What it is",
+   "title": "A 15-amino-acid peptide",
+   "text": "Described as a fragment of a gastric juice protein. Sold online as “for research only”, which means not as a medicine.",
+   "seconds": 4.5
+  },
+  {
+   "kicker": "Human studies",
+   "big": "3",
+   "text": "That is how many small human studies a 2025 review found. Under 30 people in total and no control groups. The rest is animal research.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Did the FDA approve it?",
+   "verdict": "NO",
+   "tone": "no",
+   "text": "In July 2026 an FDA advisory committee only backed it (8 to 6) as a compounding ingredient. That is not drug approval.",
+   "seconds": 5
+  },
+  {
+   "kicker": "Risks",
+   "title": "Risks nobody mentions",
+   "list": [
+    "No sterility or content checks",
+    "No established safety in humans",
+    "Affects blood vessel growth",
+    "On the WADA list for athletes"
+   ],
+   "seconds": 5
+  },
+  {
+   "kicker": "More facts, zero hype",
+   "cta": "pepsafe.info",
+   "text": "120 peptides, myths and facts, FDA decisions timeline.",
+   "foot": "Educational content. Not medical advice. Talk to a doctor before any decision.",
+   "seconds": 4
+  }
+ ],
+ "caption": "BPC-157 – what do we actually know? 3 small human studies and no FDA approval. Check the facts at pepsafe.info 🔬\n\nEducational content, not medical advice.\n\n#peptides #bpc157 #factcheck #health #science #mythbusting #pepsafe",
+ "vo": "kokoro"
+}

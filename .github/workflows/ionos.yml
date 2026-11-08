@@ -1,0 +1,34 @@
+# Copies the built site to the IONOS webspace over SFTP after every push to main.
+# Does nothing until the repository secrets IONOS_HOST, IONOS_USER and IONOS_PASS exist.
+name: ionos
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency: ionos
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check secrets
+        id: s
+        env:
+          H: ${{ secrets.IONOS_HOST }}
+        run: echo "ok=$([ -n "$H" ] && echo 1 || echo 0)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.s.outputs.ok == '1'
+      - name: Upload
+        if: steps.s.outputs.ok == '1'
+        env:
+          H: ${{ secrets.IONOS_HOST }}
+          U: ${{ secrets.IONOS_USER }}
+          P: ${{ secrets.IONOS_PASS }}
+          DIR: ${{ secrets.IONOS_DIR }}
+        run: |
+          sudo apt-get install -y -qq lftp
+          lftp -u "$U","$P" "sftp://$H" -e "set sftp:auto-confirm yes; set net:max-retries 3; \
+            mirror --reverse --delete --only-newer --parallel=4 \
+              --exclude-glob .git/ --exclude-glob .github/ --exclude-glob node_modules/ \
+              --exclude-glob '*.md' --exclude-glob tools/ \
+              . ${DIR:-/}; bye"

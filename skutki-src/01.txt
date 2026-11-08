@@ -1,0 +1,143 @@
+=Semaglutyd
+t: nausea, vomiting, diarrhoea, constipation, abdominal, reflux, headache, dizziness, fatigue, hairloss, injsite, pancreas, gallbladder, kidney, lowsugar, vision, thyroid, heart, allergy
+ec: Nausea, vomiting, diarrhoea or constipation, most often when starting and after each dose increase ; Stomach pain, bloating, burping, indigestion or heartburn ; Headache, tiredness and dizziness ; Hair thinning during fast weight loss ; Redness or itching where it is injected
+es: Severe, lasting stomach pain, sometimes with vomiting: possible pancreatitis ; Pain in the upper right abdomen, fever or yellowing of the skin: possible gallbladder disease ; Dehydration from vomiting or diarrhoea that can harm the kidneys ; Low blood sugar, mainly together with insulin or a sulfonylurea ; Sudden vision changes in people with diabetic eye disease ; Lump or swelling in the neck: the label warns about thyroid tumours seen in rodents ; Swelling of the face or throat and trouble breathing: allergic reaction
+eu: Long-term effects beyond several years of use are still being studied, and it is not known how much of the muscle lost on treatment is regained afterwards.
+pc: Nudności, wymioty, biegunka lub zaparcia, najczęściej na początku i po zwiększeniu dawki ; Ból brzucha, wzdęcia, odbijanie, niestrawność lub zgaga ; Ból głowy, zmęczenie i zawroty głowy ; Przerzedzenie włosów przy szybkiej utracie masy ciała ; Zaczerwienienie lub swędzenie w miejscu wstrzyknięcia
+ps: Silny, długo utrzymujący się ból brzucha, czasem z wymiotami: możliwe zapalenie trzustki ; Ból w prawym górnym brzuchu, gorączka lub zażółcenie skóry: możliwa choroba pęcherzyka żółciowego ; Odwodnienie po wymiotach lub biegunce, które może uszkodzić nerki ; Niski poziom cukru we krwi, głównie razem z insuliną lub pochodną sulfonylomocznika ; Nagła zmiana widzenia u osób z cukrzycową chorobą oczu ; Guzek lub obrzęk na szyi: ulotka ostrzega przed nowotworami tarczycy obserwowanymi u gryzoni ; Obrzęk twarzy lub gardła i duszność: reakcja alergiczna
+pu: Skutki dłuższego stosowania, trwającego wiele lat, są nadal badane, a nie wiadomo, jak dużo utraconej mięśniowej masy wraca po odstawieniu.
+sc: Náuseas, vómitos, diarrea o estreñimiento, sobre todo al empezar y tras cada aumento de dosis ; Dolor de estómago, hinchazón, eructos, indigestión o acidez ; Dolor de cabeza, cansancio y mareo ; Adelgazamiento del cabello durante una pérdida de peso rápida ; Enrojecimiento o picor en el lugar de la inyección
+ss: Dolor de estómago intenso y persistente, a veces con vómitos: posible pancreatitis ; Dolor en la parte superior derecha del abdomen, fiebre o piel amarillenta: posible enfermedad de la vesícula ; Deshidratación por vómitos o diarrea que puede dañar los riñones ; Azúcar bajo en sangre, sobre todo junto con insulina o una sulfonilurea ; Cambios bruscos de la visión en personas con enfermedad ocular diabética ; Bulto o hinchazón en el cuello: el prospecto advierte de tumores de tiroides observados en roedores ; Hinchazón de cara o garganta y dificultad para respirar: reacción alérgica
+su: Los efectos de un uso prolongado durante muchos años aún se están estudiando, y no se sabe cuánta masa muscular perdida se recupera al dejar el tratamiento.
+
+=Tirzepatyd
+t: nausea, vomiting, diarrhoea, constipation, abdominal, reflux, headache, dizziness, fatigue, hairloss, injsite, pancreas, gallbladder, kidney, lowsugar, thyroid, heart, allergy
+ec: Nausea, diarrhoea, vomiting or constipation, especially when starting and after dose increases ; Stomach pain, indigestion, heartburn, burping and bloating ; Tiredness and dizziness ; Hair thinning during fast weight loss ; Reactions where it is injected
+es: Severe, lasting stomach pain: possible pancreatitis ; Gallbladder problems: pain in the upper right abdomen, fever, yellow skin ; Dehydration with kidney injury after vomiting or diarrhoea ; Low blood sugar with insulin or a sulfonylurea ; Lump or swelling in the neck: boxed warning about thyroid tumours seen in rodents ; Allergic reaction with swelling and trouble breathing
+eu: The label says it can make oral contraceptive pills work less well, and long-term effects over many years are still being collected.
+pc: Nudności, biegunka, wymioty lub zaparcia, zwłaszcza na początku i po zwiększeniu dawki ; Ból brzucha, niestrawność, zgaga, odbijanie i wzdęcia ; Zmęczenie i zawroty głowy ; Przerzedzenie włosów przy szybkiej utracie masy ciała ; Odczyny w miejscu wstrzyknięcia
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Problemy z pęcherzykiem żółciowym: ból w prawym górnym brzuchu, gorączka, żółta skóra ; Odwodnienie z uszkodzeniem nerek po wymiotach lub biegunce ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika ; Guzek lub obrzęk na szyi: ramka ostrzegawcza o nowotworach tarczycy u gryzoni ; Reakcja alergiczna z obrzękiem i dusznością
+pu: Według ulotki lek może osłabiać działanie doustnych tabletek antykoncepcyjnych, a skutki wieloletniego stosowania są wciąż zbierane.
+sc: Náuseas, diarrea, vómitos o estreñimiento, sobre todo al empezar y tras subir la dosis ; Dolor de estómago, indigestión, acidez, eructos e hinchazón ; Cansancio y mareo ; Adelgazamiento del cabello durante una pérdida de peso rápida ; Reacciones en el lugar de la inyección
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Problemas de la vesícula: dolor en la parte superior derecha del abdomen, fiebre, piel amarillenta ; Deshidratación con daño renal tras vómitos o diarrea ; Azúcar bajo con insulina o una sulfonilurea ; Bulto o hinchazón en el cuello: advertencia destacada sobre tumores de tiroides en roedores ; Reacción alérgica con hinchazón y dificultad para respirar
+su: Según el prospecto puede reducir la eficacia de los anticonceptivos orales, y los efectos tras muchos años de uso aún se están recopilando.
+
+=Liraglutyd
+t: nausea, vomiting, diarrhoea, constipation, abdominal, reflux, headache, dizziness, fatigue, injsite, pancreas, gallbladder, kidney, lowsugar, thyroid, heart, allergy
+ec: Nausea, vomiting, diarrhoea or constipation ; Stomach pain, indigestion and heartburn ; Headache, dizziness and tiredness ; Faster resting heart rate ; Reactions where it is injected
+es: Severe, lasting stomach pain: possible pancreatitis ; Gallbladder disease: pain in the upper right abdomen, fever, yellow skin ; Dehydration with kidney injury ; Low blood sugar with insulin or a sulfonylurea ; Lump in the neck: boxed warning about thyroid tumours seen in rodents ; Swelling of the face or throat: allergic reaction
+eu: It is injected daily, so injection-site reactions matter more than with weekly medicines. Effects over decades of use are not known.
+pc: Nudności, wymioty, biegunka lub zaparcia ; Ból brzucha, niestrawność i zgaga ; Ból głowy, zawroty głowy i zmęczenie ; Szybsze tętno w spoczynku ; Odczyny w miejscu wstrzyknięcia
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Choroba pęcherzyka żółciowego: ból w prawym górnym brzuchu, gorączka, żółta skóra ; Odwodnienie z uszkodzeniem nerek ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika ; Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy u gryzoni ; Obrzęk twarzy lub gardła: reakcja alergiczna
+pu: Lek wstrzykuje się codziennie, więc odczyny w miejscu wstrzyknięcia mają większe znaczenie niż przy lekach tygodniowych. Skutki stosowania przez dziesięciolecia nie są znane.
+sc: Náuseas, vómitos, diarrea o estreñimiento ; Dolor de estómago, indigestión y acidez ; Dolor de cabeza, mareo y cansancio ; Frecuencia cardíaca en reposo más rápida ; Reacciones en el lugar de la inyección
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Enfermedad de la vesícula: dolor en la parte superior derecha del abdomen, fiebre, piel amarillenta ; Deshidratación con daño renal ; Azúcar bajo con insulina o una sulfonilurea ; Bulto en el cuello: advertencia destacada sobre tumores de tiroides en roedores ; Hinchazón de cara o garganta: reacción alérgica
+su: Se inyecta a diario, así que las reacciones en el lugar de la inyección pesan más que con los medicamentos semanales. Se desconocen los efectos tras décadas de uso.
+
+=Dulaglutyd
+t: nausea, vomiting, diarrhoea, abdominal, reflux, fatigue, appetite, injsite, pancreas, gallbladder, kidney, lowsugar, thyroid, vision, allergy
+ec: Nausea, vomiting and diarrhoea ; Stomach pain, indigestion and heartburn ; Tiredness and reduced appetite ; Reactions where it is injected
+es: Severe, lasting stomach pain: possible pancreatitis ; Gallbladder disease ; Dehydration with kidney injury ; Low blood sugar with insulin or a sulfonylurea ; Lump in the neck: boxed warning about thyroid tumours seen in rodents ; Sudden vision changes in diabetic eye disease ; Allergic reaction with swelling and trouble breathing
+eu: It is licensed for type 2 diabetes, not for weight loss, so the weight-loss safety picture comes from other medicines of the same class.
+pc: Nudności, wymioty i biegunka ; Ból brzucha, niestrawność i zgaga ; Zmęczenie i zmniejszony apetyt ; Odczyny w miejscu wstrzyknięcia
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Choroba pęcherzyka żółciowego ; Odwodnienie z uszkodzeniem nerek ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika ; Guzek na szyi: ramka ostrzegawcza o nowotworach tarczycy u gryzoni ; Nagła zmiana widzenia przy cukrzycowej chorobie oczu ; Reakcja alergiczna z obrzękiem i dusznością
+pu: Lek jest zarejestrowany w cukrzycy typu 2, nie w odchudzaniu, więc dane o bezpieczeństwie przy odchudzaniu pochodzą z innych leków tej samej klasy.
+sc: Náuseas, vómitos y diarrea ; Dolor de estómago, indigestión y acidez ; Cansancio y menos apetito ; Reacciones en el lugar de la inyección
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Enfermedad de la vesícula ; Deshidratación con daño renal ; Azúcar bajo con insulina o una sulfonilurea ; Bulto en el cuello: advertencia destacada sobre tumores de tiroides en roedores ; Cambios bruscos de la visión en enfermedad ocular diabética ; Reacción alérgica con hinchazón y dificultad para respirar
+su: Está autorizado para la diabetes tipo 2, no para adelgazar, así que los datos de seguridad para adelgazar proceden de otros medicamentos de la misma clase.
+
+=Eksenatyd
+t: nausea, vomiting, diarrhoea, headache, dizziness, appetite, injsite, pancreas, kidney, lowsugar, allergy, bleeding, thyroid
+ec: Nausea, vomiting and diarrhoea ; Headache and dizziness ; Reduced appetite ; Redness, itching or small lumps where it is injected, especially with the weekly form
+es: Severe, lasting stomach pain: possible pancreatitis ; Kidney problems, including after dehydration ; Low blood sugar with insulin or a sulfonylurea ; Allergic reactions, including swelling and trouble breathing ; Lump in the neck: the weekly form carries a boxed warning about thyroid tumours seen in rodents
+eu: It was the first medicine of its class, so it has the longest record, but it is used far less now than newer drugs.
+pc: Nudności, wymioty i biegunka ; Ból głowy i zawroty głowy ; Zmniejszony apetyt ; Zaczerwienienie, swędzenie lub małe guzki w miejscu wstrzyknięcia, zwłaszcza przy postaci tygodniowej
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Problemy z nerkami, także po odwodnieniu ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika ; Reakcje alergiczne, także z obrzękiem i dusznością ; Guzek na szyi: postać tygodniowa ma ramkę ostrzegawczą o nowotworach tarczycy u gryzoni
+pu: To pierwszy lek tej klasy, więc ma najdłuższą historię stosowania, ale dziś jest używany znacznie rzadziej niż nowsze leki.
+sc: Náuseas, vómitos y diarrea ; Dolor de cabeza y mareo ; Menos apetito ; Enrojecimiento, picor o pequeños bultos en el lugar de la inyección, sobre todo con la forma semanal
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Problemas de riñón, también tras una deshidratación ; Azúcar bajo con insulina o una sulfonilurea ; Reacciones alérgicas, también con hinchazón y dificultad para respirar ; Bulto en el cuello: la forma semanal lleva una advertencia destacada sobre tumores de tiroides en roedores
+su: Fue el primer medicamento de su clase, así que tiene el historial más largo, pero hoy se usa mucho menos que los fármacos más nuevos.
+
+=Liksysenatyd
+t: nausea, vomiting, diarrhoea, headache, dizziness, abdominal, injsite, pancreas, lowsugar, allergy
+ec: Nausea, vomiting and diarrhoea ; Headache and dizziness ; Stomach pain ; Reactions where it is injected
+es: Severe, lasting stomach pain: possible pancreatitis ; Low blood sugar with insulin or a sulfonylurea ; Allergic reactions with swelling and trouble breathing
+eu: It is a daily injection for type 2 diabetes with little use in weight loss, so evidence on that use is thin.
+pc: Nudności, wymioty i biegunka ; Ból głowy i zawroty głowy ; Ból brzucha ; Odczyny w miejscu wstrzyknięcia
+ps: Silny, długo utrzymujący się ból brzucha: możliwe zapalenie trzustki ; Niski poziom cukru z insuliną lub pochodną sulfonylomocznika ; Reakcje alergiczne z obrzękiem i dusznością
+pu: To codzienny zastrzyk w cukrzycy typu 2 i prawie nie bada się go w odchudzaniu, więc dowodów na takie zastosowanie jest mało.
+sc: Náuseas, vómitos y diarrea ; Dolor de cabeza y mareo ; Dolor de estómago ; Reacciones en el lugar de la inyección
+ss: Dolor de estómago intenso y persistente: posible pancreatitis ; Azúcar bajo con insulina o una sulfonilurea ; Reacciones alérgicas con hinchazón y dificultad para respirar
+su: Es una inyección diaria para la diabetes tipo 2 y apenas se estudia para adelgazar, así que las pruebas para ese uso son escasas.
+
+=Retatrutyd
+t: nausea, vomiting, diarrhoea, constipation, abdominal, heart, appetite, fatigue
+ec: Nausea, vomiting, diarrhoea and constipation, mostly mild to moderate and mainly during dose increases ; A faster resting heart rate that rose with the dose in the phase 2 study ; Reduced appetite
+es: Dehydration from vomiting or diarrhoea ; Stomach pain that does not go away
+eu: It is not approved. Results come from trials in a few thousand people, so rare effects, long-term safety and effects on muscle and the heart are not yet known. Products sold online under this name do not come from the maker, so their contents and effects are unknown.
+pc: Nudności, wymioty, biegunka i zaparcia, głównie łagodne lub umiarkowane i głównie przy zwiększaniu dawki ; Szybsze tętno w spoczynku, które w badaniu II fazy rosło wraz z dawką ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach lub biegunce ; Ból brzucha, który nie mija
+pu: Lek nie jest zatwierdzony. Wyniki pochodzą z badań na kilku tysiącach osób, więc rzadkie skutki, bezpieczeństwo długoterminowe oraz wpływ na mięśnie i serce nie są jeszcze znane. Produkty sprzedawane online pod tą nazwą nie pochodzą od producenta, więc ich skład i działanie są nieznane.
+sc: Náuseas, vómitos, diarrea y estreñimiento, sobre todo leves o moderados y sobre todo al subir la dosis ; Frecuencia cardíaca en reposo más rápida, que en el estudio de fase 2 aumentó con la dosis ; Menos apetito
+ss: Deshidratación por vómitos o diarrea ; Dolor de estómago que no desaparece
+su: No está aprobado. Los resultados proceden de ensayos con unos pocos miles de personas, así que los efectos raros, la seguridad a largo plazo y el efecto en músculo y corazón aún no se conocen. Los productos que se venden en línea con este nombre no proceden del fabricante, así que se desconoce su contenido y efecto.
+
+=Mazdutyd
+t: nausea, vomiting, diarrhoea, constipation, appetite, abdominal
+ec: Nausea, vomiting and diarrhoea, mostly mild to moderate ; Reduced appetite ; Stomach discomfort
+es: Dehydration from vomiting or diarrhoea
+eu: It is approved only in China, and long-term safety outside Chinese studies is not established. The mix of GLP-1 and glucagon action is newer than GLP-1 alone, so rarer effects may not have shown up yet.
+pc: Nudności, wymioty i biegunka, głównie łagodne lub umiarkowane ; Zmniejszony apetyt ; Dyskomfort w żołądku
+ps: Odwodnienie po wymiotach lub biegunce
+pu: Lek jest zatwierdzony tylko w Chinach, a bezpieczeństwo długoterminowe poza badaniami chińskimi nie zostało ustalone. Połączenie działania GLP-1 i glukagonu jest nowsze niż sam GLP-1, więc rzadsze skutki mogły się jeszcze nie ujawnić.
+sc: Náuseas, vómitos y diarrea, sobre todo leves o moderados ; Menos apetito ; Molestias de estómago
+ss: Deshidratación por vómitos o diarrea
+su: Solo está aprobado en China y su seguridad a largo plazo fuera de los estudios chinos no está establecida. La combinación de acción GLP-1 y glucagón es más reciente que la de GLP-1 solo, así que puede que aún no hayan aparecido efectos más raros.
+
+=Survodutyd
+t: nausea, vomiting, diarrhoea, constipation, appetite
+ec: Nausea and vomiting, which were common and dose-related in trials ; Diarrhoea or constipation ; Reduced appetite
+es: Dehydration from vomiting or diarrhoea
+eu: It is still in phase 3 trials and not approved. Long-term safety, effects on the heart and the liver over time and rare problems are not yet known, and products sold online under this name are not the maker's medicine.
+pc: Nudności i wymioty, które w badaniach były częste i zależne od dawki ; Biegunka lub zaparcia ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach lub biegunce
+pu: Lek jest wciąż w badaniach III fazy i nie jest zatwierdzony. Bezpieczeństwo długoterminowe, wpływ na serce i wątrobę w czasie oraz rzadkie problemy nie są jeszcze znane, a produkty sprzedawane online pod tą nazwą nie są lekiem producenta.
+sc: Náuseas y vómitos, que fueron frecuentes y dependientes de la dosis en los ensayos ; Diarrea o estreñimiento ; Menos apetito
+ss: Deshidratación por vómitos o diarrea
+su: Sigue en ensayos de fase 3 y no está aprobado. La seguridad a largo plazo, el efecto en corazón e hígado con el tiempo y los problemas raros aún no se conocen, y los productos que se venden en línea con este nombre no son el medicamento del fabricante.
+
+=Cagrilintyd
+t: nausea, vomiting, diarrhoea, constipation, injsite, appetite
+ec: Nausea, vomiting, constipation and diarrhoea ; Reactions where it is injected ; Reduced appetite
+es: Dehydration from vomiting or diarrhoea
+eu: It is not approved on its own. Most safety data come from trials of its combination with semaglutide, and long-term effects are not known.
+pc: Nudności, wymioty, zaparcia i biegunka ; Odczyny w miejscu wstrzyknięcia ; Zmniejszony apetyt
+ps: Odwodnienie po wymiotach lub biegunce
+pu: Lek nie jest zatwierdzony osobno. Większość danych o bezpieczeństwie pochodzi z badań jego połączenia z semaglutydem, a skutki długoterminowe nie są znane.
+sc: Náuseas, vómitos, estreñimiento y diarrea ; Reacciones en el lugar de la inyección ; Menos apetito
+ss: Deshidratación por vómitos o diarrea
+su: No está aprobado por sí solo. La mayoría de los datos de seguridad proceden de ensayos de su combinación con semaglutida, y no se conocen los efectos a largo plazo.
+
+=Pramlintyd
+t: nausea, vomiting, abdominal, headache, lowsugar, appetite, injsite, tremor, sweating, dizziness
+ec: Nausea, which is the most common effect and usually fades ; Vomiting and stomach pain ; Headache and reduced appetite ; Reactions where it is injected
+es: Severe low blood sugar when used with insulin: shakiness, sweating, confusion, fainting ; Allergic reactions
+eu: It is used only alongside mealtime insulin, and severe low blood sugar usually appears within three hours of the injection.
+pc: Nudności, najczęstszy skutek, który zwykle mija ; Wymioty i ból brzucha ; Ból głowy i zmniejszony apetyt ; Odczyny w miejscu wstrzyknięcia
+ps: Ciężka hipoglikemia przy stosowaniu z insuliną: drżenie, pocenie się, splątanie, omdlenie ; Reakcje alergiczne
+pu: Lek stosuje się wyłącznie razem z insuliną do posiłków, a ciężka hipoglikemia pojawia się zwykle w ciągu trzech godzin od wstrzyknięcia.
+sc: Náuseas, el efecto más frecuente, que suele desaparecer ; Vómitos y dolor de estómago ; Dolor de cabeza y menos apetito ; Reacciones en el lugar de la inyección
+ss: Hipoglucemia grave cuando se usa con insulina: temblor, sudoración, confusión, desmayo ; Reacciones alérgicas
+su: Se usa solo junto con insulina de las comidas, y la hipoglucemia grave suele aparecer en las tres horas siguientes a la inyección.
+
+=Insuliny i analogi
+t: lowsugar, sweating, tremor, dizziness, appetite, injsite, swelling, water, allergy, heart
+ec: Low blood sugar: shakiness, sweating, hunger, dizziness, headache ; Weight gain ; Redness, itching or lumps where it is injected, and changes in the fat under the skin if the site is not rotated ; Swelling of the legs or ankles at the start of treatment
+es: Severe low blood sugar: confusion, seizures, loss of consciousness ; Low potassium in the blood, which can disturb the heart rhythm ; Allergic reaction with rash or trouble breathing
+eu: Insulin is an essential medicine for many people. The danger comes from using it without medical supervision, for example for muscle building, where the risk of severe low blood sugar is high.
+pc: Niski poziom cukru: drżenie, pocenie się, głód, zawroty i ból głowy ; Przyrost masy ciała ; Zaczerwienienie, swędzenie lub guzki w miejscu wstrzyknięcia oraz zmiany tkanki tłuszczowej, gdy nie zmienia się miejsc ; Obrzęk nóg lub kostek na początku leczenia
+ps: Ciężka hipoglikemia: splątanie, drgawki, utrata przytomności ; Niski poziom potasu we krwi, który może zaburzać rytm serca ; Reakcja alergiczna z wysypką lub dusznością
+pu: Insulina jest dla wielu osób lekiem niezbędnym. Niebezpieczne jest stosowanie jej bez nadzoru lekarza, na przykład w celu budowy mięśni, gdzie ryzyko ciężkiej hipoglikemii jest wysokie.
+sc: Azúcar bajo: temblor, sudoración, hambre, mareo, dolor de cabeza ; Aumento de peso ; Enrojecimiento, picor o bultos en el lugar de la inyección, y cambios en la grasa bajo la piel si no se rotan los sitios ; Hinchazón de piernas o tobillos al empezar el tratamiento
+ss: Hipoglucemia grave: confusión, convulsiones, pérdida de conciencia ; Potasio bajo en sangre, que puede alterar el ritmo del corazón ; Reacción alérgica con sarpullido o dificultad para respirar
+su: La insulina es un medicamento esencial para mucha gente. El peligro está en usarla sin control médico, por ejemplo para ganar músculo, donde el riesgo de hipoglucemia grave es alto.
