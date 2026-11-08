@@ -13,7 +13,7 @@ $email = trim((string)($_POST['email'] ?? ''));
 $msg = trim((string)($_POST['message'] ?? ''));
 if (mb_strlen($name) < 2 || mb_strlen($name) > 80) out(false, 'name', 422);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($email) > 120 || preg_match('/[\r\n]/', $email)) out(false, 'email', 422);
-if (mb_strlen($msg) < 10 || mb_strlen($msg) > 4000) out(false, 'message', 422);
+if (mb_strlen($msg) < 2 || mb_strlen($msg) > 4000) out(false, 'message', 422);
 // rate limit: 5 per hour per IP, stored outside the web root when possible
 $ip = preg_replace('/[^0-9a-f:.]/i', '', (string)($_SERVER['REMOTE_ADDR'] ?? 'x'));
 $dir = dirname(__DIR__, 2) . '/kolejka'; if (!is_dir($dir)) $dir = sys_get_temp_dir();
