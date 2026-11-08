@@ -208,6 +208,12 @@ html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar,body::
 }
 .logo .wm{font:800 27px/1 'Bricolage Grotesque',Figtree,system-ui,sans-serif;letter-spacing:-.04em;display:inline-flex}.logo .wm .a{color:#fff}.logo .wm .b{background:linear-gradient(90deg,#8fe9ff,#4de0ff 55%,#6bf0d8);-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo{transition:transform .25s}.logo:hover{transform:translateY(-1px)}
+
+nav a{color:#fff!important;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.34);padding:9px 18px!important;font-weight:700!important;box-shadow:0 4px 14px rgba(4,20,40,.28);text-shadow:0 1px 6px rgba(4,20,40,.45)}
+nav{gap:8px!important}
+nav a:hover{background:rgba(255,255,255,.28)!important;transform:translateY(-1px)}
+nav a.on{background:linear-gradient(135deg,#ffc233,#f2a900)!important;color:#0e2733!important;border-color:#ffd56b;text-shadow:none;box-shadow:0 6px 18px rgba(242,169,0,.45)}
+.logo svg{width:34px;height:34px}.logo{gap:10px!important}
 </style></head><body data-s="0">
 <canvas id="bg" aria-hidden="true"></canvas><canvas id="gl" aria-hidden="true"></canvas><div id="cur" aria-hidden="true"></div><div id="pg" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
@@ -259,7 +265,13 @@ addEventListener('contextmenu',function(e){if(!(e.target.closest&&e.target.close
 (function(){var woke={};function wake(u){if(woke[u])return;woke[u]=1;try{fetch(u,{mode:'no-cors',cache:'no-store'}).catch(function(){})}catch(e){}}
 document.querySelectorAll('.tl[href^="https://fridge"],.tl[href^="https://pantry"]').forEach(function(a){var u=a.href.indexOf('fridge')>-1?'https://fridgebite.pepsafe.uk/api/health':'https://pantrypal.pepsafe.uk/';['pointerenter','touchstart','focus'].forEach(function(ev){a.addEventListener(ev,function(){wake(u)},{passive:true})})})})();
 var LET=[['A...X','XX..X','X.X.X','X..XX','X...X'],['.XXX.','X...X','X...X','X...X','.XXA.'],['X...X','X...X','.X.X.','.X.X.','..A..'],['.XXX.','X...X','X...X','X...X','.XXA.'],['XXXX.','X...X','XXXA.','X....','X....'],['..A..','.....','..X..','..X..','..X..'],['X...X','.X.X.','..A..','.X.X.','X...X']],npc=-1,npEl=document.getElementById('mk');
-(function(){npEl.innerHTML='<span class="word wm"><span class="a">Novo</span><span class="b">Pix</span></span>';window.__studioMark={get:function(){return{sty:0}},next:function(){}}})();
+(function(){var h='<svg viewBox="0 0 60 60" aria-hidden="true">';for(var y=0;y<5;y++)for(var x=0;x<5;x++)h+='<rect class="cell" x="'+(x*12+1)+'" y="'+(y*12+1)+'" width="10" height="10" rx="2.4" fill="currentColor" style="transform:scale(0)"/>';
+npEl.innerHTML=h+'</svg><span class="word wm"><span class="a">Novo</span><span class="b">Pix</span></span>';var cs=npEl.querySelectorAll('.cell');
+function show(i){npc=i;var m=LET[i];for(var k=0;k<25;k++){var x=k%5,y=(k/5)|0,c=m[y][x],e=cs[k];e.style.transitionDelay=(x+y)*.03+'s';if(c==='.')e.style.transform='scale(0)';else{e.style.transform='scale(1)';e.setAttribute('fill',c==='A'?'#ffc233':'currentColor')}}}
+function next(){show((npc+1)%LET.length)}
+var lu=0;show(0);
+npEl.addEventListener('pointerenter',function(){lu=Date.now();next()});npEl.addEventListener('click',function(){lu=Date.now();next()});
+setInterval(function(){if(!document.hidden&&Date.now()-lu>1800)next()},1500);window.__studioMark={get:function(){return{sty:npc}},next:next};})();
 var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,TEST=/[?&]t=1/.test(location.search),FQ=(location.search.match(/[?&]q=(\d)/)||[])[1],coarse=matchMedia('(pointer:coarse)').matches||innerWidth<700;
 var SECS=['top','apps','numbers','approach','contact'].map(function(i){return document.getElementById(i)});
 var STAGES={w:'stage',phone:'st-apps',chart:'st-numbers',gear:'st-approach',mail:'st-contact'};
