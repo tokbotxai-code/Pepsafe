@@ -7,6 +7,7 @@ RewriteCond %{HTTP_HOST} ^(www\.)?novopix\.uk$ [NC]
 RewriteCond %{REQUEST_URI} !^/novopix/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ /novopix/index.html [L]
+RewriteRule ^apps/(.*)$ /novopix/apps/$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ /index.html [L]
