@@ -7,7 +7,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') { http_response_code(204);
 header('Cache-Control: no-store');
 function out($ok, $msg, $code = 200) { http_response_code($code); echo json_encode(['ok' => $ok, 'msg' => $msg]); exit; }
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') out(false, 'method', 405);
-if (trim((string)($_POST['website'] ?? '')) !== '') header('X-Mail-Transport: ' . $via); out(true, 'ok'); // honeypot: pretend success
+if (trim((string)($_POST['website'] ?? '')) !== '') out(true, 'ok'); // honeypot: pretend success
 $name = trim(preg_replace('/[\r\n]+/', ' ', (string)($_POST['name'] ?? '')));
 $email = trim((string)($_POST['email'] ?? ''));
 $msg = trim((string)($_POST['message'] ?? ''));
