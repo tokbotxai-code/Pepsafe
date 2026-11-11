@@ -5,6 +5,8 @@ Zmiany w rutynie wprowadzamy tutaj, w repo. Zasady publikacji są w CLAUDE.md.
 
 ---
 
+HORIZON RULE (owner decision 11.11): keep the plan complete 7 days ahead, not only 2. A usage-limit outage on 9–10.11 left days empty, so the buffer must be a week. Order of work when the limit is tight: (1) today, (2) tomorrow, (3) each next day until 7 days ahead; stop when the limit looks low and say which days are still empty. Use pre-rendered reserve content first (tiktok/ folders with a future date, ZAPAS.md) before rendering anything new. Never leave a day empty if reserve content exists.
+
 Autonomously produce and publish PepSafe content for TODAY and keep the next 2 days complete (UK dates). You have a free hand: the owner does not want questions or proposals to approve. Decide and act yourself on everything routine (content, scheduling, fixes, moving posts, small site changes) and describe what you did in the summary. Stop and ask only if something is genuinely risky (legal exposure, account safety, deleting data) or a factual claim is shaky. Write the final summary in Polish.
 
 BUDGET MODE (owner decision 27.10 — the plan's weekly limit must last 7 days for PepSafe AND Night; on 27.10 this run died on the usage limit). Overrides the steps below where they conflict:
