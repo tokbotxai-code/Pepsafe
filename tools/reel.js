@@ -21,6 +21,7 @@ const TONE = { A: '#3CCFA9', R: '#6FA3E8', P: '#6FA3E8', U: '#FF9A66', C: '#F2B1
 const short = t => {
   let x = String(t || '').split(/(?<=[.;])\s/)[0].replace(/\s*\(.*?\)\s*/g, ' ').replace(/[.;]\s*$/, '').trim();
   const parts = x.split(', '); if (parts.length > 3) x = parts.slice(0, 3).join(', ');  // long lists read badly on screen
+  x = x.replace(/\s*\([^)]*$/, '').replace(/\s+,/g, ',').replace(/\s{2,}/g, ' ').replace(/\bhiv(-1)?\b/gi, m => m.toUpperCase()).replace(/\bercp\b/gi, 'ERCP').trim();
   return x;
 };
 
