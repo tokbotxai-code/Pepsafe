@@ -330,6 +330,8 @@ footer { padding: 44px 0; }
 .foot { display: flex; flex-direction: column; gap: 14px; justify-content: space-between; font-size: 13.5px; color: var(--ink3); }
 @media (min-width: 640px) { .foot { flex-direction: row; align-items: center; } }
 .foot p { margin: 0; }
+.foot .built { font-size: 12.5px; }
+.foot .built a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .linkish { background: none; border: 0; padding: 0; font: inherit; color: var(--ink3); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .linkish:hover { color: var(--ink); }
 

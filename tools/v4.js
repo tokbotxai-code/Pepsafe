@@ -354,6 +354,7 @@ ${o.body}
       <a class="soc" href="mailto:${FORM_TO}">${FORM_TO}</a>
       <a class="soc" href="${goUrl('kofi', 'footer')}" rel="noopener" target="_blank">${ICON_CUP} <span>${L === 'en' ? 'Support PepSafe' : 'Wesprzyj PepSafe'}</span></a>
     </p>
+    <p class="built">${L === 'en' ? 'Built by' : 'Stworzone przez'} <a href="https://novopix.uk" rel="noopener">NovoPix</a></p>
     <p><button id="motion" class="linkish" data-off="${esc(t.motionOff)}" data-on="${esc(t.motionOn)}">${esc(t.motionOff)}</button> · <span class="mono">pepsafe.info</span> · <a href="${BASE}${L}/privacy.html">${L === 'en' ? 'Privacy' : 'Prywatność'}</a></p>
   </div>
 </footer>
