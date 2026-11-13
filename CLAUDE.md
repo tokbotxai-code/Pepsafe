@@ -408,3 +408,8 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Nie wystarczy „kod wygląda dobrze” ani test samej logiki. Obejrzyj wynik oczami użytkownika (zrzuty ekranu) i napraw każdą wadę przed oddaniem.
 - Gdy czegoś naprawdę nie da się sprawdzić (np. wymaga konta lub urządzenia właściciela), znajdź własny sposób (symulacja, inny przeglądarkowy test, zapasowy kanał). Dopiero gdy to niemożliwe, napisz **jedno zdanie**, czego dokładnie nie sprawdzono i dlaczego tylko właściciel może to zrobić. Nie oddawaj tego jako gotowego.
 - W raporcie podawaj, **co sprawdziłeś i z jakim wynikiem**, a nie listę rzeczy niesprawdzonych. Praca niedokończona jest dokończona przed oddaniem albo wprost nazwana „w toku” z terminem.
+
+## Koszty i limity: zasady właściciela (13.11, obowiązują stale)
+- **Wszystkie nowe rozmowy i sesje: najniższy poziom**: `effort low` i model `claude-sonnet-5-5`; do czysto odczytowych kontroli `claude-haiku-5-5`. Fable, Opus albo wyższy effort tylko na **wyraźne polecenie właściciela** dla konkretnego zadania.
+- Jedna sesja = jedno zadanie, po kolei, nigdy dwie na tym samym repo naraz. Bez pętli odpytywania, bez zbędnych odczytów i bez wklejania wielkich wyników narzędzi do kontekstu.
+- Gdy kontekst rozmowy przekroczy ok. 150 tys. tokenów, zaproponuj nową rozmowę z krótkim podsumowaniem stanu zamiast ciągnięcia starej (długi kontekst jest główną przyczyną zużycia limitu 5 h).
