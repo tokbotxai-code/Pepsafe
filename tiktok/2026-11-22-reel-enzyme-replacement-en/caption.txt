@@ -1,7 +1,7 @@
 Idursulfase, Galsulfase, Imiglucerase — Enzyme replacement medicines for rare diseases 🔬
 
-Idursulfase: treatment of mucopolysaccharidosis type ii — not a peptide.
-Galsulfase: treatment of mucopolysaccharidosis type vi — not a peptide.
+Idursulfase: treatment of mucopolysaccharidosis type II — not a peptide.
+Galsulfase: treatment of mucopolysaccharidosis type VI — not a peptide.
 Imiglucerase: treatment of type 1 gaucher disease — not a peptide.
 
 Educational content, not medical advice. More at pepsafe.info
