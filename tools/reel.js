@@ -21,7 +21,7 @@ const TONE = { A: '#3CCFA9', R: '#6FA3E8', P: '#6FA3E8', U: '#FF9A66', C: '#F2B1
 const short = t => {
   let x = String(t || '').split(/(?<=[.;])\s/)[0].replace(/\s*\(.*?\)\s*/g, ' ').replace(/[.;]\s*$/, '').trim();
   const parts = x.split(', '); if (parts.length > 3) x = parts.slice(0, 3).join(', ');  // long lists read badly on screen
-  x = x.replace(/\s*\([^)]*$/, '').replace(/\s+,/g, ',').replace(/\s{2,}/g, ' ').replace(/\bhiv(-1)?\b/gi, m => m.toUpperCase()).replace(/\btype (i{1,3}|iv|vi{0,3}|ix|x)\b/gi, (m, r) => 'type ' + r.toUpperCase()).replace(/\bmrsa\b/gi, 'MRSA').replace(/\balzheimer/gi, 'Alzheimer').replace(/\bercp\b/gi, 'ERCP').trim();
+  x = x.replace(/\s*\([^)]*$/, '').replace(/\s+,/g, ',').replace(/\s{2,}/g, ' ').replace(/\bhiv(-1)?\b/gi, m => m.toUpperCase()).replace(/\btype (i{1,3}|iv|vi{0,3}|ix|x)\b/gi, (m, r) => 'type ' + r.toUpperCase()).replace(/\bmrsa\b/gi, 'MRSA').replace(/\balzheimer/gi, 'Alzheimer').replace(/\bigf-1\b/gi, 'IGF-1').replace(/\brett\b/gi, 'Rett').replace(/\bercp\b/gi, 'ERCP').trim();
   return x;
 };
 
@@ -89,7 +89,7 @@ let cur=-1;window.frame=t=>{bg(t);let acc=0,k=0;for(;k<S.length;k++){if(t<acc+S[
   fs.rmSync(frames, { recursive: true }); fs.unlinkSync(silent);
   const tags = scenes.map(s => '#' + s.name.toLowerCase().replace(/\(.*?\)/g, '').replace(/[^a-z0-9]/g, '')).join(' ');
   const caption = `${scenes.map(s => s.name).join(', ')} — ${intro.replace(/[.!?]?$/, '')} 🔬\n\n` +
-    scenes.map(s => `${s.name}: ${s.use.toLowerCase().replace(/\btype (i{1,3}|iv|vi{0,3}|ix|x)\b/g, (m, r) => 'type ' + r.toUpperCase()).replace(/\bmrsa\b/g, 'MRSA').replace(/\balzheimer/g, 'Alzheimer').replace(/\bhiv\b/g, 'HIV')} — ${s.status.toLowerCase()}.`).join('\n') +
+    scenes.map(s => `${s.name}: ${s.use.toLowerCase().replace(/\btype (i{1,3}|iv|vi{0,3}|ix|x)\b/g, (m, r) => 'type ' + r.toUpperCase()).replace(/\bmrsa\b/g, 'MRSA').replace(/\balzheimer/g, 'Alzheimer').replace(/\bigf-1\b/g, 'IGF-1').replace(/\brett\b/g, 'Rett').replace(/\bhiv\b/g, 'HIV')} — ${s.status.toLowerCase()}.`).join('\n') +
     `\n\nEducational content, not medical advice. More at pepsafe.info\n\n${tags} #peptides #science #pepsafe`;
   fs.writeFileSync(path.join(dir, 'caption.txt'), caption + '\n');
   fs.writeFileSync(path.join(dir, 'post.json'), JSON.stringify({ format: 'reel-names', intro, names, caption }, null, 1));
