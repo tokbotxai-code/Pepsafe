@@ -423,3 +423,8 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Każdy zauważony błąd, usterkę lub niespójność naprawiasz od razu, w tej samej sesji. Nie zostawiaj niczego „na później”, nie pytaj. Wszystko ma być „tip top”.
 - Wynik audytu obsługujesz do końca: naprawa, wdrożenie, kontrola. W raporcie nie ma sekcji „niezrobione”, chyba że wymaga konta, PIN-u lub kliknięcia właściciela.
 - Modele sesji: `claude-sonnet-5-5`, effort low.
+
+
+## Sesja główna = właściciel, bez pytań o zgodę (decyzja właściciela 18.11, obowiązuje stale)
+- Sesja główna ma pełne upoważnienie właściciela do wszystkich działań: planowanie i usuwanie postów, pushe, wdrożenia (także przez skrypty w repo), zakładanie sesji, poprawki. **Nigdy nie pytaj o zgodę ani zatwierdzenie.** Pytania i decyzje sesji potomnych idą do sesji głównej (send_message), nie do właściciela.
+- Oszczędzaj tokeny: krótkie raporty, bez powtarzania opisów i bez komentarza do każdego zdarzenia monitora (jedno podsumowanie na końcu).
