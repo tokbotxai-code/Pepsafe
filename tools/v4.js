@@ -123,7 +123,7 @@ const W = {
     glossLead: 'Terms that come up on every page, explained once so the rest of the site reads easily.',
     blogNav: 'Reading', blogH: 'Longer pieces.',
     blogLead: 'Where a single entry is not enough: what a document proves, what a vote changed, what a study actually measured.',
-    readMin: 'min read', allPieces: 'All pieces', confused: 'Often confused with', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
+    readMin: 'min read', allPieces: 'All pieces', srcLbl: 'Sources', confused: 'Often confused with', findPh: 'Type a name, brand or symptom', findHint: 'Type at least two letters.',
     findNone: 'Nothing matches that.', findClose: 'Close', findMore: 'See all results',
     follow: 'Follow', contact: 'Contact', writeUs: 'Write to us',
     contactP: 'Questions, a correction, a source we missed? Send us a direct message on TikTok or Instagram. We read every one and answer the best ones in a Q&A. We never advise on doses, where to buy, or how to use anything.',
@@ -173,7 +173,7 @@ const W = {
     glossLead: 'Pojęcia, które wracają na każdej stronie, wyjaśnione raz, żeby resztę czytało się łatwo.',
     blogNav: 'Do czytania', blogH: 'Dłuższe teksty.',
     blogLead: 'Tam, gdzie jeden wpis nie wystarcza: co dokument naprawdę potwierdza, co zmieniło głosowanie, co zmierzyło badanie.',
-    readMin: 'min czytania', allPieces: 'Wszystkie teksty', confused: 'Bywa mylone z', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
+    readMin: 'min czytania', allPieces: 'Wszystkie teksty', srcLbl: 'Źródła', confused: 'Bywa mylone z', findPh: 'Wpisz nazwę, markę albo objaw', findHint: 'Wpisz co najmniej dwie litery.',
     findNone: 'Nic nie pasuje.', findClose: 'Zamknij', findMore: 'Zobacz wszystkie wyniki',
     follow: 'Obserwuj', contact: 'Kontakt', writeUs: 'Napisz do nas',
     contactP: 'Pytanie, sprostowanie, przeoczone źródło? Napisz do nas wiadomość prywatną na TikToku albo Instagramie. Czytamy każdą, a najciekawsze omawiamy w Q&A. Nigdy nie doradzamy dawek, miejsc zakupu ani sposobu stosowania.',
@@ -1070,6 +1070,8 @@ function piece(x, L) {
 </section>
 <section><div class="wrap narrow">
   ${(() => { const seen = new Set(); return paras.map(para => `<p class="lead reveal">${linkNames(esc(para), L, seen)}</p>`).join('\n  '); })()}
+  ${(x.src || []).length ? `<p class="kick reveal">${esc(t.srcLbl)}</p>
+  <ul class="reveal">${x.src.map(s => `<li><a href="${esc(s[1])}" rel="noopener" target="_blank">${esc(s[0])}</a></li>`).join('')}</ul>` : ''}
   <p class="actions reveal"><a class="btn big" href="${BASE}${L}/blog.html">${esc(t.allPieces)}${ARROW}</a></p>
 </div></section>
 ${others.length ? `<section class="band"><div class="wrap">
