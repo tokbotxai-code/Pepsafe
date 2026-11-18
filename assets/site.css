@@ -629,3 +629,32 @@ header.bar input { -webkit-user-select: text; user-select: text; }
 /* molecule photo on the home hero: right side, faded into the page so the text stays readable */
 #top.hero::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: min(60%, 860px); background: url(molecules.webp) center / cover no-repeat; opacity: .4; -webkit-mask-image: linear-gradient(to right, transparent, #000 55%); mask-image: linear-gradient(to right, transparent, #000 55%); pointer-events: none; }
 @media (max-width: 639px) { #top.hero::before { width: 100%; opacity: .2; -webkit-mask-image: none; mask-image: none; } }
+
+/* dziennik objawów */
+.diary .card { padding: 20px; margin-bottom: 22px; }
+.dform { display: grid; gap: 16px; }
+.dform fieldset { border: 0; padding: 0; margin: 0; }
+.dform legend { font-weight: 600; margin-bottom: 8px; }
+.dform label { display: grid; gap: 6px; font-size: 14px; color: var(--ink2); }
+.dform input, .dform select, .dform textarea { font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper2); color: var(--ink); width: 100%; box-sizing: border-box; }
+.dform input:focus-visible, .dform select:focus-visible, .dform textarea:focus-visible { outline: 3px solid var(--k1); outline-offset: 2px; }
+.drow { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.drow .grow { grid-column: span 2; }
+@media (max-width: 560px) { .drow .grow { grid-column: auto; } }
+.dtools { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 26px; }
+.dimport { cursor: pointer; }
+.dlist { display: grid; gap: 10px; margin: 14px 0 20px; }
+.dent { border: 1px solid var(--line); border-radius: 14px; background: var(--paper2); padding: 12px 14px; display: grid; gap: 4px; }
+.dent .dh { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.dent time { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--ink3); }
+.dent .sev1 { color: var(--k2); } .dent .sev2 { color: var(--k3); } .dent .sev3 { color: #B91C1C; font-weight: 600; }
+.dent button { font: inherit; font-size: 13px; border: 0; background: none; color: var(--ink3); cursor: pointer; text-decoration: underline; padding: 2px; }
+.dsum { display: grid; gap: 6px; margin: 0 0 18px; }
+.dbar { display: grid; grid-template-columns: minmax(110px, 38%) 1fr auto; gap: 10px; align-items: center; font-size: 14px; }
+.dbar i { display: block; height: 10px; border-radius: 99px; background: var(--k2); min-width: 4px; }
+.dbar span.n { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--ink3); }
+@media print {
+  header, footer, nav, .page-head canvas, #dForm, .dtools, .btn, .notice + *:not(.diary) { }
+  #dForm, .dtools, canvas, .skip, header.site, footer.site, .nav, .reveal.lede { display: none !important; }
+  .dent { break-inside: avoid; }
+}

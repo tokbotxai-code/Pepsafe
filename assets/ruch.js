@@ -780,4 +780,76 @@
     document.addEventListener('keydown', function (e) { if (!wrap.hidden && e.key === 'Escape') shut(); });
   })();
 
+  // ── dziennik objawów: dane tylko w tej przeglądarce (localStorage), nic nie jest wysyłane ──
+  (function () {
+    var root = document.getElementById('diaryRoot'); if (!root) return;
+    var LGd = html.lang === 'pl' ? 1 : ES ? 2 : 0, KEY = 'pepsafe_diary_v1';
+    var T = function (a) { return a[LGd]; };
+    var SYMD = [['nausea', ['nausea', 'nudności', 'náuseas']], ['vomiting', ['vomiting', 'wymioty', 'vómitos']], ['diarrhoea', ['diarrhoea', 'biegunka', 'diarrea']], ['constipation', ['constipation', 'zaparcia', 'estreñimiento']],
+      ['abdominal', ['stomach / abdominal pain', 'ból brzucha', 'dolor abdominal']], ['reflux', ['heartburn / reflux', 'zgaga / refluks', 'acidez / reflujo']], ['appetite', ['low appetite', 'mały apetyt', 'poco apetito']],
+      ['headache', ['headache', 'ból głowy', 'dolor de cabeza']], ['dizziness', ['dizziness', 'zawroty głowy', 'mareos']], ['fatigue', ['tiredness', 'zmęczenie', 'cansancio']], ['injsite', ['injection site reaction', 'reakcja w miejscu wstrzyknięcia', 'reacción en el lugar de inyección']],
+      ['rash', ['rash / itching', 'wysypka / świąd', 'erupción / picazón']], ['mood', ['mood changes', 'zmiany nastroju', 'cambios de ánimo']], ['sleep', ['sleep problems', 'problemy ze snem', 'problemas de sueño']], ['other', ['other (write a note)', 'inne (napisz w notatce)', 'otro (escribe una nota)']]];
+    var SEV = [['mild', 'łagodne', 'leve'], ['moderate', 'umiarkowane', 'moderado'], ['severe', 'silne', 'intenso']];
+    var $ = function (id) { return document.getElementById(id); };
+    function load() { try { var a = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+    var storageOk = true;
+    function save(a) { try { localStorage.setItem(KEY, JSON.stringify(a)); } catch (e) { storageOk = false; msg(T(['This browser blocks saving, so the diary cannot be kept. Allow site data or use another browser.', 'Ta przeglądarka blokuje zapis, więc dziennika nie da się zachować. Zezwól na dane witryny albo użyj innej przeglądarki.', 'Este navegador bloquea el guardado, así que el diario no se puede conservar. Permite los datos del sitio o usa otro navegador.'])); } }
+    function msg(s) { var m = $('dMsg'); if (m) m.textContent = s || ''; }
+    function today() { var d = new Date(); return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+    function fmtDate(s) { var p = String(s).split('-'); return p.length === 3 ? p[2] + '.' + p[1] + '.' + p[0] : s; }
+    var chosen = {};
+    var chips = $('dSym'); SYMD.forEach(function (s) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = T(s[1]); b.setAttribute('aria-pressed', 'false');
+      b.onclick = function () { chosen[s[0]] = !chosen[s[0]]; b.classList.toggle('on', chosen[s[0]]); b.setAttribute('aria-pressed', String(!!chosen[s[0]])); };
+      chips.appendChild(b); });
+    var sev = $('dSev'); SEV.forEach(function (s, i) { sev.options[i].textContent = T([s[0], s[1], s[2]].map(function (x, j) { return j === 0 ? x.charAt(0).toUpperCase() + x.slice(1) : x.charAt(0).toUpperCase() + x.slice(1); })); });
+    $('dDate').value = today(); $('dDate').max = today();
+    function label(k) { for (var i = 0; i < SYMD.length; i++) if (SYMD[i][0] === k) return T(SYMD[i][1]); return k; }
+    function render() {
+      var a = load().sort(function (x, y) { return x.date < y.date ? 1 : x.date > y.date ? -1 : y.id - x.id; });
+      var list = $('dList'); list.textContent = ''; $('dEmpty').hidden = a.length > 0; $('dListH').hidden = a.length === 0;
+      a.forEach(function (e) {
+        var d = document.createElement('div'); d.className = 'dent';
+        var h = document.createElement('div'); h.className = 'dh';
+        var tm = document.createElement('time'); tm.textContent = fmtDate(e.date); h.appendChild(tm);
+        var del = document.createElement('button'); del.type = 'button'; del.textContent = T(['Delete', 'Usuń', 'Eliminar']); del.onclick = function () { save(load().filter(function (x) { return x.id !== e.id; })); render(); };
+        h.appendChild(del); d.appendChild(h);
+        var line = document.createElement('div'); var s = (e.sym || []).map(label).join(', ') || T(['No symptoms', 'Bez objawów', 'Sin síntomas']);
+        line.textContent = s; var sv = document.createElement('span'); sv.className = 'sev' + (e.sev || 1); sv.textContent = ' · ' + T(SEV[(e.sev || 1) - 1]); line.appendChild(sv); d.appendChild(line);
+        var meta = []; if (e.med) meta.push(T(['Medicine', 'Lek', 'Medicamento']) + ': ' + e.med); if (e.kg) meta.push(e.kg + ' kg');
+        if (meta.length) { var m2 = document.createElement('div'); m2.className = 'small ink2'; m2.textContent = meta.join(' · '); d.appendChild(m2); }
+        if (e.note) { var n = document.createElement('div'); n.className = 'small ink2'; n.textContent = e.note; d.appendChild(n); }
+        list.appendChild(d); });
+      // podsumowanie: ostatnie 30 dni
+      var sum = $('dSummary'); sum.textContent = ''; var since = new Date(); since.setDate(since.getDate() - 30);
+      var cut = since.getFullYear() + '-' + ('0' + (since.getMonth() + 1)).slice(-2) + '-' + ('0' + since.getDate()).slice(-2);
+      var rec = a.filter(function (e) { return e.date >= cut; }), cnt = {}; rec.forEach(function (e) { (e.sym || []).forEach(function (k) { cnt[k] = (cnt[k] || 0) + 1; }); });
+      var keys = Object.keys(cnt).sort(function (x, y) { return cnt[y] - cnt[x]; }).slice(0, 6);
+      if (rec.length) {
+        var h2 = document.createElement('h2'); h2.className = 'display sm'; h2.textContent = T(['Last 30 days', 'Ostatnie 30 dni', 'Últimos 30 días']) + ' (' + rec.length + ' ' + (LGd === 1 ? (rec.length === 1 ? 'wpis' : (rec.length % 10 >= 2 && rec.length % 10 <= 4 && (rec.length % 100 < 12 || rec.length % 100 > 14)) ? 'wpisy' : 'wpisów') : LGd === 2 ? (rec.length === 1 ? 'entrada' : 'entradas') : (rec.length === 1 ? 'entry' : 'entries')) + ')'; sum.appendChild(h2);
+        var box = document.createElement('div'); box.className = 'dsum'; var max = keys.length ? cnt[keys[0]] : 1;
+        keys.forEach(function (k) { var r = document.createElement('div'); r.className = 'dbar'; var l = document.createElement('span'); l.textContent = label(k); var b = document.createElement('i'); b.style.width = Math.round(cnt[k] / max * 100) + '%'; b.setAttribute('role', 'presentation'); var n = document.createElement('span'); n.className = 'n'; n.textContent = cnt[k]; r.appendChild(l); r.appendChild(b); r.appendChild(n); box.appendChild(r); });
+        sum.appendChild(box);
+        var w = rec.filter(function (e) { return e.kg; }).sort(function (x, y) { return x.date < y.date ? -1 : 1; });
+        if (w.length >= 2) { var p = document.createElement('p'); p.className = 'small ink2'; p.textContent = T(['Weight: ', 'Waga: ', 'Peso: ']) + w[0].kg + ' kg (' + fmtDate(w[0].date) + ') → ' + w[w.length - 1].kg + ' kg (' + fmtDate(w[w.length - 1].date) + ')'; sum.appendChild(p); }
+      }
+    }
+    $('dForm').addEventListener('submit', function (ev) {
+      ev.preventDefault(); var date = $('dDate').value; if (!date) return;
+      var kg = parseFloat($('dKg').value); if (isNaN(kg) || kg < 20 || kg > 400) kg = null;
+      var e = { id: Date.now(), date: date, med: $('dMed').value.trim().slice(0, 60), kg: kg, sym: Object.keys(chosen).filter(function (k) { return chosen[k]; }), sev: +$('dSev').value || 1, note: $('dNote').value.trim().slice(0, 500) };
+      var a = load(); a.push(e); save(a); if (storageOk) msg(T(['Saved in this browser.', 'Zapisano w tej przeglądarce.', 'Guardado en este navegador.']));
+      chosen = {}; chips.querySelectorAll('.chip').forEach(function (b) { b.classList.remove('on'); b.setAttribute('aria-pressed', 'false'); }); $('dNote').value = ''; $('dKg').value = ''; render(); });
+    $('dPrint').onclick = function () { window.print(); };
+    $('dExport').onclick = function () { var blob = new Blob([JSON.stringify({ app: 'pepsafe-diary', v: 1, entries: load() }, null, 1)], { type: 'application/json' }); var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pepsafe-diary-' + today() + '.json'; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500); };
+    $('dImport').onchange = function (ev) {
+      var f = ev.target.files && ev.target.files[0]; if (!f) return; var r = new FileReader();
+      r.onload = function () { try { var j = JSON.parse(String(r.result)); var src = Array.isArray(j) ? j : j.entries; if (!Array.isArray(src)) throw 0; var have = {}; var a = load(); a.forEach(function (x) { have[x.id] = 1; }); var added = 0;
+        src.forEach(function (x) { if (x && /^\d{4}-\d{2}-\d{2}$/.test(String(x.date)) && !have[x.id]) { a.push({ id: +x.id || Date.now() + added, date: x.date, med: String(x.med || '').slice(0, 60), kg: typeof x.kg === 'number' ? x.kg : null, sym: (x.sym || []).filter(function (k) { return SYMD.some(function (s) { return s[0] === k; }); }), sev: [1, 2, 3].indexOf(+x.sev) >= 0 ? +x.sev : 1, note: String(x.note || '').slice(0, 500) }); added++; } });
+        save(a); render(); msg(T(['Imported entries: ', 'Zaimportowano wpisów: ', 'Entradas importadas: ']) + added); } catch (e) { msg(T(['This file is not a PepSafe diary copy.', 'To nie jest kopia dziennika PepSafe.', 'Este archivo no es una copia del diario de PepSafe.'])); } ev.target.value = ''; };
+      r.readAsText(f); };
+    $('dClear').onclick = function () { if (load().length && window.confirm(T(['Delete all diary entries from this browser?', 'Usunąć wszystkie wpisy dziennika z tej przeglądarki?', '¿Eliminar todas las entradas del diario de este navegador?']))) { save([]); render(); msg(''); } };
+    render();
+  })();
+
 })();

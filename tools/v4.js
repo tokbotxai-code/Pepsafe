@@ -114,7 +114,7 @@ const W = {
     search: 'Search by name or brand', filterAll: 'All', noHit: 'Nothing matches that.',
     entries: 'entries', listedWada: 'Listed by WADA in class', always: ', prohibited at all times',
     save: 'Save', saved: 'Saved', pick: 'Pick a substance', clear: 'Clear',
-    dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', savedNav: 'Saved',
+    dosingNav: 'Dosing', compareNav: 'Compare', symptomsNav: 'Symptoms', diaryNav: 'Diary', savedNav: 'Saved',
     menuLab: 'Menu', menuClose: 'Close menu', findLab: 'Search',
     e404kick: 'Page not found', e404H: 'That page is not here.',
     e404P: 'The address may be old, mistyped, or the page may have moved. The catalog and the search below will get you where you were going.',
@@ -164,7 +164,7 @@ const W = {
     search: 'Szukaj po nazwie lub marce', filterAll: 'Wszystkie', noHit: 'Nic nie pasuje.',
     entries: 'wpisów', listedWada: 'Wymieniony przez WADA w klasie', always: ', zakazany zawsze',
     save: 'Zapisz', saved: 'Zapisane', pick: 'Wybierz substancję', clear: 'Wyczyść',
-    dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', savedNav: 'Zapisane',
+    dosingNav: 'Dawkowanie', compareNav: 'Porównaj', symptomsNav: 'Objawy', diaryNav: 'Dziennik', savedNav: 'Zapisane',
     menuLab: 'Menu', menuClose: 'Zamknij menu', findLab: 'Szukaj',
     e404kick: 'Nie znaleziono strony', e404H: 'Tej strony tu nie ma.',
     e404P: 'Adres może być stary, z literówką, albo strona się przeniosła. Katalog i wyszukiwarka poniżej doprowadzą Cię tam, gdzie chciałeś.',
@@ -248,7 +248,7 @@ function layout(o) {
   const twinHref = BASE + (o.depth ? (o.twin || '').replace(/(\.pl)?\.html$/, other === 'pl' ? '.pl.html' : '.html')
     : other + '/' + (o.twin || ''));
   const nav = [['index.html', t.nav.home], ['catalog.html', t.nav.catalog], ['steroids.html', L === 'en' ? 'Steroids' : 'Sterydy'], ['dosing.html', t.dosingNav],
-  ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav],
+  ['groups.html', t.nav.groups], ['compare.html', t.compareNav], ['symptoms.html', t.symptomsNav], ['diary.html', t.diaryNav],
   ['faq.html', t.nav.faq], ['alerts.html', t.nav.alerts], ['blog.html', t.blogNav],
   ['glossary.html', t.glossNav], ['guides.html', L === 'en' ? 'Shop' : 'Sklep'], ['about.html', t.nav.about]];
   return `<!doctype html>
@@ -1431,6 +1431,7 @@ function symptoms(L) {
   <p class="muted" id="syNote"></p>
   <p class="muted" id="syHint"></p>
   <div class="grid-cards" id="syOut"></div>
+  <p class="small ink2 reveal">${en ? 'Want to keep track of how you feel on a medicine? Use the private' : 'Chcesz notować, jak się czujesz na leku? Skorzystaj z prywatnego'} <a href="${BASE}${L}/diary.html">${en ? 'symptom diary' : 'dziennika objawów'}</a>${en ? ' (kept in your browser only).' : ' (zapisywanego tylko w twojej przeglądarce).'}</p>
 </div></section>
 
 <section id="report" class="band"><div class="wrap narrow">
@@ -1448,6 +1449,55 @@ function symptoms(L) {
     lang: L, here: 'symptoms.html', twin: 'symptoms.html', body,
     title: (en ? 'Search by symptom' : 'Szukaj od objawu') + ' | PepSafe',
     desc: en ? 'Find catalog entries that mention a given symptom in their safety or effect sections.' : 'Znajdź wpisy katalogu, przy których dany objaw jest opisany w sekcji o bezpieczeństwie lub działaniu.'
+  });
+}
+
+function diaryPage(L) {
+  const en = L === 'en', t = W[L];
+  const body = `
+<section class="page-head paper">
+  <canvas id="chains" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kick reveal">${esc(t.diaryNav)}</p>
+    <h1 class="display reveal">${en ? 'Your symptom diary.' : 'Twój dziennik objawów.'}</h1>
+    <p class="lede reveal">${en ? 'Note how you feel while taking a medicine, then show the summary to your doctor. Everything stays in this browser only: nothing is sent anywhere, and clearing site data clears the diary. Export a copy to keep it.' : 'Zapisuj, jak się czujesz podczas przyjmowania leku, a potem pokaż podsumowanie lekarzowi. Wszystko zostaje tylko w tej przeglądarce: nic nie jest nigdzie wysyłane, a wyczyszczenie danych witryny usuwa dziennik. Zrób eksport, żeby mieć kopię.'}</p>
+    <p class="notice warn reveal"><strong>${en ? 'Not medical advice' : 'To nie porada medyczna'}:</strong> ${en ? 'this diary does not interpret your symptoms and does not suggest doses. With severe symptoms (severe abdominal pain, repeated vomiting, signs of dehydration, swelling of the face, breathlessness, fainting) call 112 or your doctor.' : 'dziennik nie ocenia objawów i nie podpowiada dawek. Przy ciężkich objawach (silny ból brzucha, powtarzające się wymioty, objawy odwodnienia, obrzęk twarzy, duszność, omdlenie) zadzwoń pod 112 albo do lekarza.'}</p>
+  </div>
+</section>
+<section><div class="wrap">
+  <div id="diaryRoot" class="diary">
+    <form id="dForm" class="dform card reveal" autocomplete="off">
+      <div class="drow">
+        <label>${en ? 'Date' : 'Data'}<input type="date" id="dDate" required></label>
+        <label>${en ? 'Medicine (optional)' : 'Lek (opcjonalnie)'}<input type="text" id="dMed" maxlength="60" placeholder="${en ? 'e.g. semaglutide' : 'np. semaglutyd'}"></label>
+        <label>${en ? 'Weight, kg (optional)' : 'Waga, kg (opcjonalnie)'}<input type="number" id="dKg" min="20" max="400" step="0.1" inputmode="decimal"></label>
+      </div>
+      <fieldset><legend>${en ? 'How do you feel? Choose what applies' : 'Jak się czujesz? Wybierz, co dotyczy'}</legend><div class="chips" id="dSym"></div></fieldset>
+      <div class="drow">
+        <label>${en ? 'How strong' : 'Jak mocne'}<select id="dSev"><option value="1"></option><option value="2"></option><option value="3"></option></select></label>
+        <label class="grow">${en ? 'Note (optional)' : 'Notatka (opcjonalnie)'}<textarea id="dNote" maxlength="500" rows="2"></textarea></label>
+      </div>
+      <p class="small ink2" id="dMsg" role="status"></p>
+      <button class="btn big" type="submit">${en ? 'Save entry' : 'Zapisz wpis'}</button>
+    </form>
+    <div id="dSummary" class="reveal"></div>
+    <div class="dtools reveal">
+      <button class="btn ghost" type="button" id="dPrint">${en ? 'Print or save as PDF' : 'Drukuj lub zapisz jako PDF'}</button>
+      <button class="btn ghost" type="button" id="dExport">${en ? 'Export a copy (file)' : 'Eksportuj kopię (plik)'}</button>
+      <label class="btn ghost dimport">${en ? 'Import a copy' : 'Importuj kopię'}<input type="file" id="dImport" accept="application/json,.json" hidden></label>
+      <button class="btn ghost" type="button" id="dClear">${en ? 'Delete everything' : 'Usuń wszystko'}</button>
+    </div>
+    <h2 class="display sm" id="dListH" hidden>${en ? 'Entries' : 'Wpisy'}</h2>
+    <div id="dList" class="dlist"></div>
+    <p class="muted" id="dEmpty">${en ? 'No entries yet. Add the first one above.' : 'Brak wpisów. Dodaj pierwszy powyżej.'}</p>
+    <p class="small ink2">${en ? 'Side effects are also listed on each catalog card, and you can search the catalog by symptom on the ' : 'Skutki uboczne są też opisane na kartach katalogu, a wyszukasz je po objawie na stronie '}<a href="${BASE}${L}/symptoms.html">${en ? 'symptoms page' : 'objawów'}</a>.
+      ${en ? 'To report a side effect officially:' : 'Aby oficjalnie zgłosić skutek uboczny:'} <a href="https://yellowcard.mhra.gov.uk/" rel="noopener" target="_blank">MHRA Yellow Card (UK)</a> · <a href="https://smz.ezdrowie.gov.pl/" rel="noopener" target="_blank">URPL (PL)</a> · <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program" rel="noopener" target="_blank">FDA MedWatch (US)</a></p>
+  </div>
+</div></section>`;
+  return layout({
+    lang: L, here: 'diary.html', twin: 'diary.html', body, noindex: true,
+    title: (en ? 'Symptom diary' : 'Dziennik objawów') + ' | PepSafe',
+    desc: en ? 'A private symptom diary kept in your browser only: note how you feel on a medicine and print a summary for your doctor.' : 'Prywatny dziennik objawów trzymany tylko w przeglądarce: zapisuj samopoczucie przy leku i wydrukuj podsumowanie dla lekarza.'
   });
 }
 
@@ -1496,7 +1546,7 @@ for (const L of LANGS) {
   fs.mkdirSync(path.join(out, 'p'), { recursive: true });
   const pages = {
     'index.html': home(L), 'catalog.html': catalog(L), 'dosing.html': dosing(L), 'groups.html': groups(L),
-    'compare.html': compare(L), 'symptoms.html': symptoms(L), 'saved.html': savedPage(L),
+    'compare.html': compare(L), 'symptoms.html': symptoms(L), 'diary.html': diaryPage(L), 'saved.html': savedPage(L),
     'faq.html': faqPage(L), 'alerts.html': alerts(L), 'about.html': about(L), 'thanks.html': thanks(L), 'free.html': freePage(L), 'free-thanks.html': freeThanks(L), 'guides.html': guidesPage(L), 'privacy.html': privacy(L),
     'blog.html': blogIndex(L), 'glossary.html': glossary(L), 'methods.html': methods(L), '404.html': notFound(L),
     ...Object.fromEntries(VS.map(v => [vsFile(v), vsPage(v, L)]))
