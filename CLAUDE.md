@@ -418,3 +418,8 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - **Nie pytaj właściciela o zgodę ani zatwierdzenie.** Sesje działają w trybie auto: wybierz sam najlepszą opcję, wykonaj, na końcu krótki raport (co zrobiono i co sprawdzono).
 - Dotyczy planowania, zmieniania i usuwania postów w Metricool, pushów na GitHub, wdrożeń, zakładania sesji i zmian zaplanowanych zadań. Pytaj tylko, gdy czegoś nie da się zrobić bez konta, hasła, PIN-u, płatności albo kliknięcia właściciela w panelu (wtedy: jedno zdanie, jeden krok, telefon lub komputer).
 - Zasady jakości, bezpieczeństwa i marek (PepSafe, Night, NovoPix osobno) obowiązują dalej. Bez sekretów w repo i czacie.
+
+## Zero „na później” (decyzja właściciela 15.11, obowiązuje stale)
+- Każdy zauważony błąd, usterkę lub niespójność naprawiasz od razu, w tej samej sesji. Nie zostawiaj niczego „na później”, nie pytaj. Wszystko ma być „tip top”.
+- Wynik audytu obsługujesz do końca: naprawa, wdrożenie, kontrola. W raporcie nie ma sekcji „niezrobione”, chyba że wymaga konta, PIN-u lub kliknięcia właściciela.
+- Modele sesji: `claude-sonnet-5-5`, effort low.
