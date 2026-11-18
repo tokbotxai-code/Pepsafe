@@ -986,5 +986,13 @@
   "mw": "4192",
   "t": "Petrelintide",
   "q": "Petrelintide"
+ },
+ "Maridebart cafraglutyd": null,
+ "Danuglipron": {
+  "cid": 134611040,
+  "f": "C31H30FN5O4",
+  "mw": "555.6",
+  "t": "2-((4-(6-((4-Cyano-2-fluorophenyl)methoxy)-2-pyridinyl)-1-piperidinyl)methyl)-1-((2S)-2-oxetanylmethyl)-1H-benzimidazole-6-carboxylic acid",
+  "q": "Danuglipron"
  }
 }

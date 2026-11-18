@@ -6184,5 +6184,65 @@
     "La pérdida de peso en la fase 2 fue menor que con algunos fármacos GLP-1"
    ]
   }
+ },
+ "Maridebart cafraglutyd": {
+  "pros": {
+   "en": [
+    "Phase 2: up to about 20% weight loss at 52 weeks (company-reported)",
+    "Studied with dosing as rarely as once a month"
+   ],
+   "pl": [
+    "II faza: do ok. 20% spadku masy w 52 tygodnie (dane producenta)",
+    "Badany z podawaniem nawet raz w miesiącu"
+   ],
+   "es": [
+    "Fase 2: hasta cerca de un 20 % de pérdida de peso a las 52 semanas (datos del fabricante)",
+    "Estudiado con administración de hasta una vez al mes"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Not approved; phase 3 results are not yet known",
+    "Most common side effects were gastrointestinal"
+   ],
+   "pl": [
+    "Niezatwierdzony; wyniki III fazy nie są jeszcze znane",
+    "Najczęstsze działania niepożądane dotyczyły przewodu pokarmowego"
+   ],
+   "es": [
+    "No aprobado; los resultados de fase 3 aún no se conocen",
+    "Los efectos secundarios más frecuentes fueron digestivos"
+   ]
+  }
+ },
+ "Danuglipron": {
+  "pros": {
+   "en": [
+    "Was studied as a pill rather than an injection",
+    "A small molecule, not a peptide"
+   ],
+   "pl": [
+    "Badany jako tabletka, a nie zastrzyk",
+    "Mała cząsteczka, a nie peptyd"
+   ],
+   "es": [
+    "Se estudió como comprimido en lugar de inyección",
+    "Una molécula pequeña, no un péptido"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Development ended in April 2025 after a liver safety signal",
+    "Never approved"
+   ],
+   "pl": [
+    "Rozwój zakończono w kwietniu 2025 po sygnale bezpieczeństwa dotyczącym wątroby",
+    "Nigdy niezatwierdzony"
+   ],
+   "es": [
+    "El desarrollo terminó en abril de 2025 tras una señal de seguridad hepática",
+    "Nunca aprobado"
+   ]
+  }
  }
 }

@@ -10281,5 +10281,87 @@
    "pl": "Pozostaje w organizmie przez kilka tygodni i jest lekiem na receptę przy przeroście prostaty.",
    "es": "Permanece en el cuerpo durante semanas y es un medicamento con receta para el aumento de la próstata."
   }
+ },
+ "Maridebart cafraglutyd": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "abdominal",
+   "appetite"
+  ],
+  "common": {
+   "en": [
+    "Nausea",
+    "Vomiting",
+    "Stomach discomfort"
+   ],
+   "pl": [
+    "Nudności",
+    "Wymioty",
+    "Dyskomfort w żołądku"
+   ],
+   "es": [
+    "Náuseas",
+    "Vómitos",
+    "Molestias de estómago"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Dehydration from vomiting"
+   ],
+   "pl": [
+    "Odwodnienie po wymiotach"
+   ],
+   "es": [
+    "Deshidratación por vómitos"
+   ]
+  },
+  "unknown": {
+   "en": "It is not approved and phase 3 results are not yet known, so long-term safety is unknown.",
+   "pl": "Nie jest zatwierdzony, a wyniki III fazy nie są jeszcze znane, więc bezpieczeństwo długoterminowe jest nieznane.",
+   "es": "No está aprobado y los resultados de fase 3 aún no se conocen, así que se desconoce la seguridad a largo plazo."
+  }
+ },
+ "Danuglipron": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "diarrhoea",
+   "liver"
+  ],
+  "common": {
+   "en": [
+    "Nausea",
+    "Vomiting",
+    "Diarrhoea"
+   ],
+   "pl": [
+    "Nudności",
+    "Wymioty",
+    "Biegunka"
+   ],
+   "es": [
+    "Náuseas",
+    "Vómitos",
+    "Diarrea"
+   ]
+  },
+  "serious": {
+   "en": [
+    "A possible drug-induced liver injury in one study participant, which resolved after stopping"
+   ],
+   "pl": [
+    "Możliwe polekowe uszkodzenie wątroby u jednego uczestnika badania, które ustąpiło po odstawieniu"
+   ],
+   "es": [
+    "Posible daño hepático por el fármaco en un participante de un estudio, que se resolvió al suspenderlo"
+   ]
+  },
+  "unknown": {
+   "en": "Development ended and it was never approved, so there is no approved safety information.",
+   "pl": "Rozwój zakończono i lek nigdy nie został zatwierdzony, więc nie ma zatwierdzonych informacji o bezpieczeństwie.",
+   "es": "El desarrollo terminó y nunca se aprobó, así que no hay información de seguridad aprobada."
+  }
  }
 }
