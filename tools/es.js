@@ -204,7 +204,7 @@ function langSwitch(file, cur, urls) {
   const p = path.join(OUT, file); if (!fs.existsSync(p)) return;
   const h = fs.readFileSync(p, 'utf8');
   const NAME = { EN: 'English', PL: 'Polski', ES: 'Español' };
-  const sw = `<details class="lp"><summary aria-label="${cur}, Language"><svg class="ico" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> ${cur} ▾</summary><ul>` +
+  const sw = `<details class="lp"><summary aria-label="${cur}, ${({ EN: 'Language', PL: 'Język', ES: 'Idioma' })[cur] || 'Language'}"><svg class="ico" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> ${cur} ▾</summary><ul>` +
     ['EN', 'PL', 'ES'].map(L => `<li><a class="lang${L === cur ? ' on" aria-current="true' : ''}" data-l="${L.toLowerCase()}" href="${urls[L]}">${NAME[L]}</a></li>`).join('') + '</ul></details>';
   let out = h.replace(/(?:<span class="lang on"[^>]*>[A-Z]{2}<\/span>|<a class="lang" href="[^"]*">[A-Z]{2}<\/a>)+/g, sw);
   // phone menu footer: all three languages as plain links
