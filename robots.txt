@@ -4,3 +4,4 @@ Allow: /
 Sitemap: https://pepsafe.info/sitemap.xml
 
 Disallow: /dane.html
+Disallow: /uk-site/
