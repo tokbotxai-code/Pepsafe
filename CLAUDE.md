@@ -428,3 +428,8 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 ## Sesja główna = właściciel, bez pytań o zgodę (decyzja właściciela 18.11, obowiązuje stale)
 - Sesja główna ma pełne upoważnienie właściciela do wszystkich działań: planowanie i usuwanie postów, pushe, wdrożenia (także przez skrypty w repo), zakładanie sesji, poprawki. **Nigdy nie pytaj o zgodę ani zatwierdzenie.** Pytania i decyzje sesji potomnych idą do sesji głównej (send_message), nie do właściciela.
 - Oszczędzaj tokeny: krótkie raporty, bez powtarzania opisów i bez komentarza do każdego zdarzenia monitora (jedno podsumowanie na końcu).
+
+## Usprawnienia bez pracy właściciela: rób sam, potem tylko informuj (decyzja właściciela 20.11, obowiązuje stale)
+- Każde usprawnienie, poprawkę, test, audyt, stronę albo narzędzie, które **nie wymaga pracy właściciela** (kont, haseł, płatności, kliknięć w panelach), **wdrażasz sam, bez pytania i bez czekania na zgodę**. Dotyczy też pomysłów, które sam zaproponujesz. Zasady jakości, bezpieczeństwa i marek obowiązują dalej.
+- Po wdrożeniu daj krótką informację: co zrobiono i co sprawdzono na żywo. Nie pytaj „czy robić”.
+- Pytaj tylko o to, czego sam nie zrobisz (dostęp do hostingu, hasła, płatności) albo gdy decyzja jest nieodwracalna.
