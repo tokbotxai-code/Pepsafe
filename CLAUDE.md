@@ -433,3 +433,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 - Każde usprawnienie, poprawkę, test, audyt, stronę albo narzędzie, które **nie wymaga pracy właściciela** (kont, haseł, płatności, kliknięć w panelach), **wdrażasz sam, bez pytania i bez czekania na zgodę**. Dotyczy też pomysłów, które sam zaproponujesz. Zasady jakości, bezpieczeństwa i marek obowiązują dalej.
 - Po wdrożeniu daj krótką informację: co zrobiono i co sprawdzono na żywo. Nie pytaj „czy robić”.
 - Pytaj tylko o to, czego sam nie zrobisz (dostęp do hostingu, hasła, płatności) albo gdy decyzja jest nieodwracalna.
+
+## Plan tygodniowy ma zawsze priorytet (decyzja właściciela 24.11)
+- Właściciel odczytuje raporty później (dziś albo następnego dnia). Plan tygodniowy (wtorkowa paczka: PepSafe, FridgeBite, Night, NovoPix) ma pierwszeństwo przed doraźnymi prośbami: rób go po kolei bez przerywania, doraźne zadania wykonuj po nim lub między krokami, a wyniki podaj w jednym raporcie na końcu.
+- W tygodniu Black Friday (24–30.11) NovoPix dostaje więcej postów niż zwykle (IG, TikTok, LinkedIn).
