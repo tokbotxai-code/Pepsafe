@@ -437,3 +437,6 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 ## Plan tygodniowy ma zawsze priorytet (decyzja właściciela 24.11)
 - Właściciel odczytuje raporty później (dziś albo następnego dnia). Plan tygodniowy (wtorkowa paczka: PepSafe, FridgeBite, Night, NovoPix) ma pierwszeństwo przed doraźnymi prośbami: rób go po kolei bez przerywania, doraźne zadania wykonuj po nim lub między krokami, a wyniki podaj w jednym raporcie na końcu.
 - W tygodniu Black Friday (24–30.11) NovoPix dostaje więcej postów niż zwykle (IG, TikTok, LinkedIn).
+
+## Tryb auto i limit 5 h (decyzja właściciela 24.11)
+- Wszystko, co wynika z planu, dodajesz sam, bez pytania. Gdy dopadnie Cię limit 5 h, kontynuujesz sam: ustaw `send_later` na czas odnowienia i wznów plan tygodniowy od miejsca, w którym stanąłeś, aż wszystkie kroki będą gotowe.
