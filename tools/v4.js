@@ -487,12 +487,14 @@ function whatsNew(L) {
   const date = en ? `${+dd} ${mon} ${yy}` : `${+dd}.${mm}.${yy}`;
   const subs = x.subs.map(n => D.find(e => e.n === n)).filter(Boolean)
     .map(e => `<a href="${BASE}${cardPath(e, L)}">${esc(nm(e.n, en))}</a>`).join(', ');
+  const upd = (x.updated || []).map(n => D.find(e => e.n === n)).filter(Boolean).map(e => `<a href="${BASE}${cardPath(e, L)}">${esc(nm(e.n, en))}</a>`).join(', ');
   return `<section class="field" style="padding-top:0" id="whatsnew">
   <div class="wrap">
     <p class="kick reveal">${en ? "What's new" : 'Nowości'} · ${date}</p>
     <div class="reveal" style="border:1px solid var(--line,#d8dee4);border-radius:14px;padding:16px 20px">
       <p style="margin:0 0 8px"><b>${en ? 'New in the catalog' : 'Nowe w katalogu'}:</b> ${subs}.</p>
-      <p style="margin:0"><b>${en ? 'New warnings' : 'Nowe ostrzeżenia'}:</b> ${en ? 'FDA recalls of compounded tirzepatide and semaglutide products' : 'wycofania leków recepturowych z tirzepatydem i semaglutydem (FDA)'} <a href="${BASE}${L}/alerts.html">${en ? 'Open warnings' : 'Zobacz ostrzeżenia'}${ARROW}</a></p>
+      ${upd ? `<p style="margin:0 0 8px"><b>${en ? 'Updated cards' : 'Zaktualizowane karty'}:</b> ${upd}.</p>` : ''}
+      <p style="margin:0"><b>${en ? 'New warnings' : 'Nowe ostrzeżenia'}:</b> ${en ? 'oral Wegovy approval, Foundayo label, survodutide trial results, FDA recalls of compounded tirzepatide and semaglutide' : 'zatwierdzenie tabletki Wegovy, ulotka Foundayo, wyniki badań survodutydu, wycofania leków recepturowych z tirzepatydem i semaglutydem (FDA)'} <a href="${BASE}${L}/alerts.html">${en ? 'Open warnings' : 'Zobacz ostrzeżenia'}${ARROW}</a></p>
     </div>
   </div>
 </section>`;
