@@ -10363,5 +10363,278 @@
    "pl": "Rozwój zakończono i lek nigdy nie został zatwierdzony, więc nie ma zatwierdzonych informacji o bezpieczeństwie.",
    "es": "El desarrollo terminó y nunca se aprobó, así que no hay información de seguridad aprobada."
   }
+ },
+ "Ekalantyd": {
+  "k": [
+   "headache",
+   "nausea",
+   "diarrhoea",
+   "rash"
+  ],
+  "common": {
+   "en": [
+    "Headache",
+    "Nausea",
+    "Diarrhoea",
+    "Fever",
+    "Pain or redness where it is injected"
+   ],
+   "pl": [
+    "Ból głowy",
+    "Nudności",
+    "Biegunka",
+    "Gorączka",
+    "Ból lub zaczerwienienie w miejscu podania"
+   ],
+   "es": [
+    "Dolor de cabeza",
+    "Náuseas",
+    "Diarrea",
+    "Fiebre",
+    "Dolor o enrojecimiento en el lugar de la inyección"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe allergic reaction (anaphylaxis), which is why it is given only by a healthcare professional"
+   ],
+   "pl": [
+    "Ciężka reakcja alergiczna (anafilaksja), dlatego podaje go wyłącznie pracownik ochrony zdrowia"
+   ],
+   "es": [
+    "Reacción alérgica grave (anafilaxia), por eso solo lo administra un profesional sanitario"
+   ]
+  },
+  "unknown": {
+   "en": "Used only for acute attacks of hereditary angioedema, so there is little information outside that use.",
+   "pl": "Stosowany tylko w ostrych napadach dziedzicznego obrzęku naczynioruchowego, więc poza tym zastosowaniem informacji jest mało.",
+   "es": "Se usa solo en crisis agudas de angioedema hereditario, así que fuera de ese uso hay poca información."
+  }
+ },
+ "Sinkalid": {
+  "k": [
+   "nausea",
+   "abdominal",
+   "flushing",
+   "dizziness"
+  ],
+  "common": {
+   "en": [
+    "Nausea",
+    "Abdominal cramps or pain",
+    "Flushing",
+    "Dizziness"
+   ],
+   "pl": [
+    "Nudności",
+    "Skurcze lub ból brzucha",
+    "Zaczerwienienie twarzy",
+    "Zawroty głowy"
+   ],
+   "es": [
+    "Náuseas",
+    "Calambres o dolor abdominal",
+    "Enrojecimiento facial",
+    "Mareos"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Rare severe allergic reactions"
+   ],
+   "pl": [
+    "Rzadkie ciężkie reakcje alergiczne"
+   ],
+   "es": [
+    "Reacciones alérgicas graves poco frecuentes"
+   ]
+  },
+  "unknown": {
+   "en": "It is a single-use diagnostic drug given during a test, so there is little information on repeated use.",
+   "pl": "To lek diagnostyczny podawany jednorazowo podczas badania, więc o wielokrotnym stosowaniu informacji jest mało.",
+   "es": "Es un fármaco diagnóstico de un solo uso durante una prueba, así que hay poca información sobre su uso repetido."
+  }
+ },
+ "Lutet Lu 177 dotatat": {
+  "k": [
+   "nausea",
+   "vomiting",
+   "fatigue",
+   "kidney"
+  ],
+  "common": {
+   "en": [
+    "Nausea",
+    "Vomiting",
+    "Tiredness",
+    "Abdominal pain",
+    "Lower blood counts"
+   ],
+   "pl": [
+    "Nudności",
+    "Wymioty",
+    "Zmęczenie",
+    "Ból brzucha",
+    "Obniżona liczba krwinek"
+   ],
+   "es": [
+    "Náuseas",
+    "Vómitos",
+    "Cansancio",
+    "Dolor abdominal",
+    "Recuentos sanguíneos bajos"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Bone marrow suppression",
+    "Kidney toxicity",
+    "Secondary myelodysplastic syndrome or leukaemia",
+    "Radiation exposure to others, so precautions are needed"
+   ],
+   "pl": [
+    "Zahamowanie czynności szpiku",
+    "Toksyczność dla nerek",
+    "Wtórny zespół mielodysplastyczny lub białaczka",
+    "Narażenie otoczenia na promieniowanie, więc potrzebne są środki ostrożności"
+   ],
+   "es": [
+    "Supresión de la médula ósea",
+    "Toxicidad renal",
+    "Síndrome mielodisplásico secundario o leucemia",
+    "Exposición de otras personas a la radiación, por lo que se necesitan precauciones"
+   ]
+  },
+  "unknown": {
+   "en": "Long-term effects beyond the follow-up in trials are still being studied.",
+   "pl": "Skutki odległe poza okresem obserwacji w badaniach są nadal badane.",
+   "es": "Los efectos a largo plazo más allá del seguimiento de los ensayos aún se estudian."
+  }
+ },
+ "Aprotynina": {
+  "k": [
+   "rash",
+   "itching",
+   "kidney"
+  ],
+  "common": {
+   "en": [
+    "Rash or itching",
+    "Low blood pressure during the infusion"
+   ],
+   "pl": [
+    "Wysypka lub świąd",
+    "Niskie ciśnienie podczas wlewu"
+   ],
+   "es": [
+    "Erupción o picor",
+    "Presión arterial baja durante la infusión"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Severe allergic reaction (anaphylaxis), more likely on repeat exposure",
+    "Kidney injury",
+    "Higher mortality than comparison groups in the BART trial"
+   ],
+   "pl": [
+    "Ciężka reakcja alergiczna (anafilaksja), częstsza przy ponownym podaniu",
+    "Uszkodzenie nerek",
+    "Wyższa śmiertelność niż w grupach porównawczych w badaniu BART"
+   ],
+   "es": [
+    "Reacción alérgica grave (anafilaxia), más probable al repetir la exposición",
+    "Daño renal",
+    "Mayor mortalidad que los grupos de comparación en el ensayo BART"
+   ]
+  },
+  "unknown": {
+   "en": "Marketing was suspended in 2007 and later allowed again in some regions with restrictions, so the balance of benefit and risk is still debated.",
+   "pl": "Sprzedaż zawieszono w 2007 r. i później dopuszczono ją w niektórych regionach z ograniczeniami, więc bilans korzyści i ryzyka jest nadal dyskutowany.",
+   "es": "La comercialización se suspendió en 2007 y luego se permitió de nuevo en algunas regiones con restricciones, por lo que el balance entre beneficio y riesgo sigue debatiéndose."
+  }
+ },
+ "Bacytracyna": {
+  "k": [
+   "rash",
+   "itching",
+   "kidney"
+  ],
+  "common": {
+   "en": [
+    "Rash or itching where it is applied (contact allergy)"
+   ],
+   "pl": [
+    "Wysypka lub świąd w miejscu zastosowania (alergia kontaktowa)"
+   ],
+   "es": [
+    "Erupción o picor en la zona de aplicación (alergia de contacto)"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Rare severe allergic reaction after use on the skin",
+    "Kidney damage with the injectable form, which the FDA asked to be withdrawn in 2020"
+   ],
+   "pl": [
+    "Rzadka ciężka reakcja alergiczna po zastosowaniu na skórę",
+    "Uszkodzenie nerek po postaci do wstrzykiwań, której wycofania FDA zażądała w 2020 r."
+   ],
+   "es": [
+    "Reacción alérgica grave poco frecuente tras su uso en la piel",
+    "Daño renal con la forma inyectable, cuya retirada pidió la FDA en 2020"
+   ]
+  },
+  "unknown": {
+   "en": "Skin ointments are widely used, but the evidence that they speed healing of minor wounds is limited.",
+   "pl": "Maści są szeroko stosowane, ale dowody, że przyspieszają gojenie drobnych ran, są ograniczone.",
+   "es": "Las pomadas se usan mucho, pero la evidencia de que aceleren la curación de heridas leves es limitada."
+  }
+ },
+ "Polimyksyna B": {
+  "k": [
+   "kidney",
+   "dizziness",
+   "rash"
+  ],
+  "common": {
+   "en": [
+    "Pain at the injection site",
+    "Fever",
+    "Rash"
+   ],
+   "pl": [
+    "Ból w miejscu podania",
+    "Gorączka",
+    "Wysypka"
+   ],
+   "es": [
+    "Dolor en el lugar de la inyección",
+    "Fiebre",
+    "Erupción"
+   ]
+  },
+  "serious": {
+   "en": [
+    "Kidney damage",
+    "Nerve damage, including numbness, dizziness and, rarely, breathing problems",
+    "Needs close monitoring in hospital"
+   ],
+   "pl": [
+    "Uszkodzenie nerek",
+    "Uszkodzenie nerwów, w tym drętwienie, zawroty głowy i rzadko kłopoty z oddychaniem",
+    "Wymaga ścisłej kontroli w szpitalu"
+   ],
+   "es": [
+    "Daño renal",
+    "Daño nervioso, con entumecimiento, mareos y, rara vez, problemas respiratorios",
+    "Requiere vigilancia estrecha en el hospital"
+   ]
+  },
+  "unknown": {
+   "en": "It is kept for serious infections when other antibiotics fail, so it is used under close medical supervision.",
+   "pl": "Zarezerwowana na ciężkie zakażenia, gdy inne antybiotyki zawodzą, więc stosuje się ją pod ścisłym nadzorem lekarza.",
+   "es": "Se reserva para infecciones graves cuando fallan otros antibióticos, por lo que se usa bajo estrecha supervisión médica."
+  }
  }
 }

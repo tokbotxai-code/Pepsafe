@@ -6244,5 +6244,185 @@
     "Nunca aprobado"
    ]
   }
+ },
+ "Ekalantyd": {
+  "pros": {
+   "en": [
+    "Approved for acute attacks of hereditary angioedema",
+    "Acts on a defined target: plasma kallikrein"
+   ],
+   "pl": [
+    "Zatwierdzony na ostre napady dziedzicznego obrzęku naczynioruchowego",
+    "Działa na określony cel: kalikreinę osoczową"
+   ],
+   "es": [
+    "Aprobado para crisis agudas de angioedema hereditario",
+    "Actúa sobre una diana definida: la calicreína plasmática"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Boxed warning for anaphylaxis",
+    "Given only by a healthcare professional"
+   ],
+   "pl": [
+    "Ostrzeżenie w ramce przed anafilaksją",
+    "Podaje go wyłącznie pracownik ochrony zdrowia"
+   ],
+   "es": [
+    "Advertencia en recuadro por anafilaxia",
+    "Solo lo administra un profesional sanitario"
+   ]
+  }
+ },
+ "Sinkalid": {
+  "pros": {
+   "en": [
+    "Approved diagnostic drug that mimics a natural gut hormone",
+    "Single use during a test"
+   ],
+   "pl": [
+    "Zatwierdzony lek diagnostyczny naśladujący naturalny hormon jelitowy",
+    "Jednorazowe użycie podczas badania"
+   ],
+   "es": [
+    "Fármaco diagnóstico aprobado que imita una hormona intestinal natural",
+    "Un solo uso durante una prueba"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Can cause abdominal cramps, nausea and flushing",
+    "Not a treatment"
+   ],
+   "pl": [
+    "Może powodować skurcze brzucha, nudności i zaczerwienienie",
+    "To nie jest leczenie"
+   ],
+   "es": [
+    "Puede causar calambres abdominales, náuseas y enrojecimiento",
+    "No es un tratamiento"
+   ]
+  }
+ },
+ "Lutet Lu 177 dotatat": {
+  "pros": {
+   "en": [
+    "Approved targeted radiation for neuroendocrine tumours",
+    "Delivers radiation to cells that carry somatostatin receptors"
+   ],
+   "pl": [
+    "Zatwierdzone celowane napromienianie guzów neuroendokrynnych",
+    "Dostarcza promieniowanie do komórek z receptorami somatostatynowymi"
+   ],
+   "es": [
+    "Radiación dirigida aprobada para tumores neuroendocrinos",
+    "Lleva radiación a las células con receptores de somatostatina"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Can lower blood counts and harm the kidneys",
+    "Needs radiation-safety measures at a specialist centre"
+   ],
+   "pl": [
+    "Może obniżać liczbę krwinek i uszkadzać nerki",
+    "Wymaga ochrony radiologicznej w ośrodku specjalistycznym"
+   ],
+   "es": [
+    "Puede reducir los recuentos sanguíneos y dañar los riñones",
+    "Requiere medidas de seguridad radiológica en un centro especializado"
+   ]
+  }
+ },
+ "Aprotynina": {
+  "pros": {
+   "en": [
+    "Reduces bleeding in selected high-risk cardiac surgery",
+    "Well-studied serine protease inhibitor"
+   ],
+   "pl": [
+    "Zmniejsza krwawienie w wybranych operacjach kardiochirurgicznych wysokiego ryzyka",
+    "Dobrze zbadany inhibitor proteaz serynowych"
+   ],
+   "es": [
+    "Reduce el sangrado en cirugía cardiaca de alto riesgo seleccionada",
+    "Inhibidor de serina proteasas bien estudiado"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Sales suspended in 2007 after the BART trial",
+    "Risk of anaphylaxis and kidney injury"
+   ],
+   "pl": [
+    "Sprzedaż zawieszona w 2007 r. po badaniu BART",
+    "Ryzyko anafilaksji i uszkodzenia nerek"
+   ],
+   "es": [
+    "Comercialización suspendida en 2007 tras el ensayo BART",
+    "Riesgo de anafilaxia y daño renal"
+   ]
+  }
+ },
+ "Bacytracyna": {
+  "pros": {
+   "en": [
+    "Long history as a skin antibiotic since 1945",
+    "Used on the skin, with little absorption"
+   ],
+   "pl": [
+    "Długa historia jako antybiotyk na skórę od 1945 r.",
+    "Stosowana na skórę, słabo się wchłania"
+   ],
+   "es": [
+    "Larga historia como antibiótico cutáneo desde 1945",
+    "Se usa en la piel y se absorbe poco"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Can cause contact allergy",
+    "Injectable form withdrawn in 2020 over kidney risk"
+   ],
+   "pl": [
+    "Może powodować alergię kontaktową",
+    "Postać do wstrzykiwań wycofana w 2020 r. z powodu ryzyka dla nerek"
+   ],
+   "es": [
+    "Puede causar alergia de contacto",
+    "Forma inyectable retirada en 2020 por riesgo renal"
+   ]
+  }
+ },
+ "Polimyksyna B": {
+  "pros": {
+   "en": [
+    "Works against multidrug-resistant Gram-negative bacteria",
+    "Option when other antibiotics fail"
+   ],
+   "pl": [
+    "Działa na oporne na wiele leków bakterie Gram-ujemne",
+    "Opcja, gdy inne antybiotyki zawodzą"
+   ],
+   "es": [
+    "Actúa contra bacterias gramnegativas multirresistentes",
+    "Opción cuando fallan otros antibióticos"
+   ]
+  },
+  "cons": {
+   "en": [
+    "Boxed warning: kidney and nerve damage",
+    "Needs close monitoring in hospital"
+   ],
+   "pl": [
+    "Ostrzeżenie w ramce: uszkodzenie nerek i nerwów",
+    "Wymaga ścisłej kontroli w szpitalu"
+   ],
+   "es": [
+    "Advertencia en recuadro: daño renal y nervioso",
+    "Requiere vigilancia estrecha en el hospital"
+   ]
+  }
  }
 }

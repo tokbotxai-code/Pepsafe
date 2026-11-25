@@ -447,3 +447,75 @@ pu: Rozwój zakończono i lek nigdy nie został zatwierdzony, więc nie ma zatwi
 sc: Náuseas ; Vómitos ; Diarrea
 ss: Posible daño hepático por el fármaco en un participante de un estudio, que se resolvió al suspenderlo
 su: El desarrollo terminó y nunca se aprobó, así que no hay información de seguridad aprobada.
+
+=Ekalantyd
+t: headache, nausea, diarrhoea, rash
+ec: Headache ; Nausea ; Diarrhoea ; Fever ; Pain or redness where it is injected
+es: Severe allergic reaction (anaphylaxis), which is why it is given only by a healthcare professional
+eu: Used only for acute attacks of hereditary angioedema, so there is little information outside that use.
+pc: Ból głowy ; Nudności ; Biegunka ; Gorączka ; Ból lub zaczerwienienie w miejscu podania
+ps: Ciężka reakcja alergiczna (anafilaksja), dlatego podaje go wyłącznie pracownik ochrony zdrowia
+pu: Stosowany tylko w ostrych napadach dziedzicznego obrzęku naczynioruchowego, więc poza tym zastosowaniem informacji jest mało.
+sc: Dolor de cabeza ; Náuseas ; Diarrea ; Fiebre ; Dolor o enrojecimiento en el lugar de la inyección
+ss: Reacción alérgica grave (anafilaxia), por eso solo lo administra un profesional sanitario
+su: Se usa solo en crisis agudas de angioedema hereditario, así que fuera de ese uso hay poca información.
+
+=Sinkalid
+t: nausea, abdominal, flushing, dizziness
+ec: Nausea ; Abdominal cramps or pain ; Flushing ; Dizziness
+es: Rare severe allergic reactions
+eu: It is a single-use diagnostic drug given during a test, so there is little information on repeated use.
+pc: Nudności ; Skurcze lub ból brzucha ; Zaczerwienienie twarzy ; Zawroty głowy
+ps: Rzadkie ciężkie reakcje alergiczne
+pu: To lek diagnostyczny podawany jednorazowo podczas badania, więc o wielokrotnym stosowaniu informacji jest mało.
+sc: Náuseas ; Calambres o dolor abdominal ; Enrojecimiento facial ; Mareos
+ss: Reacciones alérgicas graves poco frecuentes
+su: Es un fármaco diagnóstico de un solo uso durante una prueba, así que hay poca información sobre su uso repetido.
+
+=Lutet Lu 177 dotatat
+t: nausea, vomiting, fatigue, kidney
+ec: Nausea ; Vomiting ; Tiredness ; Abdominal pain ; Lower blood counts
+es: Bone marrow suppression ; Kidney toxicity ; Secondary myelodysplastic syndrome or leukaemia ; Radiation exposure to others, so precautions are needed
+eu: Long-term effects beyond the follow-up in trials are still being studied.
+pc: Nudności ; Wymioty ; Zmęczenie ; Ból brzucha ; Obniżona liczba krwinek
+ps: Zahamowanie czynności szpiku ; Toksyczność dla nerek ; Wtórny zespół mielodysplastyczny lub białaczka ; Narażenie otoczenia na promieniowanie, więc potrzebne są środki ostrożności
+pu: Skutki odległe poza okresem obserwacji w badaniach są nadal badane.
+sc: Náuseas ; Vómitos ; Cansancio ; Dolor abdominal ; Recuentos sanguíneos bajos
+ss: Supresión de la médula ósea ; Toxicidad renal ; Síndrome mielodisplásico secundario o leucemia ; Exposición de otras personas a la radiación, por lo que se necesitan precauciones
+su: Los efectos a largo plazo más allá del seguimiento de los ensayos aún se estudian.
+
+=Aprotynina
+t: rash, itching, kidney
+ec: Rash or itching ; Low blood pressure during the infusion
+es: Severe allergic reaction (anaphylaxis), more likely on repeat exposure ; Kidney injury ; Higher mortality than comparison groups in the BART trial
+eu: Marketing was suspended in 2007 and later allowed again in some regions with restrictions, so the balance of benefit and risk is still debated.
+pc: Wysypka lub świąd ; Niskie ciśnienie podczas wlewu
+ps: Ciężka reakcja alergiczna (anafilaksja), częstsza przy ponownym podaniu ; Uszkodzenie nerek ; Wyższa śmiertelność niż w grupach porównawczych w badaniu BART
+pu: Sprzedaż zawieszono w 2007 r. i później dopuszczono ją w niektórych regionach z ograniczeniami, więc bilans korzyści i ryzyka jest nadal dyskutowany.
+sc: Erupción o picor ; Presión arterial baja durante la infusión
+ss: Reacción alérgica grave (anafilaxia), más probable al repetir la exposición ; Daño renal ; Mayor mortalidad que los grupos de comparación en el ensayo BART
+su: La comercialización se suspendió en 2007 y luego se permitió de nuevo en algunas regiones con restricciones, por lo que el balance entre beneficio y riesgo sigue debatiéndose.
+
+=Bacytracyna
+t: rash, itching, kidney
+ec: Rash or itching where it is applied (contact allergy)
+es: Rare severe allergic reaction after use on the skin ; Kidney damage with the injectable form, which the FDA asked to be withdrawn in 2020
+eu: Skin ointments are widely used, but the evidence that they speed healing of minor wounds is limited.
+pc: Wysypka lub świąd w miejscu zastosowania (alergia kontaktowa)
+ps: Rzadka ciężka reakcja alergiczna po zastosowaniu na skórę ; Uszkodzenie nerek po postaci do wstrzykiwań, której wycofania FDA zażądała w 2020 r.
+pu: Maści są szeroko stosowane, ale dowody, że przyspieszają gojenie drobnych ran, są ograniczone.
+sc: Erupción o picor en la zona de aplicación (alergia de contacto)
+ss: Reacción alérgica grave poco frecuente tras su uso en la piel ; Daño renal con la forma inyectable, cuya retirada pidió la FDA en 2020
+su: Las pomadas se usan mucho, pero la evidencia de que aceleren la curación de heridas leves es limitada.
+
+=Polimyksyna B
+t: kidney, dizziness, rash
+ec: Pain at the injection site ; Fever ; Rash
+es: Kidney damage ; Nerve damage, including numbness, dizziness and, rarely, breathing problems ; Needs close monitoring in hospital
+eu: It is kept for serious infections when other antibiotics fail, so it is used under close medical supervision.
+pc: Ból w miejscu podania ; Gorączka ; Wysypka
+ps: Uszkodzenie nerek ; Uszkodzenie nerwów, w tym drętwienie, zawroty głowy i rzadko kłopoty z oddychaniem ; Wymaga ścisłej kontroli w szpitalu
+pu: Zarezerwowana na ciężkie zakażenia, gdy inne antybiotyki zawodzą, więc stosuje się ją pod ścisłym nadzorem lekarza.
+sc: Dolor en el lugar de la inyección ; Fiebre ; Erupción
+ss: Daño renal ; Daño nervioso, con entumecimiento, mareos y, rara vez, problemas respiratorios ; Requiere vigilancia estrecha en el hospital
+su: Se reserva para infecciones graves cuando fallan otros antibióticos, por lo que se usa bajo estrecha supervisión médica.

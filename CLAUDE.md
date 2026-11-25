@@ -440,3 +440,7 @@ TikTok blokuje treści, które wyglądają na ułatwianie zakupu lub stosowania 
 
 ## Tryb auto i limit 5 h (decyzja właściciela 24.11)
 - Wszystko, co wynika z planu, dodajesz sam, bez pytania. Gdy dopadnie Cię limit 5 h, kontynuujesz sam: ustaw `send_later` na czas odnowienia i wznów plan tygodniowy od miejsca, w którym stanąłeś, aż wszystkie kroki będą gotowe.
+
+## Co tydzień nowa paczka aktualizacji (decyzja właściciela 25.11, obowiązuje stale)
+- Strona nie może stać bez zmian. **Co tydzień** (najlepiej we wtorkowej paczce) autopilot dodaje: 4–6 nowych substancji (`tools/dodaj.js` + `plusy.json`, `skutki-src` + `skutki-build.py`, `opisy.json`, `molekuly.js`, `rodziny.js`, tłumaczenia ES, `es.js --missing` = 0), 1–2 aktualności w `ALERTS` ze źródeł pierwotnych (openFDA, FDA, EMA, ClinicalTrials.gov; bez pewnego źródła nie dodajemy) i **nowy wpis w „Nowości / What's new”** na stronie głównej (`nowosci.json`: data, nazwy dodanych substancji z katalogu, liczba nowych alertów; widoczny jest najnowszy wpis, generuje go `whatsNew()` w `tools/v4.js`, EN/PL/ES).
+- Po zmianach: `audyt.js --nowe N`, `rodziny.js`, `zrodla.js`, `v4.js`, `es.js`, `szukaj.js`, `kontrola.js` (kod 0), `test-strony.js`, podgląd telefon 390 px + komputer 1280 px, po pushu sprawdzenie na żywo.

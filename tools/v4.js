@@ -477,6 +477,27 @@ function spotlight(L) {
   function show(){var x=I[n%I.length];a.style.opacity=0;setTimeout(function(){document.getElementById('spot-k').textContent=x.k;document.getElementById('spot-t').textContent=x.t;document.getElementById('spot-d').textContent=x.d;if(x.u)a.href=x.u;a.style.opacity=1;},400);n++;}
   var tm=setInterval(show,8000);a.addEventListener('mouseenter',function(){clearInterval(tm)});a.addEventListener('mouseleave',function(){tm=setInterval(show,8000)});})();</script>`;
 }
+function whatsNew(L) {
+  const en = L === 'en';
+  const list = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'nowosci.json'), 'utf8')).sort((a, b) => (a.date < b.date ? 1 : -1));
+  const x = list[0];
+  if (!x) return '';
+  const [yy, mm, dd] = x.date.split('-');
+  const mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][+mm - 1];
+  const date = en ? `${+dd} ${mon} ${yy}` : `${+dd}.${mm}.${yy}`;
+  const subs = x.subs.map(n => D.find(e => e.n === n)).filter(Boolean)
+    .map(e => `<a href="${BASE}${cardPath(e, L)}">${esc(nm(e.n, en))}</a>`).join(', ');
+  return `<section class="field" style="padding-top:0" id="whatsnew">
+  <div class="wrap">
+    <p class="kick reveal">${en ? "What's new" : 'Nowości'} · ${date}</p>
+    <div class="reveal" style="border:1px solid var(--line,#d8dee4);border-radius:14px;padding:16px 20px">
+      <p style="margin:0 0 8px"><b>${en ? 'New in the catalog' : 'Nowe w katalogu'}:</b> ${subs}.</p>
+      <p style="margin:0"><b>${en ? 'New warnings' : 'Nowe ostrzeżenia'}:</b> ${en ? 'FDA recalls of compounded tirzepatide and semaglutide products' : 'wycofania leków recepturowych z tirzepatydem i semaglutydem (FDA)'} <a href="${BASE}${L}/alerts.html">${en ? 'Open warnings' : 'Zobacz ostrzeżenia'}${ARROW}</a></p>
+    </div>
+  </div>
+</section>`;
+}
+
 function home(L) {
   const en = L === 'en', t = W[L], h = H[L], day = DAY;
   const faq = FAQ.filter(x => Array.isArray(x) && x[0] && x[1]).slice(0, 4);
@@ -523,6 +544,8 @@ function home(L) {
     </a>
   </div>
 </section>
+
+${whatsNew(L)}
 
 <section class="field" style="padding-top:0">
   <div class="wrap">

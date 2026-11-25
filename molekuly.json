@@ -994,5 +994,41 @@
   "mw": "555.6",
   "t": "2-((4-(6-((4-Cyano-2-fluorophenyl)methoxy)-2-pyridinyl)-1-piperidinyl)methyl)-1-((2S)-2-oxetanylmethyl)-1H-benzimidazole-6-carboxylic acid",
   "q": "Danuglipron"
- }
+ },
+ "Ekalantyd": {
+  "cid": 44152182,
+  "f": "C305H442N88O91S8",
+  "mw": "7054",
+  "t": "Ecallantide",
+  "q": "Ecallantide"
+ },
+ "Sinkalid": {
+  "cid": 9833444,
+  "f": "C49H62N10O16S3",
+  "mw": "1143.3",
+  "t": "Sincalide",
+  "q": "Sincalide"
+ },
+ "Lutet Lu 177 dotatat": {
+  "cid": 76966897,
+  "f": "C65H87LuN14O19S2",
+  "mw": "1609.5",
+  "t": "Lutetium Lu 177 Dotatate",
+  "q": "Lutetium Lu 177 dotatate"
+ },
+ "Aprotynina": {
+  "cid": 16130295,
+  "f": "C284H432N84O79S7",
+  "mw": "6511",
+  "t": "Pancreatic trypsin inhibitor",
+  "q": "Aprotinin"
+ },
+ "Bacytracyna": {
+  "cid": 10909430,
+  "f": "C66H103N17O16S",
+  "mw": "1422.7",
+  "t": "Bacitracin",
+  "q": "Bacitracin"
+ },
+ "Polimyksyna B": null
 }
